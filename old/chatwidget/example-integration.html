@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Website - Chat Widget Integration</title>
+    <style>
+        /* Your client's website styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+    </style>
+
+    <!-- Chat Widget CSS -->
+    <link rel="stylesheet" href="branding.css">
+    <link rel="stylesheet" href="chat-widget.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Welcome to Our Website</h1>
+        <p>This is an example of how to integrate the custom chat widget into your client's website.
+           The chat widget will appear in the bottom right corner.</p>
+        <p>Try clicking the chat button to start a conversation!</p>
+    </div>
+
+    <!-- Chat Widget HTML -->
+    <div id="custom-chat-widget" class="chat-widget">
+        <button class="chat-widget__toggle" id="chatToggle">
+            <svg class="chat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+
+        <div class="chat-widget__window" id="chatWindow">
+            <div class="chat-widget__header">
+                <div class="chat-widget__header-profile">
+                    <img src="" alt="Bot" class="chat-widget__bot-avatar" id="botAvatar">
+                    <div class="chat-widget__header-info">
+                        <h3 class="chat-widget__bot-name" id="botName">Sarah</h3>
+                        <p class="chat-widget__status">Online</p>
+                    </div>
+                </div>
+                <button class="chat-widget__minimize" id="minimizeBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="chat-widget__quick-actions" id="quickActions"></div>
+
+            <div class="chat-widget__messages" id="messagesContainer">
+                <div class="chat-message chat-message--bot">
+                    <img src="" alt="Bot" class="chat-message__avatar" id="welcomeBotAvatar">
+                    <div class="chat-message__content">
+                        <div class="chat-message__bubble">
+                            <p class="chat-message__text">Hello! How can I help you today?</p>
+                            <span class="chat-message__time"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-widget__typing" id="typingIndicator" style="display: none;">
+                <img src="" alt="Bot" class="chat-message__avatar" id="typingBotAvatar">
+                <div class="typing-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="chat-widget__input-area">
+                <div class="chat-widget__input-wrapper">
+                    <button class="chat-widget__attach-btn" id="attachBtn" title="Attach file">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+                        </svg>
+                    </button>
+                    <input type="file" id="fileInput" multiple accept="image/*,video/*,audio/*,application/pdf,.doc,.docx" style="display: none;">
+                    <textarea
+                        class="chat-widget__input"
+                        id="messageInput"
+                        placeholder="Type your message..."
+                        rows="1"
+                    ></textarea>
+                    <button class="chat-widget__send-btn" id="sendBtn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="chat-widget__file-preview" id="filePreview" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Widget JavaScript -->
+    <script src="chat-widget.js"></script>
+
+    <!-- Initialize Widget with Custom Configuration -->
+    <script>
+        // OPTION 1: Initialize with custom configuration
+        ChatWidget.init({
+            // Required: Your webhook URL
+            webhookUrl: 'https://your-n8n-instance.com/webhook/your-webhook-id',
+
+            // Branding Configuration
+            botName: 'Capitol Assistant',
+            botAvatar: 'https://your-domain.com/images/bot-avatar.png',
+            primaryColor: '#00203b', // Your brand color
+            secondaryColor: '#f1f3f4',
+            userColor: '#dcf8c6', // WhatsApp-style user bubble
+            botColor: '#ffffff',
+
+            // Alternative: Use same color with different opacity
+            // sameColorBubbles: true,
+
+            // Quick Action Buttons - These send specific instructions to the AI
+            quickActions: [
+                {
+                    id: 'quote',
+                    label: 'Get a Quote',
+                    icon: '💰',
+                    instruction: 'I need a quote for my roofing project. Please help me understand the pricing and collect information needed for an accurate estimate.'
+                },
+                {
+                    id: 'inspection',
+                    label: 'Schedule Inspection',
+                    icon: '🔍',
+                    instruction: 'I would like to schedule a roof inspection. Please help me find available times and collect my contact information.'
+                },
+                {
+                    id: 'agent',
+                    label: 'Talk to Agent',
+                    icon: '👤',
+                    instruction: 'I need to speak with a human agent. Please connect me to someone from your team or collect my information for a callback.'
+                }
+            ],
+
+            // Other Options
+            welcomeMessage: 'Hello! I\'m your Capitol roofing assistant. How can I help you today?',
+            enableFileUpload: true,
+            maxFileSize: 10 * 1024 * 1024, // 10MB
+            // messageFieldName: 'chatInput', // Default: 'chatInput' (n8n compatible). Change to 'message' or 'prompt' if needed
+            debug: false // Set to true for console logging
+        });
+
+        // OPTION 2: You can also define config globally before loading the script
+        // window.ChatWidgetConfig = { ... };
+    </script>
+
+    <!--
+        ALTERNATIVE: Script Tag Embed for Clients
+        =============================================
+        You can also provide this as a simple script embed:
+
+        <script>
+            window.ChatWidgetConfig = {
+                webhookUrl: 'https://your-webhook-url.com',
+                botName: 'Your Bot Name',
+                botAvatar: 'https://your-bot-image.png',
+                primaryColor: '#007bff'
+            };
+        </script>
+        <link rel="stylesheet" href="https://your-cdn.com/chat-widget.css">
+        <script src="https://your-cdn.com/chat-widget.js"></script>
+    -->
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protect Your Home - Property Protection Services</title>
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="hero">
+            <h1>Protect Your Home with Our Premium Services</h1>
+            <p>See your property and choose the perfect protection package</p>
+        </header>
+
+        <!-- Address Search Section -->
+        <section class="address-section">
+            <h2>Step 1: Find Your Property</h2>
+            <div class="search-container">
+                <input
+                    type="text"
+                    id="addressInput"
+                    placeholder="Enter your address..."
+                    autocomplete="off"
+                />
+                <div id="suggestions" class="suggestions-dropdown"></div>
+            </div>
+            <div class="alt-input">
+                <p>Or paste coordinates/place ID:</p>
+                <input
+                    type="text"
+                    id="coordinatesInput"
+                    placeholder="e.g., 40.7128,-74.0060 or place_id:..."
+                />
+                <button id="coordinatesBtn">Load Location</button>
+            </div>
+        </section>
+
+        <!-- Street View Display Section -->
+        <section id="streetViewSection" class="street-view-section" style="display: none;">
+            <h2>Your Property</h2>
+            <div class="street-view-container">
+                <img id="streetViewImage" src="" alt="Street View of your property" />
+                <p id="selectedAddress" class="selected-address"></p>
+            </div>
+        </section>
+
+        <!-- Package Selection Section -->
+        <section id="packagesSection" class="packages-section" style="display: none;">
+            <h2>Step 2: Choose Your Protection Package</h2>
+            <div class="packages-container">
+                <!-- Basic Package -->
+                <div class="package-card" data-package="basic" data-price="99">
+                    <div class="package-header">
+                        <h3>Basic Protection</h3>
+                        <p class="price">$99<span>/year</span></p>
+                    </div>
+                    <ul class="features">
+                        <li>Standard property monitoring</li>
+                        <li>Monthly reports</li>
+                        <li>Email support</li>
+                        <li>Basic coverage</li>
+                    </ul>
+                    <button class="select-btn">Select Basic</button>
+                </div>
+
+                <!-- Premium Package -->
+                <div class="package-card premium" data-package="premium" data-price="199">
+                    <div class="package-badge">Most Popular</div>
+                    <div class="package-header">
+                        <h3>Premium Protection</h3>
+                        <p class="price">$199<span>/year</span></p>
+                    </div>
+                    <ul class="features">
+                        <li>Advanced property monitoring</li>
+                        <li>Weekly reports</li>
+                        <li>24/7 phone support</li>
+                        <li>Comprehensive coverage</li>
+                        <li>Priority response</li>
+                    </ul>
+                    <button class="select-btn">Select Premium</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Form Section -->
+        <section id="orderFormSection" class="order-form-section" style="display: none;">
+            <h2>Step 3: Complete Your Order</h2>
+            <div class="order-summary">
+                <p><strong>Package:</strong> <span id="summaryPackage"></span></p>
+                <p><strong>Price:</strong> <span id="summaryPrice"></span></p>
+                <p><strong>Property:</strong> <span id="summaryAddress"></span></p>
+            </div>
+
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="customerName">Full Name *</label>
+                    <input
+                        type="text"
+                        id="customerName"
+                        name="name"
+                        required
+                        placeholder="John Doe"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="customerEmail">Email Address *</label>
+                    <input
+                        type="email"
+                        id="customerEmail"
+                        name="email"
+                        required
+                        placeholder="john@example.com"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="customerPhone">Phone Number *</label>
+                    <input
+                        type="tel"
+                        id="customerPhone"
+                        name="phone"
+                        required
+                        placeholder="(555) 123-4567"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="termsCheckbox" required />
+                        I agree to the terms and conditions
+                    </label>
+                </div>
+
+                <button type="submit" id="submitBtn" class="submit-btn">
+                    Complete Purchase
+                </button>
+
+                <div id="errorMessage" class="error-message" style="display: none;"></div>
+                <div id="loadingMessage" class="loading-message" style="display: none;">
+                    Processing your order...
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script src="landing.js"></script>
+</body>
+</html>

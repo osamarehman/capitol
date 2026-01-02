@@ -1,0 +1,30 @@
+Name,Description,Assets,Comment,Status,URL,Time Tracked
+Sitemap Preparation,Submit sitemap to Google for Carolina website,ImproveItCarolina,Austin submitted sitemap himself,Done,improveitcarolina.com,0
+Schema Preparation,Implement schema markup for local pages,ImproveItCarolina,Need to implement Sterling's requirements,Pending,improveitcarolina.com,2
+Local City Page Finalization,Complete local city pages for Carolina,ImproveItCarolina,Pages created but need manual linking,Testing,improveitcarolina.com,4
+Quoting Tool Check,Test quoting tool functionality on mobile & desktop,ImproveItCarolina,Need to verify functionality,Pending,improveitcarolina.com,0
+Weather Tool Fix,Fix weather widget functionality,ImproveItCarolina,Code optimized and hardened for API failures,Done,improveitcarolina.com,3
+Scrolling Menu Phone Update,Update phone number in scrolling menu to 910 number,ImproveItCarolina,Updated to NC phone number,Done,improveitcarolina.com,0.5
+Visual Testing,Full visual test of web pages on mobile & desktop,ImproveItCarolina,Ongoing testing required,Pending,improveitcarolina.com,0
+Schema Investigation,Check schema implementation on specific page,ImproveItMD,Found two schemas on validator tool,Done,improveitmd.com/services/odenton-maryland-roofing-company-near-you,1
+Service Area Map Changes,Modify service area to show NC cities with static links,ImproveItCarolina,Created static dictionary for cities data,Done,improveitcarolina.com/service-area-edits,4
+Service Area Cities Linking,Enable manual linking for non-CMS city pages,ImproveItCarolina,Need tutorial video on manual linking,Pending,improveitcarolina.com,1
+Bot Blocking Implementation,Enable bot blocking for spam submissions,ImproveItMD,Bot blocking enabled for website,Done,improveitmd.com,0.5
+GoHighLevel AI Setup,Setup chatbot and automation integration,ImproveItMD,Call scheduled for consultation,Pending,,0
+Sterling Schema Implementation,Implement specific schema types for geo pages,ImproveItCarolina,Product/LocalBusiness/Review/FAQ schemas needed,Pending,improveitcarolina.com,0
+BTBPAINT CMS Template,Copy CMS template from Carolina to BTBPaint,BTBPaint,AI content won't work with Webflow,Pending,btbpaint.com,0
+Google Maps Automation,Script to pull screenshots and populate addresses,BTBPaint,Need Google Maps API and cloud storage,Pending,,0
+Home Page Service Area Addition,Add service area section above reviews,ImproveItCarolina,Added to home page,Done,improveitcarolina.com,1
+Home Page Service Area Addition,Add service area section if no performance impact,ImproveItMD,Need to implement if performance allows,Pending,improveitmd.com,0
+Carolina Blog Posts Fix,Fix non-working blog posts,ImproveItCarolina,Blog functionality restored,Done,improveitcarolina.com,0.5
+Home Page Logo Links Removal,Remove links from GAF and James Hardie logos,ImproveItCarolina,Links removed from logos,Done,improveitcarolina.com,0.5
+Commercial Roofing Navigation,Remove Commercial Roofing accordion link and text,ImproveItCarolina,Removed from navigation,Done,improveitcarolina.com,0.5
+Service Area Zoom Adjustment,Center map zoom on Wilmington NC water side,ImproveItCarolina,Centered on Wilmington NC coordinates,Done,improveitcarolina.com,0.5
+Live Service Area Linking,Link service area to live city pages,ImproveItCarolina,Need manual linking tutorial,Pending,improveitcarolina.com,0
+Mobile Images Fix,Fix mobile images not working on pages,ImproveItCarolina,Investigating custom style conflicts,Testing,improveitcarolina.com,1
+Google Sheet Service Area,Create editable Google Sheet for service area updates,ImproveItCarolina,Sheet created for easy updates,Done,docs.google.com/spreadsheets/d/1KmohK2sYwMyKYmntophEQ3ap6AvYBo0Q8-noQc0Kdnc,1
+MacBook Pro Financing,Finance MacBook Pro for development work,Personal,Austin approved financing,Done,amazon.com/Apple-MacBook-Laptop-12-core-16-core/dp/B0DLHY2BJ6,0
+AI Agent Integration,Integrate web chat and sales follow-up automation,ImproveItMD,May require CRM API integration,Pending,improveitmd.com,0
+Carolina Doors Pricing Guide,Build pricing guide with pictures for Geo pages,ImproveItCarolina,Simple checklist with integration needed,Pending,improveitcarolina.com,0
+Blur House Automation,Code automation for house screenshot pulling,Blur House Project,One page website with payments and DocuSign,Pending,,0
+MLS Scraping AI Tool,Tool to find off-market real estate deals,Personal Project,Future project when time allows,Pending,,0

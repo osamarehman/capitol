@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Chat Widget</title>
+    <link rel="stylesheet" href="branding.css">
+    <link rel="stylesheet" href="chat-widget.css">
+</head>
+<body>
+    <!-- Chat Widget Container -->
+    <div id="custom-chat-widget" class="chat-widget">
+        <!-- Toggle Button -->
+        <button class="chat-widget__toggle" id="chatToggle">
+            <svg class="chat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+
+        <!-- Chat Window -->
+        <div class="chat-widget__window" id="chatWindow">
+            <!-- Header -->
+            <div class="chat-widget__header">
+                <div class="chat-widget__header-profile">
+                    <img src="" alt="Bot" class="chat-widget__bot-avatar" id="botAvatar">
+                    <div class="chat-widget__header-info">
+                        <h3 class="chat-widget__bot-name" id="botName">Sarah</h3>
+                        <p class="chat-widget__status">Online</p>
+                    </div>
+                </div>
+                <button class="chat-widget__minimize" id="minimizeBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Quick Action Buttons -->
+            <div class="chat-widget__quick-actions" id="quickActions">
+                <button class="quick-action-btn" data-action="quote">
+                    <span class="quick-action-icon">💰</span>
+                    <span class="quick-action-text">Get a Quote</span>
+                </button>
+                <button class="quick-action-btn" data-action="inspection">
+                    <span class="quick-action-icon">🔍</span>
+                    <span class="quick-action-text">Schedule Inspection</span>
+                </button>
+                <button class="quick-action-btn" data-action="agent">
+                    <span class="quick-action-icon">👤</span>
+                    <span class="quick-action-text">Talk to Agent</span>
+                </button>
+            </div>
+
+            <!-- Messages Container -->
+            <div class="chat-widget__messages" id="messagesContainer">
+                <!-- Welcome Message -->
+                <div class="chat-message chat-message--bot">
+                    <img src="" alt="Bot" class="chat-message__avatar" id="welcomeBotAvatar">
+                    <div class="chat-message__content">
+                        <div class="chat-message__bubble">
+                            <p class="chat-message__text">Hello! How can I help you today?</p>
+                            <span class="chat-message__time"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typing Indicator -->
+            <div class="chat-widget__typing" id="typingIndicator" style="display: none;">
+                <img src="" alt="Bot" class="chat-message__avatar" id="typingBotAvatar">
+                <div class="typing-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="chat-widget__input-area">
+                <div class="chat-widget__input-wrapper">
+                    <button class="chat-widget__attach-btn" id="attachBtn" title="Attach file">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+                        </svg>
+                    </button>
+                    <input type="file" id="fileInput" multiple accept="image/*,video/*,audio/*,application/pdf,.doc,.docx" style="display: none;">
+                    <textarea
+                        class="chat-widget__input"
+                        id="messageInput"
+                        placeholder="Type your message..."
+                        rows="1"
+                    ></textarea>
+                    <button class="chat-widget__send-btn" id="sendBtn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="chat-widget__file-preview" id="filePreview" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="chat-widget.js"></script>
+    <script>
+        // Initialize the chat widget with custom configuration
+        // You can customize these settings for each client
+        ChatWidget.init({
+            webhookUrl: 'YOUR_WEBHOOK_URL_HERE',
+            botName: 'Capitol AI Assistant',
+            botAvatar: 'https://via.placeholder.com/40/007bff/ffffff?text=AI',
+            primaryColor: '#007bff',
+            secondaryColor: '#f1f3f4',
+            userColor: '#dcf8c6',
+            botColor: '#ffffff',
+            quickActions: [
+                {
+                    id: 'quote',
+                    label: 'Get a Quote',
+                    icon: '💰',
+                    instruction: 'I need a quote for my project. Please help me get pricing information.'
+                },
+                {
+                    id: 'inspection',
+                    label: 'Schedule Inspection',
+                    icon: '🔍',
+                    instruction: 'I would like to schedule an inspection. Please guide me through the process.'
+                },
+                {
+                    id: 'agent',
+                    label: 'Talk to Agent',
+                    icon: '👤',
+                    instruction: 'I need to speak with a human agent. Please connect me to someone.'
+                }
+            ]
+        });
+    </script>
+</body>
+</html>
