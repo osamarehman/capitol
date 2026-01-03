@@ -80,6 +80,77 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Prepare VPS Environment
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_SSH_PORT }}
+          script: |
+            echo "=== Preparing VPS Environment ==="
+
+            # Update package list
+            echo "Updating package list..."
+            sudo apt-get update -qq
+
+            # Check and install Docker
+            if ! command -v docker &> /dev/null; then
+              echo "Docker not found. Installing Docker..."
+              curl -fsSL https://get.docker.com -o get-docker.sh
+              sudo sh get-docker.sh
+              sudo usermod -aG docker $USER
+              rm get-docker.sh
+              echo "Docker installed successfully"
+            else
+              echo "Docker is already installed: $(docker --version)"
+            fi
+
+            # Check and install Docker Compose plugin
+            if ! docker compose version &> /dev/null; then
+              echo "Docker Compose plugin not found. Installing..."
+              sudo apt-get install -y docker-compose-plugin
+              echo "Docker Compose installed successfully"
+            else
+              echo "Docker Compose is already installed: $(docker compose version)"
+            fi
+
+            # Install wget if not present (needed for health checks)
+            if ! command -v wget &> /dev/null; then
+              echo "Installing wget..."
+              sudo apt-get install -y wget
+            fi
+
+            # Install curl if not present (needed for health checks)
+            if ! command -v curl &> /dev/null; then
+              echo "Installing curl..."
+              sudo apt-get install -y curl
+            fi
+
+            # Create deployment directory
+            if [ ! -d "/opt/strapi" ]; then
+              echo "Creating /opt/strapi directory..."
+              sudo mkdir -p /opt/strapi
+              sudo chown $USER:$USER /opt/strapi
+              echo "Directory created: /opt/strapi"
+            else
+              echo "Directory already exists: /opt/strapi"
+              # Ensure correct ownership
+              sudo chown $USER:$USER /opt/strapi
+            fi
+
+            # Verify directory permissions
+            ls -la /opt/ | grep strapi
+
+            echo "=== Environment preparation complete ==="
+            echo ""
+            echo "System Information:"
+            echo "- Docker: $(docker --version)"
+            echo "- Docker Compose: $(docker compose version)"
+            echo "- Wget: $(wget --version | head -1)"
+            echo "- Curl: $(curl --version | head -1)"
+            echo "- Deployment directory: /opt/strapi"
+
       - name: Copy docker-compose to VPS
         uses: appleboy/scp-action@v0.1.7
         with:
