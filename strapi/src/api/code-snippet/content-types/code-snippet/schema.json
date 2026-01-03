@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "code_snippets",
+  "info": {
+    "singularName": "code-snippet",
+    "pluralName": "code-snippets",
+    "displayName": "Code Snippets",
+    "description": "Store reusable code snippets (JS, CSS, HTML, JSON)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "codeType": {
+      "type": "enumeration",
+      "enum": ["javascript", "css", "html", "json", "schema-markup", "tracking", "other"],
+      "required": true,
+      "default": "javascript"
+    },
+    "code": {
+      "type": "text",
+      "required": true
+    },
+    "location": {
+      "type": "enumeration",
+      "enum": ["head", "body-start", "body-end", "inline", "none"],
+      "required": false,
+      "default": "none"
+    },
+    "isGlobal": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "pages": {
+      "type": "text",
+      "required": false
+    },
+    "priority": {
+      "type": "integer",
+      "default": 0,
+      "required": false
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true,
+      "required": false
+    }
+  }
+}
