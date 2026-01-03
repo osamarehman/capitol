@@ -1,0 +1,35 @@
+{
+  "name": "capitol-strapi",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Capitol CMS - Strapi 5 backend",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "deploy": "strapi deploy"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "@strapi/strapi": "^5.6.0",
+    "@strapi/plugin-users-permissions": "^5.6.0",
+    "@strapi/plugin-cloud": "^5.6.0",
+    "pg": "^8.11.0",
+    "better-sqlite3": "^11.0.0"
+  },
+  "author": {
+    "name": "Capitol"
+  },
+  "strapi": {
+    "uuid": "capitol-cms-instance"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

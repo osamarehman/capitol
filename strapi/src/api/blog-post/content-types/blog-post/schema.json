@@ -1,0 +1,103 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog",
+  "info": {
+    "singularName": "blog-post",
+    "pluralName": "blog",
+    "displayName": "Blog Posts",
+    "description": "Migrated from Webflow collection: Blog Posts"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "schemaMarkup": {
+      "type": "text",
+      "required": false
+    },
+    "customHtml": {
+      "type": "text",
+      "required": false
+    },
+    "customContent": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqContent": {
+      "type": "richtext",
+      "required": false
+    },
+    "publishedDateShown": {
+      "type": "datetime",
+      "required": false
+    },
+    "postSummary": {
+      "type": "text",
+      "required": false
+    },
+    "authorTemp": {
+      "type": "text",
+      "required": false
+    },
+    "blogImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "blogImageAltTag": {
+      "type": "text",
+      "required": false
+    },
+    "blogSummary": {
+      "type": "richtext",
+      "required": false
+    },
+    "postBody": {
+      "type": "richtext",
+      "required": false
+    },
+    "calc": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "openGraphImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "weatherWidget": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "weatherWidgetLocation": {
+      "type": "text",
+      "required": false
+    },
+    "weatherWidgetRightParagraphText": {
+      "type": "text",
+      "required": false
+    },
+    "isCalcCommercial": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    }
+  }
+}

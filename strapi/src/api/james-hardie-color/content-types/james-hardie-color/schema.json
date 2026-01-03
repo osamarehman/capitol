@@ -1,0 +1,247 @@
+{
+  "kind": "collectionType",
+  "collectionName": "james_hardie",
+  "info": {
+    "singularName": "james-hardie-color",
+    "pluralName": "james-hardie",
+    "displayName": "James Hardie Colors",
+    "description": "Migrated from Webflow collection: James Hardie Colors"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "schemaMarkup": {
+      "type": "text",
+      "required": false
+    },
+    "customHtml": {
+      "type": "text",
+      "required": false
+    },
+    "customContent": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqContent": {
+      "type": "richtext",
+      "required": false
+    },
+    "mainImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "subHeading": {
+      "type": "text",
+      "required": false
+    },
+    "sliderOverlay": {
+      "type": "string",
+      "required": false,
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "sliderImage1": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "altTextSliderImage1": {
+      "type": "text",
+      "required": false
+    },
+    "sliderImage2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "altTextSliderImage2": {
+      "type": "text",
+      "required": false
+    },
+    "sliderImage3": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "altTextSliderImage3": {
+      "type": "text",
+      "required": false
+    },
+    "sliderImage4": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "sliderImage5": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "sliderImage6": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "sliderHeading": {
+      "type": "text",
+      "required": false
+    },
+    "sliderText": {
+      "type": "text",
+      "required": false
+    },
+    "sliderDetail": {
+      "type": "richtext",
+      "required": false
+    },
+    "ctaImage1": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "ctaImage2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "ctaName": {
+      "type": "text",
+      "required": false
+    },
+    "ctaText": {
+      "type": "text",
+      "required": false
+    },
+    "youtubeLink": {
+      "type": "string",
+      "required": false
+    },
+    "classicCollection": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "magnoliaCollection": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "colorName": {
+      "type": "text",
+      "required": false
+    },
+    "colorBackground": {
+      "type": "string",
+      "required": false,
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "colorDarkSwitch": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "featureHeadingText1": {
+      "type": "richtext",
+      "required": false
+    },
+    "featureImage1": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "featureHeadingText2": {
+      "type": "richtext",
+      "required": false
+    },
+    "featureImage2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "featureHeadingText3": {
+      "type": "richtext",
+      "required": false
+    },
+    "featureImage3": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "metaTitle": {
+      "type": "text",
+      "required": false
+    },
+    "metaDescription": {
+      "type": "text",
+      "required": false
+    },
+    "opengraphImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "colorDarkWhiteForSwatches": {
+      "type": "string",
+      "required": false,
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "videoSwitch": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "opengraphImageUrl2": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

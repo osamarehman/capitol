@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales",
+  "info": {
+    "singularName": "sale",
+    "pluralName": "sales",
+    "displayName": "Sales",
+    "description": "Migrated from Webflow collection: Sales"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "schemaMarkup": {
+      "type": "text",
+      "required": false
+    },
+    "customHtml": {
+      "type": "text",
+      "required": false
+    },
+    "customContent": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqContent": {
+      "type": "richtext",
+      "required": false
+    }
+  }
+}

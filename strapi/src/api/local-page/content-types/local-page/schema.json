@@ -1,0 +1,312 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "local-page",
+    "pluralName": "services",
+    "displayName": "Local Pages",
+    "description": "Migrated from Webflow collection: Local Pages"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "schemaMarkup": {
+      "type": "text",
+      "required": false
+    },
+    "customHtml": {
+      "type": "text",
+      "required": false
+    },
+    "customContent": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqContent": {
+      "type": "richtext",
+      "required": false
+    },
+    "consultantTitleDescription": {
+      "type": "richtext",
+      "required": false
+    },
+    "seoTitleTag": {
+      "type": "text",
+      "required": false
+    },
+    "seoMetaDescription": {
+      "type": "text",
+      "required": false
+    },
+    "h1Hangline": {
+      "type": "text",
+      "required": false
+    },
+    "headerDescription": {
+      "type": "text",
+      "required": false
+    },
+    "buttonTextHeaderCta": {
+      "type": "text",
+      "required": false
+    },
+    "headerVideo": {
+      "type": "string",
+      "required": false
+    },
+    "headerVideoCode": {
+      "type": "text",
+      "required": false
+    },
+    "projectPhotosText": {
+      "type": "text",
+      "required": false
+    },
+    "recentProjectHeadline": {
+      "type": "text",
+      "required": false
+    },
+    "recentProjectDescription": {
+      "type": "richtext",
+      "required": false
+    },
+    "recentProjectKeywordImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "altTextForKeywordImage": {
+      "type": "text",
+      "required": false
+    },
+    "projectImage1": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "altTextForProjectImage1": {
+      "type": "text",
+      "required": false
+    },
+    "projectImage2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "altTextForProjectImage2": {
+      "type": "text",
+      "required": false
+    },
+    "projectImage3": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "altTextForProjectImage3": {
+      "type": "text",
+      "required": false
+    },
+    "servicesBodyText": {
+      "type": "text",
+      "required": false
+    },
+    "projectConsultant1Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "projectConsultant2Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "projectConsultantName": {
+      "type": "text",
+      "required": false
+    },
+    "projectConsultantTitle": {
+      "type": "text",
+      "required": false
+    },
+    "buttonTextConsultantCta": {
+      "type": "text",
+      "required": false
+    },
+    "mapHeaderText": {
+      "type": "text",
+      "required": false
+    },
+    "mapDescriptionText": {
+      "type": "text",
+      "required": false
+    },
+    "locationContactDetails": {
+      "type": "richtext",
+      "required": false
+    },
+    "mapLocation": {
+      "type": "enumeration",
+      "required": false,
+      "enum": [
+        "Bowie",
+        "Pasadena",
+        "Gaithersburg",
+        "Crownsville"
+      ]
+    },
+    "testimonialVideo": {
+      "type": "string",
+      "required": false
+    },
+    "localReviewHeader": {
+      "type": "text",
+      "required": false
+    },
+    "reviewText": {
+      "type": "text",
+      "required": false
+    },
+    "nameOfReviewer": {
+      "type": "text",
+      "required": false
+    },
+    "googleReviewLink": {
+      "type": "string",
+      "required": false
+    },
+    "openGraphImageUrl": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "openGraphTitle": {
+      "type": "text",
+      "required": false
+    },
+    "openGraphDescription": {
+      "type": "text",
+      "required": false
+    },
+    "serviceFaqHeading": {
+      "type": "text",
+      "required": false
+    },
+    "serviceFaq1": {
+      "type": "text",
+      "required": false
+    },
+    "serviceFaqDesc1": {
+      "type": "richtext",
+      "required": false
+    },
+    "serviceFaq2": {
+      "type": "text",
+      "required": false
+    },
+    "serviceFaqDesc2": {
+      "type": "richtext",
+      "required": false
+    },
+    "serviceFaq3": {
+      "type": "text",
+      "required": false
+    },
+    "serviceFaqDesc3": {
+      "type": "richtext",
+      "required": false
+    },
+    "serviceFaq4": {
+      "type": "text",
+      "required": false
+    },
+    "serviceFaqDesc4": {
+      "type": "richtext",
+      "required": false
+    },
+    "serviceFaq5": {
+      "type": "text",
+      "required": false
+    },
+    "serviceFaqDesc5": {
+      "type": "richtext",
+      "required": false
+    },
+    "serviceFaq6": {
+      "type": "text",
+      "required": false
+    },
+    "serviceFaqDesc6": {
+      "type": "richtext",
+      "required": false
+    },
+    "weatherWidget": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "weatherWidgetLocationText": {
+      "type": "text",
+      "required": false
+    },
+    "weatherWidgetRightParagraphText": {
+      "type": "text",
+      "required": false
+    },
+    "weatherWidgetRightHeader": {
+      "type": "text",
+      "required": false
+    },
+    "iscommercialcalc": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "residentialCalcHeader": {
+      "type": "richtext",
+      "required": false
+    },
+    "galleryMultiImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "mapSection": {
+      "type": "richtext",
+      "required": false
+    }
+  }
+}

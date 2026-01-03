@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "review_testimonials",
+  "info": {
+    "singularName": "reviewtestimonial",
+    "pluralName": "review-testimonials",
+    "displayName": "Review/Testimonials",
+    "description": "Migrated from Webflow collection: Review/Testimonials"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "schemaMarkup": {
+      "type": "text",
+      "required": false
+    },
+    "customHtml": {
+      "type": "text",
+      "required": false
+    },
+    "customContent": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqContent": {
+      "type": "richtext",
+      "required": false
+    },
+    "reviewerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "reviewLink": {
+      "type": "string",
+      "required": false
+    },
+    "reviewDate": {
+      "type": "text",
+      "required": false
+    },
+    "reviewText": {
+      "type": "text",
+      "required": false
+    },
+    "reviewerName": {
+      "type": "text",
+      "required": false
+    }
+  }
+}

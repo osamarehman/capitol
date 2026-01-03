@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_area_cities",
+  "info": {
+    "singularName": "service-area-city",
+    "pluralName": "service-area-cities",
+    "displayName": "Service Area Cities",
+    "description": "Migrated from Webflow collection: Service Area Cities"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "schemaMarkup": {
+      "type": "text",
+      "required": false
+    },
+    "customHtml": {
+      "type": "text",
+      "required": false
+    },
+    "customContent": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqContent": {
+      "type": "richtext",
+      "required": false
+    },
+    "map": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "cordinatesLatLong": {
+      "type": "text",
+      "required": false
+    },
+    "cityZoomLevel": {
+      "type": "decimal",
+      "required": false
+    }
+  }
+}

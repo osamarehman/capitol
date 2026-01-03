@@ -1,0 +1,30 @@
+{
+  "name": "webflow-strapi-migration",
+  "version": "1.0.0",
+  "description": "Migration scripts for Webflow CMS to Strapi 5",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "export": "tsx scripts/01-export-webflow.ts",
+    "generate-schemas": "tsx scripts/02-generate-schemas.ts",
+    "import-content": "tsx scripts/03-import-content.ts",
+    "upload-assets": "tsx scripts/04-upload-assets.ts",
+    "verify": "tsx scripts/05-verify-migration.ts",
+    "migrate:all": "npm run export && npm run generate-schemas && npm run import-content && npm run upload-assets && npm run verify"
+  },
+  "dependencies": {
+    "webflow-api": "^3.0.0",
+    "axios": "^1.7.0",
+    "form-data": "^4.0.0",
+    "dotenv": "^16.4.0",
+    "p-limit": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

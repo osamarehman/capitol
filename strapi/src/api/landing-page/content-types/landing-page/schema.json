@@ -1,0 +1,99 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lp",
+  "info": {
+    "singularName": "landing-page",
+    "pluralName": "lp",
+    "displayName": "Landing Pages",
+    "description": "Migrated from Webflow collection: Landing Pages"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "schemaMarkup": {
+      "type": "text",
+      "required": false
+    },
+    "customHtml": {
+      "type": "text",
+      "required": false
+    },
+    "customContent": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqContent": {
+      "type": "richtext",
+      "required": false
+    },
+    "subhead": {
+      "type": "text",
+      "required": false
+    },
+    "header": {
+      "type": "text",
+      "required": false
+    },
+    "featureText": {
+      "type": "text",
+      "required": false
+    },
+    "seoTitleTag": {
+      "type": "text",
+      "required": false
+    },
+    "seoMetaDescription": {
+      "type": "text",
+      "required": false
+    },
+    "displayRoofingHeroBackgroundVideo": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "backgroundVideoFlatRoofing": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "backgroundVideoDoors": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "heroBackgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "images3": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "footerAddress": {
+      "type": "text",
+      "required": false
+    },
+    "imgAltText": {
+      "type": "text",
+      "required": false
+    }
+  }
+}
