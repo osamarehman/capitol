@@ -24,23 +24,23 @@ export default ({ env }) => ({
     },
   },
   // SEO Plugin - creates SEO components with meta tags and social media previews
-  seo: {
-    enabled: true,
-  },
+  // seo: {
+  //   enabled: true,
+  // },
   // Sitemap Plugin - generates dynamic XML sitemaps
-  'strapi-5-sitemap-plugin': {
-    enabled: true,
-  },
+  // 'strapi-5-sitemap-plugin': {
+  //   enabled: true,
+  // },
   // GraphQL Plugin - adds GraphQL endpoint at /graphql
-  graphql: {
-    config: {
-      endpoint: '/graphql',
-      shadowCRUD: true,
-      depthLimit: 10,
-      amountLimit: 100,
-      apolloServer: {
-        tracing: false,
-      },
-    },
-  },
+  // graphql: {
+  //   config: {
+  //     endpoint: '/graphql',
+  //     shadowCRUD: true,
+  //     depthLimit: 10,
+  //     amountLimit: 100,
+  //     apolloServer: {
+  //       tracing: false,
+  //     },
+  //   },
+  // },
 });
