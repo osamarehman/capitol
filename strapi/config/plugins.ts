@@ -32,15 +32,15 @@ export default ({ env }) => ({
   //   enabled: true,
   // },
   // GraphQL Plugin - adds GraphQL endpoint at /graphql
-  // graphql: {
-  //   config: {
-  //     endpoint: '/graphql',
-  //     shadowCRUD: true,
-  //     depthLimit: 10,
-  //     amountLimit: 100,
-  //     apolloServer: {
-  //       tracing: false,
-  //     },
-  //   },
-  // },
+  graphql: {
+    config: {
+      endpoint: '/graphql',
+      shadowCRUD: true,
+      depthLimit: 10,
+      amountLimit: 100,
+      apolloServer: {
+        tracing: false,
+      },
+    },
+  },
 });

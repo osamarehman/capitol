@@ -13,6 +13,10 @@ import { CONFIG } from '../src/config/index.js';
 import { toCamelCase } from '../src/mappers/field-type-mapper.js';
 import type { AssetMapping, IdMapping } from '../src/types/strapi.js';
 
+// VideoLink fields should NOT be linked as media - they store URL strings
+// These are handled separately by link-video-urls.ts
+const VIDEO_URL_FIELDS = ['header-video', 'testimonial-video', 'video-link'];
+
 // Correct mapping of asset file slug to Strapi API plural name
 const COLLECTION_TO_ENDPOINT: Record<string, string> = {
   'blog-alt': 'blog-alt',
@@ -86,6 +90,11 @@ async function linkAssetsForCollection(
     let hasUpdates = false;
 
     for (const [fieldSlug, value] of Object.entries(fieldData)) {
+      // Skip VideoLink fields - they are URL strings, not media
+      if (VIDEO_URL_FIELDS.includes(fieldSlug)) {
+        continue;
+      }
+
       // Handle single image/file
       if (value && typeof value === 'object' && 'url' in value) {
         const assetData = value as { url: string };
