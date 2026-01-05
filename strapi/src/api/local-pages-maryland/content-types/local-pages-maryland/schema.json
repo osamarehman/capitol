@@ -315,6 +315,126 @@
       "type": "boolean",
       "required": false,
       "default": false
+    },
+    "faqQuestion1": {
+      "type": "text",
+      "required": false
+    },
+    "faqAnswer1": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqQuestion2": {
+      "type": "text",
+      "required": false
+    },
+    "faqAnswer2": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqQuestion3": {
+      "type": "text",
+      "required": false
+    },
+    "faqAnswer3": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqQuestion4": {
+      "type": "text",
+      "required": false
+    },
+    "faqAnswer4": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqQuestion5": {
+      "type": "text",
+      "required": false
+    },
+    "faqAnswer5": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqQuestion6": {
+      "type": "text",
+      "required": false
+    },
+    "faqAnswer6": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqQuestion7": {
+      "type": "text",
+      "required": false
+    },
+    "faqAnswer7": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqQuestion8": {
+      "type": "text",
+      "required": false
+    },
+    "faqAnswer8": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqQuestion9": {
+      "type": "text",
+      "required": false
+    },
+    "faqAnswer9": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqQuestion10": {
+      "type": "text",
+      "required": false
+    },
+    "faqAnswer10": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqQuestion11": {
+      "type": "text",
+      "required": false
+    },
+    "faqAnswer11": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqQuestion12": {
+      "type": "text",
+      "required": false
+    },
+    "faqAnswer12": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqQuestion13": {
+      "type": "text",
+      "required": false
+    },
+    "faqAnswer13": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqQuestion14": {
+      "type": "text",
+      "required": false
+    },
+    "faqAnswer14": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqQuestion15": {
+      "type": "text",
+      "required": false
+    },
+    "faqAnswer15": {
+      "type": "richtext",
+      "required": false
     }
   }
 }
