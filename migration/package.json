@@ -11,14 +11,18 @@
     "upload-assets": "tsx scripts/04-upload-assets.ts",
     "verify": "tsx scripts/05-verify-migration.ts",
     "sync-alt-texts": "tsx scripts/sync-alt-texts.ts",
+    "convert-to-blocks": "tsx scripts/convert-html-to-blocks.ts",
+    "migrate-db-to-blocks": "tsx scripts/migrate-richtext-to-blocks.ts",
     "migrate:all": "npm run export && npm run generate-schemas && npm run import-content && npm run upload-assets && npm run verify"
   },
   "dependencies": {
-    "webflow-api": "^3.0.0",
+    "@types/pg": "^8.16.0",
     "axios": "^1.7.0",
-    "form-data": "^4.0.0",
     "dotenv": "^16.4.0",
-    "p-limit": "^6.1.0"
+    "form-data": "^4.0.0",
+    "p-limit": "^6.1.0",
+    "pg": "^8.16.3",
+    "webflow-api": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

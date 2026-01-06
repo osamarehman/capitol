@@ -29,15 +29,15 @@
       "required": true
     },
     "mainStoryRichText": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "secondaryStoryRichText": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "supportingTextRichText": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "recentProjectHangline": {
@@ -45,15 +45,15 @@
       "required": false
     },
     "communityGuidelinesRichText": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "locationImprovementsRichText": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "consultantTitleDescription": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "seoTitleTag": {
@@ -89,7 +89,7 @@
       "required": false
     },
     "recentProjectDescription": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "recentProjectKeywordImage": {
@@ -169,7 +169,7 @@
       "required": false
     },
     "locationContactDetails": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "mapLocation": {
@@ -198,7 +198,7 @@
       "required": false
     },
     "echoRichText": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "openGraphImageUrl": {
@@ -224,7 +224,7 @@
       "required": false
     },
     "servicesModalDesc1": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "servicesModal2": {
@@ -232,7 +232,7 @@
       "required": false
     },
     "servicesModalDesc2": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "servicesModal3": {
@@ -240,7 +240,7 @@
       "required": false
     },
     "servicesModalDesc3": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "servicesModal4": {
@@ -248,7 +248,7 @@
       "required": false
     },
     "servicesModalDesc4": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "servicesModal5": {
@@ -256,7 +256,7 @@
       "required": false
     },
     "servicesModalDesc5": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "servicesModal6": {
@@ -264,7 +264,7 @@
       "required": false
     },
     "servicesModalDesc6": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "weatherWidget": {
@@ -290,7 +290,7 @@
       "default": false
     },
     "residentialCalcHeader": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "galleryMultiImages": {
@@ -300,7 +300,7 @@
       "allowedTypes": ["images"]
     },
     "mapSection": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "schemaMarkup": {
@@ -312,11 +312,11 @@
       "required": false
     },
     "customContent": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqContent": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqQuestion1": {
@@ -324,7 +324,7 @@
       "required": false
     },
     "faqAnswer1": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqQuestion2": {
@@ -332,7 +332,7 @@
       "required": false
     },
     "faqAnswer2": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqQuestion3": {
@@ -340,7 +340,7 @@
       "required": false
     },
     "faqAnswer3": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqQuestion4": {
@@ -348,7 +348,7 @@
       "required": false
     },
     "faqAnswer4": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqQuestion5": {
@@ -356,7 +356,7 @@
       "required": false
     },
     "faqAnswer5": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqQuestion6": {
@@ -364,7 +364,7 @@
       "required": false
     },
     "faqAnswer6": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqQuestion7": {
@@ -372,7 +372,7 @@
       "required": false
     },
     "faqAnswer7": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqQuestion8": {
@@ -380,7 +380,7 @@
       "required": false
     },
     "faqAnswer8": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqQuestion9": {
@@ -388,7 +388,7 @@
       "required": false
     },
     "faqAnswer9": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqQuestion10": {
@@ -396,7 +396,7 @@
       "required": false
     },
     "faqAnswer10": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqQuestion11": {
@@ -404,7 +404,7 @@
       "required": false
     },
     "faqAnswer11": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqQuestion12": {
@@ -412,7 +412,7 @@
       "required": false
     },
     "faqAnswer12": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqQuestion13": {
@@ -420,7 +420,7 @@
       "required": false
     },
     "faqAnswer13": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqQuestion14": {
@@ -428,7 +428,7 @@
       "required": false
     },
     "faqAnswer14": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqQuestion15": {
@@ -436,7 +436,7 @@
       "required": false
     },
     "faqAnswer15": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     }
   }

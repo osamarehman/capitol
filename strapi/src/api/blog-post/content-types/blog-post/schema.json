@@ -29,11 +29,11 @@
       "required": false
     },
     "customContent": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqContent": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "publishedDateShown": {
@@ -61,11 +61,11 @@
       "required": false
     },
     "blogSummary": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "postBody": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "calc": {

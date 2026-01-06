@@ -447,9 +447,9 @@ export interface ApiBlogAltDraftBlogAltDraft
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    customContent: Schema.Attribute.RichText;
+    customContent: Schema.Attribute.Blocks;
     customHtml: Schema.Attribute.Text;
-    faqContent: Schema.Attribute.RichText;
+    faqContent: Schema.Attribute.Blocks;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -457,7 +457,7 @@ export interface ApiBlogAltDraftBlogAltDraft
     > &
       Schema.Attribute.Private;
     mainImage: Schema.Attribute.Media<'images'>;
-    postBody: Schema.Attribute.RichText;
+    postBody: Schema.Attribute.Blocks;
     postSummary: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     publishedDateShown: Schema.Attribute.DateTime;
@@ -487,14 +487,14 @@ export interface ApiBlogPostBlogPost extends Struct.CollectionTypeSchema {
     authorTemp: Schema.Attribute.Text;
     blogImage: Schema.Attribute.Media<'images'>;
     blogImageAltTag: Schema.Attribute.Text;
-    blogSummary: Schema.Attribute.RichText;
+    blogSummary: Schema.Attribute.Blocks;
     calc: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    customContent: Schema.Attribute.RichText;
+    customContent: Schema.Attribute.Blocks;
     customHtml: Schema.Attribute.Text;
-    faqContent: Schema.Attribute.RichText;
+    faqContent: Schema.Attribute.Blocks;
     isCalcCommercial: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -504,7 +504,7 @@ export interface ApiBlogPostBlogPost extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     openGraphImage: Schema.Attribute.Media<'images'>;
-    postBody: Schema.Attribute.RichText;
+    postBody: Schema.Attribute.Blocks;
     postSummary: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     publishedDateShown: Schema.Attribute.DateTime;
@@ -539,11 +539,11 @@ export interface ApiCashForLandCashForLand extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    customContent: Schema.Attribute.RichText;
+    customContent: Schema.Attribute.Blocks;
     customHtml: Schema.Attribute.Text;
     displayRoofingHeroBackgroundVideo: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
-    faqContent: Schema.Attribute.RichText;
+    faqContent: Schema.Attribute.Blocks;
     featureText: Schema.Attribute.Text;
     footerAddress: Schema.Attribute.Text;
     header: Schema.Attribute.Text;
@@ -589,33 +589,33 @@ export interface ApiCityLocalPageCityLocalPage
     buttonTextConsultantCta: Schema.Attribute.Text;
     buttonTextHeaderCta: Schema.Attribute.Text;
     communityDescription: Schema.Attribute.Text;
-    communityGuidelinesRichText: Schema.Attribute.RichText;
+    communityGuidelinesRichText: Schema.Attribute.Blocks;
     communityHeadline: Schema.Attribute.Text;
     communityImage: Schema.Attribute.Media<'images'>;
     communityImageAltText: Schema.Attribute.Text;
-    consultantTitleDescription: Schema.Attribute.RichText;
+    consultantTitleDescription: Schema.Attribute.Blocks;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    customContent: Schema.Attribute.RichText;
+    customContent: Schema.Attribute.Blocks;
     customHtml: Schema.Attribute.Text;
-    echoRichText: Schema.Attribute.RichText;
-    faqAnswer1: Schema.Attribute.RichText;
-    faqAnswer10: Schema.Attribute.RichText;
-    faqAnswer11: Schema.Attribute.RichText;
-    faqAnswer12: Schema.Attribute.RichText;
-    faqAnswer13: Schema.Attribute.RichText;
-    faqAnswer14: Schema.Attribute.RichText;
-    faqAnswer15: Schema.Attribute.RichText;
-    faqAnswer2: Schema.Attribute.RichText;
-    faqAnswer3: Schema.Attribute.RichText;
-    faqAnswer4: Schema.Attribute.RichText;
-    faqAnswer5: Schema.Attribute.RichText;
-    faqAnswer6: Schema.Attribute.RichText;
-    faqAnswer7: Schema.Attribute.RichText;
-    faqAnswer8: Schema.Attribute.RichText;
-    faqAnswer9: Schema.Attribute.RichText;
-    faqContent: Schema.Attribute.RichText;
+    echoRichText: Schema.Attribute.Blocks;
+    faqAnswer1: Schema.Attribute.Blocks;
+    faqAnswer10: Schema.Attribute.Blocks;
+    faqAnswer11: Schema.Attribute.Blocks;
+    faqAnswer12: Schema.Attribute.Blocks;
+    faqAnswer13: Schema.Attribute.Blocks;
+    faqAnswer14: Schema.Attribute.Blocks;
+    faqAnswer15: Schema.Attribute.Blocks;
+    faqAnswer2: Schema.Attribute.Blocks;
+    faqAnswer3: Schema.Attribute.Blocks;
+    faqAnswer4: Schema.Attribute.Blocks;
+    faqAnswer5: Schema.Attribute.Blocks;
+    faqAnswer6: Schema.Attribute.Blocks;
+    faqAnswer7: Schema.Attribute.Blocks;
+    faqAnswer8: Schema.Attribute.Blocks;
+    faqAnswer9: Schema.Attribute.Blocks;
+    faqContent: Schema.Attribute.Blocks;
     faqQuestion1: Schema.Attribute.Text;
     faqQuestion10: Schema.Attribute.Text;
     faqQuestion11: Schema.Attribute.Text;
@@ -644,15 +644,15 @@ export interface ApiCityLocalPageCityLocalPage
     > &
       Schema.Attribute.Private;
     localReviewHeader: Schema.Attribute.Text;
-    locationContactDetails: Schema.Attribute.RichText;
-    locationImprovementsRichText: Schema.Attribute.RichText;
-    mainStoryRichText: Schema.Attribute.RichText;
+    locationContactDetails: Schema.Attribute.Blocks;
+    locationImprovementsRichText: Schema.Attribute.Blocks;
+    mainStoryRichText: Schema.Attribute.Blocks;
     mapDescriptionText: Schema.Attribute.Text;
     mapHeaderText: Schema.Attribute.Text;
     mapLocation: Schema.Attribute.Enumeration<
       ['Bowie', 'Pasadena', 'Gaithersburg', 'Crownsville']
     >;
-    mapSection: Schema.Attribute.RichText;
+    mapSection: Schema.Attribute.Blocks;
     nameOfReviewer: Schema.Attribute.Text;
     openGraphDescription: Schema.Attribute.Text;
     openGraphImageUrl: Schema.Attribute.Media<'images'>;
@@ -665,16 +665,16 @@ export interface ApiCityLocalPageCityLocalPage
     projectImage2: Schema.Attribute.Media<'images'>;
     projectImage3: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
-    recentProjectDescription: Schema.Attribute.RichText;
+    recentProjectDescription: Schema.Attribute.Blocks;
     recentProjectHangline: Schema.Attribute.Text;
     recentProjectHeadline: Schema.Attribute.Text;
     recentProjectKeywordImage: Schema.Attribute.Media<'images'>;
     residentialCalc: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
-    residentialCalcHeader: Schema.Attribute.RichText;
+    residentialCalcHeader: Schema.Attribute.Blocks;
     reviewText: Schema.Attribute.Text;
     schemaMarkup: Schema.Attribute.Text;
-    secondaryStoryRichText: Schema.Attribute.RichText;
+    secondaryStoryRichText: Schema.Attribute.Blocks;
     seoMetaDescription: Schema.Attribute.Text;
     seoTitleTag: Schema.Attribute.Text;
     servicesBodyText: Schema.Attribute.Text;
@@ -685,16 +685,16 @@ export interface ApiCityLocalPageCityLocalPage
     servicesModal5: Schema.Attribute.Text;
     servicesModal6: Schema.Attribute.Text;
     servicesModal7: Schema.Attribute.Text;
-    servicesModalDesc1: Schema.Attribute.RichText;
-    servicesModalDesc2: Schema.Attribute.RichText;
-    servicesModalDesc3: Schema.Attribute.RichText;
-    servicesModalDesc4: Schema.Attribute.RichText;
-    servicesModalDesc5: Schema.Attribute.RichText;
-    servicesModalDesc6: Schema.Attribute.RichText;
-    servicesModalDesc7: Schema.Attribute.RichText;
+    servicesModalDesc1: Schema.Attribute.Blocks;
+    servicesModalDesc2: Schema.Attribute.Blocks;
+    servicesModalDesc3: Schema.Attribute.Blocks;
+    servicesModalDesc4: Schema.Attribute.Blocks;
+    servicesModalDesc5: Schema.Attribute.Blocks;
+    servicesModalDesc6: Schema.Attribute.Blocks;
+    servicesModalDesc7: Schema.Attribute.Blocks;
     servicesModalHeading: Schema.Attribute.Text;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
-    supportingTextRichText: Schema.Attribute.RichText;
+    supportingTextRichText: Schema.Attribute.Blocks;
     testimonialVideo: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -725,11 +725,11 @@ export interface ApiClearingBusinessClearingBusiness
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    customContent: Schema.Attribute.RichText;
+    customContent: Schema.Attribute.Blocks;
     customHtml: Schema.Attribute.Text;
     displayRoofingHeroBackgroundVideo: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
-    faqContent: Schema.Attribute.RichText;
+    faqContent: Schema.Attribute.Blocks;
     featureText: Schema.Attribute.Text;
     footerAddress: Schema.Attribute.Text;
     header: Schema.Attribute.Text;
@@ -838,12 +838,12 @@ export interface ApiJamesHardieColorJamesHardieColor
     ctaImage2: Schema.Attribute.Media<'images'>;
     ctaName: Schema.Attribute.Text;
     ctaText: Schema.Attribute.Text;
-    customContent: Schema.Attribute.RichText;
+    customContent: Schema.Attribute.Blocks;
     customHtml: Schema.Attribute.Text;
-    faqContent: Schema.Attribute.RichText;
-    featureHeadingText1: Schema.Attribute.RichText;
-    featureHeadingText2: Schema.Attribute.RichText;
-    featureHeadingText3: Schema.Attribute.RichText;
+    faqContent: Schema.Attribute.Blocks;
+    featureHeadingText1: Schema.Attribute.Blocks;
+    featureHeadingText2: Schema.Attribute.Blocks;
+    featureHeadingText3: Schema.Attribute.Blocks;
     featureImage1: Schema.Attribute.Media<'images'>;
     featureImage2: Schema.Attribute.Media<'images'>;
     featureImage3: Schema.Attribute.Media<'images'>;
@@ -862,7 +862,7 @@ export interface ApiJamesHardieColorJamesHardieColor
     opengraphImageUrl2: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     schemaMarkup: Schema.Attribute.Text;
-    sliderDetail: Schema.Attribute.RichText;
+    sliderDetail: Schema.Attribute.Blocks;
     sliderHeading: Schema.Attribute.Text;
     sliderImage1: Schema.Attribute.Media<'images'>;
     sliderImage2: Schema.Attribute.Media<'images'>;
@@ -902,11 +902,11 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    customContent: Schema.Attribute.RichText;
+    customContent: Schema.Attribute.Blocks;
     customHtml: Schema.Attribute.Text;
     displayRoofingHeroBackgroundVideo: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
-    faqContent: Schema.Attribute.RichText;
+    faqContent: Schema.Attribute.Blocks;
     featureText: Schema.Attribute.Text;
     footerAddress: Schema.Attribute.Text;
     header: Schema.Attribute.Text;
@@ -958,30 +958,30 @@ export interface ApiLocalPageLocalPage extends Struct.CollectionTypeSchema {
     altTextForProjectImage3: Schema.Attribute.Text;
     buttonTextConsultantCta: Schema.Attribute.Text;
     buttonTextHeaderCta: Schema.Attribute.Text;
-    communityGuidelinesRichText: Schema.Attribute.RichText;
-    consultantTitleDescription: Schema.Attribute.RichText;
+    communityGuidelinesRichText: Schema.Attribute.Blocks;
+    consultantTitleDescription: Schema.Attribute.Blocks;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    customContent: Schema.Attribute.RichText;
+    customContent: Schema.Attribute.Blocks;
     customHtml: Schema.Attribute.Text;
-    echoRichText: Schema.Attribute.RichText;
-    faqAnswer1: Schema.Attribute.RichText;
-    faqAnswer10: Schema.Attribute.RichText;
-    faqAnswer11: Schema.Attribute.RichText;
-    faqAnswer12: Schema.Attribute.RichText;
-    faqAnswer13: Schema.Attribute.RichText;
-    faqAnswer14: Schema.Attribute.RichText;
-    faqAnswer15: Schema.Attribute.RichText;
-    faqAnswer2: Schema.Attribute.RichText;
-    faqAnswer3: Schema.Attribute.RichText;
-    faqAnswer4: Schema.Attribute.RichText;
-    faqAnswer5: Schema.Attribute.RichText;
-    faqAnswer6: Schema.Attribute.RichText;
-    faqAnswer7: Schema.Attribute.RichText;
-    faqAnswer8: Schema.Attribute.RichText;
-    faqAnswer9: Schema.Attribute.RichText;
-    faqContent: Schema.Attribute.RichText;
+    echoRichText: Schema.Attribute.Blocks;
+    faqAnswer1: Schema.Attribute.Blocks;
+    faqAnswer10: Schema.Attribute.Blocks;
+    faqAnswer11: Schema.Attribute.Blocks;
+    faqAnswer12: Schema.Attribute.Blocks;
+    faqAnswer13: Schema.Attribute.Blocks;
+    faqAnswer14: Schema.Attribute.Blocks;
+    faqAnswer15: Schema.Attribute.Blocks;
+    faqAnswer2: Schema.Attribute.Blocks;
+    faqAnswer3: Schema.Attribute.Blocks;
+    faqAnswer4: Schema.Attribute.Blocks;
+    faqAnswer5: Schema.Attribute.Blocks;
+    faqAnswer6: Schema.Attribute.Blocks;
+    faqAnswer7: Schema.Attribute.Blocks;
+    faqAnswer8: Schema.Attribute.Blocks;
+    faqAnswer9: Schema.Attribute.Blocks;
+    faqContent: Schema.Attribute.Blocks;
     faqQuestion1: Schema.Attribute.Text;
     faqQuestion10: Schema.Attribute.Text;
     faqQuestion11: Schema.Attribute.Text;
@@ -1010,15 +1010,15 @@ export interface ApiLocalPageLocalPage extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     localReviewHeader: Schema.Attribute.Text;
-    locationContactDetails: Schema.Attribute.RichText;
-    locationImprovementsRichText: Schema.Attribute.RichText;
-    mainStoryRichText: Schema.Attribute.RichText;
+    locationContactDetails: Schema.Attribute.Blocks;
+    locationImprovementsRichText: Schema.Attribute.Blocks;
+    mainStoryRichText: Schema.Attribute.Blocks;
     mapDescriptionText: Schema.Attribute.Text;
     mapHeaderText: Schema.Attribute.Text;
     mapLocation: Schema.Attribute.Enumeration<
       ['Bowie', 'Pasadena', 'Gaithersburg', 'Crownsville']
     >;
-    mapSection: Schema.Attribute.RichText;
+    mapSection: Schema.Attribute.Blocks;
     nameOfReviewer: Schema.Attribute.Text;
     openGraphDescription: Schema.Attribute.Text;
     openGraphImageUrl: Schema.Attribute.Media<'images'>;
@@ -1031,16 +1031,16 @@ export interface ApiLocalPageLocalPage extends Struct.CollectionTypeSchema {
     projectImage2: Schema.Attribute.Media<'images'>;
     projectImage3: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
-    recentProjectDescription: Schema.Attribute.RichText;
+    recentProjectDescription: Schema.Attribute.Blocks;
     recentProjectHangline: Schema.Attribute.Text;
     recentProjectHeadline: Schema.Attribute.Text;
     recentProjectKeywordImage: Schema.Attribute.Media<'images'>;
     residentialCalc: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
-    residentialCalcHeader: Schema.Attribute.RichText;
+    residentialCalcHeader: Schema.Attribute.Blocks;
     reviewText: Schema.Attribute.Text;
     schemaMarkup: Schema.Attribute.Text;
-    secondaryStoryRichText: Schema.Attribute.RichText;
+    secondaryStoryRichText: Schema.Attribute.Blocks;
     seoMetaDescription: Schema.Attribute.Text;
     seoTitleTag: Schema.Attribute.Text;
     servicesBodyText: Schema.Attribute.Text;
@@ -1050,15 +1050,15 @@ export interface ApiLocalPageLocalPage extends Struct.CollectionTypeSchema {
     servicesModal4: Schema.Attribute.Text;
     servicesModal5: Schema.Attribute.Text;
     servicesModal6: Schema.Attribute.Text;
-    servicesModalDesc1: Schema.Attribute.RichText;
-    servicesModalDesc2: Schema.Attribute.RichText;
-    servicesModalDesc3: Schema.Attribute.RichText;
-    servicesModalDesc4: Schema.Attribute.RichText;
-    servicesModalDesc5: Schema.Attribute.RichText;
-    servicesModalDesc6: Schema.Attribute.RichText;
+    servicesModalDesc1: Schema.Attribute.Blocks;
+    servicesModalDesc2: Schema.Attribute.Blocks;
+    servicesModalDesc3: Schema.Attribute.Blocks;
+    servicesModalDesc4: Schema.Attribute.Blocks;
+    servicesModalDesc5: Schema.Attribute.Blocks;
+    servicesModalDesc6: Schema.Attribute.Blocks;
     servicesModalHeading: Schema.Attribute.Text;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
-    supportingTextRichText: Schema.Attribute.RichText;
+    supportingTextRichText: Schema.Attribute.Blocks;
     testimonialVideo: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -1091,33 +1091,33 @@ export interface ApiLocalPagesMarylandLocalPagesMaryland
     buttonTextConsultantCta: Schema.Attribute.Text;
     buttonTextHeaderCta: Schema.Attribute.Text;
     communityDescription: Schema.Attribute.Text;
-    communityGuidelinesRichText: Schema.Attribute.RichText;
+    communityGuidelinesRichText: Schema.Attribute.Blocks;
     communityHeadline: Schema.Attribute.Text;
     communityImage: Schema.Attribute.Media<'images'>;
     communityImageAltText: Schema.Attribute.Text;
-    consultantTitleDescription: Schema.Attribute.RichText;
+    consultantTitleDescription: Schema.Attribute.Blocks;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    customContent: Schema.Attribute.RichText;
+    customContent: Schema.Attribute.Blocks;
     customHtml: Schema.Attribute.Text;
-    echoRichText: Schema.Attribute.RichText;
-    faqAnswer1: Schema.Attribute.RichText;
-    faqAnswer10: Schema.Attribute.RichText;
-    faqAnswer11: Schema.Attribute.RichText;
-    faqAnswer12: Schema.Attribute.RichText;
-    faqAnswer13: Schema.Attribute.RichText;
-    faqAnswer14: Schema.Attribute.RichText;
-    faqAnswer15: Schema.Attribute.RichText;
-    faqAnswer2: Schema.Attribute.RichText;
-    faqAnswer3: Schema.Attribute.RichText;
-    faqAnswer4: Schema.Attribute.RichText;
-    faqAnswer5: Schema.Attribute.RichText;
-    faqAnswer6: Schema.Attribute.RichText;
-    faqAnswer7: Schema.Attribute.RichText;
-    faqAnswer8: Schema.Attribute.RichText;
-    faqAnswer9: Schema.Attribute.RichText;
-    faqContent: Schema.Attribute.RichText;
+    echoRichText: Schema.Attribute.Blocks;
+    faqAnswer1: Schema.Attribute.Blocks;
+    faqAnswer10: Schema.Attribute.Blocks;
+    faqAnswer11: Schema.Attribute.Blocks;
+    faqAnswer12: Schema.Attribute.Blocks;
+    faqAnswer13: Schema.Attribute.Blocks;
+    faqAnswer14: Schema.Attribute.Blocks;
+    faqAnswer15: Schema.Attribute.Blocks;
+    faqAnswer2: Schema.Attribute.Blocks;
+    faqAnswer3: Schema.Attribute.Blocks;
+    faqAnswer4: Schema.Attribute.Blocks;
+    faqAnswer5: Schema.Attribute.Blocks;
+    faqAnswer6: Schema.Attribute.Blocks;
+    faqAnswer7: Schema.Attribute.Blocks;
+    faqAnswer8: Schema.Attribute.Blocks;
+    faqAnswer9: Schema.Attribute.Blocks;
+    faqContent: Schema.Attribute.Blocks;
     faqQuestion1: Schema.Attribute.Text;
     faqQuestion10: Schema.Attribute.Text;
     faqQuestion11: Schema.Attribute.Text;
@@ -1146,15 +1146,15 @@ export interface ApiLocalPagesMarylandLocalPagesMaryland
     > &
       Schema.Attribute.Private;
     localReviewHeader: Schema.Attribute.Text;
-    locationContactDetails: Schema.Attribute.RichText;
-    locationImprovementsRichText: Schema.Attribute.RichText;
-    mainStoryRichText: Schema.Attribute.RichText;
+    locationContactDetails: Schema.Attribute.Blocks;
+    locationImprovementsRichText: Schema.Attribute.Blocks;
+    mainStoryRichText: Schema.Attribute.Blocks;
     mapDescriptionText: Schema.Attribute.Text;
     mapHeaderText: Schema.Attribute.Text;
     mapLocation: Schema.Attribute.Enumeration<
       ['Bowie', 'Pasadena', 'Gaithersburg', 'Crownsville']
     >;
-    mapSection: Schema.Attribute.RichText;
+    mapSection: Schema.Attribute.Blocks;
     nameOfReviewer: Schema.Attribute.Text;
     openGraphDescription: Schema.Attribute.Text;
     openGraphImageUrl: Schema.Attribute.Media<'images'>;
@@ -1167,16 +1167,16 @@ export interface ApiLocalPagesMarylandLocalPagesMaryland
     projectImage2: Schema.Attribute.Media<'images'>;
     projectImage3: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
-    recentProjectDescription: Schema.Attribute.RichText;
+    recentProjectDescription: Schema.Attribute.Blocks;
     recentProjectHangline: Schema.Attribute.Text;
     recentProjectHeadline: Schema.Attribute.Text;
     recentProjectKeywordImage: Schema.Attribute.Media<'images'>;
     residentialCalc: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
-    residentialCalcHeader: Schema.Attribute.RichText;
+    residentialCalcHeader: Schema.Attribute.Blocks;
     reviewText: Schema.Attribute.Text;
     schemaMarkup: Schema.Attribute.Text;
-    secondaryStoryRichText: Schema.Attribute.RichText;
+    secondaryStoryRichText: Schema.Attribute.Blocks;
     seoMetaDescription: Schema.Attribute.Text;
     seoTitleTag: Schema.Attribute.Text;
     servicesBodyText: Schema.Attribute.Text;
@@ -1187,16 +1187,16 @@ export interface ApiLocalPagesMarylandLocalPagesMaryland
     servicesModal5: Schema.Attribute.Text;
     servicesModal6: Schema.Attribute.Text;
     servicesModal7: Schema.Attribute.Text;
-    servicesModalDesc1: Schema.Attribute.RichText;
-    servicesModalDesc2: Schema.Attribute.RichText;
-    servicesModalDesc3: Schema.Attribute.RichText;
-    servicesModalDesc4: Schema.Attribute.RichText;
-    servicesModalDesc5: Schema.Attribute.RichText;
-    servicesModalDesc6: Schema.Attribute.RichText;
-    servicesModalDesc7: Schema.Attribute.RichText;
+    servicesModalDesc1: Schema.Attribute.Blocks;
+    servicesModalDesc2: Schema.Attribute.Blocks;
+    servicesModalDesc3: Schema.Attribute.Blocks;
+    servicesModalDesc4: Schema.Attribute.Blocks;
+    servicesModalDesc5: Schema.Attribute.Blocks;
+    servicesModalDesc6: Schema.Attribute.Blocks;
+    servicesModalDesc7: Schema.Attribute.Blocks;
     servicesModalHeading: Schema.Attribute.Text;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
-    supportingTextRichText: Schema.Attribute.RichText;
+    supportingTextRichText: Schema.Attribute.Blocks;
     testimonialVideo: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -1229,33 +1229,33 @@ export interface ApiLocalPagesVirginiumLocalPagesVirginium
     buttonTextConsultantCta: Schema.Attribute.Text;
     buttonTextHeaderCta: Schema.Attribute.Text;
     communityDescription: Schema.Attribute.Text;
-    communityGuidelinesRichText: Schema.Attribute.RichText;
+    communityGuidelinesRichText: Schema.Attribute.Blocks;
     communityHeadline: Schema.Attribute.Text;
     communityImage: Schema.Attribute.Media<'images'>;
     communityImageAltText: Schema.Attribute.Text;
-    consultantTitleDescription: Schema.Attribute.RichText;
+    consultantTitleDescription: Schema.Attribute.Blocks;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    customContent: Schema.Attribute.RichText;
+    customContent: Schema.Attribute.Blocks;
     customHtml: Schema.Attribute.Text;
-    echoRichText: Schema.Attribute.RichText;
-    faqAnswer1: Schema.Attribute.RichText;
-    faqAnswer10: Schema.Attribute.RichText;
-    faqAnswer11: Schema.Attribute.RichText;
-    faqAnswer12: Schema.Attribute.RichText;
-    faqAnswer13: Schema.Attribute.RichText;
-    faqAnswer14: Schema.Attribute.RichText;
-    faqAnswer15: Schema.Attribute.RichText;
-    faqAnswer2: Schema.Attribute.RichText;
-    faqAnswer3: Schema.Attribute.RichText;
-    faqAnswer4: Schema.Attribute.RichText;
-    faqAnswer5: Schema.Attribute.RichText;
-    faqAnswer6: Schema.Attribute.RichText;
-    faqAnswer7: Schema.Attribute.RichText;
-    faqAnswer8: Schema.Attribute.RichText;
-    faqAnswer9: Schema.Attribute.RichText;
-    faqContent: Schema.Attribute.RichText;
+    echoRichText: Schema.Attribute.Blocks;
+    faqAnswer1: Schema.Attribute.Blocks;
+    faqAnswer10: Schema.Attribute.Blocks;
+    faqAnswer11: Schema.Attribute.Blocks;
+    faqAnswer12: Schema.Attribute.Blocks;
+    faqAnswer13: Schema.Attribute.Blocks;
+    faqAnswer14: Schema.Attribute.Blocks;
+    faqAnswer15: Schema.Attribute.Blocks;
+    faqAnswer2: Schema.Attribute.Blocks;
+    faqAnswer3: Schema.Attribute.Blocks;
+    faqAnswer4: Schema.Attribute.Blocks;
+    faqAnswer5: Schema.Attribute.Blocks;
+    faqAnswer6: Schema.Attribute.Blocks;
+    faqAnswer7: Schema.Attribute.Blocks;
+    faqAnswer8: Schema.Attribute.Blocks;
+    faqAnswer9: Schema.Attribute.Blocks;
+    faqContent: Schema.Attribute.Blocks;
     faqQuestion1: Schema.Attribute.Text;
     faqQuestion10: Schema.Attribute.Text;
     faqQuestion11: Schema.Attribute.Text;
@@ -1284,15 +1284,15 @@ export interface ApiLocalPagesVirginiumLocalPagesVirginium
     > &
       Schema.Attribute.Private;
     localReviewHeader: Schema.Attribute.Text;
-    locationContactDetails: Schema.Attribute.RichText;
-    locationImprovementsRichText: Schema.Attribute.RichText;
-    mainStoryRichText: Schema.Attribute.RichText;
+    locationContactDetails: Schema.Attribute.Blocks;
+    locationImprovementsRichText: Schema.Attribute.Blocks;
+    mainStoryRichText: Schema.Attribute.Blocks;
     mapDescriptionText: Schema.Attribute.Text;
     mapHeaderText: Schema.Attribute.Text;
     mapLocation: Schema.Attribute.Enumeration<
       ['Bowie', 'Pasadena', 'Gaithersburg', 'Crownsville']
     >;
-    mapSection: Schema.Attribute.RichText;
+    mapSection: Schema.Attribute.Blocks;
     nameOfReviewer: Schema.Attribute.Text;
     openGraphDescription: Schema.Attribute.Text;
     openGraphImageUrl: Schema.Attribute.Media<'images'>;
@@ -1305,16 +1305,16 @@ export interface ApiLocalPagesVirginiumLocalPagesVirginium
     projectImage2: Schema.Attribute.Media<'images'>;
     projectImage3: Schema.Attribute.Media<'images'>;
     publishedAt: Schema.Attribute.DateTime;
-    recentProjectDescription: Schema.Attribute.RichText;
+    recentProjectDescription: Schema.Attribute.Blocks;
     recentProjectHangline: Schema.Attribute.Text;
     recentProjectHeadline: Schema.Attribute.Text;
     recentProjectKeywordImage: Schema.Attribute.Media<'images'>;
     residentialCalc: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
-    residentialCalcHeader: Schema.Attribute.RichText;
+    residentialCalcHeader: Schema.Attribute.Blocks;
     reviewText: Schema.Attribute.Text;
     schemaMarkup: Schema.Attribute.Text;
-    secondaryStoryRichText: Schema.Attribute.RichText;
+    secondaryStoryRichText: Schema.Attribute.Blocks;
     seoMetaDescription: Schema.Attribute.Text;
     seoTitleTag: Schema.Attribute.Text;
     servicesBodyText: Schema.Attribute.Text;
@@ -1325,16 +1325,16 @@ export interface ApiLocalPagesVirginiumLocalPagesVirginium
     servicesModal5: Schema.Attribute.Text;
     servicesModal6: Schema.Attribute.Text;
     servicesModal7: Schema.Attribute.Text;
-    servicesModalDesc1: Schema.Attribute.RichText;
-    servicesModalDesc2: Schema.Attribute.RichText;
-    servicesModalDesc3: Schema.Attribute.RichText;
-    servicesModalDesc4: Schema.Attribute.RichText;
-    servicesModalDesc5: Schema.Attribute.RichText;
-    servicesModalDesc6: Schema.Attribute.RichText;
-    servicesModalDesc7: Schema.Attribute.RichText;
+    servicesModalDesc1: Schema.Attribute.Blocks;
+    servicesModalDesc2: Schema.Attribute.Blocks;
+    servicesModalDesc3: Schema.Attribute.Blocks;
+    servicesModalDesc4: Schema.Attribute.Blocks;
+    servicesModalDesc5: Schema.Attribute.Blocks;
+    servicesModalDesc6: Schema.Attribute.Blocks;
+    servicesModalDesc7: Schema.Attribute.Blocks;
     servicesModalHeading: Schema.Attribute.Text;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
-    supportingTextRichText: Schema.Attribute.RichText;
+    supportingTextRichText: Schema.Attribute.Blocks;
     testimonialVideo: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -1363,9 +1363,9 @@ export interface ApiReviewtestimonialReviewtestimonial
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    customContent: Schema.Attribute.RichText;
+    customContent: Schema.Attribute.Blocks;
     customHtml: Schema.Attribute.Text;
-    faqContent: Schema.Attribute.RichText;
+    faqContent: Schema.Attribute.Blocks;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1402,9 +1402,9 @@ export interface ApiSaleSale extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    customContent: Schema.Attribute.RichText;
+    customContent: Schema.Attribute.Blocks;
     customHtml: Schema.Attribute.Text;
-    faqContent: Schema.Attribute.RichText;
+    faqContent: Schema.Attribute.Blocks;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::sale.sale'> &
       Schema.Attribute.Private;
@@ -1436,9 +1436,9 @@ export interface ApiServiceAreaCityServiceAreaCity
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    customContent: Schema.Attribute.RichText;
+    customContent: Schema.Attribute.Blocks;
     customHtml: Schema.Attribute.Text;
-    faqContent: Schema.Attribute.RichText;
+    faqContent: Schema.Attribute.Blocks;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1472,9 +1472,9 @@ export interface ApiServiceAreaCountyServiceAreaCounty
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    customContent: Schema.Attribute.RichText;
+    customContent: Schema.Attribute.Blocks;
     customHtml: Schema.Attribute.Text;
-    faqContent: Schema.Attribute.RichText;
+    faqContent: Schema.Attribute.Blocks;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1523,12 +1523,12 @@ export interface ApiTimbertechColorTimbertechColor
     ctaImage2: Schema.Attribute.Media<'images'>;
     ctaName: Schema.Attribute.Text;
     ctaText: Schema.Attribute.Text;
-    customContent: Schema.Attribute.RichText;
+    customContent: Schema.Attribute.Blocks;
     customHtml: Schema.Attribute.Text;
-    faqContent: Schema.Attribute.RichText;
-    featureHeadingText1: Schema.Attribute.RichText;
-    featureHeadingText2: Schema.Attribute.RichText;
-    featureHeadingText3: Schema.Attribute.RichText;
+    faqContent: Schema.Attribute.Blocks;
+    featureHeadingText1: Schema.Attribute.Blocks;
+    featureHeadingText2: Schema.Attribute.Blocks;
+    featureHeadingText3: Schema.Attribute.Blocks;
     featureImage1: Schema.Attribute.Media<'images'>;
     featureImage2: Schema.Attribute.Media<'images'>;
     featureImage3: Schema.Attribute.Media<'images'>;
@@ -1547,7 +1547,7 @@ export interface ApiTimbertechColorTimbertechColor
     opengraphImageUrl2: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     schemaMarkup: Schema.Attribute.Text;
-    sliderDetail: Schema.Attribute.RichText;
+    sliderDetail: Schema.Attribute.Blocks;
     sliderHeading: Schema.Attribute.Text;
     sliderImage1: Schema.Attribute.Media<'images'>;
     sliderImage2: Schema.Attribute.Media<'images'>;
@@ -1583,9 +1583,9 @@ export interface ApiVideoVideo extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    customContent: Schema.Attribute.RichText;
+    customContent: Schema.Attribute.Blocks;
     customHtml: Schema.Attribute.Text;
-    faqContent: Schema.Attribute.RichText;
+    faqContent: Schema.Attribute.Blocks;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::video.video'> &
       Schema.Attribute.Private;
@@ -1597,7 +1597,7 @@ export interface ApiVideoVideo extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    videoCopy: Schema.Attribute.RichText;
+    videoCopy: Schema.Attribute.Blocks;
     videoLink: Schema.Attribute.String;
     videoShortDescription: Schema.Attribute.Text;
     videoThumbnail: Schema.Attribute.Media<'images'>;

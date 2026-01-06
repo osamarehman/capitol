@@ -29,11 +29,11 @@
       "required": false
     },
     "customContent": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqContent": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "mainImage": {
@@ -57,7 +57,7 @@
       "required": false
     },
     "postBody": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "postSummary": {

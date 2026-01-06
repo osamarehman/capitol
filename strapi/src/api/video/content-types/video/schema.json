@@ -29,15 +29,15 @@
       "required": false
     },
     "customContent": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqContent": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "videoCopy": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "videoShortDescription": {

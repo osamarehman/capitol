@@ -29,11 +29,11 @@
       "required": false
     },
     "customContent": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "faqContent": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "mainImage": {
@@ -122,7 +122,7 @@
       "required": false
     },
     "sliderDetail": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "ctaImage1": {
@@ -178,7 +178,7 @@
       "default": false
     },
     "featureHeadingText1": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "featureImage1": {
@@ -190,7 +190,7 @@
       ]
     },
     "featureHeadingText2": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "featureImage2": {
@@ -202,7 +202,7 @@
       ]
     },
     "featureHeadingText3": {
-      "type": "richtext",
+      "type": "blocks",
       "required": false
     },
     "featureImage3": {
