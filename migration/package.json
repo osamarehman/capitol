@@ -10,6 +10,7 @@
     "import-content": "tsx scripts/03-import-content.ts",
     "upload-assets": "tsx scripts/04-upload-assets.ts",
     "verify": "tsx scripts/05-verify-migration.ts",
+    "sync-alt-texts": "tsx scripts/sync-alt-texts.ts",
     "migrate:all": "npm run export && npm run generate-schemas && npm run import-content && npm run upload-assets && npm run verify"
   },
   "dependencies": {

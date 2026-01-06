@@ -10,6 +10,14 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": true
+    },
+    "content-type-builder": {
+      "visible": true
+    }
+  },
   "attributes": {
     "title": {
       "type": "string",
@@ -20,19 +28,27 @@
       "targetField": "title",
       "required": true
     },
-    "schemaMarkup": {
-      "type": "text",
-      "required": false
-    },
-    "customHtml": {
-      "type": "text",
-      "required": false
-    },
-    "customContent": {
+    "mainStoryRichText": {
       "type": "richtext",
       "required": false
     },
-    "faqContent": {
+    "secondaryStoryRichText": {
+      "type": "richtext",
+      "required": false
+    },
+    "supportingTextRichText": {
+      "type": "richtext",
+      "required": false
+    },
+    "recentProjectHangline": {
+      "type": "text",
+      "required": false
+    },
+    "communityGuidelinesRichText": {
+      "type": "richtext",
+      "required": false
+    },
+    "locationImprovementsRichText": {
       "type": "richtext",
       "required": false
     },
@@ -68,10 +84,6 @@
       "type": "text",
       "required": false
     },
-    "projectPhotosText": {
-      "type": "text",
-      "required": false
-    },
     "recentProjectHeadline": {
       "type": "text",
       "required": false
@@ -84,9 +96,7 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "altTextForKeywordImage": {
       "type": "text",
@@ -96,9 +106,7 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "altTextForProjectImage1": {
       "type": "text",
@@ -108,9 +116,7 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "altTextForProjectImage2": {
       "type": "text",
@@ -120,9 +126,7 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "altTextForProjectImage3": {
       "type": "text",
@@ -136,17 +140,13 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "projectConsultant2Image": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "projectConsultantName": {
       "type": "text",
@@ -175,12 +175,7 @@
     "mapLocation": {
       "type": "enumeration",
       "required": false,
-      "enum": [
-        "Bowie",
-        "Pasadena",
-        "Gaithersburg",
-        "Crownsville"
-      ]
+      "enum": ["Bowie", "Pasadena", "Gaithersburg", "Crownsville"]
     },
     "testimonialVideo": {
       "type": "string",
@@ -202,13 +197,15 @@
       "type": "string",
       "required": false
     },
+    "echoRichText": {
+      "type": "richtext",
+      "required": false
+    },
     "openGraphImageUrl": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "openGraphTitle": {
       "type": "text",
@@ -218,55 +215,55 @@
       "type": "text",
       "required": false
     },
-    "serviceFaqHeading": {
+    "servicesModalHeading": {
       "type": "text",
       "required": false
     },
-    "serviceFaq1": {
+    "servicesModal1": {
       "type": "text",
       "required": false
     },
-    "serviceFaqDesc1": {
+    "servicesModalDesc1": {
       "type": "richtext",
       "required": false
     },
-    "serviceFaq2": {
+    "servicesModal2": {
       "type": "text",
       "required": false
     },
-    "serviceFaqDesc2": {
+    "servicesModalDesc2": {
       "type": "richtext",
       "required": false
     },
-    "serviceFaq3": {
+    "servicesModal3": {
       "type": "text",
       "required": false
     },
-    "serviceFaqDesc3": {
+    "servicesModalDesc3": {
       "type": "richtext",
       "required": false
     },
-    "serviceFaq4": {
+    "servicesModal4": {
       "type": "text",
       "required": false
     },
-    "serviceFaqDesc4": {
+    "servicesModalDesc4": {
       "type": "richtext",
       "required": false
     },
-    "serviceFaq5": {
+    "servicesModal5": {
       "type": "text",
       "required": false
     },
-    "serviceFaqDesc5": {
+    "servicesModalDesc5": {
       "type": "richtext",
       "required": false
     },
-    "serviceFaq6": {
+    "servicesModal6": {
       "type": "text",
       "required": false
     },
-    "serviceFaqDesc6": {
+    "servicesModalDesc6": {
       "type": "richtext",
       "required": false
     },
@@ -287,7 +284,7 @@
       "type": "text",
       "required": false
     },
-    "iscommercialcalc": {
+    "residentialCalc": {
       "type": "boolean",
       "required": false,
       "default": false
@@ -300,11 +297,25 @@
       "type": "media",
       "multiple": true,
       "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "mapSection": {
+      "type": "richtext",
+      "required": false
+    },
+    "schemaMarkup": {
+      "type": "text",
+      "required": false
+    },
+    "customHtml": {
+      "type": "text",
+      "required": false
+    },
+    "customContent": {
+      "type": "richtext",
+      "required": false
+    },
+    "faqContent": {
       "type": "richtext",
       "required": false
     },
