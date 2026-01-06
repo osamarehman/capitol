@@ -13,12 +13,14 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "searchable": true
     },
     "slug": {
       "type": "uid",
       "targetField": "title",
-      "required": true
+      "required": true,
+      "searchable": true
     },
     "schemaMarkup": {
       "type": "text",
@@ -29,11 +31,19 @@
       "required": false
     },
     "customContent": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "faqContent": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "mainImage": {
@@ -122,7 +132,11 @@
       "required": false
     },
     "sliderDetail": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "ctaImage1": {
@@ -178,7 +192,11 @@
       "default": false
     },
     "featureHeadingText1": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "featureImage1": {
@@ -190,7 +208,11 @@
       ]
     },
     "featureHeadingText2": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "featureImage2": {
@@ -202,7 +224,11 @@
       ]
     },
     "featureHeadingText3": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "featureImage3": {

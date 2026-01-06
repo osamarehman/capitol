@@ -18,12 +18,14 @@ export default ({ env }) => ({
     enabled: true,
     config: {
       allowedOrigins: [
-        env('FRONTEND_URL', 'http://localhost:3000'),
+        env('FRONTEND_URL', 'https://v2.improveitmd.com'),
+        'https://v2.improveitmd.com',
         'https://improveitmd.com',
         'https://www.improveitmd.com',
+        'http://localhost:3000',
       ],
       async handler(uid, { documentId, locale, status }) {
-        const frontendUrl = env('FRONTEND_URL', 'http://localhost:3000');
+        const frontendUrl = env('FRONTEND_URL', 'https://v2.improveitmd.com');
 
         // Map content types to frontend routes
         const contentTypeRoutes = {

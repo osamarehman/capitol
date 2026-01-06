@@ -1,4 +1,8 @@
 export default ({ env }) => ({
+  // CKEditor 5 - full-featured rich text editor with image support
+  ckeditor5: {
+    enabled: true,
+  },
   'users-permissions': {
     config: {
       jwt: {

@@ -8,13 +8,17 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "deploy": "strapi deploy"
+    "deploy": "strapi deploy",
+    "migrate-blocks-to-html": "node scripts/convert-blocks-to-html.js",
+    "configure-view": "node scripts/configure-local-page-view.js",
+    "verify-data": "node scripts/verify-data-integrity.js"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
     "typescript": "^5.3.0"
   },
   "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^6.0.3",
     "@strapi/plugin-cloud": "^5.6.0",
     "@strapi/plugin-graphql": "^5.33.1",
     "@strapi/plugin-users-permissions": "^5.6.0",
@@ -25,9 +29,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.30.2",
-    "strapi-plugin-media-extended": "^1.0.1",
-    "strapi-plugin-rich-text-blocks-extended": "^1.2.0",
-    "styled-components": "^6.2.0"
+    "styled-components": "^6.2.0",
+    "zod": "^4.3.5"
   },
   "author": {
     "name": "Capitol"

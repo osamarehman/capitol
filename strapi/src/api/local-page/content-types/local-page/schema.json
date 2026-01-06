@@ -21,40 +21,14 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "searchable": true
     },
     "slug": {
       "type": "uid",
       "targetField": "title",
-      "required": true
-    },
-    "mainStoryRichText": {
-      "type": "blocks",
-      "required": false
-    },
-    "secondaryStoryRichText": {
-      "type": "blocks",
-      "required": false
-    },
-    "supportingTextRichText": {
-      "type": "blocks",
-      "required": false
-    },
-    "recentProjectHangline": {
-      "type": "text",
-      "required": false
-    },
-    "communityGuidelinesRichText": {
-      "type": "blocks",
-      "required": false
-    },
-    "locationImprovementsRichText": {
-      "type": "blocks",
-      "required": false
-    },
-    "consultantTitleDescription": {
-      "type": "blocks",
-      "required": false
+      "required": true,
+      "searchable": true
     },
     "seoTitleTag": {
       "type": "text",
@@ -89,7 +63,63 @@
       "required": false
     },
     "recentProjectDescription": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "required": false
+    },
+    "mainStoryRichText": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "required": false
+    },
+    "secondaryStoryRichText": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "required": false
+    },
+    "supportingTextRichText": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "required": false
+    },
+    "recentProjectHangline": {
+      "type": "text",
+      "required": false
+    },
+    "communityGuidelinesRichText": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "required": false
+    },
+    "locationImprovementsRichText": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "required": false
+    },
+    "consultantTitleDescription": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "recentProjectKeywordImage": {
@@ -169,7 +199,11 @@
       "required": false
     },
     "locationContactDetails": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "mapLocation": {
@@ -198,7 +232,11 @@
       "required": false
     },
     "echoRichText": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "openGraphImageUrl": {
@@ -213,58 +251,6 @@
     },
     "openGraphDescription": {
       "type": "text",
-      "required": false
-    },
-    "servicesModalHeading": {
-      "type": "text",
-      "required": false
-    },
-    "servicesModal1": {
-      "type": "text",
-      "required": false
-    },
-    "servicesModalDesc1": {
-      "type": "blocks",
-      "required": false
-    },
-    "servicesModal2": {
-      "type": "text",
-      "required": false
-    },
-    "servicesModalDesc2": {
-      "type": "blocks",
-      "required": false
-    },
-    "servicesModal3": {
-      "type": "text",
-      "required": false
-    },
-    "servicesModalDesc3": {
-      "type": "blocks",
-      "required": false
-    },
-    "servicesModal4": {
-      "type": "text",
-      "required": false
-    },
-    "servicesModalDesc4": {
-      "type": "blocks",
-      "required": false
-    },
-    "servicesModal5": {
-      "type": "text",
-      "required": false
-    },
-    "servicesModalDesc5": {
-      "type": "blocks",
-      "required": false
-    },
-    "servicesModal6": {
-      "type": "text",
-      "required": false
-    },
-    "servicesModalDesc6": {
-      "type": "blocks",
       "required": false
     },
     "weatherWidget": {
@@ -290,7 +276,11 @@
       "default": false
     },
     "residentialCalcHeader": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "galleryMultiImages": {
@@ -300,7 +290,87 @@
       "allowedTypes": ["images"]
     },
     "mapSection": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "required": false
+    },
+    "servicesModalHeading": {
+      "type": "text",
+      "required": false
+    },
+    "servicesModal1": {
+      "type": "text",
+      "required": false
+    },
+    "servicesModalDesc1": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "required": false
+    },
+    "servicesModal2": {
+      "type": "text",
+      "required": false
+    },
+    "servicesModalDesc2": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "required": false
+    },
+    "servicesModal3": {
+      "type": "text",
+      "required": false
+    },
+    "servicesModalDesc3": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "required": false
+    },
+    "servicesModal4": {
+      "type": "text",
+      "required": false
+    },
+    "servicesModalDesc4": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "required": false
+    },
+    "servicesModal5": {
+      "type": "text",
+      "required": false
+    },
+    "servicesModalDesc5": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "required": false
+    },
+    "servicesModal6": {
+      "type": "text",
+      "required": false
+    },
+    "servicesModalDesc6": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "schemaMarkup": {
@@ -312,11 +382,19 @@
       "required": false
     },
     "customContent": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "faqContent": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "faqQuestion1": {
@@ -324,7 +402,11 @@
       "required": false
     },
     "faqAnswer1": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "faqQuestion2": {
@@ -332,7 +414,11 @@
       "required": false
     },
     "faqAnswer2": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "faqQuestion3": {
@@ -340,7 +426,11 @@
       "required": false
     },
     "faqAnswer3": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "faqQuestion4": {
@@ -348,7 +438,11 @@
       "required": false
     },
     "faqAnswer4": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "faqQuestion5": {
@@ -356,7 +450,11 @@
       "required": false
     },
     "faqAnswer5": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "faqQuestion6": {
@@ -364,7 +462,11 @@
       "required": false
     },
     "faqAnswer6": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "faqQuestion7": {
@@ -372,7 +474,11 @@
       "required": false
     },
     "faqAnswer7": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "faqQuestion8": {
@@ -380,7 +486,11 @@
       "required": false
     },
     "faqAnswer8": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "faqQuestion9": {
@@ -388,7 +498,11 @@
       "required": false
     },
     "faqAnswer9": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "faqQuestion10": {
@@ -396,7 +510,11 @@
       "required": false
     },
     "faqAnswer10": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "faqQuestion11": {
@@ -404,7 +522,11 @@
       "required": false
     },
     "faqAnswer11": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "faqQuestion12": {
@@ -412,7 +534,11 @@
       "required": false
     },
     "faqAnswer12": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "faqQuestion13": {
@@ -420,7 +546,11 @@
       "required": false
     },
     "faqAnswer13": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "faqQuestion14": {
@@ -428,7 +558,11 @@
       "required": false
     },
     "faqAnswer14": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     },
     "faqQuestion15": {
@@ -436,7 +570,11 @@
       "required": false
     },
     "faqAnswer15": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
       "required": false
     }
   }
