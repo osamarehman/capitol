@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_service_area_counties",
+  "info": {
+    "displayName": "County",
+    "description": "County attached to a service area city"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "enumeration",
+      "required": false,
+      "enum": ["MD", "DC", "VA"]
+    }
+  }
+}

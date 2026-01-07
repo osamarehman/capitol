@@ -40,7 +40,17 @@ export default ({ env }) => ({
         const basePath = contentTypeRoutes[uid] || '';
         const previewToken = env('PREVIEW_SECRET', 'preview-secret');
 
-        return `${frontendUrl}${basePath}/preview?documentId=${documentId}&secret=${previewToken}${status === 'draft' ? '&draft=true' : ''}`;
+        // Fetch the entry to get the slug
+        const entry = await strapi.documents(uid).findOne({
+          documentId,
+          status,
+          fields: ['slug'],
+        });
+
+        const slug = entry?.slug || documentId;
+
+        // URL: /services/pasadena-md-deck-builders?preview=true&secret=xxx
+        return `${frontendUrl}${basePath}/${slug}?preview=true&secret=${previewToken}${status === 'draft' ? '&draft=true' : ''}`;
       },
     },
   },

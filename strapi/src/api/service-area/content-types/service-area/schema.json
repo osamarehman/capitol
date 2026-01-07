@@ -1,11 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "service_area_counties",
+  "collectionName": "service_areas",
   "info": {
-    "singularName": "service-area-county",
-    "pluralName": "service-area-counties",
-    "displayName": "Service Area Counties",
-    "description": "Migrated from Webflow collection: Service Area Counties"
+    "singularName": "service-area",
+    "pluralName": "service-areas",
+    "displayName": "Service Areas",
+    "description": "Service area cities with attached counties"
   },
   "options": {
     "draftAndPublish": true
@@ -21,6 +21,16 @@
       "targetField": "title",
       "required": true,
       "searchable": true
+    },
+    "state": {
+      "type": "enumeration",
+      "required": false,
+      "enum": ["MD", "DC", "VA"]
+    },
+    "counties": {
+      "type": "component",
+      "repeatable": true,
+      "component": "service-area.county"
     },
     "schemaMarkup": {
       "type": "text",
@@ -46,22 +56,19 @@
       },
       "required": false
     },
-    "state": {
-      "type": "enumeration",
-      "required": false,
-      "enum": [
-        "MD",
-        "DC",
-        "VA"
-      ]
-    },
     "map": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
+    },
+    "coordinatesLatLong": {
+      "type": "text",
+      "required": false
+    },
+    "zoomLevel": {
+      "type": "decimal",
+      "required": false
     }
   }
 }
