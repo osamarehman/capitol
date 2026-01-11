@@ -106,7 +106,7 @@
       },
       "required": false
     },
-    "locationImprovementsRichText": {
+    "faqsRichText": {
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
@@ -114,7 +114,7 @@
       },
       "required": false
     },
-    "consultantTitleDescription": {
+    "servicesTitleDescription": {
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
@@ -231,7 +231,7 @@
       "type": "string",
       "required": false
     },
-    "echoRichText": {
+    "areasWeServeRichText": {
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
@@ -295,10 +295,6 @@
       "options": {
         "preset": "defaultHtml"
       },
-      "required": false
-    },
-    "servicesModalHeading": {
-      "type": "text",
       "required": false
     },
     "servicesModal1": {
@@ -389,7 +385,7 @@
       },
       "required": false
     },
-    "faqContent": {
+    "whyChooseUsRichText": {
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
