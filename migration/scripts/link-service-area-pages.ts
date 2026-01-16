@@ -251,7 +251,14 @@ async function main() {
 
   // Fetch all service areas
   logger.info('\nFetching service areas...');
-  const serviceAreas = (await fetchAllEntries('service-areas', 'serviceLinks')) as ServiceArea[];
+  // Try to populate serviceLinks if the component exists, otherwise fetch without it
+  let serviceAreas: ServiceArea[];
+  try {
+    serviceAreas = (await fetchAllEntries('service-areas', 'serviceLinks')) as ServiceArea[];
+  } catch (error) {
+    logger.info('serviceLinks component not yet deployed, fetching without populate...');
+    serviceAreas = (await fetchAllEntries('service-areas')) as ServiceArea[];
+  }
   logger.info(`Found ${serviceAreas.length} service areas`);
 
   // Fetch all local pages (published)
