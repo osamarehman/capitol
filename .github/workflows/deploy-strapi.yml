@@ -18,170 +18,48 @@ on:
           - production
           - staging
 
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}/strapi
-
 jobs:
-  build:
-    name: Build and Push Docker Image
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-
-    outputs:
-      image_tag: ${{ steps.meta.outputs.version }}
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up QEMU for ARM64
-        uses: docker/setup-qemu-action@v3
-        with:
-          platforms: arm64
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Log in to Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Extract metadata
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          tags: |
-            type=sha,prefix=
-            type=raw,value=latest,enable={{is_default_branch}}
-            type=ref,event=branch
-
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v5
-        with:
-          context: ./strapi
-          file: ./strapi/Dockerfile.prod
-          push: true
-          platforms: linux/arm64
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          no-cache: true
-          build-args: |
-            NODE_ENV=production
-            CACHE_BUST=${{ github.sha }}
-
   deploy:
-    name: Deploy to VPS
+    name: Build and Deploy on VPS
     runs-on: ubuntu-latest
-    needs: build
     environment: production
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Prepare VPS Environment
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USERNAME }}
-          key: ${{ secrets.VPS_SSH_KEY }}
-          port: ${{ secrets.VPS_SSH_PORT }}
-          script: |
-            echo "=== Preparing VPS Environment ==="
-
-            # Update package list
-            echo "Updating package list..."
-            sudo apt-get update -qq
-
-            # Check and install Docker
-            if ! command -v docker &> /dev/null; then
-              echo "Docker not found. Installing Docker..."
-              curl -fsSL https://get.docker.com -o get-docker.sh
-              sudo sh get-docker.sh
-              sudo usermod -aG docker $USER
-              rm get-docker.sh
-              echo "Docker installed successfully"
-            else
-              echo "Docker is already installed: $(docker --version)"
-            fi
-
-            # Check and install Docker Compose plugin
-            if ! docker compose version &> /dev/null; then
-              echo "Docker Compose plugin not found. Installing..."
-              sudo apt-get install -y docker-compose-plugin
-              echo "Docker Compose installed successfully"
-            else
-              echo "Docker Compose is already installed: $(docker compose version)"
-            fi
-
-            # Install wget if not present (needed for health checks)
-            if ! command -v wget &> /dev/null; then
-              echo "Installing wget..."
-              sudo apt-get install -y wget
-            fi
-
-            # Install curl if not present (needed for health checks)
-            if ! command -v curl &> /dev/null; then
-              echo "Installing curl..."
-              sudo apt-get install -y curl
-            fi
-
-            # Create deployment directory
-            if [ ! -d "/opt/strapi" ]; then
-              echo "Creating /opt/strapi directory..."
-              sudo mkdir -p /opt/strapi
-              sudo chown $USER:$USER /opt/strapi
-              echo "Directory created: /opt/strapi"
-            else
-              echo "Directory already exists: /opt/strapi"
-              # Ensure correct ownership
-              sudo chown $USER:$USER /opt/strapi
-            fi
-
-            # Verify directory permissions
-            ls -la /opt/ | grep strapi
-
-            echo "=== Environment preparation complete ==="
-            echo ""
-            echo "System Information:"
-            echo "- Docker: $(docker --version)"
-            echo "- Docker Compose: $(docker compose version)"
-            echo "- Wget: $(wget --version | head -1)"
-            echo "- Curl: $(curl --version | head -1)"
-            echo "- Deployment directory: /opt/strapi"
-
-      - name: Copy docker-compose to VPS
+      - name: Copy Strapi source to VPS
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
           port: ${{ secrets.VPS_SSH_PORT }}
-          source: "strapi/docker-compose.prod.yml"
-          target: "/opt/strapi/"
-          strip_components: 1
+          source: "strapi/"
+          target: "/opt/strapi-build/"
+          strip_components: 0
+          overwrite: true
+          rm: true
 
-      - name: Deploy to VPS
+      - name: Build and Deploy on VPS
         uses: appleboy/ssh-action@v1.0.3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.VPS_SSH_KEY }}
           port: ${{ secrets.VPS_SSH_PORT }}
-          envs: GITHUB_TOKEN
+          command_timeout: 30m
           script: |
-            cd /opt/strapi
+            set -e
+            echo "=== Starting Strapi Build and Deploy ==="
 
-            # Create .env file with secrets
+            # Ensure directories exist
+            sudo mkdir -p /opt/strapi /opt/strapi-build
+            sudo chown -R $USER:$USER /opt/strapi /opt/strapi-build
+
+            cd /opt/strapi-build/strapi
+
+            # Create .env file for build
             cat > .env << 'ENVEOF'
             DATABASE_NAME=${{ secrets.DATABASE_NAME }}
             DATABASE_USERNAME=${{ secrets.DATABASE_USERNAME }}
@@ -192,45 +70,74 @@ jobs:
             API_TOKEN_SALT=${{ secrets.API_TOKEN_SALT }}
             TRANSFER_TOKEN_SALT=${{ secrets.TRANSFER_TOKEN_SALT }}
             STRAPI_URL=https://cms.improveitmd.com
-            GITHUB_REPOSITORY=${{ github.repository }}
-            IMAGE_TAG=${{ needs.build.outputs.image_tag }}
             ENVEOF
 
-            # Login to GitHub Container Registry
-            echo $GITHUB_TOKEN | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+            echo "=== Cleaning Docker cache and old images ==="
+            # Stop running containers first
+            docker compose -f docker-compose.prod.yml down 2>/dev/null || true
 
-            # Pull latest image and force recreate containers
-            docker compose -f docker-compose.prod.yml pull --ignore-pull-failures
-            docker compose -f docker-compose.prod.yml down
+            # Remove old strapi images to force fresh build
+            docker images --format '{{.Repository}}:{{.Tag}} {{.ID}}' | grep -E 'strapi|capitol' | awk '{print $2}' | xargs -r docker rmi -f 2>/dev/null || true
+
+            # Clean build cache
+            docker builder prune -f --filter "until=24h" 2>/dev/null || true
+
+            # Clean dangling images and volumes
+            docker image prune -f
+            docker volume prune -f 2>/dev/null || true
+
+            echo "=== Building Docker image (native ARM64) ==="
+            # Build with no cache to ensure fresh build
+            docker compose -f docker-compose.prod.yml build --no-cache --pull
+
+            echo "=== Starting services ==="
             docker compose -f docker-compose.prod.yml up -d --force-recreate
 
-            # Clean up old images
+            # Copy docker-compose to deployment directory for future reference
+            cp docker-compose.prod.yml /opt/strapi/
+            cp .env /opt/strapi/
+
+            echo "=== Waiting for Strapi to start ==="
+            sleep 30
+
+            # Health check with retries
+            MAX_RETRIES=6
+            RETRY_COUNT=0
+            while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+              if curl -sf http://localhost:1337/_health > /dev/null 2>&1; then
+                echo "✅ Strapi is healthy!"
+                break
+              fi
+              RETRY_COUNT=$((RETRY_COUNT + 1))
+              echo "Waiting for Strapi... (attempt $RETRY_COUNT/$MAX_RETRIES)"
+              sleep 10
+            done
+
+            if [ $RETRY_COUNT -eq $MAX_RETRIES ]; then
+              echo "⚠️ Health check timed out. Checking logs..."
+              docker compose -f docker-compose.prod.yml logs --tail=100 strapi
+              exit 1
+            fi
+
+            echo "=== Final cleanup ==="
             docker image prune -f
 
-            # Wait for Strapi to start
-            echo "Waiting for Strapi to start..."
-            sleep 45
-
-            # Verify deployment
-            if curl -sf http://localhost:1337/_health > /dev/null; then
-              echo "Deployment successful! Strapi is healthy."
-            else
-              echo "Warning: Health check failed, but container may still be starting."
-              docker compose -f docker-compose.prod.yml logs --tail=50 strapi
-            fi
+            echo "=== Deployment complete ==="
+            docker compose -f docker-compose.prod.yml ps
 
       - name: Deployment Summary
         run: |
           echo "## Deployment Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- **Image Tag:** ${{ needs.build.outputs.image_tag }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Production URL:** https://cms.improveitmd.com" >> $GITHUB_STEP_SUMMARY
           echo "- **Admin Panel:** https://cms.improveitmd.com/admin" >> $GITHUB_STEP_SUMMARY
+          echo "- **Build Method:** Native ARM64 on VPS" >> $GITHUB_STEP_SUMMARY
 
   notify-failure:
     name: Notify on Failure
     runs-on: ubuntu-latest
-    needs: [build, deploy]
+    needs: [deploy]
     if: failure()
     steps:
       - name: Create failure issue

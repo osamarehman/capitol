@@ -2,7 +2,10 @@ services:
   strapi:
     container_name: strapi-prod
     platform: linux/arm64
-    image: ghcr.io/${GITHUB_REPOSITORY}/strapi:${IMAGE_TAG:-latest}
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: strapi-prod:latest
     restart: unless-stopped
     environment:
       DATABASE_CLIENT: postgres
