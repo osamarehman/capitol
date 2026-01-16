@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_service_area_service_links",
+  "info": {
+    "displayName": "Service Links",
+    "description": "Links to local pages for each service type"
+  },
+  "options": {},
+  "attributes": {
+    "roofing": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::local-page.local-page"
+    },
+    "siding": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::local-page.local-page"
+    },
+    "exteriorTrim": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::local-page.local-page"
+    },
+    "decks": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::local-page.local-page"
+    },
+    "windows": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::local-page.local-page"
+    },
+    "gutters": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::local-page.local-page"
+    },
+    "doors": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::local-page.local-page"
+    }
+  }
+}

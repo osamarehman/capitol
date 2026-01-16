@@ -69,6 +69,11 @@
     "zoomLevel": {
       "type": "decimal",
       "required": false
+    },
+    "serviceLinks": {
+      "type": "component",
+      "repeatable": false,
+      "component": "service-area.service-links"
     }
   }
 }

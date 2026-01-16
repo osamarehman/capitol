@@ -13,6 +13,10 @@
     "sync-alt-texts": "tsx scripts/sync-alt-texts.ts",
     "convert-to-blocks": "tsx scripts/convert-html-to-blocks.ts",
     "migrate-db-to-blocks": "tsx scripts/migrate-richtext-to-blocks.ts",
+    "import-service-areas": "tsx scripts/import-service-areas.ts",
+    "import-videos": "tsx scripts/import-videos.ts",
+    "update-coordinates": "tsx scripts/update-service-area-coordinates.ts",
+    "link-service-pages": "tsx scripts/link-service-area-pages.ts",
     "migrate:all": "npm run export && npm run generate-schemas && npm run import-content && npm run upload-assets && npm run verify"
   },
   "dependencies": {
