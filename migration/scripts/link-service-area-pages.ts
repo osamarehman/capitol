@@ -339,15 +339,16 @@ async function main() {
       }
 
       // Build the serviceLinks component data
+      // For Strapi 5 relations in components, pass documentId directly
       const updateData: Record<string, unknown> = {
         serviceLinks: {
-          roofing: serviceLinks.roofing ? { documentId: serviceLinks.roofing } : null,
-          siding: serviceLinks.siding ? { documentId: serviceLinks.siding } : null,
-          exteriorTrim: serviceLinks.exteriorTrim ? { documentId: serviceLinks.exteriorTrim } : null,
-          decks: serviceLinks.decks ? { documentId: serviceLinks.decks } : null,
-          windows: serviceLinks.windows ? { documentId: serviceLinks.windows } : null,
-          gutters: serviceLinks.gutters ? { documentId: serviceLinks.gutters } : null,
-          doors: serviceLinks.doors ? { documentId: serviceLinks.doors } : null,
+          roofing: serviceLinks.roofing || null,
+          siding: serviceLinks.siding || null,
+          exteriorTrim: serviceLinks.exteriorTrim || null,
+          decks: serviceLinks.decks || null,
+          windows: serviceLinks.windows || null,
+          gutters: serviceLinks.gutters || null,
+          doors: serviceLinks.doors || null,
         },
       };
 
