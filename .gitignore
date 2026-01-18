@@ -39,6 +39,12 @@ strapi/dist/
 
 # Claude Code transcripts
 *.txt
+!requirements.txt
+
+# Form API
+form-api/*.db
+form-api/__pycache__/
+form-api/*.pyc
 
 # Local settings
 .claude/settings.local.json

@@ -1,0 +1,19 @@
+[Unit]
+Description=Form Submission API for ImproveItMD
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root
+ExecStart=/usr/bin/python3 /root/form_submission_app.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Environment variables (if needed)
+# Environment="FLASK_ENV=production"
+
+[Install]
+WantedBy=multi-user.target
