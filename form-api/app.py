@@ -1,11 +1,18 @@
-from flask import Flask, request, jsonify, render_template_string
+from flask import Flask, request, jsonify, render_template_string, session, redirect, url_for
 from flask_cors import CORS
 import sqlite3
 from datetime import datetime
 import json
+import os
 from urllib.parse import urlparse
+from functools import wraps
 
 app = Flask(__name__)
+app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'change-this-to-a-random-secret-key-in-production')
+
+# Dashboard authentication credentials
+DASHBOARD_USERNAME = os.environ.get('DASHBOARD_USERNAME', 'admin')
+DASHBOARD_PASSWORD = os.environ.get('DASHBOARD_PASSWORD', 'improveit2026')
 
 # Allowed domains for form submissions
 ALLOWED_DOMAINS = [
@@ -85,6 +92,15 @@ def get_db_connection():
     conn = sqlite3.connect(DATABASE)
     conn.row_factory = sqlite3.Row
     return conn
+
+def login_required(f):
+    """Decorator to require login for dashboard access"""
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if not session.get('logged_in'):
+            return redirect(url_for('login'))
+        return f(*args, **kwargs)
+    return decorated_function
 
 @app.route('/api/submit', methods=['POST'])
 def submit_form():
@@ -171,7 +187,30 @@ def get_submissions():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    """Login page for dashboard access"""
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+
+        if username == DASHBOARD_USERNAME and password == DASHBOARD_PASSWORD:
+            session['logged_in'] = True
+            return redirect(url_for('dashboard'))
+        else:
+            error = 'Invalid credentials. Please try again.'
+            return render_template_string(get_login_template(), error=error)
+
+    return render_template_string(get_login_template())
+
+@app.route('/logout')
+def logout():
+    """Logout and clear session"""
+    session.pop('logged_in', None)
+    return redirect(url_for('login'))
+
 @app.route('/dashboard')
+@login_required
 def dashboard():
     """Display a dashboard with all submissions"""
     conn = get_db_connection()
@@ -226,6 +265,26 @@ def dashboard():
                 border-radius: 15px;
                 box-shadow: 0 10px 30px rgba(0,0,0,0.2);
                 margin-bottom: 30px;
+                position: relative;
+            }
+
+            .logout-btn {
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 10px 20px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.9em;
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+
+            .logout-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
             }
 
             h1 {
@@ -362,6 +421,7 @@ def dashboard():
     <body>
         <div class="container">
             <div class="header">
+                <a href="/logout" class="logout-btn">Logout</a>
                 <h1>📋 Form Submissions Dashboard</h1>
                 <div class="stats">
                     <div class="stat-card">
@@ -433,6 +493,145 @@ def dashboard():
     '''
 
     return render_template_string(html_template, submissions=submissions_list)
+
+def get_login_template():
+    """Return the login page HTML template"""
+    return '''
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard Login</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+            }
+
+            .login-container {
+                background: white;
+                border-radius: 15px;
+                box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+                padding: 40px;
+                width: 100%;
+                max-width: 400px;
+            }
+
+            h1 {
+                color: #333;
+                margin-bottom: 10px;
+                font-size: 2em;
+            }
+
+            .subtitle {
+                color: #666;
+                margin-bottom: 30px;
+                font-size: 0.9em;
+            }
+
+            .form-group {
+                margin-bottom: 20px;
+            }
+
+            label {
+                display: block;
+                color: #667eea;
+                font-weight: 600;
+                margin-bottom: 8px;
+                font-size: 0.9em;
+            }
+
+            input {
+                width: 100%;
+                padding: 12px;
+                border: 2px solid #e0e0e0;
+                border-radius: 8px;
+                font-size: 1em;
+                transition: border-color 0.3s;
+            }
+
+            input:focus {
+                outline: none;
+                border-color: #667eea;
+            }
+
+            button {
+                width: 100%;
+                padding: 14px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                border: none;
+                border-radius: 8px;
+                font-size: 1em;
+                font-weight: 600;
+                cursor: pointer;
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+
+            button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            }
+
+            button:active {
+                transform: translateY(0);
+            }
+
+            .error {
+                background: #fee;
+                color: #c33;
+                padding: 12px;
+                border-radius: 8px;
+                margin-bottom: 20px;
+                border-left: 4px solid #c33;
+            }
+
+            .logo {
+                text-align: center;
+                margin-bottom: 30px;
+                font-size: 3em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login-container">
+            <div class="logo">🔐</div>
+            <h1>Dashboard Login</h1>
+            <p class="subtitle">Form Submissions Dashboard</p>
+
+            {% if error %}
+            <div class="error">{{ error }}</div>
+            {% endif %}
+
+            <form method="POST">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </body>
+    </html>
+    '''
 
 @app.route('/')
 def home():

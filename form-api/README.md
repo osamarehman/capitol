@@ -43,11 +43,23 @@ This will:
 
 Visit: `https://forms.improveitmd.com/dashboard`
 
+**Default Login Credentials:**
+- Username: `admin`
+- Password: `improveit2026`
+
+**⚠️ Important:** Change the default password in production by updating the systemd service file:
+```bash
+sudo nano /etc/systemd/system/form-api.service
+# Update DASHBOARD_PASSWORD environment variable
+sudo systemctl daemon-reload
+sudo systemctl restart form-api
+```
+
 ## API Endpoints
 
-### POST /api/submit
+### POST https://forms.improveitmd.com/api/submit
 
-Submit a new form with data.
+Submit a new form with data from your frontend.
 
 **Request:**
 ```json

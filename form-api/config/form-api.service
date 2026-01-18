@@ -6,14 +6,16 @@ After=network.target
 Type=simple
 User=root
 WorkingDirectory=/root
-ExecStart=/usr/bin/python3 /root/form_submission_app.py
+ExecStart=/usr/bin/python3 /root/capitol/form-api/app.py
 Restart=always
 RestartSec=10
 StandardOutput=journal
 StandardError=journal
 
-# Environment variables (if needed)
-# Environment="FLASK_ENV=production"
+# Environment variables
+Environment="FLASK_SECRET_KEY=REPLACE_WITH_GENERATED_SECRET"
+Environment="DASHBOARD_USERNAME=admin"
+Environment="DASHBOARD_PASSWORD=REPLACE_WITH_YOUR_PASSWORD"
 
 [Install]
 WantedBy=multi-user.target
