@@ -14,7 +14,7 @@ StandardError=journal
 
 # Environment variables
 Environment="FLASK_SECRET_KEY=REPLACE_WITH_GENERATED_SECRET"
-Environment="DASHBOARD_USERNAME=admin"
+Environment="DASHBOARD_USERNAME=austin@improveitmd.com"
 Environment="DASHBOARD_PASSWORD=REPLACE_WITH_YOUR_PASSWORD"
 
 [Install]

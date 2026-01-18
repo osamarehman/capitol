@@ -43,11 +43,11 @@ This will:
 
 Visit: `https://forms.improveitmd.com/dashboard`
 
-**Default Login Credentials:**
-- Username: `admin`
-- Password: `improveit2026`
+**Login Credentials:**
+- Username: `austin@improveitmd.com`
+- Password: `Capitol123!@#`
 
-**⚠️ Important:** Change the default password in production by updating the systemd service file:
+**To Change Credentials:**
 ```bash
 sudo nano /etc/systemd/system/form-api.service
 # Update DASHBOARD_PASSWORD environment variable
