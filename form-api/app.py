@@ -1,9 +1,8 @@
 from flask import Flask, request, jsonify, render_template_string, session, redirect, url_for
 from flask_cors import CORS
-from flask_session import Session
 from werkzeug.middleware.proxy_fix import ProxyFix
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timedelta
 import json
 import os
 from urllib.parse import urlparse
@@ -15,22 +14,18 @@ app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'change-this-to-a-random-sec
 # Handle reverse proxy headers (X-Forwarded-*)
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
 
-# Use server-side sessions instead of client-side cookies
+# Simple session configuration - using default Flask sessions
+# Note: SESSION_COOKIE_DOMAIN is intentionally not set (defaults to None)
+# This allows the cookie to work for the current domain without subdomain issues
 app.config.update(
-    SESSION_TYPE='filesystem',
-    SESSION_FILE_DIR='/tmp/flask_sessions',
-    SESSION_PERMANENT=True,
-    SESSION_USE_SIGNER=True,
+    SESSION_COOKIE_NAME='form_session',
     SESSION_COOKIE_HTTPONLY=True,
-    SESSION_COOKIE_SAMESITE='Lax',
-    SESSION_COOKIE_SECURE=False,  # Caddy handles HTTPS
-    PERMANENT_SESSION_LIFETIME=3600,  # 1 hour
+    SESSION_COOKIE_SAMESITE='None',  # Changed to None to allow cross-site (through Cloudflare)
+    SESSION_COOKIE_SECURE=True,  # Must be True when SameSite=None
+    PERMANENT_SESSION_LIFETIME=timedelta(hours=1),
     APPLICATION_ROOT='/',
     PREFERRED_URL_SCHEME='https'
 )
-
-# Initialize server-side session
-Session(app)
 
 # Dashboard authentication credentials
 DASHBOARD_USERNAME = os.environ.get('DASHBOARD_USERNAME', 'admin')
