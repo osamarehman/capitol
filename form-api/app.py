@@ -19,7 +19,11 @@ app.config.update(
     SESSION_COOKIE_SECURE=False,  # Set to False because Caddy handles HTTPS
     SESSION_COOKIE_HTTPONLY=True,
     SESSION_COOKIE_SAMESITE='Lax',
-    PERMANENT_SESSION_LIFETIME=3600  # 1 hour
+    SESSION_COOKIE_PATH='/',
+    SESSION_COOKIE_DOMAIN=None,  # Let Flask handle the domain
+    PERMANENT_SESSION_LIFETIME=3600,  # 1 hour
+    APPLICATION_ROOT='/',
+    PREFERRED_URL_SCHEME='https'
 )
 
 # Dashboard authentication credentials
@@ -208,7 +212,8 @@ def login():
 
         if username == DASHBOARD_USERNAME and password == DASHBOARD_PASSWORD:
             session['logged_in'] = True
-            return redirect(url_for('dashboard'))
+            session.permanent = True  # Make session persistent
+            return redirect(url_for('dashboard', _external=False))
         else:
             error = 'Invalid credentials. Please try again.'
             return render_template_string(get_login_template(), error=error)
