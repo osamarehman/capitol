@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template_string, session, redirect, url_for
 from flask_cors import CORS
+from werkzeug.middleware.proxy_fix import ProxyFix
 import sqlite3
 from datetime import datetime
 import json
@@ -9,6 +10,17 @@ from functools import wraps
 
 app = Flask(__name__)
 app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'change-this-to-a-random-secret-key-in-production')
+
+# Handle reverse proxy headers (X-Forwarded-*)
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
+
+# Session configuration for reverse proxy
+app.config.update(
+    SESSION_COOKIE_SECURE=False,  # Set to False because Caddy handles HTTPS
+    SESSION_COOKIE_HTTPONLY=True,
+    SESSION_COOKIE_SAMESITE='Lax',
+    PERMANENT_SESSION_LIFETIME=3600  # 1 hour
+)
 
 # Dashboard authentication credentials
 DASHBOARD_USERNAME = os.environ.get('DASHBOARD_USERNAME', 'admin')
