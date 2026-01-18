@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template_string, session, redirect, url_for
 from flask_cors import CORS
+from flask_session import Session
 from werkzeug.middleware.proxy_fix import ProxyFix
 import sqlite3
 from datetime import datetime
@@ -14,17 +15,22 @@ app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'change-this-to-a-random-sec
 # Handle reverse proxy headers (X-Forwarded-*)
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
 
-# Session configuration for reverse proxy
+# Use server-side sessions instead of client-side cookies
 app.config.update(
-    SESSION_COOKIE_SECURE=False,  # Set to False because Caddy handles HTTPS
+    SESSION_TYPE='filesystem',
+    SESSION_FILE_DIR='/tmp/flask_sessions',
+    SESSION_PERMANENT=True,
+    SESSION_USE_SIGNER=True,
     SESSION_COOKIE_HTTPONLY=True,
     SESSION_COOKIE_SAMESITE='Lax',
-    SESSION_COOKIE_PATH='/',
-    SESSION_COOKIE_DOMAIN=None,  # Let Flask handle the domain
+    SESSION_COOKIE_SECURE=False,  # Caddy handles HTTPS
     PERMANENT_SESSION_LIFETIME=3600,  # 1 hour
     APPLICATION_ROOT='/',
     PREFERRED_URL_SCHEME='https'
 )
+
+# Initialize server-side session
+Session(app)
 
 # Dashboard authentication credentials
 DASHBOARD_USERNAME = os.environ.get('DASHBOARD_USERNAME', 'admin')
@@ -113,8 +119,15 @@ def login_required(f):
     """Decorator to require login for dashboard access"""
     @wraps(f)
     def decorated_function(*args, **kwargs):
+        # Debug logging
+        print(f"[DEBUG] Session data: {dict(session)}")
+        print(f"[DEBUG] Session logged_in: {session.get('logged_in')}")
+        print(f"[DEBUG] Session keys: {list(session.keys())}")
+
         if not session.get('logged_in'):
+            print("[DEBUG] Not logged in, redirecting to login")
             return redirect(url_for('login'))
+        print("[DEBUG] Logged in, proceeding to dashboard")
         return f(*args, **kwargs)
     return decorated_function
 
@@ -211,8 +224,10 @@ def login():
         password = request.form.get('password')
 
         if username == DASHBOARD_USERNAME and password == DASHBOARD_PASSWORD:
+            session.clear()  # Clear any old session data
             session['logged_in'] = True
             session.permanent = True  # Make session persistent
+            print(f"[DEBUG] Login successful, session set: {dict(session)}")
             return redirect(url_for('dashboard', _external=False))
         else:
             error = 'Invalid credentials. Please try again.'
