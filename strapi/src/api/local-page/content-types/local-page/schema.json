@@ -26,7 +26,7 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "h",
+      "targetField": "title",
       "required": true,
       "searchable": true
     },
@@ -66,7 +66,7 @@
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "required": false
     },
@@ -74,7 +74,7 @@
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "required": false
     },
@@ -82,7 +82,7 @@
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "required": false
     },
@@ -90,7 +90,7 @@
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "required": false
     },
@@ -102,23 +102,23 @@
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "required": false
     },
-    "locationImprovementsRichText": {
+    "faqsRichText": {
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "required": false
     },
-    "consultantTitleDescription": {
+    "servicesTitleDescription": {
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "required": false
     },
@@ -202,7 +202,7 @@
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "required": false
     },
@@ -231,11 +231,11 @@
       "type": "string",
       "required": false
     },
-    "echoRichText": {
+    "areasWeServeRichText": {
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "required": false
     },
@@ -279,7 +279,7 @@
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "required": false
     },
@@ -293,12 +293,8 @@
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
-      "required": false
-    },
-    "servicesModalHeading": {
-      "type": "text",
       "required": false
     },
     "servicesModal1": {
@@ -309,7 +305,7 @@
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "required": false
     },
@@ -321,7 +317,7 @@
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "required": false
     },
@@ -333,7 +329,7 @@
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "required": false
     },
@@ -345,7 +341,7 @@
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "required": false
     },
@@ -357,7 +353,7 @@
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "required": false
     },
@@ -369,7 +365,7 @@
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "required": false
     },
@@ -385,195 +381,15 @@
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "required": false
     },
-    "faqContent": {
+    "whyChooseUsRichText": {
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
-        "preset": "standard"
-      },
-      "required": false
-    },
-    "faqQuestion1": {
-      "type": "text",
-      "required": false
-    },
-    "faqAnswer1": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "standard"
-      },
-      "required": false
-    },
-    "faqQuestion2": {
-      "type": "text",
-      "required": false
-    },
-    "faqAnswer2": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "standard"
-      },
-      "required": false
-    },
-    "faqQuestion3": {
-      "type": "text",
-      "required": false
-    },
-    "faqAnswer3": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "standard"
-      },
-      "required": false
-    },
-    "faqQuestion4": {
-      "type": "text",
-      "required": false
-    },
-    "faqAnswer4": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "standard"
-      },
-      "required": false
-    },
-    "faqQuestion5": {
-      "type": "text",
-      "required": false
-    },
-    "faqAnswer5": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "standard"
-      },
-      "required": false
-    },
-    "faqQuestion6": {
-      "type": "text",
-      "required": false
-    },
-    "faqAnswer6": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "standard"
-      },
-      "required": false
-    },
-    "faqQuestion7": {
-      "type": "text",
-      "required": false
-    },
-    "faqAnswer7": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "standard"
-      },
-      "required": false
-    },
-    "faqQuestion8": {
-      "type": "text",
-      "required": false
-    },
-    "faqAnswer8": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "standard"
-      },
-      "required": false
-    },
-    "faqQuestion9": {
-      "type": "text",
-      "required": false
-    },
-    "faqAnswer9": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "standard"
-      },
-      "required": false
-    },
-    "faqQuestion10": {
-      "type": "text",
-      "required": false
-    },
-    "faqAnswer10": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "standard"
-      },
-      "required": false
-    },
-    "faqQuestion11": {
-      "type": "text",
-      "required": false
-    },
-    "faqAnswer11": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "standard"
-      },
-      "required": false
-    },
-    "faqQuestion12": {
-      "type": "text",
-      "required": false
-    },
-    "faqAnswer12": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "standard"
-      },
-      "required": false
-    },
-    "faqQuestion13": {
-      "type": "text",
-      "required": false
-    },
-    "faqAnswer13": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "standard"
-      },
-      "required": false
-    },
-    "faqQuestion14": {
-      "type": "text",
-      "required": false
-    },
-    "faqAnswer14": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "standard"
-      },
-      "required": false
-    },
-    "faqQuestion15": {
-      "type": "text",
-      "required": false
-    },
-    "faqAnswer15": {
-      "type": "customField",
-      "customField": "plugin::ckeditor5.CKEditor",
-      "options": {
-        "preset": "standard"
+        "preset": "defaultHtml"
       },
       "required": false
     }
