@@ -33,7 +33,7 @@ const editLayout = [
   // Story Sections
   [{ name: 'mainStoryRichText', size: 12 }],
   [{ name: 'secondaryStoryRichText', size: 12 }],
-  [{ name: 'supportingTextRichText', size: 12 }],
+  [{ name: 'tableRichText', size: 12 }],
   [{ name: 'communityGuidelinesRichText', size: 12 }],
   [{ name: 'locationImprovementsRichText', size: 12 }],
   [{ name: 'consultantTitleDescription', size: 12 }],

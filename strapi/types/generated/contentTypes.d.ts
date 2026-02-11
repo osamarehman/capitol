@@ -952,7 +952,7 @@ export interface ApiCityLocalPageCityLocalPage
       >;
     servicesModalHeading: Schema.Attribute.Text;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
-    supportingTextRichText: Schema.Attribute.RichText &
+    tableRichText: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
@@ -1580,7 +1580,7 @@ export interface ApiLocalPageLocalPage extends Struct.CollectionTypeSchema {
       >;
     servicesModalHeading: Schema.Attribute.Text;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
-    supportingTextRichText: Schema.Attribute.RichText &
+    tableRichText: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
@@ -1928,7 +1928,7 @@ export interface ApiLocalPagesMarylandLocalPagesMaryland
       >;
     servicesModalHeading: Schema.Attribute.Text;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
-    supportingTextRichText: Schema.Attribute.RichText &
+    tableRichText: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
@@ -2276,7 +2276,7 @@ export interface ApiLocalPagesVirginiumLocalPagesVirginium
       >;
     servicesModalHeading: Schema.Attribute.Text;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
-    supportingTextRichText: Schema.Attribute.RichText &
+    tableRichText: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
