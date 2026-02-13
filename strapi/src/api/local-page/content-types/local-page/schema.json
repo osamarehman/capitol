@@ -211,6 +211,20 @@
       "required": false,
       "enum": ["Bowie", "Pasadena", "Gaithersburg", "Crownsville"]
     },
+    "serviceType": {
+      "type": "enumeration",
+      "required": false,
+      "enum": ["roofing", "siding", "deck", "window", "door", "gutter"]
+    },
+    "city": {
+      "type": "string",
+      "required": false
+    },
+    "state": {
+      "type": "enumeration",
+      "required": false,
+      "enum": ["MD", "VA", "DC"]
+    },
     "testimonialVideo": {
       "type": "string",
       "required": false
