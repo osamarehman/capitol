@@ -29,7 +29,15 @@
     },
     "codeType": {
       "type": "enumeration",
-      "enum": ["javascript", "css", "html", "json", "schema-markup", "tracking", "other"],
+      "enum": [
+        "javascript",
+        "css",
+        "html",
+        "json",
+        "schema-markup",
+        "tracking",
+        "other"
+      ],
       "required": true,
       "default": "javascript"
     },
@@ -39,7 +47,13 @@
     },
     "location": {
       "type": "enumeration",
-      "enum": ["head", "body-start", "body-end", "inline", "none"],
+      "enum": [
+        "head",
+        "body-start",
+        "body-end",
+        "inline",
+        "none"
+      ],
       "required": false,
       "default": "none"
     },
@@ -64,4 +78,3 @@
     }
   }
 }
-
