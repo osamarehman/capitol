@@ -27,6 +27,14 @@ const STATE_MAP: Record<string, string> = {
   DC: 'dc',
 };
 
+// City name aliases - when service-area slug differs from local page slug
+// Format: { 'service-area-slug': ['local-page-slug-variant', ...] }
+const CITY_ALIASES: Record<string, string[]> = {
+  'linthicum': ['linthicum-heights'],
+  'mitchellville': ['mitchelville'], // typo in local page
+  'washington-dc': ['washington'],
+};
+
 // Service slug patterns - exact patterns based on data analysis
 // Each service has primary pattern and fallback patterns
 const SERVICE_SLUG_PATTERNS: Record<string, string[]> = {
@@ -36,6 +44,7 @@ const SERVICE_SLUG_PATTERNS: Record<string, string[]> = {
     '{city}-{state}-roofing-contractors-near-you',
     '{city}-roofing-company-near-you',
     '{city}-roofing-contractor-near-you',
+    'roofing-{city}-{stateabbr}', // alternative format: roofing-new-carrollton-md
   ],
   siding: [
     '{city}-{state}-siding-contractors-near-you',
@@ -64,6 +73,7 @@ const SERVICE_SLUG_PATTERNS: Record<string, string[]> = {
     '{city}-deck-builders-near-you',
     '{city}-deck-builder-near-you',
     'deck-builder-{city}-{state}',
+    'deck-builder-{city}-{stateabbr}', // alternative format: deck-builder-owings-mills-md
   ],
   gutters: [
     '{city}-{state}-gutter-guards-gutters-near-you',
@@ -145,14 +155,31 @@ async function fetchAllEntries(contentType: string, populate?: string): Promise<
 
 /**
  * Generate all possible slug patterns for a city and service
+ * Includes patterns for city aliases (e.g., linthicum -> linthicum-heights)
  */
 function generateSlugPatterns(citySlug: string, stateAbbr: string, serviceKey: string): string[] {
   const patterns = SERVICE_SLUG_PATTERNS[serviceKey] || [];
   const stateName = STATE_MAP[stateAbbr] || stateAbbr.toLowerCase();
+  const stateAbbrLower = stateAbbr.toLowerCase(); // md, va, dc
 
-  return patterns.map((pattern) =>
-    pattern.replace('{city}', citySlug).replace('{state}', stateName).toLowerCase()
-  );
+  // Get all city variants (original + aliases)
+  const cityVariants = [citySlug, ...(CITY_ALIASES[citySlug] || [])];
+
+  const allPatterns: string[] = [];
+
+  for (const city of cityVariants) {
+    for (const pattern of patterns) {
+      allPatterns.push(
+        pattern
+          .replace('{city}', city)
+          .replace('{state}', stateName)
+          .replace('{stateabbr}', stateAbbrLower)
+          .toLowerCase()
+      );
+    }
+  }
+
+  return allPatterns;
 }
 
 /**
@@ -180,15 +207,22 @@ function findMatchingPage(
 
   // Strategy 2: Fuzzy match - slug contains city AND state AND service keyword
   const keywords = SERVICE_KEYWORDS[serviceKey] || [];
+  // Include city aliases in fuzzy matching
+  const cityVariants = [citySlugLower, ...(CITY_ALIASES[citySlugLower] || [])];
+
   for (const page of localPages) {
     const slug = page.slug?.toLowerCase();
     if (!slug) continue;
 
-    // Must contain city name
-    if (!slug.includes(citySlugLower)) continue;
+    // Must contain city name or one of its aliases
+    const containsCity = cityVariants.some((variant) => slug.includes(variant));
+    if (!containsCity) continue;
 
     // Must contain state name (or be a generic state page)
-    if (!slug.includes(stateName) && !slug.startsWith(citySlugLower + '-' + stateName)) continue;
+    const containsState =
+      slug.includes(stateName) ||
+      cityVariants.some((variant) => slug.startsWith(variant + '-' + stateName));
+    if (!containsState) continue;
 
     // Must contain service keyword
     const hasServiceKeyword = keywords.some((kw) => slug.includes(kw));
@@ -210,18 +244,22 @@ function findMatchingPage(
 
   // Strategy 3: Try without state in slug (some pages may not have state)
   const cityTitleSlug = cityTitle.toLowerCase().replace(/\s+/g, '-');
-  for (const keyword of keywords) {
-    const simplePatterns = [
-      `${citySlugLower}-${keyword}-near-you`,
-      `${citySlugLower}-${keyword}-contractor-near-you`,
-      `${citySlugLower}-${keyword}-company-near-you`,
-      `${cityTitleSlug}-${keyword}-near-you`,
-    ];
+  // Include city aliases
+  const allCityVariants = [...cityVariants, cityTitleSlug];
 
-    for (const pattern of simplePatterns) {
-      const page = localPageBySlug.get(pattern);
-      if (page) {
-        return page;
+  for (const cityVariant of allCityVariants) {
+    for (const keyword of keywords) {
+      const simplePatterns = [
+        `${cityVariant}-${keyword}-near-you`,
+        `${cityVariant}-${keyword}-contractor-near-you`,
+        `${cityVariant}-${keyword}-company-near-you`,
+      ];
+
+      for (const pattern of simplePatterns) {
+        const page = localPageBySlug.get(pattern);
+        if (page) {
+          return page;
+        }
       }
     }
   }

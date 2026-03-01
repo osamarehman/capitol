@@ -24,8 +24,13 @@ Thumbs.db
 *.log
 npm-debug.log*
 
-# Migration data (contains exported content and assets)
+# Python
+__pycache__/
+*.pyc
+
+# Migration data (exported content, assets, backups)
 migration/data/
+migration/backups/
 
 # Strapi uploads (local development)
 strapi/public/uploads/*
@@ -37,9 +42,17 @@ strapi/.tmp/
 strapi/build/
 strapi/dist/
 
-# Claude Code transcripts
+# Data files (CSVs, PDFs, extracted content)
+data/
+*.pdf
+mbox/
+mbox_extracted_pdfs/
+quickmeasure_pdfs/
+
+# Claude Code
 *.txt
 !requirements.txt
+.claude/settings.local.json
 
 # Form API
 form-api/*.db
@@ -56,5 +69,7 @@ strapi-manager/*.pyc
 n8n/.env
 n8n/data/
 
-# Local settings
-.claude/settings.local.json
+# One-off local files
+/service-area-widget
+commercial_calc.html
+generate_gemini_token.py
