@@ -48,7 +48,7 @@ jobs:
             cp /root/form-api-deploy/form-api/requirements.txt /root/requirements_form.txt
 
             # Install dependencies
-            pip3 install -r /root/requirements_form.txt
+            pip3 install --break-system-packages -r /root/requirements_form.txt
 
             # Restart service
             systemctl restart form-api
