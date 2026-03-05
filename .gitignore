@@ -46,5 +46,11 @@ form-api/*.db
 form-api/__pycache__/
 form-api/*.pyc
 
+# Strapi Manager
+strapi-manager/__pycache__/
+strapi-manager/strapi_manager/__pycache__/
+strapi-manager/strapi_manager/routes/__pycache__/
+strapi-manager/*.pyc
+
 # Local settings
 .claude/settings.local.json

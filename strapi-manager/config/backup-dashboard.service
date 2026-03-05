@@ -1,0 +1,21 @@
+[Unit]
+Description=Strapi CMS Manager for ImproveItMD
+After=network.target docker.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root
+ExecStart=/usr/bin/python3 /root/backup_dashboard.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+Environment="BACKUP_DASH_USERNAME=<set-in-production>"
+Environment="BACKUP_DASH_PASSWORD=<set-in-production>"
+Environment="FLASK_SECRET_KEY=<set-in-production>"
+Environment="STRAPI_API_TOKEN=<set-in-production>"
+
+[Install]
+WantedBy=multi-user.target
