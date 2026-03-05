@@ -21,8 +21,24 @@ services:
       TRANSFER_TOKEN_SALT: ${TRANSFER_TOKEN_SALT}
       NODE_ENV: production
       STRAPI_URL: ${STRAPI_URL}
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        echo "Syncing schema files from src/api to dist/src/api..."
+        for schema in /opt/app/src/api/*/content-types/*/schema.json; do
+          dist_schema=$$(echo "$$schema" | sed 's|/opt/app/src/|/opt/app/dist/src/|')
+          if [ -f "$$dist_schema" ]; then
+            cp "$$schema" "$$dist_schema"
+          else
+            mkdir -p "$$(dirname "$$dist_schema")"
+            cp "$$schema" "$$dist_schema"
+          fi
+        done
+        echo "Schema sync complete."
+        exec npm run start
     volumes:
       - strapi-uploads:/opt/app/public/uploads
+      - ./src/api:/opt/app/src/api
     ports:
       - "1337:1337"
     networks:
@@ -31,7 +47,7 @@ services:
       strapiDB:
         condition: service_healthy
     healthcheck:
-      test: ["CMD", "wget", "-q", "--spider", "http://localhost:1337/_health"]
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1:1337/_health"]
       interval: 30s
       timeout: 10s
       retries: 3

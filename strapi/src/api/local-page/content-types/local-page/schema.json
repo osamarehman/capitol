@@ -126,7 +126,9 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "altTextForKeywordImage": {
       "type": "text",
@@ -136,7 +138,9 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "altTextForProjectImage1": {
       "type": "text",
@@ -146,7 +150,9 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "altTextForProjectImage2": {
       "type": "text",
@@ -156,7 +162,9 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "altTextForProjectImage3": {
       "type": "text",
@@ -170,13 +178,17 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "projectConsultant2Image": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "projectConsultantName": {
       "type": "text",
@@ -209,12 +221,26 @@
     "mapLocation": {
       "type": "enumeration",
       "required": false,
-      "enum": ["Bowie", "Pasadena", "Gaithersburg", "Crownsville"]
+      "enum": [
+        "Bowie",
+        "Pasadena",
+        "Gaithersburg",
+        "Crownsville"
+      ]
     },
     "serviceType": {
       "type": "enumeration",
       "required": false,
-      "enum": ["roofing", "siding", "deck", "window", "door", "gutter"]
+      "enum": [
+        "roofing",
+        "siding",
+        "deck",
+        "window",
+        "door",
+        "gutter",
+        "trim"
+      ],
+      "searchable": true
     },
     "city": {
       "type": "string",
@@ -223,7 +249,11 @@
     "state": {
       "type": "enumeration",
       "required": false,
-      "enum": ["MD", "VA", "DC"]
+      "enum": [
+        "MD",
+        "VA",
+        "DC"
+      ]
     },
     "testimonialVideo": {
       "type": "string",
@@ -257,7 +287,9 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "openGraphTitle": {
       "type": "text",
@@ -301,7 +333,9 @@
       "type": "media",
       "multiple": true,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "mapSection": {
       "type": "customField",
@@ -400,6 +434,14 @@
       "required": false
     },
     "whyChooseUsRichText": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "required": false
+    },
+    "inspectionRichText": {
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {
