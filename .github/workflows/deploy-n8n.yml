@@ -1,0 +1,126 @@
+name: Deploy n8n to VPS
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'n8n/**'
+      - '.github/workflows/deploy-n8n.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy n8n
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Copy compose file to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_SSH_PORT }}
+          source: "n8n/docker-compose.yml"
+          target: "/opt/n8n-deploy/"
+          strip_components: 0
+          overwrite: true
+
+      - name: Deploy and restart n8n
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_SSH_PORT }}
+          command_timeout: 5m
+          script: |
+            set -e
+            echo "=== Deploying n8n ==="
+
+            # Copy compose file to production location
+            cp /opt/n8n-deploy/n8n/docker-compose.yml /opt/n8n/docker-compose.yml
+
+            # Pull latest images and recreate containers
+            cd /opt/n8n
+            docker compose pull
+            docker compose up -d --force-recreate
+
+            # Health check with retries
+            echo "=== Health check ==="
+            MAX_RETRIES=10
+            RETRY_COUNT=0
+            sleep 10
+            while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+              if curl -sf http://localhost:5678/healthz > /dev/null 2>&1; then
+                echo "n8n is healthy!"
+                break
+              fi
+              RETRY_COUNT=$((RETRY_COUNT + 1))
+              echo "Waiting for n8n... (attempt $RETRY_COUNT/$MAX_RETRIES)"
+              sleep 5
+            done
+
+            if [ $RETRY_COUNT -eq $MAX_RETRIES ]; then
+              echo "Health check timed out. Checking logs..."
+              docker compose logs --tail=50 n8n-prod
+              exit 1
+            fi
+
+            # Cleanup
+            rm -rf /opt/n8n-deploy
+
+            echo "=== n8n deployment complete ==="
+
+      - name: Deployment Summary
+        run: |
+          echo "## n8n Deployment Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Production URL:** https://n8n.improveitmd.com" >> $GITHUB_STEP_SUMMARY
+
+  notify-failure:
+    name: Notify on Failure
+    runs-on: ubuntu-latest
+    needs: [deploy]
+    if: failure()
+    steps:
+      - name: Create failure issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = `n8n Deployment Failed - ${new Date().toISOString().split('T')[0]}`;
+            const body = `
+            ## n8n Deployment Failure
+
+            The n8n deployment pipeline failed.
+
+            - **Workflow Run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            - **Commit:** ${{ github.sha }}
+            - **Branch:** ${{ github.ref_name }}
+            - **Triggered by:** ${{ github.actor }}
+
+            Please check the workflow logs for details.
+            `;
+
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'deployment-failure'
+            });
+
+            if (issues.data.length === 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: title,
+                body: body,
+                labels: ['deployment-failure', 'bug']
+              });
+            }

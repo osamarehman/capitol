@@ -52,5 +52,9 @@ strapi-manager/strapi_manager/__pycache__/
 strapi-manager/strapi_manager/routes/__pycache__/
 strapi-manager/*.pyc
 
+# n8n
+n8n/.env
+n8n/data/
+
 # Local settings
 .claude/settings.local.json

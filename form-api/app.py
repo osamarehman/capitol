@@ -8,9 +8,7 @@ import os
 import hashlib
 import csv
 import io
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
+import requests
 from urllib.parse import urlparse
 from functools import wraps
 import threading
@@ -196,11 +194,8 @@ def init_db():
 
     # Seed default notification settings if not exists
     default_settings = [
-        ('smtp_host', ''),
-        ('smtp_port', '587'),
-        ('smtp_username', ''),
-        ('smtp_password', ''),
-        ('smtp_use_tls', 'true'),
+        ('n8n_webhook_email', ''),
+        ('n8n_webhook_sheets', ''),
         ('notification_emails', ''),
         ('notify_on_new_lead', 'true'),
         ('notify_on_status_change', 'false'),
@@ -271,103 +266,69 @@ def update_notification_setting(key, value):
     conn.close()
 
 
-def send_email_notification(subject, body, is_html=False):
-    """Send email notification to configured recipients"""
-    settings = get_notification_settings()
-
-    smtp_host = settings.get('smtp_host', '')
-    smtp_port = int(settings.get('smtp_port', 587))
-    smtp_username = settings.get('smtp_username', '')
-    smtp_password = settings.get('smtp_password', '')
-    smtp_use_tls = settings.get('smtp_use_tls', 'true') == 'true'
-    notification_emails = settings.get('notification_emails', '')
-
-    if not smtp_host or not smtp_username or not notification_emails:
+def send_to_n8n(webhook_url, payload):
+    """Send payload to an n8n webhook URL. Returns True on success."""
+    if not webhook_url:
         return False
-
-    recipients = [e.strip() for e in notification_emails.split(',') if e.strip()]
-    if not recipients:
-        return False
-
     try:
-        msg = MIMEMultipart('alternative')
-        msg['Subject'] = subject
-        msg['From'] = smtp_username
-        msg['To'] = ', '.join(recipients)
-
-        if is_html:
-            msg.attach(MIMEText(body, 'html'))
-        else:
-            msg.attach(MIMEText(body, 'plain'))
-
-        if smtp_use_tls:
-            server = smtplib.SMTP(smtp_host, smtp_port)
-            server.starttls()
-        else:
-            server = smtplib.SMTP_SSL(smtp_host, smtp_port)
-
-        server.login(smtp_username, smtp_password)
-        server.sendmail(smtp_username, recipients, msg.as_string())
-        server.quit()
+        resp = requests.post(webhook_url, json=payload, timeout=10)
+        resp.raise_for_status()
         return True
     except Exception as e:
-        print(f"Email notification error: {e}")
+        print(f"n8n webhook error: {e}")
         return False
 
 
-def send_new_lead_notification(submission_data, form_name):
-    """Send notification for new lead (runs in background thread)"""
+def build_webhook_payload(submission_data, form_name, submission_id=None):
+    """Build the standard webhook payload sent to n8n."""
+    settings = get_notification_settings()
+    return {
+        'submission_id': submission_id,
+        'form_name': form_name,
+        'submitted_at': datetime.utcnow().isoformat(),
+        'notification_emails': settings.get('notification_emails', ''),
+        'fields': {k: v for k, v in submission_data.items()
+                   if k.lower() not in ('form_name', 'formname', 'page_url', 'pageurl')},
+    }
+
+
+def send_n8n_notifications(submission_data, form_name, submission_id):
+    """Send new-lead notifications to n8n email + sheets webhooks in background threads."""
     settings = get_notification_settings()
     if settings.get('notify_on_new_lead', 'false') != 'true':
         return
 
-    subject = f"New Lead from {form_name}"
+    payload = build_webhook_payload(submission_data, form_name, submission_id)
 
-    # Build email body
-    body = f"""
-    <html>
-    <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 20px;">
-        <h2 style="color: #1e293b;">New Lead Received</h2>
-        <p style="color: #64748b;">A new form submission has been received from <strong>{form_name}</strong>.</p>
-        <table style="border-collapse: collapse; margin-top: 20px;">
-    """
+    email_url = settings.get('n8n_webhook_email', '')
+    sheets_url = settings.get('n8n_webhook_sheets', '')
 
-    for key, value in submission_data.items():
-        if key.lower() not in ['form_name', 'formname', 'page_url', 'pageurl']:
-            body += f'<tr><td style="padding: 8px 12px; border: 1px solid #e2e8f0; background: #f8fafc; font-weight: 600; color: #475569;">{key}</td><td style="padding: 8px 12px; border: 1px solid #e2e8f0; color: #1e293b;">{value}</td></tr>'
-
-    body += """
-        </table>
-        <p style="color: #94a3b8; margin-top: 20px; font-size: 12px;">This is an automated notification from your Form Submissions Dashboard.</p>
-    </body>
-    </html>
-    """
-
-    # Send in background thread
-    thread = threading.Thread(target=send_email_notification, args=(subject, body, True))
-    thread.start()
+    if email_url:
+        threading.Thread(target=send_to_n8n, args=(email_url, payload)).start()
+    if sheets_url:
+        threading.Thread(target=send_to_n8n, args=(sheets_url, payload)).start()
 
 
 def send_status_change_notification(submission_id, old_status, new_status):
-    """Send notification for status change (runs in background thread)"""
+    """Send status-change notification to n8n email webhook in a background thread."""
     settings = get_notification_settings()
     if settings.get('notify_on_status_change', 'false') != 'true':
         return
 
-    subject = f"Lead #{submission_id} Status Changed: {old_status} → {new_status}"
-    body = f"""
-    <html>
-    <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 20px;">
-        <h2 style="color: #1e293b;">Lead Status Updated</h2>
-        <p style="color: #64748b;">Lead <strong>#{submission_id}</strong> status has been changed.</p>
-        <p><span style="background: #fef3c7; color: #92400e; padding: 4px 8px; border-radius: 4px;">{old_status}</span> → <span style="background: #d1fae5; color: #065f46; padding: 4px 8px; border-radius: 4px;">{new_status}</span></p>
-        <p style="color: #94a3b8; margin-top: 20px; font-size: 12px;">This is an automated notification from your Form Submissions Dashboard.</p>
-    </body>
-    </html>
-    """
+    email_url = settings.get('n8n_webhook_email', '')
+    if not email_url:
+        return
 
-    thread = threading.Thread(target=send_email_notification, args=(subject, body, True))
-    thread.start()
+    payload = {
+        'submission_id': submission_id,
+        'event': 'status_change',
+        'old_status': old_status,
+        'new_status': new_status,
+        'changed_at': datetime.utcnow().isoformat(),
+        'notification_emails': settings.get('notification_emails', ''),
+    }
+
+    threading.Thread(target=send_to_n8n, args=(email_url, payload)).start()
 
 
 def login_required(f):
@@ -461,8 +422,8 @@ def submit_form():
         submission_id = cursor.lastrowid
         conn.close()
 
-        # Send new lead notification
-        send_new_lead_notification(data, form_name)
+        # Send n8n webhook notifications (email + sheets)
+        send_n8n_notifications(data, form_name, submission_id)
 
         return jsonify({
             'success': True,
@@ -880,9 +841,6 @@ def import_submissions_csv():
 def get_notification_settings_api():
     """Get notification settings"""
     settings = get_notification_settings()
-    # Don't expose password in response
-    if 'smtp_password' in settings and settings['smtp_password']:
-        settings['smtp_password'] = '••••••••'
     return jsonify(settings), 200
 
 
@@ -894,15 +852,12 @@ def update_notification_settings_api():
         data = request.get_json() or {}
 
         allowed_keys = [
-            'smtp_host', 'smtp_port', 'smtp_username', 'smtp_password',
-            'smtp_use_tls', 'notification_emails', 'notify_on_new_lead', 'notify_on_status_change'
+            'n8n_webhook_email', 'n8n_webhook_sheets',
+            'notification_emails', 'notify_on_new_lead', 'notify_on_status_change'
         ]
 
         for key in allowed_keys:
             if key in data:
-                # Don't update password if it's the masked value
-                if key == 'smtp_password' and data[key] == '••••••••':
-                    continue
                 update_notification_setting(key, str(data[key]))
 
         return jsonify({'success': True, 'message': 'Settings updated'}), 200
@@ -912,27 +867,27 @@ def update_notification_settings_api():
 
 @app.route('/api/settings/notifications/test', methods=['POST'])
 @login_required
-def test_email_notification():
-    """Send a test email to verify SMTP settings"""
+def test_webhook():
+    """Send a test payload to the n8n email webhook"""
     try:
-        success = send_email_notification(
-            "Test Email from Form Submissions Dashboard",
-            """
-            <html>
-            <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 20px;">
-                <h2 style="color: #1e293b;">Test Email</h2>
-                <p style="color: #64748b;">This is a test email from your Form Submissions Dashboard.</p>
-                <p style="color: #10b981;">If you received this, your SMTP settings are configured correctly!</p>
-            </body>
-            </html>
-            """,
-            is_html=True
-        )
+        settings = get_notification_settings()
+        webhook_url = settings.get('n8n_webhook_email', '')
+        if not webhook_url:
+            return jsonify({'error': 'No email webhook URL configured.'}), 400
 
+        payload = {
+            'submission_id': 0,
+            'form_name': '__test__',
+            'submitted_at': datetime.utcnow().isoformat(),
+            'notification_emails': settings.get('notification_emails', ''),
+            'fields': {'message': 'This is a test webhook from the Form Submissions Dashboard.'},
+        }
+
+        success = send_to_n8n(webhook_url, payload)
         if success:
-            return jsonify({'success': True, 'message': 'Test email sent successfully'}), 200
+            return jsonify({'success': True, 'message': 'Test webhook sent successfully'}), 200
         else:
-            return jsonify({'error': 'Failed to send test email. Check your SMTP settings.'}), 400
+            return jsonify({'error': 'Failed to reach n8n webhook. Check the URL.'}), 400
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
@@ -1909,11 +1864,8 @@ def dashboard():
                 fetch('/api/settings/notifications', { credentials: 'same-origin' })
                 .then(r => r.json())
                 .then(settings => {
-                    document.getElementById('smtpHost').value = settings.smtp_host || '';
-                    document.getElementById('smtpPort').value = settings.smtp_port || '587';
-                    document.getElementById('smtpUsername').value = settings.smtp_username || '';
-                    document.getElementById('smtpPassword').value = settings.smtp_password || '';
-                    document.getElementById('smtpUseTls').checked = settings.smtp_use_tls === 'true';
+                    document.getElementById('webhookEmail').value = settings.n8n_webhook_email || '';
+                    document.getElementById('webhookSheets').value = settings.n8n_webhook_sheets || '';
                     document.getElementById('notificationEmails').value = settings.notification_emails || '';
                     document.getElementById('notifyNewLead').checked = settings.notify_on_new_lead === 'true';
                     document.getElementById('notifyStatusChange').checked = settings.notify_on_status_change === 'true';
@@ -1923,11 +1875,8 @@ def dashboard():
 
             function saveNotificationSettings() {
                 const settings = {
-                    smtp_host: document.getElementById('smtpHost').value,
-                    smtp_port: document.getElementById('smtpPort').value,
-                    smtp_username: document.getElementById('smtpUsername').value,
-                    smtp_password: document.getElementById('smtpPassword').value,
-                    smtp_use_tls: document.getElementById('smtpUseTls').checked ? 'true' : 'false',
+                    n8n_webhook_email: document.getElementById('webhookEmail').value,
+                    n8n_webhook_sheets: document.getElementById('webhookSheets').value,
                     notification_emails: document.getElementById('notificationEmails').value,
                     notify_on_new_lead: document.getElementById('notifyNewLead').checked ? 'true' : 'false',
                     notify_on_status_change: document.getElementById('notifyStatusChange').checked ? 'true' : 'false'
@@ -1951,8 +1900,8 @@ def dashboard():
                 .catch(() => showToast('Error saving settings', 'error'));
             }
 
-            function testEmailSettings() {
-                showToast('Sending test email...', 'success');
+            function testWebhook() {
+                showToast('Sending test webhook...', 'success');
                 fetch('/api/settings/notifications/test', {
                     method: 'POST',
                     credentials: 'same-origin'
@@ -1965,7 +1914,7 @@ def dashboard():
                         showToast('Error: ' + data.error, 'error');
                     }
                 })
-                .catch(() => showToast('Error sending test email', 'error'));
+                .catch(() => showToast('Error sending test webhook', 'error'));
             }
 
             // Close modal on overlay click
@@ -2005,37 +1954,21 @@ def dashboard():
                 </div>
 
                 <div class="modal-section">
-                    <h3>SMTP Configuration</h3>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>SMTP Host</label>
-                            <input type="text" id="smtpHost" placeholder="smtp.gmail.com">
-                        </div>
-                        <div class="form-group" style="max-width:100px;">
-                            <label>Port</label>
-                            <input type="text" id="smtpPort" placeholder="587">
-                        </div>
+                    <h3>n8n Webhook URLs</h3>
+                    <div class="form-group">
+                        <label>Email Webhook URL</label>
+                        <input type="url" id="webhookEmail" placeholder="https://n8n.improveitmd.com/webhook/...">
+                        <small>n8n workflow webhook that sends email notifications</small>
                     </div>
                     <div class="form-group">
-                        <label>Username / Email</label>
-                        <input type="text" id="smtpUsername" placeholder="your-email@gmail.com">
-                    </div>
-                    <div class="form-group">
-                        <label>Password / App Password</label>
-                        <input type="password" id="smtpPassword" placeholder="••••••••">
-                        <small>For Gmail, use an App Password</small>
-                    </div>
-                    <div class="toggle-group">
-                        <span class="toggle-label">Use TLS</span>
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="smtpUseTls" checked>
-                            <span class="toggle-slider"></span>
-                        </label>
+                        <label>Google Sheets Webhook URL</label>
+                        <input type="url" id="webhookSheets" placeholder="https://n8n.improveitmd.com/webhook/...">
+                        <small>n8n workflow webhook that logs to Google Sheets</small>
                     </div>
                 </div>
 
                 <div class="modal-actions">
-                    <button class="btn btn-secondary" onclick="testEmailSettings()">Test Email</button>
+                    <button class="btn btn-secondary" onclick="testWebhook()">Test Webhook</button>
                     <button class="btn btn-secondary" onclick="closeSettingsModal()">Cancel</button>
                     <button class="btn btn-primary" onclick="saveNotificationSettings()">Save Settings</button>
                 </div>
