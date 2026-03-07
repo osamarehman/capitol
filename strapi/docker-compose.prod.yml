@@ -24,17 +24,41 @@ services:
     entrypoint: ["/bin/sh", "-c"]
     command:
       - |
-        echo "Syncing schema files from src/api to dist/src/api..."
+        echo "=== Syncing schema files from src/api to dist/src/api ==="
         for schema in /opt/app/src/api/*/content-types/*/schema.json; do
           dist_schema=$$(echo "$$schema" | sed 's|/opt/app/src/|/opt/app/dist/src/|')
-          if [ -f "$$dist_schema" ]; then
-            cp "$$schema" "$$dist_schema"
-          else
-            mkdir -p "$$(dirname "$$dist_schema")"
-            cp "$$schema" "$$dist_schema"
-          fi
+          mkdir -p "$$(dirname "$$dist_schema")"
+          cp "$$schema" "$$dist_schema"
         done
         echo "Schema sync complete."
+
+        echo "=== Syncing compiled JS files for content type routes/controllers/services ==="
+        for api_dir in /opt/app/src/api/*/; do
+          api_name=$$(basename "$$api_dir")
+          dist_api="/opt/app/dist/src/api/$$api_name"
+
+          for kind in controllers routes services; do
+            src_ts="$$api_dir$$kind/$$api_name.ts"
+            dist_js="$$dist_api/$$kind/$$api_name.js"
+
+            # Only process if .ts source exists and .js dist is missing
+            if [ -f "$$src_ts" ] && [ ! -f "$$dist_js" ]; then
+              # Extract factory function and api uid using sed (busybox compatible)
+              factory=$$(sed -n "s/.*factories\.\(createCore[A-Za-z]*\).*/\1/p" "$$src_ts")
+              api_uid=$$(sed -n "s/.*factories\.[^'\"]*['\"]\\([^'\"]*\\)['\"].*/\1/p" "$$src_ts")
+
+              if [ -n "$$factory" ] && [ -n "$$api_uid" ]; then
+                echo "  Generating $$dist_js ($$factory, $$api_uid)"
+                mkdir -p "$$(dirname "$$dist_js")"
+                printf '"use strict";\nObject.defineProperty(exports, "__esModule", { value: true });\nconst strapi_1 = require("@strapi/strapi");\nexports.default = strapi_1.factories.%s('\''%s'\'');\n' "$$factory" "$$api_uid" > "$$dist_js"
+              else
+                echo "  WARN: Could not parse factory/uid from $$src_ts — skipping"
+              fi
+            fi
+          done
+        done
+        echo "JS sync complete."
+
         exec npm run start
     volumes:
       - strapi-uploads:/opt/app/public/uploads
