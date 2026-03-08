@@ -1,0 +1,42 @@
+#,Task,Description,Status,Date,Estimated Hours
+1,SEO Title Tag Update,"Update SEO title tags to match H1 hangline, remove CMS name from title on 385 pages",Done,,2.5
+2,Financing Section,"Add financing section (similar to homepage) to each service page with $99/mo messaging",Done,,1.5
+3,Financing TOC Link,Link financing section from the table of contents on service pages,Done,,0.5
+4,H3 Service Subsections,Make Services subsections H3 headings across all service pages,Done,,1
+5,Cost Calculator Anchor Link,Link cost calculator subtext to /roofing-cost-calculator page,Done,,0.5
+6,Certification Images,"Add GAF certs (roofing), James Hardie logo (siding), Provia certs (windows/doors) to service pages",Done,,3
+7,Certification Alt Tags,Alt tags matching captions for all certification images,Done,,1
+8,Certification Profile Links,Link certification images to company profile pages (GAF etc.),Done,,0.5
+9,Blog Transfer Fix,Debug and fix blogs not transferring on v2 site,Done,,1.5
+10,PDF Data Extraction,"Download and parse measurement PDFs from 3 sources: GAF QuickMeasure, EagleView, HOVER (5.5GB+)",Done,,6
+11,Data Aggregation by City,Aggregate all measurement data by city and service type for table generation,Done,,3
+12,Warranty Table,Build and push warranty data table to roofing pages,Done,,2
+13,Remove H2/Paragraph from Warranty Table,Strip H2 heading and paragraph text from warranty table - table only,Done,,0.5
+14,Inspection Tables - Roofing,"Service-specific measurement tables for roofing pages (roof sqft, pitch, facets etc.)",Done,,3
+15,Inspection Tables - Siding,"Service-specific measurement tables for siding pages (siding sqft, stories etc.)",Done,,2.5
+16,Inspection Tables - Gutters,"Service-specific measurement tables for gutter pages (gutter/eave linear ft etc.)",Done,,2.5
+17,Inspection Tables - Doors,"Service-specific measurement tables for door pages (entry doors, sliding glass doors)",Done,,2.5
+18,Door Data Classification,Research and categorize door types as entry doors vs sliding glass doors per search volume,Done,,1
+19,AI-Generated Property Notes,Claude API integration for natural short notes per property in measurement tables,Done,,3
+20,Push Tables to CMS,Push all generated HTML tables to Strapi fields via API for 385 pages,Done,,2
+21,Frontend Table Integration,Connect frontend to display service-specific tables with horizontal scroll,Done,,2.5
+22,FAQ Schema Markup,Generate FAQPage JSON-LD structured data for all 385 service pages and push to CMS,Done,,2.5
+23,Inspection & Warranty Table Audit,"Audit all 385 Strapi pages for inspection/warranty table coverage, generate CSV report with full URLs (257 inspection, 291 warranty, 326 total)",Done,2/25/2026,1.5
+24,Restructure Table HTML - Warranty,"Wrap tableRichText in <figure class=""table""> with data-label attributes and CSS classes across 291 pages",Done,2/26/2026,2
+25,Restructure Table HTML - Inspection,"Wrap inspectionRichText in <div class=""inspection-table-wrapper""><figure class=""table""> with data-label attributes across 257 pages",Done,2/26/2026,2
+26,HOA Research & Data Collection,"Use Perplexity AI to research HOAs for 74 cities, verify URLs, build cache of 538 HOAs with contact info",Done,2/26/2026,4
+27,HOA Community Guidelines HTML,"Build and push communityGuidelinesRichText HTML (h2/h3/h4 with mailto/tel links) to 373 service pages",Done,2/26/2026,2
+28,HOA Contact Enrichment,"Enrich missing HOA email/phone/website via Perplexity AI with retry logic (up to 3 passes per city), added 9 websites + 28 emails + 13 phones across 46 cities",Done,2/27/2026,3
+29,HOA Data Cleanup,"Remove HOAs with zero contact info from cache (348 removed), rebuild and push cleaned HTML to 373 pages",Done,2/27/2026,1
+30,MapSection Job Count Update,"Update H2 job counts in mapSection across 316 pages by comparing with jobs_processed CSV totals, handle both N+ and Over N formats",Done,2/27/2026,2
+31,Map Embed Fix,"Fix mapSection across 385 pages: rebuild bad iframes (old mid, missing coords, HTML-encoded), generate AI content for empty pages",Done,2/26/2026,3
+32,Global Script — MutationObserver Fix,"Fix infinite init/teardown loop caused by observeRouteChanges() MutationObserver: added isInitializing guard flag, replaced queueMicrotask with 150ms debounce, wrapped initPage in try/finally, awaited initPage in bootstrap before starting observer",Pending,3/7/2026,1.5
+33,Global Script — Nav Overlay Close,"Added mouseenter listener on .bg-overlay to close hamburger menu on hover, with proper cleanup",Pending,3/7/2026,0.5
+34,Global Script — Phone Masking Fix,"Moved initPhoneMasking from initBlog to top-level initPage, broadened selectors to input[type=tel] and input[name*=phone], fixed jQuery loading race condition with direct script creation instead of loadScriptAsync dedup",Pending,3/7/2026,1
+35,Global Script — Form Handler Fixes,"Added current_page and page_referrer metadata to form submissions, made form handler persistent in bootstrap to survive teardown and protect in-flight submissions, removed early-return guard for dynamic forms",Pending,3/7/2026,1
+36,Global Script — Weather Widget Fix,"Removed deprecated limit parameter from weather.gov alerts API, added country=US filter to Mapbox geocoding, added US bounding box coordinate check to prevent non-US API calls",Pending,3/7/2026,1
+37,Gallery Migration,"Parsed gallery_component.html, downloaded 49 images from Webflow CDN, uploaded to Strapi via Upload API, deleted 8 old records, created 8 new gallery records with image associations and alt text",Pending,3/7/2026,2
+38,Global Script — FAQ Accordion Fix,"Added initFaqAccordion module to allow closing open FAQ items — radio buttons can't be unchecked natively, added click handler that defers uncheck via setTimeout",Pending,3/7/2026,0.5
+39,Global Script — Service Area SPA Fix,"Fixed service area widget not initializing on SPA navigation: inline scripts don't execute on DOM insertion, added code to extract and execute inputData from .w-html-embed script elements",Pending,3/7/2026,1
+40,React Hydration Mismatch Diagnosis,"Identified 5 HtmlEmbed components with clientOnly={false} causing React error #418 hydration mismatches on services, service-areas, and 3 location pages — recommended changing to clientOnly={true}",Pending,3/7/2026,0.5
+,,TOTAL,,,71
