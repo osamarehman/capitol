@@ -24,31 +24,75 @@ deploy_state = {
     "started_at": None,
     "finished_at": None,
     "triggered_by": None,
+    "logs": [],
+    "step": None,
 }
+
+# Deploy step patterns to detect progress
+STEP_PATTERNS = [
+    ("Installing webstudio CLI", "install_cli"),
+    ("Syncing project data", "sync"),
+    ("Building project with assets", "build_assets"),
+    ("Running post-sync patches", "post_sync"),
+    ("Building Docker image", "docker_build"),
+    ("Deploying container", "deploy"),
+    ("Waiting for health check", "health_check"),
+    ("Deploy successful", "done"),
+    ("ERROR:", "error"),
+]
 
 
 def run_deploy(triggered_by="webhook"):
-    """Run deploy.sh in background thread."""
+    """Run deploy.sh in background thread, capturing live output."""
     deploy_state["status"] = "running"
     deploy_state["started_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
     deploy_state["finished_at"] = None
     deploy_state["triggered_by"] = triggered_by
+    deploy_state["logs"] = []
+    deploy_state["step"] = "starting"
+
+    def add_log(line):
+        ts = time.strftime("%H:%M:%S")
+        deploy_state["logs"].append(f"[{ts}] {line}")
+        # Keep last 200 lines
+        if len(deploy_state["logs"]) > 200:
+            deploy_state["logs"] = deploy_state["logs"][-200:]
+        # Detect current step
+        for pattern, step in STEP_PATTERNS:
+            if pattern in line:
+                deploy_state["step"] = step
+                break
 
     try:
-        result = subprocess.run(
+        process = subprocess.Popen(
             ["bash", DEPLOY_SCRIPT],
-            capture_output=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
             text=True,
-            timeout=600,  # 10 min max
+            bufsize=1,
         )
-        if result.returncode == 0:
+        for line in process.stdout:
+            line = line.rstrip()
+            if line:
+                add_log(line)
+        process.wait(timeout=600)
+
+        if process.returncode == 0:
             deploy_state["status"] = "success"
+            deploy_state["step"] = "done"
         else:
             deploy_state["status"] = "failed"
+            deploy_state["step"] = "error"
+            add_log(f"Process exited with code {process.returncode}")
     except subprocess.TimeoutExpired:
         deploy_state["status"] = "failed"
-    except Exception:
+        deploy_state["step"] = "error"
+        add_log("Deploy timed out after 600s")
+        process.kill()
+    except Exception as e:
         deploy_state["status"] = "failed"
+        deploy_state["step"] = "error"
+        add_log(f"Exception: {e}")
     finally:
         deploy_state["finished_at"] = time.strftime("%Y-%m-%d %H:%M:%S")
 
@@ -65,12 +109,29 @@ class WebhookHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
     def do_GET(self):
-        if self.path == "/deploy/status":
+        if self.path.startswith("/deploy/status"):
+            # Parse ?since=N to only return new logs
+            since = 0
+            if "?since=" in self.path:
+                try:
+                    since = int(self.path.split("?since=")[1])
+                except ValueError:
+                    pass
+
+            response = {
+                "status": deploy_state["status"],
+                "started_at": deploy_state["started_at"],
+                "finished_at": deploy_state["finished_at"],
+                "triggered_by": deploy_state["triggered_by"],
+                "step": deploy_state["step"],
+                "logs": deploy_state["logs"][since:],
+                "log_offset": len(deploy_state["logs"]),
+            }
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
             self._cors_headers()
             self.end_headers()
-            self.wfile.write(json.dumps(deploy_state).encode())
+            self.wfile.write(json.dumps(response).encode())
             return
 
         self.send_response(200)

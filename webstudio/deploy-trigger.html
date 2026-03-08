@@ -113,6 +113,36 @@
       color: #94a3b8;
     }
 
+    .step-indicator {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .step-pip {
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      background: #334155;
+      color: #64748b;
+      transition: all 0.3s;
+    }
+
+    .step-pip.active {
+      background: #422006;
+      color: #fbbf24;
+      animation: pulse 1s infinite;
+    }
+
+    .step-pip.done {
+      background: #14532d;
+      color: #4ade80;
+    }
+
     .log-area {
       margin-top: 20px;
       text-align: left;
@@ -121,14 +151,21 @@
       border-radius: 8px;
       padding: 12px;
       font-family: 'SF Mono', 'Fira Code', monospace;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
+      line-height: 1.5;
       color: #94a3b8;
-      max-height: 120px;
+      max-height: 300px;
       overflow-y: auto;
       display: none;
+      white-space: pre-wrap;
+      word-break: break-all;
     }
 
     .log-area.visible { display: block; }
+
+    .log-area .log-step { color: #38bdf8; font-weight: 600; }
+    .log-area .log-error { color: #f87171; }
+    .log-area .log-success { color: #4ade80; }
   </style>
 </head>
 <body>
@@ -141,7 +178,14 @@
       <span id="status-text">Idle</span>
     </div>
 
-    <br>
+    <div id="steps" class="step-indicator" style="display:none;">
+      <span class="step-pip" data-step="sync">Sync</span>
+      <span class="step-pip" data-step="build_assets">Assets</span>
+      <span class="step-pip" data-step="post_sync">Patch</span>
+      <span class="step-pip" data-step="docker_build">Build</span>
+      <span class="step-pip" data-step="deploy">Deploy</span>
+      <span class="step-pip" data-step="health_check">Health</span>
+    </div>
 
     <button id="deploy-btn" class="deploy-btn" onclick="triggerDeploy()">
       Deploy Now
@@ -154,7 +198,6 @@
 
   <script>
     // ---- CONFIGURATION ----
-    // Set your deploy webhook URL and secret token here
     const DEPLOY_URL = 'https://v2.improveitmd.com';
     const DEPLOY_SECRET = '1LkupLK0_fBszdMKkCOQKAEmQ5L0H46L7j6PbJzzMhM';
     // -----------------------
@@ -164,26 +207,61 @@
     const statusText = document.getElementById('status-text');
     const logArea = document.getElementById('log');
     const info = document.getElementById('info');
+    const stepsEl = document.getElementById('steps');
 
     let pollInterval = null;
+    let logOffset = 0;
+
+    const STEP_ORDER = ['sync', 'build_assets', 'post_sync', 'docker_build', 'deploy', 'health_check', 'done'];
 
     function setStatus(state, text) {
       statusEl.className = 'status-badge status-' + state;
       statusText.textContent = text;
     }
 
-    function addLog(msg) {
+    function updateSteps(currentStep) {
+      if (!currentStep || currentStep === 'starting') return;
+      stepsEl.style.display = 'flex';
+      const currentIdx = STEP_ORDER.indexOf(currentStep);
+      stepsEl.querySelectorAll('.step-pip').forEach(pip => {
+        const stepIdx = STEP_ORDER.indexOf(pip.dataset.step);
+        pip.classList.remove('active', 'done');
+        if (stepIdx < currentIdx || currentStep === 'done') {
+          pip.classList.add('done');
+        } else if (stepIdx === currentIdx) {
+          pip.classList.add('active');
+        }
+      });
+    }
+
+    function appendLogs(lines) {
+      if (!lines.length) return;
       logArea.classList.add('visible');
-      logArea.textContent += '[' + new Date().toLocaleTimeString() + '] ' + msg + '\n';
+      lines.forEach(line => {
+        const span = document.createElement('div');
+        if (line.includes('===') || line.includes('Starting') || line.includes('Syncing') ||
+            line.includes('Building') || line.includes('Running') || line.includes('Deploying') ||
+            line.includes('Waiting')) {
+          span.className = 'log-step';
+        } else if (line.includes('ERROR') || line.includes('failed') || line.includes('WARN')) {
+          span.className = 'log-error';
+        } else if (line.includes('successful') || line.includes('complete') || line.includes('Live')) {
+          span.className = 'log-success';
+        }
+        span.textContent = line;
+        logArea.appendChild(span);
+      });
       logArea.scrollTop = logArea.scrollHeight;
     }
 
     async function triggerDeploy() {
       btn.disabled = true;
       btn.textContent = 'Deploying...';
-      logArea.textContent = '';
+      logArea.innerHTML = '';
+      logOffset = 0;
       setStatus('running', 'Triggering...');
-      addLog('Sending deploy request...');
+      stepsEl.style.display = 'none';
+      stepsEl.querySelectorAll('.step-pip').forEach(p => p.classList.remove('active', 'done'));
 
       try {
         const res = await fetch(DEPLOY_URL + '/deploy/trigger', {
@@ -197,22 +275,17 @@
 
         const data = await res.json();
 
-        if (res.status === 202) {
-          addLog('Deploy triggered successfully');
+        if (res.status === 202 || res.status === 409) {
           setStatus('running', 'Running');
           startPolling();
-        } else if (res.status === 409) {
-          addLog('Deploy already in progress');
-          setStatus('running', 'Already Running');
-          startPolling();
         } else {
-          addLog('Error: ' + (data.error || res.statusText));
+          appendLogs(['Error: ' + (data.error || res.statusText)]);
           setStatus('failed', 'Trigger Failed');
           btn.disabled = false;
           btn.textContent = 'Retry Deploy';
         }
       } catch (err) {
-        addLog('Network error: ' + err.message);
+        appendLogs(['Network error: ' + err.message]);
         setStatus('failed', 'Connection Error');
         btn.disabled = false;
         btn.textContent = 'Retry Deploy';
@@ -221,34 +294,41 @@
 
     function startPolling() {
       if (pollInterval) clearInterval(pollInterval);
-      pollInterval = setInterval(checkStatus, 3000);
+      pollInterval = setInterval(checkStatus, 2000);
     }
 
     async function checkStatus() {
       try {
-        const res = await fetch(DEPLOY_URL + '/deploy/status');
+        const res = await fetch(DEPLOY_URL + '/deploy/status?since=' + logOffset);
         const data = await res.json();
 
+        // Append new log lines
+        if (data.logs && data.logs.length > 0) {
+          appendLogs(data.logs);
+          logOffset = data.log_offset;
+        }
+
+        // Update step indicators
+        if (data.step) updateSteps(data.step);
+
         if (data.status === 'running') {
-          setStatus('running', 'Deploying');
-          addLog('Still running...');
+          setStatus('running', data.step ? data.step.replace('_', ' ') : 'Deploying');
         } else if (data.status === 'success') {
           setStatus('success', 'Live');
-          addLog('Deploy completed successfully!');
+          updateSteps('done');
           info.innerHTML = 'Last deploy: <span class="time">' + data.finished_at + '</span>';
           btn.disabled = false;
           btn.textContent = 'Deploy Again';
           clearInterval(pollInterval);
         } else if (data.status === 'failed') {
           setStatus('failed', 'Failed');
-          addLog('Deploy failed. Check server logs.');
           info.innerHTML = 'Failed at: <span class="time">' + data.finished_at + '</span>';
           btn.disabled = false;
           btn.textContent = 'Retry Deploy';
           clearInterval(pollInterval);
         }
       } catch (err) {
-        addLog('Poll error: ' + err.message);
+        // Silently retry on poll errors
       }
     }
 

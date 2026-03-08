@@ -39,24 +39,28 @@ if ! command -v webstudio &>/dev/null && [ ! -f node_modules/.bin/webstudio ]; t
   npm install --no-save webstudio 2>&1 | tee -a "$LOG_FILE"
 fi
 
-# Step 2: Sync from Webstudio cloud
-log "Syncing from Webstudio cloud..."
+# Step 2: Sync project data from Webstudio cloud
+log "Syncing project data from Webstudio cloud..."
 npx webstudio sync 2>&1 | tee -a "$LOG_FILE"
 
-# Step 3: Run post-sync patches
+# Step 3: Build project with assets (generates routes, downloads assets)
+log "Building project with assets..."
+npx webstudio build --assets --template docker 2>&1 | tee -a "$LOG_FILE"
+
+# Step 4: Run post-sync patches (fix font URLs, hydration issues)
 log "Running post-sync patches..."
 bash scripts/post-sync.sh 2>&1 | tee -a "$LOG_FILE"
 
-# Step 4: Build Docker image
+# Step 5: Build Docker image (no cache to pick up all changes)
 log "Building Docker image..."
-docker build -t webstudio-prod:latest . 2>&1 | tee -a "$LOG_FILE"
+docker build --no-cache -t webstudio-prod:latest . 2>&1 | tee -a "$LOG_FILE"
 
-# Step 5: Deploy with docker compose
+# Step 6: Deploy with docker compose
 log "Deploying container..."
 docker compose -f docker-compose.prod.yml down 2>&1 | tee -a "$LOG_FILE" || true
 docker compose -f docker-compose.prod.yml up -d 2>&1 | tee -a "$LOG_FILE"
 
-# Step 6: Wait for health check
+# Step 7: Wait for health check
 log "Waiting for health check..."
 for i in $(seq 1 30); do
   if curl -sf http://localhost:3000/ > /dev/null 2>&1; then
