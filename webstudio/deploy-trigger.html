@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deploy v2.improveitmd.com</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .deploy-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 40px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: #f8fafc;
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      font-size: 0.875rem;
+      margin-bottom: 32px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 24px;
+    }
+
+    .status-badge .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .status-idle { background: #1e3a5f; color: #7dd3fc; }
+    .status-idle .dot { background: #7dd3fc; }
+
+    .status-running { background: #422006; color: #fbbf24; }
+    .status-running .dot { background: #fbbf24; animation: pulse 1s infinite; }
+
+    .status-success { background: #14532d; color: #4ade80; }
+    .status-success .dot { background: #4ade80; }
+
+    .status-failed { background: #450a0a; color: #f87171; }
+    .status-failed .dot { background: #f87171; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .deploy-btn {
+      width: 100%;
+      padding: 14px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background: #2563eb;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .deploy-btn:hover:not(:disabled) {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+
+    .deploy-btn:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    .deploy-btn:disabled {
+      background: #475569;
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+
+    .info {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: #64748b;
+    }
+
+    .info .time {
+      color: #94a3b8;
+    }
+
+    .log-area {
+      margin-top: 20px;
+      text-align: left;
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 12px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.75rem;
+      color: #94a3b8;
+      max-height: 120px;
+      overflow-y: auto;
+      display: none;
+    }
+
+    .log-area.visible { display: block; }
+  </style>
+</head>
+<body>
+  <div class="deploy-card">
+    <h1>Webstudio Deploy</h1>
+    <p class="subtitle">v2.improveitmd.com</p>
+
+    <div id="status" class="status-badge status-idle">
+      <span class="dot"></span>
+      <span id="status-text">Idle</span>
+    </div>
+
+    <br>
+
+    <button id="deploy-btn" class="deploy-btn" onclick="triggerDeploy()">
+      Deploy Now
+    </button>
+
+    <div id="log" class="log-area"></div>
+
+    <div class="info" id="info"></div>
+  </div>
+
+  <script>
+    // ---- CONFIGURATION ----
+    // Set your deploy webhook URL and secret token here
+    const DEPLOY_URL = 'https://v2.improveitmd.com';
+    const DEPLOY_SECRET = '1LkupLK0_fBszdMKkCOQKAEmQ5L0H46L7j6PbJzzMhM';
+    // -----------------------
+
+    const btn = document.getElementById('deploy-btn');
+    const statusEl = document.getElementById('status');
+    const statusText = document.getElementById('status-text');
+    const logArea = document.getElementById('log');
+    const info = document.getElementById('info');
+
+    let pollInterval = null;
+
+    function setStatus(state, text) {
+      statusEl.className = 'status-badge status-' + state;
+      statusText.textContent = text;
+    }
+
+    function addLog(msg) {
+      logArea.classList.add('visible');
+      logArea.textContent += '[' + new Date().toLocaleTimeString() + '] ' + msg + '\n';
+      logArea.scrollTop = logArea.scrollHeight;
+    }
+
+    async function triggerDeploy() {
+      btn.disabled = true;
+      btn.textContent = 'Deploying...';
+      logArea.textContent = '';
+      setStatus('running', 'Triggering...');
+      addLog('Sending deploy request...');
+
+      try {
+        const res = await fetch(DEPLOY_URL + '/deploy/trigger', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + DEPLOY_SECRET,
+          },
+          body: JSON.stringify({ trigger: 'manual', timestamp: new Date().toISOString() }),
+        });
+
+        const data = await res.json();
+
+        if (res.status === 202) {
+          addLog('Deploy triggered successfully');
+          setStatus('running', 'Running');
+          startPolling();
+        } else if (res.status === 409) {
+          addLog('Deploy already in progress');
+          setStatus('running', 'Already Running');
+          startPolling();
+        } else {
+          addLog('Error: ' + (data.error || res.statusText));
+          setStatus('failed', 'Trigger Failed');
+          btn.disabled = false;
+          btn.textContent = 'Retry Deploy';
+        }
+      } catch (err) {
+        addLog('Network error: ' + err.message);
+        setStatus('failed', 'Connection Error');
+        btn.disabled = false;
+        btn.textContent = 'Retry Deploy';
+      }
+    }
+
+    function startPolling() {
+      if (pollInterval) clearInterval(pollInterval);
+      pollInterval = setInterval(checkStatus, 3000);
+    }
+
+    async function checkStatus() {
+      try {
+        const res = await fetch(DEPLOY_URL + '/deploy/status');
+        const data = await res.json();
+
+        if (data.status === 'running') {
+          setStatus('running', 'Deploying');
+          addLog('Still running...');
+        } else if (data.status === 'success') {
+          setStatus('success', 'Live');
+          addLog('Deploy completed successfully!');
+          info.innerHTML = 'Last deploy: <span class="time">' + data.finished_at + '</span>';
+          btn.disabled = false;
+          btn.textContent = 'Deploy Again';
+          clearInterval(pollInterval);
+        } else if (data.status === 'failed') {
+          setStatus('failed', 'Failed');
+          addLog('Deploy failed. Check server logs.');
+          info.innerHTML = 'Failed at: <span class="time">' + data.finished_at + '</span>';
+          btn.disabled = false;
+          btn.textContent = 'Retry Deploy';
+          clearInterval(pollInterval);
+        }
+      } catch (err) {
+        addLog('Poll error: ' + err.message);
+      }
+    }
+
+    // Check initial status on load
+    checkStatus();
+  </script>
+</body>
+</html>
