@@ -181,7 +181,7 @@
     <div id="steps" class="step-indicator" style="display:none;">
       <span class="step-pip" data-step="sync">Sync</span>
       <span class="step-pip" data-step="build_assets">Assets</span>
-      <span class="step-pip" data-step="post_sync">Patch</span>
+      <span class="step-pip" data-step="optimize">Optimize</span>
       <span class="step-pip" data-step="docker_build">Build</span>
       <span class="step-pip" data-step="deploy">Deploy</span>
       <span class="step-pip" data-step="health_check">Health</span>
@@ -212,7 +212,7 @@
     let pollInterval = null;
     let logOffset = 0;
 
-    const STEP_ORDER = ['sync', 'build_assets', 'post_sync', 'docker_build', 'deploy', 'health_check', 'done'];
+    const STEP_ORDER = ['sync', 'build_assets', 'optimize', 'docker_build', 'deploy', 'health_check', 'done'];
 
     function setStatus(state, text) {
       statusEl.className = 'status-badge status-' + state;

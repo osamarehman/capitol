@@ -11,7 +11,7 @@ import { NavigationMenu as NavigationMenu, NavigationMenuList as NavigationMenuL
 
       export const projectId = "5b897bfc-8b80-4b2a-bfed-79ac7ec37365";
 
-      export const lastPublished = "2026-03-07T22:43:38.864Z";
+      export const lastPublished = "2026-03-08T02:54:27.839Z";
 
       export const siteName = "Capitol Improvements";
 
@@ -38,7 +38,7 @@ className={`w-element`}>
 <Box
 className={`w-box cnregu4 c3a6wb5 c14dzf92`}>
 <HtmlEmbed
-code={"<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css\">\n<script src=\"https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js\"></script>\n\n<style>\n.swiper-slide.is-service { width: 30%; margin-right: 1rem; }\n.swiper.is-service {\n  display: none;\n}\n@media (max-width: 991px) { .swiper-slide.is-service { width: 49%; }\n.swiper.is-service {\ndisplay: block;\n} }\n@media (max-width: 479px) { .swiper-slide.is-service { width: 100%; } }\n</style>"}
+code={"<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css\">\n<script src=\"https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js\"></script>\n<style>\n.swiper-slide.is-service { width: 30%; margin-right: 1rem; }\n.swiper.is-service {\n  display: none;\n}\n@media (max-width: 991px) { .swiper-slide.is-service { width: 49%; }\n.swiper.is-service {\ndisplay: block;\n} }\n@media (max-width: 479px) { .swiper-slide.is-service { width: 100%; } }\n</style>"}
 clientOnly={true}
 className={`w-html-embed`} />
 <HtmlEmbed
@@ -72,7 +72,7 @@ className={`w-html-embed`} />
 <Slot>
 <Fragment_1>
 <HtmlEmbed
-code={"<style>  \n/* RESET */\n* {\n  margin: 0;\n  scroll-behavior: smooth;\n}\n\n/* Prevent events on closed sheet */\n.viewport-container {\n  pointer-events: none !important;\n}\n.viewport-container .menu-viewport[data-state=\"open\"] {\n  pointer-events: auto !important;\n}\nbody.menu-open {\n  overflow: hidden;\n}\n  \n/* ACCORDION ANIMATION  */\n.AccordionContent {\n  overflow: hidden;\n}\n.AccordionContent[data-state=\"open\"] {\n  animation: accordionSlideDown 300ms ease-out;\n}\n.AccordionContent[data-state=\"closed\"] {\n  animation: accordionSlideUp 300ms ease-out;\n}\n\n@keyframes accordionSlideDown {\n  from { height: 0; }\n  to { height: var(--radix-accordion-content-height); }\n}\n\n@keyframes accordionSlideUp {\n  from { height: var(--radix-accordion-content-height); }\n  to { height: 0; }\n}\n\n/* Accordion Header active state color change */\n.AccordionTrigger {\n  transition: color 250ms ease; /* optional smooth fade */\n}\n\n.AccordionTrigger.Firebrick[data-state=\"open\"] {\n  color: var(--firebrick);\n}\n\n/* Accordion Cross Icon rotate  */\n.CrossIconLine {\n  transform-origin: center;\n  transform: rotate(0deg);\n  transition: transform 250ms ease;\n}\n\n.AccordionCross[data-state=\"open\"] .CrossIconLine {\n  transform: rotate(90deg);\n}\n  \n/* READ MORE TRANSITION   */\n.read-more-content {\n  opacity: 0;\n  max-height: 0;\n  overflow: hidden;\n  transition: opacity 0.3s ease, max-height 0.3s ease;\n}\n\n.read-more-content.is-visible {\n  opacity: 1;\n  max-height: 500px;\n}\n\n  /* Responsive Map CSS  */\n.responsive-map {\n  position: relative;\n  width: 100%;\n  height: 0;\n  padding-bottom: 75%; /* 4:3 aspect ratio (480/640 = 0.75) */\n  overflow: hidden;\n}\n\n.responsive-map iframe {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100% !important;\n  height: 100% !important;\n  border: 0;\n}\n/* For mobile portrait (smaller screens) */\n@media screen and (max-width: 768px) {\n  .responsive-map {\n    padding-bottom: 100%; /* Make it more square on mobile */\n    margin: 10px 0; /* Add some vertical spacing */\n  }\n}\n\n/* For very small screens */\n@media screen and (max-width: 480px) {\n  .responsive-map {\n    padding-bottom: 120%; /* Taller aspect ratio for very small screens */\n  }\n}\n  \n/* Asphalt Roofing product top row padding removal  */\n@media only screen and (max-width: 1279px) {\n\t.product-top-row {\n\t\tpadding-right: 0rem;\n\t}\n}\n\n  /* Commercial Roofing Paragraph & Grid reveal  */\n.commercial-grid {\n  display: none;\n}\n  \n.commercial-paragraph {\n  display: none;\n}\n\n.commercial-wrapper.is-expanded .commercial-paragraph {\n  display: block;\n}\n  \n.commercial-wrapper.is-expanded .commercial-grid {\n  display: grid;\n} \n  \n.commercial-wrapper.is-expanded .commercial-read-more {\n  display: none;\n}\n  \n@media (max-width: 479px) {\n  .commercial-grid {\n    display: none !important;\n  }\n}\n\n/* class for display:none  */\n.is--hidden {\n  display: none;\n}\n.is--visible {\n  display: block;\n}\n\na {\n  color: var(--foreground-secondary);\n  text-decoration: none;\n}\n\n.dropdown-list.is-2,\n.dropdown-list.is-3 {\n  height: 0;\n  overflow: hidden;\n  transition: height 0.3s ease;\n}\n\n.nav {\n  contain: layout style;\n  will-change: transform;\n  backface-visibility: hidden;\n}\n  \n/* Menu open state */\nbody.is-nav-open {\n  overflow: hidden;\n}\n\nbody.is-nav-open .nav-menu {\n  display: block !important;\n}\n\nbody.is-nav-open .hamburger-line {\n  display: none !important;\n}\n\nbody.is-nav-open .nav-icon {\n  display: block !important;\n}\n\n</style>\n\n"}
+code={"<style>  \n/* RESET */\n* {\n  margin: 0;\n  scroll-behavior: smooth;\n}\n\n/* Prevent events on closed sheet */\n.viewport-container {\n  pointer-events: none !important;\n}\n.viewport-container .menu-viewport[data-state=\"open\"] {\n  pointer-events: auto !important;\n}\nbody.menu-open {\n  overflow: hidden;\n}\n  \n/* ACCORDION ANIMATION  */\n.AccordionContent {\n  overflow: hidden;\n}\n.AccordionContent[data-state=\"open\"] {\n  animation: accordionSlideDown 300ms ease-out;\n}\n.AccordionContent[data-state=\"closed\"] {\n  animation: accordionSlideUp 300ms ease-out;\n}\n\n@keyframes accordionSlideDown {\n  from { height: 0; }\n  to { height: var(--radix-accordion-content-height); }\n}\n\n@keyframes accordionSlideUp {\n  from { height: var(--radix-accordion-content-height); }\n  to { height: 0; }\n}\n\n/* Accordion Header active state color change */\n.AccordionTrigger {\n  transition: color 250ms ease; /* optional smooth fade */\n}\n\n.AccordionTrigger.Firebrick[data-state=\"open\"] {\n  color: var(--firebrick);\n}\n\n/* Accordion Cross Icon rotate  */\n.CrossIconLine {\n  transform-origin: center;\n  transform: rotate(0deg);\n  transition: transform 250ms ease;\n}\n\n.AccordionCross[data-state=\"open\"] .CrossIconLine {\n  transform: rotate(90deg);\n}\n  \n/* READ MORE TRANSITION   */\n.read-more-content {\n  opacity: 0;\n  max-height: 0;\n  overflow: hidden;\n  transition: opacity 0.3s ease, max-height 0.3s ease;\n}\n\n.read-more-content.is-visible {\n  opacity: 1;\n  max-height: 500px;\n}\n\n  /* Responsive Map CSS  */\n.responsive-map {\n  position: relative;\n  width: 100%;\n  height: 0;\n  padding-bottom: 75%; /* 4:3 aspect ratio (480/640 = 0.75) */\n  overflow: hidden;\n}\n\n.responsive-map iframe {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100% !important;\n  height: 100% !important;\n  border: 0;\n}\n/* For mobile portrait (smaller screens) */\n@media screen and (max-width: 768px) {\n  .responsive-map {\n    padding-bottom: 100%; /* Make it more square on mobile */\n    margin: 10px 0; /* Add some vertical spacing */\n  }\n}\n\n/* For very small screens */\n@media screen and (max-width: 480px) {\n  .responsive-map {\n    padding-bottom: 120%; /* Taller aspect ratio for very small screens */\n  }\n}\n  \n/* Asphalt Roofing product top row padding removal  */\n@media only screen and (max-width: 1279px) {\n\t.product-top-row {\n\t\tpadding-right: 0rem;\n\t}\n}\n\n  /* Commercial Roofing Paragraph & Grid reveal  */\n.commercial-grid {\n  display: none;\n}\n  \n.commercial-paragraph {\n  display: none;\n}\n\n.commercial-wrapper.is-expanded .commercial-paragraph {\n  display: block;\n}\n  \n.commercial-wrapper.is-expanded .commercial-grid {\n  display: grid;\n} \n  \n.commercial-wrapper.is-expanded .commercial-read-more {\n  display: none;\n}\n  \n@media (max-width: 479px) {\n  .commercial-grid {\n    display: none !important;\n  }\n}\n\n/* class for display:none  */\n.is--hidden {\n  display: none;\n}\n.is--visible {\n  display: block;\n}\n\na {\n  color: var(--foreground-secondary);\n  text-decoration: none;\n}\n\n.dropdown-list.is-2,\n.dropdown-list.is-3 {\n  height: 0;\n  overflow: hidden;\n  transition: height 0.3s ease;\n}\n\n.nav {\n  contain: layout style;\n  will-change: transform;\n  backface-visibility: hidden;\n}\n  \n/* Menu open state */\nbody.is-nav-open {\n  overflow: hidden;\n}\n\nbody.is-nav-open .nav-menu {\n  display: block !important;\n}\n\nbody.is-nav-open .hamburger-line {\n  display: none !important;\n}\n\nbody.is-nav-open .nav-icon {\n  display: block !important;\n}\n</style>"}
 clientOnly={true}
 className={`w-html-embed`} />
 <nav
@@ -141,13 +141,13 @@ className={`w-element c1k5oipc`}>
 className={`w-element c1osufuw c3sv84c c84c42r`}>
 <Image
 alt={"Logo Icon"}
-src={"/assets/capitol_improvements_logo_mui4YFXSPvMEj33G1EyWT.svg"}
+src={"/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
 width={18}
 height={12}
 loading={"eager"}
 className={`w-image cqsaj3r c11y8oun ctpsi40 c12l5srj`} />
 <Image
-src={"/assets/capitol_improvements_logo_text_IlLfLABIT-imV1nR5DxY3.svg"}
+src={"/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
 width={161}
 height={8}
 alt={"Logo Text"}
@@ -424,7 +424,7 @@ className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"https://cms.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={""}
@@ -618,7 +618,7 @@ className={`w-element c1numhkq c53aqfr ct0qrmw cfcahn6 c1hx6vht c1epvuph c6hmdm4
 href={"tel:3017696909"}
 className={`w-link c1lvj0n c19ftcvs c1vqewwo cacmu18 c9te4zd c1u81kxm c1v2l8nt c53aqfr ct0qrmw c1lzjd2w cn7k83s c1d8rs8t cwr9gsc c1ehmfnq c1owcyig c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da cv3rgxc cahz6x0 cmchden c1amh7xl cimel00 c1b6be7c c1842oze c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 ckkl2uw cchbu1a c1lgs1h6 c1osufuw`}>
 <Image
-src={"https://cms.improveitmd.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
+src={"/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
 width={16}
 height={16}
 alt={"Phone icon"}
@@ -650,7 +650,7 @@ className={`w-element c1numhkq cqilze0 c1diokdk c3auquk c1r7jime c1hx6vht cfefby
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"https://cms.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={"Logo"}
@@ -968,7 +968,7 @@ className={`w-link cekr8vl cyzpk7y cm1pdbc cacmu18 crv3s27 c1u81kxm c1v2l8nt c1d
 </div>
 </nav>
 <HtmlEmbed
-code={"<!-- 1. Menu viewport observer -->\n<script type=\"module\">\nconst observer = new MutationObserver(() => {\n  const isMenuOpen = !!document.querySelector('.menu-viewport');\n  document.body.classList.toggle('menu-open', isMenuOpen);\n});\n\nobserver.observe(document.body, {\n  childList: true,\n  subtree: true\n});\n</script>\n\n<!-- 2. Sticky nav -->\n<script type=\"module\">\ntry {\n  if (window.innerWidth >= 991) {\n    const standardNav = document.querySelector(\".nav.is--standard\");\n    const stickyNav = document.querySelector(\".nav.is--sticky\");\n\n    if (!standardNav || !stickyNav) throw new Error(\"Standard or Sticky navigation elements not found.\");\n\n    stickyNav.style.position = 'fixed';\n    stickyNav.style.top = '0';\n    stickyNav.style.left = '0';\n    stickyNav.style.right = '0';\n    stickyNav.style.willChange = 'transform';\n    stickyNav.style.transition = 'transform 0.3s ease-out';\n    stickyNav.style.transform = 'translateY(-101%)';\n    stickyNav.style.WebkitTransform = 'translateY(-101%)';\n\n    const switchPoint = 150;\n    let lastScrollPosition = window.scrollY;\n    let ticking = false;\n\n    function applyNavState() {\n      const currentScrollPosition = window.scrollY;\n\n      if (Math.abs(currentScrollPosition - lastScrollPosition) > 5 || currentScrollPosition === 0) {\n        if (currentScrollPosition > switchPoint) {\n          standardNav.style.visibility = 'hidden';\n          stickyNav.style.pointerEvents = 'auto';\n          requestAnimationFrame(() => {\n            stickyNav.style.transform = 'translateY(0%)';\n            stickyNav.style.WebkitTransform = 'translateY(0%)';\n          });\n        } else {\n          standardNav.style.visibility = 'visible';\n          stickyNav.style.pointerEvents = 'none';\n          requestAnimationFrame(() => {\n            stickyNav.style.transform = 'translateY(-101%)';\n            stickyNav.style.WebkitTransform = 'translateY(-101%)';\n          });\n        }\n        lastScrollPosition = currentScrollPosition;\n      }\n      ticking = false;\n    }\n\n    function setNavState() {\n      applyNavState();\n    }\n\n    window.addEventListener(\"scroll\", () => {\n      if (!ticking) {\n        requestAnimationFrame(applyNavState);\n        ticking = true;\n      }\n    }, { passive: true });\n\n    document.body.addEventListener(\"click\", () => {\n      requestAnimationFrame(setNavState);\n    });\n\n    let resizeTimeout;\n    window.addEventListener('resize', () => {\n      clearTimeout(resizeTimeout);\n      resizeTimeout = setTimeout(() => {\n        if (window.innerWidth < 991) {\n          standardNav.style.visibility = 'visible';\n          stickyNav.style.transform = 'translateY(-101%)';\n          stickyNav.style.WebkitTransform = 'translateY(-101%)';\n        }\n      }, 250);\n    }, { passive: true });\n  }\n} catch (error) {\n  console.error(error.message);\n}\n</script>\n\n<!-- 3. Dropdown/submenu -->\n<script type=\"module\">\ndocument.body.addEventListener('click', (e) => {\n  if (e.target.matches('.plus-link.is-2')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList2 = document.querySelector('.dropdown-list.is-2');\n    if (!mainList || !subList2) return;\n    mainList.style.height = '0';\n    mainList.style.overflow = 'hidden';\n    subList2.style.height = subList2.scrollHeight + 'px';\n    subList2.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.plus-link.is-3')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList3 = document.querySelector('.dropdown-list.is-3');\n    if (!mainList || !subList3) return;\n    mainList.style.height = '0';\n    mainList.style.overflow = 'hidden';\n    subList3.style.height = subList3.scrollHeight + 'px';\n    subList3.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.back-link.is-1')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList2 = document.querySelector('.dropdown-list.is-2');\n    if (!mainList || !subList2) return;\n    subList2.style.height = '0';\n    subList2.style.overflow = 'hidden';\n    mainList.style.height = mainList.scrollHeight + 'px';\n    mainList.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.back-link.is-2')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList3 = document.querySelector('.dropdown-list.is-3');\n    if (!mainList || !subList3) return;\n    subList3.style.height = '0';\n    subList3.style.overflow = 'hidden';\n    mainList.style.height = mainList.scrollHeight + 'px';\n    mainList.style.overflow = 'visible';\n  }\n});\n</script>\n\n<!-- 4. Hamburger + custom menu -->\n<script type=\"module\">\ndocument.addEventListener('click', (e) => {\n  const backIcon = e.target.closest('.nav-icon');\n  const hamburger = e.target.closest('.hamburger');\n\n  if (backIcon && document.body.classList.contains('is-nav-open')) {\n    document.body.classList.remove('is-nav-open');\n    return;\n  }\n\n  if (hamburger && !document.body.classList.contains('is-nav-open')) {\n    document.body.classList.add('is-nav-open');\n    return;\n  }\n});\n  document.addEventListener('mouseover', (e) => {\n  if (e.target.closest('.bg-overlay')) {\n    document.body.classList.remove('is-nav-open');\n  }\n});\n</script>"}
+code={"<script type=\"module\">\nconst observer = new MutationObserver(() => {\n  const isMenuOpen = !!document.querySelector('.menu-viewport');\n  document.body.classList.toggle('menu-open', isMenuOpen);\n});\n\nobserver.observe(document.body, {\n  childList: true,\n  subtree: true\n});\n</script>\n<script type=\"module\">\ntry {\n  if (window.innerWidth >= 991) {\n    const standardNav = document.querySelector(\".nav.is--standard\");\n    const stickyNav = document.querySelector(\".nav.is--sticky\");\n\n    if (!standardNav || !stickyNav) throw new Error(\"Standard or Sticky navigation elements not found.\");\n\n    stickyNav.style.position = 'fixed';\n    stickyNav.style.top = '0';\n    stickyNav.style.left = '0';\n    stickyNav.style.right = '0';\n    stickyNav.style.willChange = 'transform';\n    stickyNav.style.transition = 'transform 0.3s ease-out';\n    stickyNav.style.transform = 'translateY(-101%)';\n    stickyNav.style.WebkitTransform = 'translateY(-101%)';\n\n    const switchPoint = 150;\n    let lastScrollPosition = window.scrollY;\n    let ticking = false;\n\n    function applyNavState() {\n      const currentScrollPosition = window.scrollY;\n\n      if (Math.abs(currentScrollPosition - lastScrollPosition) > 5 || currentScrollPosition === 0) {\n        if (currentScrollPosition > switchPoint) {\n          standardNav.style.visibility = 'hidden';\n          stickyNav.style.pointerEvents = 'auto';\n          requestAnimationFrame(() => {\n            stickyNav.style.transform = 'translateY(0%)';\n            stickyNav.style.WebkitTransform = 'translateY(0%)';\n          });\n        } else {\n          standardNav.style.visibility = 'visible';\n          stickyNav.style.pointerEvents = 'none';\n          requestAnimationFrame(() => {\n            stickyNav.style.transform = 'translateY(-101%)';\n            stickyNav.style.WebkitTransform = 'translateY(-101%)';\n          });\n        }\n        lastScrollPosition = currentScrollPosition;\n      }\n      ticking = false;\n    }\n\n    function setNavState() {\n      applyNavState();\n    }\n\n    window.addEventListener(\"scroll\", () => {\n      if (!ticking) {\n        requestAnimationFrame(applyNavState);\n        ticking = true;\n      }\n    }, { passive: true });\n\n    document.body.addEventListener(\"click\", () => {\n      requestAnimationFrame(setNavState);\n    });\n\n    let resizeTimeout;\n    window.addEventListener('resize', () => {\n      clearTimeout(resizeTimeout);\n      resizeTimeout = setTimeout(() => {\n        if (window.innerWidth < 991) {\n          standardNav.style.visibility = 'visible';\n          stickyNav.style.transform = 'translateY(-101%)';\n          stickyNav.style.WebkitTransform = 'translateY(-101%)';\n        }\n      }, 250);\n    }, { passive: true });\n  }\n} catch (error) {\n  console.error(error.message);\n}\n</script>\n<script type=\"module\">\ndocument.body.addEventListener('click', (e) => {\n  if (e.target.matches('.plus-link.is-2')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList2 = document.querySelector('.dropdown-list.is-2');\n    if (!mainList || !subList2) return;\n    mainList.style.height = '0';\n    mainList.style.overflow = 'hidden';\n    subList2.style.height = subList2.scrollHeight + 'px';\n    subList2.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.plus-link.is-3')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList3 = document.querySelector('.dropdown-list.is-3');\n    if (!mainList || !subList3) return;\n    mainList.style.height = '0';\n    mainList.style.overflow = 'hidden';\n    subList3.style.height = subList3.scrollHeight + 'px';\n    subList3.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.back-link.is-1')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList2 = document.querySelector('.dropdown-list.is-2');\n    if (!mainList || !subList2) return;\n    subList2.style.height = '0';\n    subList2.style.overflow = 'hidden';\n    mainList.style.height = mainList.scrollHeight + 'px';\n    mainList.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.back-link.is-2')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList3 = document.querySelector('.dropdown-list.is-3');\n    if (!mainList || !subList3) return;\n    subList3.style.height = '0';\n    subList3.style.overflow = 'hidden';\n    mainList.style.height = mainList.scrollHeight + 'px';\n    mainList.style.overflow = 'visible';\n  }\n});\n</script>\n\n<!-- 4. Hamburger + custom menu -->\n<script type=\"module\">\ndocument.addEventListener('click', (e) => {\n  const backIcon = e.target.closest('.nav-icon');\n  const hamburger = e.target.closest('.hamburger');\n\n  if (backIcon && document.body.classList.contains('is-nav-open')) {\n    document.body.classList.remove('is-nav-open');\n    return;\n  }\n\n  if (hamburger && !document.body.classList.contains('is-nav-open')) {\n    document.body.classList.add('is-nav-open');\n    return;\n  }\n});\n  document.addEventListener('mouseover', (e) => {\n  if (e.target.closest('.bg-overlay')) {\n    document.body.classList.remove('is-nav-open');\n  }\n});\n</script>"}
 clientOnly={true}
 className={`w-html-embed`} />
 </Fragment_1>
@@ -1031,7 +1031,7 @@ alt={"YouTube video preview image"}
 sizes={"100vw"}
 optimize={true}
 loading={"eager"}
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1772478890/Capitol_Improvements_Finished_Photos_exzt5u.webp"}
+src={"/uploads/Capitol_Improvements_Finished_Photos_exzt5u_90611f8ed2.webp"}
 fetchPriority={"high"}
 className={`w-preview-image cnbug7k cdmu5h7 cfrqxly c139pwc6 cjkauba csabcfw c1w2t8ro c1gjvd20 c1w2te30`} />
 <VimeoSpinner
@@ -1049,6 +1049,7 @@ aria-hidden={true}
 className={`w-element c13za7x0 c1hstsjx`}>
 <HtmlEmbed
 code={"<svg fill=\"#ffffff\" height=\"100%\" width=\"60%\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" viewBox=\"0 0 460.114 460.114\" xml:space=\"preserve\" stroke=\"#ffffff\"><g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g><g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g><g id=\"SVGRepo_iconCarrier\"> <g> <g> <path d=\"M393.538,203.629L102.557,5.543c-9.793-6.666-22.468-7.372-32.94-1.832c-10.472,5.538-17.022,16.413-17.022,28.26v396.173 c0,11.846,6.55,22.721,17.022,28.26c10.471,5.539,23.147,4.834,32.94-1.832l290.981-198.087 c8.746-5.954,13.98-15.848,13.98-26.428C407.519,219.477,402.285,209.582,393.538,203.629z\"></path> </g> </g> </g></svg>"}
+clientOnly={true}
 className={`w-html-embed`} />
 </div>
 </VimeoPlayButton>
@@ -1882,6 +1883,7 @@ className={`w-element c5zgd1 c1mndhrk c11b3qd4 ctcfpb7 c1numhkq c15kiuw7 c3auquk
 className={`w-element c1numhkq c1a06u5s c15kiuw7 ct0qrmw c1lbbsf4 cd6izue c1pvb9sj cyovuht c13g3obg c1fy1qpm c1mx5icy`}>
 <HtmlEmbed
 code={LocalPagesData?.data?.data?.services?.[0]?.servicesTitleDescription}
+clientOnly={true}
 className={`w-html-embed c1tm0t1i c1ib9ypd cjzablv cyl4kdh cto9k25 c56odag c1hqutl1 cjx1ika c1xpbze2 c1c9efyk c1stgdk8 c8qrtxl c1sl5awa c5p8d3r c1hwtjer c13ws34x camd7ly c1pz8w7n cbln8bn`}>
 </HtmlEmbed>
 </div>
@@ -1909,6 +1911,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l c1g3mhtg`}>
 className={`w-box cx79vvm c4pie2e c2shfwq c1lq6pq8 c60ws42 c1x35ah3 c1fof65s c1kl0qlc c3su6au`}>
 <HtmlEmbed
 code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M12 15.375L6 9.37505L7.075 8.30005L12 13.25L16.925 8.32505L18 9.40005L12 15.375Z\" fill=\"currentColor\"/>\n</svg>"}
+clientOnly={true}
 className={`w-html-embed`} />
 </Box>
 </AccordionTrigger>
@@ -1919,6 +1922,7 @@ className={`w-item-content cn87dm8 c1uhhf7h c60ws42 c1wwn73i c1fof65s c1kl0qlc c
 className={`w-element c7u9bg8 cd311gm`}>
 <HtmlEmbed
 code={LocalPagesData?.data?.data?.services?.[0]?.servicesModalDesc1}
+clientOnly={true}
 className={`w-html-embed cqrls8h c1ib9ypd cja62bv cyl4kdh cto9k25`}>
 </HtmlEmbed>
 </div>
@@ -1944,6 +1948,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l c1g3mhtg`}>
 className={`w-box cx79vvm c4pie2e c2shfwq c1lq6pq8 c60ws42 c1x35ah3 c1fof65s c1kl0qlc c3su6au`}>
 <HtmlEmbed
 code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M12 15.375L6 9.37505L7.075 8.30005L12 13.25L16.925 8.32505L18 9.40005L12 15.375Z\" fill=\"currentColor\"/>\n</svg>"}
+clientOnly={true}
 className={`w-html-embed`} />
 </Box>
 </AccordionTrigger>
@@ -1954,6 +1959,7 @@ className={`w-item-content cn87dm8 c1uhhf7h c60ws42 c1wwn73i c1fof65s c1kl0qlc c
 className={`w-element c7u9bg8 cd311gm`}>
 <HtmlEmbed
 code={LocalPagesData?.data?.data?.services?.[0]?.servicesModalDesc2}
+clientOnly={true}
 className={`w-html-embed cqrls8h c1ib9ypd cja62bv cyl4kdh cto9k25`}>
 </HtmlEmbed>
 </div>
@@ -1979,6 +1985,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l c1g3mhtg`}>
 className={`w-box cx79vvm c4pie2e c2shfwq c1lq6pq8 c60ws42 c1x35ah3 c1fof65s c1kl0qlc c3su6au`}>
 <HtmlEmbed
 code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M12 15.375L6 9.37505L7.075 8.30005L12 13.25L16.925 8.32505L18 9.40005L12 15.375Z\" fill=\"currentColor\"/>\n</svg>"}
+clientOnly={true}
 className={`w-html-embed`} />
 </Box>
 </AccordionTrigger>
@@ -1989,6 +1996,7 @@ className={`w-item-content cn87dm8 c1uhhf7h c60ws42 c1wwn73i c1fof65s c1kl0qlc c
 className={`w-element c7u9bg8 cd311gm`}>
 <HtmlEmbed
 code={LocalPagesData?.data?.data?.services?.[0]?.servicesModalDesc3}
+clientOnly={true}
 className={`w-html-embed cqrls8h c1ib9ypd cja62bv cyl4kdh cto9k25`}>
 </HtmlEmbed>
 </div>
@@ -2014,6 +2022,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l c1g3mhtg`}>
 className={`w-box cx79vvm c4pie2e c2shfwq c1lq6pq8 c60ws42 c1x35ah3 c1fof65s c1kl0qlc c3su6au`}>
 <HtmlEmbed
 code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M12 15.375L6 9.37505L7.075 8.30005L12 13.25L16.925 8.32505L18 9.40005L12 15.375Z\" fill=\"currentColor\"/>\n</svg>"}
+clientOnly={true}
 className={`w-html-embed`} />
 </Box>
 </AccordionTrigger>
@@ -2024,6 +2033,7 @@ className={`w-item-content cn87dm8 c1uhhf7h c60ws42 c1wwn73i c1fof65s c1kl0qlc c
 className={`w-element c7u9bg8 cd311gm`}>
 <HtmlEmbed
 code={LocalPagesData?.data?.data?.services?.[0]?.servicesModalDesc4}
+clientOnly={true}
 className={`w-html-embed cqrls8h c1ib9ypd cja62bv cyl4kdh cto9k25`}>
 </HtmlEmbed>
 </div>
@@ -2049,6 +2059,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l c1g3mhtg`}>
 className={`w-box cx79vvm c4pie2e c2shfwq c1lq6pq8 c60ws42 c1x35ah3 c1fof65s c1kl0qlc c3su6au`}>
 <HtmlEmbed
 code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M12 15.375L6 9.37505L7.075 8.30005L12 13.25L16.925 8.32505L18 9.40005L12 15.375Z\" fill=\"currentColor\"/>\n</svg>"}
+clientOnly={true}
 className={`w-html-embed`} />
 </Box>
 </AccordionTrigger>
@@ -2059,6 +2070,7 @@ className={`w-item-content cn87dm8 c1uhhf7h c60ws42 c1wwn73i c1fof65s c1kl0qlc c
 className={`w-element c7u9bg8 cd311gm`}>
 <HtmlEmbed
 code={LocalPagesData?.data?.data?.services?.[0]?.servicesModalDesc5}
+clientOnly={true}
 className={`w-html-embed cqrls8h c1ib9ypd cja62bv cyl4kdh cto9k25`}>
 </HtmlEmbed>
 </div>
@@ -2111,6 +2123,7 @@ className={`w-element cn5qs21 c1v90cn6 c115nxwc c1lwn44j c1fjww6l c7qz4xx`}>
 </p>
 <HtmlEmbed
 code={"<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 640\">\n  <path d=\"M342.6 105.4C330.1 92.9 309.8 92.9 297.3 105.4L137.3 265.4C124.8 277.9 124.8 298.2 137.3 310.7C149.8 323.2 170.1 323.2 182.6 310.7L320 173.3L457.4 310.6C469.9 323.1 490.2 323.1 502.7 310.6C515.2 298.1 515.2 277.8 502.7 265.3L342.7 105.3zM502.6 457.4L342.6 297.4C330.1 284.9 309.8 284.9 297.3 297.4L137.3 457.4C124.8 469.9 124.8 490.2 137.3 502.7C149.8 515.2 170.1 515.2 182.6 502.7L320 365.3L457.4 502.6C469.9 515.1 490.2 515.1 502.7 502.6C515.2 490.1 515.2 469.8 502.7 457.3z\" fill=\"currentColor\"/></svg>"}
+clientOnly={true}
 className={`w-html-embed c12i83wc c1onu9mc c1f8l5h0`} />
 </Link>
 </div>
@@ -2130,7 +2143,7 @@ className={`w-element c1numhkq c1a06u5s c1sq4bmy c1diokdk ct0qrmw`}>
 <div
 className={`w-element c1numhkq`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1772438560/Capitol_Improvements_Finished_Photos_cropped_nhgndu.webp"}
+src={"/uploads/Capitol_Improvements_Finished_Photos_cropped_nhgndu_784c811e7d.webp"}
 loading={"lazy"}
 alt={"family photo"}
 className={`w-image c139pwc6 c1hwvjgs c9mjk8q czbu68a csabcfw c1w2t8ro c1w2te30 c1gjvd20`} />
@@ -2159,7 +2172,7 @@ target={"_blank"}
 className={`w-element`}>
 <Image
 loading={"lazy"}
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1770298422/GafMasterElite_kvteks.webp"}
+src={"/uploads/Gaf_Master_Elite_kvteks_b9dc66ccb9.webp"}
 className={`w-image ${"features-icon"}`} />
 </Link>
 <div
@@ -2186,7 +2199,7 @@ target={"_blank"}
 className={`w-element`}>
 <Image
 loading={"lazy"}
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1770299159/James-Hardie-Preferred_rarr7e.webp"}
+src={"/uploads/James_Hardie_Preferred_rarr7e_14beaacd36.webp"}
 className={`w-image ${"features-icon"}`} />
 </Link>
 <div
@@ -2207,7 +2220,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 className={`w-element ${"features-item"}`}>
 <Image
 loading={"lazy"}
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1770299800/BoardProPlatnium_ebzeqm.png"}
+src={"/uploads/Board_Pro_Platnium_ebzeqm_5420537416.png"}
 className={`w-image ${"features-icon"}`} />
 <div
 className={`w-element ${"item-text-wrapper"}`}>
@@ -2227,7 +2240,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 className={`w-element ${"features-item"}`}>
 <Image
 loading={"lazy"}
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1770300238/ProVia_b4qh0r.webp"}
+src={"/uploads/Pro_Via_b4qh0r_b2df4e557b.webp"}
 className={`w-image ${"features-icon"}`} />
 <div
 className={`w-element ${"item-text-wrapper"}`}>
@@ -2246,7 +2259,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1770320689/FORTIFIED-logo-program-01-1024x485_uehkpv.png"}
+src={"/uploads/FORTIFIED_logo_program_01_1024x485_uehkpv_306668b9e6.png"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2266,7 +2279,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1770526208/five-star-rating-icon_1_plpmjl.svg"}
+src={"/uploads/five_star_rating_icon_1_plpmjl_5296dfc541.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2286,7 +2299,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1770526208/five-star-rating-icon_1_plpmjl.svg"}
+src={"/uploads/five_star_rating_icon_1_plpmjl_5296dfc541.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2306,7 +2319,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1770526208/five-star-rating-icon_1_plpmjl.svg"}
+src={"/uploads/five_star_rating_icon_1_plpmjl_5296dfc541.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2326,7 +2339,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1767916686/hammer_icon_haniri.svg"}
+src={"/uploads/hammer_icon_haniri_bdc66cb771.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2346,7 +2359,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1767916686/hammer_icon_haniri.svg"}
+src={"/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1767916686_hammer_icon_haniri_bb09faeabe.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2366,7 +2379,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1767916686/hammer_icon_haniri.svg"}
+src={"/uploads/hammer_icon_haniri_bdc66cb771.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2386,7 +2399,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1767916686/hammer_icon_haniri.svg"}
+src={"/uploads/hammer_icon_haniri_bdc66cb771.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2406,7 +2419,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1767916685/badge-icon_hljgdo.svg"}
+src={"/uploads/badge_icon_hljgdo_10525f9c42.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2426,7 +2439,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1767916685/badge-icon_hljgdo.svg"}
+src={"/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1767916685_badge_icon_hljgdo_1f6c00d73f.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2446,7 +2459,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1767916685/badge-icon_hljgdo.svg"}
+src={"/uploads/badge_icon_hljgdo_10525f9c42.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2466,7 +2479,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1767916685/badge-icon_hljgdo.svg"}
+src={"/uploads/badge_icon_hljgdo_10525f9c42.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2486,7 +2499,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1767916685/holding-house-icon_lxtzdg.svg"}
+src={"/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2567,7 +2580,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1767916685/holding-house-icon_lxtzdg.svg"}
+src={"/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2587,7 +2600,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1767916685/holding-house-icon_lxtzdg.svg"}
+src={"/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2607,7 +2620,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1767916685/holding-house-icon_lxtzdg.svg"}
+src={"/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2634,7 +2647,7 @@ className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <div
 className={`w-element cht8odh c139pwc6 cn87dm8 c1uhhf7h c1numhkq c1diokdk ch3nxmx`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1767278930/2026_MASTER_ELITE_CERTIFICATE_ey6dcz.jpg"}
+src={"/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1767278930_2026_MASTER_ELITE_CERTIFICATE_ey6dcz_11a99efab0.jpg"}
 loading={"lazy"}
 alt={"2026 GAF Master Elite Certification for Capitol Improvements"}
 className={`w-image c18hkk31 c1hwvjgs c9mjk8q czbu68a cjkauba c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p`} />
@@ -2650,7 +2663,7 @@ className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <div
 className={`w-element cht8odh c139pwc6 cn87dm8 c1uhhf7h c1numhkq c1diokdk ch3nxmx`}>
 <Image
-src={"https://cms.improveitmd.com/uploads/straightened_image_f6d9787376.jpeg"}
+src={"/uploads/straightened_image_f6d9787376.jpeg"}
 loading={"lazy"}
 alt={"2026 BBB Certificate of Commendation for Capitol Improvements"}
 className={`w-image c18hkk31 c1hwvjgs c9mjk8q czbu68a cjkauba c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p`} />
@@ -2664,7 +2677,7 @@ className={`w-element cn5qs21 c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1770317869/WhatsApp_Image_2026-02-05_at_10.34.06_AM_aay5kl.jpg"}
+src={"/uploads/Whats_App_Image_2026_02_05_at_10_34_06_AM_aay5kl_ac71577c9f.jpg"}
 loading={"lazy"}
 alt={"Screenshot showing Capitol Improvmeents is one of the only 5-star James Hardie partner in the contractor alliance program."}
 className={`w-image c139pwc6 c1hwvjgs c9mjk8q czbu68a c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p ${"certification-image"}`} />
@@ -2678,7 +2691,7 @@ className={`w-element cn5qs21 c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1770317869/WhatsApp_Image_2026-02-05_at_10.34.02_AM_cropped_dp8tdb.jpg"}
+src={"/uploads/Whats_App_Image_2026_02_05_at_10_34_02_AM_cropped_dp8tdb_addb4c692e.jpg"}
 loading={"lazy"}
 alt={"5 stars rated for TimberTech deck installations and service"}
 className={`w-image c139pwc6 c1hwvjgs c9mjk8q czbu68a c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p ${"certification-image"}`} />
@@ -2694,7 +2707,7 @@ className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <div
 className={`w-element cht8odh c139pwc6 cn87dm8 c1uhhf7h c1numhkq c1diokdk ch3nxmx`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1770527324/ProVia_Certificate_Fitted_Crop_yosl1x.jpg"}
+src={"/uploads/Pro_Via_Certificate_Fitted_Crop_yosl1x_605ebb4d17.jpg"}
 loading={"lazy"}
 alt={"Image of our Provia Window Certification good until August 2029"}
 className={`w-image c18hkk31 c1hwvjgs c9mjk8q czbu68a cjkauba c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p`} />
@@ -2711,7 +2724,7 @@ className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <div
 className={`w-element cht8odh c139pwc6 cn87dm8 c1uhhf7h c1numhkq c1diokdk ch3nxmx`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1767278930/Fortified_Certificate_g11ept.jpg"}
+src={"/uploads/Fortified_Certificate_g11ept_e6f662f857.jpg"}
 loading={"lazy"}
 alt={"2026 Fortified Roofing Certification for Capitol Improvements"}
 className={`w-image c18hkk31 c1hwvjgs c9mjk8q czbu68a cjkauba c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p`} />
@@ -2728,7 +2741,7 @@ className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <div
 className={`w-element cht8odh c139pwc6 cn87dm8 c1uhhf7h c1numhkq c1diokdk ch3nxmx`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1770527324/ProVia_Certificate_2_fitted_crop_mr5dfd.jpg"}
+src={"/uploads/Pro_Via_Certificate_2_fitted_crop_mr5dfd_b46623ab5f.jpg"}
 loading={"lazy"}
 alt={"Image of our Provia Window Certification good until August 2029"}
 className={`w-image c18hkk31 c1hwvjgs c9mjk8q czbu68a cjkauba c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p`} />
@@ -2944,7 +2957,7 @@ className={`w-html-embed`} />
 <div
 className={`w-element c139pwc6 cjkauba cvcvidj c1lzjd2w c1epvuph c9nw4u8 c9te4zd cagmsft`}>
 <Image
-src={"/assets/search-icon-grey_2KRPhgsf3MqYwyOF3JXUb.svg"}
+src={"/uploads/search_icon_grey_2_KR_Phgsf3_Mq_Ywy_OF_3_JX_Ub_375d129398.svg"}
 width={18}
 height={18}
 alt={"search icon"}
@@ -3001,7 +3014,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/circle_green_72pqHqP6XmMru-2OGtKg7.svg"}
+src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3022,7 +3035,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/circle_grey_2-5jFzta9VkTJxxl1OQkD.svg"}
+src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3036,7 +3049,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/circle_grey_2-5jFzta9VkTJxxl1OQkD.svg"}
+src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3068,7 +3081,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/circle_green_72pqHqP6XmMru-2OGtKg7.svg"}
+src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3089,7 +3102,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/circle_grey_2-5jFzta9VkTJxxl1OQkD.svg"}
+src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3103,7 +3116,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/circle_grey_2-5jFzta9VkTJxxl1OQkD.svg"}
+src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3194,7 +3207,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/check_fill_tQnPoWF842QzJopBB5w6c.svg"}
+src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3215,7 +3228,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/circle_green_72pqHqP6XmMru-2OGtKg7.svg"}
+src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3229,7 +3242,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 c9vdfns`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/circle_grey_2-5jFzta9VkTJxxl1OQkD.svg"}
+src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3345,7 +3358,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/check_fill_tQnPoWF842QzJopBB5w6c.svg"}
+src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3366,7 +3379,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/check_fill_tQnPoWF842QzJopBB5w6c.svg"}
+src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3380,7 +3393,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 c9vdfns`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/check_fill_tQnPoWF842QzJopBB5w6c.svg"}
+src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3388,7 +3401,7 @@ data-icon={"filled"}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 c8bhanq ce6x08i c1bxcui0 cvfl1ur`} />
 <Image
 loading={"lazy"}
-src={"/assets/circle_green_72pqHqP6XmMru-2OGtKg7.svg"}
+src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3709,7 +3722,7 @@ className={`w-element c1numhkq c3auquk c1ibjhy0 c163g466 cn87dm8 c1uhhf7h clfz32
 <div
 className={`w-element c139pwc6 c17jzp58 c1numhkq culorum`}>
 <Image
-src={"/assets/ci_storm-map_1_-LAH--T-9aHMrFSIfafib.svg"}
+src={"/uploads/ci_storm_map_1_LAH_T_9a_H_Mr_FS_Ifafib_43e525db09.svg"}
 width={320}
 height={436}
 alt={""}
@@ -3796,7 +3809,7 @@ className={`w-element c1mndzy8`}>
 className={`w-element c18bj3o3 c1lq6pq8`}>
 <Image
 loading={"lazy"}
-src={"/assets/Vector_iOXiYDIaoBXz9-Wh9Cj2K.svg"}
+src={"/uploads/Vector_i_O_Xi_YD_Iao_B_Xz9_Wh9_Cj2_K_e1edb10d97.svg"}
 width={60}
 height={62}
 alt={""}
@@ -3892,7 +3905,7 @@ className={`w-element c1numhkq c3auquk co72if5 c1u2ofx5 cvfl1ur c1jyyt23 c1nnsgt
 <div
 className={`w-element c1numhkq c1a06u5s c15kiuw7 ch3nxmx c1s88tz3 c15lzzou c139pwc6 c1sstzge c13g3obg c1m1w9fz c1sy7qlo c1s19qlc crfoyae cuwoxsi c4fmmfv c147y3ls`}>
 <Image
-src={"https://cms.improveitmd.com/uploads/logo_enerbank_KYZ_9_Wocf_Ri88302llq_G7_Q_c02a952618.svg"}
+src={"/uploads/logo_enerbank_KYZ_9_Wocf_Ri88302llq_G7_Q_c02a952618.svg"}
 width={713}
 height={111}
 alt={"Enerbank USA financing logo."}
@@ -3920,7 +3933,7 @@ className={`w-link cvljm31 crv3s27 cacmu18 cn7k83s cyc4l41 c1d7h9xn c8a9tkm c1r2
 <div
 className={`w-element c139pwc6 cjhysm8 cjkauba c13g3obg`}>
 <Image
-src={"https://cms.improveitmd.com/uploads/video_thumbnail_img_jica_ILCYK_2_M1f_BB_2_Cw_Kg9_7b3e36d901.webp"}
+src={"/uploads/video_thumbnail_img_jica_ILCYK_2_M1f_BB_2_Cw_Kg9_7b3e36d901.webp"}
 width={960}
 height={1034}
 alt={""}
@@ -3964,9 +3977,11 @@ className={`w-element`}>
 <HtmlEmbed
 executeScriptOnCanvas={true}
 code={"<style>\n/* ── Pasadena Pins Section ── */\n.pins__section, .pins_section {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 2.5rem;\n  width: 100%;\n  box-sizing: border-box;\n}\n\n/* Left column – text */\n.pins__content, .pinscontent {\n  width: 45%;\n}\n\n.pins__content h2, .pinscontent h2 {\n  margin-top: 0;\n}\n\n/* Right column – map */\n.pins__map-wrapper, .pinsmap-wrapper {\n  width: 55%;\n}\n\n/* Responsive iframe container (keeps 4:3 ratio) */\n.pins__map-embed, .pins_map-embed {\n  position: relative;\n  width: 100%;\n  padding-bottom: 75%;\n  height: 0;\n  overflow: hidden;\n}\n\n.pins__map-embed iframe, .pins_map-embed iframe {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100% !important;\n  height: 100% !important;\n  border: 0;\n}\n\n/* ── Mobile only (phones, NOT iPad) ── */\n@media (max-width: 991px) {\n  .pins__section, .pins_section {\n    flex-direction: column;\n    text-align: center;\n  }\n\n  .pins__map-wrapper, .pinsmap-wrapper {\n    width: 100%;\n  }\n\n  .pins__content, .pinscontent {\n    width: 100%;\n  }\n}\n  </style>"}
+clientOnly={true}
 className={`w-html-embed`} />
 <HtmlEmbed
 code={"<style>\n  .pins_btm-section {\n    text-align: center;\n  }\n  .pins_list {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 0.5rem;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    padding: 0.5rem 0rem;\n  }\n  \n  .pins_item {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 0.5rem 1rem;\n    border: 0.08rem solid var(--white-smoke);\n    border-radius: 50vw;\n    gap: 0.5rem;\n  }\n  \n  .pins_item img {\n    width: 1rem;\n    aspect-ratio: 1;\n    object-fit: contain;\n    flex-shrink: 0;\n    flex-grow: 0;\n  }\n\n  .pins_tagline {\n    font-size: 1.25rem;\n    line-height: 1;\n    text-transform: uppercase;\n    font-weight: 600;\n    letter-spacing: 0.02em;\n    padding-bottom: 1rem;\n    padding-top: 2rem;\n  }\n\n  .pins_text {\n    font-size: 1.25rem;\n    padding-bottom: 2.5rem;\n    text-wrap: pretty;\n  }\n\n  @media screen and (max-width: 767px) {\n    .pins_text {\n      font-size: 1.125rem;\n      padding-bottom: 1.5rem;\n    }\n    .pins_tagline {\n      font-size: 1.125rem;\n    }\n    .pins_item {\n      font-size: 0.875rem;\n      padding: 0.5rem 0.75rem;\n    }\n    .pins_item img {\n      width: 0.875rem;\n    }\n  }\n</style>"}
+clientOnly={true}
 className={`w-html-embed`} />
 <HtmlEmbed
 code={LocalPagesData?.data?.data?.services?.[0]?.mapSection}
@@ -4104,6 +4119,7 @@ className={`w-element c1numhkq c1a06u5s c17crvds c1czy0yv`}>
 className={`w-element cw8j8n1 c1t4o1ie cu3gno0 cha1kui`}>
 <HtmlEmbed
 code={"<style>\n  .gaf-table-wrapper {\n  width: 100%;\n  overflow-x: auto;\n  -webkit-overflow-scrolling: touch;\n}\n\n.gaf-wrapper {\n  text-align: center;\n  padding: 3rem 1rem;\n  color: white;\n  background-color: #d10202;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  gap: 2rem;\n  font-size: 1.5rem;\n  font-weight: 600;\n}\n\n.gaf-logo {\n  border: 3px solid white;\n  padding: 1rem 0.5rem;\n  font-size: 2rem;\n}\n\n.gaf-table {\n  border-collapse: collapse;\n  width: 100%;\n}\n\n.gaf-table td {\n  border: 1px solid black;\n}\n\n.gaf-table thead {\n  background-color: lightgrey;\n  border: 1px solid lightgrey;\n}\n\n.gaf-table th {\n  padding: 0.5rem;\n}\n\n.gaf-table th img {\n  width: 7rem;\n  height: 7rem;\n  object-fit: contain;\n  display: inline;\n}\n\n.gaf-header {\n  font-size: 1.125rem;\n  line-height: 1.1;\n  font-weight: 700;\n  text-align: left;\n  padding: 1rem 0.5rem;\n}\n\n.header-subtext {\n  font-size: 0.75rem;\n  font-weight: 400;\n  margin-top: 0.25rem;\n}\n\n.gaf-subheader {\n  font-size: 0.9375rem;\n  font-weight: 500;\n  padding: 1rem 0.5rem;\n}\n\n.system-cell, .silver-cell, .golden-cell {\n  font-size: 0.875rem;\n  padding: 1rem 0.5rem;\n  font-weight: 400;\n  text-align: center;\n}\n\n.system-cell, .golden-cell {\n  background-color: #f5f7fa;\n}\n\n.system-cell {\n  color: #022170;\n}\n\n.silver-cell {\n  color: grey;\n}\n\n.golden-cell {\n  color: #998c28;\n}\n\n.table-data-subtext {\n  font-size: 0.75rem;\n  margin-top: 0.25rem;\n  color: #666;\n}\n\n.gaf-span {\n  font-size: 0.875rem;\n  padding: 1rem 0.5rem;\n  font-weight: 400;\n  text-align: center;\n}\n\n.gaf-header.is-download {\n  text-align: center;\n}\n\n.gaf-button {\n  font-size: 1rem;\n  text-decoration: underline;\n  color: inherit;\n}\n\n.gaf-points-wrapper {\n  font-size: 0.75rem;\n  line-height: 1.6;\n  padding: 1rem;\n  color: #666;\n}\n\n\n@media screen and (max-width: 767px) {\n  .gaf-wrapper {\n    padding: 1.5rem 1rem;\n    font-size: 1.25rem;\n    gap: 1rem;\n    flex-direction: column;\n  }\n  \n  .gaf-logo {\n    font-size: 1.5rem;\n    padding: 0.75rem 0.5rem;\n  }\n  \n  .gaf-table th img {\n    width: 3.5rem;\n    height: 3.5rem;\n  }\n  \n  .gaf-header {\n    font-size: 0.75rem;\n    padding: 0.5rem 0.25rem;\n  }\n  \n  .gaf-subheader {\n    font-size: 0.7rem;\n    padding: 0.5rem 0.25rem;\n  }\n  \n  .system-cell, .silver-cell, .golden-cell {\n    font-size: 0.7rem;\n    padding: 0.5rem 0.25rem;\n  }\n  \n  .table-data-subtext {\n    font-size: 0.6rem;\n  }\n  \n  .gaf-span {\n    font-size: 0.7rem;\n    padding: 0.5rem 0.25rem;\n  }\n  \n  .gaf-points-wrapper {\n    font-size: 0.65rem;\n    padding: 0.75rem;\n  }\n  \n  .gaf-table th {\n    padding: 0.25rem;\n  }\n  \n  .gaf-button {\n    font-size: 0.85rem;\n  }\n}\n</style>"}
+clientOnly={true}
 className={`w-html-embed`} />
 <div
 className={`w-element ${"gaf-wrapper"}`}>
@@ -4129,7 +4145,7 @@ className={`w-element`} />
 <th
 className={`w-element`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1771257650/GAF-Logo-Brand-Symbol-PNG_ztffy2.webp"}
+src={"/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1771257650_GAF_Logo_Brand_Symbol_PNG_ztffy2_7dd1310bae.webp"}
 alt={"system plus limited warranty"}
 loading={"lazy"}
 className={`w-image`} />
@@ -4137,7 +4153,7 @@ className={`w-image`} />
 <th
 className={`w-element`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1771257650/GAF-Logo-Distinctive-Design-PNG_laplle.webp"}
+src={"/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1771257650_GAF_Logo_Distinctive_Design_PNG_laplle_1bd4713523.webp"}
 alt={"silver pledge limited warranty"}
 loading={"lazy"}
 className={`w-image`} />
@@ -4145,7 +4161,7 @@ className={`w-image`} />
 <th
 className={`w-element`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1771257651/GAF-Logo-Design-Element-PNG_ushtwa.webp"}
+src={"/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1771257651_GAF_Logo_Design_Element_PNG_ushtwa_ad54e6bc53.webp"}
 alt={"golden pledge limited warranty"}
 loading={"lazy"}
 className={`w-image`} />
@@ -4682,6 +4698,7 @@ className={`w-element`}>
 className={`w-element`}>
 <HtmlEmbed
 code={LocalPagesData?.data?.data?.services?.[0]?.tableRichText}
+clientOnly={true}
 className={`w-html-embed c1numhkq c1a06u5s c1diokdk ct0qrmw c1p4xat6 c1tm0t1i c1ib9ypd cja62bv cyl4kdh c1jug6p4 caymbcs c1ggzxqz c56odag c1hqutl1 cjx1ika c1xpbze2 c1c9efyk c1hmuqnq c8qrtxl c1sl5awa cbddvez cp277i2 cgqh2e c1tb6avz czf048v cqm3vtw cnwe5rt`}>
 </HtmlEmbed>
 </div>
@@ -4716,6 +4733,7 @@ className={`w-element c1numhkq c15kiuw7 c3auquk c1a06u5s c1i2t266 c1w4abcz cj1xw
 className={`w-element`}>
 <HtmlEmbed
 code={LocalPagesData?.data?.data?.services?.[0]?.mainStoryRichText}
+clientOnly={true}
 className={`w-html-embed c1numhkq c1a06u5s c1tm0t1i c1ib9ypd cja62bv c3ltsqc c9je6mn c56odag c1hqutl1 cjx1ika c1xpbze2 c157qrpw c1stgdk8 c8qrtxl c1sl5awa cbddvez cp277i2 cgqh2e c1tb6avz cqm3vtw c9n0pka cnwe5rt cwt2ut7 crv95h5 c6l8mg0 cewzneq c1ysbvmi c5p8d3r c1hwtjer c13ws34x camd7ly c1pz8w7n cbln8bn c1lm8j52 c1oh1ckg c1tfgo8d c4hp6bu c1oy6yi c1ch996j`}>
 </HtmlEmbed>
 {(LocalPagesData?.data?.data?.services?.[0]?.galleryMultiImages ? true : false) &&
@@ -4758,6 +4776,7 @@ className={`w-element c1numhkq c15kiuw7 c3auquk c1a06u5s c1i2t266 c1w4abcz cj1xw
 className={`w-element`}>
 <HtmlEmbed
 code={LocalPagesData?.data?.data?.services?.[0]?.secondaryStoryRichText}
+clientOnly={true}
 className={`w-html-embed c1numhkq c1a06u5s c1t8xhs1 c1tm0t1i c1ib9ypd cja62bv c3ltsqc c9je6mn c56odag c1hqutl1 cjx1ika c1fru7rn c157qrpw c1stgdk8 c8qrtxl c1sl5awa cbddvez cp277i2 cgqh2e c1tb6avz cqm3vtw cnwe5rt c5p8d3r c1hwtjer c13ws34x camd7ly c1pz8w7n cbln8bn c1d6mxg3 c1lm8j52 cnhfllf chjdpw9 c1oh1ckg c1tfgo8d c4hp6bu c1oy6yi c1ch996j`}>
 </HtmlEmbed>
 </div>
@@ -4777,6 +4796,7 @@ className={`w-element c1numhkq c15kiuw7 c3auquk c1a06u5s c1i2t266 c1w4abcz cj1xw
 className={`w-element`}>
 <HtmlEmbed
 code={LocalPagesData?.data?.data?.services?.[0]?.supportingTextRichText}
+clientOnly={true}
 className={`w-html-embed c1numhkq c1a06u5s c1t8xhs1 c1tm0t1i c1ib9ypd cja62bv c3ltsqc c9je6mn c56odag c1hqutl1 cjx1ika c1fru7rn c157qrpw c1stgdk8 c8qrtxl c1sl5awa cbddvez cp277i2 cgqh2e c1tb6avz cqm3vtw cnwe5rt c5p8d3r c1hwtjer c13ws34x camd7ly c1pz8w7n cbln8bn c1oh1ckg c1tfgo8d c4hp6bu c1oy6yi c1ch996j`}>
 </HtmlEmbed>
 </div>
@@ -4799,21 +4819,25 @@ id={"weather"}
 className={`w-element cvfl1ur c2ifgan`}>
 <HtmlEmbed
 code={"<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css\">\n\n"}
+clientOnly={true}
 className={`w-html-embed`} />
 {(true
 ) &&
 <HtmlEmbed
 code={"<style>\n\n.swiper-wrapper.is-weather {\n  max-width: 200px;\n}\n  \n.swiper-slide.is--weather {\n  max-width: 10.875rem;\n  margin-right: 0.875rem;\n}\n  \n.weather_card {\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  padding: 1.125rem 1.125rem 1.25rem;\n  background-color: white;\n  border-radius: 0.25rem;\n  border: 1px solid var(--white-smoke);\n  line-height: 1;\n}\n\n.weather_card-top {\n  display: flex;\n  align-items: start;\n  justify-content: space-between;\n  gap: 1rem;\n}\n\n.text-weight-semibold {\n  font-weight: 400;\n}\n\n.text-style-allcaps {\n  text-transform: uppercase;\n}\n\n.weather_rain-wrap {\n  display: flex;\n  align-items: flex-start;\n  justify-content: start;\n}\n\n.weather_rain-logo {\n  width: 0.625rem;\n  height: 0.625rem;\n  object-fit: contain;\n}\n\n.text-weight-medium {\n  font-weight: 500;\n}\n\n.text-size-tiny {\n  font-size: 0.75rem;\n}\n\n.weather_card-image {\n  width: 6.125rem;\n  height: 6.125rem;\n  object-fit: cover;\n}\n\n.weather_card-bottom {\n  display: flex;\n  flex-direction: column;\n  gap: 0.75rem;\n}\n\n.weather_card-bottom-top {\n  display: flex;\n  align-items: flex-start;\n  justify-content: start;\n}\n\n.text-size-xxmedium {\n  font-weight: 500;\n  font-size: 1.375rem;\n  letter-spacing: -0.44px;\n}\n\n.text-color-light-grey-4 {\n  color: var(--light-grey-4);\n}\n\n.text-size-small {\n  font-size: 0.875rem;\n}\n\n.letter-spacing-4 {\n  letter-spacing: 0.04em;\n}\n\n  \n.weather_card {\n  position: relative;\n  transform-style: preserve-3d;\n}\n\n  \n.weather_widget_loader {\n    border-bottom-color: transparent;\n    animation: rotation 1s linear infinite;\n    }\n\n    @keyframes rotation {\n    0% {\n        transform: rotate(0deg);\n    }\n    100% {\n        transform: rotate(360deg);\n    }\n    } \n\n  \n html { font-size: 1rem; }\n  @media screen and (max-width:1458px) { html { font-size: calc(0.4146145610278373rem + 0.6423982869379015vw); } }\n  @media screen and (max-width:991px) { html { font-size: 1rem; } }\n  @media screen and (max-width:479px) { html { font-size: 1rem; } }\n\n  .text-size-tiny {\n  \tfont-size: 12px !important;\n  }\n  \n  .weather_info-wrap, .text-size-small {\n  \tfont-size: 14px !important;\n  }\n  \n  .weather_rain-logo {\n  \twidth: 10px;\n    height: 10px;\n  }\n</style>"}
+clientOnly={true}
 className={`w-html-embed`} />
 }
 {(!!LocalPagesData?.data?.data?.services?.[0]?.weatherWidget) &&
 <HtmlEmbed
 code={"<style>\n\n</style>"}
+clientOnly={true}
 className={`w-html-embed`} />
 }
 {(!!LocalPagesData?.data?.data?.services?.[0]?.weatherWidget) &&
 <HtmlEmbed
 code={"<style>\n\n.swiper-wrapper.is-weather {\n  max-width: 200px;\n}\n  \n.swiper-slide.is--weather {\n  max-width: 10.875rem;\n  margin-right: 0.875rem;\n}\n  \n.weather_card {\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  padding: 1.125rem 1.125rem 1.25rem;\n  background-color: white;\n  border-radius: 0.25rem;\n  border: 1px solid var(--white-smoke);\n  line-height: 1;\n}\n\n.weather_card-top {\n  display: flex;\n  align-items: start;\n  justify-content: space-between;\n  gap: 1rem;\n}\n\n.text-weight-semibold {\n  font-weight: 400;\n}\n\n.text-style-allcaps {\n  text-transform: uppercase;\n}\n\n.weather_rain-wrap {\n  display: flex;\n  align-items: flex-start;\n  justify-content: start;\n}\n\n.weather_rain-logo {\n  width: 0.625rem;\n  height: 0.625rem;\n  object-fit: contain;\n}\n\n.text-weight-medium {\n  font-weight: 500;\n}\n\n.text-size-tiny {\n  font-size: 0.75rem;\n}\n\n.weather_card-image {\n  width: 6.125rem;\n  height: 6.125rem;\n  object-fit: cover;\n}\n\n.weather_card-bottom {\n  display: flex;\n  flex-direction: column;\n  gap: 0.75rem;\n}\n\n.weather_card-bottom-top {\n  display: flex;\n  align-items: flex-start;\n  justify-content: start;\n}\n\n.text-size-xxmedium {\n  font-weight: 500;\n  font-size: 1.375rem;\n  letter-spacing: -0.44px;\n}\n\n.text-color-light-grey-4 {\n  color: var(--light-grey-4);\n}\n\n.text-size-small {\n  font-size: 0.875rem;\n}\n\n.letter-spacing-4 {\n  letter-spacing: 0.04em;\n}\n\n  \n.weather_card {\n  position: relative;\n  transform-style: preserve-3d;\n}\n\n  \n.weather_widget_loader {\n    border-bottom-color: transparent;\n    animation: rotation 1s linear infinite;\n    }\n\n    @keyframes rotation {\n    0% {\n        transform: rotate(0deg);\n    }\n    100% {\n        transform: rotate(360deg);\n    }\n    } \n\n  \n html { font-size: 1rem; }\n  @media screen and (max-width:1458px) { html { font-size: calc(0.4146145610278373rem + 0.6423982869379015vw); } }\n  @media screen and (max-width:991px) { html { font-size: 1rem; } }\n  @media screen and (max-width:479px) { html { font-size: 1rem; } }\n\n  .text-size-tiny {\n  \tfont-size: 12px !important;\n  }\n  \n  .weather_info-wrap, .text-size-small {\n  \tfont-size: 14px !important;\n  }\n  \n  .weather_rain-logo {\n  \twidth: 10px;\n    height: 10px;\n  }\n</style>"}
+clientOnly={true}
 className={`w-html-embed`} />
 }
 {(!!LocalPagesData?.data?.data?.services?.[0]?.weatherWidget) &&
@@ -4837,6 +4861,7 @@ custom-alert={"alert-wrap"}
 className={`w-element c1numhkq c1diokdk ct0qrmw c1ym9r0h c1bloln8 ckdtkkn c16j9hpi c15juhpz c1dv1s7b c1g3mhtg c1gbsy9l c1ixax5u c11qcg9b c1ab5oob cnikeys c10k3jam cn0qaoo cqg76kr ${"weather_info-wrap"}`}>
 <HtmlEmbed
 code={"<svg width=\"16\" height=\"14\" viewBox=\"0 0 16 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M0.666672 13.5L8.00001 0.833344L15.3333 13.5H0.666672ZM2.96667 12.1667H13.0333L8.00001 3.50001L2.96667 12.1667ZM8.00001 11.5C8.18889 11.5 8.34723 11.4361 8.47501 11.3083C8.60278 11.1806 8.66667 11.0222 8.66667 10.8333C8.66667 10.6445 8.60278 10.4861 8.47501 10.3583C8.34723 10.2306 8.18889 10.1667 8.00001 10.1667C7.81112 10.1667 7.65278 10.2306 7.52501 10.3583C7.39723 10.4861 7.33334 10.6445 7.33334 10.8333C7.33334 11.0222 7.39723 11.1806 7.52501 11.3083C7.65278 11.4361 7.81112 11.5 8.00001 11.5ZM7.33334 9.50001H8.66667V6.16668H7.33334V9.50001Z\" fill=\"#B70D0D\"/>\n</svg>"}
+clientOnly={true}
 className={`w-html-embed`} />
 <p
 custom-alert={"div-text"}
@@ -5057,13 +5082,10 @@ className={`w-element c1g3mhtg cn5qs21 c1b2b7rn chdomh6`}>
 </p>
 <div
 className={`w-element c1numhkq c1diokdk ct0qrmw c1ym9r0h`}>
-<Image
-src={"/assets/rating_stars_CVEFPd3QYWQUgqS-viwpM.svg"}
-width={110}
-height={20}
-alt={"5 stars logo."}
-loading={"lazy"}
-className={`w-image c139pwc6 c1hwvjgs c1mcsn9a c1lwlytk c1owcyig`} />
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 91 18\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M7.34786 1.48663C7.4319 1.1987 7.83978 1.1987 7.92382 1.48663L9.28716 6.15741C9.32452 6.28538 9.44183 6.37336 9.57515 6.37336L14.05 6.37336C14.3327 6.37336 14.4585 6.72879 14.2386 6.90662L10.565 9.87769C10.471 9.95377 10.4318 10.0789 10.4657 10.195L11.8555 14.9567C11.9379 15.2388 11.6074 15.4588 11.3789 15.274L7.82449 12.3993C7.71447 12.3103 7.55722 12.3103 7.44719 12.3993L3.89277 15.274C3.66423 15.4588 3.33378 15.2388 3.41614 14.9567L4.806 10.195C4.83989 10.0789 4.80073 9.95377 4.70667 9.87769L1.03307 6.90662C0.813201 6.72879 0.938942 6.37336 1.22173 6.37336L5.69653 6.37336C5.82984 6.37336 5.94716 6.28538 5.98452 6.15741L7.34786 1.48663Z\" fill=\"#FBBC04\"/>\n<path d=\"M24.2741 1.48663C24.3581 1.1987 24.766 1.1987 24.85 1.48663L26.2134 6.15741C26.2507 6.28538 26.368 6.37336 26.5014 6.37336L30.9762 6.37336C31.2589 6.37336 31.3847 6.72879 31.1648 6.90662L27.4912 9.87769C27.3972 9.95377 27.358 10.0789 27.3919 10.195L28.7818 14.9567C28.8641 15.2388 28.5337 15.4588 28.3051 15.274L24.7507 12.3993C24.6407 12.3103 24.4834 12.3103 24.3734 12.3993L20.819 15.274C20.5904 15.4588 20.26 15.2388 20.3423 14.9567L21.7322 10.195C21.7661 10.0789 21.7269 9.95377 21.6329 9.87769L17.9593 6.90662C17.7394 6.72879 17.8652 6.37336 18.1479 6.37336L22.6227 6.37336C22.7561 6.37336 22.8734 6.28538 22.9107 6.15741L24.2741 1.48663Z\" fill=\"#FBBC04\"/>\n<path d=\"M41.2003 1.48663C41.2843 1.1987 41.6922 1.1987 41.7762 1.48663L43.1396 6.15741C43.1769 6.28538 43.2943 6.37336 43.4276 6.37336L47.9024 6.37336C48.1852 6.37336 48.3109 6.72879 48.091 6.90662L44.4174 9.87769C44.3234 9.95377 44.2842 10.0789 44.3181 10.195L45.708 14.9567C45.7903 15.2388 45.4599 15.4588 45.2313 15.274L41.6769 12.3993C41.5669 12.3103 41.4096 12.3103 41.2996 12.3993L37.7452 15.274C37.5167 15.4588 37.1862 15.2388 37.2686 14.9567L38.6584 10.195C38.6923 10.0789 38.6531 9.95377 38.5591 9.87769L34.8855 6.90662C34.6656 6.72879 34.7914 6.37336 35.0741 6.37336L39.549 6.37336C39.6823 6.37336 39.7996 6.28538 39.8369 6.15741L41.2003 1.48663Z\" fill=\"#FBBC04\"/>\n<path d=\"M58.1265 1.48663C58.2106 1.1987 58.6185 1.1987 58.7025 1.48663L60.0658 6.15741C60.1032 6.28538 60.2205 6.37336 60.3538 6.37336L64.8286 6.37336C65.1114 6.37336 65.2372 6.72879 65.0173 6.90662L61.3437 9.87769C61.2496 9.95377 61.2105 10.0789 61.2444 10.195L62.6342 14.9567C62.7166 15.2388 62.3861 15.4588 62.1576 15.274L58.6032 12.3993C58.4932 12.3103 58.3359 12.3103 58.2259 12.3993L54.6715 15.274C54.4429 15.4588 54.1125 15.2388 54.1948 14.9567L55.5847 10.195C55.6186 10.0789 55.5794 9.95377 55.4854 9.87769L51.8118 6.90662C51.5919 6.72879 51.7176 6.37336 52.0004 6.37336L56.4752 6.37336C56.6085 6.37336 56.7259 6.28538 56.7632 6.15741L58.1265 1.48663Z\" fill=\"#FBBC04\"/>\n<path d=\"M75.0528 1.48663C75.1368 1.1987 75.5447 1.1987 75.6287 1.48663L76.9921 6.15741C77.0294 6.28538 77.1467 6.37336 77.28 6.37336L81.7548 6.37336C82.0376 6.37336 82.1634 6.72879 81.9435 6.90662L78.2699 9.87769C78.1758 9.95377 78.1367 10.0789 78.1706 10.195L79.5604 14.9567C79.6428 15.2388 79.3123 15.4588 79.0838 15.274L75.5294 12.3993C75.4194 12.3103 75.2621 12.3103 75.1521 12.3993L71.5977 15.274C71.3691 15.4588 71.0387 15.2388 71.121 14.9567L72.5109 10.195C72.5448 10.0789 72.5056 9.95377 72.4116 9.87769L68.738 6.90662C68.5181 6.72879 68.6438 6.37336 68.9266 6.37336L73.4014 6.37336C73.5347 6.37336 73.6521 6.28538 73.6894 6.15741L75.0528 1.48663Z\" fill=\"#FBBC04\"/>\n</svg>"}
+clientOnly={true}
+className={`w-html-embed c1numhkq c1diokdk ch3nxmx ctittuf c1ovmx1o`} />
 <p
 className={`w-element`}>
 {LocalPagesData?.data?.data?.services?.[0]?.nameOfReviewer}
@@ -5141,7 +5163,7 @@ className={`w-element c18bj3o3 c1lq6pq8 c1epvuph`}>
 <div
 className={`w-element cw0d079 c1mpqvj6 c18kyhsr c81ebuq c120nl7e cd04v2w cn87dm8 c1uhhf7h ckain9p c1c6zaej cmbwngm`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1767999431/image_1765439388559-TjIQt4VU_tcapds.png"}
+src={"/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1767999431_image_1765439388559_Tj_I_Qt4_VU_tcapds_b177766c8e.png"}
 loading={"eager"}
 fetchPriority={"high"}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a cjkauba`} />
@@ -5159,6 +5181,7 @@ className={`w-element c1gbsy9l c18klwyf c82qwqc c1lwn44j c1fjww6l c61em0b cy75si
 className={`w-element c1numhkq c1diokdk ct0qrmw c1ym9r0h c1bloln8 c1s18yzb cxhk38t c18mkjfw c1ivlk8p`}>
 <HtmlEmbed
 code={"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-phone w-2.5 h-2.5 md:w-3 md:h-3\"><path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\"></path></svg>"}
+clientOnly={true}
 className={`w-html-embed c1numhkq cwhac3e ca5hkfn c1diokdk ch3nxmx`} />
 <p
 className={`w-element`}>
@@ -5173,6 +5196,7 @@ className={`w-element c1jjyqa4 c8fjv4x cmnqq0u c11xvf6k cvvhtep c139pwc6 c196971
 className={`w-element cnbug7k c1p7o4bx c1azofqw c120nl7e cd04v2w c1numhkq c1diokdk ch3nxmx cn87dm8 c1uhhf7h c82qwqc c1d7h9xn c1c6zaej cmbwngm c1nw4yri cnberr9 ${"close-btn"}`}>
 <HtmlEmbed
 code={"<svg viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g stroke-width=\"0\"></g><g stroke-linecap=\"round\" stroke-linejoin=\"round\"></g><g> <path fill=\"currentColor\" clip-rule=\"evenodd\" d=\"M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z\"></path> </g></svg>"}
+clientOnly={true}
 className={`w-html-embed`} />
 </div>
 <div
@@ -5184,7 +5208,7 @@ className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c1p4xat6 c1rjplas`}>
 <div
 className={`w-element ce8qyo9 cm2j0bx c1epvuph cqq3lvy cn87dm8 c1uhhf7h cw0d079 c1mpqvj6 c18kyhsr c81ebuq`}>
 <Image
-src={"https://res.cloudinary.com/ddeeo6usc/image/upload/v1767999431/image_1765439388559-TjIQt4VU_tcapds.png"}
+src={"/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1767999431_image_1765439388559_Tj_I_Qt4_VU_tcapds_b177766c8e.png"}
 loading={"lazy"}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a cjkauba cnbug7k c8fjv4x cmnqq0u c11xvf6k cvvhtep c4au5p3 c1h4wkid c6pwqi8 c185qbt7`} />
 </div>
@@ -5228,6 +5252,7 @@ set$formState(formState)
 }}
 action={"action"}
 encType={"application/x-www-form-urlencoded"}
+data-submit={"api"}
 className={`w-webhook-form c139pwc6`}>
 {(formState === 'initial' || formState === 'error') &&
 <div
@@ -5741,15 +5766,16 @@ className={`w-element ch7xx7z c82qwqc`}>
 <Fragment_1>
 <HtmlEmbed
 code={"<script>(function(factory){if(typeof define===\"function\"&&define.amd){define(factory)}else if(typeof module!==\"undefined\"&&module.exports){module.exports=factory()}else{window.enterView=factory.call(this)}})((()=>{const lib=({selector:selector,enter:enter=(()=>{}),exit:exit=(()=>{}),progress:progress=(()=>{}),offset:offset=0,once:once=false})=>{let raf=null;let ticking=false;let elements=[];let height=0;function setupRaf(){raf=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.msRequestAnimationFrame||function(callback){return setTimeout(callback,1e3/60)}}function getOffsetHeight(){if(offset&&typeof offset===\"number\"){const fraction=Math.min(Math.max(0,offset),1);return height-fraction*height}return height}function updateHeight(){const cH=document.documentElement.clientHeight;const wH=window.innerHeight||0;height=Math.max(cH,wH)}function updateScroll(){ticking=false;const targetFromTop=getOffsetHeight();elements=elements.filter((el=>{const{top:top,bottom:bottom,height:height}=el.getBoundingClientRect();const entered=top<targetFromTop;const exited=bottom<targetFromTop;if(entered&&!el.__ev_entered){enter(el);el.__ev_progress=0;progress(el,el.__ev_progress);if(once)return false}else if(!entered&&el.__ev_entered){el.__ev_progress=0;progress(el,el.__ev_progress);exit(el)}if(entered&&!exited){const delta=(targetFromTop-top)/height;el.__ev_progress=Math.min(1,Math.max(0,delta));progress(el,el.__ev_progress)}if(entered&&exited&&el.__ev_progress!==1){el.__ev_progress=1;progress(el,el.__ev_progress)}el.__ev_entered=entered;return true}));if(!elements.length){window.removeEventListener(\"scroll\",onScroll,true);window.removeEventListener(\"resize\",onResize,true);window.removeEventListener(\"load\",onLoad,true)}}function onScroll(){if(!ticking){ticking=true;raf(updateScroll)}}function onResize(){updateHeight();updateScroll()}function onLoad(){updateHeight();updateScroll()}function selectionToArray(selection){const len=selection.length;const result=[];for(let i=0;i<len;i+=1){result.push(selection[i])}return result}function selectAll(selector,parent=document){if(typeof selector===\"string\"){return selectionToArray(parent.querySelectorAll(selector))}else if(selector instanceof NodeList){return selectionToArray(selector)}else if(selector instanceof Array){return selector}}function setupElements(){elements=selectAll(selector)}function setupEvents(){window.addEventListener(\"resize\",onResize,true);window.addEventListener(\"scroll\",onScroll,true);window.addEventListener(\"load\",onLoad,true);onResize()}function init(){if(!selector){console.error(\"must pass selector\");return false}setupElements();if(!elements||!elements.length){console.error(\"no els found\");return false}setupRaf();setupEvents();updateScroll()}init()};return lib}));</script>"}
-executeScriptOnCanvas={true}
+executeScriptOnCanvas={false}
 clientOnly={true}
 className={`w-html-embed`} />
 <HtmlEmbed
 code={"<style>\n:root {\n  --ani-duration: var(--duration-default, .2s);\n  --ani-delay: 0s;\n  --ani-slide-offset: 20%;\n  --ani-zoom-in-scale: 1;\n  --ani-zoom-out-scale: .85;\n  --ani-flip-rotate: 30deg;\n  --ani-easing: var(--easing-default, ease);\n  --ani-fill-mode: forwards;\n}\n[data-ani]:not([data-ani-children]),[data-ani-children]:not([data-ani-progress])>*{animation-duration:var(--ani-duration);animation-delay:var(--ani-delay);animation-timing-function:var(--ani-easing);animation-fill-mode:var(--ani-fill-mode);opacity:0}[data-ani-progress]:not([data-ani-children]),[data-ani-children]:not([data-ani])>*{transition-property:opacity,transform;transition-duration:var(--ani-duration);transition-timing-function:var(--ani-easing);opacity:0}\n@keyframes fadeIn{from{opacity:0}\nto{opacity:1}}\n@keyframes fadeOut{from{opacity:1}\nto{opacity:0}}[data-ani-children][data-ani='fade']>.in,[data-ani='fade']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:fadeIn}[data-ani-children][data-ani='fade']>.out,[data-ani='fade']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:fadeOut}\n@keyframes slideIn{from{opacity:0;translate:var(--ani-slide-transform)}\nto{opacity:1;translate:none}}\n@keyframes slideOut{from{opacity:1;translate:none}\nto{opacity:0;translate:var(--ani-slide-transform)}}[data-ani-children][data-ani|='slide']>.in,[data-ani|='slide']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:slideIn}[data-ani-children][data-ani|='slide']>.out,[data-ani|='slide']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:slideOut}[data-ani='slide-up']{--ani-slide-transform:0 var(--ani-slide-offset)}[data-ani='slide-down']{--ani-slide-transform:0 calc(-1*var(--ani-slide-offset))}[data-ani='slide-left']{--ani-slide-transform:var(--ani-slide-offset)}[data-ani='slide-right']{--ani-slide-transform:calc(-1*var(--ani-slide-offset))}\n@keyframes zoomIn{from{opacity:0;scale:var(--ani-zoom-out-scale)}\nto{opacity:1;scale:1}}\n@keyframes zoomOut{from{opacity:1;scale:1}\nto{opacity:0;scale:var(--ani-zoom-in-scale)}}[data-ani-children][data-ani='zoom']>.in,[data-ani|='zoom']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:zoomIn}[data-ani-children][data-ani='zoom']>.out,[data-ani|='zoom']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:zoomOut}[data-ani-children][data-ani-progress='zoom']>*,[data-ani-progress='zoom']:not([data-ani-children]){transform:scale(var(--ani-zoom-out-scale))}\n@keyframes flipInY{from{rotate:y var(--ani-flip-rotate);perspective:2000px;opacity:0}\nto{rotate:y 0;opacity:1}}\n@keyframes flipOutY{from{rotate:y 0;opacity:1}\nto{perspective:2000px;rotate:y var(--ani-flip-rotate);opacity:0}}\n@keyframes flipInX{from{perspective:2000px;rotate:x var(--ani-flip-rotate);opacity:0}\nto{rotate:x 0;opacity:1}}\n@keyframes flipOutX{from{rotate:x 0;opacity:1}\nto{perspective:2000px;rotate:x var(--ani-flip-rotate);opacity:0}}[data-ani-children][data-ani='flip-y']>.in,[data-ani='flip-y']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:flipInY}[data-ani-children][data-ani='flip-x']>.in,[data-ani='flip-x']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:flipInX}[data-ani-children][data-ani='flip-y']>.out,[data-ani='flip-y']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:flipOutY}[data-ani-children][data-ani='flip-x']>.out,[data-ani='flip-x']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:flipOutX}\n@keyframes expandDown{from{height:0}\nto{height:var(--newHeight)}}\n@keyframes expandUp{from{height:var(--newHeight)}\nto{height:0}}[data-ani='expand'],[data-ani='expand'][data-state='open'],[data-ani='expand'].in{--newHeight:var(--custom-height,var(--radix-accordion-content-height,var(--radix-collapsible-content-height,100%)));overflow:hidden;opacity:1}[data-ani-children][data-ani='expand']>.in,[data-ani='expand']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation:expandDown var(--ani-duration)var(--ani-easing)}[data-ani-children][data-ani='expand']>.out,[data-ani='expand']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation:expandUp var(--ani-duration)var(--ani-easing)}\n@media(prefers-reduced-motion:reduce){[data-ani]:not([data-ani-children]),[data-ani-progress]:not([data-ani-children]),[data-ani-children]>*{opacity:1;transform:none;animation:none;rotate:none;scale:none;translate:none}}\n</style>"}
+clientOnly={true}
 className={`w-html-embed`} />
 <HtmlEmbed
 code={"<script type=\"module\">\nconst config = {\n\tintersectionOffset: 0.2,\n\tintersectionOnce: true,\n\tprogressOffset: 0,\n\tprogressOnce: false,\n};\nfunction e({trigger:e,selector:r,offset:n,once:s}){const a=\"progress\"===e;return enterView({selector:r,enter:e=>!a&&t(e,\"in\",\"out\"),exit:e=>!a&&t(e,\"out\",\"in\"),progress:(e,t)=>a&&function(e,t){e.style.opacity=t,e.style.transform=function(e,t){const r=e.parentElement,n=r&&r.hasAttribute(\"data-ani-progress\")?r.getAttribute(\"data-ani-progress\"):e.getAttribute(\"data-ani-progress\"),s=parseFloat(getComputedStyle(e).getPropertyValue(\"--ani-slide-offset\"))||0,a=parseFloat(getComputedStyle(e).getPropertyValue(\"--ani-flip-rotate\"))||0,o=1-(1-t)*(1-parseFloat(getComputedStyle(e).getPropertyValue(\"--ani-zoom-out-scale\"))||1);switch(n){case\"slide-up\":return`translateY(${(1-t)*s}px)`;case\"slide-down\":return`translateY(-${(1-t)*s}px)`;case\"slide-left\":return`translateX(${(1-t)*s}px)`;case\"slide-right\":return`translateX(-${(1-t)*s}px)`;case\"flip-x\":return`rotateX(${(1-t)*a}deg)`;case\"flip-y\":return`rotateY(${(1-t)*a}deg)`;case\"zoom\":return`scale(${o})`;default:return\"none\"}}(e,t)}(e,t),offset:n,once:s})}function t(e,t,r){e.classList.add(t),e.classList.remove(r)}function r(e,t){const r=`[${e}]${t?'[data-ani-children=\"true\"] > *':':not([data-ani-children=\"true\"])'}`;return Array.from(document.querySelectorAll(r))}const n=[...r(\"data-ani\"),...r(\"data-ani\",!0)],s=[...r(\"data-ani-progress\"),...r(\"data-ani-progress\",!0)];n.length&&e({trigger:\"intersection\",selector:n,offset:config.intersectionOffset,once:config.intersectionOnce}),s.length&&e({trigger:\"progress\",selector:s,offset:config.progressOffset,once:config.progressOnce});\n</script>"}
-executeScriptOnCanvas={true}
+executeScriptOnCanvas={false}
 clientOnly={true}
 className={`w-html-embed`} />
 </Fragment_1>

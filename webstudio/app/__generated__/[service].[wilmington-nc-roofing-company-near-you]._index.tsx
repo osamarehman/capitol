@@ -11,7 +11,7 @@ import { NavigationMenu as NavigationMenu, NavigationMenuList as NavigationMenuL
 
       export const projectId = "5b897bfc-8b80-4b2a-bfed-79ac7ec37365";
 
-      export const lastPublished = "2026-03-07T22:43:38.864Z";
+      export const lastPublished = "2026-03-08T02:54:27.839Z";
 
       export const siteName = "Capitol Improvements";
 
@@ -55,7 +55,7 @@ className={`w-html-embed`} />
 <Slot>
 <Fragment_1>
 <HtmlEmbed
-code={"<style>  \n/* RESET */\n* {\n  margin: 0;\n  scroll-behavior: smooth;\n}\n\n/* Prevent events on closed sheet */\n.viewport-container {\n  pointer-events: none !important;\n}\n.viewport-container .menu-viewport[data-state=\"open\"] {\n  pointer-events: auto !important;\n}\nbody.menu-open {\n  overflow: hidden;\n}\n  \n/* ACCORDION ANIMATION  */\n.AccordionContent {\n  overflow: hidden;\n}\n.AccordionContent[data-state=\"open\"] {\n  animation: accordionSlideDown 300ms ease-out;\n}\n.AccordionContent[data-state=\"closed\"] {\n  animation: accordionSlideUp 300ms ease-out;\n}\n\n@keyframes accordionSlideDown {\n  from { height: 0; }\n  to { height: var(--radix-accordion-content-height); }\n}\n\n@keyframes accordionSlideUp {\n  from { height: var(--radix-accordion-content-height); }\n  to { height: 0; }\n}\n\n/* Accordion Header active state color change */\n.AccordionTrigger {\n  transition: color 250ms ease; /* optional smooth fade */\n}\n\n.AccordionTrigger.Firebrick[data-state=\"open\"] {\n  color: var(--firebrick);\n}\n\n/* Accordion Cross Icon rotate  */\n.CrossIconLine {\n  transform-origin: center;\n  transform: rotate(0deg);\n  transition: transform 250ms ease;\n}\n\n.AccordionCross[data-state=\"open\"] .CrossIconLine {\n  transform: rotate(90deg);\n}\n  \n/* READ MORE TRANSITION   */\n.read-more-content {\n  opacity: 0;\n  max-height: 0;\n  overflow: hidden;\n  transition: opacity 0.3s ease, max-height 0.3s ease;\n}\n\n.read-more-content.is-visible {\n  opacity: 1;\n  max-height: 500px;\n}\n\n  /* Responsive Map CSS  */\n.responsive-map {\n  position: relative;\n  width: 100%;\n  height: 0;\n  padding-bottom: 75%; /* 4:3 aspect ratio (480/640 = 0.75) */\n  overflow: hidden;\n}\n\n.responsive-map iframe {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100% !important;\n  height: 100% !important;\n  border: 0;\n}\n/* For mobile portrait (smaller screens) */\n@media screen and (max-width: 768px) {\n  .responsive-map {\n    padding-bottom: 100%; /* Make it more square on mobile */\n    margin: 10px 0; /* Add some vertical spacing */\n  }\n}\n\n/* For very small screens */\n@media screen and (max-width: 480px) {\n  .responsive-map {\n    padding-bottom: 120%; /* Taller aspect ratio for very small screens */\n  }\n}\n  \n/* Asphalt Roofing product top row padding removal  */\n@media only screen and (max-width: 1279px) {\n\t.product-top-row {\n\t\tpadding-right: 0rem;\n\t}\n}\n\n  /* Commercial Roofing Paragraph & Grid reveal  */\n.commercial-grid {\n  display: none;\n}\n  \n.commercial-paragraph {\n  display: none;\n}\n\n.commercial-wrapper.is-expanded .commercial-paragraph {\n  display: block;\n}\n  \n.commercial-wrapper.is-expanded .commercial-grid {\n  display: grid;\n} \n  \n.commercial-wrapper.is-expanded .commercial-read-more {\n  display: none;\n}\n  \n@media (max-width: 479px) {\n  .commercial-grid {\n    display: none !important;\n  }\n}\n\n/* class for display:none  */\n.is--hidden {\n  display: none;\n}\n.is--visible {\n  display: block;\n}\n\na {\n  color: var(--foreground-secondary);\n  text-decoration: none;\n}\n\n.dropdown-list.is-2,\n.dropdown-list.is-3 {\n  height: 0;\n  overflow: hidden;\n  transition: height 0.3s ease;\n}\n\n.nav {\n  contain: layout style;\n  will-change: transform;\n  backface-visibility: hidden;\n}\n  \n/* Menu open state */\nbody.is-nav-open {\n  overflow: hidden;\n}\n\nbody.is-nav-open .nav-menu {\n  display: block !important;\n}\n\nbody.is-nav-open .hamburger-line {\n  display: none !important;\n}\n\nbody.is-nav-open .nav-icon {\n  display: block !important;\n}\n\n</style>\n\n"}
+code={"<style>  \n/* RESET */\n* {\n  margin: 0;\n  scroll-behavior: smooth;\n}\n\n/* Prevent events on closed sheet */\n.viewport-container {\n  pointer-events: none !important;\n}\n.viewport-container .menu-viewport[data-state=\"open\"] {\n  pointer-events: auto !important;\n}\nbody.menu-open {\n  overflow: hidden;\n}\n  \n/* ACCORDION ANIMATION  */\n.AccordionContent {\n  overflow: hidden;\n}\n.AccordionContent[data-state=\"open\"] {\n  animation: accordionSlideDown 300ms ease-out;\n}\n.AccordionContent[data-state=\"closed\"] {\n  animation: accordionSlideUp 300ms ease-out;\n}\n\n@keyframes accordionSlideDown {\n  from { height: 0; }\n  to { height: var(--radix-accordion-content-height); }\n}\n\n@keyframes accordionSlideUp {\n  from { height: var(--radix-accordion-content-height); }\n  to { height: 0; }\n}\n\n/* Accordion Header active state color change */\n.AccordionTrigger {\n  transition: color 250ms ease; /* optional smooth fade */\n}\n\n.AccordionTrigger.Firebrick[data-state=\"open\"] {\n  color: var(--firebrick);\n}\n\n/* Accordion Cross Icon rotate  */\n.CrossIconLine {\n  transform-origin: center;\n  transform: rotate(0deg);\n  transition: transform 250ms ease;\n}\n\n.AccordionCross[data-state=\"open\"] .CrossIconLine {\n  transform: rotate(90deg);\n}\n  \n/* READ MORE TRANSITION   */\n.read-more-content {\n  opacity: 0;\n  max-height: 0;\n  overflow: hidden;\n  transition: opacity 0.3s ease, max-height 0.3s ease;\n}\n\n.read-more-content.is-visible {\n  opacity: 1;\n  max-height: 500px;\n}\n\n  /* Responsive Map CSS  */\n.responsive-map {\n  position: relative;\n  width: 100%;\n  height: 0;\n  padding-bottom: 75%; /* 4:3 aspect ratio (480/640 = 0.75) */\n  overflow: hidden;\n}\n\n.responsive-map iframe {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100% !important;\n  height: 100% !important;\n  border: 0;\n}\n/* For mobile portrait (smaller screens) */\n@media screen and (max-width: 768px) {\n  .responsive-map {\n    padding-bottom: 100%; /* Make it more square on mobile */\n    margin: 10px 0; /* Add some vertical spacing */\n  }\n}\n\n/* For very small screens */\n@media screen and (max-width: 480px) {\n  .responsive-map {\n    padding-bottom: 120%; /* Taller aspect ratio for very small screens */\n  }\n}\n  \n/* Asphalt Roofing product top row padding removal  */\n@media only screen and (max-width: 1279px) {\n\t.product-top-row {\n\t\tpadding-right: 0rem;\n\t}\n}\n\n  /* Commercial Roofing Paragraph & Grid reveal  */\n.commercial-grid {\n  display: none;\n}\n  \n.commercial-paragraph {\n  display: none;\n}\n\n.commercial-wrapper.is-expanded .commercial-paragraph {\n  display: block;\n}\n  \n.commercial-wrapper.is-expanded .commercial-grid {\n  display: grid;\n} \n  \n.commercial-wrapper.is-expanded .commercial-read-more {\n  display: none;\n}\n  \n@media (max-width: 479px) {\n  .commercial-grid {\n    display: none !important;\n  }\n}\n\n/* class for display:none  */\n.is--hidden {\n  display: none;\n}\n.is--visible {\n  display: block;\n}\n\na {\n  color: var(--foreground-secondary);\n  text-decoration: none;\n}\n\n.dropdown-list.is-2,\n.dropdown-list.is-3 {\n  height: 0;\n  overflow: hidden;\n  transition: height 0.3s ease;\n}\n\n.nav {\n  contain: layout style;\n  will-change: transform;\n  backface-visibility: hidden;\n}\n  \n/* Menu open state */\nbody.is-nav-open {\n  overflow: hidden;\n}\n\nbody.is-nav-open .nav-menu {\n  display: block !important;\n}\n\nbody.is-nav-open .hamburger-line {\n  display: none !important;\n}\n\nbody.is-nav-open .nav-icon {\n  display: block !important;\n}\n</style>"}
 clientOnly={true}
 className={`w-html-embed`} />
 <nav
@@ -124,13 +124,13 @@ className={`w-element c1k5oipc`}>
 className={`w-element c1osufuw c3sv84c c84c42r`}>
 <Image
 alt={"Logo Icon"}
-src={"/assets/capitol_improvements_logo_mui4YFXSPvMEj33G1EyWT.svg"}
+src={"/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
 width={18}
 height={12}
 loading={"eager"}
 className={`w-image cqsaj3r c11y8oun ctpsi40 c12l5srj`} />
 <Image
-src={"/assets/capitol_improvements_logo_text_IlLfLABIT-imV1nR5DxY3.svg"}
+src={"/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
 width={161}
 height={8}
 alt={"Logo Text"}
@@ -407,7 +407,7 @@ className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"https://cms.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={""}
@@ -601,7 +601,7 @@ className={`w-element c1numhkq c53aqfr ct0qrmw cfcahn6 c1hx6vht c1epvuph c6hmdm4
 href={"tel:3017696909"}
 className={`w-link c1lvj0n c19ftcvs c1vqewwo cacmu18 c9te4zd c1u81kxm c1v2l8nt c53aqfr ct0qrmw c1lzjd2w cn7k83s c1d8rs8t cwr9gsc c1ehmfnq c1owcyig c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da cv3rgxc cahz6x0 cmchden c1amh7xl cimel00 c1b6be7c c1842oze c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 ckkl2uw cchbu1a c1lgs1h6 c1osufuw`}>
 <Image
-src={"https://cms.improveitmd.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
+src={"/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
 width={16}
 height={16}
 alt={"Phone icon"}
@@ -633,7 +633,7 @@ className={`w-element c1numhkq cqilze0 c1diokdk c3auquk c1r7jime c1hx6vht cfefby
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"https://cms.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={"Logo"}
@@ -951,7 +951,7 @@ className={`w-link cekr8vl cyzpk7y cm1pdbc cacmu18 crv3s27 c1u81kxm c1v2l8nt c1d
 </div>
 </nav>
 <HtmlEmbed
-code={"<!-- 1. Menu viewport observer -->\n<script type=\"module\">\nconst observer = new MutationObserver(() => {\n  const isMenuOpen = !!document.querySelector('.menu-viewport');\n  document.body.classList.toggle('menu-open', isMenuOpen);\n});\n\nobserver.observe(document.body, {\n  childList: true,\n  subtree: true\n});\n</script>\n\n<!-- 2. Sticky nav -->\n<script type=\"module\">\ntry {\n  if (window.innerWidth >= 991) {\n    const standardNav = document.querySelector(\".nav.is--standard\");\n    const stickyNav = document.querySelector(\".nav.is--sticky\");\n\n    if (!standardNav || !stickyNav) throw new Error(\"Standard or Sticky navigation elements not found.\");\n\n    stickyNav.style.position = 'fixed';\n    stickyNav.style.top = '0';\n    stickyNav.style.left = '0';\n    stickyNav.style.right = '0';\n    stickyNav.style.willChange = 'transform';\n    stickyNav.style.transition = 'transform 0.3s ease-out';\n    stickyNav.style.transform = 'translateY(-101%)';\n    stickyNav.style.WebkitTransform = 'translateY(-101%)';\n\n    const switchPoint = 150;\n    let lastScrollPosition = window.scrollY;\n    let ticking = false;\n\n    function applyNavState() {\n      const currentScrollPosition = window.scrollY;\n\n      if (Math.abs(currentScrollPosition - lastScrollPosition) > 5 || currentScrollPosition === 0) {\n        if (currentScrollPosition > switchPoint) {\n          standardNav.style.visibility = 'hidden';\n          stickyNav.style.pointerEvents = 'auto';\n          requestAnimationFrame(() => {\n            stickyNav.style.transform = 'translateY(0%)';\n            stickyNav.style.WebkitTransform = 'translateY(0%)';\n          });\n        } else {\n          standardNav.style.visibility = 'visible';\n          stickyNav.style.pointerEvents = 'none';\n          requestAnimationFrame(() => {\n            stickyNav.style.transform = 'translateY(-101%)';\n            stickyNav.style.WebkitTransform = 'translateY(-101%)';\n          });\n        }\n        lastScrollPosition = currentScrollPosition;\n      }\n      ticking = false;\n    }\n\n    function setNavState() {\n      applyNavState();\n    }\n\n    window.addEventListener(\"scroll\", () => {\n      if (!ticking) {\n        requestAnimationFrame(applyNavState);\n        ticking = true;\n      }\n    }, { passive: true });\n\n    document.body.addEventListener(\"click\", () => {\n      requestAnimationFrame(setNavState);\n    });\n\n    let resizeTimeout;\n    window.addEventListener('resize', () => {\n      clearTimeout(resizeTimeout);\n      resizeTimeout = setTimeout(() => {\n        if (window.innerWidth < 991) {\n          standardNav.style.visibility = 'visible';\n          stickyNav.style.transform = 'translateY(-101%)';\n          stickyNav.style.WebkitTransform = 'translateY(-101%)';\n        }\n      }, 250);\n    }, { passive: true });\n  }\n} catch (error) {\n  console.error(error.message);\n}\n</script>\n\n<!-- 3. Dropdown/submenu -->\n<script type=\"module\">\ndocument.body.addEventListener('click', (e) => {\n  if (e.target.matches('.plus-link.is-2')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList2 = document.querySelector('.dropdown-list.is-2');\n    if (!mainList || !subList2) return;\n    mainList.style.height = '0';\n    mainList.style.overflow = 'hidden';\n    subList2.style.height = subList2.scrollHeight + 'px';\n    subList2.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.plus-link.is-3')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList3 = document.querySelector('.dropdown-list.is-3');\n    if (!mainList || !subList3) return;\n    mainList.style.height = '0';\n    mainList.style.overflow = 'hidden';\n    subList3.style.height = subList3.scrollHeight + 'px';\n    subList3.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.back-link.is-1')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList2 = document.querySelector('.dropdown-list.is-2');\n    if (!mainList || !subList2) return;\n    subList2.style.height = '0';\n    subList2.style.overflow = 'hidden';\n    mainList.style.height = mainList.scrollHeight + 'px';\n    mainList.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.back-link.is-2')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList3 = document.querySelector('.dropdown-list.is-3');\n    if (!mainList || !subList3) return;\n    subList3.style.height = '0';\n    subList3.style.overflow = 'hidden';\n    mainList.style.height = mainList.scrollHeight + 'px';\n    mainList.style.overflow = 'visible';\n  }\n});\n</script>\n\n<!-- 4. Hamburger + custom menu -->\n<script type=\"module\">\ndocument.addEventListener('click', (e) => {\n  const backIcon = e.target.closest('.nav-icon');\n  const hamburger = e.target.closest('.hamburger');\n\n  if (backIcon && document.body.classList.contains('is-nav-open')) {\n    document.body.classList.remove('is-nav-open');\n    return;\n  }\n\n  if (hamburger && !document.body.classList.contains('is-nav-open')) {\n    document.body.classList.add('is-nav-open');\n    return;\n  }\n});\n  document.addEventListener('mouseover', (e) => {\n  if (e.target.closest('.bg-overlay')) {\n    document.body.classList.remove('is-nav-open');\n  }\n});\n</script>"}
+code={"<script type=\"module\">\nconst observer = new MutationObserver(() => {\n  const isMenuOpen = !!document.querySelector('.menu-viewport');\n  document.body.classList.toggle('menu-open', isMenuOpen);\n});\n\nobserver.observe(document.body, {\n  childList: true,\n  subtree: true\n});\n</script>\n<script type=\"module\">\ntry {\n  if (window.innerWidth >= 991) {\n    const standardNav = document.querySelector(\".nav.is--standard\");\n    const stickyNav = document.querySelector(\".nav.is--sticky\");\n\n    if (!standardNav || !stickyNav) throw new Error(\"Standard or Sticky navigation elements not found.\");\n\n    stickyNav.style.position = 'fixed';\n    stickyNav.style.top = '0';\n    stickyNav.style.left = '0';\n    stickyNav.style.right = '0';\n    stickyNav.style.willChange = 'transform';\n    stickyNav.style.transition = 'transform 0.3s ease-out';\n    stickyNav.style.transform = 'translateY(-101%)';\n    stickyNav.style.WebkitTransform = 'translateY(-101%)';\n\n    const switchPoint = 150;\n    let lastScrollPosition = window.scrollY;\n    let ticking = false;\n\n    function applyNavState() {\n      const currentScrollPosition = window.scrollY;\n\n      if (Math.abs(currentScrollPosition - lastScrollPosition) > 5 || currentScrollPosition === 0) {\n        if (currentScrollPosition > switchPoint) {\n          standardNav.style.visibility = 'hidden';\n          stickyNav.style.pointerEvents = 'auto';\n          requestAnimationFrame(() => {\n            stickyNav.style.transform = 'translateY(0%)';\n            stickyNav.style.WebkitTransform = 'translateY(0%)';\n          });\n        } else {\n          standardNav.style.visibility = 'visible';\n          stickyNav.style.pointerEvents = 'none';\n          requestAnimationFrame(() => {\n            stickyNav.style.transform = 'translateY(-101%)';\n            stickyNav.style.WebkitTransform = 'translateY(-101%)';\n          });\n        }\n        lastScrollPosition = currentScrollPosition;\n      }\n      ticking = false;\n    }\n\n    function setNavState() {\n      applyNavState();\n    }\n\n    window.addEventListener(\"scroll\", () => {\n      if (!ticking) {\n        requestAnimationFrame(applyNavState);\n        ticking = true;\n      }\n    }, { passive: true });\n\n    document.body.addEventListener(\"click\", () => {\n      requestAnimationFrame(setNavState);\n    });\n\n    let resizeTimeout;\n    window.addEventListener('resize', () => {\n      clearTimeout(resizeTimeout);\n      resizeTimeout = setTimeout(() => {\n        if (window.innerWidth < 991) {\n          standardNav.style.visibility = 'visible';\n          stickyNav.style.transform = 'translateY(-101%)';\n          stickyNav.style.WebkitTransform = 'translateY(-101%)';\n        }\n      }, 250);\n    }, { passive: true });\n  }\n} catch (error) {\n  console.error(error.message);\n}\n</script>\n<script type=\"module\">\ndocument.body.addEventListener('click', (e) => {\n  if (e.target.matches('.plus-link.is-2')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList2 = document.querySelector('.dropdown-list.is-2');\n    if (!mainList || !subList2) return;\n    mainList.style.height = '0';\n    mainList.style.overflow = 'hidden';\n    subList2.style.height = subList2.scrollHeight + 'px';\n    subList2.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.plus-link.is-3')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList3 = document.querySelector('.dropdown-list.is-3');\n    if (!mainList || !subList3) return;\n    mainList.style.height = '0';\n    mainList.style.overflow = 'hidden';\n    subList3.style.height = subList3.scrollHeight + 'px';\n    subList3.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.back-link.is-1')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList2 = document.querySelector('.dropdown-list.is-2');\n    if (!mainList || !subList2) return;\n    subList2.style.height = '0';\n    subList2.style.overflow = 'hidden';\n    mainList.style.height = mainList.scrollHeight + 'px';\n    mainList.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.back-link.is-2')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList3 = document.querySelector('.dropdown-list.is-3');\n    if (!mainList || !subList3) return;\n    subList3.style.height = '0';\n    subList3.style.overflow = 'hidden';\n    mainList.style.height = mainList.scrollHeight + 'px';\n    mainList.style.overflow = 'visible';\n  }\n});\n</script>\n\n<!-- 4. Hamburger + custom menu -->\n<script type=\"module\">\ndocument.addEventListener('click', (e) => {\n  const backIcon = e.target.closest('.nav-icon');\n  const hamburger = e.target.closest('.hamburger');\n\n  if (backIcon && document.body.classList.contains('is-nav-open')) {\n    document.body.classList.remove('is-nav-open');\n    return;\n  }\n\n  if (hamburger && !document.body.classList.contains('is-nav-open')) {\n    document.body.classList.add('is-nav-open');\n    return;\n  }\n});\n  document.addEventListener('mouseover', (e) => {\n  if (e.target.closest('.bg-overlay')) {\n    document.body.classList.remove('is-nav-open');\n  }\n});\n</script>"}
 clientOnly={true}
 className={`w-html-embed`} />
 </Fragment_1>
@@ -1052,10 +1052,10 @@ className={`w-element c139pwc6 caeuris c5ftqtp c1ux94pn`}>
 className={`w-element cmsm1bz c1pit5s0 c3qgmhh c1omlw60 c1txodcv curgy1m c10bzxv ch1ksmf`}>
 <Link
 data-gallery={"gallery"}
-href={"https://improveitmd.wstd.io/cgi/image/fortified_nailing_plywood_wilmington_nc-2_(1)_Ido4uYPjeuyxiT-g70-61.webp?width=1920&quality=80&format=auto"}
+href={"/assets/fortified_nailing_plywood_wilmington_nc-2_(1)_Ido4uYPjeuyxiT-g70-61.webp"}
 className={`w-element c1numhkq ${"glightbox"}`}>
 <Image
-src={"/assets/fortified_nailing_plywood_wilmington_nc-2_(1)_Ido4uYPjeuyxiT-g70-61.webp"}
+src={"/uploads/fortified_nailing_plywood_wilmington_nc_2_1_Ido4u_Y_Pjeuyxi_T_g70_61_015864eb98.webp"}
 width={800}
 height={1067}
 alt={""}
@@ -1064,10 +1064,10 @@ className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a c14ixlc6 cis9rsd cknnq3k`}
 </Link>
 <Link
 data-gallery={"gallery"}
-href={"https://improveitmd.wstd.io/cgi/image/Fortified_Roof_Seam_Tape_Wilmington_NC-2_(1)_Zh1CBHE4zY9kbatx9Olwl.webp?width=1920&quality=80&format=auto"}
+href={"/assets/Fortified_Roof_Seam_Tape_Wilmington_NC-2_(1)_Zh1CBHE4zY9kbatx9Olwl.webp"}
 className={`w-element c1numhkq ${"glightbox"}`}>
 <Image
-src={"/assets/Fortified_Roof_Seam_Tape_Wilmington_NC-2_(1)_Zh1CBHE4zY9kbatx9Olwl.webp"}
+src={"/uploads/Fortified_Roof_Seam_Tape_Wilmington_NC_2_1_Zh1_CBHE_4z_Y9kbatx9_Olwl_a32bfbcd59.webp"}
 width={800}
 height={1067}
 alt={""}
@@ -1076,10 +1076,10 @@ className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a c14ixlc6 cis9rsd cknnq3k`}
 </Link>
 <Link
 data-gallery={"gallery"}
-href={"https://improveitmd.wstd.io/cgi/image/Fortified_Sterter_Strip_Wilmington_NC-2_(1)_30YC9sAf80Aada3SMfag0.webp?width=1920&quality=80&format=auto"}
+href={"/assets/Fortified_Sterter_Strip_Wilmington_NC-2_(1)_30YC9sAf80Aada3SMfag0.webp"}
 className={`w-element c1numhkq ${"glightbox"}`}>
 <Image
-src={"/assets/Fortified_Sterter_Strip_Wilmington_NC-2_(1)_30YC9sAf80Aada3SMfag0.webp"}
+src={"/uploads/Fortified_Sterter_Strip_Wilmington_NC_2_1_30_YC_9s_Af80_Aada3_S_Mfag0_da0d57b15a.webp"}
 width={800}
 height={1067}
 alt={""}
@@ -1088,10 +1088,10 @@ className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a c14ixlc6 cis9rsd cknnq3k`}
 </Link>
 <Link
 data-gallery={"gallery"}
-href={"https://improveitmd.wstd.io/cgi/image/full_ridge_vent_wilmington_nc-2_(1)_fWP5Z61xoEu6mMJMwDbD0.webp?width=1920&quality=80&format=auto"}
+href={"/assets/full_ridge_vent_wilmington_nc-2_(1)_fWP5Z61xoEu6mMJMwDbD0.webp"}
 className={`w-element c1numhkq ${"glightbox"}`}>
 <Image
-src={"/assets/full_ridge_vent_wilmington_nc-2_(1)_fWP5Z61xoEu6mMJMwDbD0.webp"}
+src={"/uploads/full_ridge_vent_wilmington_nc_2_1_f_WP_5_Z61xo_Eu6m_MJ_Mw_Db_D0_47f541039a.webp"}
 width={800}
 height={1067}
 alt={""}
@@ -1100,10 +1100,10 @@ className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a c14ixlc6 cis9rsd cknnq3k`}
 </Link>
 <Link
 data-gallery={"gallery"}
-href={"https://improveitmd.wstd.io/cgi/image/fortified_roof_ridge_vent_nailing_pattern_wilmington_nc-2_(1)_m9wTcf4YkkM5H-DFvn8r0.webp?width=1920&quality=80&format=auto"}
+href={"/assets/fortified_roof_ridge_vent_nailing_pattern_wilmington_nc-2_(1)_m9wTcf4YkkM5H-DFvn8r0.webp"}
 className={`w-element c1numhkq ${"glightbox"}`}>
 <Image
-src={"/assets/fortified_roof_ridge_vent_nailing_pattern_wilmington_nc-2_(1)_m9wTcf4YkkM5H-DFvn8r0.webp"}
+src={"/uploads/fortified_roof_ridge_vent_nailing_pattern_wilmington_nc_2_1_m9w_Tcf4_Ykk_M5_H_D_Fvn8r0_98a46f7dfc.webp"}
 width={800}
 height={1067}
 alt={""}
@@ -1112,10 +1112,10 @@ className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a c14ixlc6 cis9rsd cknnq3k`}
 </Link>
 <Link
 data-gallery={"gallery"}
-href={"https://improveitmd.wstd.io/cgi/image/Fortified_Roof_Installation_Wilmington_NC-2_(1)_xOOrDp4IMLqVdp1J6uAmE.webp?width=1920&quality=80&format=auto"}
+href={"/assets/Fortified_Roof_Installation_Wilmington_NC-2_(1)_xOOrDp4IMLqVdp1J6uAmE.webp"}
 className={`w-element c1numhkq ${"glightbox"}`}>
 <Image
-src={"/assets/Fortified_Roof_Installation_Wilmington_NC-2_(1)_xOOrDp4IMLqVdp1J6uAmE.webp"}
+src={"/uploads/Fortified_Roof_Installation_Wilmington_NC_2_1_x_O_Or_Dp4_IM_Lq_Vdp1_J6u_Am_E_b788227744.webp"}
 width={800}
 height={1066}
 alt={""}
@@ -1135,7 +1135,7 @@ className={`w-element c92kv7i c19fqb9a c1cxkcjg c1pjr8f c1lwn44j c1fjww6l c1emvl
 className={`w-element c139pwc6 c1e0h8ns c5ftqtp c1ux94pn c4frzz1 culorum`}>
 <Image
 loading={"lazy"}
-src={"/assets/Roofing_Company_Near_Me_in_Wilmington_NC-2_DeBP_XFFBBBqVdysJ-jqD.webp"}
+src={"/uploads/Roofing_Company_Near_Me_in_Wilmington_NC_2_De_BP_XFFBB_Bq_Vdys_J_jq_D_3b6e75e161.webp"}
 width={1200}
 height={630}
 alt={""}
@@ -1204,7 +1204,7 @@ className={`w-element`}>
 className={`w-element c139pwc6 c1e0h8ns c5ftqtp c1ux94pn c4frzz1 culorum`}>
 <Image
 loading={"lazy"}
-src={"/assets/Fortified_Roof_Seam_Tape_Wilmington_NC-2_(1)_Zh1CBHE4zY9kbatx9Olwl.webp"}
+src={"/uploads/Fortified_Roof_Seam_Tape_Wilmington_NC_2_1_Zh1_CBHE_4z_Y9kbatx9_Olwl_a32bfbcd59.webp"}
 width={800}
 height={1067}
 alt={""}
@@ -1370,7 +1370,7 @@ className={`w-element`}>
 className={`w-element c139pwc6 c1e0h8ns c5ftqtp c1ux94pn c4frzz1 culorum`}>
 <Image
 loading={"lazy"}
-src={"/assets/Consultation_Photo_-_Lance-2_xwvWy06cBU_x177JC3ixs.webp"}
+src={"/uploads/Consultation_Photo_Lance_2_xwv_Wy06c_BU_x177_JC_3ixs_41c7357412.webp"}
 width={700}
 height={390}
 alt={""}
@@ -1628,7 +1628,7 @@ className={`w-html-embed`} />
 <div
 className={`w-element c139pwc6 cjkauba cvcvidj c1lzjd2w c1epvuph c9nw4u8 cagmsft`}>
 <Image
-src={"/assets/search-icon-grey_2KRPhgsf3MqYwyOF3JXUb.svg"}
+src={"/uploads/search_icon_grey_2_KR_Phgsf3_Mq_Ywy_OF_3_JX_Ub_375d129398.svg"}
 width={18}
 height={18}
 alt={"search icon"}
@@ -1685,7 +1685,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/circle_green_72pqHqP6XmMru-2OGtKg7.svg"}
+src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1706,7 +1706,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/circle_grey_2-5jFzta9VkTJxxl1OQkD.svg"}
+src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1720,7 +1720,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/circle_grey_2-5jFzta9VkTJxxl1OQkD.svg"}
+src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1752,7 +1752,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/circle_green_72pqHqP6XmMru-2OGtKg7.svg"}
+src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1773,7 +1773,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/circle_grey_2-5jFzta9VkTJxxl1OQkD.svg"}
+src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1787,7 +1787,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/circle_grey_2-5jFzta9VkTJxxl1OQkD.svg"}
+src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1878,7 +1878,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/check_fill_tQnPoWF842QzJopBB5w6c.svg"}
+src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1899,7 +1899,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/circle_green_72pqHqP6XmMru-2OGtKg7.svg"}
+src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1913,7 +1913,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 c9vdfns`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/circle_grey_2-5jFzta9VkTJxxl1OQkD.svg"}
+src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -2029,7 +2029,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/check_fill_tQnPoWF842QzJopBB5w6c.svg"}
+src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -2050,7 +2050,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/check_fill_tQnPoWF842QzJopBB5w6c.svg"}
+src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -2064,7 +2064,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 c9vdfns`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/assets/check_fill_tQnPoWF842QzJopBB5w6c.svg"}
+src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -2072,7 +2072,7 @@ data-icon={"filled"}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 c8bhanq ce6x08i c1bxcui0 cvfl1ur`} />
 <Image
 loading={"lazy"}
-src={"/assets/circle_green_72pqHqP6XmMru-2OGtKg7.svg"}
+src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -2393,7 +2393,7 @@ className={`w-element c1numhkq c3auquk c1ibjhy0 c163g466 cn87dm8 c1uhhf7h clfz32
 <div
 className={`w-element c139pwc6 c17jzp58 c1numhkq culorum`}>
 <Image
-src={"/assets/ci_storm-map_1_-LAH--T-9aHMrFSIfafib.svg"}
+src={"/uploads/ci_storm_map_1_LAH_T_9a_H_Mr_FS_Ifafib_43e525db09.svg"}
 width={320}
 height={436}
 alt={""}
@@ -2480,7 +2480,7 @@ className={`w-element c1mndzy8`}>
 className={`w-element c18bj3o3 c1lq6pq8`}>
 <Image
 loading={"lazy"}
-src={"/assets/Vector_iOXiYDIaoBXz9-Wh9Cj2K.svg"}
+src={"/uploads/Vector_i_O_Xi_YD_Iao_B_Xz9_Wh9_Cj2_K_e1edb10d97.svg"}
 width={60}
 height={62}
 alt={""}
@@ -2507,7 +2507,7 @@ className={`w-element cmsm1bz c1pit5s0 c3qgmhh c1omlw60 c1klx7ez cg8hn1l c53aqfr
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw cj1o4tp c1q4fbwg c876kpt c15sicby c1khaues c1cf96bh c14t23m0 c9cac79 c100pd8v cd2qqyb c5ftqtp c1ux94pn cq9r5tw c8iul0y cybbdyg cljixpu cu8qcns c4fmmfv`}>
 <Image
-src={"/assets/hammer_icon_Qe5fs_LViZJKUEcQ9yTyC.svg"}
+src={"/uploads/hammer_icon_Qe5fs_L_Vi_ZJKU_Ec_Q9y_Ty_C_fbebb457b9.svg"}
 width={48}
 height={48}
 alt={"hammer icon"}
@@ -2528,7 +2528,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw cj1o4tp c1q4fbwg c876kpt c15sicby c1khaues c1cf96bh c14t23m0 c9cac79 c100pd8v cd2qqyb c5ftqtp c1ux94pn cq9r5tw c8iul0y cybbdyg cljixpu cu8qcns c4fmmfv`}>
 <Image
-src={"/assets/badge-icon_TW5j8SYwW_5CMPqOqNtyA.svg"}
+src={"/uploads/badge_icon_TW_5j8_S_Yw_W_5_CM_Pq_Oq_Nty_A_9a9d8fc928.svg"}
 width={33}
 height={42}
 alt={"certified badge icon"}
@@ -2549,7 +2549,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw cj1o4tp c1q4fbwg c876kpt c15sicby c1khaues c1cf96bh c14t23m0 c9cac79 c100pd8v cd2qqyb c5ftqtp c1ux94pn cq9r5tw c8iul0y cybbdyg cljixpu cu8qcns c4fmmfv`}>
 <Image
-src={"/assets/holding-house-icon_BpdWkoEZzGBoh0dD3H-8b.svg"}
+src={"/uploads/holding_house_icon_Bpd_Wko_E_Zz_G_Boh0d_D3_H_8b_76e7c90e2b.svg"}
 width={43}
 height={42}
 alt={"holding house icon"}
@@ -2881,7 +2881,7 @@ className={`w-element`}>
 <div
 className={`w-element c1bijp3c c139pwc6 c13g3obg`}>
 <Image
-src={"/assets/MASTER_ELITE_CERTIFICATE_PNdLO4OlGlqAqHCU_fVrd.webp"}
+src={"/uploads/MASTER_ELITE_CERTIFICATE_P_Nd_LO_4_Ol_Glq_Aq_HCU_f_Vrd_7473ea3cfa.webp"}
 width={4250}
 height={5500}
 alt={"master elite certificate"}
@@ -2994,7 +2994,7 @@ className={`w-html-embed`} />
 </div>
 </div>
 <HtmlEmbed
-code={"<!-- Weather Widget Code -->\n<script>\nwindow.onload = () => {\n\n  // --- Mapbox Geocoding ---\n  const mapboxAccessToken = 'pk.eyJ1IjoiaW1wcm92ZWl0bWQiLCJhIjoiY2w1OXlhZ3BnMDAyMDNrcG9pdmU3OXNvcyJ9.8IKtnRJwbi7ss5MjeHGAkQ';\n\n  // --- Get user input location safely ---\n  let userInputLocation = document.querySelector('[input-location=\"city-county\"]')?.textContent?.toLowerCase().replace('weather in ', \"\") || '';\n  if (!userInputLocation) {\n      console.warn('No user input location found.');\n      return;\n  }\n\n  let longitude, latitude;\n\n  // --- Start geocoding ---\n  geocodeLocation(userInputLocation);\n\n  async function geocodeLocation(location) {\n      const endpoint = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(location)}.json?access_token=${mapboxAccessToken}`;\n      try {\n          const response = await fetch(endpoint);\n          const data = await response.json();\n\n          if (!data?.features?.length) {\n              console.error('No geocoding results found for location:', location);\n              return;\n          }\n\n          const firstFeature = data.features[0];\n          if (!firstFeature?.geometry?.coordinates?.length) {\n              console.error('Invalid geometry data from Mapbox:', firstFeature);\n              return;\n          }\n\n          longitude = firstFeature.geometry.coordinates[0];\n          latitude = firstFeature.geometry.coordinates[1];\n\n          if (typeof longitude !== 'number' || typeof latitude !== 'number') {\n              console.error('Invalid coordinates:', latitude, longitude);\n              return;\n          }\n\n          // --- Fetch forecast ---\n          const forecastURL = `https://api.weather.gov/points/${latitude},${longitude}`;\n          fetchJsonData(forecastURL, (data) => {\n              if (!data?.properties?.forecast) {\n                  console.error('Forecast URL missing in weather API response:', data);\n                  return;\n              }\n              getAPIData(data);\n          }, (error) => console.error('Weather API fetch error:', error));\n\n          // --- Fetch alerts ---\n          const alertURL = `https://api.weather.gov/alerts/active?point=${latitude},${longitude}&limit=500`;\n          fetchJsonData(alertURL, (data) => handleWeatherAlerts(data), (error) => console.error('Weather Alert API fetch error:', error));\n\n      } catch (error) {\n          console.error('Geocoding error:', error);\n      }\n  }\n\n  function fetchJsonData(url, callback, errorCallback) {\n      fetch(url)\n          .then(response => {\n              if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);\n              return response.json();\n          })\n          .then(data => callback(data))\n          .catch(error => {\n              console.error('Failed to fetch data:', error);\n              if (errorCallback) errorCallback(error);\n          });\n  }\n\n  function handleWeatherAlerts(data) {\n      if (!data?.features) {\n          console.warn('No alert features found in response.');\n          document.querySelector('[custom-alert=\"alert-wrap\"]')?.style.setProperty('display', 'none');\n          return;\n      }\n\n      if (!data.features.length) {\n          document.querySelector('[custom-alert=\"alert-wrap\"]')?.style.setProperty('display', 'none');\n      } else {\n          const eventMsg = data.features[0]?.properties?.event || 'Weather Alert';\n          const wrap = document.querySelector('[custom-alert=\"alert-wrap\"]');\n          const textDiv = document.querySelector('[custom-alert=\"div-text\"]');\n          if (wrap && textDiv) {\n              wrap.style.display = \"flex\";\n              textDiv.textContent = eventMsg;\n          }\n      }\n  }\n\n  function countHighPrecipitationRainDays(forecastData) {\n      if (!Array.isArray(forecastData)) return 0;\n      const highPrecipRainDays = forecastData.filter(day =>\n          day?.shortForecast?.includes(\"Rain\") && (day.highPrecipitation >= 20)\n      );\n      return highPrecipRainDays.length;\n  }\n\n  // --- Weather icons ---\n  window.weatherIcons = {\n      \"Sunny\": \"https://uploads-ssl.webflow.com/64bd6cb099271195afd55550/65eac170e259785244f1a4ef_full-sunny.svg\",\n      \"Partly Sunny\": \"https://uploads-ssl.webflow.com/64bd6cb099271195afd55550/65eac170b0bc85a2ccc5b56f_partly-sunny.svg\",\n      \"Cloudy\": \"https://uploads-ssl.webflow.com/64bd6cb099271195afd55550/65eac170925e633a83a9f924_cloudy.svg\",\n      \"Rain\": \"https://uploads-ssl.webflow.com/64bd6cb099271195afd55550/65de0b4dc92d3e369c8c3887_Rain.png\",\n      \"Thunderstorms\": \"https://uploads-ssl.webflow.com/64bd6cb099271195afd55550/65eac170404a55779c46514b_thunder-storm.svg\",\n      \"Winter Mix\": \"https://uploads-ssl.webflow.com/64bd6cb099271195afd55550/65eac17084e3a712dbebd43f_winter-mix.svg\",\n      \"Windy\": \"https://uploads-ssl.webflow.com/64bd6cb099271195afd55550/65eac170effc1399139c7522_windy.svg\",\n      \"Hail\": \"https://uploads-ssl.webflow.com/64bd6cb099271195afd55550/65eac170ddc7409543f310da_hail.svg\",\n      \"Snow\": \"https://uploads-ssl.webflow.com/64bd6cb099271195afd55550/65eac17082f40667bf501a5c_snow.svg\",\n      \"Fog\": \"https://uploads-ssl.webflow.com/64bd6cb099271195afd55550/65eac170ce12f72bedd3ef15_fogy.svg\",\n      \"Moon\": \"https://uploads-ssl.webflow.com/64bd6cb099271195afd55550/65eac17066b423a19d9c4183_clear-moon.svg\",\n      \"Partly Moon\": \"https://uploads-ssl.webflow.com/64bd6cb099271195afd55550/65eac1704b0ebf0e93616a05_partly-moon.svg\"\n  };\n\n  window.precipitaionIcons = {\n      \"snow\": \"https://uploads-ssl.webflow.com/64bd6cb099271195afd55550/65eac313c78b03f62f46566a_snow-flake.svg\",\n      \"rain\": \"https://uploads-ssl.webflow.com/64bd6cb099271195afd55550/65eac3134b0ebf0e936229ed_water-drop.svg\"\n  };\n\n  function isSnowyCondition(shortForecast) {\n      return /snow|snowy/i.test(shortForecast);\n  }\n\n  function selectPrecipitationIcon(shortForecast) {\n      if (!shortForecast) return window.precipitaionIcons.rain;\n      return isSnowyCondition(shortForecast) ? window.precipitaionIcons.snow : window.precipitaionIcons.rain;\n  }\n\n  window.selectWeatherIcon = (shortForecast) => {\n      if (!shortForecast) return window.weatherIcons[\"Sunny\"];\n      const patterns = [\n          { pattern: /rain showers then sunny/i, iconKey: \"Rain\" },\n          { pattern: /clear skies|clear|mostly clear/i, iconKey: \"Sunny\" },\n          { pattern: /partly cloudy|partly sunny/i, iconKey: \"Partly Sunny\" },\n          { pattern: /cloudy/i, iconKey: \"Cloudy\" },\n          { pattern: /light rain|rain showers|rain/i, iconKey: \"Rain\" },\n          { pattern: /light snow|snow showers/i, iconKey: \"Snow\" },\n          { pattern: /heavy rain|rain storm/i, iconKey: \"Rain\" },\n          { pattern: /thunderstorms|rain and lightning|scattered thunderstorms|isolated thunderstorms/i, iconKey: \"Thunderstorms\" },\n          { pattern: /winter mix|Rain And Snow|rain and ice|sheet/i, iconKey: \"Winter Mix\" },\n          { pattern: /windy|high winds/i, iconKey: \"Windy\" },\n          { pattern: /hail/i, iconKey: \"Hail\" },\n          { pattern: /snow|areas of blowing snow/i, iconKey: \"Snow\" },\n          { pattern: /fog|foggy/i, iconKey: \"Fog\" },\n      ];\n\n      let iconUrl = window.weatherIcons[\"Sunny\"];\n      patterns.some(p => {\n          if (p.pattern.test(shortForecast.toLowerCase())) {\n              iconUrl = window.weatherIcons[p.iconKey] || window.weatherIcons[\"Sunny\"];\n              return true;\n          }\n          return false;\n      });\n      return iconUrl;\n  };\n\n  // --- Get API Data ---\n  function getAPIData(data) {\n      if (!data?.properties?.forecast) return;\n\n      const forecastURL = data.properties.forecast;\n      fetchJsonData(forecastURL, (forecastDataResponse) => {\n          const periods = forecastDataResponse?.properties?.periods || [];\n          if (!periods.length) return;\n\n          let forecastData = periods.map(period => ({\n              name: period?.name || '',\n              startTime: period?.startTime || '',\n              endTime: period?.endTime || '',\n              isDaytime: period?.isDaytime ?? true,\n              temperature: period?.temperature ?? 0,\n              temperatureUnit: period?.temperatureUnit || 'F',\n              tempLabel: period?.isDaytime ? \"High\" : \"Low\",\n              shortForecast: period?.shortForecast || '',\n              detailedForecast: period?.detailedForecast || '',\n              probabilityOfPrecipitation: period?.probabilityOfPrecipitation?.value ?? 0,\n              iconUrl: selectWeatherIcon(period?.shortForecast)\n          }));\n\n          window.weatherData = processForecastData(forecastData);\n          renderWeatherSlides();\n      }, (error) => console.error('Error fetching forecast periods:', error));\n  }\n\n  // --- Process Forecast Data ---\n  function processForecastData(forecastData) {\n      if (!Array.isArray(forecastData)) return [];\n\n      let tempSummaries = {};\n      const dayNames = [\"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\"];\n\n      forecastData.forEach((period, index) => {\n          if (!period) return;\n\n          const firstStartTime = new Date(forecastData[0]?.startTime || Date.now());\n          const firstDayName = dayNames[firstStartTime.getDay()];\n\n          // Handle day/night naming\n          let periodName = (period.name || '').toLowerCase();\n          if (periodName === 'today' || periodName === 'this afternoon') period.name = firstDayName;\n          if (periodName === 'tonight' || periodName === 'overnight') period.name = `${firstDayName} Night`;\n\n          let dayKey = period.name.toLowerCase().includes(\"night\") ? period.name.replace(\" Night\", \"\") : period.name;\n          if (!tempSummaries[dayKey]) tempSummaries[dayKey] = { day: dayKey, dayPeriod: null, nightPeriod: null };\n\n          let weatherConditionIconUrl = selectWeatherIcon(period.shortForecast);\n\n          if (period.isDaytime) tempSummaries[dayKey].dayPeriod = { ...period, weatherConditionIconUrl };\n          else tempSummaries[dayKey].nightPeriod = { ...period, weatherConditionIconUrl };\n      });\n\n      let processedSummaries = Object.values(tempSummaries).map(({ day, dayPeriod, nightPeriod }) => {\n          const dayAbbreviation = day?.substring(0, 3).toUpperCase() || '';\n          const highTemp = dayPeriod?.temperature ?? 0;\n          const lowTemp = nightPeriod?.temperature ?? (dayPeriod?.temperature ?? 0) - 22;\n          const dayPrecipitation = dayPeriod?.probabilityOfPrecipitation ?? 0;\n          const nightPrecipitation = nightPeriod?.probabilityOfPrecipitation ?? 0;\n          const highestPrecipitation = Math.max(dayPrecipitation, nightPrecipitation);\n\n          // Ensure shortForecast exists\n          const dayForecast = dayPeriod?.shortForecast || nightPeriod?.shortForecast || '';\n          const nightForecast = nightPeriod?.shortForecast || dayPeriod?.shortForecast || '';\n\n          let weatherConditionIcon = '';\n          const combinedForecast = `${dayForecast} ${nightForecast}`.toLowerCase();\n\n          if (highestPrecipitation >= 20) {\n              if (combinedForecast.includes('snow') && combinedForecast.includes('rain')) {\n                  weatherConditionIcon = weatherIcons[\"Winter Mix\"];\n              } else if (combinedForecast.includes('snow')) {\n                  weatherConditionIcon = weatherIcons[\"Snow\"];\n              } else if (combinedForecast.includes('rain')) {\n                  weatherConditionIcon = weatherIcons[\"Rain\"];\n              } else if (combinedForecast.includes('thunderstorms')) {\n                  weatherConditionIcon = weatherIcons[\"Thunderstorms\"];\n              } else {\n                  weatherConditionIcon = selectWeatherIcon(dayForecast) || weatherIcons[\"Sunny\"];\n              }\n          } else {\n              weatherConditionIcon = selectWeatherIcon(dayForecast) || weatherIcons[\"Sunny\"];\n          }\n\n          return {\n              day: dayAbbreviation,\n              dayPrecipitationIconUrl: selectPrecipitationIcon(dayForecast),\n              generalWeatherConditionIcon: weatherConditionIcon,\n              shortForecast: dayForecast,\n              highTemp,\n              lowTemp,\n              highPrecipitation: highestPrecipitation,\n              isNightIcon: highTemp === 0 ? 'is-night' : 'is-day'\n          };\n      });\n\n      // Simplify forecast text safely\n      processedSummaries.forEach(item => {\n          if (item?.shortForecast) {\n              item.shortForecast = item.shortForecast.replace(/\\b(Slight|Chance|Mostly|Areas of|Scattered|Isolated)\\b/gi, '').trim();\n          }\n      });\n\n      return processedSummaries;\n  }\n\n  // --- Render Weather Slides ---\n  function renderWeatherSlides() {\n      const swiperWrapper = document.querySelector('.swiper-wrapper.is-weather');\n      if (!swiperWrapper || !Array.isArray(window.weatherData)) return;\n\n      swiperWrapper.innerHTML = '';\n      window.weatherData.forEach((item, index) => {\n          if (!item) return;\n          swiperWrapper.innerHTML += createWeatherSlide(item, index);\n      });\n\n      // Initialize Swiper\n      new Swiper('.swiper.is-weather', {\n          loop: false,\n          slidesPerView: \"auto\"\n          // breakpoints: {\n          //     320: { slidesPerView: 1 },\n          //     480: { slidesPerView: 1.5 },\n          //     640: { slidesPerView: 3.5 }\n          // }\n      });\n\n      document.querySelector('.weather_loader')?.style.setProperty('display', 'none');\n  }\n\n  function createWeatherSlide(item, index) {\n      if (!item) return '';\n      const lowTemp = item.lowTemp ?? 0;\n      const highTemp = item.highTemp ?? 0;\n      return `\n        <div class=\"swiper-slide is--weather\">\n          <div class=\"weather_card ${item.isNightIcon || 'is-day'}\">\n            <div class=\"weather_card-top\">\n              <div class=\"text-weight-semibold text-style-allcaps\">${item.day || ''}</div>\n              <div class=\"weather_rain-wrap\">\n                <img src=\"${item.dayPrecipitationIconUrl || ''}\" loading=\"lazy\" width=\"10\" height=\"10\" alt=\"Weather Icon\" class=\"weather_rain-logo dayPrecipitation\">\n                <div class=\"dayPrecipitation text-size-tiny text-weight-medium\">${item.highPrecipitation ?? 0}%</div>\n              </div>\n            </div>\n            <div class=\"weather_card-middle\">\n              <img src=\"${item.generalWeatherConditionIcon || ''}\" loading=\"lazy\" width=\"98\" height=\"98\" alt=\"Weather Condition\" class=\"weather_card-image dayCondition\">\n            </div>\n            <div class=\"weather_card-bottom\">\n              <div class=\"weather_card-bottom-top ${item.isNightIcon || 'is-day'}\">\n                <div class=\"highTemp text-size-xxmedium\">${highTemp}°</div>\n                <div class=\"lowTemp text-size-xxmedium text-color-light-grey-4\">${lowTemp}°</div>\n              </div>\n              <div class=\"dayShortForecast text-size-small text-weight-semibold letter-spacing-4 text-style-allcaps\">${item.shortForecast || ''}</div>\n            </div>\n          </div>\n        </div>\n      `;\n  }\n\n};\n</script>\n"}
+code={"<!-- Weather Widget Code -->\n<script>\nwindow.onload = () => {\n\n  // --- Mapbox Geocoding ---\n  const mapboxAccessToken = 'pk.eyJ1IjoiaW1wcm92ZWl0bWQiLCJhIjoiY2w1OXlhZ3BnMDAyMDNrcG9pdmU3OXNvcyJ9.8IKtnRJwbi7ss5MjeHGAkQ';\n\n  // --- Get user input location safely ---\n  let userInputLocation = document.querySelector('[input-location=\"city-county\"]')?.textContent?.toLowerCase().replace('weather in ', \"\") || '';\n  if (!userInputLocation) {\n      console.warn('No user input location found.');\n      return;\n  }\n\n  let longitude, latitude;\n\n  // --- Start geocoding ---\n  geocodeLocation(userInputLocation);\n\n  async function geocodeLocation(location) {\n      const endpoint = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(location)}.json?access_token=${mapboxAccessToken}`;\n      try {\n          const response = await fetch(endpoint);\n          const data = await response.json();\n\n          if (!data?.features?.length) {\n              console.error('No geocoding results found for location:', location);\n              return;\n          }\n\n          const firstFeature = data.features[0];\n          if (!firstFeature?.geometry?.coordinates?.length) {\n              console.error('Invalid geometry data from Mapbox:', firstFeature);\n              return;\n          }\n\n          longitude = firstFeature.geometry.coordinates[0];\n          latitude = firstFeature.geometry.coordinates[1];\n\n          if (typeof longitude !== 'number' || typeof latitude !== 'number') {\n              console.error('Invalid coordinates:', latitude, longitude);\n              return;\n          }\n\n          // --- Fetch forecast ---\n          const forecastURL = `https://api.weather.gov/points/${latitude},${longitude}`;\n          fetchJsonData(forecastURL, (data) => {\n              if (!data?.properties?.forecast) {\n                  console.error('Forecast URL missing in weather API response:', data);\n                  return;\n              }\n              getAPIData(data);\n          }, (error) => console.error('Weather API fetch error:', error));\n\n          // --- Fetch alerts ---\n          const alertURL = `https://api.weather.gov/alerts/active?point=${latitude},${longitude}&limit=500`;\n          fetchJsonData(alertURL, (data) => handleWeatherAlerts(data), (error) => console.error('Weather Alert API fetch error:', error));\n\n      } catch (error) {\n          console.error('Geocoding error:', error);\n      }\n  }\n\n  function fetchJsonData(url, callback, errorCallback) {\n      fetch(url)\n          .then(response => {\n              if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);\n              return response.json();\n          })\n          .then(data => callback(data))\n          .catch(error => {\n              console.error('Failed to fetch data:', error);\n              if (errorCallback) errorCallback(error);\n          });\n  }\n\n  function handleWeatherAlerts(data) {\n      if (!data?.features) {\n          console.warn('No alert features found in response.');\n          document.querySelector('[custom-alert=\"alert-wrap\"]')?.style.setProperty('display', 'none');\n          return;\n      }\n\n      if (!data.features.length) {\n          document.querySelector('[custom-alert=\"alert-wrap\"]')?.style.setProperty('display', 'none');\n      } else {\n          const eventMsg = data.features[0]?.properties?.event || 'Weather Alert';\n          const wrap = document.querySelector('[custom-alert=\"alert-wrap\"]');\n          const textDiv = document.querySelector('[custom-alert=\"div-text\"]');\n          if (wrap && textDiv) {\n              wrap.style.display = \"flex\";\n              textDiv.textContent = eventMsg;\n          }\n      }\n  }\n\n  function countHighPrecipitationRainDays(forecastData) {\n      if (!Array.isArray(forecastData)) return 0;\n      const highPrecipRainDays = forecastData.filter(day =>\n          day?.shortForecast?.includes(\"Rain\") && (day.highPrecipitation >= 20)\n      );\n      return highPrecipRainDays.length;\n  }\n\n  // --- Weather icons ---\n  window.weatherIcons = {\n      \"Sunny\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170e259785244f1a4ef_full_sunny_6938d3d140.svg\",\n      \"Partly Sunny\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170b0bc85a2ccc5b56f_partly_sunny_e3f6acfc05.svg\",\n      \"Cloudy\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170925e633a83a9f924_cloudy_21aa2d2dc7.svg\",\n      \"Rain\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65de0b4dc92d3e369c8c3887_Rain_f0a3e99f21.png\",\n      \"Thunderstorms\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170404a55779c46514b_thunder_storm_0a303e9471.svg\",\n      \"Winter Mix\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac17084e3a712dbebd43f_winter_mix_95b98f2287.svg\",\n      \"Windy\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170effc1399139c7522_windy_8bb2dec869.svg\",\n      \"Hail\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170ddc7409543f310da_hail_391b24f9fd.svg\",\n      \"Snow\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac17082f40667bf501a5c_snow_5f7c77f7a2.svg\",\n      \"Fog\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170ce12f72bedd3ef15_fogy_ca377f62e9.svg\",\n      \"Moon\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac17066b423a19d9c4183_clear_moon_b16a933224.svg\",\n      \"Partly Moon\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac1704b0ebf0e93616a05_partly_moon_0f2390d6e0.svg\"\n  };\n\n  window.precipitaionIcons = {\n      \"snow\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac313c78b03f62f46566a_snow_flake_f8909f97d2.svg\",\n      \"rain\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac3134b0ebf0e936229ed_water_drop_1c98acc1cb.svg\"\n  };\n\n  function isSnowyCondition(shortForecast) {\n      return /snow|snowy/i.test(shortForecast);\n  }\n\n  function selectPrecipitationIcon(shortForecast) {\n      if (!shortForecast) return window.precipitaionIcons.rain;\n      return isSnowyCondition(shortForecast) ? window.precipitaionIcons.snow : window.precipitaionIcons.rain;\n  }\n\n  window.selectWeatherIcon = (shortForecast) => {\n      if (!shortForecast) return window.weatherIcons[\"Sunny\"];\n      const patterns = [\n          { pattern: /rain showers then sunny/i, iconKey: \"Rain\" },\n          { pattern: /clear skies|clear|mostly clear/i, iconKey: \"Sunny\" },\n          { pattern: /partly cloudy|partly sunny/i, iconKey: \"Partly Sunny\" },\n          { pattern: /cloudy/i, iconKey: \"Cloudy\" },\n          { pattern: /light rain|rain showers|rain/i, iconKey: \"Rain\" },\n          { pattern: /light snow|snow showers/i, iconKey: \"Snow\" },\n          { pattern: /heavy rain|rain storm/i, iconKey: \"Rain\" },\n          { pattern: /thunderstorms|rain and lightning|scattered thunderstorms|isolated thunderstorms/i, iconKey: \"Thunderstorms\" },\n          { pattern: /winter mix|Rain And Snow|rain and ice|sheet/i, iconKey: \"Winter Mix\" },\n          { pattern: /windy|high winds/i, iconKey: \"Windy\" },\n          { pattern: /hail/i, iconKey: \"Hail\" },\n          { pattern: /snow|areas of blowing snow/i, iconKey: \"Snow\" },\n          { pattern: /fog|foggy/i, iconKey: \"Fog\" },\n      ];\n\n      let iconUrl = window.weatherIcons[\"Sunny\"];\n      patterns.some(p => {\n          if (p.pattern.test(shortForecast.toLowerCase())) {\n              iconUrl = window.weatherIcons[p.iconKey] || window.weatherIcons[\"Sunny\"];\n              return true;\n          }\n          return false;\n      });\n      return iconUrl;\n  };\n\n  // --- Get API Data ---\n  function getAPIData(data) {\n      if (!data?.properties?.forecast) return;\n\n      const forecastURL = data.properties.forecast;\n      fetchJsonData(forecastURL, (forecastDataResponse) => {\n          const periods = forecastDataResponse?.properties?.periods || [];\n          if (!periods.length) return;\n\n          let forecastData = periods.map(period => ({\n              name: period?.name || '',\n              startTime: period?.startTime || '',\n              endTime: period?.endTime || '',\n              isDaytime: period?.isDaytime ?? true,\n              temperature: period?.temperature ?? 0,\n              temperatureUnit: period?.temperatureUnit || 'F',\n              tempLabel: period?.isDaytime ? \"High\" : \"Low\",\n              shortForecast: period?.shortForecast || '',\n              detailedForecast: period?.detailedForecast || '',\n              probabilityOfPrecipitation: period?.probabilityOfPrecipitation?.value ?? 0,\n              iconUrl: selectWeatherIcon(period?.shortForecast)\n          }));\n\n          window.weatherData = processForecastData(forecastData);\n          renderWeatherSlides();\n      }, (error) => console.error('Error fetching forecast periods:', error));\n  }\n\n  // --- Process Forecast Data ---\n  function processForecastData(forecastData) {\n      if (!Array.isArray(forecastData)) return [];\n\n      let tempSummaries = {};\n      const dayNames = [\"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\"];\n\n      forecastData.forEach((period, index) => {\n          if (!period) return;\n\n          const firstStartTime = new Date(forecastData[0]?.startTime || Date.now());\n          const firstDayName = dayNames[firstStartTime.getDay()];\n\n          // Handle day/night naming\n          let periodName = (period.name || '').toLowerCase();\n          if (periodName === 'today' || periodName === 'this afternoon') period.name = firstDayName;\n          if (periodName === 'tonight' || periodName === 'overnight') period.name = `${firstDayName} Night`;\n\n          let dayKey = period.name.toLowerCase().includes(\"night\") ? period.name.replace(\" Night\", \"\") : period.name;\n          if (!tempSummaries[dayKey]) tempSummaries[dayKey] = { day: dayKey, dayPeriod: null, nightPeriod: null };\n\n          let weatherConditionIconUrl = selectWeatherIcon(period.shortForecast);\n\n          if (period.isDaytime) tempSummaries[dayKey].dayPeriod = { ...period, weatherConditionIconUrl };\n          else tempSummaries[dayKey].nightPeriod = { ...period, weatherConditionIconUrl };\n      });\n\n      let processedSummaries = Object.values(tempSummaries).map(({ day, dayPeriod, nightPeriod }) => {\n          const dayAbbreviation = day?.substring(0, 3).toUpperCase() || '';\n          const highTemp = dayPeriod?.temperature ?? 0;\n          const lowTemp = nightPeriod?.temperature ?? (dayPeriod?.temperature ?? 0) - 22;\n          const dayPrecipitation = dayPeriod?.probabilityOfPrecipitation ?? 0;\n          const nightPrecipitation = nightPeriod?.probabilityOfPrecipitation ?? 0;\n          const highestPrecipitation = Math.max(dayPrecipitation, nightPrecipitation);\n\n          // Ensure shortForecast exists\n          const dayForecast = dayPeriod?.shortForecast || nightPeriod?.shortForecast || '';\n          const nightForecast = nightPeriod?.shortForecast || dayPeriod?.shortForecast || '';\n\n          let weatherConditionIcon = '';\n          const combinedForecast = `${dayForecast} ${nightForecast}`.toLowerCase();\n\n          if (highestPrecipitation >= 20) {\n              if (combinedForecast.includes('snow') && combinedForecast.includes('rain')) {\n                  weatherConditionIcon = weatherIcons[\"Winter Mix\"];\n              } else if (combinedForecast.includes('snow')) {\n                  weatherConditionIcon = weatherIcons[\"Snow\"];\n              } else if (combinedForecast.includes('rain')) {\n                  weatherConditionIcon = weatherIcons[\"Rain\"];\n              } else if (combinedForecast.includes('thunderstorms')) {\n                  weatherConditionIcon = weatherIcons[\"Thunderstorms\"];\n              } else {\n                  weatherConditionIcon = selectWeatherIcon(dayForecast) || weatherIcons[\"Sunny\"];\n              }\n          } else {\n              weatherConditionIcon = selectWeatherIcon(dayForecast) || weatherIcons[\"Sunny\"];\n          }\n\n          return {\n              day: dayAbbreviation,\n              dayPrecipitationIconUrl: selectPrecipitationIcon(dayForecast),\n              generalWeatherConditionIcon: weatherConditionIcon,\n              shortForecast: dayForecast,\n              highTemp,\n              lowTemp,\n              highPrecipitation: highestPrecipitation,\n              isNightIcon: highTemp === 0 ? 'is-night' : 'is-day'\n          };\n      });\n\n      // Simplify forecast text safely\n      processedSummaries.forEach(item => {\n          if (item?.shortForecast) {\n              item.shortForecast = item.shortForecast.replace(/\\b(Slight|Chance|Mostly|Areas of|Scattered|Isolated)\\b/gi, '').trim();\n          }\n      });\n\n      return processedSummaries;\n  }\n\n  // --- Render Weather Slides ---\n  function renderWeatherSlides() {\n      const swiperWrapper = document.querySelector('.swiper-wrapper.is-weather');\n      if (!swiperWrapper || !Array.isArray(window.weatherData)) return;\n\n      swiperWrapper.innerHTML = '';\n      window.weatherData.forEach((item, index) => {\n          if (!item) return;\n          swiperWrapper.innerHTML += createWeatherSlide(item, index);\n      });\n\n      // Initialize Swiper\n      new Swiper('.swiper.is-weather', {\n          loop: false,\n          slidesPerView: \"auto\"\n          // breakpoints: {\n          //     320: { slidesPerView: 1 },\n          //     480: { slidesPerView: 1.5 },\n          //     640: { slidesPerView: 3.5 }\n          // }\n      });\n\n      document.querySelector('.weather_loader')?.style.setProperty('display', 'none');\n  }\n\n  function createWeatherSlide(item, index) {\n      if (!item) return '';\n      const lowTemp = item.lowTemp ?? 0;\n      const highTemp = item.highTemp ?? 0;\n      return `\n        <div class=\"swiper-slide is--weather\">\n          <div class=\"weather_card ${item.isNightIcon || 'is-day'}\">\n            <div class=\"weather_card-top\">\n              <div class=\"text-weight-semibold text-style-allcaps\">${item.day || ''}</div>\n              <div class=\"weather_rain-wrap\">\n                <img src=\"${item.dayPrecipitationIconUrl || ''}\" loading=\"lazy\" width=\"10\" height=\"10\" alt=\"Weather Icon\" class=\"weather_rain-logo dayPrecipitation\">\n                <div class=\"dayPrecipitation text-size-tiny text-weight-medium\">${item.highPrecipitation ?? 0}%</div>\n              </div>\n            </div>\n            <div class=\"weather_card-middle\">\n              <img src=\"${item.generalWeatherConditionIcon || ''}\" loading=\"lazy\" width=\"98\" height=\"98\" alt=\"Weather Condition\" class=\"weather_card-image dayCondition\">\n            </div>\n            <div class=\"weather_card-bottom\">\n              <div class=\"weather_card-bottom-top ${item.isNightIcon || 'is-day'}\">\n                <div class=\"highTemp text-size-xxmedium\">${highTemp}°</div>\n                <div class=\"lowTemp text-size-xxmedium text-color-light-grey-4\">${lowTemp}°</div>\n              </div>\n              <div class=\"dayShortForecast text-size-small text-weight-semibold letter-spacing-4 text-style-allcaps\">${item.shortForecast || ''}</div>\n            </div>\n          </div>\n        </div>\n      `;\n  }\n\n};\n</script>\n"}
 className={`w-html-embed`} />
 </section>
 <section
@@ -3016,14 +3016,14 @@ className={`w-element c1numhkq c1diokdk ch3nxmx ciot89f c20rkyc c9su8v5 c1idbwr4
 <div
 className={`w-element c1numhkq c1diokdk ct0qrmw cj1o4tp c1q4fbwg ce6x08i c1lg7bh9 ciylvte c18oqc5x c1exxhe2`}>
 <Image
-src={"/assets/consult-headshot_pat_nmBpGtvkcu06q14ZZ9PF_.webp"}
+src={"/uploads/consult_headshot_pat_nm_Bp_Gtvkcu06q14_ZZ_9_PF_c0a0113ced.webp"}
 width={200}
 height={200}
 alt={"Project consultant Pat"}
 loading={"lazy"}
 className={`w-image cfgaftm c1hwvjgs cdmu5h7 czbu68a ce6x08i c155pijp cn87dm8 c1uhhf7h c14dc6x6 cr4tyxq c1n4uvdf cuos2rc ceghu2f c18bj3o3 c1lq6pq8`} />
 <Image
-src={"/assets/team-headshot-austin_Tr5L2ZUMrx1WZudELZHQn.webp"}
+src={"/uploads/team_headshot_austin_Tr5_L2_ZU_Mrx1_W_Zud_ELZH_Qn_584f724736.webp"}
 width={900}
 height={800}
 alt={"Project consultant Austin"}
@@ -3155,7 +3155,7 @@ className={`w-element c82qwqc c1uaxhv2 cacmu18 c1ezjj73 cahz6x0 cmchden`}>
 </Link>
 </p>
 <Image
-src={"/assets/Capitol_Improvements_NC_Team_Photo-2_i3OwHqAAXk4enl27LX1fN.webp"}
+src={"/uploads/Capitol_Improvements_NC_Team_Photo_2_i3_Ow_Hq_AA_Xk4enl27_LX_1f_N_3f0dd91438.webp"}
 width={1000}
 height={667}
 alt={"Capitol Improvements NC Team Photo"}
@@ -3198,7 +3198,7 @@ className={`w-element c1g3mhtg cn5qs21 c1b2b7rn chdomh6`}>
 <div
 className={`w-element c1numhkq c1diokdk ct0qrmw c1ym9r0h c1350r63 c1otj3om cn3kss c1kioei4`}>
 <Image
-src={"/assets/rating_stars_CVEFPd3QYWQUgqS-viwpM.svg"}
+src={"/uploads/rating_stars_CVEF_Pd3_QYWQ_Ugq_S_viwp_M_c1b7210fab.svg"}
 width={110}
 height={20}
 alt={"5 stars logo."}
@@ -4012,15 +4012,16 @@ className={`w-element ch7xx7z c82qwqc`}>
 <Fragment_1>
 <HtmlEmbed
 code={"<script>(function(factory){if(typeof define===\"function\"&&define.amd){define(factory)}else if(typeof module!==\"undefined\"&&module.exports){module.exports=factory()}else{window.enterView=factory.call(this)}})((()=>{const lib=({selector:selector,enter:enter=(()=>{}),exit:exit=(()=>{}),progress:progress=(()=>{}),offset:offset=0,once:once=false})=>{let raf=null;let ticking=false;let elements=[];let height=0;function setupRaf(){raf=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.msRequestAnimationFrame||function(callback){return setTimeout(callback,1e3/60)}}function getOffsetHeight(){if(offset&&typeof offset===\"number\"){const fraction=Math.min(Math.max(0,offset),1);return height-fraction*height}return height}function updateHeight(){const cH=document.documentElement.clientHeight;const wH=window.innerHeight||0;height=Math.max(cH,wH)}function updateScroll(){ticking=false;const targetFromTop=getOffsetHeight();elements=elements.filter((el=>{const{top:top,bottom:bottom,height:height}=el.getBoundingClientRect();const entered=top<targetFromTop;const exited=bottom<targetFromTop;if(entered&&!el.__ev_entered){enter(el);el.__ev_progress=0;progress(el,el.__ev_progress);if(once)return false}else if(!entered&&el.__ev_entered){el.__ev_progress=0;progress(el,el.__ev_progress);exit(el)}if(entered&&!exited){const delta=(targetFromTop-top)/height;el.__ev_progress=Math.min(1,Math.max(0,delta));progress(el,el.__ev_progress)}if(entered&&exited&&el.__ev_progress!==1){el.__ev_progress=1;progress(el,el.__ev_progress)}el.__ev_entered=entered;return true}));if(!elements.length){window.removeEventListener(\"scroll\",onScroll,true);window.removeEventListener(\"resize\",onResize,true);window.removeEventListener(\"load\",onLoad,true)}}function onScroll(){if(!ticking){ticking=true;raf(updateScroll)}}function onResize(){updateHeight();updateScroll()}function onLoad(){updateHeight();updateScroll()}function selectionToArray(selection){const len=selection.length;const result=[];for(let i=0;i<len;i+=1){result.push(selection[i])}return result}function selectAll(selector,parent=document){if(typeof selector===\"string\"){return selectionToArray(parent.querySelectorAll(selector))}else if(selector instanceof NodeList){return selectionToArray(selector)}else if(selector instanceof Array){return selector}}function setupElements(){elements=selectAll(selector)}function setupEvents(){window.addEventListener(\"resize\",onResize,true);window.addEventListener(\"scroll\",onScroll,true);window.addEventListener(\"load\",onLoad,true);onResize()}function init(){if(!selector){console.error(\"must pass selector\");return false}setupElements();if(!elements||!elements.length){console.error(\"no els found\");return false}setupRaf();setupEvents();updateScroll()}init()};return lib}));</script>"}
-executeScriptOnCanvas={true}
+executeScriptOnCanvas={false}
 clientOnly={true}
 className={`w-html-embed`} />
 <HtmlEmbed
 code={"<style>\n:root {\n  --ani-duration: var(--duration-default, .2s);\n  --ani-delay: 0s;\n  --ani-slide-offset: 20%;\n  --ani-zoom-in-scale: 1;\n  --ani-zoom-out-scale: .85;\n  --ani-flip-rotate: 30deg;\n  --ani-easing: var(--easing-default, ease);\n  --ani-fill-mode: forwards;\n}\n[data-ani]:not([data-ani-children]),[data-ani-children]:not([data-ani-progress])>*{animation-duration:var(--ani-duration);animation-delay:var(--ani-delay);animation-timing-function:var(--ani-easing);animation-fill-mode:var(--ani-fill-mode);opacity:0}[data-ani-progress]:not([data-ani-children]),[data-ani-children]:not([data-ani])>*{transition-property:opacity,transform;transition-duration:var(--ani-duration);transition-timing-function:var(--ani-easing);opacity:0}\n@keyframes fadeIn{from{opacity:0}\nto{opacity:1}}\n@keyframes fadeOut{from{opacity:1}\nto{opacity:0}}[data-ani-children][data-ani='fade']>.in,[data-ani='fade']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:fadeIn}[data-ani-children][data-ani='fade']>.out,[data-ani='fade']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:fadeOut}\n@keyframes slideIn{from{opacity:0;translate:var(--ani-slide-transform)}\nto{opacity:1;translate:none}}\n@keyframes slideOut{from{opacity:1;translate:none}\nto{opacity:0;translate:var(--ani-slide-transform)}}[data-ani-children][data-ani|='slide']>.in,[data-ani|='slide']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:slideIn}[data-ani-children][data-ani|='slide']>.out,[data-ani|='slide']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:slideOut}[data-ani='slide-up']{--ani-slide-transform:0 var(--ani-slide-offset)}[data-ani='slide-down']{--ani-slide-transform:0 calc(-1*var(--ani-slide-offset))}[data-ani='slide-left']{--ani-slide-transform:var(--ani-slide-offset)}[data-ani='slide-right']{--ani-slide-transform:calc(-1*var(--ani-slide-offset))}\n@keyframes zoomIn{from{opacity:0;scale:var(--ani-zoom-out-scale)}\nto{opacity:1;scale:1}}\n@keyframes zoomOut{from{opacity:1;scale:1}\nto{opacity:0;scale:var(--ani-zoom-in-scale)}}[data-ani-children][data-ani='zoom']>.in,[data-ani|='zoom']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:zoomIn}[data-ani-children][data-ani='zoom']>.out,[data-ani|='zoom']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:zoomOut}[data-ani-children][data-ani-progress='zoom']>*,[data-ani-progress='zoom']:not([data-ani-children]){transform:scale(var(--ani-zoom-out-scale))}\n@keyframes flipInY{from{rotate:y var(--ani-flip-rotate);perspective:2000px;opacity:0}\nto{rotate:y 0;opacity:1}}\n@keyframes flipOutY{from{rotate:y 0;opacity:1}\nto{perspective:2000px;rotate:y var(--ani-flip-rotate);opacity:0}}\n@keyframes flipInX{from{perspective:2000px;rotate:x var(--ani-flip-rotate);opacity:0}\nto{rotate:x 0;opacity:1}}\n@keyframes flipOutX{from{rotate:x 0;opacity:1}\nto{perspective:2000px;rotate:x var(--ani-flip-rotate);opacity:0}}[data-ani-children][data-ani='flip-y']>.in,[data-ani='flip-y']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:flipInY}[data-ani-children][data-ani='flip-x']>.in,[data-ani='flip-x']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:flipInX}[data-ani-children][data-ani='flip-y']>.out,[data-ani='flip-y']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:flipOutY}[data-ani-children][data-ani='flip-x']>.out,[data-ani='flip-x']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:flipOutX}\n@keyframes expandDown{from{height:0}\nto{height:var(--newHeight)}}\n@keyframes expandUp{from{height:var(--newHeight)}\nto{height:0}}[data-ani='expand'],[data-ani='expand'][data-state='open'],[data-ani='expand'].in{--newHeight:var(--custom-height,var(--radix-accordion-content-height,var(--radix-collapsible-content-height,100%)));overflow:hidden;opacity:1}[data-ani-children][data-ani='expand']>.in,[data-ani='expand']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation:expandDown var(--ani-duration)var(--ani-easing)}[data-ani-children][data-ani='expand']>.out,[data-ani='expand']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation:expandUp var(--ani-duration)var(--ani-easing)}\n@media(prefers-reduced-motion:reduce){[data-ani]:not([data-ani-children]),[data-ani-progress]:not([data-ani-children]),[data-ani-children]>*{opacity:1;transform:none;animation:none;rotate:none;scale:none;translate:none}}\n</style>"}
+clientOnly={true}
 className={`w-html-embed`} />
 <HtmlEmbed
 code={"<script type=\"module\">\nconst config = {\n\tintersectionOffset: 0.2,\n\tintersectionOnce: true,\n\tprogressOffset: 0,\n\tprogressOnce: false,\n};\nfunction e({trigger:e,selector:r,offset:n,once:s}){const a=\"progress\"===e;return enterView({selector:r,enter:e=>!a&&t(e,\"in\",\"out\"),exit:e=>!a&&t(e,\"out\",\"in\"),progress:(e,t)=>a&&function(e,t){e.style.opacity=t,e.style.transform=function(e,t){const r=e.parentElement,n=r&&r.hasAttribute(\"data-ani-progress\")?r.getAttribute(\"data-ani-progress\"):e.getAttribute(\"data-ani-progress\"),s=parseFloat(getComputedStyle(e).getPropertyValue(\"--ani-slide-offset\"))||0,a=parseFloat(getComputedStyle(e).getPropertyValue(\"--ani-flip-rotate\"))||0,o=1-(1-t)*(1-parseFloat(getComputedStyle(e).getPropertyValue(\"--ani-zoom-out-scale\"))||1);switch(n){case\"slide-up\":return`translateY(${(1-t)*s}px)`;case\"slide-down\":return`translateY(-${(1-t)*s}px)`;case\"slide-left\":return`translateX(${(1-t)*s}px)`;case\"slide-right\":return`translateX(-${(1-t)*s}px)`;case\"flip-x\":return`rotateX(${(1-t)*a}deg)`;case\"flip-y\":return`rotateY(${(1-t)*a}deg)`;case\"zoom\":return`scale(${o})`;default:return\"none\"}}(e,t)}(e,t),offset:n,once:s})}function t(e,t,r){e.classList.add(t),e.classList.remove(r)}function r(e,t){const r=`[${e}]${t?'[data-ani-children=\"true\"] > *':':not([data-ani-children=\"true\"])'}`;return Array.from(document.querySelectorAll(r))}const n=[...r(\"data-ani\"),...r(\"data-ani\",!0)],s=[...r(\"data-ani-progress\"),...r(\"data-ani-progress\",!0)];n.length&&e({trigger:\"intersection\",selector:n,offset:config.intersectionOffset,once:config.intersectionOnce}),s.length&&e({trigger:\"progress\",selector:s,offset:config.progressOffset,once:config.progressOnce});\n</script>"}
-executeScriptOnCanvas={true}
+executeScriptOnCanvas={false}
 clientOnly={true}
 className={`w-html-embed`} />
 </Fragment_1>

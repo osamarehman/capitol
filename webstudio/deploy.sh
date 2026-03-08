@@ -8,6 +8,9 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 LOG_FILE="/var/log/webstudio-deploy.log"
 LOCK_FILE="/tmp/webstudio-deploy.lock"
 
+export STRAPI_URL="${STRAPI_URL:-http://localhost:1337}"
+export STRAPI_TOKEN="${STRAPI_TOKEN:-}"
+
 log() {
   echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$LOG_FILE"
 }
@@ -43,13 +46,13 @@ fi
 log "Syncing project data from Webstudio cloud..."
 npx webstudio sync 2>&1 | tee -a "$LOG_FILE"
 
-# Step 3: Build project with assets (generates routes, downloads assets)
-log "Building project with assets..."
-npx webstudio build --assets --template docker 2>&1 | tee -a "$LOG_FILE"
+# Step 3: Build project (generates routes, no asset download - assets served from Strapi)
+log "Building project..."
+npx webstudio build --template docker 2>&1 | tee -a "$LOG_FILE"
 
-# Step 4: Run post-sync patches (fix font URLs, hydration issues)
-log "Running post-sync patches..."
-bash scripts/post-sync.sh 2>&1 | tee -a "$LOG_FILE"
+# Step 4: Optimize assets (download externals, upload to Strapi, fix hydration)
+log "Optimizing assets and fixing hydration..."
+bash scripts/optimize-assets.sh 2>&1 | tee -a "$LOG_FILE"
 
 # Step 5: Build Docker image (no cache to pick up all changes)
 log "Building Docker image..."

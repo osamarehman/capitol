@@ -11,7 +11,7 @@ import { NavigationMenu as NavigationMenu, NavigationMenuList as NavigationMenuL
 
       export const projectId = "5b897bfc-8b80-4b2a-bfed-79ac7ec37365";
 
-      export const lastPublished = "2026-03-07T22:43:38.864Z";
+      export const lastPublished = "2026-03-08T02:54:27.839Z";
 
       export const siteName = "Capitol Improvements";
 
@@ -37,7 +37,7 @@ className={`w-box cnregu4 c3a6wb5 c14dzf92`}>
 <Slot>
 <Fragment_1>
 <HtmlEmbed
-code={"<style>  \n/* RESET */\n* {\n  margin: 0;\n  scroll-behavior: smooth;\n}\n\n/* Prevent events on closed sheet */\n.viewport-container {\n  pointer-events: none !important;\n}\n.viewport-container .menu-viewport[data-state=\"open\"] {\n  pointer-events: auto !important;\n}\nbody.menu-open {\n  overflow: hidden;\n}\n  \n/* ACCORDION ANIMATION  */\n.AccordionContent {\n  overflow: hidden;\n}\n.AccordionContent[data-state=\"open\"] {\n  animation: accordionSlideDown 300ms ease-out;\n}\n.AccordionContent[data-state=\"closed\"] {\n  animation: accordionSlideUp 300ms ease-out;\n}\n\n@keyframes accordionSlideDown {\n  from { height: 0; }\n  to { height: var(--radix-accordion-content-height); }\n}\n\n@keyframes accordionSlideUp {\n  from { height: var(--radix-accordion-content-height); }\n  to { height: 0; }\n}\n\n/* Accordion Header active state color change */\n.AccordionTrigger {\n  transition: color 250ms ease; /* optional smooth fade */\n}\n\n.AccordionTrigger.Firebrick[data-state=\"open\"] {\n  color: var(--firebrick);\n}\n\n/* Accordion Cross Icon rotate  */\n.CrossIconLine {\n  transform-origin: center;\n  transform: rotate(0deg);\n  transition: transform 250ms ease;\n}\n\n.AccordionCross[data-state=\"open\"] .CrossIconLine {\n  transform: rotate(90deg);\n}\n  \n/* READ MORE TRANSITION   */\n.read-more-content {\n  opacity: 0;\n  max-height: 0;\n  overflow: hidden;\n  transition: opacity 0.3s ease, max-height 0.3s ease;\n}\n\n.read-more-content.is-visible {\n  opacity: 1;\n  max-height: 500px;\n}\n\n  /* Responsive Map CSS  */\n.responsive-map {\n  position: relative;\n  width: 100%;\n  height: 0;\n  padding-bottom: 75%; /* 4:3 aspect ratio (480/640 = 0.75) */\n  overflow: hidden;\n}\n\n.responsive-map iframe {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100% !important;\n  height: 100% !important;\n  border: 0;\n}\n/* For mobile portrait (smaller screens) */\n@media screen and (max-width: 768px) {\n  .responsive-map {\n    padding-bottom: 100%; /* Make it more square on mobile */\n    margin: 10px 0; /* Add some vertical spacing */\n  }\n}\n\n/* For very small screens */\n@media screen and (max-width: 480px) {\n  .responsive-map {\n    padding-bottom: 120%; /* Taller aspect ratio for very small screens */\n  }\n}\n  \n/* Asphalt Roofing product top row padding removal  */\n@media only screen and (max-width: 1279px) {\n\t.product-top-row {\n\t\tpadding-right: 0rem;\n\t}\n}\n\n  /* Commercial Roofing Paragraph & Grid reveal  */\n.commercial-grid {\n  display: none;\n}\n  \n.commercial-paragraph {\n  display: none;\n}\n\n.commercial-wrapper.is-expanded .commercial-paragraph {\n  display: block;\n}\n  \n.commercial-wrapper.is-expanded .commercial-grid {\n  display: grid;\n} \n  \n.commercial-wrapper.is-expanded .commercial-read-more {\n  display: none;\n}\n  \n@media (max-width: 479px) {\n  .commercial-grid {\n    display: none !important;\n  }\n}\n\n/* class for display:none  */\n.is--hidden {\n  display: none;\n}\n.is--visible {\n  display: block;\n}\n\na {\n  color: var(--foreground-secondary);\n  text-decoration: none;\n}\n\n.dropdown-list.is-2,\n.dropdown-list.is-3 {\n  height: 0;\n  overflow: hidden;\n  transition: height 0.3s ease;\n}\n\n.nav {\n  contain: layout style;\n  will-change: transform;\n  backface-visibility: hidden;\n}\n  \n/* Menu open state */\nbody.is-nav-open {\n  overflow: hidden;\n}\n\nbody.is-nav-open .nav-menu {\n  display: block !important;\n}\n\nbody.is-nav-open .hamburger-line {\n  display: none !important;\n}\n\nbody.is-nav-open .nav-icon {\n  display: block !important;\n}\n\n</style>\n\n"}
+code={"<style>  \n/* RESET */\n* {\n  margin: 0;\n  scroll-behavior: smooth;\n}\n\n/* Prevent events on closed sheet */\n.viewport-container {\n  pointer-events: none !important;\n}\n.viewport-container .menu-viewport[data-state=\"open\"] {\n  pointer-events: auto !important;\n}\nbody.menu-open {\n  overflow: hidden;\n}\n  \n/* ACCORDION ANIMATION  */\n.AccordionContent {\n  overflow: hidden;\n}\n.AccordionContent[data-state=\"open\"] {\n  animation: accordionSlideDown 300ms ease-out;\n}\n.AccordionContent[data-state=\"closed\"] {\n  animation: accordionSlideUp 300ms ease-out;\n}\n\n@keyframes accordionSlideDown {\n  from { height: 0; }\n  to { height: var(--radix-accordion-content-height); }\n}\n\n@keyframes accordionSlideUp {\n  from { height: var(--radix-accordion-content-height); }\n  to { height: 0; }\n}\n\n/* Accordion Header active state color change */\n.AccordionTrigger {\n  transition: color 250ms ease; /* optional smooth fade */\n}\n\n.AccordionTrigger.Firebrick[data-state=\"open\"] {\n  color: var(--firebrick);\n}\n\n/* Accordion Cross Icon rotate  */\n.CrossIconLine {\n  transform-origin: center;\n  transform: rotate(0deg);\n  transition: transform 250ms ease;\n}\n\n.AccordionCross[data-state=\"open\"] .CrossIconLine {\n  transform: rotate(90deg);\n}\n  \n/* READ MORE TRANSITION   */\n.read-more-content {\n  opacity: 0;\n  max-height: 0;\n  overflow: hidden;\n  transition: opacity 0.3s ease, max-height 0.3s ease;\n}\n\n.read-more-content.is-visible {\n  opacity: 1;\n  max-height: 500px;\n}\n\n  /* Responsive Map CSS  */\n.responsive-map {\n  position: relative;\n  width: 100%;\n  height: 0;\n  padding-bottom: 75%; /* 4:3 aspect ratio (480/640 = 0.75) */\n  overflow: hidden;\n}\n\n.responsive-map iframe {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100% !important;\n  height: 100% !important;\n  border: 0;\n}\n/* For mobile portrait (smaller screens) */\n@media screen and (max-width: 768px) {\n  .responsive-map {\n    padding-bottom: 100%; /* Make it more square on mobile */\n    margin: 10px 0; /* Add some vertical spacing */\n  }\n}\n\n/* For very small screens */\n@media screen and (max-width: 480px) {\n  .responsive-map {\n    padding-bottom: 120%; /* Taller aspect ratio for very small screens */\n  }\n}\n  \n/* Asphalt Roofing product top row padding removal  */\n@media only screen and (max-width: 1279px) {\n\t.product-top-row {\n\t\tpadding-right: 0rem;\n\t}\n}\n\n  /* Commercial Roofing Paragraph & Grid reveal  */\n.commercial-grid {\n  display: none;\n}\n  \n.commercial-paragraph {\n  display: none;\n}\n\n.commercial-wrapper.is-expanded .commercial-paragraph {\n  display: block;\n}\n  \n.commercial-wrapper.is-expanded .commercial-grid {\n  display: grid;\n} \n  \n.commercial-wrapper.is-expanded .commercial-read-more {\n  display: none;\n}\n  \n@media (max-width: 479px) {\n  .commercial-grid {\n    display: none !important;\n  }\n}\n\n/* class for display:none  */\n.is--hidden {\n  display: none;\n}\n.is--visible {\n  display: block;\n}\n\na {\n  color: var(--foreground-secondary);\n  text-decoration: none;\n}\n\n.dropdown-list.is-2,\n.dropdown-list.is-3 {\n  height: 0;\n  overflow: hidden;\n  transition: height 0.3s ease;\n}\n\n.nav {\n  contain: layout style;\n  will-change: transform;\n  backface-visibility: hidden;\n}\n  \n/* Menu open state */\nbody.is-nav-open {\n  overflow: hidden;\n}\n\nbody.is-nav-open .nav-menu {\n  display: block !important;\n}\n\nbody.is-nav-open .hamburger-line {\n  display: none !important;\n}\n\nbody.is-nav-open .nav-icon {\n  display: block !important;\n}\n</style>"}
 clientOnly={true}
 className={`w-html-embed`} />
 <nav
@@ -106,13 +106,13 @@ className={`w-element c1k5oipc`}>
 className={`w-element c1osufuw c3sv84c c84c42r`}>
 <Image
 alt={"Logo Icon"}
-src={"/assets/capitol_improvements_logo_mui4YFXSPvMEj33G1EyWT.svg"}
+src={"/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
 width={18}
 height={12}
 loading={"eager"}
 className={`w-image cqsaj3r c11y8oun ctpsi40 c12l5srj`} />
 <Image
-src={"/assets/capitol_improvements_logo_text_IlLfLABIT-imV1nR5DxY3.svg"}
+src={"/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
 width={161}
 height={8}
 alt={"Logo Text"}
@@ -389,7 +389,7 @@ className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"https://cms.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={""}
@@ -583,7 +583,7 @@ className={`w-element c1numhkq c53aqfr ct0qrmw cfcahn6 c1hx6vht c1epvuph c6hmdm4
 href={"tel:3017696909"}
 className={`w-link c1lvj0n c19ftcvs c1vqewwo cacmu18 c9te4zd c1u81kxm c1v2l8nt c53aqfr ct0qrmw c1lzjd2w cn7k83s c1d8rs8t cwr9gsc c1ehmfnq c1owcyig c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da cv3rgxc cahz6x0 cmchden c1amh7xl cimel00 c1b6be7c c1842oze c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 ckkl2uw cchbu1a c1lgs1h6 c1osufuw`}>
 <Image
-src={"https://cms.improveitmd.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
+src={"/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
 width={16}
 height={16}
 alt={"Phone icon"}
@@ -615,7 +615,7 @@ className={`w-element c1numhkq cqilze0 c1diokdk c3auquk c1r7jime c1hx6vht cfefby
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"https://cms.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={"Logo"}
@@ -933,7 +933,7 @@ className={`w-link cekr8vl cyzpk7y cm1pdbc cacmu18 crv3s27 c1u81kxm c1v2l8nt c1d
 </div>
 </nav>
 <HtmlEmbed
-code={"<!-- 1. Menu viewport observer -->\n<script type=\"module\">\nconst observer = new MutationObserver(() => {\n  const isMenuOpen = !!document.querySelector('.menu-viewport');\n  document.body.classList.toggle('menu-open', isMenuOpen);\n});\n\nobserver.observe(document.body, {\n  childList: true,\n  subtree: true\n});\n</script>\n\n<!-- 2. Sticky nav -->\n<script type=\"module\">\ntry {\n  if (window.innerWidth >= 991) {\n    const standardNav = document.querySelector(\".nav.is--standard\");\n    const stickyNav = document.querySelector(\".nav.is--sticky\");\n\n    if (!standardNav || !stickyNav) throw new Error(\"Standard or Sticky navigation elements not found.\");\n\n    stickyNav.style.position = 'fixed';\n    stickyNav.style.top = '0';\n    stickyNav.style.left = '0';\n    stickyNav.style.right = '0';\n    stickyNav.style.willChange = 'transform';\n    stickyNav.style.transition = 'transform 0.3s ease-out';\n    stickyNav.style.transform = 'translateY(-101%)';\n    stickyNav.style.WebkitTransform = 'translateY(-101%)';\n\n    const switchPoint = 150;\n    let lastScrollPosition = window.scrollY;\n    let ticking = false;\n\n    function applyNavState() {\n      const currentScrollPosition = window.scrollY;\n\n      if (Math.abs(currentScrollPosition - lastScrollPosition) > 5 || currentScrollPosition === 0) {\n        if (currentScrollPosition > switchPoint) {\n          standardNav.style.visibility = 'hidden';\n          stickyNav.style.pointerEvents = 'auto';\n          requestAnimationFrame(() => {\n            stickyNav.style.transform = 'translateY(0%)';\n            stickyNav.style.WebkitTransform = 'translateY(0%)';\n          });\n        } else {\n          standardNav.style.visibility = 'visible';\n          stickyNav.style.pointerEvents = 'none';\n          requestAnimationFrame(() => {\n            stickyNav.style.transform = 'translateY(-101%)';\n            stickyNav.style.WebkitTransform = 'translateY(-101%)';\n          });\n        }\n        lastScrollPosition = currentScrollPosition;\n      }\n      ticking = false;\n    }\n\n    function setNavState() {\n      applyNavState();\n    }\n\n    window.addEventListener(\"scroll\", () => {\n      if (!ticking) {\n        requestAnimationFrame(applyNavState);\n        ticking = true;\n      }\n    }, { passive: true });\n\n    document.body.addEventListener(\"click\", () => {\n      requestAnimationFrame(setNavState);\n    });\n\n    let resizeTimeout;\n    window.addEventListener('resize', () => {\n      clearTimeout(resizeTimeout);\n      resizeTimeout = setTimeout(() => {\n        if (window.innerWidth < 991) {\n          standardNav.style.visibility = 'visible';\n          stickyNav.style.transform = 'translateY(-101%)';\n          stickyNav.style.WebkitTransform = 'translateY(-101%)';\n        }\n      }, 250);\n    }, { passive: true });\n  }\n} catch (error) {\n  console.error(error.message);\n}\n</script>\n\n<!-- 3. Dropdown/submenu -->\n<script type=\"module\">\ndocument.body.addEventListener('click', (e) => {\n  if (e.target.matches('.plus-link.is-2')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList2 = document.querySelector('.dropdown-list.is-2');\n    if (!mainList || !subList2) return;\n    mainList.style.height = '0';\n    mainList.style.overflow = 'hidden';\n    subList2.style.height = subList2.scrollHeight + 'px';\n    subList2.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.plus-link.is-3')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList3 = document.querySelector('.dropdown-list.is-3');\n    if (!mainList || !subList3) return;\n    mainList.style.height = '0';\n    mainList.style.overflow = 'hidden';\n    subList3.style.height = subList3.scrollHeight + 'px';\n    subList3.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.back-link.is-1')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList2 = document.querySelector('.dropdown-list.is-2');\n    if (!mainList || !subList2) return;\n    subList2.style.height = '0';\n    subList2.style.overflow = 'hidden';\n    mainList.style.height = mainList.scrollHeight + 'px';\n    mainList.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.back-link.is-2')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList3 = document.querySelector('.dropdown-list.is-3');\n    if (!mainList || !subList3) return;\n    subList3.style.height = '0';\n    subList3.style.overflow = 'hidden';\n    mainList.style.height = mainList.scrollHeight + 'px';\n    mainList.style.overflow = 'visible';\n  }\n});\n</script>\n\n<!-- 4. Hamburger + custom menu -->\n<script type=\"module\">\ndocument.addEventListener('click', (e) => {\n  const backIcon = e.target.closest('.nav-icon');\n  const hamburger = e.target.closest('.hamburger');\n\n  if (backIcon && document.body.classList.contains('is-nav-open')) {\n    document.body.classList.remove('is-nav-open');\n    return;\n  }\n\n  if (hamburger && !document.body.classList.contains('is-nav-open')) {\n    document.body.classList.add('is-nav-open');\n    return;\n  }\n});\n  document.addEventListener('mouseover', (e) => {\n  if (e.target.closest('.bg-overlay')) {\n    document.body.classList.remove('is-nav-open');\n  }\n});\n</script>"}
+code={"<script type=\"module\">\nconst observer = new MutationObserver(() => {\n  const isMenuOpen = !!document.querySelector('.menu-viewport');\n  document.body.classList.toggle('menu-open', isMenuOpen);\n});\n\nobserver.observe(document.body, {\n  childList: true,\n  subtree: true\n});\n</script>\n<script type=\"module\">\ntry {\n  if (window.innerWidth >= 991) {\n    const standardNav = document.querySelector(\".nav.is--standard\");\n    const stickyNav = document.querySelector(\".nav.is--sticky\");\n\n    if (!standardNav || !stickyNav) throw new Error(\"Standard or Sticky navigation elements not found.\");\n\n    stickyNav.style.position = 'fixed';\n    stickyNav.style.top = '0';\n    stickyNav.style.left = '0';\n    stickyNav.style.right = '0';\n    stickyNav.style.willChange = 'transform';\n    stickyNav.style.transition = 'transform 0.3s ease-out';\n    stickyNav.style.transform = 'translateY(-101%)';\n    stickyNav.style.WebkitTransform = 'translateY(-101%)';\n\n    const switchPoint = 150;\n    let lastScrollPosition = window.scrollY;\n    let ticking = false;\n\n    function applyNavState() {\n      const currentScrollPosition = window.scrollY;\n\n      if (Math.abs(currentScrollPosition - lastScrollPosition) > 5 || currentScrollPosition === 0) {\n        if (currentScrollPosition > switchPoint) {\n          standardNav.style.visibility = 'hidden';\n          stickyNav.style.pointerEvents = 'auto';\n          requestAnimationFrame(() => {\n            stickyNav.style.transform = 'translateY(0%)';\n            stickyNav.style.WebkitTransform = 'translateY(0%)';\n          });\n        } else {\n          standardNav.style.visibility = 'visible';\n          stickyNav.style.pointerEvents = 'none';\n          requestAnimationFrame(() => {\n            stickyNav.style.transform = 'translateY(-101%)';\n            stickyNav.style.WebkitTransform = 'translateY(-101%)';\n          });\n        }\n        lastScrollPosition = currentScrollPosition;\n      }\n      ticking = false;\n    }\n\n    function setNavState() {\n      applyNavState();\n    }\n\n    window.addEventListener(\"scroll\", () => {\n      if (!ticking) {\n        requestAnimationFrame(applyNavState);\n        ticking = true;\n      }\n    }, { passive: true });\n\n    document.body.addEventListener(\"click\", () => {\n      requestAnimationFrame(setNavState);\n    });\n\n    let resizeTimeout;\n    window.addEventListener('resize', () => {\n      clearTimeout(resizeTimeout);\n      resizeTimeout = setTimeout(() => {\n        if (window.innerWidth < 991) {\n          standardNav.style.visibility = 'visible';\n          stickyNav.style.transform = 'translateY(-101%)';\n          stickyNav.style.WebkitTransform = 'translateY(-101%)';\n        }\n      }, 250);\n    }, { passive: true });\n  }\n} catch (error) {\n  console.error(error.message);\n}\n</script>\n<script type=\"module\">\ndocument.body.addEventListener('click', (e) => {\n  if (e.target.matches('.plus-link.is-2')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList2 = document.querySelector('.dropdown-list.is-2');\n    if (!mainList || !subList2) return;\n    mainList.style.height = '0';\n    mainList.style.overflow = 'hidden';\n    subList2.style.height = subList2.scrollHeight + 'px';\n    subList2.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.plus-link.is-3')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList3 = document.querySelector('.dropdown-list.is-3');\n    if (!mainList || !subList3) return;\n    mainList.style.height = '0';\n    mainList.style.overflow = 'hidden';\n    subList3.style.height = subList3.scrollHeight + 'px';\n    subList3.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.back-link.is-1')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList2 = document.querySelector('.dropdown-list.is-2');\n    if (!mainList || !subList2) return;\n    subList2.style.height = '0';\n    subList2.style.overflow = 'hidden';\n    mainList.style.height = mainList.scrollHeight + 'px';\n    mainList.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.back-link.is-2')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList3 = document.querySelector('.dropdown-list.is-3');\n    if (!mainList || !subList3) return;\n    subList3.style.height = '0';\n    subList3.style.overflow = 'hidden';\n    mainList.style.height = mainList.scrollHeight + 'px';\n    mainList.style.overflow = 'visible';\n  }\n});\n</script>\n\n<!-- 4. Hamburger + custom menu -->\n<script type=\"module\">\ndocument.addEventListener('click', (e) => {\n  const backIcon = e.target.closest('.nav-icon');\n  const hamburger = e.target.closest('.hamburger');\n\n  if (backIcon && document.body.classList.contains('is-nav-open')) {\n    document.body.classList.remove('is-nav-open');\n    return;\n  }\n\n  if (hamburger && !document.body.classList.contains('is-nav-open')) {\n    document.body.classList.add('is-nav-open');\n    return;\n  }\n});\n  document.addEventListener('mouseover', (e) => {\n  if (e.target.closest('.bg-overlay')) {\n    document.body.classList.remove('is-nav-open');\n  }\n});\n</script>"}
 clientOnly={true}
 className={`w-html-embed`} />
 </Fragment_1>
@@ -967,7 +967,7 @@ className={`w-element c9aekss c1ihu3w4 c1tdj1xa c19nn5ac c1lwn44j c1fjww6l c1lpa
 <div
 className={`w-element c139pwc6 c1907jr4 c1epvuph cn87dm8 c1uhhf7h cjm2rxl c1ytvtu4 cgzewc9`}>
 <Image
-src={"/assets/capitol_improvements_hero_img_FZHOqkUiFhymVWEYjJhg4.webp"}
+src={"/uploads/capitol_improvements_hero_img_FZH_Oqk_Ui_Fhym_VWE_Yj_Jhg4_82025eb746.webp"}
 width={880}
 height={430}
 alt={"Compilation Video of the Capitol Improvements Team Completing Roofing, Siding, Window, Decks, Doors, and Gutter Installation Projects throughout DC, MD, and VA."}
@@ -977,7 +977,7 @@ className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a c15bin8n c1xbhoju cnbug7k 
 <div
 className={`w-element c139pwc6 c15bin8n c1epvuph c1edz3f7 cjm2rxl c1ytvtu4 cgzewc9 ${"hero-video-wrapper"}`}>
 <HtmlEmbed
-code={"<video class=\"hero-video\" autoplay muted playsinline preload=\"auto\" style=\"width:100%; height:100%; object-fit:cover;\">\n    <source src=\"https://ik.imagekit.io/einkpz9gr/65ca32dc202550e25648683a_Capitol%20Improvements%20-%20Roofing%20and%20Siding%20Contractors-transcode.webm/ik-video.mp4?updatedAt=1765471677644\" type=\"video/webm\">\n  </video>\n\n"}
+code={"<video class=\"hero-video\" autoplay muted playsinline preload=\"auto\" style=\"width:100%; height:100%; object-fit:cover;\">\n    <source src=\"/uploads/ik_imagekit_io_einkpz9gr_65ca32dc202550e25648683a_Capitol_20_Improvements_20_20_Roofing_20and_20_Siding_20_Contractors_transcode_webm_ik_video_0a02644ba7.mp4_updatedAt_1765471677644\" type=\"video/webm\">\n  </video>\n\n"}
 className={`w-html-embed`} />
 </div>
 </div>
@@ -1087,7 +1087,7 @@ href={"https://www.gaf.com/en-us/roofing-contractors/residential/usa/md/bowie/ca
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/assets/gaf_logo_WeITC5pApe2Cx61bwo3OP.svg"}
+src={"/uploads/gaf_logo_We_ITC_5p_Ape2_Cx61bwo3_OP_a7f1dbba11.svg"}
 width={128}
 height={128}
 alt={"GAF Master Elite logo. "}
@@ -1099,7 +1099,7 @@ href={"https://www.atlasroofing.com/find-a-contractor"}
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/assets/atlas_pro_logo_qVoeOFympg2By5s8t30-w.svg"}
+src={"/uploads/atlas_pro_logo_q_Voe_O_Fympg2_By5s8t30_w_7256482e4d.svg"}
 width={122}
 height={124}
 alt={"Atlas Pro+ Logo."}
@@ -1111,7 +1111,7 @@ href={"https://www.plygem.com/how-to-buy/"}
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/assets/plygem_logo_QbU2kzGyNyh5DFhFUqQLg.svg"}
+src={"/uploads/plygem_logo_Qb_U2kz_Gy_Nyh5_D_Fh_F_Uq_Q_Lg_9506b94850.svg"}
 width={145}
 height={124}
 alt={"Mastic by Plygem logo. "}
@@ -1123,7 +1123,7 @@ href={"https://www.mulehide.com/en-us/"}
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/assets/mule_hide_logo_DWOj97Vdm9nZDJUpkGyD8.svg"}
+src={"/uploads/mule_hide_logo_DW_Oj97_Vdm9n_ZDJ_Upk_Gy_D8_95951c235c.svg"}
 width={121}
 height={118}
 alt={"MuleHide logo. "}
@@ -1135,7 +1135,7 @@ href={"https://contractors.jameshardie.com/20720"}
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/assets/james_hardie_logo_C1LC6obnlrm346VyU2Gyg.svg"}
+src={"/uploads/james_hardie_logo_C1_LC_6obnlrm346_Vy_U2_Gyg_3b2faa7bc5.svg"}
 width={110}
 height={122}
 alt={"James Hardie logo."}
@@ -1513,7 +1513,7 @@ className={`w-link cvljm31 crv3s27 cacmu18 cn7k83s cyc4l41 c1d7h9xn c8a9tkm c1r2
 <div
 className={`w-element c139pwc6 cjhysm8 c13g3obg`}>
 <Image
-src={"/assets/warranty_section_img_GwIj3ENIcdlONosoIvS5g.webp"}
+src={"/uploads/warranty_section_img_Gw_Ij3_EN_Icdl_O_Noso_Iv_S5g_5697de5e8a.webp"}
 width={960}
 height={1034}
 alt={"Roofer being trained by Mule-Hide flat roof technician "}
@@ -1535,7 +1535,7 @@ className={`w-element c1numhkq c3auquk co72if5 c1u2ofx5 cvfl1ur c1jyyt23 c1nnsgt
 <div
 className={`w-element c1numhkq c1a06u5s c15kiuw7 ch3nxmx c1s88tz3 c15lzzou c139pwc6 c1sstzge c13g3obg c1m1w9fz c1sy7qlo c1s19qlc crfoyae cuwoxsi c4fmmfv c147y3ls`}>
 <Image
-src={"/assets/logo_enerbank_KYZ9WocfRi88302llqG7Q.svg"}
+src={"/uploads/logo_enerbank_KYZ_9_Wocf_Ri88302llq_G7_Q_8d9cc50e41.svg"}
 width={713}
 height={111}
 alt={"Enerbank USA financing logo."}
@@ -1563,7 +1563,7 @@ className={`w-link cvljm31 crv3s27 cacmu18 cn7k83s cyc4l41 c1d7h9xn c8a9tkm c1r2
 <div
 className={`w-element c139pwc6 cjhysm8 cjkauba c13g3obg`}>
 <Image
-src={"/assets/video_thumbnail_img_jicaILCYK2M1fBB2CwKg9.webp"}
+src={"/uploads/video_thumbnail_img_jica_ILCYK_2_M1f_BB_2_Cw_Kg9_e531a9140f.webp"}
 width={960}
 height={1034}
 alt={""}
@@ -1587,7 +1587,7 @@ className={`w-element c1numhkq cjgpxnj c1sq4bmy c139pwc6 c4ph8p6 c1t9puix czr9sb
 <div
 className={`w-element c18bj3o3 cxte6uv cyqqrx6 c16lpxcx cs0io4s cyovuht c12qh1s1`}>
 <Image
-src={"/assets/home_reviews_section_img_MZ8H2Bc6yjFnyhr96MfGR.webp"}
+src={"/uploads/home_reviews_section_img_MZ_8_H2_Bc6yj_Fnyhr96_Mf_GR_a5851b4e29.webp"}
 width={960}
 height={1490}
 alt={"Installing new siding on ladder."}
@@ -1611,7 +1611,7 @@ className={`w-element c1g3mhtg cn5qs21 c1b2b7rn chdomh6`}>
 <div
 className={`w-element c1numhkq c1diokdk ct0qrmw c1ym9r0h c1350r63 c1otj3om cn3kss c1kioei4`}>
 <Image
-src={"/assets/rating_stars_CVEFPd3QYWQUgqS-viwpM.svg"}
+src={"/uploads/rating_stars_CVEF_Pd3_QYWQ_Ugq_S_viwp_M_c1b7210fab.svg"}
 width={110}
 height={20}
 alt={"5 stars logo."}
@@ -1638,7 +1638,7 @@ className={`w-element c1g3mhtg cn5qs21 c1b2b7rn chdomh6`}>
 <div
 className={`w-element c1numhkq c1diokdk ct0qrmw c1ym9r0h c1350r63 c1otj3om cn3kss c1kioei4`}>
 <Image
-src={"/assets/rating_stars_CVEFPd3QYWQUgqS-viwpM.svg"}
+src={"/uploads/rating_stars_CVEF_Pd3_QYWQ_Ugq_S_viwp_M_c1b7210fab.svg"}
 width={110}
 height={20}
 alt={"5 stars logo."}
@@ -1665,7 +1665,7 @@ className={`w-element c1g3mhtg cn5qs21 c1b2b7rn chdomh6`}>
 <div
 className={`w-element c1numhkq c1diokdk ct0qrmw c1ym9r0h c1350r63 c1otj3om cn3kss c1kioei4`}>
 <Image
-src={"/assets/rating_stars_CVEFPd3QYWQUgqS-viwpM.svg"}
+src={"/uploads/rating_stars_CVEF_Pd3_QYWQ_Ugq_S_viwp_M_c1b7210fab.svg"}
 width={110}
 height={20}
 alt={"5 stars logo."}
@@ -1723,7 +1723,7 @@ className={`w-element cmsm1bz cvp609z c15p7bp0 c13gen24 c1txodcv curgy1m cyovuht
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c1irdqs7 c1p4xat6`}>
 <Image
-src={"/assets/google_logo_tcTKP_HWrQxpx4JBktjzM.svg"}
+src={"/uploads/google_logo_tc_TKP_H_Wr_Qxpx4_J_Bktjz_M_f958fb1238.svg"}
 width={54}
 height={54}
 alt={"Google logo. "}
@@ -1732,7 +1732,7 @@ className={`w-image c139pwc6 c1hwvjgs c9mjk8q c8vzzbi ca9fo5a`} />
 <div
 className={`w-element c1numhkq c1a06u5s c1603wqb`}>
 <Image
-src={"/assets/rating_stars_blue_uJg9G4HmjUBqMPxALqXQs.svg"}
+src={"/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_f612c9d17e.svg"}
 width={128}
 height={23}
 alt={"5 stars logo."}
@@ -1748,7 +1748,7 @@ className={`w-element c1hwvjgs cacmu18 c12n66pl`}>
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c1irdqs7 c1p4xat6`}>
 <Image
-src={"/assets/angi_logo_QZQiakZuvqdDDBUP7JXyt.svg"}
+src={"/uploads/angi_logo_QZ_Qiak_Zuvqd_DDBUP_7_J_Xyt_85d278ac2e.svg"}
 width={80}
 height={48}
 alt={"Angi logo. "}
@@ -1757,7 +1757,7 @@ className={`w-image c139pwc6 c1hwvjgs c9mjk8q c2aaj4h ca9fo5a ckdtkkn`} />
 <div
 className={`w-element c1numhkq c1a06u5s c1603wqb`}>
 <Image
-src={"/assets/rating_stars_blue_uJg9G4HmjUBqMPxALqXQs.svg"}
+src={"/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_f612c9d17e.svg"}
 width={128}
 height={23}
 alt={"5 stars logo."}
@@ -1773,7 +1773,7 @@ className={`w-element c1hwvjgs cacmu18 c12n66pl`}>
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c1irdqs7 c1p4xat6`}>
 <Image
-src={"/assets/bbb_logo_AZWqVTT1qPEO1pL97jlNq.svg"}
+src={"/uploads/bbb_logo_AZ_Wq_VTT_1q_PEO_1p_L97jl_Nq_b54dce6bf3.svg"}
 width={62}
 height={62}
 alt={"BBB logo. "}
@@ -1782,7 +1782,7 @@ className={`w-image c139pwc6 c1hwvjgs c9mjk8q cuyjpqi c5qn6ig`} />
 <div
 className={`w-element c1numhkq c1a06u5s c1603wqb`}>
 <Image
-src={"/assets/rating_stars_blue_uJg9G4HmjUBqMPxALqXQs.svg"}
+src={"/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_f612c9d17e.svg"}
 width={128}
 height={23}
 alt={"5 stars logo."}
@@ -2329,15 +2329,16 @@ className={`w-element ch7xx7z c82qwqc`}>
 <Fragment_1>
 <HtmlEmbed
 code={"<script>(function(factory){if(typeof define===\"function\"&&define.amd){define(factory)}else if(typeof module!==\"undefined\"&&module.exports){module.exports=factory()}else{window.enterView=factory.call(this)}})((()=>{const lib=({selector:selector,enter:enter=(()=>{}),exit:exit=(()=>{}),progress:progress=(()=>{}),offset:offset=0,once:once=false})=>{let raf=null;let ticking=false;let elements=[];let height=0;function setupRaf(){raf=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.msRequestAnimationFrame||function(callback){return setTimeout(callback,1e3/60)}}function getOffsetHeight(){if(offset&&typeof offset===\"number\"){const fraction=Math.min(Math.max(0,offset),1);return height-fraction*height}return height}function updateHeight(){const cH=document.documentElement.clientHeight;const wH=window.innerHeight||0;height=Math.max(cH,wH)}function updateScroll(){ticking=false;const targetFromTop=getOffsetHeight();elements=elements.filter((el=>{const{top:top,bottom:bottom,height:height}=el.getBoundingClientRect();const entered=top<targetFromTop;const exited=bottom<targetFromTop;if(entered&&!el.__ev_entered){enter(el);el.__ev_progress=0;progress(el,el.__ev_progress);if(once)return false}else if(!entered&&el.__ev_entered){el.__ev_progress=0;progress(el,el.__ev_progress);exit(el)}if(entered&&!exited){const delta=(targetFromTop-top)/height;el.__ev_progress=Math.min(1,Math.max(0,delta));progress(el,el.__ev_progress)}if(entered&&exited&&el.__ev_progress!==1){el.__ev_progress=1;progress(el,el.__ev_progress)}el.__ev_entered=entered;return true}));if(!elements.length){window.removeEventListener(\"scroll\",onScroll,true);window.removeEventListener(\"resize\",onResize,true);window.removeEventListener(\"load\",onLoad,true)}}function onScroll(){if(!ticking){ticking=true;raf(updateScroll)}}function onResize(){updateHeight();updateScroll()}function onLoad(){updateHeight();updateScroll()}function selectionToArray(selection){const len=selection.length;const result=[];for(let i=0;i<len;i+=1){result.push(selection[i])}return result}function selectAll(selector,parent=document){if(typeof selector===\"string\"){return selectionToArray(parent.querySelectorAll(selector))}else if(selector instanceof NodeList){return selectionToArray(selector)}else if(selector instanceof Array){return selector}}function setupElements(){elements=selectAll(selector)}function setupEvents(){window.addEventListener(\"resize\",onResize,true);window.addEventListener(\"scroll\",onScroll,true);window.addEventListener(\"load\",onLoad,true);onResize()}function init(){if(!selector){console.error(\"must pass selector\");return false}setupElements();if(!elements||!elements.length){console.error(\"no els found\");return false}setupRaf();setupEvents();updateScroll()}init()};return lib}));</script>"}
-executeScriptOnCanvas={true}
+executeScriptOnCanvas={false}
 clientOnly={true}
 className={`w-html-embed`} />
 <HtmlEmbed
 code={"<style>\n:root {\n  --ani-duration: var(--duration-default, .2s);\n  --ani-delay: 0s;\n  --ani-slide-offset: 20%;\n  --ani-zoom-in-scale: 1;\n  --ani-zoom-out-scale: .85;\n  --ani-flip-rotate: 30deg;\n  --ani-easing: var(--easing-default, ease);\n  --ani-fill-mode: forwards;\n}\n[data-ani]:not([data-ani-children]),[data-ani-children]:not([data-ani-progress])>*{animation-duration:var(--ani-duration);animation-delay:var(--ani-delay);animation-timing-function:var(--ani-easing);animation-fill-mode:var(--ani-fill-mode);opacity:0}[data-ani-progress]:not([data-ani-children]),[data-ani-children]:not([data-ani])>*{transition-property:opacity,transform;transition-duration:var(--ani-duration);transition-timing-function:var(--ani-easing);opacity:0}\n@keyframes fadeIn{from{opacity:0}\nto{opacity:1}}\n@keyframes fadeOut{from{opacity:1}\nto{opacity:0}}[data-ani-children][data-ani='fade']>.in,[data-ani='fade']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:fadeIn}[data-ani-children][data-ani='fade']>.out,[data-ani='fade']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:fadeOut}\n@keyframes slideIn{from{opacity:0;translate:var(--ani-slide-transform)}\nto{opacity:1;translate:none}}\n@keyframes slideOut{from{opacity:1;translate:none}\nto{opacity:0;translate:var(--ani-slide-transform)}}[data-ani-children][data-ani|='slide']>.in,[data-ani|='slide']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:slideIn}[data-ani-children][data-ani|='slide']>.out,[data-ani|='slide']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:slideOut}[data-ani='slide-up']{--ani-slide-transform:0 var(--ani-slide-offset)}[data-ani='slide-down']{--ani-slide-transform:0 calc(-1*var(--ani-slide-offset))}[data-ani='slide-left']{--ani-slide-transform:var(--ani-slide-offset)}[data-ani='slide-right']{--ani-slide-transform:calc(-1*var(--ani-slide-offset))}\n@keyframes zoomIn{from{opacity:0;scale:var(--ani-zoom-out-scale)}\nto{opacity:1;scale:1}}\n@keyframes zoomOut{from{opacity:1;scale:1}\nto{opacity:0;scale:var(--ani-zoom-in-scale)}}[data-ani-children][data-ani='zoom']>.in,[data-ani|='zoom']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:zoomIn}[data-ani-children][data-ani='zoom']>.out,[data-ani|='zoom']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:zoomOut}[data-ani-children][data-ani-progress='zoom']>*,[data-ani-progress='zoom']:not([data-ani-children]){transform:scale(var(--ani-zoom-out-scale))}\n@keyframes flipInY{from{rotate:y var(--ani-flip-rotate);perspective:2000px;opacity:0}\nto{rotate:y 0;opacity:1}}\n@keyframes flipOutY{from{rotate:y 0;opacity:1}\nto{perspective:2000px;rotate:y var(--ani-flip-rotate);opacity:0}}\n@keyframes flipInX{from{perspective:2000px;rotate:x var(--ani-flip-rotate);opacity:0}\nto{rotate:x 0;opacity:1}}\n@keyframes flipOutX{from{rotate:x 0;opacity:1}\nto{perspective:2000px;rotate:x var(--ani-flip-rotate);opacity:0}}[data-ani-children][data-ani='flip-y']>.in,[data-ani='flip-y']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:flipInY}[data-ani-children][data-ani='flip-x']>.in,[data-ani='flip-x']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:flipInX}[data-ani-children][data-ani='flip-y']>.out,[data-ani='flip-y']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:flipOutY}[data-ani-children][data-ani='flip-x']>.out,[data-ani='flip-x']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:flipOutX}\n@keyframes expandDown{from{height:0}\nto{height:var(--newHeight)}}\n@keyframes expandUp{from{height:var(--newHeight)}\nto{height:0}}[data-ani='expand'],[data-ani='expand'][data-state='open'],[data-ani='expand'].in{--newHeight:var(--custom-height,var(--radix-accordion-content-height,var(--radix-collapsible-content-height,100%)));overflow:hidden;opacity:1}[data-ani-children][data-ani='expand']>.in,[data-ani='expand']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation:expandDown var(--ani-duration)var(--ani-easing)}[data-ani-children][data-ani='expand']>.out,[data-ani='expand']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation:expandUp var(--ani-duration)var(--ani-easing)}\n@media(prefers-reduced-motion:reduce){[data-ani]:not([data-ani-children]),[data-ani-progress]:not([data-ani-children]),[data-ani-children]>*{opacity:1;transform:none;animation:none;rotate:none;scale:none;translate:none}}\n</style>"}
+clientOnly={true}
 className={`w-html-embed`} />
 <HtmlEmbed
 code={"<script type=\"module\">\nconst config = {\n\tintersectionOffset: 0.2,\n\tintersectionOnce: true,\n\tprogressOffset: 0,\n\tprogressOnce: false,\n};\nfunction e({trigger:e,selector:r,offset:n,once:s}){const a=\"progress\"===e;return enterView({selector:r,enter:e=>!a&&t(e,\"in\",\"out\"),exit:e=>!a&&t(e,\"out\",\"in\"),progress:(e,t)=>a&&function(e,t){e.style.opacity=t,e.style.transform=function(e,t){const r=e.parentElement,n=r&&r.hasAttribute(\"data-ani-progress\")?r.getAttribute(\"data-ani-progress\"):e.getAttribute(\"data-ani-progress\"),s=parseFloat(getComputedStyle(e).getPropertyValue(\"--ani-slide-offset\"))||0,a=parseFloat(getComputedStyle(e).getPropertyValue(\"--ani-flip-rotate\"))||0,o=1-(1-t)*(1-parseFloat(getComputedStyle(e).getPropertyValue(\"--ani-zoom-out-scale\"))||1);switch(n){case\"slide-up\":return`translateY(${(1-t)*s}px)`;case\"slide-down\":return`translateY(-${(1-t)*s}px)`;case\"slide-left\":return`translateX(${(1-t)*s}px)`;case\"slide-right\":return`translateX(-${(1-t)*s}px)`;case\"flip-x\":return`rotateX(${(1-t)*a}deg)`;case\"flip-y\":return`rotateY(${(1-t)*a}deg)`;case\"zoom\":return`scale(${o})`;default:return\"none\"}}(e,t)}(e,t),offset:n,once:s})}function t(e,t,r){e.classList.add(t),e.classList.remove(r)}function r(e,t){const r=`[${e}]${t?'[data-ani-children=\"true\"] > *':':not([data-ani-children=\"true\"])'}`;return Array.from(document.querySelectorAll(r))}const n=[...r(\"data-ani\"),...r(\"data-ani\",!0)],s=[...r(\"data-ani-progress\"),...r(\"data-ani-progress\",!0)];n.length&&e({trigger:\"intersection\",selector:n,offset:config.intersectionOffset,once:config.intersectionOnce}),s.length&&e({trigger:\"progress\",selector:s,offset:config.progressOffset,once:config.progressOnce});\n</script>"}
-executeScriptOnCanvas={true}
+executeScriptOnCanvas={false}
 clientOnly={true}
 className={`w-html-embed`} />
 </Fragment_1>
@@ -2371,7 +2372,7 @@ code={"<style> \n/* Chat Widget Variables - Can be overridden via JavaScript */\
 clientOnly={true}
 className={`w-html-embed`} />
 <HtmlEmbed
-code={"<!-- Chat Widget Container -->\n    <div id=\"custom-chat-widget\" class=\"chat-widget\">\n        <!-- Toggle Button -->\n        <button class=\"chat-widget__toggle\" id=\"chatToggle\">\n            <svg class=\"chat-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                <path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"></path>\n            </svg>\n            <svg class=\"close-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                <line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"></line>\n                <line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"></line>\n            </svg>\n        </button>\n\n        <!-- Chat Window -->\n        <div class=\"chat-widget__window\" id=\"chatWindow\">\n            <!-- Header -->\n            <div class=\"chat-widget__header\">\n                <div class=\"chat-widget__header-profile\">\n                    <img src=\"\" alt=\"Bot\" class=\"chat-widget__bot-avatar\" id=\"botAvatar\">\n                    <div class=\"chat-widget__header-info\">\n                        <h3 class=\"chat-widget__bot-name\" id=\"botName\">Sarah</h3>\n                        <p class=\"chat-widget__status\">Online</p>\n                    </div>\n                </div>\n                <button class=\"chat-widget__minimize\" id=\"minimizeBtn\">\n                    <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                        <line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line>\n                    </svg>\n                </button>\n            </div>\n\n            <!-- Quick Action Buttons -->\n            <div class=\"chat-widget__quick-actions\" id=\"quickActions\">\n                <button class=\"quick-action-btn\" data-action=\"quote\">\n                    <span class=\"quick-action-icon\">💰</span>\n                    <span class=\"quick-action-text\">Get a Quote</span>\n                </button>\n                <button class=\"quick-action-btn\" data-action=\"inspection\">\n                    <span class=\"quick-action-icon\">🔍</span>\n                    <span class=\"quick-action-text\">Schedule Inspection</span>\n                </button>\n                <button class=\"quick-action-btn\" data-action=\"agent\">\n                    <span class=\"quick-action-icon\">👤</span>\n                    <span class=\"quick-action-text\">Talk to Agent</span>\n                </button>\n            </div>\n\n            <!-- Messages Container -->\n            <div class=\"chat-widget__messages\" id=\"messagesContainer\">\n                <!-- Welcome Message -->\n                <div class=\"chat-message chat-message--bot\">\n                    <img src=\"https://cdn.prod.website-files.com/64bd6cb099271195afd55550/65ce1ef3fc1ed732ff31cb3f_Screenshot%202024-02-15%20at%2019.25.38.webp\" alt=\"Bot\" class=\"chat-message__avatar\" id=\"welcomeBotAvatar\">\n                    <div class=\"chat-message__content\">\n                        <div class=\"chat-message__bubble\">\n                            <p class=\"chat-message__text\">Hello! How can I help you today?</p>\n                            <span class=\"chat-message__time\"></span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <!-- Typing Indicator -->\n            <div class=\"chat-widget__typing\" id=\"typingIndicator\" style=\"display: none;\">\n                <img src=\"\" alt=\"Bot\" class=\"chat-message__avatar\" id=\"typingBotAvatar\">\n                <div class=\"typing-dots\">\n                    <span></span>\n                    <span></span>\n                    <span></span>\n                </div>\n            </div>\n\n            <!-- Input Area -->\n            <div class=\"chat-widget__input-area\">\n                <div class=\"chat-widget__input-wrapper\">\n                    <button class=\"chat-widget__attach-btn\" id=\"attachBtn\" title=\"Attach file\">\n                        <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                            <path d=\"M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48\"></path>\n                        </svg>\n                    </button>\n                    <input type=\"file\" id=\"fileInput\" multiple accept=\"image/*,video/*,audio/*,application/pdf,.doc,.docx\" style=\"display: none;\">\n                    <textarea\n                        class=\"chat-widget__input\"\n                        id=\"messageInput\"\n                        placeholder=\"Type your message...\"\n                        rows=\"1\"\n                    ></textarea>\n                    <button class=\"chat-widget__send-btn\" id=\"sendBtn\">\n                        <svg viewBox=\"0 0 24 24\" fill=\"currentColor\">\n                            <path d=\"M2.01 21L23 12 2.01 3 2 10l15 2-15 2z\"></path>\n                        </svg>\n                    </button>\n                </div>\n                <div class=\"chat-widget__file-preview\" id=\"filePreview\" style=\"display: none;\"></div>\n            </div>\n        </div>\n    </div>"}
+code={"<!-- Chat Widget Container -->\n    <div id=\"custom-chat-widget\" class=\"chat-widget\">\n        <!-- Toggle Button -->\n        <button class=\"chat-widget__toggle\" id=\"chatToggle\">\n            <svg class=\"chat-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                <path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"></path>\n            </svg>\n            <svg class=\"close-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                <line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"></line>\n                <line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"></line>\n            </svg>\n        </button>\n\n        <!-- Chat Window -->\n        <div class=\"chat-widget__window\" id=\"chatWindow\">\n            <!-- Header -->\n            <div class=\"chat-widget__header\">\n                <div class=\"chat-widget__header-profile\">\n                    <img src=\"\" alt=\"Bot\" class=\"chat-widget__bot-avatar\" id=\"botAvatar\">\n                    <div class=\"chat-widget__header-info\">\n                        <h3 class=\"chat-widget__bot-name\" id=\"botName\">Sarah</h3>\n                        <p class=\"chat-widget__status\">Online</p>\n                    </div>\n                </div>\n                <button class=\"chat-widget__minimize\" id=\"minimizeBtn\">\n                    <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                        <line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line>\n                    </svg>\n                </button>\n            </div>\n\n            <!-- Quick Action Buttons -->\n            <div class=\"chat-widget__quick-actions\" id=\"quickActions\">\n                <button class=\"quick-action-btn\" data-action=\"quote\">\n                    <span class=\"quick-action-icon\">💰</span>\n                    <span class=\"quick-action-text\">Get a Quote</span>\n                </button>\n                <button class=\"quick-action-btn\" data-action=\"inspection\">\n                    <span class=\"quick-action-icon\">🔍</span>\n                    <span class=\"quick-action-text\">Schedule Inspection</span>\n                </button>\n                <button class=\"quick-action-btn\" data-action=\"agent\">\n                    <span class=\"quick-action-icon\">👤</span>\n                    <span class=\"quick-action-text\">Talk to Agent</span>\n                </button>\n            </div>\n\n            <!-- Messages Container -->\n            <div class=\"chat-widget__messages\" id=\"messagesContainer\">\n                <!-- Welcome Message -->\n                <div class=\"chat-message chat-message--bot\">\n                    <img src=\"/uploads/cdn_prod_website_files_com_64bd6cb099271195afd55550_65ce1ef3fc1ed732ff31cb3f_Screenshot_202024_02_15_20at_2019_25_38_6b5f74c3fc.webp\" alt=\"Bot\" class=\"chat-message__avatar\" id=\"welcomeBotAvatar\">\n                    <div class=\"chat-message__content\">\n                        <div class=\"chat-message__bubble\">\n                            <p class=\"chat-message__text\">Hello! How can I help you today?</p>\n                            <span class=\"chat-message__time\"></span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <!-- Typing Indicator -->\n            <div class=\"chat-widget__typing\" id=\"typingIndicator\" style=\"display: none;\">\n                <img src=\"\" alt=\"Bot\" class=\"chat-message__avatar\" id=\"typingBotAvatar\">\n                <div class=\"typing-dots\">\n                    <span></span>\n                    <span></span>\n                    <span></span>\n                </div>\n            </div>\n\n            <!-- Input Area -->\n            <div class=\"chat-widget__input-area\">\n                <div class=\"chat-widget__input-wrapper\">\n                    <button class=\"chat-widget__attach-btn\" id=\"attachBtn\" title=\"Attach file\">\n                        <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                            <path d=\"M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48\"></path>\n                        </svg>\n                    </button>\n                    <input type=\"file\" id=\"fileInput\" multiple accept=\"image/*,video/*,audio/*,application/pdf,.doc,.docx\" style=\"display: none;\">\n                    <textarea\n                        class=\"chat-widget__input\"\n                        id=\"messageInput\"\n                        placeholder=\"Type your message...\"\n                        rows=\"1\"\n                    ></textarea>\n                    <button class=\"chat-widget__send-btn\" id=\"sendBtn\">\n                        <svg viewBox=\"0 0 24 24\" fill=\"currentColor\">\n                            <path d=\"M2.01 21L23 12 2.01 3 2 10l15 2-15 2z\"></path>\n                        </svg>\n                    </button>\n                </div>\n                <div class=\"chat-widget__file-preview\" id=\"filePreview\" style=\"display: none;\"></div>\n            </div>\n        </div>\n    </div>"}
 clientOnly={true}
 className={`w-html-embed`} />
 <HtmlEmbed
@@ -2379,7 +2380,7 @@ code={"<script>\n/**\n * Custom Chat Widget with Webhook Integration\n * Configu
 clientOnly={true}
 className={`w-html-embed`} />
 <HtmlEmbed
-code={"<script type=\"module\">\nconst whatsappStyle = {\n    webhookUrl: 'https://n8n.mughal.pro/webhook/8179341e-a02e-4dcb-9ad7-7cb3fe42ffef/chat',\n    botName: 'Ava',\n    botAvatar: 'https://cdn.prod.website-files.com/64bd6cb099271195afd55550/65ce1ef3fc1ed732ff31cb3f_Screenshot%202024-02-15%20at%2019.25.38.webp',\n    primaryColor: '#075e54',\n    secondaryColor: '#f1f3f4',\n    userColor: '#dcf8c6',\n    botColor: '#ffffff',\n    quickActions: [\n        { id: 'help', label: 'Help', icon: '❓', instruction: 'I need urgent help' },\n        { id: 'status', label: 'Book an inspection', icon: '📦', instruction: 'I want to book an inspection' },\n        { id: 'contact', label: 'Talk to Human', icon: '📞', instruction: 'I want to contact support' }\n    ]\n};\nChatWidget.init(whatsappStyle);\n</script>"}
+code={"<script type=\"module\">\nconst whatsappStyle = {\n    webhookUrl: 'https://n8n.mughal.pro/webhook/8179341e-a02e-4dcb-9ad7-7cb3fe42ffef/chat',\n    botName: 'Ava',\n    botAvatar: '/uploads/cdn_prod_website_files_com_64bd6cb099271195afd55550_65ce1ef3fc1ed732ff31cb3f_Screenshot_202024_02_15_20at_2019_25_38_6b5f74c3fc.webp',\n    primaryColor: '#075e54',\n    secondaryColor: '#f1f3f4',\n    userColor: '#dcf8c6',\n    botColor: '#ffffff',\n    quickActions: [\n        { id: 'help', label: 'Help', icon: '❓', instruction: 'I need urgent help' },\n        { id: 'status', label: 'Book an inspection', icon: '📦', instruction: 'I want to book an inspection' },\n        { id: 'contact', label: 'Talk to Human', icon: '📞', instruction: 'I want to contact support' }\n    ]\n};\nChatWidget.init(whatsappStyle);\n</script>"}
 clientOnly={true}
 className={`w-html-embed`} />
 </div>

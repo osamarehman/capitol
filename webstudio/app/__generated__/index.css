@@ -1079,9 +1079,9 @@
     --foreground-border-muted: var(--light-grey-3);
     --background-muted: var(--light-grey-3);
     font-weight: 400;
-    font-family: "Futura PT", sans-serif;
     --blue: blue;
-    --background: var(--blue, blue)
+    --background: var(--blue, blue);
+    font-family: "Futura PT", sans-serif
   }
   .c1cgr5pa {
     min-height: 1200px
@@ -3259,7 +3259,7 @@
     border-bottom-left-radius: 5px
   }
   .c1ypjwfv {
-    background-image: linear-gradient(rgb(0 0 0 / 0.65) 0%, rgb(0 0 0 / 0.65) 100%), url("https://cms.improveitmd.com/uploads/roof_cost_calulator_demo_a_z_A1q_N3_Pps77r_N_Xl_Y9h_M_574b798ab7.png")
+    background-image: linear-gradient(rgb(0 0 0 / 0.65) 0%, rgb(0 0 0 / 0.65) 100%), url("/uploads/roof_cost_calulator_demo_a_z_A1q_N3_Pps77r_N_Xl_Y9h_M_574b798ab7.png")
   }
   .cexx6mt {
     background-repeat: no-repeat, no-repeat
@@ -4679,7 +4679,7 @@
     filter: opacity(0%)
   }
   .c1segsg8 {
-    background-image: url("https://cms.improveitmd.com/uploads/single_property_webp_mm_On_Ce6_Ksggkma_S1f2a_Ny_29b57c8218.webp")
+    background-image: url("/uploads/single_property_webp_mm_On_Ce6_Ksggkma_S1f2a_Ny_29b57c8218.webp")
   }
   .cfl3b43 {
     background-repeat: no-repeat
@@ -4722,7 +4722,7 @@
     filter: drop-shadow(0px 2px 5px rgb(0 0 0 / 0.7))
   }
   .c1xhvavq {
-    background-image: url("https://cms.improveitmd.com/uploads/multi_property_image_jpg_6x_vzm_Xqc_Dgr_LLM_Vj_T987_4e89cc0dfa.jpg")
+    background-image: url("/uploads/multi_property_image_jpg_6x_vzm_Xqc_Dgr_LLM_Vj_T987_4e89cc0dfa.jpg")
   }
   .c1cunrri {
     min-width: 340px
@@ -4872,13 +4872,13 @@
     color: white
   }
   .csnds9c {
-    background-image: url("/assets/roof_HDZ_Pw3BD18kjouU7zv7ejJsA.webp")
+    background-image: url("/uploads/roof_HDZ_Pw3_BD_18kjou_U7zv7ej_Js_A_744cda17c7.webp")
   }
   .ckm8etu {
-    background-image: url("/assets/metal-roof-5_SIEt_4s5tEq-lB-kJi-T5.webp")
+    background-image: url("/uploads/metal_roof_5_SI_Et_4s5t_Eq_l_B_k_Ji_T5_8383f5a2f2.webp")
   }
   .cpzejbj {
-    background-image: url("/assets/roof_flat_aTdTXJd_HCxIKXlaOMN3E.webp")
+    background-image: url("/uploads/roof_flat_a_Td_TX_Jd_H_Cx_IK_Xla_OMN_3_E_c831514583.webp")
   }
   .c1j4pimd {
     background-image: linear-gradient(rgb(65 65 72 / 1) 0%, rgb(65 65 72 / 1) 100%)

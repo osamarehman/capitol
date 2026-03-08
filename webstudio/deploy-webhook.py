@@ -33,7 +33,7 @@ STEP_PATTERNS = [
     ("Installing webstudio CLI", "install_cli"),
     ("Syncing project data", "sync"),
     ("Building project with assets", "build_assets"),
-    ("Running post-sync patches", "post_sync"),
+    ("Optimizing assets", "optimize"),
     ("Building Docker image", "docker_build"),
     ("Deploying container", "deploy"),
     ("Waiting for health check", "health_check"),

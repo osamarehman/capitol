@@ -10,7 +10,7 @@ import { Box as Box, Image as Image, HtmlEmbed as HtmlEmbed } from "@webstudio-i
 
       export const projectId = "5b897bfc-8b80-4b2a-bfed-79ac7ec37365";
 
-      export const lastPublished = "2026-03-07T22:43:38.864Z";
+      export const lastPublished = "2026-03-08T02:54:27.839Z";
 
       export const siteName = "Capitol Improvements";
 
@@ -48,7 +48,7 @@ target={"_self"}
 className={`w-element`}>
 <Image
 loading={"eager"}
-src={"/assets/capitol_improvements_logo_main_NdETmJnbuUjH_Kf4-92i4.svg"}
+src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg"}
 width={151}
 height={30}
 alt={""}
@@ -58,7 +58,7 @@ className={`w-image ceghofj c1hwvjgs cdmu5h7 c9slfh6 c1owcyig cnbug7k c1sz7ez0 c
 className={`w-element cfvvllw cjkauba c1epvuph cmhuipo c1sz7ez0 c19wpft8 c189czh1 c5ozyfh cqsaj3r`}>
 <Image
 loading={"eager"}
-src={"https://cms.improveitmd.com/uploads/capitol_improvements_crew_quote_1_G91_YMAG_Cf_Ll_MKH_8_HOX_3_6ab72cf935.webp"}
+src={"/uploads/capitol_improvements_crew_quote_1_G91_YMAG_Cf_Ll_MKH_8_HOX_3_6ab72cf935.webp"}
 width={896}
 height={1400}
 alt={"Tear off photos of a new siding project. "}
