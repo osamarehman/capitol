@@ -32,6 +32,34 @@ import { NavigationMenu as NavigationMenu, NavigationMenuList as NavigationMenuL
       const Page = (_props: { system: any; }) => {
 return <Body
 className={`w-element`}>
+<HtmlEmbed
+code={`<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.improveitmd.com/deck-and-patios/rooftop-deck#service",
+      "name": "Rooftop Decks - Capitol Improvements",
+      "url": "https://www.improveitmd.com/deck-and-patios/rooftop-deck",
+      "serviceType": "Rooftop Deck Construction",
+      "description": "Custom rooftop deck design and construction. Transform your flat roof into usable outdoor living space. Serving Maryland, Virginia, and DC.",
+      "provider": { "@id": "https://www.improveitmd.com/#corporation" },
+      "areaServed": [
+        { "@type": "State", "name": "Maryland" },
+        { "@type": "State", "name": "Virginia" },
+        { "@type": "State", "name": "District of Columbia" }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceRange": "$"
+      }
+    }
+  ]
+}
+</script>`}
+clientOnly={true}
+className={`w-html-embed`} />
 <Box
 className={`w-box cnregu4 c3a6wb5 c14dzf92`}>
 <Slot>

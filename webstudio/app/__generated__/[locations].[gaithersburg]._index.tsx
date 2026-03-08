@@ -33,6 +33,42 @@ import { NavigationMenu as NavigationMenu, NavigationMenuList as NavigationMenuL
 let ServiceRecords = useResource("ServiceRecords_1")
 return <Body
 className={`w-element`}>
+<HtmlEmbed
+code={`<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SidingContractor",
+      "@id": "https://www.improveitmd.com/locations/gaithersburg#local-office",
+      "name": "Capitol Improvements - Gaithersburg Roofing Company & Siding Contractors",
+      "url": "https://www.improveitmd.com/locations/gaithersburg",
+      "telephone": "301.769.6991",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7916 Plum Creek Dr.",
+        "addressLocality": "Gaithersburg",
+        "addressRegion": "MD",
+        "postalCode": "20879",
+        "addressCountry": "US"
+      },
+      "employee": {
+        "@type": "Person",
+        "name": "Lance Jewell",
+        "jobTitle": "Branch Manager"
+      },
+      "parentOrganization": { "@id": "https://www.improveitmd.com/#corporation" },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "157"
+      }
+    }
+  ]
+}
+</script>`}
+clientOnly={true}
+className={`w-html-embed`} />
 <Box
 className={`w-box cnregu4 c3a6wb5 c14dzf92`}>
 <Slot>

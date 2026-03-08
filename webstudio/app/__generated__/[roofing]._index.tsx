@@ -32,6 +32,60 @@ import { NavigationMenu as NavigationMenu, NavigationMenuList as NavigationMenuL
       const Page = (_props: { system: any; }) => {
 return <Body
 className={`w-element`}>
+<HtmlEmbed
+code={`<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.improveitmd.com/roofing#service",
+      "name": "Roofing Services - Capitol Improvements",
+      "url": "https://www.improveitmd.com/roofing",
+      "serviceType": "Roofing",
+      "description": "Professional residential and commercial roofing services from a GAF Master Elite and FORTIFIED certified contractor. Asphalt shingles, metal roofing, and TPO flat roofing in Maryland, Virginia, and DC.",
+      "provider": { "@id": "https://www.improveitmd.com/#corporation" },
+      "areaServed": [
+        { "@type": "State", "name": "Maryland" },
+        { "@type": "State", "name": "Virginia" },
+        { "@type": "State", "name": "District of Columbia" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Roofing Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Residential Roofing" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Commercial Roofing" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Asphalt Shingle Roofing" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Metal Roofing" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "TPO Flat Roofing" }
+          }
+        ]
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceRange": "$"
+      }
+    }
+  ]
+}
+</script>`}
+clientOnly={true}
+className={`w-html-embed`} />
 <Box
 className={`w-box cnregu4 c3a6wb5 c14dzf92`}>
 <Slot>

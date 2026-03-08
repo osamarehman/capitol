@@ -32,6 +32,32 @@ import { Accordion as Accordion, AccordionItem as AccordionItem, AccordionHeader
       const Page = (_props: { system: any; }) => {
 return <Body
 className={`w-element`}>
+<HtmlEmbed
+code={`<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://www.improveitmd.com/commercial-roof-cost-calculator#webapp",
+      "name": "Commercial Roof Cost Calculator - Capitol Improvements",
+      "url": "https://www.improveitmd.com/commercial-roof-cost-calculator",
+      "applicationCategory": "UtilitiesApplication",
+      "description": "Free commercial roof cost calculator. Get an instant estimate for TPO, flat roof, and commercial roofing projects in Maryland, Virginia, and DC.",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires a modern web browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "provider": { "@id": "https://www.improveitmd.com/#corporation" }
+    }
+  ]
+}
+</script>`}
+clientOnly={true}
+className={`w-html-embed`} />
 <Box
 className={`w-box cnregu4 c3a6wb5`}>
 <Slot>

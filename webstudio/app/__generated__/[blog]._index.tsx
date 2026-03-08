@@ -34,6 +34,34 @@ const system = _props.system;
 let BlogsCollectionData = useResource("BlogsCollectionData_1")
 return <Body
 className={`w-element`}>
+<HtmlEmbed
+code={`<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://www.improveitmd.com/blog#blog",
+      "name": "Capitol Improvements Blog",
+      "url": "https://www.improveitmd.com/blog",
+      "description": "Expert tips, guides, and news about roofing, siding, windows, doors, gutters, and decks from Capitol Improvements. Serving Maryland, Virginia, and DC.",
+      "publisher": { "@id": "https://www.improveitmd.com/#corporation" },
+      "about": [
+        "Roofing",
+        "Siding",
+        "Windows",
+        "Doors",
+        "Gutters",
+        "Decks",
+        "Home Improvement"
+      ],
+      "provider": { "@id": "https://www.improveitmd.com/#corporation" }
+    }
+  ]
+}
+</script>`}
+clientOnly={true}
+className={`w-html-embed`} />
 <Box
 className={`w-box cnregu4 c3a6wb5 c14dzf92`}>
 <Slot>

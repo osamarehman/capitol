@@ -33,6 +33,31 @@ import { NavigationMenu as NavigationMenu, NavigationMenuList as NavigationMenuL
 let Videos = useResource("Videos_1")
 return <Body
 className={`w-element`}>
+<HtmlEmbed
+code={`<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.improveitmd.com/video-gallery#collectionpage",
+      "name": "Video Gallery - Capitol Improvements",
+      "url": "https://www.improveitmd.com/video-gallery",
+      "description": "Watch project videos, customer testimonials, and educational content from Capitol Improvements. See our roofing, siding, deck, and exterior remodeling work in action.",
+      "about": [
+        "Project Walkthroughs",
+        "Customer Testimonials",
+        "Roofing Installations",
+        "Siding Transformations",
+        "Deck Builds"
+      ],
+      "provider": { "@id": "https://www.improveitmd.com/#corporation" }
+    }
+  ]
+}
+</script>`}
+clientOnly={true}
+className={`w-html-embed`} />
 <Box
 className={`w-box cnregu4 c3a6wb5 c14dzf92`}>
 <Slot>

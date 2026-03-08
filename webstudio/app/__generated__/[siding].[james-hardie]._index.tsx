@@ -34,6 +34,39 @@ const system = _props.system;
 let JamesHardieColorData = useResource("JamesHardieColorData_1")
 return <Body
 className={`w-element`}>
+<HtmlEmbed
+code={`<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.improveitmd.com/siding/james-hardie#service",
+      "name": "James Hardie Fiber Cement Siding - Capitol Improvements",
+      "url": "https://www.improveitmd.com/siding/james-hardie",
+      "serviceType": "James Hardie Fiber Cement Siding",
+      "description": "James Hardie Preferred Partner installer for fiber cement siding. Durable, low-maintenance HardiePlank and HardiePanel siding installation in Maryland, Virginia, and DC.",
+      "provider": { "@id": "https://www.improveitmd.com/#corporation" },
+      "areaServed": [
+        { "@type": "State", "name": "Maryland" },
+        { "@type": "State", "name": "Virginia" },
+        { "@type": "State", "name": "District of Columbia" }
+      ],
+      "brand": {
+        "@type": "Brand",
+        "name": "James Hardie",
+        "description": "HardiePlank and HardiePanel fiber cement siding products"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceRange": "$"
+      }
+    }
+  ]
+}
+</script>`}
+clientOnly={true}
+className={`w-html-embed`} />
 <Box
 className={`w-box cnregu4 c3a6wb5 c14dzf92`}>
 <Slot>

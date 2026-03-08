@@ -33,6 +33,83 @@ import { NavigationMenu as NavigationMenu, NavigationMenuList as NavigationMenuL
 let ServiceRecords = useResource("ServiceRecords_1")
 return <Body
 className={`w-element`}>
+<HtmlEmbed
+code={`<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.improveitmd.com/service-areas#webpage",
+      "name": "Service Areas - Capitol Improvements",
+      "url": "https://www.improveitmd.com/service-areas",
+      "description": "Capitol Improvements serves Maryland, Virginia, and Washington DC with roofing, siding, windows, doors, gutters, and deck services from three office locations.",
+      "mainEntity": {
+        "@type": "ServiceArea",
+        "name": "Capitol Improvements Service Coverage",
+        "geo": [
+          {
+            "@type": "State",
+            "name": "Maryland",
+            "containedInPlace": { "@type": "Country", "name": "United States" }
+          },
+          {
+            "@type": "State",
+            "name": "Virginia",
+            "containedInPlace": { "@type": "Country", "name": "United States" }
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "District of Columbia",
+            "containedInPlace": { "@type": "Country", "name": "United States" }
+          }
+        ]
+      },
+      "about": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://www.improveitmd.com/#bowie-hq",
+          "name": "Capitol Improvements - Bowie HQ",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12606 Hillmeade Station Dr.",
+            "addressLocality": "Bowie",
+            "addressRegion": "MD",
+            "postalCode": "20720"
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://www.improveitmd.com/#gaithersburg-branch",
+          "name": "Capitol Improvements - Gaithersburg",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "7916 Plum Creek Dr.",
+            "addressLocality": "Gaithersburg",
+            "addressRegion": "MD",
+            "postalCode": "20879"
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://www.improveitmd.com/#dc-branch",
+          "name": "Capitol Improvements - Washington DC",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1015 15th St NW #635",
+            "addressLocality": "Washington",
+            "addressRegion": "DC",
+            "postalCode": "20005"
+          }
+        }
+      ],
+      "provider": { "@id": "https://www.improveitmd.com/#corporation" }
+    }
+  ]
+}
+</script>`}
+clientOnly={true}
+className={`w-html-embed`} />
 <Box
 className={`w-box cnregu4 c3a6wb5 c14dzf92`}>
 <Slot>

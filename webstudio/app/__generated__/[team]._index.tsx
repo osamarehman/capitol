@@ -32,6 +32,50 @@ import { NavigationMenu as NavigationMenu, NavigationMenuList as NavigationMenuL
       const Page = (_props: { system: any; }) => {
 return <Body
 className={`w-element`}>
+<HtmlEmbed
+code={`<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.improveitmd.com/team#aboutpage",
+      "name": "Meet Our Team - Capitol Improvements",
+      "url": "https://www.improveitmd.com/team",
+      "description": "Meet the Capitol Improvements leadership team. Family-owned and operated exterior remodeling company serving Maryland, Virginia, and DC since 2010.",
+      "mainEntity": {
+        "@id": "https://www.improveitmd.com/#corporation"
+      },
+      "about": [
+        {
+          "@type": "Person",
+          "@id": "https://www.improveitmd.com/#patjewell",
+          "name": "Pat Jewell",
+          "jobTitle": "Owner & Founder",
+          "worksFor": { "@id": "https://www.improveitmd.com/#corporation" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.improveitmd.com/#lancejewell",
+          "name": "Lance Jewell",
+          "jobTitle": "Branch Manager - Gaithersburg",
+          "worksFor": { "@id": "https://www.improveitmd.com/#corporation" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.improveitmd.com/#austinjewell",
+          "name": "Austin Jewell",
+          "jobTitle": "Branch Manager - Washington DC",
+          "worksFor": { "@id": "https://www.improveitmd.com/#corporation" }
+        }
+      ],
+      "provider": { "@id": "https://www.improveitmd.com/#corporation" }
+    }
+  ]
+}
+</script>`}
+clientOnly={true}
+className={`w-html-embed`} />
 <Box
 className={`w-box cnregu4 c3a6wb5 c14dzf92`}>
 <Slot>

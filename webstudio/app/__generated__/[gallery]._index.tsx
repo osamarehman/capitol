@@ -34,6 +34,31 @@ let Gallery = useResource("Gallery_1")
 return <Body
 className={`w-element`}>
 <HtmlEmbed
+code={`<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ImageGallery",
+      "@id": "https://www.improveitmd.com/gallery#imagegallery",
+      "name": "Project Gallery - Capitol Improvements",
+      "url": "https://www.improveitmd.com/gallery",
+      "description": "Browse completed roofing, siding, deck, window, and door projects by Capitol Improvements across Maryland, Virginia, and DC.",
+      "about": [
+        "Roofing Projects",
+        "Siding Projects",
+        "Deck & Patio Projects",
+        "Window & Door Projects",
+        "Gutter Projects"
+      ],
+      "provider": { "@id": "https://www.improveitmd.com/#corporation" }
+    }
+  ]
+}
+</script>`}
+clientOnly={true}
+className={`w-html-embed`} />
+<HtmlEmbed
 code={"<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css\">\n<script src=\"https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js\"></script>\n\n<style>\n.glightbox-clean .gclose,\n.glightbox-clean .gnext,\n.glightbox-clean .gprev {\n  background-color: transparent;\n  transition: opacity 250ms;\n}\n.glightbox-clean .gclose:hover,\n.glightbox-clean .gnext:hover,\n.glightbox-clean .gprev:hover {\n  background-color: transparent;\n}\n</style>"}
 className={`w-html-embed`} />
 <Box

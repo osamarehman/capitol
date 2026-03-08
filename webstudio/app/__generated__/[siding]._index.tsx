@@ -32,6 +32,48 @@ import { NavigationMenu as NavigationMenu, NavigationMenuList as NavigationMenuL
       const Page = (_props: { system: any; }) => {
 return <Body
 className={`w-element`}>
+<HtmlEmbed
+code={`<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.improveitmd.com/siding#service",
+      "name": "Siding Services - Capitol Improvements",
+      "url": "https://www.improveitmd.com/siding",
+      "serviceType": "Siding Installation",
+      "description": "Professional siding installation and replacement. James Hardie Preferred Partner and certified vinyl siding contractor serving Maryland, Virginia, and DC.",
+      "provider": { "@id": "https://www.improveitmd.com/#corporation" },
+      "areaServed": [
+        { "@type": "State", "name": "Maryland" },
+        { "@type": "State", "name": "Virginia" },
+        { "@type": "State", "name": "District of Columbia" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Siding Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "James Hardie Fiber Cement Siding" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Vinyl Siding" }
+          }
+        ]
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceRange": "$"
+      }
+    }
+  ]
+}
+</script>`}
+clientOnly={true}
+className={`w-html-embed`} />
 <Box
 className={`w-box cnregu4 c3a6wb5 c14dzf92`}>
 <Slot>

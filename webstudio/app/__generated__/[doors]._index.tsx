@@ -32,6 +32,48 @@ import { NavigationMenu as NavigationMenu, NavigationMenuList as NavigationMenuL
       const Page = (_props: { system: any; }) => {
 return <Body
 className={`w-element`}>
+<HtmlEmbed
+code={`<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.improveitmd.com/doors#service",
+      "name": "Door Replacement - Capitol Improvements",
+      "url": "https://www.improveitmd.com/doors",
+      "serviceType": "Door Replacement",
+      "description": "Professional door replacement including entry doors and sliding glass doors. Enhance your home's security, energy efficiency, and curb appeal in Maryland, Virginia, and DC.",
+      "provider": { "@id": "https://www.improveitmd.com/#corporation" },
+      "areaServed": [
+        { "@type": "State", "name": "Maryland" },
+        { "@type": "State", "name": "Virginia" },
+        { "@type": "State", "name": "District of Columbia" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Door Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Entry Door Replacement" }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Sliding Glass Door Replacement" }
+          }
+        ]
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceRange": "$"
+      }
+    }
+  ]
+}
+</script>`}
+clientOnly={true}
+className={`w-html-embed`} />
 <Box
 className={`w-box cnregu4 c3a6wb5 c14dzf92`}>
 <Slot>

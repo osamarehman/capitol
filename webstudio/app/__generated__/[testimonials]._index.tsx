@@ -32,6 +32,36 @@ import { NavigationMenu as NavigationMenu, NavigationMenuList as NavigationMenuL
       const Page = (_props: { system: any; }) => {
 return <Body
 className={`w-element`}>
+<HtmlEmbed
+code={`<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.improveitmd.com/testimonials#webpage",
+      "name": "Customer Testimonials - Capitol Improvements",
+      "url": "https://www.improveitmd.com/testimonials",
+      "description": "Read verified customer reviews for Capitol Improvements. 445 five-star reviews across our Bowie, Gaithersburg, and Washington DC locations.",
+      "mainEntity": {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://www.improveitmd.com/#corporation",
+        "name": "Capitol Improvements",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "bestRating": "5",
+          "worstRating": "1",
+          "reviewCount": "445"
+        }
+      },
+      "provider": { "@id": "https://www.improveitmd.com/#corporation" }
+    }
+  ]
+}
+</script>`}
+clientOnly={true}
+className={`w-html-embed`} />
 <Box
 className={`w-box cnregu4 c3a6wb5 c14dzf92`}>
 <Slot>

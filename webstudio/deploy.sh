@@ -54,6 +54,10 @@ npx webstudio build --template docker 2>&1 | tee -a "$LOG_FILE"
 log "Optimizing assets and fixing hydration..."
 bash scripts/optimize-assets.sh 2>&1 | tee -a "$LOG_FILE"
 
+# Step 4b: Inject JSON-LD schema markup into generated pages
+log "Injecting schema markup..."
+node scripts/inject-schemas.cjs 2>&1 | tee -a "$LOG_FILE"
+
 # Step 5: Build Docker image (no cache to pick up all changes)
 log "Building Docker image..."
 docker build --no-cache -t webstudio-prod:latest . 2>&1 | tee -a "$LOG_FILE"

@@ -33,6 +33,46 @@ import { NavigationMenu as NavigationMenu, NavigationMenuList as NavigationMenuL
 let ServiceRecords = useResource("ServiceRecords_1")
 return <Body
 className={`w-element`}>
+<HtmlEmbed
+code={`<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "RoofingContractor",
+      "@id": "https://www.improveitmd.com/locations/washington-dc#local-office",
+      "name": "Capitol Improvements Washington DC - Roofing | Siding | Doors",
+      "url": "https://www.improveitmd.com/locations/washington-dc",
+      "telephone": "410.587.0128",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1015 15th St NW #635",
+        "addressLocality": "Washington",
+        "addressRegion": "DC",
+        "postalCode": "20005",
+        "addressCountry": "US"
+      },
+      "employee": {
+        "@type": "Person",
+        "name": "Austin Jewell",
+        "jobTitle": "Branch Manager"
+      },
+      "parentOrganization": { "@id": "https://www.improveitmd.com/#corporation" },
+      "areaServed": [
+        { "@type": "City", "name": "Washington DC" },
+        { "@type": "State", "name": "Virginia" }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "67"
+      }
+    }
+  ]
+}
+</script>`}
+clientOnly={true}
+className={`w-html-embed`} />
 <Box
 className={`w-box cnregu4 c3a6wb5 c14dzf92`}>
 <Slot>

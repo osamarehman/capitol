@@ -32,6 +32,58 @@ import { NavigationMenu as NavigationMenu, NavigationMenuList as NavigationMenuL
       const Page = (_props: { system: any; }) => {
 return <Body
 className={`w-element`}>
+<HtmlEmbed
+code={`<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://www.improveitmd.com/about#aboutpage",
+      "name": "About Capitol Improvements",
+      "url": "https://www.improveitmd.com/about",
+      "description": "Learn about Capitol Improvements, a family-owned exterior remodeling company founded in 2010 by Pat Jewell. Licensed (MHIC 130628), GAF Master Elite certified, serving Maryland, Virginia, and DC.",
+      "mainEntity": {
+        "@id": "https://www.improveitmd.com/#corporation"
+      },
+      "about": {
+        "@type": "Organization",
+        "@id": "https://www.improveitmd.com/#corporation",
+        "name": "Capitol Improvements",
+        "foundingDate": "2010",
+        "founder": {
+          "@type": "Person",
+          "@id": "https://www.improveitmd.com/#patjewell",
+          "name": "Pat Jewell",
+          "jobTitle": "Owner & Founder"
+        },
+        "slogan": "Capable. Experienced. Fair to you.",
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "license",
+            "name": "MHIC 130628"
+          }
+        ],
+        "award": [
+          "GAF Master Elite Certified Contractor",
+          "FORTIFIED Roofing Certified Contractor",
+          "James Hardie Preferred Partner",
+          "TimberTech Platinum Certified Contractor"
+        ],
+        "areaServed": [
+          { "@type": "State", "name": "Maryland" },
+          { "@type": "State", "name": "Virginia" },
+          { "@type": "State", "name": "District of Columbia" }
+        ]
+      },
+      "provider": { "@id": "https://www.improveitmd.com/#corporation" }
+    }
+  ]
+}
+</script>`}
+clientOnly={true}
+className={`w-html-embed`} />
 <Box
 className={`w-box cnregu4 c3a6wb5 c14dzf92`}>
 <Slot>
