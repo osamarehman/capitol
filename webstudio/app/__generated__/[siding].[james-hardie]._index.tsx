@@ -114,13 +114,13 @@ className={`w-element c1k5oipc`}>
 className={`w-element c1osufuw c3sv84c c84c42r`}>
 <Image
 alt={"Logo Icon"}
-src={"/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
 width={18}
 height={12}
 loading={"eager"}
 className={`w-image cqsaj3r c11y8oun ctpsi40 c12l5srj`} />
 <Image
-src={"/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
 width={161}
 height={8}
 alt={"Logo Text"}
@@ -397,7 +397,7 @@ className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={""}
@@ -591,7 +591,7 @@ className={`w-element c1numhkq c53aqfr ct0qrmw cfcahn6 c1hx6vht c1epvuph c6hmdm4
 href={"tel:3017696909"}
 className={`w-link c1lvj0n c19ftcvs c1vqewwo cacmu18 c9te4zd c1u81kxm c1v2l8nt c53aqfr ct0qrmw c1lzjd2w cn7k83s c1d8rs8t cwr9gsc c1ehmfnq c1owcyig c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da cv3rgxc cahz6x0 cmchden c1amh7xl cimel00 c1b6be7c c1842oze c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 ckkl2uw cchbu1a c1lgs1h6 c1osufuw`}>
 <Image
-src={"/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
+src={"https://v2.improveitmd.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
 width={16}
 height={16}
 alt={"Phone icon"}
@@ -623,7 +623,7 @@ className={`w-element c1numhkq cqilze0 c1diokdk c3auquk c1r7jime c1hx6vht cfefby
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={"Logo"}
@@ -970,7 +970,7 @@ className={`w-element cixr02m ca98neh cnvsn5k c1lvj0n ce6x08i cqal8fd c1xo8fmi c
 {"dream home."}
 </h2>
 <Image
-src={"/uploads/logo_james_hardie_l_Zikw8umh_Sb_Mtocheeuj_X_e614eef139.svg"}
+src={"https://v2.improveitmd.com/uploads/logo_james_hardie_l_Zikw8umh_Sb_Mtocheeuj_X_e614eef139.svg"}
 width={363}
 height={65}
 alt={"James Hardie logo."}
@@ -978,7 +978,7 @@ loading={"eager"}
 className={`w-image c65bsqs c1hwvjgs c1mcsn9a czbu68a c18bj3o3 cxte6uv c1q3szmi c18s71wo ctmjt9w`} />
 </div>
 <Image
-src={"/uploads/hardie_siding_mountain_sage_Ne_NY_2m_CC_Ud_Rgei_N_Ut_Ws_P1_45544bab14.webp"}
+src={"https://v2.improveitmd.com/uploads/hardie_siding_mountain_sage_Ne_NY_2m_CC_Ud_Rgei_N_Ut_Ws_P1_45544bab14.webp"}
 width={2560}
 alt={"James Hardie shake. "}
 loading={"eager"}
@@ -1007,7 +1007,7 @@ href={"/siding"}
 target={"_self"}
 className={`w-element cprvrz2 c1numhkq cacmu18 c1ezjj73 c1diokdk ct0qrmw c1ym9r0h cahz6x0 cmchden`}>
 <Image
-src={"/uploads/back_arrow_7ct_Ki_1_M_Fxgf_Dopuj_Oirn_1324e03b80.svg"}
+src={"https://v2.improveitmd.com/uploads/back_arrow_7ct_Ki_1_M_Fxgf_Dopuj_Oirn_1324e03b80.svg"}
 width={13}
 height={12}
 alt={"Back arrow icon."}
@@ -1152,7 +1152,7 @@ className={`w-element c1epvuph ${"swiper-wrapper"}`}>
 <div
 className={`w-element cqdbcb3 c36uo35 ${"swiper-slide is-service"}`}>
 <Image
-src={"/uploads/james_hardie_siding_booth_bay_blue_223_56_R_Po5c8_Hj_Ir7_C_Zi2p_Hx_7b78243bf7.webp"}
+src={"https://v2.improveitmd.com/uploads/james_hardie_siding_booth_bay_blue_223_56_R_Po5c8_Hj_Ir7_C_Zi2p_Hx_7b78243bf7.webp"}
 width={1600}
 height={1108}
 alt={"James Hardie booth bay blue siding with standing seam metal roofing."}
@@ -1162,7 +1162,7 @@ className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a cjkauba`} />
 <div
 className={`w-element cqdbcb3 c36uo35 ${"swiper-slide is-service"}`}>
 <Image
-src={"/uploads/james_hardie_fiber_cement_siding_03_V1_Zw_Gw_Cb_UDOXNL_4_M1thz_W_308c693651.webp"}
+src={"https://v2.improveitmd.com/uploads/james_hardie_fiber_cement_siding_03_V1_Zw_Gw_Cb_UDOXNL_4_M1thz_W_308c693651.webp"}
 width={768}
 height={832}
 alt={"James Hardie rough shake with white trim. "}
@@ -1172,7 +1172,7 @@ className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a cjkauba`} />
 <div
 className={`w-element cqdbcb3 c36uo35 ${"swiper-slide is-service"}`}>
 <Image
-src={"/uploads/james_hardie_fiber_cement_siding_05_Pp_A6_LA_3_NU_Aak_RVV_Xze_Oay_e0c3878303.webp"}
+src={"https://v2.improveitmd.com/uploads/james_hardie_fiber_cement_siding_05_Pp_A6_LA_3_NU_Aak_RVV_Xze_Oay_e0c3878303.webp"}
 width={768}
 height={832}
 alt={"Red James Hardie Lap Woodgrain Siding."}
@@ -1182,7 +1182,7 @@ className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a cjkauba`} />
 <div
 className={`w-element cqdbcb3 c36uo35 ${"swiper-slide is-service"}`}>
 <Image
-src={"/uploads/james_hardie_fiber_cement_siding_06_NSN_Dqc_T_Dez3e_H_Ef5ciq_IQ_492ce0cfd0.webp"}
+src={"https://v2.improveitmd.com/uploads/james_hardie_fiber_cement_siding_06_NSN_Dqc_T_Dez3e_H_Ef5ciq_IQ_492ce0cfd0.webp"}
 width={768}
 height={832}
 alt={"James Hardie lap siding. "}
@@ -1192,7 +1192,7 @@ className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a cjkauba`} />
 <div
 className={`w-element cqdbcb3 c36uo35 ${"swiper-slide is-service"}`}>
 <Image
-src={"/uploads/james_hardie_fiber_cement_siding_07_Utp_Jx3_Web_AX_Xg_Ep_Ot_Nhj_Y_a518d2a853.webp"}
+src={"https://v2.improveitmd.com/uploads/james_hardie_fiber_cement_siding_07_Utp_Jx3_Web_AX_Xg_Ep_Ot_Nhj_Y_a518d2a853.webp"}
 width={768}
 height={832}
 alt={"Install process of the Capital Improvements employees installing James Hardie siding. "}
@@ -1202,7 +1202,7 @@ className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a cjkauba`} />
 <div
 className={`w-element cqdbcb3 ${"swiper-slide is-service"}`}>
 <Image
-src={"/uploads/james_hardie_fiber_cement_siding_01_u_Zoh4_VY_Cc_Yv4_Nb4_L_Rlrp_U_cda0fc4110.webp"}
+src={"https://v2.improveitmd.com/uploads/james_hardie_fiber_cement_siding_01_u_Zoh4_VY_Cc_Yv4_Nb4_L_Rlrp_U_cda0fc4110.webp"}
 width={768}
 height={832}
 alt={"James Hardie Board & Batten. "}
@@ -1262,7 +1262,7 @@ className={`w-element c1epvuph c1numhkq c139pwc6 cg961le ${"swiper-wrapper is-st
 <div
 className={`w-element c139pwc6 cjkauba ${"swiper-slide is-styles"}`}>
 <Image
-src={"/uploads/hardie_siding_select_cedarmill_texture_dk_Uyl_D8_h7_Vd_Jc_Y1_Qv_Vms_b88771c4a9.png"}
+src={"https://v2.improveitmd.com/uploads/hardie_siding_select_cedarmill_texture_dk_Uyl_D8_h7_Vd_Jc_Y1_Qv_Vms_b88771c4a9.png"}
 width={435}
 height={615}
 alt={"James Hardie cedarmill lap siding. "}
@@ -1272,7 +1272,7 @@ className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a c1mya03o cjkauba cjm2rxl c
 <div
 className={`w-element c139pwc6 cjkauba ${"swiper-slide is-styles"}`}>
 <Image
-src={"/uploads/hardie_siding_smooth_texture_Uc_Vn1pfs_X_Co_By_dy_k_YAP_19e3cda5e4.png"}
+src={"https://v2.improveitmd.com/uploads/hardie_siding_smooth_texture_Uc_Vn1pfs_X_Co_By_dy_k_YAP_19e3cda5e4.png"}
 width={435}
 height={615}
 alt={"James Hardie lap siding. "}
@@ -1282,7 +1282,7 @@ className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a c1sr0d4t cjkauba cjm2rxl c
 <div
 className={`w-element c139pwc6 cjkauba ${"swiper-slide is-styles"}`}>
 <Image
-src={"/uploads/hardie_siding_beaded_cedarmill_texture_Mr9ya_WC_Fb0v_d_OI_S5_Br_df4f680b04.png"}
+src={"https://v2.improveitmd.com/uploads/hardie_siding_beaded_cedarmill_texture_Mr9ya_WC_Fb0v_d_OI_S5_Br_df4f680b04.png"}
 width={435}
 height={615}
 alt={"James Hardie cedarmill lap siding. "}
@@ -1292,7 +1292,7 @@ className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a c1hpgv3f cjkauba cjm2rxl c
 <div
 className={`w-element c139pwc6 cjkauba ${"swiper-slide is-styles"}`}>
 <Image
-src={"/uploads/hardie_siding_beaded_smooth_texture_Ukxnlf_Mv4_Xf2_L78_A5_Nb_Vj_ff1c195e57.png"}
+src={"https://v2.improveitmd.com/uploads/hardie_siding_beaded_smooth_texture_Ukxnlf_Mv4_Xf2_L78_A5_Nb_Vj_ff1c195e57.png"}
 width={435}
 height={615}
 alt={"James Hardie beaded siding. "}
@@ -1340,7 +1340,7 @@ className={`w-element c1epvuph c1numhkq c139pwc6 cg961le ${"swiper-wrapper is-st
 <div
 className={`w-element c139pwc6 cjkauba ${"swiper-slide is-styles"}`}>
 <Image
-src={"/uploads/Hardie_Shingle_Straight_Edge_Panel_Color_Plus_Siding_texture_ci_J_z_R_Ar_C_Cak_H_Mg_K3gov_N_a17b5502d7.png"}
+src={"https://v2.improveitmd.com/uploads/Hardie_Shingle_Straight_Edge_Panel_Color_Plus_Siding_texture_ci_J_z_R_Ar_C_Cak_H_Mg_K3gov_N_a17b5502d7.png"}
 width={435}
 height={615}
 alt={"James Hardie perfection shake. "}
@@ -1350,7 +1350,7 @@ className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a cdwjr6e cjkauba cjm2rxl cv
 <div
 className={`w-element c139pwc6 cjkauba ${"swiper-slide is-styles"}`}>
 <Image
-src={"/uploads/Hardie_Shingle_staggered_edge_texture_W_Sq_V_Tiz_Ci7s_DH_46_Qyidvj_b32ada22cf.png"}
+src={"https://v2.improveitmd.com/uploads/Hardie_Shingle_staggered_edge_texture_W_Sq_V_Tiz_Ci7s_DH_46_Qyidvj_b32ada22cf.png"}
 width={435}
 height={615}
 alt={"James Hardie staggered shake. "}
@@ -1398,7 +1398,7 @@ className={`w-element c1epvuph c1numhkq c139pwc6 cg961le ${"swiper-wrapper is-st
 <div
 className={`w-element c139pwc6 cjkauba ${"swiper-slide is-styles"}`}>
 <Image
-src={"/uploads/Hardie_Artisan_Square_Channel_Siding_Profile_AW_texture_kz_GA_Ab_Zc085gp7y_Jj_Rg_BW_d40afac85e.png"}
+src={"https://v2.improveitmd.com/uploads/Hardie_Artisan_Square_Channel_Siding_Profile_AW_texture_kz_GA_Ab_Zc085gp7y_Jj_Rg_BW_d40afac85e.png"}
 width={435}
 height={615}
 alt={"James Hardie artisan smooth siding. "}
@@ -1408,7 +1408,7 @@ className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a csk1dg8 cjkauba cjm2rxl cv
 <div
 className={`w-element c139pwc6 cjkauba ${"swiper-slide is-styles"}`}>
 <Image
-src={"/uploads/Hardie_Artisan_V_Groove_Siding_Profile_texture_LAS_af_W3h_Rhv_JU_Rl9l8l_N_6dfe73b357.png"}
+src={"https://v2.improveitmd.com/uploads/Hardie_Artisan_V_Groove_Siding_Profile_texture_LAS_af_W3h_Rhv_JU_Rl9l8l_N_6dfe73b357.png"}
 width={435}
 height={615}
 alt={"James Hardie artisan siding. "}
@@ -1456,7 +1456,7 @@ className={`w-element c1epvuph c1numhkq c139pwc6 cg961le ${"swiper-wrapper is-st
 <div
 className={`w-element c139pwc6 cjkauba ${"swiper-slide is-styles"}`}>
 <Image
-src={"/uploads/hardie_vertical_trim_smooth_detail_JYH_Gw_D62zel_d_jc_FV_Yk5_198686c556.png"}
+src={"https://v2.improveitmd.com/uploads/hardie_vertical_trim_smooth_detail_JYH_Gw_D62zel_d_jc_FV_Yk5_198686c556.png"}
 width={435}
 height={615}
 alt={"James Hardie Board & Batten Smooth. "}
@@ -1466,7 +1466,7 @@ className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a cdwjr6e cjkauba cjm2rxl cv
 <div
 className={`w-element c139pwc6 cjkauba ${"swiper-slide is-styles"}`}>
 <Image
-src={"/uploads/Hardie_vertical_select_cedarmill_texture_t3ne_Xrt_ve1_Wxo_Zvy_Mu7j_e037eef278.png"}
+src={"https://v2.improveitmd.com/uploads/Hardie_vertical_select_cedarmill_texture_t3ne_Xrt_ve1_Wxo_Zvy_Mu7j_e037eef278.png"}
 width={435}
 height={615}
 alt={"James Hardie Board & Batten Cedar Mill panel. "}
@@ -1579,7 +1579,7 @@ className={`w-element cmsm1bz c17rwy3n c1603wqb c1omlw60 c53aqfr c1klx7ez cg8hn1
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c10lolld c1irdqs7 c876kpt c15sicby c1mndhrk c2j7e41 c1hmvws c1cf96bh c14t23m0 c9cac79 c100pd8v cd2qqyb cq9r5tw c8iul0y cybbdyg cljixpu cu8qcns c4fmmfv`}>
 <Image
-src={"/uploads/hammer_icon_Qe5fs_L_Vi_ZJKU_Ec_Q9y_Ty_C_e8a4aebe38.svg"}
+src={"https://v2.improveitmd.com/uploads/hammer_icon_Qe5fs_L_Vi_ZJKU_Ec_Q9y_Ty_C_e8a4aebe38.svg"}
 width={48}
 height={48}
 alt={"hammer icon"}
@@ -1606,7 +1606,7 @@ className={`w-element c82qwqc c1uaxhv2 cacmu18 c1g3mhtg c309ipl ckecbya cahz6x0 
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c10lolld c1irdqs7 c876kpt c15sicby c1mndhrk c2j7e41 c1hmvws c1cf96bh c14t23m0 c9cac79 c100pd8v cd2qqyb cq9r5tw c8iul0y cybbdyg cljixpu cu8qcns c4fmmfv`}>
 <Image
-src={"/uploads/badge_icon_TW_5j8_S_Yw_W_5_CM_Pq_Oq_Nty_A_79de0c77d1.svg"}
+src={"https://v2.improveitmd.com/uploads/badge_icon_TW_5j8_S_Yw_W_5_CM_Pq_Oq_Nty_A_79de0c77d1.svg"}
 width={33}
 height={42}
 alt={"certified badge icon"}
@@ -1633,7 +1633,7 @@ className={`w-element c82qwqc c1uaxhv2 cacmu18 c1g3mhtg c309ipl ckecbya cahz6x0 
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c10lolld c1irdqs7 c876kpt c15sicby c1mndhrk c2j7e41 c1hmvws c1cf96bh c14t23m0 c9cac79 c100pd8v cd2qqyb cq9r5tw c8iul0y cybbdyg cljixpu cu8qcns c4fmmfv`}>
 <Image
-src={"/uploads/holding_house_icon_Bpd_Wko_E_Zz_G_Boh0d_D3_H_8b_afcd53221a.svg"}
+src={"https://v2.improveitmd.com/uploads/holding_house_icon_Bpd_Wko_E_Zz_G_Boh0d_D3_H_8b_afcd53221a.svg"}
 width={43}
 height={42}
 alt={"holding house icon"}
@@ -1851,7 +1851,7 @@ className={`w-element c1numhkq c1diokdk c1nt8u3l c17rwy3n c1603wqb cdr1ysj c1xm6
 <div
 className={`w-element ci9ixvi c1f3bifo c1numhkq c1diokdk ch3nxmx c1d7h9xn ${"prev-btn"}`}>
 <Image
-src={"/uploads/left_arrow_rq_Ggn_PWCLFE_5c_Ne_R9s_SY_a3293dd997.svg"}
+src={"https://v2.improveitmd.com/uploads/left_arrow_rq_Ggn_PWCLFE_5c_Ne_R9s_SY_a3293dd997.svg"}
 width={40}
 height={40}
 alt={""}
@@ -1860,7 +1860,7 @@ className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a`} />
 <div
 className={`w-element ci9ixvi c1f3bifo c1numhkq c1diokdk ch3nxmx c1d7h9xn ${"next-btn"}`}>
 <Image
-src={"/uploads/right_arrow_k_ONH_Xzp_Ven_L2ueo21v_N_8445a3c199.svg"}
+src={"https://v2.improveitmd.com/uploads/right_arrow_k_ONH_Xzp_Ven_L2ueo21v_N_8445a3c199.svg"}
 width={40}
 height={40}
 alt={""}

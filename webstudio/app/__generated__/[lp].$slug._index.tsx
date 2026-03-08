@@ -110,13 +110,13 @@ className={`w-element c1k5oipc`}>
 className={`w-element c1osufuw c3sv84c c84c42r`}>
 <Image
 alt={"Logo Icon"}
-src={"/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
 width={18}
 height={12}
 loading={"eager"}
 className={`w-image cqsaj3r c11y8oun ctpsi40 c12l5srj`} />
 <Image
-src={"/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
 width={161}
 height={8}
 alt={"Logo Text"}
@@ -393,7 +393,7 @@ className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={""}
@@ -587,7 +587,7 @@ className={`w-element c1numhkq c53aqfr ct0qrmw cfcahn6 c1hx6vht c1epvuph c6hmdm4
 href={"tel:3017696909"}
 className={`w-link c1lvj0n c19ftcvs c1vqewwo cacmu18 c9te4zd c1u81kxm c1v2l8nt c53aqfr ct0qrmw c1lzjd2w cn7k83s c1d8rs8t cwr9gsc c1ehmfnq c1owcyig c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da cv3rgxc cahz6x0 cmchden c1amh7xl cimel00 c1b6be7c c1842oze c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 ckkl2uw cchbu1a c1lgs1h6 c1osufuw`}>
 <Image
-src={"/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
+src={"https://v2.improveitmd.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
 width={16}
 height={16}
 alt={"Phone icon"}
@@ -619,7 +619,7 @@ className={`w-element c1numhkq cqilze0 c1diokdk c3auquk c1r7jime c1hx6vht cfefby
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={"Logo"}
@@ -955,19 +955,19 @@ className={`w-element c139pwc6 cjkauba cnbug7k c8fjv4x cmnqq0u c11xvf6k cvvhtep 
 }
 {(LandingPagesData?.data?.data?.lp?.[0]?.displayRoofingHeroBackgroundVideo) &&
 <HtmlEmbed
-code={"<video autoplay muted loop playsinline class=\"bg-video\">\n    <source src=\"/uploads/roofing_lp_a3eadad818.mp4\" type=\"video/mp4\">\n    Your browser does not support the video tag.\n  </video>"}
+code={"<video autoplay muted loop playsinline class=\"bg-video\">\n    <source src=\"https://v2.improveitmd.com/uploads/roofing_lp_a3eadad818.mp4\" type=\"video/mp4\">\n    Your browser does not support the video tag.\n  </video>"}
 clientOnly={true}
 className={`w-html-embed`} />
 }
 {(LandingPagesData?.data?.data?.lp?.[0]?.backgroundVideoFlatRoofing) &&
 <HtmlEmbed
-code={"<video fetchpriority=\"high\" autoplay muted loop playsinline class=\"bg-video\">\n    <source src=\"/uploads/flat_roofing_lp_70cc5db12f.mov\" type=\"video/webm\">\n    Your browser does not support the video tag.\n  </video>"}
+code={"<video fetchpriority=\"high\" autoplay muted loop playsinline class=\"bg-video\">\n    <source src=\"https://v2.improveitmd.com/uploads/flat_roofing_lp_70cc5db12f.mov\" type=\"video/webm\">\n    Your browser does not support the video tag.\n  </video>"}
 clientOnly={true}
 className={`w-html-embed`} />
 }
 {(LandingPagesData?.data?.data?.lp?.[0]?.backgroundVideoDoors) &&
 <HtmlEmbed
-code={"<video fetchpriority=\"high\" autoplay muted loop playsinline class=\"bg-video\">\n    <source src=\"/uploads/flat_roofing_lp_70cc5db12f.mov\" type=\"video/webm\">\n    Your browser does not support the video tag.\n  </video>"}
+code={"<video fetchpriority=\"high\" autoplay muted loop playsinline class=\"bg-video\">\n    <source src=\"https://v2.improveitmd.com/uploads/flat_roofing_lp_70cc5db12f.mov\" type=\"video/webm\">\n    Your browser does not support the video tag.\n  </video>"}
 clientOnly={true}
 className={`w-html-embed`} />
 }
@@ -1072,7 +1072,7 @@ className={`w-element c1numhkq c1diokdk c3auquk ckjs5zd c1rxyz1p c1d5qtqw cvfl1u
 className={`w-element c197qtjq cjkauba c18bj3o3 c1lq6pq8 c1numhkq cyovuht`}>
 <Image
 loading={"eager"}
-src={"/uploads/capitol_improvements_hero_img_FZH_Oqk_Ui_Fhym_VWE_Yj_Jhg4_82025eb746.webp"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_hero_img_FZH_Oqk_Ui_Fhym_VWE_Yj_Jhg4_82025eb746.webp"}
 width={1920}
 height={1013}
 alt={""}
@@ -1169,7 +1169,7 @@ className={`w-html-embed`} />
 <div
 className={`w-element c139pwc6 cjhysm8 c13g3obg`}>
 <Image
-src={"/uploads/warranty_section_img_Gw_Ij3_EN_Icdl_O_Noso_Iv_S5g_5697de5e8a.webp"}
+src={"https://v2.improveitmd.com/uploads/warranty_section_img_Gw_Ij3_EN_Icdl_O_Noso_Iv_S5g_5697de5e8a.webp"}
 width={960}
 height={1034}
 alt={"Roofer being trained by Mule-Hide flat roof technician "}
@@ -1191,7 +1191,7 @@ className={`w-element c1numhkq c3auquk co72if5 c1u2ofx5 cvfl1ur c1jyyt23 c1nnsgt
 <div
 className={`w-element c1numhkq c1a06u5s c15kiuw7 ch3nxmx c1s88tz3 c15lzzou c139pwc6 c1sstzge c13g3obg c1m1w9fz c1sy7qlo c1s19qlc crfoyae cuwoxsi c4fmmfv c147y3ls`}>
 <Image
-src={"/uploads/logo_enerbank_KYZ_9_Wocf_Ri88302llq_G7_Q_8d9cc50e41.svg"}
+src={"https://v2.improveitmd.com/uploads/logo_enerbank_KYZ_9_Wocf_Ri88302llq_G7_Q_8d9cc50e41.svg"}
 width={713}
 height={111}
 alt={"Enerbank USA financing logo."}
@@ -1225,7 +1225,7 @@ className={`w-html-embed`} />
 <div
 className={`w-element c139pwc6 cjhysm8 cjkauba c13g3obg`}>
 <Image
-src={"/uploads/video_thumbnail_img_jica_ILCYK_2_M1f_BB_2_Cw_Kg9_e531a9140f.webp"}
+src={"https://v2.improveitmd.com/uploads/video_thumbnail_img_jica_ILCYK_2_M1f_BB_2_Cw_Kg9_e531a9140f.webp"}
 width={960}
 height={1034}
 alt={""}

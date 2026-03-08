@@ -141,13 +141,13 @@ className={`w-element c1k5oipc`}>
 className={`w-element c1osufuw c3sv84c c84c42r`}>
 <Image
 alt={"Logo Icon"}
-src={"/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
 width={18}
 height={12}
 loading={"eager"}
 className={`w-image cqsaj3r c11y8oun ctpsi40 c12l5srj`} />
 <Image
-src={"/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
 width={161}
 height={8}
 alt={"Logo Text"}
@@ -424,7 +424,7 @@ className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={""}
@@ -618,7 +618,7 @@ className={`w-element c1numhkq c53aqfr ct0qrmw cfcahn6 c1hx6vht c1epvuph c6hmdm4
 href={"tel:3017696909"}
 className={`w-link c1lvj0n c19ftcvs c1vqewwo cacmu18 c9te4zd c1u81kxm c1v2l8nt c53aqfr ct0qrmw c1lzjd2w cn7k83s c1d8rs8t cwr9gsc c1ehmfnq c1owcyig c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da cv3rgxc cahz6x0 cmchden c1amh7xl cimel00 c1b6be7c c1842oze c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 ckkl2uw cchbu1a c1lgs1h6 c1osufuw`}>
 <Image
-src={"/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
+src={"https://v2.improveitmd.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
 width={16}
 height={16}
 alt={"Phone icon"}
@@ -650,7 +650,7 @@ className={`w-element c1numhkq cqilze0 c1diokdk c3auquk c1r7jime c1hx6vht cfefby
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={"Logo"}
@@ -1031,7 +1031,7 @@ alt={"YouTube video preview image"}
 sizes={"100vw"}
 optimize={true}
 loading={"eager"}
-src={"/uploads/Capitol_Improvements_Finished_Photos_exzt5u_90611f8ed2.webp"}
+src={"https://v2.improveitmd.com/uploads/Capitol_Improvements_Finished_Photos_exzt5u_90611f8ed2.webp"}
 fetchPriority={"high"}
 className={`w-preview-image cnbug7k cdmu5h7 cfrqxly c139pwc6 cjkauba csabcfw c1w2t8ro c1gjvd20 c1w2te30`} />
 <VimeoSpinner
@@ -2143,7 +2143,7 @@ className={`w-element c1numhkq c1a06u5s c1sq4bmy c1diokdk ct0qrmw`}>
 <div
 className={`w-element c1numhkq`}>
 <Image
-src={"/uploads/Capitol_Improvements_Finished_Photos_cropped_nhgndu_784c811e7d.webp"}
+src={"https://v2.improveitmd.com/uploads/Capitol_Improvements_Finished_Photos_cropped_nhgndu_784c811e7d.webp"}
 loading={"lazy"}
 alt={"family photo"}
 className={`w-image c139pwc6 c1hwvjgs c9mjk8q czbu68a csabcfw c1w2t8ro c1w2te30 c1gjvd20`} />
@@ -2172,7 +2172,7 @@ target={"_blank"}
 className={`w-element`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Gaf_Master_Elite_kvteks_b9dc66ccb9.webp"}
+src={"https://v2.improveitmd.com/uploads/Gaf_Master_Elite_kvteks_b9dc66ccb9.webp"}
 className={`w-image ${"features-icon"}`} />
 </Link>
 <div
@@ -2199,7 +2199,7 @@ target={"_blank"}
 className={`w-element`}>
 <Image
 loading={"lazy"}
-src={"/uploads/James_Hardie_Preferred_rarr7e_14beaacd36.webp"}
+src={"https://v2.improveitmd.com/uploads/James_Hardie_Preferred_rarr7e_14beaacd36.webp"}
 className={`w-image ${"features-icon"}`} />
 </Link>
 <div
@@ -2220,7 +2220,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 className={`w-element ${"features-item"}`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Board_Pro_Platnium_ebzeqm_5420537416.png"}
+src={"https://v2.improveitmd.com/uploads/Board_Pro_Platnium_ebzeqm_5420537416.png"}
 className={`w-image ${"features-icon"}`} />
 <div
 className={`w-element ${"item-text-wrapper"}`}>
@@ -2240,7 +2240,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 className={`w-element ${"features-item"}`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Pro_Via_b4qh0r_b2df4e557b.webp"}
+src={"https://v2.improveitmd.com/uploads/Pro_Via_b4qh0r_b2df4e557b.webp"}
 className={`w-image ${"features-icon"}`} />
 <div
 className={`w-element ${"item-text-wrapper"}`}>
@@ -2259,7 +2259,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"/uploads/FORTIFIED_logo_program_01_1024x485_uehkpv_306668b9e6.png"}
+src={"https://v2.improveitmd.com/uploads/FORTIFIED_logo_program_01_1024x485_uehkpv_306668b9e6.png"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2279,7 +2279,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"/uploads/five_star_rating_icon_1_plpmjl_5296dfc541.svg"}
+src={"https://v2.improveitmd.com/uploads/five_star_rating_icon_1_plpmjl_5296dfc541.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2299,7 +2299,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"/uploads/five_star_rating_icon_1_plpmjl_5296dfc541.svg"}
+src={"https://v2.improveitmd.com/uploads/five_star_rating_icon_1_plpmjl_5296dfc541.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2319,7 +2319,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"/uploads/five_star_rating_icon_1_plpmjl_5296dfc541.svg"}
+src={"https://v2.improveitmd.com/uploads/five_star_rating_icon_1_plpmjl_5296dfc541.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2339,7 +2339,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"/uploads/hammer_icon_haniri_bdc66cb771.svg"}
+src={"https://v2.improveitmd.com/uploads/hammer_icon_haniri_bdc66cb771.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2359,7 +2359,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1767916686_hammer_icon_haniri_bb09faeabe.svg"}
+src={"https://v2.improveitmd.com/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1767916686_hammer_icon_haniri_bb09faeabe.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2379,7 +2379,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"/uploads/hammer_icon_haniri_bdc66cb771.svg"}
+src={"https://v2.improveitmd.com/uploads/hammer_icon_haniri_bdc66cb771.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2399,7 +2399,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"/uploads/hammer_icon_haniri_bdc66cb771.svg"}
+src={"https://v2.improveitmd.com/uploads/hammer_icon_haniri_bdc66cb771.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2419,7 +2419,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"/uploads/badge_icon_hljgdo_10525f9c42.svg"}
+src={"https://v2.improveitmd.com/uploads/badge_icon_hljgdo_10525f9c42.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2439,7 +2439,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1767916685_badge_icon_hljgdo_1f6c00d73f.svg"}
+src={"https://v2.improveitmd.com/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1767916685_badge_icon_hljgdo_1f6c00d73f.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2459,7 +2459,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"/uploads/badge_icon_hljgdo_10525f9c42.svg"}
+src={"https://v2.improveitmd.com/uploads/badge_icon_hljgdo_10525f9c42.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2479,7 +2479,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"/uploads/badge_icon_hljgdo_10525f9c42.svg"}
+src={"https://v2.improveitmd.com/uploads/badge_icon_hljgdo_10525f9c42.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2499,7 +2499,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
+src={"https://v2.improveitmd.com/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2580,7 +2580,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
+src={"https://v2.improveitmd.com/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2600,7 +2600,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
+src={"https://v2.improveitmd.com/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2620,7 +2620,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
+src={"https://v2.improveitmd.com/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2647,7 +2647,7 @@ className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <div
 className={`w-element cht8odh c139pwc6 cn87dm8 c1uhhf7h c1numhkq c1diokdk ch3nxmx`}>
 <Image
-src={"/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1767278930_2026_MASTER_ELITE_CERTIFICATE_ey6dcz_11a99efab0.jpg"}
+src={"https://v2.improveitmd.com/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1767278930_2026_MASTER_ELITE_CERTIFICATE_ey6dcz_11a99efab0.jpg"}
 loading={"lazy"}
 alt={"2026 GAF Master Elite Certification for Capitol Improvements"}
 className={`w-image c18hkk31 c1hwvjgs c9mjk8q czbu68a cjkauba c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p`} />
@@ -2663,7 +2663,7 @@ className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <div
 className={`w-element cht8odh c139pwc6 cn87dm8 c1uhhf7h c1numhkq c1diokdk ch3nxmx`}>
 <Image
-src={"/uploads/straightened_image_f6d9787376.jpeg"}
+src={"https://v2.improveitmd.com/uploads/straightened_image_f6d9787376.jpeg"}
 loading={"lazy"}
 alt={"2026 BBB Certificate of Commendation for Capitol Improvements"}
 className={`w-image c18hkk31 c1hwvjgs c9mjk8q czbu68a cjkauba c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p`} />
@@ -2677,7 +2677,7 @@ className={`w-element cn5qs21 c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <Image
-src={"/uploads/Whats_App_Image_2026_02_05_at_10_34_06_AM_aay5kl_ac71577c9f.jpg"}
+src={"https://v2.improveitmd.com/uploads/Whats_App_Image_2026_02_05_at_10_34_06_AM_aay5kl_ac71577c9f.jpg"}
 loading={"lazy"}
 alt={"Screenshot showing Capitol Improvmeents is one of the only 5-star James Hardie partner in the contractor alliance program."}
 className={`w-image c139pwc6 c1hwvjgs c9mjk8q czbu68a c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p ${"certification-image"}`} />
@@ -2691,7 +2691,7 @@ className={`w-element cn5qs21 c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <Image
-src={"/uploads/Whats_App_Image_2026_02_05_at_10_34_02_AM_cropped_dp8tdb_addb4c692e.jpg"}
+src={"https://v2.improveitmd.com/uploads/Whats_App_Image_2026_02_05_at_10_34_02_AM_cropped_dp8tdb_addb4c692e.jpg"}
 loading={"lazy"}
 alt={"5 stars rated for TimberTech deck installations and service"}
 className={`w-image c139pwc6 c1hwvjgs c9mjk8q czbu68a c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p ${"certification-image"}`} />
@@ -2707,7 +2707,7 @@ className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <div
 className={`w-element cht8odh c139pwc6 cn87dm8 c1uhhf7h c1numhkq c1diokdk ch3nxmx`}>
 <Image
-src={"/uploads/Pro_Via_Certificate_Fitted_Crop_yosl1x_605ebb4d17.jpg"}
+src={"https://v2.improveitmd.com/uploads/Pro_Via_Certificate_Fitted_Crop_yosl1x_605ebb4d17.jpg"}
 loading={"lazy"}
 alt={"Image of our Provia Window Certification good until August 2029"}
 className={`w-image c18hkk31 c1hwvjgs c9mjk8q czbu68a cjkauba c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p`} />
@@ -2724,7 +2724,7 @@ className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <div
 className={`w-element cht8odh c139pwc6 cn87dm8 c1uhhf7h c1numhkq c1diokdk ch3nxmx`}>
 <Image
-src={"/uploads/Fortified_Certificate_g11ept_e6f662f857.jpg"}
+src={"https://v2.improveitmd.com/uploads/Fortified_Certificate_g11ept_e6f662f857.jpg"}
 loading={"lazy"}
 alt={"2026 Fortified Roofing Certification for Capitol Improvements"}
 className={`w-image c18hkk31 c1hwvjgs c9mjk8q czbu68a cjkauba c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p`} />
@@ -2741,7 +2741,7 @@ className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <div
 className={`w-element cht8odh c139pwc6 cn87dm8 c1uhhf7h c1numhkq c1diokdk ch3nxmx`}>
 <Image
-src={"/uploads/Pro_Via_Certificate_2_fitted_crop_mr5dfd_b46623ab5f.jpg"}
+src={"https://v2.improveitmd.com/uploads/Pro_Via_Certificate_2_fitted_crop_mr5dfd_b46623ab5f.jpg"}
 loading={"lazy"}
 alt={"Image of our Provia Window Certification good until August 2029"}
 className={`w-image c18hkk31 c1hwvjgs c9mjk8q czbu68a cjkauba c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p`} />
@@ -2957,7 +2957,7 @@ className={`w-html-embed`} />
 <div
 className={`w-element c139pwc6 cjkauba cvcvidj c1lzjd2w c1epvuph c9nw4u8 c9te4zd cagmsft`}>
 <Image
-src={"/uploads/search_icon_grey_2_KR_Phgsf3_Mq_Ywy_OF_3_JX_Ub_375d129398.svg"}
+src={"https://v2.improveitmd.com/uploads/search_icon_grey_2_KR_Phgsf3_Mq_Ywy_OF_3_JX_Ub_375d129398.svg"}
 width={18}
 height={18}
 alt={"search icon"}
@@ -3014,7 +3014,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3035,7 +3035,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3049,7 +3049,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3081,7 +3081,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3102,7 +3102,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3116,7 +3116,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3207,7 +3207,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3228,7 +3228,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3242,7 +3242,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 c9vdfns`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3358,7 +3358,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3379,7 +3379,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3393,7 +3393,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 c9vdfns`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3401,7 +3401,7 @@ data-icon={"filled"}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 c8bhanq ce6x08i c1bxcui0 cvfl1ur`} />
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3722,7 +3722,7 @@ className={`w-element c1numhkq c3auquk c1ibjhy0 c163g466 cn87dm8 c1uhhf7h clfz32
 <div
 className={`w-element c139pwc6 c17jzp58 c1numhkq culorum`}>
 <Image
-src={"/uploads/ci_storm_map_1_LAH_T_9a_H_Mr_FS_Ifafib_43e525db09.svg"}
+src={"https://v2.improveitmd.com/uploads/ci_storm_map_1_LAH_T_9a_H_Mr_FS_Ifafib_43e525db09.svg"}
 width={320}
 height={436}
 alt={""}
@@ -3809,7 +3809,7 @@ className={`w-element c1mndzy8`}>
 className={`w-element c18bj3o3 c1lq6pq8`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Vector_i_O_Xi_YD_Iao_B_Xz9_Wh9_Cj2_K_e1edb10d97.svg"}
+src={"https://v2.improveitmd.com/uploads/Vector_i_O_Xi_YD_Iao_B_Xz9_Wh9_Cj2_K_e1edb10d97.svg"}
 width={60}
 height={62}
 alt={""}
@@ -3905,7 +3905,7 @@ className={`w-element c1numhkq c3auquk co72if5 c1u2ofx5 cvfl1ur c1jyyt23 c1nnsgt
 <div
 className={`w-element c1numhkq c1a06u5s c15kiuw7 ch3nxmx c1s88tz3 c15lzzou c139pwc6 c1sstzge c13g3obg c1m1w9fz c1sy7qlo c1s19qlc crfoyae cuwoxsi c4fmmfv c147y3ls`}>
 <Image
-src={"/uploads/logo_enerbank_KYZ_9_Wocf_Ri88302llq_G7_Q_c02a952618.svg"}
+src={"https://v2.improveitmd.com/uploads/logo_enerbank_KYZ_9_Wocf_Ri88302llq_G7_Q_c02a952618.svg"}
 width={713}
 height={111}
 alt={"Enerbank USA financing logo."}
@@ -3933,7 +3933,7 @@ className={`w-link cvljm31 crv3s27 cacmu18 cn7k83s cyc4l41 c1d7h9xn c8a9tkm c1r2
 <div
 className={`w-element c139pwc6 cjhysm8 cjkauba c13g3obg`}>
 <Image
-src={"/uploads/video_thumbnail_img_jica_ILCYK_2_M1f_BB_2_Cw_Kg9_7b3e36d901.webp"}
+src={"https://v2.improveitmd.com/uploads/video_thumbnail_img_jica_ILCYK_2_M1f_BB_2_Cw_Kg9_7b3e36d901.webp"}
 width={960}
 height={1034}
 alt={""}
@@ -4145,7 +4145,7 @@ className={`w-element`} />
 <th
 className={`w-element`}>
 <Image
-src={"/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1771257650_GAF_Logo_Brand_Symbol_PNG_ztffy2_7dd1310bae.webp"}
+src={"https://v2.improveitmd.com/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1771257650_GAF_Logo_Brand_Symbol_PNG_ztffy2_7dd1310bae.webp"}
 alt={"system plus limited warranty"}
 loading={"lazy"}
 className={`w-image`} />
@@ -4153,7 +4153,7 @@ className={`w-image`} />
 <th
 className={`w-element`}>
 <Image
-src={"/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1771257650_GAF_Logo_Distinctive_Design_PNG_laplle_1bd4713523.webp"}
+src={"https://v2.improveitmd.com/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1771257650_GAF_Logo_Distinctive_Design_PNG_laplle_1bd4713523.webp"}
 alt={"silver pledge limited warranty"}
 loading={"lazy"}
 className={`w-image`} />
@@ -4161,7 +4161,7 @@ className={`w-image`} />
 <th
 className={`w-element`}>
 <Image
-src={"/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1771257651_GAF_Logo_Design_Element_PNG_ushtwa_ad54e6bc53.webp"}
+src={"https://v2.improveitmd.com/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1771257651_GAF_Logo_Design_Element_PNG_ushtwa_ad54e6bc53.webp"}
 alt={"golden pledge limited warranty"}
 loading={"lazy"}
 className={`w-image`} />
@@ -5163,7 +5163,7 @@ className={`w-element c18bj3o3 c1lq6pq8 c1epvuph`}>
 <div
 className={`w-element cw0d079 c1mpqvj6 c18kyhsr c81ebuq c120nl7e cd04v2w cn87dm8 c1uhhf7h ckain9p c1c6zaej cmbwngm`}>
 <Image
-src={"/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1767999431_image_1765439388559_Tj_I_Qt4_VU_tcapds_b177766c8e.png"}
+src={"https://v2.improveitmd.com/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1767999431_image_1765439388559_Tj_I_Qt4_VU_tcapds_b177766c8e.png"}
 loading={"eager"}
 fetchPriority={"high"}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a cjkauba`} />
@@ -5208,7 +5208,7 @@ className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c1p4xat6 c1rjplas`}>
 <div
 className={`w-element ce8qyo9 cm2j0bx c1epvuph cqq3lvy cn87dm8 c1uhhf7h cw0d079 c1mpqvj6 c18kyhsr c81ebuq`}>
 <Image
-src={"/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1767999431_image_1765439388559_Tj_I_Qt4_VU_tcapds_b177766c8e.png"}
+src={"https://v2.improveitmd.com/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1767999431_image_1765439388559_Tj_I_Qt4_VU_tcapds_b177766c8e.png"}
 loading={"lazy"}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a cjkauba cnbug7k c8fjv4x cmnqq0u c11xvf6k cvvhtep c4au5p3 c1h4wkid c6pwqi8 c185qbt7`} />
 </div>

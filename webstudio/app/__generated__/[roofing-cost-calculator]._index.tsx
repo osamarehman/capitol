@@ -129,13 +129,13 @@ className={`w-element c1k5oipc`}>
 className={`w-element c1osufuw c3sv84c c84c42r`}>
 <Image
 alt={"Logo Icon"}
-src={"/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
 width={18}
 height={12}
 loading={"eager"}
 className={`w-image cqsaj3r c11y8oun ctpsi40 c12l5srj`} />
 <Image
-src={"/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
 width={161}
 height={8}
 alt={"Logo Text"}
@@ -412,7 +412,7 @@ className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={""}
@@ -606,7 +606,7 @@ className={`w-element c1numhkq c53aqfr ct0qrmw cfcahn6 c1hx6vht c1epvuph c6hmdm4
 href={"tel:3017696909"}
 className={`w-link c1lvj0n c19ftcvs c1vqewwo cacmu18 c9te4zd c1u81kxm c1v2l8nt c53aqfr ct0qrmw c1lzjd2w cn7k83s c1d8rs8t cwr9gsc c1ehmfnq c1owcyig c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da cv3rgxc cahz6x0 cmchden c1amh7xl cimel00 c1b6be7c c1842oze c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 ckkl2uw cchbu1a c1lgs1h6 c1osufuw`}>
 <Image
-src={"/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
+src={"https://v2.improveitmd.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
 width={16}
 height={16}
 alt={"Phone icon"}
@@ -638,7 +638,7 @@ className={`w-element c1numhkq cqilze0 c1diokdk c3auquk c1r7jime c1hx6vht cfefby
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={"Logo"}
@@ -1008,7 +1008,7 @@ className={`w-html-embed`} />
 <div
 className={`w-element c139pwc6 cjkauba cvcvidj c1lzjd2w c1epvuph c9nw4u8 cagmsft`}>
 <Image
-src={"/uploads/search_icon_grey_2_KR_Phgsf3_Mq_Ywy_OF_3_JX_Ub_375d129398.svg"}
+src={"https://v2.improveitmd.com/uploads/search_icon_grey_2_KR_Phgsf3_Mq_Ywy_OF_3_JX_Ub_375d129398.svg"}
 width={18}
 height={18}
 alt={"search icon"}
@@ -1065,7 +1065,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1086,7 +1086,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1100,7 +1100,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1132,7 +1132,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1153,7 +1153,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1167,7 +1167,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1258,7 +1258,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1279,7 +1279,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1293,7 +1293,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 c9vdfns`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1409,7 +1409,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1430,7 +1430,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1444,7 +1444,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 c9vdfns`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1452,7 +1452,7 @@ data-icon={"filled"}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 c8bhanq ce6x08i c1bxcui0 cvfl1ur`} />
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1773,7 +1773,7 @@ className={`w-element c1numhkq c3auquk c1ibjhy0 c163g466 cn87dm8 c1uhhf7h clfz32
 <div
 className={`w-element c139pwc6 c17jzp58 c1numhkq culorum`}>
 <Image
-src={"/uploads/ci_storm_map_1_LAH_T_9a_H_Mr_FS_Ifafib_43e525db09.svg"}
+src={"https://v2.improveitmd.com/uploads/ci_storm_map_1_LAH_T_9a_H_Mr_FS_Ifafib_43e525db09.svg"}
 width={320}
 height={436}
 alt={""}
@@ -1860,7 +1860,7 @@ className={`w-element c1mndzy8`}>
 className={`w-element c18bj3o3 c1lq6pq8`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Vector_i_O_Xi_YD_Iao_B_Xz9_Wh9_Cj2_K_e1edb10d97.svg"}
+src={"https://v2.improveitmd.com/uploads/Vector_i_O_Xi_YD_Iao_B_Xz9_Wh9_Cj2_K_e1edb10d97.svg"}
 width={60}
 height={62}
 alt={""}
@@ -1942,7 +1942,7 @@ className={`w-link c1lvj0n c1t6vvls cpxswal cacmu18 c1numhkq c1u81kxm c1v2l8nt c
 className={`w-element c139pwc6 ce63fjk`} />
 <Image
 loading={"lazy"}
-src={"/uploads/Roofing_Cost_Calculator_How_Much_Does_A_New_Roof_Cost_xl_VB_3_X3u_GS_3_X_Fa0xqaa_WR_7dcd19441c.png"}
+src={"https://v2.improveitmd.com/uploads/Roofing_Cost_Calculator_How_Much_Does_A_New_Roof_Cost_xl_VB_3_X3u_GS_3_X_Fa0xqaa_WR_7dcd19441c.png"}
 width={1200}
 height={630}
 alt={"Use our roofing cost calculator to find out how much a new roof costs. "}

@@ -46,7 +46,7 @@ import { NavigationMenu as NavigationMenu, NavigationMenuList as NavigationMenuL
             
 
             export const CustomCode = () => {
-              return (<><Script src={"/uploads/global_d6d09579ad.js"}></Script><Style>{"                                                         */\n  @font-face {                                                                                                                                                \n    font-family: 'Futura PT';\n    src: url('/uploads/futura_pt_normal_yr_E6_Ur_Dv_A_Qq_J7_Ggcj9_DGQ_cf34f5fbcd.woff2') format('woff2');\n    font-weight: 400;\n    font-style: normal;\n    font-display: swap;\n  }\n\n  /* Futura PT - Medium (500) */\n  @font-face {\n    font-family: 'Futura PT';\n    src: url('/uploads/futura_pt_medium_Pa_Kwd1_Jw6v_S2_Bx_Azjqox_K_fcf8a48728.woff2') format('woff2');\n    font-weight: 500;\n    font-style: normal;\n    font-display: swap;\n  }\n\n  /* Futura PT - Semi Bold (600) */\n  @font-face {\n    font-family: 'Futura PT';\n    src: url('/uploads/futura_pt_semibold_s_Jb_O_Xx_P1ilt_SW_8_Hf_B_Wec_B_5cb306e458.woff2') format('woff2');\n    font-weight: 600;\n    font-style: normal;\n    font-display: swap;\n  }\n\n  /* Futura PT - Bold (700) */\n  @font-face {\n    font-family: 'Futura PT';\n    src: url('/uploads/futura_pt_bold_sz_K1d_A_Wi_D1_GTLS_0_RA_Zpe_R_3fafd5ec7b.woff2') format('woff2');\n    font-weight: 700;\n    font-style: normal;\n    font-display: swap;\n  }\n\n  html {\n    scroll-behavior: smooth;\n  }\n\n  body,\n  h1, h2, h3, h4, h5, h6,\n  p,\n  ul, ol,\n  figure,\n  blockquote {\n    margin: 0;\n  }\n  "}</Style>{"\n  "}<meta name={"google-site-verification"} content={"ci94s2JMjxodrBBcRJQvPTnAp81MSY_4BAZuVHTaeKk"}></meta>{"\n  "}<Script type={"application/ld+json"}>{"\n  {\n     \"@context\": \"https://schema.org\",\n     \"@type\": \"RoofingContractor\",\n     \"name\": \"capitol improvements\",\n     \"image\": \"/uploads/assets_global_website_files_com_64bd6cb099271195afd55550_64bec17f217d236d7db6309a_ci_20logo_7da3e2adcc.svg\",\n     \"@id\": \"https://www.linkedin.com/company/improveitmd\",\n     \"url\": \"https://www.improveitmd.com\",\n     \"telephone\": \"301.769.6909\",\n     \"address\": {\n       \"@type\": \"PostalAddress\",\n       \"streetAddress\": \"12606 Hillmeade Station\",\n       \"addressLocality\": \"Dr. Bowie, MD\",\n       \"addressRegion\": \"MD\",\n       \"postalCode\": \"20720\",\n       \"addressCountry\": \"US\"\n     },\n     \"geo\": {\n       \"@type\": \"GeoCoordinates\",\n       \"latitude\": 38.983895097583996,\n       \"longitude\": -76.78561339131552\n     },\n     \"openingHoursSpecification\": {\n       \"@type\": \"OpeningHoursSpecification\",\n       \"dayOfWeek\": [\n         \"Monday\",\n         \"Tuesday\",\n         \"Wednesday\",\n         \"Thursday\",\n         \"Friday\",\n         \"Saturday\"\n       ],\n       \"opens\": \"09:00\",\n       \"closes\": \"07:00\"\n     },\n     \"sameAs\": \"https://www.improveitmd.com\",\n     \"department\": {\n       \"@type\": \"RoofingContractor\",\n       \"name\": \"Capitol Improvements\",\n       \"image\": \"/uploads/assets_global_website_files_com_64bd6cb099271195afd55550_64bec17f217d236d7db6309a_ci_20logo_7da3e2adcc.svg\",\n       \"telephone\": \"3017696909\",\n       \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"12606 Hillmeade Station\",\n        \"addressLocality\": \"Dr. Bowie, MD\",\n        \"addressRegion\": \"MD\",\n        \"postalCode\": \"20720\",\n        \"addressCountry\": \"US\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 38.983895097583996,\n        \"longitude\": -76.78561339131552\n      },\n       \"openingHoursSpecification\": {\n         \"@type\": \"OpeningHoursSpecification\",\n         \"dayOfWeek\": [\n           \"Monday\",\n           \"Tuesday\",\n           \"Wednesday\",\n           \"Thursday\",\n           \"Friday\",\n           \"Saturday\"\n         ],\n         \"opens\": \"09:00\",\n         \"closes\": \"07:00\"\n       }\n\n   }\n  "}</Script></>);
+              return (<><Script src={"https://v2.improveitmd.com/uploads/global_d6d09579ad.js"}></Script><Style>{"                                                         */\n  @font-face {                                                                                                                                                \n    font-family: 'Futura PT';\n    src: url('https://v2.improveitmd.com/uploads/futura_pt_normal_yr_E6_Ur_Dv_A_Qq_J7_Ggcj9_DGQ_cf34f5fbcd.woff2') format('woff2');\n    font-weight: 400;\n    font-style: normal;\n    font-display: swap;\n  }\n\n  /* Futura PT - Medium (500) */\n  @font-face {\n    font-family: 'Futura PT';\n    src: url('https://v2.improveitmd.com/uploads/futura_pt_medium_Pa_Kwd1_Jw6v_S2_Bx_Azjqox_K_fcf8a48728.woff2') format('woff2');\n    font-weight: 500;\n    font-style: normal;\n    font-display: swap;\n  }\n\n  /* Futura PT - Semi Bold (600) */\n  @font-face {\n    font-family: 'Futura PT';\n    src: url('https://v2.improveitmd.com/uploads/futura_pt_semibold_s_Jb_O_Xx_P1ilt_SW_8_Hf_B_Wec_B_5cb306e458.woff2') format('woff2');\n    font-weight: 600;\n    font-style: normal;\n    font-display: swap;\n  }\n\n  /* Futura PT - Bold (700) */\n  @font-face {\n    font-family: 'Futura PT';\n    src: url('https://v2.improveitmd.com/uploads/futura_pt_bold_sz_K1d_A_Wi_D1_GTLS_0_RA_Zpe_R_3fafd5ec7b.woff2') format('woff2');\n    font-weight: 700;\n    font-style: normal;\n    font-display: swap;\n  }\n\n  html {\n    scroll-behavior: smooth;\n  }\n\n  body,\n  h1, h2, h3, h4, h5, h6,\n  p,\n  ul, ol,\n  figure,\n  blockquote {\n    margin: 0;\n  }\n  "}</Style>{"\n  "}<meta name={"google-site-verification"} content={"ci94s2JMjxodrBBcRJQvPTnAp81MSY_4BAZuVHTaeKk"}></meta>{"\n  "}<Script type={"application/ld+json"}>{"\n  {\n     \"@context\": \"https://schema.org\",\n     \"@type\": \"RoofingContractor\",\n     \"name\": \"capitol improvements\",\n     \"image\": \"https://v2.improveitmd.com/uploads/assets_global_website_files_com_64bd6cb099271195afd55550_64bec17f217d236d7db6309a_ci_20logo_7da3e2adcc.svg\",\n     \"@id\": \"https://www.linkedin.com/company/improveitmd\",\n     \"url\": \"https://www.improveitmd.com\",\n     \"telephone\": \"301.769.6909\",\n     \"address\": {\n       \"@type\": \"PostalAddress\",\n       \"streetAddress\": \"12606 Hillmeade Station\",\n       \"addressLocality\": \"Dr. Bowie, MD\",\n       \"addressRegion\": \"MD\",\n       \"postalCode\": \"20720\",\n       \"addressCountry\": \"US\"\n     },\n     \"geo\": {\n       \"@type\": \"GeoCoordinates\",\n       \"latitude\": 38.983895097583996,\n       \"longitude\": -76.78561339131552\n     },\n     \"openingHoursSpecification\": {\n       \"@type\": \"OpeningHoursSpecification\",\n       \"dayOfWeek\": [\n         \"Monday\",\n         \"Tuesday\",\n         \"Wednesday\",\n         \"Thursday\",\n         \"Friday\",\n         \"Saturday\"\n       ],\n       \"opens\": \"09:00\",\n       \"closes\": \"07:00\"\n     },\n     \"sameAs\": \"https://www.improveitmd.com\",\n     \"department\": {\n       \"@type\": \"RoofingContractor\",\n       \"name\": \"Capitol Improvements\",\n       \"image\": \"https://v2.improveitmd.com/uploads/assets_global_website_files_com_64bd6cb099271195afd55550_64bec17f217d236d7db6309a_ci_20logo_7da3e2adcc.svg\",\n       \"telephone\": \"3017696909\",\n       \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"12606 Hillmeade Station\",\n        \"addressLocality\": \"Dr. Bowie, MD\",\n        \"addressRegion\": \"MD\",\n        \"postalCode\": \"20720\",\n        \"addressCountry\": \"US\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 38.983895097583996,\n        \"longitude\": -76.78561339131552\n      },\n       \"openingHoursSpecification\": {\n         \"@type\": \"OpeningHoursSpecification\",\n         \"dayOfWeek\": [\n           \"Monday\",\n           \"Tuesday\",\n           \"Wednesday\",\n           \"Thursday\",\n           \"Friday\",\n           \"Saturday\"\n         ],\n         \"opens\": \"09:00\",\n         \"closes\": \"07:00\"\n       }\n\n   }\n  "}</Script></>);
             }
           
 
@@ -128,13 +128,13 @@ className={`w-element c1k5oipc`}>
 className={`w-element c1osufuw c3sv84c c84c42r`}>
 <Image
 alt={"Logo Icon"}
-src={"/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
 width={18}
 height={12}
 loading={"eager"}
 className={`w-image cqsaj3r c11y8oun ctpsi40 c12l5srj`} />
 <Image
-src={"/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
 width={161}
 height={8}
 alt={"Logo Text"}
@@ -411,7 +411,7 @@ className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={""}
@@ -605,7 +605,7 @@ className={`w-element c1numhkq c53aqfr ct0qrmw cfcahn6 c1hx6vht c1epvuph c6hmdm4
 href={"tel:3017696909"}
 className={`w-link c1lvj0n c19ftcvs c1vqewwo cacmu18 c9te4zd c1u81kxm c1v2l8nt c53aqfr ct0qrmw c1lzjd2w cn7k83s c1d8rs8t cwr9gsc c1ehmfnq c1owcyig c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da cv3rgxc cahz6x0 cmchden c1amh7xl cimel00 c1b6be7c c1842oze c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 ckkl2uw cchbu1a c1lgs1h6 c1osufuw`}>
 <Image
-src={"/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
+src={"https://v2.improveitmd.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
 width={16}
 height={16}
 alt={"Phone icon"}
@@ -637,7 +637,7 @@ className={`w-element c1numhkq cqilze0 c1diokdk c3auquk c1r7jime c1hx6vht cfefby
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={"Logo"}
@@ -992,7 +992,7 @@ className={`w-element c139pwc6 c1907jr4 c1epvuph cn87dm8 c1uhhf7h cjm2rxl c1ytvt
 alt={""}
 loading={"eager"}
 fetchPriority={"high"}
-src={"/uploads/capitol_improvements_hero_img_FZH_Oqk_Ui_Fhym_VWE_Yj_Jhg4_82025eb746.webp"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_hero_img_FZH_Oqk_Ui_Fhym_VWE_Yj_Jhg4_82025eb746.webp"}
 width={1920}
 height={1013}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a c15bin8n c1xbhoju cnbug7k cmhuipo c4ily4v c19wpft8 c189czh1 cgwe1hs c7xawzk cbyqy27 c1007gi3 c1a9ukpg cjm2rxl c1ytvtu4 cgzewc9`} />
@@ -1003,11 +1003,11 @@ autoPlay={true}
 muted={true}
 playsInline={true}
 preload={"auto"}
-poster={"/uploads/662f3b433b72d65bdb7e82a5_65ca32dc202550e25648683a_Capitol_Improvements_Roofing_and_Siding_Contractors_poster_00001_iosgam_94e2ceb1dc.webp"}
+poster={"https://v2.improveitmd.com/uploads/662f3b433b72d65bdb7e82a5_65ca32dc202550e25648683a_Capitol_Improvements_Roofing_and_Siding_Contractors_poster_00001_iosgam_94e2ceb1dc.webp"}
 data-lcp-video={""}
 className={`w-element c139pwc6 cjkauba cdmu5h7 ${"hero-video"}`}>
 <source
-src={"/uploads/ik_imagekit_io_einkpz9gr_65ca32dc202550e25648683a_Capitol_20_Improvements_20_20_Roofing_20and_20_Siding_20_Contractors_transcode_webm_ik_video_0a02644ba7.mp4_updatedAt_1765471677644"}
+src={"https://v2.improveitmd.com/uploads/ik_imagekit_io_einkpz9gr_65ca32dc202550e25648683a_Capitol_20_Improvements_20_20_Roofing_20and_20_Siding_20_Contractors_transcode_webm_ik_video_0a02644ba7.mp4_updatedAt_1765471677644"}
 type={"video/webm"}
 className={`w-element`} />
 </video>
@@ -1120,7 +1120,7 @@ href={"https://www.gaf.com/en-us/roofing-contractors/residential/usa/md/bowie/ca
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/uploads/gaf_logo_We_ITC_5p_Ape2_Cx61bwo3_OP_136c40af79.svg"}
+src={"https://v2.improveitmd.com/uploads/gaf_logo_We_ITC_5p_Ape2_Cx61bwo3_OP_136c40af79.svg"}
 width={128}
 height={128}
 alt={"GAF Master Elite logo. "}
@@ -1132,7 +1132,7 @@ href={"https://www.atlasroofing.com/find-a-contractor"}
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/uploads/atlas_pro_logo_q_Voe_O_Fympg2_By5s8t30_w_4c8e4d7224.svg"}
+src={"https://v2.improveitmd.com/uploads/atlas_pro_logo_q_Voe_O_Fympg2_By5s8t30_w_4c8e4d7224.svg"}
 width={122}
 height={124}
 alt={"Atlas Pro+ Logo."}
@@ -1144,7 +1144,7 @@ href={"https://www.plygem.com/how-to-buy/"}
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/uploads/plygem_logo_Qb_U2kz_Gy_Nyh5_D_Fh_F_Uq_Q_Lg_5b26e77fa1.svg"}
+src={"https://v2.improveitmd.com/uploads/plygem_logo_Qb_U2kz_Gy_Nyh5_D_Fh_F_Uq_Q_Lg_5b26e77fa1.svg"}
 width={145}
 height={124}
 alt={"Mastic by Plygem logo. "}
@@ -1156,7 +1156,7 @@ href={"https://www.mulehide.com/en-us/"}
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/uploads/mule_hide_logo_DW_Oj97_Vdm9n_ZDJ_Upk_Gy_D8_a5cfdda907.svg"}
+src={"https://v2.improveitmd.com/uploads/mule_hide_logo_DW_Oj97_Vdm9n_ZDJ_Upk_Gy_D8_a5cfdda907.svg"}
 width={121}
 height={118}
 alt={"MuleHide logo. "}
@@ -1168,7 +1168,7 @@ href={"https://www.jameshardie.com/find-a-contractor/results/capitol-improvement
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/uploads/james_hardie_logo_C1_LC_6obnlrm346_Vy_U2_Gyg_7d5d8dec1d.svg"}
+src={"https://v2.improveitmd.com/uploads/james_hardie_logo_C1_LC_6obnlrm346_Vy_U2_Gyg_7d5d8dec1d.svg"}
 width={110}
 height={122}
 alt={"James Hardie logo."}
@@ -1561,7 +1561,7 @@ className={`w-link cvljm31 crv3s27 cacmu18 cn7k83s cyc4l41 c1d7h9xn c8a9tkm c1r2
 <div
 className={`w-element c139pwc6 cjhysm8 c13g3obg`}>
 <Image
-src={"/uploads/warranty_section_img_Gw_Ij3_EN_Icdl_O_Noso_Iv_S5g_d91b99e2b9.webp"}
+src={"https://v2.improveitmd.com/uploads/warranty_section_img_Gw_Ij3_EN_Icdl_O_Noso_Iv_S5g_d91b99e2b9.webp"}
 width={960}
 height={1034}
 alt={"Roofer being trained by Mule-Hide flat roof technician "}
@@ -1585,7 +1585,7 @@ className={`w-element c1numhkq c3auquk co72if5 c1u2ofx5 cvfl1ur c1jyyt23 c1nnsgt
 <div
 className={`w-element c1numhkq c1a06u5s c15kiuw7 ch3nxmx c1s88tz3 c15lzzou c139pwc6 c1sstzge c13g3obg c1m1w9fz c1sy7qlo c1s19qlc crfoyae cuwoxsi c4fmmfv c147y3ls`}>
 <Image
-src={"/uploads/logo_enerbank_KYZ_9_Wocf_Ri88302llq_G7_Q_c02a952618.svg"}
+src={"https://v2.improveitmd.com/uploads/logo_enerbank_KYZ_9_Wocf_Ri88302llq_G7_Q_c02a952618.svg"}
 width={713}
 height={111}
 alt={"Enerbank USA financing logo."}
@@ -1613,7 +1613,7 @@ className={`w-link cvljm31 crv3s27 cacmu18 cn7k83s cyc4l41 c1d7h9xn c8a9tkm c1r2
 <div
 className={`w-element c139pwc6 cjhysm8 cjkauba c13g3obg`}>
 <Image
-src={"/uploads/video_thumbnail_img_jica_ILCYK_2_M1f_BB_2_Cw_Kg9_7b3e36d901.webp"}
+src={"https://v2.improveitmd.com/uploads/video_thumbnail_img_jica_ILCYK_2_M1f_BB_2_Cw_Kg9_7b3e36d901.webp"}
 width={960}
 height={1034}
 alt={""}
@@ -1639,7 +1639,7 @@ className={`w-element c1numhkq cjgpxnj c1sq4bmy c139pwc6 c4ph8p6 c1t9puix czr9sb
 <div
 className={`w-element c18bj3o3 cxte6uv cyqqrx6 c16lpxcx cs0io4s cyovuht c12qh1s1`}>
 <Image
-src={"/uploads/home_reviews_section_img_MZ_8_H2_Bc6yj_Fnyhr96_Mf_GR_36fa2eab93.webp"}
+src={"https://v2.improveitmd.com/uploads/home_reviews_section_img_MZ_8_H2_Bc6yj_Fnyhr96_Mf_GR_36fa2eab93.webp"}
 width={960}
 height={1490}
 alt={"Installing new siding on ladder."}
@@ -1764,7 +1764,7 @@ className={`w-element cmsm1bz cvp609z c15p7bp0 c13gen24 c1txodcv curgy1m cyovuht
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c1irdqs7 c1p4xat6`}>
 <Image
-src={"/uploads/google_logo_tc_TKP_H_Wr_Qxpx4_J_Bktjz_M_5da7981fc6.svg"}
+src={"https://v2.improveitmd.com/uploads/google_logo_tc_TKP_H_Wr_Qxpx4_J_Bktjz_M_5da7981fc6.svg"}
 width={54}
 height={54}
 alt={"Google logo. "}
@@ -1773,7 +1773,7 @@ className={`w-image c139pwc6 c1hwvjgs c9mjk8q c8vzzbi ca9fo5a`} />
 <div
 className={`w-element c1numhkq c1a06u5s c1603wqb`}>
 <Image
-src={"/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_5837d92061.svg"}
+src={"https://v2.improveitmd.com/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_5837d92061.svg"}
 width={128}
 height={23}
 alt={"5 stars logo."}
@@ -1789,7 +1789,7 @@ className={`w-element c1hwvjgs cacmu18 c12n66pl`}>
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c1irdqs7 c1p4xat6`}>
 <Image
-src={"/uploads/angi_logo_QZ_Qiak_Zuvqd_DDBUP_7_J_Xyt_4cbd34221e.svg"}
+src={"https://v2.improveitmd.com/uploads/angi_logo_QZ_Qiak_Zuvqd_DDBUP_7_J_Xyt_4cbd34221e.svg"}
 width={80}
 height={48}
 alt={"Angi logo. "}
@@ -1798,7 +1798,7 @@ className={`w-image c139pwc6 c1hwvjgs c9mjk8q c2aaj4h ca9fo5a ckdtkkn`} />
 <div
 className={`w-element c1numhkq c1a06u5s c1603wqb`}>
 <Image
-src={"/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_5837d92061.svg"}
+src={"https://v2.improveitmd.com/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_5837d92061.svg"}
 width={128}
 height={23}
 alt={"5 stars logo."}
@@ -1814,7 +1814,7 @@ className={`w-element c1hwvjgs cacmu18 c12n66pl`}>
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c1irdqs7 c1p4xat6`}>
 <Image
-src={"/uploads/bbb_logo_AZ_Wq_VTT_1q_PEO_1p_L97jl_Nq_7de97e0636.svg"}
+src={"https://v2.improveitmd.com/uploads/bbb_logo_AZ_Wq_VTT_1q_PEO_1p_L97jl_Nq_7de97e0636.svg"}
 width={62}
 height={62}
 alt={"BBB logo. "}
@@ -1823,7 +1823,7 @@ className={`w-image c139pwc6 c1hwvjgs c9mjk8q cuyjpqi c5qn6ig`} />
 <div
 className={`w-element c1numhkq c1a06u5s c1603wqb`}>
 <Image
-src={"/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_5837d92061.svg"}
+src={"https://v2.improveitmd.com/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_5837d92061.svg"}
 width={128}
 height={23}
 alt={"5 stars logo."}

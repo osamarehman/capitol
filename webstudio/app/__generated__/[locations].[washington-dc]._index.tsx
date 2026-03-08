@@ -107,13 +107,13 @@ className={`w-element c1k5oipc`}>
 className={`w-element c1osufuw c3sv84c c84c42r`}>
 <Image
 alt={"Logo Icon"}
-src={"/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
 width={18}
 height={12}
 loading={"eager"}
 className={`w-image cqsaj3r c11y8oun ctpsi40 c12l5srj`} />
 <Image
-src={"/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
 width={161}
 height={8}
 alt={"Logo Text"}
@@ -390,7 +390,7 @@ className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={""}
@@ -584,7 +584,7 @@ className={`w-element c1numhkq c53aqfr ct0qrmw cfcahn6 c1hx6vht c1epvuph c6hmdm4
 href={"tel:3017696909"}
 className={`w-link c1lvj0n c19ftcvs c1vqewwo cacmu18 c9te4zd c1u81kxm c1v2l8nt c53aqfr ct0qrmw c1lzjd2w cn7k83s c1d8rs8t cwr9gsc c1ehmfnq c1owcyig c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da cv3rgxc cahz6x0 cmchden c1amh7xl cimel00 c1b6be7c c1842oze c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 ckkl2uw cchbu1a c1lgs1h6 c1osufuw`}>
 <Image
-src={"/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
+src={"https://v2.improveitmd.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
 width={16}
 height={16}
 alt={"Phone icon"}
@@ -616,7 +616,7 @@ className={`w-element c1numhkq cqilze0 c1diokdk c3auquk c1r7jime c1hx6vht cfefby
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={"Logo"}
@@ -1043,7 +1043,7 @@ className={`w-element cnwi6s4 c1lq6pq8 cssmshv cxwe9q8 c12qh1s1`}>
 <div
 className={`w-element c1diokdk ch3nxmx c18hkk31 cjkauba cn87dm8 c1uhhf7h c1epvuph`}>
 <Image
-src={"/uploads/capitol_improvements_hero_img_FZH_Oqk_Ui_Fhym_VWE_Yj_Jhg4_82025eb746.webp"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_hero_img_FZH_Oqk_Ui_Fhym_VWE_Yj_Jhg4_82025eb746.webp"}
 width={880}
 height={430}
 alt={"Compilation Video of the Capitol Improvements Team Completing Roofing, Siding, Window, Decks, Doors, and Gutter Installation Projects throughout DC, MD, and VA."}
@@ -1057,10 +1057,10 @@ autoPlay={true}
 muted={true}
 playsInline={true}
 preload={"auto"}
-poster={"/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1768689432_662f3b433b72d65bdb7e82a5_65ca32dc202550e25648683a_Capitol_Improvements_Roofing_and_Siding_Contractors_poster_00001_iosgam_648e9de1e8.webp"}
+poster={"https://v2.improveitmd.com/uploads/res_cloudinary_com_ddeeo6usc_image_upload_v1768689432_662f3b433b72d65bdb7e82a5_65ca32dc202550e25648683a_Capitol_Improvements_Roofing_and_Siding_Contractors_poster_00001_iosgam_648e9de1e8.webp"}
 className={`w-element c139pwc6 cjkauba cdmu5h7 ${"hero-video"}`}>
 <source
-src={"/uploads/ik_imagekit_io_einkpz9gr_65ca32dc202550e25648683a_Capitol_20_Improvements_20_20_Roofing_20and_20_Siding_20_Contractors_transcode_webm_ik_video_0a02644ba7.mp4_updatedAt_1765471677644"}
+src={"https://v2.improveitmd.com/uploads/ik_imagekit_io_einkpz9gr_65ca32dc202550e25648683a_Capitol_20_Improvements_20_20_Roofing_20and_20_Siding_20_Contractors_transcode_webm_ik_video_0a02644ba7.mp4_updatedAt_1765471677644"}
 type={"video/webm"}
 className={`w-element`} />
 </video>
@@ -1092,14 +1092,14 @@ className={`w-element c1numhkq c1diokdk ch3nxmx ciot89f c20rkyc c9su8v5 c1idbwr4
 <div
 className={`w-element c1numhkq c1diokdk ct0qrmw cj1o4tp c1q4fbwg ce6x08i c1lg7bh9 ciylvte c18oqc5x c1exxhe2`}>
 <Image
-src={"/uploads/consult_headshot_jason_U3uq_Lok_P5b_PF_Nyjndw_Pc_7e5448d3bc.webp"}
+src={"https://v2.improveitmd.com/uploads/consult_headshot_jason_U3uq_Lok_P5b_PF_Nyjndw_Pc_7e5448d3bc.webp"}
 width={200}
 height={200}
 alt={"Project consultant Jason"}
 loading={"lazy"}
 className={`w-image cfgaftm c1hwvjgs cdmu5h7 czbu68a ce6x08i c155pijp cn87dm8 c1uhhf7h c14dc6x6 cr4tyxq c1n4uvdf cuos2rc ceghu2f c18bj3o3 c1lq6pq8`} />
 <Image
-src={"/uploads/consult_headshot_lance_n9_Lu_S_Gqtb_ZJBC_5_K_Jv_YQ_48_986cc58ed1.webp"}
+src={"https://v2.improveitmd.com/uploads/consult_headshot_lance_n9_Lu_S_Gqtb_ZJBC_5_K_Jv_YQ_48_986cc58ed1.webp"}
 width={200}
 height={200}
 alt={"Project consultant Lance"}
@@ -1144,7 +1144,7 @@ href={"https://www.gaf.com/en-us/roofing-contractors/residential/usa/md/bowie/ca
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/uploads/gaf_logo_We_ITC_5p_Ape2_Cx61bwo3_OP_136c40af79.svg"}
+src={"https://v2.improveitmd.com/uploads/gaf_logo_We_ITC_5p_Ape2_Cx61bwo3_OP_136c40af79.svg"}
 width={128}
 height={128}
 alt={"GAF Master Elite logo. "}
@@ -1156,7 +1156,7 @@ href={"https://www.atlasroofing.com/find-a-contractor"}
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/uploads/atlas_pro_logo_q_Voe_O_Fympg2_By5s8t30_w_4c8e4d7224.svg"}
+src={"https://v2.improveitmd.com/uploads/atlas_pro_logo_q_Voe_O_Fympg2_By5s8t30_w_4c8e4d7224.svg"}
 width={122}
 height={124}
 alt={"Atlas Pro+ Logo."}
@@ -1168,7 +1168,7 @@ href={"https://www.plygem.com/how-to-buy/"}
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/uploads/plygem_logo_Qb_U2kz_Gy_Nyh5_D_Fh_F_Uq_Q_Lg_5b26e77fa1.svg"}
+src={"https://v2.improveitmd.com/uploads/plygem_logo_Qb_U2kz_Gy_Nyh5_D_Fh_F_Uq_Q_Lg_5b26e77fa1.svg"}
 width={145}
 height={124}
 alt={"Mastic by Plygem logo. "}
@@ -1180,7 +1180,7 @@ href={"https://www.mulehide.com/en-us/"}
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/uploads/mule_hide_logo_DW_Oj97_Vdm9n_ZDJ_Upk_Gy_D8_a5cfdda907.svg"}
+src={"https://v2.improveitmd.com/uploads/mule_hide_logo_DW_Oj97_Vdm9n_ZDJ_Upk_Gy_D8_a5cfdda907.svg"}
 width={121}
 height={118}
 alt={"MuleHide logo. "}
@@ -1192,7 +1192,7 @@ href={"https://www.jameshardie.com/find-a-contractor/results/capitol-improvement
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/uploads/james_hardie_logo_C1_LC_6obnlrm346_Vy_U2_Gyg_7d5d8dec1d.svg"}
+src={"https://v2.improveitmd.com/uploads/james_hardie_logo_C1_LC_6obnlrm346_Vy_U2_Gyg_7d5d8dec1d.svg"}
 width={110}
 height={122}
 alt={"James Hardie logo."}
@@ -1556,14 +1556,14 @@ className={`w-element c1numhkq c1diokdk ch3nxmx ciot89f c20rkyc c9su8v5 c1idbwr4
 <div
 className={`w-element c1numhkq c1diokdk ct0qrmw cj1o4tp c1q4fbwg ce6x08i c1lg7bh9 ciylvte c18oqc5x c1exxhe2`}>
 <Image
-src={"/uploads/consult_headshot_jason_U3uq_Lok_P5b_PF_Nyjndw_Pc_7e5448d3bc.webp"}
+src={"https://v2.improveitmd.com/uploads/consult_headshot_jason_U3uq_Lok_P5b_PF_Nyjndw_Pc_7e5448d3bc.webp"}
 width={200}
 height={200}
 alt={"Project consultant Jason"}
 loading={"lazy"}
 className={`w-image cfgaftm c1hwvjgs cdmu5h7 czbu68a ce6x08i c155pijp cn87dm8 c1uhhf7h c14dc6x6 cr4tyxq c1n4uvdf cuos2rc ceghu2f c18bj3o3 c1lq6pq8`} />
 <Image
-src={"/uploads/consult_headshot_lance_n9_Lu_S_Gqtb_ZJBC_5_K_Jv_YQ_48_986cc58ed1.webp"}
+src={"https://v2.improveitmd.com/uploads/consult_headshot_lance_n9_Lu_S_Gqtb_ZJBC_5_K_Jv_YQ_48_986cc58ed1.webp"}
 width={200}
 height={200}
 alt={"Project consultant Lance"}
@@ -1600,7 +1600,7 @@ className={`w-element cb7wkl5 c1numhkq c3auquk co72if5 c18fd4vt c9tjkc5 c4ph8p6 
 className={`w-element c1numhkq c1a06u5s c1s88tz3 c139pwc6 c1bijp3c c13g3obg`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Flat_Roofing_Services_in_Washington_DC_zbc_Z_Jx_GU_4_Ehaqwn_ZMG_8i_C_72b72e0b2f.webp"}
+src={"https://v2.improveitmd.com/uploads/Flat_Roofing_Services_in_Washington_DC_zbc_Z_Jx_GU_4_Ehaqwn_ZMG_8i_C_72b72e0b2f.webp"}
 width={768}
 height={1024}
 alt={"Flat Roofing Services in Washington DC. TPO and Torch Down Modified Flat Roofing in DC"}
@@ -1665,7 +1665,7 @@ className={`w-element cprvrz2 c1uaxhv2 cacmu18 c1ezjj73 cahz6x0 cmchden`}>
 className={`w-element c1numhkq c1a06u5s c1s88tz3 c139pwc6 c1bijp3c c13g3obg`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Siding_Installation_Washington_DC_1_t_c_CE_1n_Nfze_YB_Ev4_VSPBN_11b2683e19.webp"}
+src={"https://v2.improveitmd.com/uploads/Siding_Installation_Washington_DC_1_t_c_CE_1n_Nfze_YB_Ev4_VSPBN_11b2683e19.webp"}
 width={1500}
 height={1000}
 alt={"Siding Installation Services Washington DC"}
@@ -1735,7 +1735,7 @@ className={`w-element cb7wkl5 c1numhkq c3auquk co72if5 c18fd4vt c9tjkc5 c4ph8p6 
 className={`w-element c1numhkq c1a06u5s c1s88tz3 c139pwc6 c1bijp3c c13g3obg`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Windows_and_Doors_in_Washington_DC_86j_H_Zf_DF_Rq9o_Ss_M_Qwq_P6_T_6a287dda83.webp"}
+src={"https://v2.improveitmd.com/uploads/Windows_and_Doors_in_Washington_DC_86j_H_Zf_DF_Rq9o_Ss_M_Qwq_P6_T_6a287dda83.webp"}
 width={1248}
 height={640}
 alt={"Window Replacement and Doors in Washington DC"}
@@ -1792,7 +1792,7 @@ className={`w-element cprvrz2 c1uaxhv2 cacmu18 c1ezjj73 cahz6x0 cmchden`}>
 className={`w-element c1numhkq c1a06u5s c1s88tz3 c139pwc6 c1bijp3c c13g3obg`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Door_Installation_Washington_DC_gran_T_Jn_FO_5_Mp17tn_CUP_4_B_6ad1a2a8c6.webp"}
+src={"https://v2.improveitmd.com/uploads/Door_Installation_Washington_DC_gran_T_Jn_FO_5_Mp17tn_CUP_4_B_6ad1a2a8c6.webp"}
 width={1500}
 height={2000}
 alt={"Door Installation in Washington DC"}
@@ -1892,7 +1892,7 @@ className={`w-element cb7wkl5 c1numhkq c3auquk co72if5 c18fd4vt c9tjkc5 c4ph8p6 
 className={`w-element c1numhkq c1a06u5s c1s88tz3 c139pwc6 c1bijp3c c13g3obg`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Deck_Building_Services_Washington_DC_Mp_Fqfyyw_Aw_S8_L_Ff_R1_Qs2u_8cdfffcba3.webp"}
+src={"https://v2.improveitmd.com/uploads/Deck_Building_Services_Washington_DC_Mp_Fqfyyw_Aw_S8_L_Ff_R1_Qs2u_8cdfffcba3.webp"}
 width={4032}
 height={3024}
 alt={"Deck Building Services Washington DC"}
@@ -1956,7 +1956,7 @@ className={`w-element cprvrz2 c1uaxhv2 cacmu18 c1ezjj73 cahz6x0 cmchden`}>
 className={`w-element c1numhkq c1a06u5s c1s88tz3 c139pwc6 c1bijp3c c13g3obg`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Seamless_Gutters_and_Gutter_Covers_in_Washington_DC_O4_Q0_JD_0_Uv8_Ve8rr_Zx9o2u_19ce42d49c.webp"}
+src={"https://v2.improveitmd.com/uploads/Seamless_Gutters_and_Gutter_Covers_in_Washington_DC_O4_Q0_JD_0_Uv8_Ve8rr_Zx9o2u_19ce42d49c.webp"}
 width={3024}
 height={4032}
 alt={"Seamless Gutters and Gutter Cover Services in Washington DC"}
@@ -2024,7 +2024,7 @@ className={`w-element c5ftqtp c1ux94pn cl4yxfz c12qh1s1`}>
 className={`w-element c1numhkq c1a06u5s c1s88tz3 c139pwc6 c1bijp3c csv93dz c13g3obg`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Roofing_in_Washington_DC_wjxye_Ot_Yg_GDM_Tt_Dk_G_Lhgh_9704f5626c.webp"}
+src={"https://v2.improveitmd.com/uploads/Roofing_in_Washington_DC_wjxye_Ot_Yg_GDM_Tt_Dk_G_Lhgh_9704f5626c.webp"}
 width={768}
 height={863}
 alt={""}
@@ -2596,14 +2596,14 @@ className={`w-element c1numhkq c1diokdk ch3nxmx ciot89f c20rkyc c9su8v5 c1idbwr4
 <div
 className={`w-element c1numhkq c1diokdk ct0qrmw cj1o4tp c1q4fbwg ce6x08i c1lg7bh9 ciylvte c18oqc5x c1exxhe2`}>
 <Image
-src={"/uploads/consult_headshot_jason_U3uq_Lok_P5b_PF_Nyjndw_Pc_7e5448d3bc.webp"}
+src={"https://v2.improveitmd.com/uploads/consult_headshot_jason_U3uq_Lok_P5b_PF_Nyjndw_Pc_7e5448d3bc.webp"}
 width={200}
 height={200}
 alt={"Project consultant Jason"}
 loading={"lazy"}
 className={`w-image cfgaftm c1hwvjgs cdmu5h7 czbu68a ce6x08i c155pijp cn87dm8 c1uhhf7h c14dc6x6 cr4tyxq c1n4uvdf cuos2rc ceghu2f c18bj3o3 c1lq6pq8`} />
 <Image
-src={"/uploads/consult_headshot_lance_n9_Lu_S_Gqtb_ZJBC_5_K_Jv_YQ_48_986cc58ed1.webp"}
+src={"https://v2.improveitmd.com/uploads/consult_headshot_lance_n9_Lu_S_Gqtb_ZJBC_5_K_Jv_YQ_48_986cc58ed1.webp"}
 width={200}
 height={200}
 alt={"Project consultant Lance"}
@@ -2727,7 +2727,7 @@ className={`w-element c1g3mhtg cn5qs21 c1b2b7rn chdomh6`}>
 <div
 className={`w-element c1numhkq c1diokdk ct0qrmw c1ym9r0h c1350r63 c1otj3om cn3kss c1kioei4`}>
 <Image
-src={"/uploads/rating_stars_CVEF_Pd3_QYWQ_Ugq_S_viwp_M_c1b7210fab.svg"}
+src={"https://v2.improveitmd.com/uploads/rating_stars_CVEF_Pd3_QYWQ_Ugq_S_viwp_M_c1b7210fab.svg"}
 width={110}
 height={20}
 alt={"5 stars logo."}

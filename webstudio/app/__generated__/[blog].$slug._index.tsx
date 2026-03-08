@@ -70,7 +70,7 @@ className={`w-element`}>
 className={`w-element cv4mf0f`}>
 <HtmlEmbed
 clientOnly={true}
-code={"<script src=\"https://code.jquery.com/jquery-3.7.1.min.js\" integrity=\"sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=\" crossorigin=\"anonymous\"></script>\n\n<script src=\"https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.js\">\n\n</script>\n<script src=\"https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js\">\n\n</script>\n<script src=\"/uploads/uploads_ssl_webflow_com_6287b31efad93805832a2f6e_62de4ba563185e28ce6dea35_draw_2af4812f8b.txt\">\n\n</script>\n<script src=\"https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js\">\n\n</script>\n<script>\n!function(e){if(\"object\"==typeof exports&&\"undefined\"!=typeof module)module.exports=e();else if(\"function\"==typeof define&&define.amd)define([],e);else{var t;t=\"undefined\"!=typeof window?window:\"undefined\"!=typeof global?global:\"undefined\"!=typeof self?self:this,t.DrawRectangle=e()}}(function(){return function(){function e(t,n,o){function i(r,l){if(!n[r]){if(!t[r]){var s=\"function\"==typeof require&&require;if(!l&&s)return s(r,!0);if(a)return a(r,!0);var u=new Error(\"Cannot find module '\"+r+\"'\");throw u.code=\"MODULE_NOT_FOUND\",u}var d=n[r]={exports:{}};t[r][0].call(d.exports,function(e){return i(t[r][1][e]||e)},d,d.exports,e,t,n,o)}return n[r].exports}for(var a=\"function\"==typeof require&&require,r=0;r<o.length;r++)i(o[r]);return i}return e}()({1:[function(e,t,n){\"use strict\";Object.defineProperty(n,\"__esModule\",{value:!0});var o={enable:function(e){setTimeout(function(){e.map&&e.map.doubleClickZoom&&e._ctx&&e._ctx.store&&e._ctx.store.getInitialConfigValue&&e._ctx.store.getInitialConfigValue(\"doubleClickZoom\")&&e.map.doubleClickZoom.enable()},0)},disable:function(e){setTimeout(function(){e.map&&e.map.doubleClickZoom&&e.map.doubleClickZoom.disable()},0)}},i={onSetup:function(e){var t=this.newFeature({type:\"Feature\",properties:{},geometry:{type:\"Polygon\",coordinates:[[]]}});return this.addFeature(t),this.clearSelectedFeatures(),o.disable(this),this.updateUIClasses({mouse:\"add\"}),this.setActionableState({trash:!0}),{rectangle:t}},onClick:function(e,t){e.startPoint&&e.startPoint[0]!==t.lngLat.lng&&e.startPoint[1]!==t.lngLat.lat&&(this.updateUIClasses({mouse:\"pointer\"}),e.endPoint=[t.lngLat.lng,t.lngLat.lat],this.changeMode(\"simple_select\",{featuresId:e.rectangle.id}));var n=[t.lngLat.lng,t.lngLat.lat];e.startPoint=n},onMouseMove:function(e,t){e.startPoint&&(e.rectangle.updateCoordinate(\"0.0\",e.startPoint[0],e.startPoint[1]),e.rectangle.updateCoordinate(\"0.1\",t.lngLat.lng,e.startPoint[1]),e.rectangle.updateCoordinate(\"0.2\",t.lngLat.lng,t.lngLat.lat),e.rectangle.updateCoordinate(\"0.3\",e.startPoint[0],t.lngLat.lat),e.rectangle.updateCoordinate(\"0.4\",e.startPoint[0],e.startPoint[1]))},onKeyUp:function(e,t){if(27===t.keyCode)return this.changeMode(\"simple_select\")},onStop:function(e){o.enable(this),this.updateUIClasses({mouse:\"none\"}),this.activateUIButton(),void 0!==this.getFeature(e.rectangle.id)&&(e.rectangle.removeCoordinate(\"0.4\"),e.rectangle.isValid()?this.map.fire(\"draw.create\",{features:[e.rectangle.toGeoJSON()]}):(this.deleteFeature([e.rectangle.id],{silent:!0}),this.changeMode(\"simple_select\",{},{silent:!0})))},toDisplayFeatures:function(e,t,n){var o=t.properties.id===e.rectangle.id;return t.properties.active=o?\"true\":\"false\",o?e.startPoint?n(t):void 0:n(t)},onTrash:function(e){this.deleteFeature([e.rectangle.id],{silent:!0}),this.changeMode(\"simple_select\")}};n.default=i},{}]},{},[1])(1)});\n\n</script>\n\n<script>\n\nif (typeof styles === 'undefined') {\n    window.styles = (portColor) => {\n      // Your existing styles function code here\n       return [\n    {\n      id: 'gl-draw-polygon-fill-inactive',\n      type: 'fill',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'Polygon'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'fill-color': portColor,\n        'fill-outline-color': portColor,\n        'fill-opacity': 0.3\n      }\n    },\n    {\n      id: 'gl-draw-polygon-fill-active',\n      type: 'fill',\n      filter: ['all', ['==', 'active', 'true'],\n        ['==', '$type', 'Polygon']\n      ],\n      paint: {\n        'fill-color': portColor,\n        'fill-outline-color': portColor,\n        'fill-opacity': 0\n      }\n    },\n    {\n      id: 'gl-draw-polygon-stroke-inactive',\n      type: 'line',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'Polygon'],\n        ['!=', 'mode', 'static']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': '#3bb2d0',\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-polygon-stroke-active',\n      type: 'line',\n      filter: ['all', ['==', 'active', 'true'],\n        ['==', '$type', 'Polygon']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': portColor,\n        'line-dasharray': [0.2, 2],\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-line-inactive',\n      type: 'line',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'LineString'],\n        ['!=', 'mode', 'static']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': '#3bb2d0',\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-line-active',\n      type: 'line',\n      filter: ['all', ['==', '$type', 'LineString'],\n        ['==', 'active', 'true']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': portColor,\n        'line-dasharray': [0.2, 2],\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-point-point-stroke-inactive',\n      type: 'circle',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'Point'],\n        ['==', 'meta', 'feature'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'circle-radius': 15,\n        'circle-opacity': 1,\n        'circle-color': '#fff'\n      }\n    },\n    {\n      id: 'gl-draw-point-inactive',\n      type: 'circle',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'Point'],\n        ['==', 'meta', 'feature'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'circle-radius': 3,\n        'circle-color': '#3bb2d0'\n      }\n    },\n    {\n      id: 'gl-draw-point-stroke-active',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['==', 'active', 'true'],\n        ['!=', 'meta', 'midpoint']\n      ],\n      paint: {\n        'circle-radius': 7,\n        'circle-color': '#fff'\n      }\n    },\n    {\n      id: 'gl-draw-point-active',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['!=', 'meta', 'midpoint'],\n        ['==', 'active', 'true']\n      ],\n      paint: {\n        'circle-radius': 5,\n        'circle-color': portColor\n      }\n    },\n    {\n      id: 'gl-draw-polygon-fill-static',\n      type: 'fill',\n      filter: ['all', ['==', 'mode', 'static'],\n        ['==', '$type', 'Polygon']\n      ],\n      paint: {\n        'fill-color': '#404040',\n        'fill-outline-color': '#404040',\n        'fill-opacity': 0.1\n      }\n    },\n    {\n      id: 'gl-draw-polygon-stroke-static',\n      type: 'line',\n      filter: ['all', ['==', 'mode', 'static'],\n        ['==', '$type', 'Polygon']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': '#404040',\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-line-static',\n      type: 'line',\n      filter: ['all', ['==', 'mode', 'static'],\n        ['==', '$type', 'LineString']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': '#404040',\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-point-static',\n      type: 'circle',\n      filter: ['all', ['==', 'mode', 'static'],\n        ['==', '$type', 'Point']\n      ],\n      paint: {\n        'circle-radius': 5,\n        'circle-color': '#404040'\n      }\n    },\n    {\n      id: 'gl-draw-polygon-color-picker',\n      type: 'fill',\n      filter: ['all', ['==', '$type', 'Polygon'],\n        ['has', 'user_portColor']\n      ],\n      paint: {\n        'fill-color': ['get', 'user_portColor'],\n        'fill-outline-color': ['get', 'user_portColor'],\n        'fill-opacity': 0.5\n      }\n    },\n    {\n      id: 'gl-draw-line-color-picker',\n      type: 'line',\n      filter: ['all', ['==', '$type', 'LineString'],\n        ['has', 'user_portColor']\n      ],\n      paint: {\n        'line-color': ['get', 'user_portColor'],\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-point-color-picker',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['has', 'user_portColor']\n      ],\n      paint: {\n        'circle-radius': 3,\n        'circle-color': ['get', 'user_portColor']\n      }\n    },\n    {\n      id: 'gl-draw-polygon-midpoint-stroke',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['==', 'meta', 'midpoint']\n      ],\n      paint: {\n        'circle-radius': 6,\n        'circle-color': '#e3641f'\n      }\n    },\n    {\n      id: 'gl-draw-polygon-midpoint',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['==', 'meta', 'midpoint']\n      ],\n      paint: {\n        'circle-radius': 4,\n        'circle-color': '#44484a'\n      }\n    },\n    {\n      id: 'gl-draw-polygon-and-line-vertex-stroke-inactive',\n      type: 'circle',\n      filter: ['all', ['==', 'meta', 'vertex'],\n        ['==', '$type', 'Point'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'circle-radius': 8, // outer circle\n        'circle-color': '#e3641f'\n      }\n    },\n    {\n      id: 'gl-draw-polygon-and-line-vertex-inactive',\n      type: 'circle',\n      filter: ['all', ['==', 'meta', 'vertex'],\n        ['==', '$type', 'Point'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'circle-radius': 6, // inner circle\n        'circle-color': '#44484a'\n      }\n    },\n  ]\n    };\n  }\n\n\n</script>"}
+code={"<script src=\"https://code.jquery.com/jquery-3.7.1.min.js\" integrity=\"sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=\" crossorigin=\"anonymous\"></script>\n\n<script src=\"https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.js\">\n\n</script>\n<script src=\"https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js\">\n\n</script>\n<script src=\"https://v2.improveitmd.com/uploads/uploads_ssl_webflow_com_6287b31efad93805832a2f6e_62de4ba563185e28ce6dea35_draw_2af4812f8b.txt\">\n\n</script>\n<script src=\"https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js\">\n\n</script>\n<script>\n!function(e){if(\"object\"==typeof exports&&\"undefined\"!=typeof module)module.exports=e();else if(\"function\"==typeof define&&define.amd)define([],e);else{var t;t=\"undefined\"!=typeof window?window:\"undefined\"!=typeof global?global:\"undefined\"!=typeof self?self:this,t.DrawRectangle=e()}}(function(){return function(){function e(t,n,o){function i(r,l){if(!n[r]){if(!t[r]){var s=\"function\"==typeof require&&require;if(!l&&s)return s(r,!0);if(a)return a(r,!0);var u=new Error(\"Cannot find module '\"+r+\"'\");throw u.code=\"MODULE_NOT_FOUND\",u}var d=n[r]={exports:{}};t[r][0].call(d.exports,function(e){return i(t[r][1][e]||e)},d,d.exports,e,t,n,o)}return n[r].exports}for(var a=\"function\"==typeof require&&require,r=0;r<o.length;r++)i(o[r]);return i}return e}()({1:[function(e,t,n){\"use strict\";Object.defineProperty(n,\"__esModule\",{value:!0});var o={enable:function(e){setTimeout(function(){e.map&&e.map.doubleClickZoom&&e._ctx&&e._ctx.store&&e._ctx.store.getInitialConfigValue&&e._ctx.store.getInitialConfigValue(\"doubleClickZoom\")&&e.map.doubleClickZoom.enable()},0)},disable:function(e){setTimeout(function(){e.map&&e.map.doubleClickZoom&&e.map.doubleClickZoom.disable()},0)}},i={onSetup:function(e){var t=this.newFeature({type:\"Feature\",properties:{},geometry:{type:\"Polygon\",coordinates:[[]]}});return this.addFeature(t),this.clearSelectedFeatures(),o.disable(this),this.updateUIClasses({mouse:\"add\"}),this.setActionableState({trash:!0}),{rectangle:t}},onClick:function(e,t){e.startPoint&&e.startPoint[0]!==t.lngLat.lng&&e.startPoint[1]!==t.lngLat.lat&&(this.updateUIClasses({mouse:\"pointer\"}),e.endPoint=[t.lngLat.lng,t.lngLat.lat],this.changeMode(\"simple_select\",{featuresId:e.rectangle.id}));var n=[t.lngLat.lng,t.lngLat.lat];e.startPoint=n},onMouseMove:function(e,t){e.startPoint&&(e.rectangle.updateCoordinate(\"0.0\",e.startPoint[0],e.startPoint[1]),e.rectangle.updateCoordinate(\"0.1\",t.lngLat.lng,e.startPoint[1]),e.rectangle.updateCoordinate(\"0.2\",t.lngLat.lng,t.lngLat.lat),e.rectangle.updateCoordinate(\"0.3\",e.startPoint[0],t.lngLat.lat),e.rectangle.updateCoordinate(\"0.4\",e.startPoint[0],e.startPoint[1]))},onKeyUp:function(e,t){if(27===t.keyCode)return this.changeMode(\"simple_select\")},onStop:function(e){o.enable(this),this.updateUIClasses({mouse:\"none\"}),this.activateUIButton(),void 0!==this.getFeature(e.rectangle.id)&&(e.rectangle.removeCoordinate(\"0.4\"),e.rectangle.isValid()?this.map.fire(\"draw.create\",{features:[e.rectangle.toGeoJSON()]}):(this.deleteFeature([e.rectangle.id],{silent:!0}),this.changeMode(\"simple_select\",{},{silent:!0})))},toDisplayFeatures:function(e,t,n){var o=t.properties.id===e.rectangle.id;return t.properties.active=o?\"true\":\"false\",o?e.startPoint?n(t):void 0:n(t)},onTrash:function(e){this.deleteFeature([e.rectangle.id],{silent:!0}),this.changeMode(\"simple_select\")}};n.default=i},{}]},{},[1])(1)});\n\n</script>\n\n<script>\n\nif (typeof styles === 'undefined') {\n    window.styles = (portColor) => {\n      // Your existing styles function code here\n       return [\n    {\n      id: 'gl-draw-polygon-fill-inactive',\n      type: 'fill',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'Polygon'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'fill-color': portColor,\n        'fill-outline-color': portColor,\n        'fill-opacity': 0.3\n      }\n    },\n    {\n      id: 'gl-draw-polygon-fill-active',\n      type: 'fill',\n      filter: ['all', ['==', 'active', 'true'],\n        ['==', '$type', 'Polygon']\n      ],\n      paint: {\n        'fill-color': portColor,\n        'fill-outline-color': portColor,\n        'fill-opacity': 0\n      }\n    },\n    {\n      id: 'gl-draw-polygon-stroke-inactive',\n      type: 'line',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'Polygon'],\n        ['!=', 'mode', 'static']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': '#3bb2d0',\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-polygon-stroke-active',\n      type: 'line',\n      filter: ['all', ['==', 'active', 'true'],\n        ['==', '$type', 'Polygon']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': portColor,\n        'line-dasharray': [0.2, 2],\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-line-inactive',\n      type: 'line',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'LineString'],\n        ['!=', 'mode', 'static']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': '#3bb2d0',\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-line-active',\n      type: 'line',\n      filter: ['all', ['==', '$type', 'LineString'],\n        ['==', 'active', 'true']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': portColor,\n        'line-dasharray': [0.2, 2],\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-point-point-stroke-inactive',\n      type: 'circle',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'Point'],\n        ['==', 'meta', 'feature'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'circle-radius': 15,\n        'circle-opacity': 1,\n        'circle-color': '#fff'\n      }\n    },\n    {\n      id: 'gl-draw-point-inactive',\n      type: 'circle',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'Point'],\n        ['==', 'meta', 'feature'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'circle-radius': 3,\n        'circle-color': '#3bb2d0'\n      }\n    },\n    {\n      id: 'gl-draw-point-stroke-active',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['==', 'active', 'true'],\n        ['!=', 'meta', 'midpoint']\n      ],\n      paint: {\n        'circle-radius': 7,\n        'circle-color': '#fff'\n      }\n    },\n    {\n      id: 'gl-draw-point-active',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['!=', 'meta', 'midpoint'],\n        ['==', 'active', 'true']\n      ],\n      paint: {\n        'circle-radius': 5,\n        'circle-color': portColor\n      }\n    },\n    {\n      id: 'gl-draw-polygon-fill-static',\n      type: 'fill',\n      filter: ['all', ['==', 'mode', 'static'],\n        ['==', '$type', 'Polygon']\n      ],\n      paint: {\n        'fill-color': '#404040',\n        'fill-outline-color': '#404040',\n        'fill-opacity': 0.1\n      }\n    },\n    {\n      id: 'gl-draw-polygon-stroke-static',\n      type: 'line',\n      filter: ['all', ['==', 'mode', 'static'],\n        ['==', '$type', 'Polygon']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': '#404040',\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-line-static',\n      type: 'line',\n      filter: ['all', ['==', 'mode', 'static'],\n        ['==', '$type', 'LineString']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': '#404040',\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-point-static',\n      type: 'circle',\n      filter: ['all', ['==', 'mode', 'static'],\n        ['==', '$type', 'Point']\n      ],\n      paint: {\n        'circle-radius': 5,\n        'circle-color': '#404040'\n      }\n    },\n    {\n      id: 'gl-draw-polygon-color-picker',\n      type: 'fill',\n      filter: ['all', ['==', '$type', 'Polygon'],\n        ['has', 'user_portColor']\n      ],\n      paint: {\n        'fill-color': ['get', 'user_portColor'],\n        'fill-outline-color': ['get', 'user_portColor'],\n        'fill-opacity': 0.5\n      }\n    },\n    {\n      id: 'gl-draw-line-color-picker',\n      type: 'line',\n      filter: ['all', ['==', '$type', 'LineString'],\n        ['has', 'user_portColor']\n      ],\n      paint: {\n        'line-color': ['get', 'user_portColor'],\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-point-color-picker',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['has', 'user_portColor']\n      ],\n      paint: {\n        'circle-radius': 3,\n        'circle-color': ['get', 'user_portColor']\n      }\n    },\n    {\n      id: 'gl-draw-polygon-midpoint-stroke',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['==', 'meta', 'midpoint']\n      ],\n      paint: {\n        'circle-radius': 6,\n        'circle-color': '#e3641f'\n      }\n    },\n    {\n      id: 'gl-draw-polygon-midpoint',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['==', 'meta', 'midpoint']\n      ],\n      paint: {\n        'circle-radius': 4,\n        'circle-color': '#44484a'\n      }\n    },\n    {\n      id: 'gl-draw-polygon-and-line-vertex-stroke-inactive',\n      type: 'circle',\n      filter: ['all', ['==', 'meta', 'vertex'],\n        ['==', '$type', 'Point'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'circle-radius': 8, // outer circle\n        'circle-color': '#e3641f'\n      }\n    },\n    {\n      id: 'gl-draw-polygon-and-line-vertex-inactive',\n      type: 'circle',\n      filter: ['all', ['==', 'meta', 'vertex'],\n        ['==', '$type', 'Point'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'circle-radius': 6, // inner circle\n        'circle-color': '#44484a'\n      }\n    },\n  ]\n    };\n  }\n\n\n</script>"}
 className={`w-html-embed`} />
 <HtmlEmbed
 clientOnly={true}
@@ -152,13 +152,13 @@ className={`w-element c1k5oipc`}>
 className={`w-element c1osufuw c3sv84c c84c42r`}>
 <Image
 alt={"Logo Icon"}
-src={"/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
 width={18}
 height={12}
 loading={"eager"}
 className={`w-image cqsaj3r c11y8oun ctpsi40 c12l5srj`} />
 <Image
-src={"/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
 width={161}
 height={8}
 alt={"Logo Text"}
@@ -435,7 +435,7 @@ className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={""}
@@ -629,7 +629,7 @@ className={`w-element c1numhkq c53aqfr ct0qrmw cfcahn6 c1hx6vht c1epvuph c6hmdm4
 href={"tel:3017696909"}
 className={`w-link c1lvj0n c19ftcvs c1vqewwo cacmu18 c9te4zd c1u81kxm c1v2l8nt c53aqfr ct0qrmw c1lzjd2w cn7k83s c1d8rs8t cwr9gsc c1ehmfnq c1owcyig c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da cv3rgxc cahz6x0 cmchden c1amh7xl cimel00 c1b6be7c c1842oze c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 ckkl2uw cchbu1a c1lgs1h6 c1osufuw`}>
 <Image
-src={"/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
+src={"https://v2.improveitmd.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
 width={16}
 height={16}
 alt={"Phone icon"}
@@ -661,7 +661,7 @@ className={`w-element c1numhkq cqilze0 c1diokdk c3auquk c1r7jime c1hx6vht cfefby
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={"Logo"}
@@ -1034,7 +1034,7 @@ className={`w-html-embed`} />
 <div
 className={`w-element c139pwc6 cjkauba cvcvidj c1lzjd2w c1epvuph c9nw4u8 cagmsft`}>
 <Image
-src={"/uploads/search_icon_grey_2_KR_Phgsf3_Mq_Ywy_OF_3_JX_Ub_375d129398.svg"}
+src={"https://v2.improveitmd.com/uploads/search_icon_grey_2_KR_Phgsf3_Mq_Ywy_OF_3_JX_Ub_375d129398.svg"}
 width={18}
 height={18}
 alt={"search icon"}
@@ -1091,7 +1091,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1112,7 +1112,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1126,7 +1126,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1158,7 +1158,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1179,7 +1179,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1193,7 +1193,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1284,7 +1284,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1305,7 +1305,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1319,7 +1319,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 c9vdfns`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1435,7 +1435,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1456,7 +1456,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1470,7 +1470,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 c9vdfns`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1478,7 +1478,7 @@ data-icon={"filled"}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 c8bhanq ce6x08i c1bxcui0 cvfl1ur`} />
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1799,7 +1799,7 @@ className={`w-element c1numhkq c3auquk c1ibjhy0 c163g466 cn87dm8 c1uhhf7h clfz32
 <div
 className={`w-element c139pwc6 c17jzp58 c1numhkq culorum`}>
 <Image
-src={"/uploads/ci_storm_map_1_LAH_T_9a_H_Mr_FS_Ifafib_43e525db09.svg"}
+src={"https://v2.improveitmd.com/uploads/ci_storm_map_1_LAH_T_9a_H_Mr_FS_Ifafib_43e525db09.svg"}
 width={320}
 height={436}
 alt={""}
@@ -1886,7 +1886,7 @@ className={`w-element c1mndzy8`}>
 className={`w-element c18bj3o3 c1lq6pq8`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Vector_i_O_Xi_YD_Iao_B_Xz9_Wh9_Cj2_K_e1edb10d97.svg"}
+src={"https://v2.improveitmd.com/uploads/Vector_i_O_Xi_YD_Iao_B_Xz9_Wh9_Cj2_K_e1edb10d97.svg"}
 width={60}
 height={62}
 alt={""}
@@ -2045,7 +2045,7 @@ className={`w-html-embed`} />
 <div
 className={`w-element c139pwc6 cjkauba cvcvidj c1lzjd2w c1epvuph c9nw4u8 cagmsft`}>
 <Image
-src={"/uploads/search_icon_grey_2_KR_Phgsf3_Mq_Ywy_OF_3_JX_Ub_511fc3b834.svg"}
+src={"https://v2.improveitmd.com/uploads/search_icon_grey_2_KR_Phgsf3_Mq_Ywy_OF_3_JX_Ub_511fc3b834.svg"}
 width={18}
 height={18}
 alt={"search icon"}
@@ -2104,7 +2104,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -2125,7 +2125,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_422d313934.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_422d313934.svg"}
 width={24}
 height={24}
 alt={""}
@@ -2139,7 +2139,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -2171,7 +2171,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -2192,7 +2192,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_422d313934.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_422d313934.svg"}
 width={24}
 height={24}
 alt={""}
@@ -2206,7 +2206,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_422d313934.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_422d313934.svg"}
 width={24}
 height={24}
 alt={""}
@@ -2298,7 +2298,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_6a1d0430d8.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_6a1d0430d8.svg"}
 width={24}
 height={24}
 alt={""}
@@ -2319,7 +2319,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -2333,7 +2333,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 c9vdfns`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_422d313934.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_422d313934.svg"}
 width={24}
 height={24}
 alt={""}
@@ -2450,7 +2450,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_6a1d0430d8.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_6a1d0430d8.svg"}
 width={24}
 height={24}
 alt={""}
@@ -2471,7 +2471,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_6a1d0430d8.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_6a1d0430d8.svg"}
 width={24}
 height={24}
 alt={""}
@@ -2485,7 +2485,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 c9vdfns`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_6a1d0430d8.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_6a1d0430d8.svg"}
 width={24}
 height={24}
 alt={""}
@@ -2493,7 +2493,7 @@ data-icon={"filled"}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 c8bhanq ce6x08i c1bxcui0 c19i8jsr`} />
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -2791,7 +2791,7 @@ className={`w-element c1numhkq c3auquk c1ibjhy0 c163g466 cn87dm8 c1uhhf7h clfz32
 <div
 className={`w-element c139pwc6 c17jzp58 c1numhkq culorum`}>
 <Image
-src={"/uploads/ci_storm_map_1_LAH_T_9a_H_Mr_FS_Ifafib_c87409d6d5.svg"}
+src={"https://v2.improveitmd.com/uploads/ci_storm_map_1_LAH_T_9a_H_Mr_FS_Ifafib_c87409d6d5.svg"}
 width={320}
 height={436}
 alt={""}
@@ -2880,7 +2880,7 @@ className={`w-element c1mndzy8`}>
 className={`w-element c18bj3o3 c1lq6pq8`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Vector_i_O_Xi_YD_Iao_B_Xz9_Wh9_Cj2_K_691ae9ea37.svg"}
+src={"https://v2.improveitmd.com/uploads/Vector_i_O_Xi_YD_Iao_B_Xz9_Wh9_Cj2_K_691ae9ea37.svg"}
 width={60}
 height={62}
 alt={""}
@@ -2980,7 +2980,7 @@ href={"#"}
 data-elem={"add-new-add"}
 className={`w-element c1o5abpq c1diokdk ch3nxmx c18hkk31 c1owcyig c1d7h9xn`}>
 <Image
-src={"/uploads/add_12080026_Vvqm2mfa_Ww1av6re0h2c_F_467d05a59b.png"}
+src={"https://v2.improveitmd.com/uploads/add_12080026_Vvqm2mfa_Ww1av6re0h2c_F_467d05a59b.png"}
 width={512}
 height={512}
 alt={""}
@@ -3018,7 +3018,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3039,7 +3039,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3053,7 +3053,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3087,7 +3087,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3108,7 +3108,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3122,7 +3122,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3211,7 +3211,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3232,7 +3232,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3246,7 +3246,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3337,7 +3337,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3358,7 +3358,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3372,7 +3372,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 c9vdfns`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3489,7 +3489,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3510,7 +3510,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3524,7 +3524,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 c9vdfns`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3532,7 +3532,7 @@ data-icon={"filled"}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 c8bhanq ce6x08i c1bxcui0 c19i8jsr`} />
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -3830,7 +3830,7 @@ className={`w-element c1numhkq c3auquk c1ibjhy0 c163g466 cn87dm8 c1uhhf7h clfz32
 <div
 className={`w-element c139pwc6 c17jzp58 c1numhkq culorum`}>
 <Image
-src={"/uploads/ci_storm_map_1_LAH_T_9a_H_Mr_FS_Ifafib_43e525db09.svg"}
+src={"https://v2.improveitmd.com/uploads/ci_storm_map_1_LAH_T_9a_H_Mr_FS_Ifafib_43e525db09.svg"}
 width={320}
 height={436}
 alt={""}
@@ -3919,7 +3919,7 @@ className={`w-element c1mndzy8`}>
 className={`w-element c18bj3o3 c1lq6pq8`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Vector_i_O_Xi_YD_Iao_B_Xz9_Wh9_Cj2_K_e1edb10d97.svg"}
+src={"https://v2.improveitmd.com/uploads/Vector_i_O_Xi_YD_Iao_B_Xz9_Wh9_Cj2_K_e1edb10d97.svg"}
 width={60}
 height={62}
 alt={""}
@@ -4141,7 +4141,7 @@ className={`w-html-embed`} />
 </div>
 </div>
 <HtmlEmbed
-code={"<!-- Weather Widget Code -->\n<script>\nwindow.onload = () => {\n\n  // --- Mapbox Geocoding ---\n  const mapboxAccessToken = 'pk.eyJ1IjoiaW1wcm92ZWl0bWQiLCJhIjoiY2w1OXlhZ3BnMDAyMDNrcG9pdmU3OXNvcyJ9.8IKtnRJwbi7ss5MjeHGAkQ';\n\n  // --- Get user input location safely ---\n  let userInputLocation = document.querySelector('[input-location=\"city-county\"]')?.textContent?.toLowerCase().replace('weather in ', \"\") || '';\n  if (!userInputLocation) {\n      console.warn('No user input location found.');\n      return;\n  }\n\n  let longitude, latitude;\n\n  // --- Start geocoding ---\n  geocodeLocation(userInputLocation);\n\n  async function geocodeLocation(location) {\n      const endpoint = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(location)}.json?access_token=${mapboxAccessToken}`;\n      try {\n          const response = await fetch(endpoint);\n          const data = await response.json();\n\n          if (!data?.features?.length) {\n              console.error('No geocoding results found for location:', location);\n              return;\n          }\n\n          const firstFeature = data.features[0];\n          if (!firstFeature?.geometry?.coordinates?.length) {\n              console.error('Invalid geometry data from Mapbox:', firstFeature);\n              return;\n          }\n\n          longitude = firstFeature.geometry.coordinates[0];\n          latitude = firstFeature.geometry.coordinates[1];\n\n          if (typeof longitude !== 'number' || typeof latitude !== 'number') {\n              console.error('Invalid coordinates:', latitude, longitude);\n              return;\n          }\n\n          // --- Fetch forecast ---\n          const forecastURL = `https://api.weather.gov/points/${latitude},${longitude}`;\n          fetchJsonData(forecastURL, (data) => {\n              if (!data?.properties?.forecast) {\n                  console.error('Forecast URL missing in weather API response:', data);\n                  return;\n              }\n              getAPIData(data);\n          }, (error) => console.error('Weather API fetch error:', error));\n\n          // --- Fetch alerts ---\n          const alertURL = `https://api.weather.gov/alerts/active?point=${latitude},${longitude}&limit=500`;\n          fetchJsonData(alertURL, (data) => handleWeatherAlerts(data), (error) => console.error('Weather Alert API fetch error:', error));\n\n      } catch (error) {\n          console.error('Geocoding error:', error);\n      }\n  }\n\n  function fetchJsonData(url, callback, errorCallback) {\n      fetch(url)\n          .then(response => {\n              if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);\n              return response.json();\n          })\n          .then(data => callback(data))\n          .catch(error => {\n              console.error('Failed to fetch data:', error);\n              if (errorCallback) errorCallback(error);\n          });\n  }\n\n  function handleWeatherAlerts(data) {\n      if (!data?.features) {\n          console.warn('No alert features found in response.');\n          document.querySelector('[custom-alert=\"alert-wrap\"]')?.style.setProperty('display', 'none');\n          return;\n      }\n\n      if (!data.features.length) {\n          document.querySelector('[custom-alert=\"alert-wrap\"]')?.style.setProperty('display', 'none');\n      } else {\n          const eventMsg = data.features[0]?.properties?.event || 'Weather Alert';\n          const wrap = document.querySelector('[custom-alert=\"alert-wrap\"]');\n          const textDiv = document.querySelector('[custom-alert=\"div-text\"]');\n          if (wrap && textDiv) {\n              wrap.style.display = \"flex\";\n              textDiv.textContent = eventMsg;\n          }\n      }\n  }\n\n  function countHighPrecipitationRainDays(forecastData) {\n      if (!Array.isArray(forecastData)) return 0;\n      const highPrecipRainDays = forecastData.filter(day =>\n          day?.shortForecast?.includes(\"Rain\") && (day.highPrecipitation >= 20)\n      );\n      return highPrecipRainDays.length;\n  }\n\n  // --- Weather icons ---\n  window.weatherIcons = {\n      \"Sunny\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170e259785244f1a4ef_full_sunny_6938d3d140.svg\",\n      \"Partly Sunny\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170b0bc85a2ccc5b56f_partly_sunny_e3f6acfc05.svg\",\n      \"Cloudy\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170925e633a83a9f924_cloudy_21aa2d2dc7.svg\",\n      \"Rain\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65de0b4dc92d3e369c8c3887_Rain_f0a3e99f21.png\",\n      \"Thunderstorms\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170404a55779c46514b_thunder_storm_0a303e9471.svg\",\n      \"Winter Mix\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac17084e3a712dbebd43f_winter_mix_95b98f2287.svg\",\n      \"Windy\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170effc1399139c7522_windy_8bb2dec869.svg\",\n      \"Hail\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170ddc7409543f310da_hail_391b24f9fd.svg\",\n      \"Snow\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac17082f40667bf501a5c_snow_5f7c77f7a2.svg\",\n      \"Fog\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170ce12f72bedd3ef15_fogy_ca377f62e9.svg\",\n      \"Moon\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac17066b423a19d9c4183_clear_moon_b16a933224.svg\",\n      \"Partly Moon\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac1704b0ebf0e93616a05_partly_moon_0f2390d6e0.svg\"\n  };\n\n  window.precipitaionIcons = {\n      \"snow\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac313c78b03f62f46566a_snow_flake_f8909f97d2.svg\",\n      \"rain\": \"/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac3134b0ebf0e936229ed_water_drop_1c98acc1cb.svg\"\n  };\n\n  function isSnowyCondition(shortForecast) {\n      return /snow|snowy/i.test(shortForecast);\n  }\n\n  function selectPrecipitationIcon(shortForecast) {\n      if (!shortForecast) return window.precipitaionIcons.rain;\n      return isSnowyCondition(shortForecast) ? window.precipitaionIcons.snow : window.precipitaionIcons.rain;\n  }\n\n  window.selectWeatherIcon = (shortForecast) => {\n      if (!shortForecast) return window.weatherIcons[\"Sunny\"];\n      const patterns = [\n          { pattern: /rain showers then sunny/i, iconKey: \"Rain\" },\n          { pattern: /clear skies|clear|mostly clear/i, iconKey: \"Sunny\" },\n          { pattern: /partly cloudy|partly sunny/i, iconKey: \"Partly Sunny\" },\n          { pattern: /cloudy/i, iconKey: \"Cloudy\" },\n          { pattern: /light rain|rain showers|rain/i, iconKey: \"Rain\" },\n          { pattern: /light snow|snow showers/i, iconKey: \"Snow\" },\n          { pattern: /heavy rain|rain storm/i, iconKey: \"Rain\" },\n          { pattern: /thunderstorms|rain and lightning|scattered thunderstorms|isolated thunderstorms/i, iconKey: \"Thunderstorms\" },\n          { pattern: /winter mix|Rain And Snow|rain and ice|sheet/i, iconKey: \"Winter Mix\" },\n          { pattern: /windy|high winds/i, iconKey: \"Windy\" },\n          { pattern: /hail/i, iconKey: \"Hail\" },\n          { pattern: /snow|areas of blowing snow/i, iconKey: \"Snow\" },\n          { pattern: /fog|foggy/i, iconKey: \"Fog\" },\n      ];\n\n      let iconUrl = window.weatherIcons[\"Sunny\"];\n      patterns.some(p => {\n          if (p.pattern.test(shortForecast.toLowerCase())) {\n              iconUrl = window.weatherIcons[p.iconKey] || window.weatherIcons[\"Sunny\"];\n              return true;\n          }\n          return false;\n      });\n      return iconUrl;\n  };\n\n  // --- Get API Data ---\n  function getAPIData(data) {\n      if (!data?.properties?.forecast) return;\n\n      const forecastURL = data.properties.forecast;\n      fetchJsonData(forecastURL, (forecastDataResponse) => {\n          const periods = forecastDataResponse?.properties?.periods || [];\n          if (!periods.length) return;\n\n          let forecastData = periods.map(period => ({\n              name: period?.name || '',\n              startTime: period?.startTime || '',\n              endTime: period?.endTime || '',\n              isDaytime: period?.isDaytime ?? true,\n              temperature: period?.temperature ?? 0,\n              temperatureUnit: period?.temperatureUnit || 'F',\n              tempLabel: period?.isDaytime ? \"High\" : \"Low\",\n              shortForecast: period?.shortForecast || '',\n              detailedForecast: period?.detailedForecast || '',\n              probabilityOfPrecipitation: period?.probabilityOfPrecipitation?.value ?? 0,\n              iconUrl: selectWeatherIcon(period?.shortForecast)\n          }));\n\n          window.weatherData = processForecastData(forecastData);\n          renderWeatherSlides();\n      }, (error) => console.error('Error fetching forecast periods:', error));\n  }\n\n  // --- Process Forecast Data ---\n  function processForecastData(forecastData) {\n      if (!Array.isArray(forecastData)) return [];\n\n      let tempSummaries = {};\n      const dayNames = [\"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\"];\n\n      forecastData.forEach((period, index) => {\n          if (!period) return;\n\n          const firstStartTime = new Date(forecastData[0]?.startTime || Date.now());\n          const firstDayName = dayNames[firstStartTime.getDay()];\n\n          // Handle day/night naming\n          let periodName = (period.name || '').toLowerCase();\n          if (periodName === 'today' || periodName === 'this afternoon') period.name = firstDayName;\n          if (periodName === 'tonight' || periodName === 'overnight') period.name = `${firstDayName} Night`;\n\n          let dayKey = period.name.toLowerCase().includes(\"night\") ? period.name.replace(\" Night\", \"\") : period.name;\n          if (!tempSummaries[dayKey]) tempSummaries[dayKey] = { day: dayKey, dayPeriod: null, nightPeriod: null };\n\n          let weatherConditionIconUrl = selectWeatherIcon(period.shortForecast);\n\n          if (period.isDaytime) tempSummaries[dayKey].dayPeriod = { ...period, weatherConditionIconUrl };\n          else tempSummaries[dayKey].nightPeriod = { ...period, weatherConditionIconUrl };\n      });\n\n      let processedSummaries = Object.values(tempSummaries).map(({ day, dayPeriod, nightPeriod }) => {\n          const dayAbbreviation = day?.substring(0, 3).toUpperCase() || '';\n          const highTemp = dayPeriod?.temperature ?? 0;\n          const lowTemp = nightPeriod?.temperature ?? (dayPeriod?.temperature ?? 0) - 22;\n          const dayPrecipitation = dayPeriod?.probabilityOfPrecipitation ?? 0;\n          const nightPrecipitation = nightPeriod?.probabilityOfPrecipitation ?? 0;\n          const highestPrecipitation = Math.max(dayPrecipitation, nightPrecipitation);\n\n          // Ensure shortForecast exists\n          const dayForecast = dayPeriod?.shortForecast || nightPeriod?.shortForecast || '';\n          const nightForecast = nightPeriod?.shortForecast || dayPeriod?.shortForecast || '';\n\n          let weatherConditionIcon = '';\n          const combinedForecast = `${dayForecast} ${nightForecast}`.toLowerCase();\n\n          if (highestPrecipitation >= 20) {\n              if (combinedForecast.includes('snow') && combinedForecast.includes('rain')) {\n                  weatherConditionIcon = weatherIcons[\"Winter Mix\"];\n              } else if (combinedForecast.includes('snow')) {\n                  weatherConditionIcon = weatherIcons[\"Snow\"];\n              } else if (combinedForecast.includes('rain')) {\n                  weatherConditionIcon = weatherIcons[\"Rain\"];\n              } else if (combinedForecast.includes('thunderstorms')) {\n                  weatherConditionIcon = weatherIcons[\"Thunderstorms\"];\n              } else {\n                  weatherConditionIcon = selectWeatherIcon(dayForecast) || weatherIcons[\"Sunny\"];\n              }\n          } else {\n              weatherConditionIcon = selectWeatherIcon(dayForecast) || weatherIcons[\"Sunny\"];\n          }\n\n          return {\n              day: dayAbbreviation,\n              dayPrecipitationIconUrl: selectPrecipitationIcon(dayForecast),\n              generalWeatherConditionIcon: weatherConditionIcon,\n              shortForecast: dayForecast,\n              highTemp,\n              lowTemp,\n              highPrecipitation: highestPrecipitation,\n              isNightIcon: highTemp === 0 ? 'is-night' : 'is-day'\n          };\n      });\n\n      // Simplify forecast text safely\n      processedSummaries.forEach(item => {\n          if (item?.shortForecast) {\n              item.shortForecast = item.shortForecast.replace(/\\b(Slight|Chance|Mostly|Areas of|Scattered|Isolated)\\b/gi, '').trim();\n          }\n      });\n\n      return processedSummaries;\n  }\n\n  // --- Render Weather Slides ---\n  function renderWeatherSlides() {\n      const swiperWrapper = document.querySelector('.swiper-wrapper.is-weather');\n      if (!swiperWrapper || !Array.isArray(window.weatherData)) return;\n\n      swiperWrapper.innerHTML = '';\n      window.weatherData.forEach((item, index) => {\n          if (!item) return;\n          swiperWrapper.innerHTML += createWeatherSlide(item, index);\n      });\n\n      // Initialize Swiper\n      new Swiper('.swiper.is-weather', {\n          loop: false,\n          slidesPerView: \"auto\"\n          // breakpoints: {\n          //     320: { slidesPerView: 1 },\n          //     480: { slidesPerView: 1.5 },\n          //     640: { slidesPerView: 3.5 }\n          // }\n      });\n\n      document.querySelector('.weather_loader')?.style.setProperty('display', 'none');\n  }\n\n  function createWeatherSlide(item, index) {\n      if (!item) return '';\n      const lowTemp = item.lowTemp ?? 0;\n      const highTemp = item.highTemp ?? 0;\n      return `\n        <div class=\"swiper-slide is--weather\">\n          <div class=\"weather_card ${item.isNightIcon || 'is-day'}\">\n            <div class=\"weather_card-top\">\n              <div class=\"text-weight-semibold text-style-allcaps\">${item.day || ''}</div>\n              <div class=\"weather_rain-wrap\">\n                <img src=\"${item.dayPrecipitationIconUrl || ''}\" loading=\"lazy\" width=\"10\" height=\"10\" alt=\"Weather Icon\" class=\"weather_rain-logo dayPrecipitation\">\n                <div class=\"dayPrecipitation text-size-tiny text-weight-medium\">${item.highPrecipitation ?? 0}%</div>\n              </div>\n            </div>\n            <div class=\"weather_card-middle\">\n              <img src=\"${item.generalWeatherConditionIcon || ''}\" loading=\"lazy\" width=\"98\" height=\"98\" alt=\"Weather Condition\" class=\"weather_card-image dayCondition\">\n            </div>\n            <div class=\"weather_card-bottom\">\n              <div class=\"weather_card-bottom-top ${item.isNightIcon || 'is-day'}\">\n                <div class=\"highTemp text-size-xxmedium\">${highTemp}°</div>\n                <div class=\"lowTemp text-size-xxmedium text-color-light-grey-4\">${lowTemp}°</div>\n              </div>\n              <div class=\"dayShortForecast text-size-small text-weight-semibold letter-spacing-4 text-style-allcaps\">${item.shortForecast || ''}</div>\n            </div>\n          </div>\n        </div>\n      `;\n  }\n\n};\n</script>\n"}
+code={"<!-- Weather Widget Code -->\n<script>\nwindow.onload = () => {\n\n  // --- Mapbox Geocoding ---\n  const mapboxAccessToken = 'pk.eyJ1IjoiaW1wcm92ZWl0bWQiLCJhIjoiY2w1OXlhZ3BnMDAyMDNrcG9pdmU3OXNvcyJ9.8IKtnRJwbi7ss5MjeHGAkQ';\n\n  // --- Get user input location safely ---\n  let userInputLocation = document.querySelector('[input-location=\"city-county\"]')?.textContent?.toLowerCase().replace('weather in ', \"\") || '';\n  if (!userInputLocation) {\n      console.warn('No user input location found.');\n      return;\n  }\n\n  let longitude, latitude;\n\n  // --- Start geocoding ---\n  geocodeLocation(userInputLocation);\n\n  async function geocodeLocation(location) {\n      const endpoint = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(location)}.json?access_token=${mapboxAccessToken}`;\n      try {\n          const response = await fetch(endpoint);\n          const data = await response.json();\n\n          if (!data?.features?.length) {\n              console.error('No geocoding results found for location:', location);\n              return;\n          }\n\n          const firstFeature = data.features[0];\n          if (!firstFeature?.geometry?.coordinates?.length) {\n              console.error('Invalid geometry data from Mapbox:', firstFeature);\n              return;\n          }\n\n          longitude = firstFeature.geometry.coordinates[0];\n          latitude = firstFeature.geometry.coordinates[1];\n\n          if (typeof longitude !== 'number' || typeof latitude !== 'number') {\n              console.error('Invalid coordinates:', latitude, longitude);\n              return;\n          }\n\n          // --- Fetch forecast ---\n          const forecastURL = `https://api.weather.gov/points/${latitude},${longitude}`;\n          fetchJsonData(forecastURL, (data) => {\n              if (!data?.properties?.forecast) {\n                  console.error('Forecast URL missing in weather API response:', data);\n                  return;\n              }\n              getAPIData(data);\n          }, (error) => console.error('Weather API fetch error:', error));\n\n          // --- Fetch alerts ---\n          const alertURL = `https://api.weather.gov/alerts/active?point=${latitude},${longitude}&limit=500`;\n          fetchJsonData(alertURL, (data) => handleWeatherAlerts(data), (error) => console.error('Weather Alert API fetch error:', error));\n\n      } catch (error) {\n          console.error('Geocoding error:', error);\n      }\n  }\n\n  function fetchJsonData(url, callback, errorCallback) {\n      fetch(url)\n          .then(response => {\n              if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);\n              return response.json();\n          })\n          .then(data => callback(data))\n          .catch(error => {\n              console.error('Failed to fetch data:', error);\n              if (errorCallback) errorCallback(error);\n          });\n  }\n\n  function handleWeatherAlerts(data) {\n      if (!data?.features) {\n          console.warn('No alert features found in response.');\n          document.querySelector('[custom-alert=\"alert-wrap\"]')?.style.setProperty('display', 'none');\n          return;\n      }\n\n      if (!data.features.length) {\n          document.querySelector('[custom-alert=\"alert-wrap\"]')?.style.setProperty('display', 'none');\n      } else {\n          const eventMsg = data.features[0]?.properties?.event || 'Weather Alert';\n          const wrap = document.querySelector('[custom-alert=\"alert-wrap\"]');\n          const textDiv = document.querySelector('[custom-alert=\"div-text\"]');\n          if (wrap && textDiv) {\n              wrap.style.display = \"flex\";\n              textDiv.textContent = eventMsg;\n          }\n      }\n  }\n\n  function countHighPrecipitationRainDays(forecastData) {\n      if (!Array.isArray(forecastData)) return 0;\n      const highPrecipRainDays = forecastData.filter(day =>\n          day?.shortForecast?.includes(\"Rain\") && (day.highPrecipitation >= 20)\n      );\n      return highPrecipRainDays.length;\n  }\n\n  // --- Weather icons ---\n  window.weatherIcons = {\n      \"Sunny\": \"https://v2.improveitmd.com/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170e259785244f1a4ef_full_sunny_6938d3d140.svg\",\n      \"Partly Sunny\": \"https://v2.improveitmd.com/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170b0bc85a2ccc5b56f_partly_sunny_e3f6acfc05.svg\",\n      \"Cloudy\": \"https://v2.improveitmd.com/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170925e633a83a9f924_cloudy_21aa2d2dc7.svg\",\n      \"Rain\": \"https://v2.improveitmd.com/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65de0b4dc92d3e369c8c3887_Rain_f0a3e99f21.png\",\n      \"Thunderstorms\": \"https://v2.improveitmd.com/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170404a55779c46514b_thunder_storm_0a303e9471.svg\",\n      \"Winter Mix\": \"https://v2.improveitmd.com/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac17084e3a712dbebd43f_winter_mix_95b98f2287.svg\",\n      \"Windy\": \"https://v2.improveitmd.com/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170effc1399139c7522_windy_8bb2dec869.svg\",\n      \"Hail\": \"https://v2.improveitmd.com/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170ddc7409543f310da_hail_391b24f9fd.svg\",\n      \"Snow\": \"https://v2.improveitmd.com/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac17082f40667bf501a5c_snow_5f7c77f7a2.svg\",\n      \"Fog\": \"https://v2.improveitmd.com/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac170ce12f72bedd3ef15_fogy_ca377f62e9.svg\",\n      \"Moon\": \"https://v2.improveitmd.com/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac17066b423a19d9c4183_clear_moon_b16a933224.svg\",\n      \"Partly Moon\": \"https://v2.improveitmd.com/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac1704b0ebf0e93616a05_partly_moon_0f2390d6e0.svg\"\n  };\n\n  window.precipitaionIcons = {\n      \"snow\": \"https://v2.improveitmd.com/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac313c78b03f62f46566a_snow_flake_f8909f97d2.svg\",\n      \"rain\": \"https://v2.improveitmd.com/uploads/uploads_ssl_webflow_com_64bd6cb099271195afd55550_65eac3134b0ebf0e936229ed_water_drop_1c98acc1cb.svg\"\n  };\n\n  function isSnowyCondition(shortForecast) {\n      return /snow|snowy/i.test(shortForecast);\n  }\n\n  function selectPrecipitationIcon(shortForecast) {\n      if (!shortForecast) return window.precipitaionIcons.rain;\n      return isSnowyCondition(shortForecast) ? window.precipitaionIcons.snow : window.precipitaionIcons.rain;\n  }\n\n  window.selectWeatherIcon = (shortForecast) => {\n      if (!shortForecast) return window.weatherIcons[\"Sunny\"];\n      const patterns = [\n          { pattern: /rain showers then sunny/i, iconKey: \"Rain\" },\n          { pattern: /clear skies|clear|mostly clear/i, iconKey: \"Sunny\" },\n          { pattern: /partly cloudy|partly sunny/i, iconKey: \"Partly Sunny\" },\n          { pattern: /cloudy/i, iconKey: \"Cloudy\" },\n          { pattern: /light rain|rain showers|rain/i, iconKey: \"Rain\" },\n          { pattern: /light snow|snow showers/i, iconKey: \"Snow\" },\n          { pattern: /heavy rain|rain storm/i, iconKey: \"Rain\" },\n          { pattern: /thunderstorms|rain and lightning|scattered thunderstorms|isolated thunderstorms/i, iconKey: \"Thunderstorms\" },\n          { pattern: /winter mix|Rain And Snow|rain and ice|sheet/i, iconKey: \"Winter Mix\" },\n          { pattern: /windy|high winds/i, iconKey: \"Windy\" },\n          { pattern: /hail/i, iconKey: \"Hail\" },\n          { pattern: /snow|areas of blowing snow/i, iconKey: \"Snow\" },\n          { pattern: /fog|foggy/i, iconKey: \"Fog\" },\n      ];\n\n      let iconUrl = window.weatherIcons[\"Sunny\"];\n      patterns.some(p => {\n          if (p.pattern.test(shortForecast.toLowerCase())) {\n              iconUrl = window.weatherIcons[p.iconKey] || window.weatherIcons[\"Sunny\"];\n              return true;\n          }\n          return false;\n      });\n      return iconUrl;\n  };\n\n  // --- Get API Data ---\n  function getAPIData(data) {\n      if (!data?.properties?.forecast) return;\n\n      const forecastURL = data.properties.forecast;\n      fetchJsonData(forecastURL, (forecastDataResponse) => {\n          const periods = forecastDataResponse?.properties?.periods || [];\n          if (!periods.length) return;\n\n          let forecastData = periods.map(period => ({\n              name: period?.name || '',\n              startTime: period?.startTime || '',\n              endTime: period?.endTime || '',\n              isDaytime: period?.isDaytime ?? true,\n              temperature: period?.temperature ?? 0,\n              temperatureUnit: period?.temperatureUnit || 'F',\n              tempLabel: period?.isDaytime ? \"High\" : \"Low\",\n              shortForecast: period?.shortForecast || '',\n              detailedForecast: period?.detailedForecast || '',\n              probabilityOfPrecipitation: period?.probabilityOfPrecipitation?.value ?? 0,\n              iconUrl: selectWeatherIcon(period?.shortForecast)\n          }));\n\n          window.weatherData = processForecastData(forecastData);\n          renderWeatherSlides();\n      }, (error) => console.error('Error fetching forecast periods:', error));\n  }\n\n  // --- Process Forecast Data ---\n  function processForecastData(forecastData) {\n      if (!Array.isArray(forecastData)) return [];\n\n      let tempSummaries = {};\n      const dayNames = [\"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\"];\n\n      forecastData.forEach((period, index) => {\n          if (!period) return;\n\n          const firstStartTime = new Date(forecastData[0]?.startTime || Date.now());\n          const firstDayName = dayNames[firstStartTime.getDay()];\n\n          // Handle day/night naming\n          let periodName = (period.name || '').toLowerCase();\n          if (periodName === 'today' || periodName === 'this afternoon') period.name = firstDayName;\n          if (periodName === 'tonight' || periodName === 'overnight') period.name = `${firstDayName} Night`;\n\n          let dayKey = period.name.toLowerCase().includes(\"night\") ? period.name.replace(\" Night\", \"\") : period.name;\n          if (!tempSummaries[dayKey]) tempSummaries[dayKey] = { day: dayKey, dayPeriod: null, nightPeriod: null };\n\n          let weatherConditionIconUrl = selectWeatherIcon(period.shortForecast);\n\n          if (period.isDaytime) tempSummaries[dayKey].dayPeriod = { ...period, weatherConditionIconUrl };\n          else tempSummaries[dayKey].nightPeriod = { ...period, weatherConditionIconUrl };\n      });\n\n      let processedSummaries = Object.values(tempSummaries).map(({ day, dayPeriod, nightPeriod }) => {\n          const dayAbbreviation = day?.substring(0, 3).toUpperCase() || '';\n          const highTemp = dayPeriod?.temperature ?? 0;\n          const lowTemp = nightPeriod?.temperature ?? (dayPeriod?.temperature ?? 0) - 22;\n          const dayPrecipitation = dayPeriod?.probabilityOfPrecipitation ?? 0;\n          const nightPrecipitation = nightPeriod?.probabilityOfPrecipitation ?? 0;\n          const highestPrecipitation = Math.max(dayPrecipitation, nightPrecipitation);\n\n          // Ensure shortForecast exists\n          const dayForecast = dayPeriod?.shortForecast || nightPeriod?.shortForecast || '';\n          const nightForecast = nightPeriod?.shortForecast || dayPeriod?.shortForecast || '';\n\n          let weatherConditionIcon = '';\n          const combinedForecast = `${dayForecast} ${nightForecast}`.toLowerCase();\n\n          if (highestPrecipitation >= 20) {\n              if (combinedForecast.includes('snow') && combinedForecast.includes('rain')) {\n                  weatherConditionIcon = weatherIcons[\"Winter Mix\"];\n              } else if (combinedForecast.includes('snow')) {\n                  weatherConditionIcon = weatherIcons[\"Snow\"];\n              } else if (combinedForecast.includes('rain')) {\n                  weatherConditionIcon = weatherIcons[\"Rain\"];\n              } else if (combinedForecast.includes('thunderstorms')) {\n                  weatherConditionIcon = weatherIcons[\"Thunderstorms\"];\n              } else {\n                  weatherConditionIcon = selectWeatherIcon(dayForecast) || weatherIcons[\"Sunny\"];\n              }\n          } else {\n              weatherConditionIcon = selectWeatherIcon(dayForecast) || weatherIcons[\"Sunny\"];\n          }\n\n          return {\n              day: dayAbbreviation,\n              dayPrecipitationIconUrl: selectPrecipitationIcon(dayForecast),\n              generalWeatherConditionIcon: weatherConditionIcon,\n              shortForecast: dayForecast,\n              highTemp,\n              lowTemp,\n              highPrecipitation: highestPrecipitation,\n              isNightIcon: highTemp === 0 ? 'is-night' : 'is-day'\n          };\n      });\n\n      // Simplify forecast text safely\n      processedSummaries.forEach(item => {\n          if (item?.shortForecast) {\n              item.shortForecast = item.shortForecast.replace(/\\b(Slight|Chance|Mostly|Areas of|Scattered|Isolated)\\b/gi, '').trim();\n          }\n      });\n\n      return processedSummaries;\n  }\n\n  // --- Render Weather Slides ---\n  function renderWeatherSlides() {\n      const swiperWrapper = document.querySelector('.swiper-wrapper.is-weather');\n      if (!swiperWrapper || !Array.isArray(window.weatherData)) return;\n\n      swiperWrapper.innerHTML = '';\n      window.weatherData.forEach((item, index) => {\n          if (!item) return;\n          swiperWrapper.innerHTML += createWeatherSlide(item, index);\n      });\n\n      // Initialize Swiper\n      new Swiper('.swiper.is-weather', {\n          loop: false,\n          slidesPerView: \"auto\"\n          // breakpoints: {\n          //     320: { slidesPerView: 1 },\n          //     480: { slidesPerView: 1.5 },\n          //     640: { slidesPerView: 3.5 }\n          // }\n      });\n\n      document.querySelector('.weather_loader')?.style.setProperty('display', 'none');\n  }\n\n  function createWeatherSlide(item, index) {\n      if (!item) return '';\n      const lowTemp = item.lowTemp ?? 0;\n      const highTemp = item.highTemp ?? 0;\n      return `\n        <div class=\"swiper-slide is--weather\">\n          <div class=\"weather_card ${item.isNightIcon || 'is-day'}\">\n            <div class=\"weather_card-top\">\n              <div class=\"text-weight-semibold text-style-allcaps\">${item.day || ''}</div>\n              <div class=\"weather_rain-wrap\">\n                <img src=\"${item.dayPrecipitationIconUrl || ''}\" loading=\"lazy\" width=\"10\" height=\"10\" alt=\"Weather Icon\" class=\"weather_rain-logo dayPrecipitation\">\n                <div class=\"dayPrecipitation text-size-tiny text-weight-medium\">${item.highPrecipitation ?? 0}%</div>\n              </div>\n            </div>\n            <div class=\"weather_card-middle\">\n              <img src=\"${item.generalWeatherConditionIcon || ''}\" loading=\"lazy\" width=\"98\" height=\"98\" alt=\"Weather Condition\" class=\"weather_card-image dayCondition\">\n            </div>\n            <div class=\"weather_card-bottom\">\n              <div class=\"weather_card-bottom-top ${item.isNightIcon || 'is-day'}\">\n                <div class=\"highTemp text-size-xxmedium\">${highTemp}°</div>\n                <div class=\"lowTemp text-size-xxmedium text-color-light-grey-4\">${lowTemp}°</div>\n              </div>\n              <div class=\"dayShortForecast text-size-small text-weight-semibold letter-spacing-4 text-style-allcaps\">${item.shortForecast || ''}</div>\n            </div>\n          </div>\n        </div>\n      `;\n  }\n\n};\n</script>\n"}
 className={`w-html-embed`} />
 </section>
 }

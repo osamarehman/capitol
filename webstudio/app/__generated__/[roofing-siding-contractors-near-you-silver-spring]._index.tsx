@@ -106,13 +106,13 @@ className={`w-element c1k5oipc`}>
 className={`w-element c1osufuw c3sv84c c84c42r`}>
 <Image
 alt={"Logo Icon"}
-src={"/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
 width={18}
 height={12}
 loading={"eager"}
 className={`w-image cqsaj3r c11y8oun ctpsi40 c12l5srj`} />
 <Image
-src={"/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
 width={161}
 height={8}
 alt={"Logo Text"}
@@ -389,7 +389,7 @@ className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={""}
@@ -583,7 +583,7 @@ className={`w-element c1numhkq c53aqfr ct0qrmw cfcahn6 c1hx6vht c1epvuph c6hmdm4
 href={"tel:3017696909"}
 className={`w-link c1lvj0n c19ftcvs c1vqewwo cacmu18 c9te4zd c1u81kxm c1v2l8nt c53aqfr ct0qrmw c1lzjd2w cn7k83s c1d8rs8t cwr9gsc c1ehmfnq c1owcyig c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da cv3rgxc cahz6x0 cmchden c1amh7xl cimel00 c1b6be7c c1842oze c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 ckkl2uw cchbu1a c1lgs1h6 c1osufuw`}>
 <Image
-src={"/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
+src={"https://v2.improveitmd.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
 width={16}
 height={16}
 alt={"Phone icon"}
@@ -615,7 +615,7 @@ className={`w-element c1numhkq cqilze0 c1diokdk c3auquk c1r7jime c1hx6vht cfefby
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={"Logo"}
@@ -1046,7 +1046,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx ciot89f c20rkyc c9su8v5 c1idbwr4
 <div
 className={`w-element cssmshv cxwe9q8 c12qh1s1`}>
 <Image
-src={"/uploads/home_reviews_section_img_MZ_8_H2_Bc6yj_Fnyhr96_Mf_GR_a5851b4e29.webp"}
+src={"https://v2.improveitmd.com/uploads/home_reviews_section_img_MZ_8_H2_Bc6yj_Fnyhr96_Mf_GR_a5851b4e29.webp"}
 width={960}
 height={1490}
 alt={"Installing new siding on ladder."}
@@ -1231,7 +1231,7 @@ className={`w-element cb7wkl5 c1numhkq c3auquk co72if5 c18fd4vt c9tjkc5 c4ph8p6 
 className={`w-element c1numhkq c1a06u5s c1s88tz3 c139pwc6 c1bijp3c c13g3obg`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Roofing_in_Silver_Spring_Maryland_y_Ij6_M22k_MF_Te_C2_Wq_Qo_SLV_9793d04ef4.webp"}
+src={"https://v2.improveitmd.com/uploads/Roofing_in_Silver_Spring_Maryland_y_Ij6_M22k_MF_Te_C2_Wq_Qo_SLV_9793d04ef4.webp"}
 width={1200}
 height={630}
 alt={"Roofing in Silver Spring Maryland"}
@@ -1252,7 +1252,7 @@ className={`w-element cn5qs21 c1b2b7rn c82qwqc c1lwn44j c1fjww6l c1g3mhtg`}>
 className={`w-element c1numhkq c1a06u5s c1s88tz3 c139pwc6 c1bijp3c c13g3obg`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Siding_Contractors_in_Silver_Spring_Maryland_CY_Gy_Eq_Cvu_ad_N_Xy6eub_Xs_1712192c04.webp"}
+src={"https://v2.improveitmd.com/uploads/Siding_Contractors_in_Silver_Spring_Maryland_CY_Gy_Eq_Cvu_ad_N_Xy6eub_Xs_1712192c04.webp"}
 width={1200}
 height={630}
 alt={"Silver Spring Maryland Siding Replacement Contractor"}
@@ -1282,7 +1282,7 @@ className={`w-element cb7wkl5 c1numhkq c3auquk co72if5 c18fd4vt c9tjkc5 c4ph8p6 
 className={`w-element c1numhkq c1a06u5s c1s88tz3 c139pwc6 c1bijp3c c13g3obg`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Window_Replacement_in_Silver_Spring_MD_JS_9s6ykk_Ur_D_Xym_LU_0_Cu_T_4de4d41c72.webp"}
+src={"https://v2.improveitmd.com/uploads/Window_Replacement_in_Silver_Spring_MD_JS_9s6ykk_Ur_D_Xym_LU_0_Cu_T_4de4d41c72.webp"}
 width={1200}
 height={630}
 alt={"Window Replacement in Silver Spring MD"}
@@ -1303,7 +1303,7 @@ className={`w-element cn5qs21 c1b2b7rn c82qwqc c1lwn44j c1fjww6l c1g3mhtg`}>
 className={`w-element c1numhkq c1a06u5s c1s88tz3 c139pwc6 c1bijp3c c13g3obg`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Seamless_Gutters_in_Silver_Spring_Maryland_o1_BBB_Hc_TLAAD_Uj8xhu_mb_308d749e65.webp"}
+src={"https://v2.improveitmd.com/uploads/Seamless_Gutters_in_Silver_Spring_Maryland_o1_BBB_Hc_TLAAD_Uj8xhu_mb_308d749e65.webp"}
 width={1200}
 height={630}
 alt={"Seamless Gutters in Silver Spring Maryland"}
@@ -1333,7 +1333,7 @@ className={`w-element cb7wkl5 c1numhkq c3auquk co72if5 c18fd4vt c9tjkc5 c4ph8p6 
 className={`w-element c1numhkq c1a06u5s c1s88tz3 c139pwc6 c1bijp3c c13g3obg`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Deck_Builders_Silver_Spring_Maryland_d0_Q5_A9r27m_Ohxq_MO_MQ_31_9ad02b4a6e.webp"}
+src={"https://v2.improveitmd.com/uploads/Deck_Builders_Silver_Spring_Maryland_d0_Q5_A9r27m_Ohxq_MO_MQ_31_9ad02b4a6e.webp"}
 width={1200}
 height={630}
 alt={"Deck Builders Silver Spring Maryland"}
@@ -1354,7 +1354,7 @@ className={`w-element cn5qs21 c1b2b7rn c82qwqc c1lwn44j c1fjww6l c1g3mhtg`}>
 className={`w-element c1numhkq c1a06u5s c1s88tz3 c139pwc6 c1bijp3c c13g3obg`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Front_Door_Replacement_in_Silver_Spring_Maryland_lv_Id_Icn_V_Ydm_G_y_T8h_Z_ic_5324a8e645.webp"}
+src={"https://v2.improveitmd.com/uploads/Front_Door_Replacement_in_Silver_Spring_Maryland_lv_Id_Icn_V_Ydm_G_y_T8h_Z_ic_5324a8e645.webp"}
 width={1200}
 height={630}
 alt={"Front Door Replacement in Silver Spring Maryland"}
@@ -1397,7 +1397,7 @@ className={`w-element c1g3mhtg cn5qs21 c1b2b7rn chdomh6`}>
 <div
 className={`w-element c1numhkq c1diokdk ct0qrmw c1ym9r0h c1350r63 c1otj3om cn3kss c1kioei4`}>
 <Image
-src={"/uploads/rating_stars_CVEF_Pd3_QYWQ_Ugq_S_viwp_M_c1b7210fab.svg"}
+src={"https://v2.improveitmd.com/uploads/rating_stars_CVEF_Pd3_QYWQ_Ugq_S_viwp_M_c1b7210fab.svg"}
 width={110}
 height={20}
 alt={"5 stars logo."}

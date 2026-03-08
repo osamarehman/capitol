@@ -106,13 +106,13 @@ className={`w-element c1k5oipc`}>
 className={`w-element c1osufuw c3sv84c c84c42r`}>
 <Image
 alt={"Logo Icon"}
-src={"/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
 width={18}
 height={12}
 loading={"eager"}
 className={`w-image cqsaj3r c11y8oun ctpsi40 c12l5srj`} />
 <Image
-src={"/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
 width={161}
 height={8}
 alt={"Logo Text"}
@@ -389,7 +389,7 @@ className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={""}
@@ -583,7 +583,7 @@ className={`w-element c1numhkq c53aqfr ct0qrmw cfcahn6 c1hx6vht c1epvuph c6hmdm4
 href={"tel:3017696909"}
 className={`w-link c1lvj0n c19ftcvs c1vqewwo cacmu18 c9te4zd c1u81kxm c1v2l8nt c53aqfr ct0qrmw c1lzjd2w cn7k83s c1d8rs8t cwr9gsc c1ehmfnq c1owcyig c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da cv3rgxc cahz6x0 cmchden c1amh7xl cimel00 c1b6be7c c1842oze c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 ckkl2uw cchbu1a c1lgs1h6 c1osufuw`}>
 <Image
-src={"/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
+src={"https://v2.improveitmd.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
 width={16}
 height={16}
 alt={"Phone icon"}
@@ -615,7 +615,7 @@ className={`w-element c1numhkq cqilze0 c1diokdk c3auquk c1r7jime c1hx6vht cfefby
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={"Logo"}
@@ -967,7 +967,7 @@ className={`w-element c9aekss c1ihu3w4 c1tdj1xa c19nn5ac c1lwn44j c1fjww6l c1lpa
 <div
 className={`w-element c139pwc6 c1907jr4 c1epvuph cn87dm8 c1uhhf7h cjm2rxl c1ytvtu4 cgzewc9`}>
 <Image
-src={"/uploads/capitol_improvements_hero_img_FZH_Oqk_Ui_Fhym_VWE_Yj_Jhg4_82025eb746.webp"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_hero_img_FZH_Oqk_Ui_Fhym_VWE_Yj_Jhg4_82025eb746.webp"}
 width={880}
 height={430}
 alt={"Compilation Video of the Capitol Improvements Team Completing Roofing, Siding, Window, Decks, Doors, and Gutter Installation Projects throughout DC, MD, and VA."}
@@ -977,7 +977,7 @@ className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a c15bin8n c1xbhoju cnbug7k 
 <div
 className={`w-element c139pwc6 c15bin8n c1epvuph c1edz3f7 cjm2rxl c1ytvtu4 cgzewc9 ${"hero-video-wrapper"}`}>
 <HtmlEmbed
-code={"<video class=\"hero-video\" autoplay muted playsinline preload=\"auto\" style=\"width:100%; height:100%; object-fit:cover;\">\n    <source src=\"/uploads/ik_imagekit_io_einkpz9gr_65ca32dc202550e25648683a_Capitol_20_Improvements_20_20_Roofing_20and_20_Siding_20_Contractors_transcode_webm_ik_video_0a02644ba7.mp4_updatedAt_1765471677644\" type=\"video/webm\">\n  </video>\n\n"}
+code={"<video class=\"hero-video\" autoplay muted playsinline preload=\"auto\" style=\"width:100%; height:100%; object-fit:cover;\">\n    <source src=\"https://v2.improveitmd.com/uploads/ik_imagekit_io_einkpz9gr_65ca32dc202550e25648683a_Capitol_20_Improvements_20_20_Roofing_20and_20_Siding_20_Contractors_transcode_webm_ik_video_0a02644ba7.mp4_updatedAt_1765471677644\" type=\"video/webm\">\n  </video>\n\n"}
 className={`w-html-embed`} />
 </div>
 </div>
@@ -1087,7 +1087,7 @@ href={"https://www.gaf.com/en-us/roofing-contractors/residential/usa/md/bowie/ca
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/uploads/gaf_logo_We_ITC_5p_Ape2_Cx61bwo3_OP_a7f1dbba11.svg"}
+src={"https://v2.improveitmd.com/uploads/gaf_logo_We_ITC_5p_Ape2_Cx61bwo3_OP_a7f1dbba11.svg"}
 width={128}
 height={128}
 alt={"GAF Master Elite logo. "}
@@ -1099,7 +1099,7 @@ href={"https://www.atlasroofing.com/find-a-contractor"}
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/uploads/atlas_pro_logo_q_Voe_O_Fympg2_By5s8t30_w_7256482e4d.svg"}
+src={"https://v2.improveitmd.com/uploads/atlas_pro_logo_q_Voe_O_Fympg2_By5s8t30_w_7256482e4d.svg"}
 width={122}
 height={124}
 alt={"Atlas Pro+ Logo."}
@@ -1111,7 +1111,7 @@ href={"https://www.plygem.com/how-to-buy/"}
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/uploads/plygem_logo_Qb_U2kz_Gy_Nyh5_D_Fh_F_Uq_Q_Lg_9506b94850.svg"}
+src={"https://v2.improveitmd.com/uploads/plygem_logo_Qb_U2kz_Gy_Nyh5_D_Fh_F_Uq_Q_Lg_9506b94850.svg"}
 width={145}
 height={124}
 alt={"Mastic by Plygem logo. "}
@@ -1123,7 +1123,7 @@ href={"https://www.mulehide.com/en-us/"}
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/uploads/mule_hide_logo_DW_Oj97_Vdm9n_ZDJ_Upk_Gy_D8_95951c235c.svg"}
+src={"https://v2.improveitmd.com/uploads/mule_hide_logo_DW_Oj97_Vdm9n_ZDJ_Upk_Gy_D8_95951c235c.svg"}
 width={121}
 height={118}
 alt={"MuleHide logo. "}
@@ -1135,7 +1135,7 @@ href={"https://contractors.jameshardie.com/20720"}
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"/uploads/james_hardie_logo_C1_LC_6obnlrm346_Vy_U2_Gyg_3b2faa7bc5.svg"}
+src={"https://v2.improveitmd.com/uploads/james_hardie_logo_C1_LC_6obnlrm346_Vy_U2_Gyg_3b2faa7bc5.svg"}
 width={110}
 height={122}
 alt={"James Hardie logo."}
@@ -1513,7 +1513,7 @@ className={`w-link cvljm31 crv3s27 cacmu18 cn7k83s cyc4l41 c1d7h9xn c8a9tkm c1r2
 <div
 className={`w-element c139pwc6 cjhysm8 c13g3obg`}>
 <Image
-src={"/uploads/warranty_section_img_Gw_Ij3_EN_Icdl_O_Noso_Iv_S5g_5697de5e8a.webp"}
+src={"https://v2.improveitmd.com/uploads/warranty_section_img_Gw_Ij3_EN_Icdl_O_Noso_Iv_S5g_5697de5e8a.webp"}
 width={960}
 height={1034}
 alt={"Roofer being trained by Mule-Hide flat roof technician "}
@@ -1535,7 +1535,7 @@ className={`w-element c1numhkq c3auquk co72if5 c1u2ofx5 cvfl1ur c1jyyt23 c1nnsgt
 <div
 className={`w-element c1numhkq c1a06u5s c15kiuw7 ch3nxmx c1s88tz3 c15lzzou c139pwc6 c1sstzge c13g3obg c1m1w9fz c1sy7qlo c1s19qlc crfoyae cuwoxsi c4fmmfv c147y3ls`}>
 <Image
-src={"/uploads/logo_enerbank_KYZ_9_Wocf_Ri88302llq_G7_Q_8d9cc50e41.svg"}
+src={"https://v2.improveitmd.com/uploads/logo_enerbank_KYZ_9_Wocf_Ri88302llq_G7_Q_8d9cc50e41.svg"}
 width={713}
 height={111}
 alt={"Enerbank USA financing logo."}
@@ -1563,7 +1563,7 @@ className={`w-link cvljm31 crv3s27 cacmu18 cn7k83s cyc4l41 c1d7h9xn c8a9tkm c1r2
 <div
 className={`w-element c139pwc6 cjhysm8 cjkauba c13g3obg`}>
 <Image
-src={"/uploads/video_thumbnail_img_jica_ILCYK_2_M1f_BB_2_Cw_Kg9_e531a9140f.webp"}
+src={"https://v2.improveitmd.com/uploads/video_thumbnail_img_jica_ILCYK_2_M1f_BB_2_Cw_Kg9_e531a9140f.webp"}
 width={960}
 height={1034}
 alt={""}
@@ -1587,7 +1587,7 @@ className={`w-element c1numhkq cjgpxnj c1sq4bmy c139pwc6 c4ph8p6 c1t9puix czr9sb
 <div
 className={`w-element c18bj3o3 cxte6uv cyqqrx6 c16lpxcx cs0io4s cyovuht c12qh1s1`}>
 <Image
-src={"/uploads/home_reviews_section_img_MZ_8_H2_Bc6yj_Fnyhr96_Mf_GR_a5851b4e29.webp"}
+src={"https://v2.improveitmd.com/uploads/home_reviews_section_img_MZ_8_H2_Bc6yj_Fnyhr96_Mf_GR_a5851b4e29.webp"}
 width={960}
 height={1490}
 alt={"Installing new siding on ladder."}
@@ -1611,7 +1611,7 @@ className={`w-element c1g3mhtg cn5qs21 c1b2b7rn chdomh6`}>
 <div
 className={`w-element c1numhkq c1diokdk ct0qrmw c1ym9r0h c1350r63 c1otj3om cn3kss c1kioei4`}>
 <Image
-src={"/uploads/rating_stars_CVEF_Pd3_QYWQ_Ugq_S_viwp_M_c1b7210fab.svg"}
+src={"https://v2.improveitmd.com/uploads/rating_stars_CVEF_Pd3_QYWQ_Ugq_S_viwp_M_c1b7210fab.svg"}
 width={110}
 height={20}
 alt={"5 stars logo."}
@@ -1638,7 +1638,7 @@ className={`w-element c1g3mhtg cn5qs21 c1b2b7rn chdomh6`}>
 <div
 className={`w-element c1numhkq c1diokdk ct0qrmw c1ym9r0h c1350r63 c1otj3om cn3kss c1kioei4`}>
 <Image
-src={"/uploads/rating_stars_CVEF_Pd3_QYWQ_Ugq_S_viwp_M_c1b7210fab.svg"}
+src={"https://v2.improveitmd.com/uploads/rating_stars_CVEF_Pd3_QYWQ_Ugq_S_viwp_M_c1b7210fab.svg"}
 width={110}
 height={20}
 alt={"5 stars logo."}
@@ -1665,7 +1665,7 @@ className={`w-element c1g3mhtg cn5qs21 c1b2b7rn chdomh6`}>
 <div
 className={`w-element c1numhkq c1diokdk ct0qrmw c1ym9r0h c1350r63 c1otj3om cn3kss c1kioei4`}>
 <Image
-src={"/uploads/rating_stars_CVEF_Pd3_QYWQ_Ugq_S_viwp_M_c1b7210fab.svg"}
+src={"https://v2.improveitmd.com/uploads/rating_stars_CVEF_Pd3_QYWQ_Ugq_S_viwp_M_c1b7210fab.svg"}
 width={110}
 height={20}
 alt={"5 stars logo."}
@@ -1723,7 +1723,7 @@ className={`w-element cmsm1bz cvp609z c15p7bp0 c13gen24 c1txodcv curgy1m cyovuht
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c1irdqs7 c1p4xat6`}>
 <Image
-src={"/uploads/google_logo_tc_TKP_H_Wr_Qxpx4_J_Bktjz_M_f958fb1238.svg"}
+src={"https://v2.improveitmd.com/uploads/google_logo_tc_TKP_H_Wr_Qxpx4_J_Bktjz_M_f958fb1238.svg"}
 width={54}
 height={54}
 alt={"Google logo. "}
@@ -1732,7 +1732,7 @@ className={`w-image c139pwc6 c1hwvjgs c9mjk8q c8vzzbi ca9fo5a`} />
 <div
 className={`w-element c1numhkq c1a06u5s c1603wqb`}>
 <Image
-src={"/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_f612c9d17e.svg"}
+src={"https://v2.improveitmd.com/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_f612c9d17e.svg"}
 width={128}
 height={23}
 alt={"5 stars logo."}
@@ -1748,7 +1748,7 @@ className={`w-element c1hwvjgs cacmu18 c12n66pl`}>
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c1irdqs7 c1p4xat6`}>
 <Image
-src={"/uploads/angi_logo_QZ_Qiak_Zuvqd_DDBUP_7_J_Xyt_85d278ac2e.svg"}
+src={"https://v2.improveitmd.com/uploads/angi_logo_QZ_Qiak_Zuvqd_DDBUP_7_J_Xyt_85d278ac2e.svg"}
 width={80}
 height={48}
 alt={"Angi logo. "}
@@ -1757,7 +1757,7 @@ className={`w-image c139pwc6 c1hwvjgs c9mjk8q c2aaj4h ca9fo5a ckdtkkn`} />
 <div
 className={`w-element c1numhkq c1a06u5s c1603wqb`}>
 <Image
-src={"/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_f612c9d17e.svg"}
+src={"https://v2.improveitmd.com/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_f612c9d17e.svg"}
 width={128}
 height={23}
 alt={"5 stars logo."}
@@ -1773,7 +1773,7 @@ className={`w-element c1hwvjgs cacmu18 c12n66pl`}>
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c1irdqs7 c1p4xat6`}>
 <Image
-src={"/uploads/bbb_logo_AZ_Wq_VTT_1q_PEO_1p_L97jl_Nq_b54dce6bf3.svg"}
+src={"https://v2.improveitmd.com/uploads/bbb_logo_AZ_Wq_VTT_1q_PEO_1p_L97jl_Nq_b54dce6bf3.svg"}
 width={62}
 height={62}
 alt={"BBB logo. "}
@@ -1782,7 +1782,7 @@ className={`w-image c139pwc6 c1hwvjgs c9mjk8q cuyjpqi c5qn6ig`} />
 <div
 className={`w-element c1numhkq c1a06u5s c1603wqb`}>
 <Image
-src={"/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_f612c9d17e.svg"}
+src={"https://v2.improveitmd.com/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_f612c9d17e.svg"}
 width={128}
 height={23}
 alt={"5 stars logo."}
@@ -2372,7 +2372,7 @@ code={"<style> \n/* Chat Widget Variables - Can be overridden via JavaScript */\
 clientOnly={true}
 className={`w-html-embed`} />
 <HtmlEmbed
-code={"<!-- Chat Widget Container -->\n    <div id=\"custom-chat-widget\" class=\"chat-widget\">\n        <!-- Toggle Button -->\n        <button class=\"chat-widget__toggle\" id=\"chatToggle\">\n            <svg class=\"chat-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                <path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"></path>\n            </svg>\n            <svg class=\"close-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                <line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"></line>\n                <line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"></line>\n            </svg>\n        </button>\n\n        <!-- Chat Window -->\n        <div class=\"chat-widget__window\" id=\"chatWindow\">\n            <!-- Header -->\n            <div class=\"chat-widget__header\">\n                <div class=\"chat-widget__header-profile\">\n                    <img src=\"\" alt=\"Bot\" class=\"chat-widget__bot-avatar\" id=\"botAvatar\">\n                    <div class=\"chat-widget__header-info\">\n                        <h3 class=\"chat-widget__bot-name\" id=\"botName\">Sarah</h3>\n                        <p class=\"chat-widget__status\">Online</p>\n                    </div>\n                </div>\n                <button class=\"chat-widget__minimize\" id=\"minimizeBtn\">\n                    <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                        <line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line>\n                    </svg>\n                </button>\n            </div>\n\n            <!-- Quick Action Buttons -->\n            <div class=\"chat-widget__quick-actions\" id=\"quickActions\">\n                <button class=\"quick-action-btn\" data-action=\"quote\">\n                    <span class=\"quick-action-icon\">💰</span>\n                    <span class=\"quick-action-text\">Get a Quote</span>\n                </button>\n                <button class=\"quick-action-btn\" data-action=\"inspection\">\n                    <span class=\"quick-action-icon\">🔍</span>\n                    <span class=\"quick-action-text\">Schedule Inspection</span>\n                </button>\n                <button class=\"quick-action-btn\" data-action=\"agent\">\n                    <span class=\"quick-action-icon\">👤</span>\n                    <span class=\"quick-action-text\">Talk to Agent</span>\n                </button>\n            </div>\n\n            <!-- Messages Container -->\n            <div class=\"chat-widget__messages\" id=\"messagesContainer\">\n                <!-- Welcome Message -->\n                <div class=\"chat-message chat-message--bot\">\n                    <img src=\"/uploads/cdn_prod_website_files_com_64bd6cb099271195afd55550_65ce1ef3fc1ed732ff31cb3f_Screenshot_202024_02_15_20at_2019_25_38_6b5f74c3fc.webp\" alt=\"Bot\" class=\"chat-message__avatar\" id=\"welcomeBotAvatar\">\n                    <div class=\"chat-message__content\">\n                        <div class=\"chat-message__bubble\">\n                            <p class=\"chat-message__text\">Hello! How can I help you today?</p>\n                            <span class=\"chat-message__time\"></span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <!-- Typing Indicator -->\n            <div class=\"chat-widget__typing\" id=\"typingIndicator\" style=\"display: none;\">\n                <img src=\"\" alt=\"Bot\" class=\"chat-message__avatar\" id=\"typingBotAvatar\">\n                <div class=\"typing-dots\">\n                    <span></span>\n                    <span></span>\n                    <span></span>\n                </div>\n            </div>\n\n            <!-- Input Area -->\n            <div class=\"chat-widget__input-area\">\n                <div class=\"chat-widget__input-wrapper\">\n                    <button class=\"chat-widget__attach-btn\" id=\"attachBtn\" title=\"Attach file\">\n                        <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                            <path d=\"M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48\"></path>\n                        </svg>\n                    </button>\n                    <input type=\"file\" id=\"fileInput\" multiple accept=\"image/*,video/*,audio/*,application/pdf,.doc,.docx\" style=\"display: none;\">\n                    <textarea\n                        class=\"chat-widget__input\"\n                        id=\"messageInput\"\n                        placeholder=\"Type your message...\"\n                        rows=\"1\"\n                    ></textarea>\n                    <button class=\"chat-widget__send-btn\" id=\"sendBtn\">\n                        <svg viewBox=\"0 0 24 24\" fill=\"currentColor\">\n                            <path d=\"M2.01 21L23 12 2.01 3 2 10l15 2-15 2z\"></path>\n                        </svg>\n                    </button>\n                </div>\n                <div class=\"chat-widget__file-preview\" id=\"filePreview\" style=\"display: none;\"></div>\n            </div>\n        </div>\n    </div>"}
+code={"<!-- Chat Widget Container -->\n    <div id=\"custom-chat-widget\" class=\"chat-widget\">\n        <!-- Toggle Button -->\n        <button class=\"chat-widget__toggle\" id=\"chatToggle\">\n            <svg class=\"chat-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                <path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"></path>\n            </svg>\n            <svg class=\"close-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                <line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"></line>\n                <line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"></line>\n            </svg>\n        </button>\n\n        <!-- Chat Window -->\n        <div class=\"chat-widget__window\" id=\"chatWindow\">\n            <!-- Header -->\n            <div class=\"chat-widget__header\">\n                <div class=\"chat-widget__header-profile\">\n                    <img src=\"\" alt=\"Bot\" class=\"chat-widget__bot-avatar\" id=\"botAvatar\">\n                    <div class=\"chat-widget__header-info\">\n                        <h3 class=\"chat-widget__bot-name\" id=\"botName\">Sarah</h3>\n                        <p class=\"chat-widget__status\">Online</p>\n                    </div>\n                </div>\n                <button class=\"chat-widget__minimize\" id=\"minimizeBtn\">\n                    <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                        <line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"></line>\n                    </svg>\n                </button>\n            </div>\n\n            <!-- Quick Action Buttons -->\n            <div class=\"chat-widget__quick-actions\" id=\"quickActions\">\n                <button class=\"quick-action-btn\" data-action=\"quote\">\n                    <span class=\"quick-action-icon\">💰</span>\n                    <span class=\"quick-action-text\">Get a Quote</span>\n                </button>\n                <button class=\"quick-action-btn\" data-action=\"inspection\">\n                    <span class=\"quick-action-icon\">🔍</span>\n                    <span class=\"quick-action-text\">Schedule Inspection</span>\n                </button>\n                <button class=\"quick-action-btn\" data-action=\"agent\">\n                    <span class=\"quick-action-icon\">👤</span>\n                    <span class=\"quick-action-text\">Talk to Agent</span>\n                </button>\n            </div>\n\n            <!-- Messages Container -->\n            <div class=\"chat-widget__messages\" id=\"messagesContainer\">\n                <!-- Welcome Message -->\n                <div class=\"chat-message chat-message--bot\">\n                    <img src=\"https://v2.improveitmd.com/uploads/cdn_prod_website_files_com_64bd6cb099271195afd55550_65ce1ef3fc1ed732ff31cb3f_Screenshot_202024_02_15_20at_2019_25_38_6b5f74c3fc.webp\" alt=\"Bot\" class=\"chat-message__avatar\" id=\"welcomeBotAvatar\">\n                    <div class=\"chat-message__content\">\n                        <div class=\"chat-message__bubble\">\n                            <p class=\"chat-message__text\">Hello! How can I help you today?</p>\n                            <span class=\"chat-message__time\"></span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <!-- Typing Indicator -->\n            <div class=\"chat-widget__typing\" id=\"typingIndicator\" style=\"display: none;\">\n                <img src=\"\" alt=\"Bot\" class=\"chat-message__avatar\" id=\"typingBotAvatar\">\n                <div class=\"typing-dots\">\n                    <span></span>\n                    <span></span>\n                    <span></span>\n                </div>\n            </div>\n\n            <!-- Input Area -->\n            <div class=\"chat-widget__input-area\">\n                <div class=\"chat-widget__input-wrapper\">\n                    <button class=\"chat-widget__attach-btn\" id=\"attachBtn\" title=\"Attach file\">\n                        <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n                            <path d=\"M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48\"></path>\n                        </svg>\n                    </button>\n                    <input type=\"file\" id=\"fileInput\" multiple accept=\"image/*,video/*,audio/*,application/pdf,.doc,.docx\" style=\"display: none;\">\n                    <textarea\n                        class=\"chat-widget__input\"\n                        id=\"messageInput\"\n                        placeholder=\"Type your message...\"\n                        rows=\"1\"\n                    ></textarea>\n                    <button class=\"chat-widget__send-btn\" id=\"sendBtn\">\n                        <svg viewBox=\"0 0 24 24\" fill=\"currentColor\">\n                            <path d=\"M2.01 21L23 12 2.01 3 2 10l15 2-15 2z\"></path>\n                        </svg>\n                    </button>\n                </div>\n                <div class=\"chat-widget__file-preview\" id=\"filePreview\" style=\"display: none;\"></div>\n            </div>\n        </div>\n    </div>"}
 clientOnly={true}
 className={`w-html-embed`} />
 <HtmlEmbed
@@ -2380,7 +2380,7 @@ code={"<script>\n/**\n * Custom Chat Widget with Webhook Integration\n * Configu
 clientOnly={true}
 className={`w-html-embed`} />
 <HtmlEmbed
-code={"<script type=\"module\">\nconst whatsappStyle = {\n    webhookUrl: 'https://n8n.mughal.pro/webhook/8179341e-a02e-4dcb-9ad7-7cb3fe42ffef/chat',\n    botName: 'Ava',\n    botAvatar: '/uploads/cdn_prod_website_files_com_64bd6cb099271195afd55550_65ce1ef3fc1ed732ff31cb3f_Screenshot_202024_02_15_20at_2019_25_38_6b5f74c3fc.webp',\n    primaryColor: '#075e54',\n    secondaryColor: '#f1f3f4',\n    userColor: '#dcf8c6',\n    botColor: '#ffffff',\n    quickActions: [\n        { id: 'help', label: 'Help', icon: '❓', instruction: 'I need urgent help' },\n        { id: 'status', label: 'Book an inspection', icon: '📦', instruction: 'I want to book an inspection' },\n        { id: 'contact', label: 'Talk to Human', icon: '📞', instruction: 'I want to contact support' }\n    ]\n};\nChatWidget.init(whatsappStyle);\n</script>"}
+code={"<script type=\"module\">\nconst whatsappStyle = {\n    webhookUrl: 'https://n8n.mughal.pro/webhook/8179341e-a02e-4dcb-9ad7-7cb3fe42ffef/chat',\n    botName: 'Ava',\n    botAvatar: 'https://v2.improveitmd.com/uploads/cdn_prod_website_files_com_64bd6cb099271195afd55550_65ce1ef3fc1ed732ff31cb3f_Screenshot_202024_02_15_20at_2019_25_38_6b5f74c3fc.webp',\n    primaryColor: '#075e54',\n    secondaryColor: '#f1f3f4',\n    userColor: '#dcf8c6',\n    botColor: '#ffffff',\n    quickActions: [\n        { id: 'help', label: 'Help', icon: '❓', instruction: 'I need urgent help' },\n        { id: 'status', label: 'Book an inspection', icon: '📦', instruction: 'I want to book an inspection' },\n        { id: 'contact', label: 'Talk to Human', icon: '📞', instruction: 'I want to contact support' }\n    ]\n};\nChatWidget.init(whatsappStyle);\n</script>"}
 clientOnly={true}
 className={`w-html-embed`} />
 </div>

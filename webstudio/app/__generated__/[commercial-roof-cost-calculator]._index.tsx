@@ -39,7 +39,7 @@ className={`w-box cnregu4 c3a6wb5`}>
 className={`w-element cv4mf0f`}>
 <HtmlEmbed
 clientOnly={true}
-code={"<script src=\"https://code.jquery.com/jquery-3.7.1.min.js\" integrity=\"sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=\" crossorigin=\"anonymous\"></script>\n\n<script src=\"https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.js\">\n\n</script>\n<script src=\"https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js\">\n\n</script>\n<script src=\"/uploads/uploads_ssl_webflow_com_6287b31efad93805832a2f6e_62de4ba563185e28ce6dea35_draw_2af4812f8b.txt\">\n\n</script>\n<script src=\"https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js\">\n\n</script>\n<script>\n!function(e){if(\"object\"==typeof exports&&\"undefined\"!=typeof module)module.exports=e();else if(\"function\"==typeof define&&define.amd)define([],e);else{var t;t=\"undefined\"!=typeof window?window:\"undefined\"!=typeof global?global:\"undefined\"!=typeof self?self:this,t.DrawRectangle=e()}}(function(){return function(){function e(t,n,o){function i(r,l){if(!n[r]){if(!t[r]){var s=\"function\"==typeof require&&require;if(!l&&s)return s(r,!0);if(a)return a(r,!0);var u=new Error(\"Cannot find module '\"+r+\"'\");throw u.code=\"MODULE_NOT_FOUND\",u}var d=n[r]={exports:{}};t[r][0].call(d.exports,function(e){return i(t[r][1][e]||e)},d,d.exports,e,t,n,o)}return n[r].exports}for(var a=\"function\"==typeof require&&require,r=0;r<o.length;r++)i(o[r]);return i}return e}()({1:[function(e,t,n){\"use strict\";Object.defineProperty(n,\"__esModule\",{value:!0});var o={enable:function(e){setTimeout(function(){e.map&&e.map.doubleClickZoom&&e._ctx&&e._ctx.store&&e._ctx.store.getInitialConfigValue&&e._ctx.store.getInitialConfigValue(\"doubleClickZoom\")&&e.map.doubleClickZoom.enable()},0)},disable:function(e){setTimeout(function(){e.map&&e.map.doubleClickZoom&&e.map.doubleClickZoom.disable()},0)}},i={onSetup:function(e){var t=this.newFeature({type:\"Feature\",properties:{},geometry:{type:\"Polygon\",coordinates:[[]]}});return this.addFeature(t),this.clearSelectedFeatures(),o.disable(this),this.updateUIClasses({mouse:\"add\"}),this.setActionableState({trash:!0}),{rectangle:t}},onClick:function(e,t){e.startPoint&&e.startPoint[0]!==t.lngLat.lng&&e.startPoint[1]!==t.lngLat.lat&&(this.updateUIClasses({mouse:\"pointer\"}),e.endPoint=[t.lngLat.lng,t.lngLat.lat],this.changeMode(\"simple_select\",{featuresId:e.rectangle.id}));var n=[t.lngLat.lng,t.lngLat.lat];e.startPoint=n},onMouseMove:function(e,t){e.startPoint&&(e.rectangle.updateCoordinate(\"0.0\",e.startPoint[0],e.startPoint[1]),e.rectangle.updateCoordinate(\"0.1\",t.lngLat.lng,e.startPoint[1]),e.rectangle.updateCoordinate(\"0.2\",t.lngLat.lng,t.lngLat.lat),e.rectangle.updateCoordinate(\"0.3\",e.startPoint[0],t.lngLat.lat),e.rectangle.updateCoordinate(\"0.4\",e.startPoint[0],e.startPoint[1]))},onKeyUp:function(e,t){if(27===t.keyCode)return this.changeMode(\"simple_select\")},onStop:function(e){o.enable(this),this.updateUIClasses({mouse:\"none\"}),this.activateUIButton(),void 0!==this.getFeature(e.rectangle.id)&&(e.rectangle.removeCoordinate(\"0.4\"),e.rectangle.isValid()?this.map.fire(\"draw.create\",{features:[e.rectangle.toGeoJSON()]}):(this.deleteFeature([e.rectangle.id],{silent:!0}),this.changeMode(\"simple_select\",{},{silent:!0})))},toDisplayFeatures:function(e,t,n){var o=t.properties.id===e.rectangle.id;return t.properties.active=o?\"true\":\"false\",o?e.startPoint?n(t):void 0:n(t)},onTrash:function(e){this.deleteFeature([e.rectangle.id],{silent:!0}),this.changeMode(\"simple_select\")}};n.default=i},{}]},{},[1])(1)});\n\n</script>\n\n<script>\n\nif (typeof styles === 'undefined') {\n    window.styles = (portColor) => {\n      // Your existing styles function code here\n       return [\n    {\n      id: 'gl-draw-polygon-fill-inactive',\n      type: 'fill',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'Polygon'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'fill-color': portColor,\n        'fill-outline-color': portColor,\n        'fill-opacity': 0.3\n      }\n    },\n    {\n      id: 'gl-draw-polygon-fill-active',\n      type: 'fill',\n      filter: ['all', ['==', 'active', 'true'],\n        ['==', '$type', 'Polygon']\n      ],\n      paint: {\n        'fill-color': portColor,\n        'fill-outline-color': portColor,\n        'fill-opacity': 0\n      }\n    },\n    {\n      id: 'gl-draw-polygon-stroke-inactive',\n      type: 'line',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'Polygon'],\n        ['!=', 'mode', 'static']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': '#3bb2d0',\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-polygon-stroke-active',\n      type: 'line',\n      filter: ['all', ['==', 'active', 'true'],\n        ['==', '$type', 'Polygon']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': portColor,\n        'line-dasharray': [0.2, 2],\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-line-inactive',\n      type: 'line',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'LineString'],\n        ['!=', 'mode', 'static']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': '#3bb2d0',\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-line-active',\n      type: 'line',\n      filter: ['all', ['==', '$type', 'LineString'],\n        ['==', 'active', 'true']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': portColor,\n        'line-dasharray': [0.2, 2],\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-point-point-stroke-inactive',\n      type: 'circle',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'Point'],\n        ['==', 'meta', 'feature'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'circle-radius': 15,\n        'circle-opacity': 1,\n        'circle-color': '#fff'\n      }\n    },\n    {\n      id: 'gl-draw-point-inactive',\n      type: 'circle',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'Point'],\n        ['==', 'meta', 'feature'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'circle-radius': 3,\n        'circle-color': '#3bb2d0'\n      }\n    },\n    {\n      id: 'gl-draw-point-stroke-active',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['==', 'active', 'true'],\n        ['!=', 'meta', 'midpoint']\n      ],\n      paint: {\n        'circle-radius': 7,\n        'circle-color': '#fff'\n      }\n    },\n    {\n      id: 'gl-draw-point-active',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['!=', 'meta', 'midpoint'],\n        ['==', 'active', 'true']\n      ],\n      paint: {\n        'circle-radius': 5,\n        'circle-color': portColor\n      }\n    },\n    {\n      id: 'gl-draw-polygon-fill-static',\n      type: 'fill',\n      filter: ['all', ['==', 'mode', 'static'],\n        ['==', '$type', 'Polygon']\n      ],\n      paint: {\n        'fill-color': '#404040',\n        'fill-outline-color': '#404040',\n        'fill-opacity': 0.1\n      }\n    },\n    {\n      id: 'gl-draw-polygon-stroke-static',\n      type: 'line',\n      filter: ['all', ['==', 'mode', 'static'],\n        ['==', '$type', 'Polygon']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': '#404040',\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-line-static',\n      type: 'line',\n      filter: ['all', ['==', 'mode', 'static'],\n        ['==', '$type', 'LineString']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': '#404040',\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-point-static',\n      type: 'circle',\n      filter: ['all', ['==', 'mode', 'static'],\n        ['==', '$type', 'Point']\n      ],\n      paint: {\n        'circle-radius': 5,\n        'circle-color': '#404040'\n      }\n    },\n    {\n      id: 'gl-draw-polygon-color-picker',\n      type: 'fill',\n      filter: ['all', ['==', '$type', 'Polygon'],\n        ['has', 'user_portColor']\n      ],\n      paint: {\n        'fill-color': ['get', 'user_portColor'],\n        'fill-outline-color': ['get', 'user_portColor'],\n        'fill-opacity': 0.5\n      }\n    },\n    {\n      id: 'gl-draw-line-color-picker',\n      type: 'line',\n      filter: ['all', ['==', '$type', 'LineString'],\n        ['has', 'user_portColor']\n      ],\n      paint: {\n        'line-color': ['get', 'user_portColor'],\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-point-color-picker',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['has', 'user_portColor']\n      ],\n      paint: {\n        'circle-radius': 3,\n        'circle-color': ['get', 'user_portColor']\n      }\n    },\n    {\n      id: 'gl-draw-polygon-midpoint-stroke',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['==', 'meta', 'midpoint']\n      ],\n      paint: {\n        'circle-radius': 6,\n        'circle-color': '#e3641f'\n      }\n    },\n    {\n      id: 'gl-draw-polygon-midpoint',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['==', 'meta', 'midpoint']\n      ],\n      paint: {\n        'circle-radius': 4,\n        'circle-color': '#44484a'\n      }\n    },\n    {\n      id: 'gl-draw-polygon-and-line-vertex-stroke-inactive',\n      type: 'circle',\n      filter: ['all', ['==', 'meta', 'vertex'],\n        ['==', '$type', 'Point'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'circle-radius': 8, // outer circle\n        'circle-color': '#e3641f'\n      }\n    },\n    {\n      id: 'gl-draw-polygon-and-line-vertex-inactive',\n      type: 'circle',\n      filter: ['all', ['==', 'meta', 'vertex'],\n        ['==', '$type', 'Point'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'circle-radius': 6, // inner circle\n        'circle-color': '#44484a'\n      }\n    },\n  ]\n    };\n  }\n\n\n</script>"}
+code={"<script src=\"https://code.jquery.com/jquery-3.7.1.min.js\" integrity=\"sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=\" crossorigin=\"anonymous\"></script>\n\n<script src=\"https://api.mapbox.com/mapbox-gl-js/v3.6.0/mapbox-gl.js\">\n\n</script>\n<script src=\"https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js\">\n\n</script>\n<script src=\"https://v2.improveitmd.com/uploads/uploads_ssl_webflow_com_6287b31efad93805832a2f6e_62de4ba563185e28ce6dea35_draw_2af4812f8b.txt\">\n\n</script>\n<script src=\"https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js\">\n\n</script>\n<script>\n!function(e){if(\"object\"==typeof exports&&\"undefined\"!=typeof module)module.exports=e();else if(\"function\"==typeof define&&define.amd)define([],e);else{var t;t=\"undefined\"!=typeof window?window:\"undefined\"!=typeof global?global:\"undefined\"!=typeof self?self:this,t.DrawRectangle=e()}}(function(){return function(){function e(t,n,o){function i(r,l){if(!n[r]){if(!t[r]){var s=\"function\"==typeof require&&require;if(!l&&s)return s(r,!0);if(a)return a(r,!0);var u=new Error(\"Cannot find module '\"+r+\"'\");throw u.code=\"MODULE_NOT_FOUND\",u}var d=n[r]={exports:{}};t[r][0].call(d.exports,function(e){return i(t[r][1][e]||e)},d,d.exports,e,t,n,o)}return n[r].exports}for(var a=\"function\"==typeof require&&require,r=0;r<o.length;r++)i(o[r]);return i}return e}()({1:[function(e,t,n){\"use strict\";Object.defineProperty(n,\"__esModule\",{value:!0});var o={enable:function(e){setTimeout(function(){e.map&&e.map.doubleClickZoom&&e._ctx&&e._ctx.store&&e._ctx.store.getInitialConfigValue&&e._ctx.store.getInitialConfigValue(\"doubleClickZoom\")&&e.map.doubleClickZoom.enable()},0)},disable:function(e){setTimeout(function(){e.map&&e.map.doubleClickZoom&&e.map.doubleClickZoom.disable()},0)}},i={onSetup:function(e){var t=this.newFeature({type:\"Feature\",properties:{},geometry:{type:\"Polygon\",coordinates:[[]]}});return this.addFeature(t),this.clearSelectedFeatures(),o.disable(this),this.updateUIClasses({mouse:\"add\"}),this.setActionableState({trash:!0}),{rectangle:t}},onClick:function(e,t){e.startPoint&&e.startPoint[0]!==t.lngLat.lng&&e.startPoint[1]!==t.lngLat.lat&&(this.updateUIClasses({mouse:\"pointer\"}),e.endPoint=[t.lngLat.lng,t.lngLat.lat],this.changeMode(\"simple_select\",{featuresId:e.rectangle.id}));var n=[t.lngLat.lng,t.lngLat.lat];e.startPoint=n},onMouseMove:function(e,t){e.startPoint&&(e.rectangle.updateCoordinate(\"0.0\",e.startPoint[0],e.startPoint[1]),e.rectangle.updateCoordinate(\"0.1\",t.lngLat.lng,e.startPoint[1]),e.rectangle.updateCoordinate(\"0.2\",t.lngLat.lng,t.lngLat.lat),e.rectangle.updateCoordinate(\"0.3\",e.startPoint[0],t.lngLat.lat),e.rectangle.updateCoordinate(\"0.4\",e.startPoint[0],e.startPoint[1]))},onKeyUp:function(e,t){if(27===t.keyCode)return this.changeMode(\"simple_select\")},onStop:function(e){o.enable(this),this.updateUIClasses({mouse:\"none\"}),this.activateUIButton(),void 0!==this.getFeature(e.rectangle.id)&&(e.rectangle.removeCoordinate(\"0.4\"),e.rectangle.isValid()?this.map.fire(\"draw.create\",{features:[e.rectangle.toGeoJSON()]}):(this.deleteFeature([e.rectangle.id],{silent:!0}),this.changeMode(\"simple_select\",{},{silent:!0})))},toDisplayFeatures:function(e,t,n){var o=t.properties.id===e.rectangle.id;return t.properties.active=o?\"true\":\"false\",o?e.startPoint?n(t):void 0:n(t)},onTrash:function(e){this.deleteFeature([e.rectangle.id],{silent:!0}),this.changeMode(\"simple_select\")}};n.default=i},{}]},{},[1])(1)});\n\n</script>\n\n<script>\n\nif (typeof styles === 'undefined') {\n    window.styles = (portColor) => {\n      // Your existing styles function code here\n       return [\n    {\n      id: 'gl-draw-polygon-fill-inactive',\n      type: 'fill',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'Polygon'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'fill-color': portColor,\n        'fill-outline-color': portColor,\n        'fill-opacity': 0.3\n      }\n    },\n    {\n      id: 'gl-draw-polygon-fill-active',\n      type: 'fill',\n      filter: ['all', ['==', 'active', 'true'],\n        ['==', '$type', 'Polygon']\n      ],\n      paint: {\n        'fill-color': portColor,\n        'fill-outline-color': portColor,\n        'fill-opacity': 0\n      }\n    },\n    {\n      id: 'gl-draw-polygon-stroke-inactive',\n      type: 'line',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'Polygon'],\n        ['!=', 'mode', 'static']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': '#3bb2d0',\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-polygon-stroke-active',\n      type: 'line',\n      filter: ['all', ['==', 'active', 'true'],\n        ['==', '$type', 'Polygon']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': portColor,\n        'line-dasharray': [0.2, 2],\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-line-inactive',\n      type: 'line',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'LineString'],\n        ['!=', 'mode', 'static']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': '#3bb2d0',\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-line-active',\n      type: 'line',\n      filter: ['all', ['==', '$type', 'LineString'],\n        ['==', 'active', 'true']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': portColor,\n        'line-dasharray': [0.2, 2],\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-point-point-stroke-inactive',\n      type: 'circle',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'Point'],\n        ['==', 'meta', 'feature'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'circle-radius': 15,\n        'circle-opacity': 1,\n        'circle-color': '#fff'\n      }\n    },\n    {\n      id: 'gl-draw-point-inactive',\n      type: 'circle',\n      filter: ['all', ['==', 'active', 'false'],\n        ['==', '$type', 'Point'],\n        ['==', 'meta', 'feature'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'circle-radius': 3,\n        'circle-color': '#3bb2d0'\n      }\n    },\n    {\n      id: 'gl-draw-point-stroke-active',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['==', 'active', 'true'],\n        ['!=', 'meta', 'midpoint']\n      ],\n      paint: {\n        'circle-radius': 7,\n        'circle-color': '#fff'\n      }\n    },\n    {\n      id: 'gl-draw-point-active',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['!=', 'meta', 'midpoint'],\n        ['==', 'active', 'true']\n      ],\n      paint: {\n        'circle-radius': 5,\n        'circle-color': portColor\n      }\n    },\n    {\n      id: 'gl-draw-polygon-fill-static',\n      type: 'fill',\n      filter: ['all', ['==', 'mode', 'static'],\n        ['==', '$type', 'Polygon']\n      ],\n      paint: {\n        'fill-color': '#404040',\n        'fill-outline-color': '#404040',\n        'fill-opacity': 0.1\n      }\n    },\n    {\n      id: 'gl-draw-polygon-stroke-static',\n      type: 'line',\n      filter: ['all', ['==', 'mode', 'static'],\n        ['==', '$type', 'Polygon']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': '#404040',\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-line-static',\n      type: 'line',\n      filter: ['all', ['==', 'mode', 'static'],\n        ['==', '$type', 'LineString']\n      ],\n      layout: {\n        'line-cap': 'round',\n        'line-join': 'round'\n      },\n      paint: {\n        'line-color': '#404040',\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-point-static',\n      type: 'circle',\n      filter: ['all', ['==', 'mode', 'static'],\n        ['==', '$type', 'Point']\n      ],\n      paint: {\n        'circle-radius': 5,\n        'circle-color': '#404040'\n      }\n    },\n    {\n      id: 'gl-draw-polygon-color-picker',\n      type: 'fill',\n      filter: ['all', ['==', '$type', 'Polygon'],\n        ['has', 'user_portColor']\n      ],\n      paint: {\n        'fill-color': ['get', 'user_portColor'],\n        'fill-outline-color': ['get', 'user_portColor'],\n        'fill-opacity': 0.5\n      }\n    },\n    {\n      id: 'gl-draw-line-color-picker',\n      type: 'line',\n      filter: ['all', ['==', '$type', 'LineString'],\n        ['has', 'user_portColor']\n      ],\n      paint: {\n        'line-color': ['get', 'user_portColor'],\n        'line-width': 2\n      }\n    },\n    {\n      id: 'gl-draw-point-color-picker',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['has', 'user_portColor']\n      ],\n      paint: {\n        'circle-radius': 3,\n        'circle-color': ['get', 'user_portColor']\n      }\n    },\n    {\n      id: 'gl-draw-polygon-midpoint-stroke',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['==', 'meta', 'midpoint']\n      ],\n      paint: {\n        'circle-radius': 6,\n        'circle-color': '#e3641f'\n      }\n    },\n    {\n      id: 'gl-draw-polygon-midpoint',\n      type: 'circle',\n      filter: ['all', ['==', '$type', 'Point'],\n        ['==', 'meta', 'midpoint']\n      ],\n      paint: {\n        'circle-radius': 4,\n        'circle-color': '#44484a'\n      }\n    },\n    {\n      id: 'gl-draw-polygon-and-line-vertex-stroke-inactive',\n      type: 'circle',\n      filter: ['all', ['==', 'meta', 'vertex'],\n        ['==', '$type', 'Point'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'circle-radius': 8, // outer circle\n        'circle-color': '#e3641f'\n      }\n    },\n    {\n      id: 'gl-draw-polygon-and-line-vertex-inactive',\n      type: 'circle',\n      filter: ['all', ['==', 'meta', 'vertex'],\n        ['==', '$type', 'Point'],\n        ['!=', 'mode', 'static']\n      ],\n      paint: {\n        'circle-radius': 6, // inner circle\n        'circle-color': '#44484a'\n      }\n    },\n  ]\n    };\n  }\n\n\n</script>"}
 className={`w-html-embed`} />
 <HtmlEmbed
 clientOnly={true}
@@ -192,7 +192,7 @@ className={`w-html-embed`} />
 <div
 className={`w-element c139pwc6 cjkauba cvcvidj c1lzjd2w c1epvuph c9nw4u8 cagmsft`}>
 <Image
-src={"/uploads/search_icon_grey_2_KR_Phgsf3_Mq_Ywy_OF_3_JX_Ub_511fc3b834.svg"}
+src={"https://v2.improveitmd.com/uploads/search_icon_grey_2_KR_Phgsf3_Mq_Ywy_OF_3_JX_Ub_511fc3b834.svg"}
 width={18}
 height={18}
 alt={"search icon"}
@@ -251,7 +251,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -272,7 +272,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_422d313934.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_422d313934.svg"}
 width={24}
 height={24}
 alt={""}
@@ -286,7 +286,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -318,7 +318,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -339,7 +339,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_422d313934.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_422d313934.svg"}
 width={24}
 height={24}
 alt={""}
@@ -353,7 +353,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_422d313934.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_422d313934.svg"}
 width={24}
 height={24}
 alt={""}
@@ -445,7 +445,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_6a1d0430d8.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_6a1d0430d8.svg"}
 width={24}
 height={24}
 alt={""}
@@ -466,7 +466,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -480,7 +480,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 c9vdfns`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_422d313934.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_422d313934.svg"}
 width={24}
 height={24}
 alt={""}
@@ -597,7 +597,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_6a1d0430d8.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_6a1d0430d8.svg"}
 width={24}
 height={24}
 alt={""}
@@ -618,7 +618,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_6a1d0430d8.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_6a1d0430d8.svg"}
 width={24}
 height={24}
 alt={""}
@@ -632,7 +632,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 c9vdfns`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_6a1d0430d8.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_6a1d0430d8.svg"}
 width={24}
 height={24}
 alt={""}
@@ -640,7 +640,7 @@ data-icon={"filled"}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 c8bhanq ce6x08i c1bxcui0 c19i8jsr`} />
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_a6b24bc82f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -938,7 +938,7 @@ className={`w-element c1numhkq c3auquk c1ibjhy0 c163g466 cn87dm8 c1uhhf7h clfz32
 <div
 className={`w-element c139pwc6 c17jzp58 c1numhkq culorum`}>
 <Image
-src={"/uploads/ci_storm_map_1_LAH_T_9a_H_Mr_FS_Ifafib_c87409d6d5.svg"}
+src={"https://v2.improveitmd.com/uploads/ci_storm_map_1_LAH_T_9a_H_Mr_FS_Ifafib_c87409d6d5.svg"}
 width={320}
 height={436}
 alt={""}
@@ -1027,7 +1027,7 @@ className={`w-element c1mndzy8`}>
 className={`w-element c18bj3o3 c1lq6pq8`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Vector_i_O_Xi_YD_Iao_B_Xz9_Wh9_Cj2_K_691ae9ea37.svg"}
+src={"https://v2.improveitmd.com/uploads/Vector_i_O_Xi_YD_Iao_B_Xz9_Wh9_Cj2_K_691ae9ea37.svg"}
 width={60}
 height={62}
 alt={""}
@@ -1127,7 +1127,7 @@ href={"#"}
 data-elem={"add-new-add"}
 className={`w-element c1o5abpq c1diokdk ch3nxmx c18hkk31 c1owcyig c1d7h9xn`}>
 <Image
-src={"/uploads/add_12080026_Vvqm2mfa_Ww1av6re0h2c_F_467d05a59b.png"}
+src={"https://v2.improveitmd.com/uploads/add_12080026_Vvqm2mfa_Ww1av6re0h2c_F_467d05a59b.png"}
 width={512}
 height={512}
 alt={""}
@@ -1165,7 +1165,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1186,7 +1186,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1200,7 +1200,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1234,7 +1234,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1255,7 +1255,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1269,7 +1269,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1358,7 +1358,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1379,7 +1379,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1393,7 +1393,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 cgvpcq3`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1484,7 +1484,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1505,7 +1505,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1519,7 +1519,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 c9vdfns`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_grey_2_5j_Fzta9_Vk_T_Jxxl1_O_Qk_D_06ffd00864.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1636,7 +1636,7 @@ className={`w-element c1numhkq c1diokdk ch3nxmx c14if4po c1x44cjl cg0lu56 c1p0m7
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1657,7 +1657,7 @@ className={`w-element c1g2c0ij c1eb7rwy c1jewze7 c9slfh6 c9nw4u8 cnbug7k c156ohe
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1671,7 +1671,7 @@ className={`w-element c1fys859 clh8nk7 cjl1vg1 c9vdfns`}>
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c169jguh c1gijf1r c1epvuph c1edz3f7`}>
 <Image
 loading={"lazy"}
-src={"/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
+src={"https://v2.improveitmd.com/uploads/check_fill_t_Qn_Po_WF_842_Qz_Jop_BB_5w6c_d4fa60a6e6.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1679,7 +1679,7 @@ data-icon={"filled"}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 c8bhanq ce6x08i c1bxcui0 c19i8jsr`} />
 <Image
 loading={"lazy"}
-src={"/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
+src={"https://v2.improveitmd.com/uploads/circle_green_72pq_Hq_P6_Xm_Mru_2_O_Gt_Kg7_8756e34c1f.svg"}
 width={24}
 height={24}
 alt={""}
@@ -1977,7 +1977,7 @@ className={`w-element c1numhkq c3auquk c1ibjhy0 c163g466 cn87dm8 c1uhhf7h clfz32
 <div
 className={`w-element c139pwc6 c17jzp58 c1numhkq culorum`}>
 <Image
-src={"/uploads/ci_storm_map_1_LAH_T_9a_H_Mr_FS_Ifafib_43e525db09.svg"}
+src={"https://v2.improveitmd.com/uploads/ci_storm_map_1_LAH_T_9a_H_Mr_FS_Ifafib_43e525db09.svg"}
 width={320}
 height={436}
 alt={""}
@@ -2066,7 +2066,7 @@ className={`w-element c1mndzy8`}>
 className={`w-element c18bj3o3 c1lq6pq8`}>
 <Image
 loading={"lazy"}
-src={"/uploads/Vector_i_O_Xi_YD_Iao_B_Xz9_Wh9_Cj2_K_e1edb10d97.svg"}
+src={"https://v2.improveitmd.com/uploads/Vector_i_O_Xi_YD_Iao_B_Xz9_Wh9_Cj2_K_e1edb10d97.svg"}
 width={60}
 height={62}
 alt={""}

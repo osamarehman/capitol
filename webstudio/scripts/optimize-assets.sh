@@ -86,7 +86,7 @@ if [ "$UPLOAD_MODE" = true ]; then
       python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['url'] if d else '')" 2>/dev/null || echo "")
 
     if [ -n "$strapi_path" ]; then
-      new_url="${strapi_path}"
+      new_url="https://v2.improveitmd.com${strapi_path}"
       log "  Mapped: $clean_url -> $new_url"
 
       # Add to mappings
@@ -144,11 +144,12 @@ else
   log "  No mappings file found (run with --upload first)"
 fi
 
-# Replace cms.improveitmd.com URLs with local /uploads/ paths (Strapi is proxied locally)
-log "  Replacing cms.improveitmd.com URLs with local /uploads/ paths..."
+# Replace cms.improveitmd.com URLs with v2 domain (proxied to local Strapi via Caddy)
+# Must use full URL so IPX image proxy can fetch via HTTP (relative paths only check local files)
+log "  Replacing cms.improveitmd.com URLs with v2.improveitmd.com/uploads/ paths..."
 for f in "$GEN_DIR"/*.tsx "$GEN_DIR"/*.ts "$GEN_DIR"/*.css "$PROJECT_DIR/.webstudio/data.json"; do
   [ -f "$f" ] || continue
-  sed -i 's|https://cms\.improveitmd\.com/uploads/|/uploads/|g' "$f"
+  sed -i 's|https://cms\.improveitmd\.com/uploads/|https://v2.improveitmd.com/uploads/|g' "$f"
 done
 
 # Also replace wstd.io URLs with local /assets/ paths

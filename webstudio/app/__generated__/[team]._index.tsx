@@ -106,13 +106,13 @@ className={`w-element c1k5oipc`}>
 className={`w-element c1osufuw c3sv84c c84c42r`}>
 <Image
 alt={"Logo Icon"}
-src={"/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
 width={18}
 height={12}
 loading={"eager"}
 className={`w-image cqsaj3r c11y8oun ctpsi40 c12l5srj`} />
 <Image
-src={"/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
 width={161}
 height={8}
 alt={"Logo Text"}
@@ -389,7 +389,7 @@ className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={""}
@@ -583,7 +583,7 @@ className={`w-element c1numhkq c53aqfr ct0qrmw cfcahn6 c1hx6vht c1epvuph c6hmdm4
 href={"tel:3017696909"}
 className={`w-link c1lvj0n c19ftcvs c1vqewwo cacmu18 c9te4zd c1u81kxm c1v2l8nt c53aqfr ct0qrmw c1lzjd2w cn7k83s c1d8rs8t cwr9gsc c1ehmfnq c1owcyig c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da cv3rgxc cahz6x0 cmchden c1amh7xl cimel00 c1b6be7c c1842oze c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 ckkl2uw cchbu1a c1lgs1h6 c1osufuw`}>
 <Image
-src={"/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
+src={"https://v2.improveitmd.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
 width={16}
 height={16}
 alt={"Phone icon"}
@@ -615,7 +615,7 @@ className={`w-element c1numhkq cqilze0 c1diokdk c3auquk c1r7jime c1hx6vht cfefby
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={"Logo"}
@@ -964,7 +964,7 @@ className={`w-element c1numhkq c1a06u5s c17rwy3n c1603wqb c1cczgcx c1kyon4n c1bf
 className={`w-element c139pwc6 c1numhkq`}>
 <Image
 loading={"eager"}
-src={"/uploads/team_headshot_pat_Xg_Zeej_CO_6i_W_Fu_J_Li_Mdni_S_a2cac524df.webp"}
+src={"https://v2.improveitmd.com/uploads/team_headshot_pat_Xg_Zeej_CO_6i_W_Fu_J_Li_Mdni_S_a2cac524df.webp"}
 width={900}
 height={800}
 alt={"Team headshot of Owner Pat Jewell"}
@@ -992,7 +992,7 @@ className={`w-element c1numhkq c1a06u5s c17rwy3n c1603wqb c1cczgcx c1kyon4n c1bf
 className={`w-element c139pwc6 c1numhkq`}>
 <Image
 loading={"eager"}
-src={"/uploads/team_headshot_lance_6akz_FCWA_1rs5su_Q7_N8az_8761e92526.webp"}
+src={"https://v2.improveitmd.com/uploads/team_headshot_lance_6akz_FCWA_1rs5su_Q7_N8az_8761e92526.webp"}
 width={900}
 height={800}
 alt={"Team headshot of Lance"}
@@ -1020,7 +1020,7 @@ className={`w-element c1numhkq c1a06u5s c17rwy3n c1603wqb c1cczgcx c1kyon4n c1bf
 className={`w-element c139pwc6 c1numhkq`}>
 <Image
 loading={"eager"}
-src={"/uploads/team_headshot_austin_Tr5_L2_ZU_Mrx1_W_Zud_ELZH_Qn_3b0f7fcec3.webp"}
+src={"https://v2.improveitmd.com/uploads/team_headshot_austin_Tr5_L2_ZU_Mrx1_W_Zud_ELZH_Qn_3b0f7fcec3.webp"}
 width={900}
 height={800}
 alt={"Team headshot of Austin"}
@@ -1048,7 +1048,7 @@ className={`w-element c1numhkq c1a06u5s c17rwy3n c1603wqb c1cczgcx c1kyon4n c1bf
 className={`w-element c139pwc6 c1numhkq`}>
 <Image
 loading={"eager"}
-src={"/uploads/team_headshot_seth_ug_Z2_Jyk_C5_Khwym_Bky_Lx_CQ_86009ff8d4.webp"}
+src={"https://v2.improveitmd.com/uploads/team_headshot_seth_ug_Z2_Jyk_C5_Khwym_Bky_Lx_CQ_86009ff8d4.webp"}
 width={900}
 height={800}
 alt={"Team headshot of Seth"}
@@ -1076,7 +1076,7 @@ className={`w-element c1numhkq c1a06u5s c17rwy3n c1603wqb c1cczgcx c1kyon4n c1bf
 className={`w-element c139pwc6 c1numhkq`}>
 <Image
 loading={"eager"}
-src={"/uploads/team_headshot_flora_ie_Kpoch_G_Ekp_Z_Kk8_Ltw_P8d_67b92b1cf1.webp"}
+src={"https://v2.improveitmd.com/uploads/team_headshot_flora_ie_Kpoch_G_Ekp_Z_Kk8_Ltw_P8d_67b92b1cf1.webp"}
 width={900}
 height={800}
 alt={"Team headshot of Flora"}
@@ -1104,7 +1104,7 @@ className={`w-element c1numhkq c1a06u5s c17rwy3n c1603wqb c1cczgcx c1kyon4n c1bf
 className={`w-element c139pwc6 c1numhkq`}>
 <Image
 loading={"eager"}
-src={"/uploads/team_headshot_jason_NE_3_H4b0_DTAH_Gtamu_Kci_Q_bd636a637b.webp"}
+src={"https://v2.improveitmd.com/uploads/team_headshot_jason_NE_3_H4b0_DTAH_Gtamu_Kci_Q_bd636a637b.webp"}
 width={900}
 height={800}
 alt={"Team headshot of Jason"}
@@ -1128,7 +1128,7 @@ className={`w-element c1numhkq c1a06u5s c17rwy3n c1603wqb c1cczgcx c1kyon4n c1bf
 className={`w-element c139pwc6 c1numhkq`}>
 <Image
 loading={"eager"}
-src={"/uploads/team_headshot_melinda_Cnzj_TY_Mva_Nc_CSJV_35_S_Wu_5b96134b5d.webp"}
+src={"https://v2.improveitmd.com/uploads/team_headshot_melinda_Cnzj_TY_Mva_Nc_CSJV_35_S_Wu_5b96134b5d.webp"}
 width={900}
 height={800}
 alt={"Team headshot of Melinda"}
@@ -1156,7 +1156,7 @@ className={`w-element c1numhkq c1a06u5s c17rwy3n c1603wqb c1cczgcx c1kyon4n c1bf
 className={`w-element c139pwc6 c1numhkq`}>
 <Image
 loading={"eager"}
-src={"/uploads/team_headshot_ryan_g7mv5_Es_H2mp_Qnfu_k_MO_Gq_5d5c7a3a06.webp"}
+src={"https://v2.improveitmd.com/uploads/team_headshot_ryan_g7mv5_Es_H2mp_Qnfu_k_MO_Gq_5d5c7a3a06.webp"}
 width={900}
 height={800}
 alt={"Team headshot of Ryan"}
@@ -1180,7 +1180,7 @@ className={`w-element c1numhkq c1a06u5s c17rwy3n c1603wqb c1cczgcx c1kyon4n c1bf
 className={`w-element c139pwc6 c1numhkq`}>
 <Image
 loading={"eager"}
-src={"/uploads/team_headshot_blank_Nxyr_Ra_4h66_JJ_Kh0dwa_Jt_54565653f2.png"}
+src={"https://v2.improveitmd.com/uploads/team_headshot_blank_Nxyr_Ra_4h66_JJ_Kh0dwa_Jt_54565653f2.png"}
 width={900}
 height={800}
 alt={"Team headshot placeholder image"}
@@ -1204,7 +1204,7 @@ className={`w-element c1numhkq c1a06u5s c17rwy3n c1603wqb c1cczgcx c1kyon4n c1bf
 className={`w-element c139pwc6 c1numhkq`}>
 <Image
 loading={"eager"}
-src={"/uploads/team_headshot_josue_6u_Lle9_Aa_Fe_Zq_Rt_C_Lee_A5q_869178741e.webp"}
+src={"https://v2.improveitmd.com/uploads/team_headshot_josue_6u_Lle9_Aa_Fe_Zq_Rt_C_Lee_A5q_869178741e.webp"}
 width={900}
 height={800}
 alt={"Team headshot of Josue"}
@@ -1228,7 +1228,7 @@ className={`w-element c1numhkq c1a06u5s c17rwy3n c1603wqb c1cczgcx c1kyon4n c1bf
 className={`w-element c139pwc6 c1numhkq`}>
 <Image
 loading={"eager"}
-src={"/uploads/team_headshot_blank_Nxyr_Ra_4h66_JJ_Kh0dwa_Jt_54565653f2.png"}
+src={"https://v2.improveitmd.com/uploads/team_headshot_blank_Nxyr_Ra_4h66_JJ_Kh0dwa_Jt_54565653f2.png"}
 width={900}
 height={800}
 alt={"Team headshot placeholder image"}
@@ -1252,7 +1252,7 @@ className={`w-element c1numhkq c1a06u5s c17rwy3n c1603wqb c1cczgcx c1kyon4n c1bf
 className={`w-element c139pwc6 c1numhkq`}>
 <Image
 loading={"eager"}
-src={"/uploads/team_headshot_blank_Nxyr_Ra_4h66_JJ_Kh0dwa_Jt_54565653f2.png"}
+src={"https://v2.improveitmd.com/uploads/team_headshot_blank_Nxyr_Ra_4h66_JJ_Kh0dwa_Jt_54565653f2.png"}
 width={900}
 height={800}
 alt={"Team headshot placeholder image"}
@@ -1276,7 +1276,7 @@ className={`w-element c1numhkq c1a06u5s c17rwy3n c1603wqb c1cczgcx c1kyon4n c1bf
 className={`w-element c139pwc6 c1numhkq`}>
 <Image
 loading={"eager"}
-src={"/uploads/team_headshot_blank_Nxyr_Ra_4h66_JJ_Kh0dwa_Jt_54565653f2.png"}
+src={"https://v2.improveitmd.com/uploads/team_headshot_blank_Nxyr_Ra_4h66_JJ_Kh0dwa_Jt_54565653f2.png"}
 width={900}
 height={800}
 alt={"Team headshot placeholder image"}
@@ -1300,7 +1300,7 @@ className={`w-element c1numhkq c1a06u5s c17rwy3n c1603wqb c1cczgcx c1kyon4n c1bf
 className={`w-element c139pwc6 c1numhkq`}>
 <Image
 loading={"eager"}
-src={"/uploads/team_headshot_blank_Nxyr_Ra_4h66_JJ_Kh0dwa_Jt_54565653f2.png"}
+src={"https://v2.improveitmd.com/uploads/team_headshot_blank_Nxyr_Ra_4h66_JJ_Kh0dwa_Jt_54565653f2.png"}
 width={900}
 height={800}
 alt={"Team headshot placeholder image"}

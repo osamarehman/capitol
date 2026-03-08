@@ -106,13 +106,13 @@ className={`w-element c1k5oipc`}>
 className={`w-element c1osufuw c3sv84c c84c42r`}>
 <Image
 alt={"Logo Icon"}
-src={"/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_mui4_YFXS_Pv_M_Ej33_G1_Ey_WT_8932b99c78.svg"}
 width={18}
 height={12}
 loading={"eager"}
 className={`w-image cqsaj3r c11y8oun ctpsi40 c12l5srj`} />
 <Image
-src={"/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_text_Il_Lf_LABIT_im_V1n_R5_Dx_Y3_f89681a688.svg"}
 width={161}
 height={8}
 alt={"Logo Text"}
@@ -389,7 +389,7 @@ className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={""}
@@ -583,7 +583,7 @@ className={`w-element c1numhkq c53aqfr ct0qrmw cfcahn6 c1hx6vht c1epvuph c6hmdm4
 href={"tel:3017696909"}
 className={`w-link c1lvj0n c19ftcvs c1vqewwo cacmu18 c9te4zd c1u81kxm c1v2l8nt c53aqfr ct0qrmw c1lzjd2w cn7k83s c1d8rs8t cwr9gsc c1ehmfnq c1owcyig c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da cv3rgxc cahz6x0 cmchden c1amh7xl cimel00 c1b6be7c c1842oze c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 ckkl2uw cchbu1a c1lgs1h6 c1osufuw`}>
 <Image
-src={"/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
+src={"https://v2.improveitmd.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
 width={16}
 height={16}
 alt={"Phone icon"}
@@ -615,7 +615,7 @@ className={`w-element c1numhkq cqilze0 c1diokdk c3auquk c1r7jime c1hx6vht cfefby
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
 width={151}
 height={30}
 alt={"Logo"}
@@ -985,7 +985,7 @@ className={`w-element c1numhkq c3auquk c1pit5s0 c3qgmhh cmi1mlx c1350r63 c15gxmz
 className={`w-element c139pwc6 c1s8xuvy`}>
 <Image
 loading={"eager"}
-src={"/uploads/capitol_improvements_team_austin_truck_m_Ev_W_Mc_Gc_Df_Bsh_T0ad_LNU_9_75210cc117.webp"}
+src={"https://v2.improveitmd.com/uploads/capitol_improvements_team_austin_truck_m_Ev_W_Mc_Gc_Df_Bsh_T0ad_LNU_9_75210cc117.webp"}
 width={832}
 height={736}
 alt={"Capitol Improvements employee smiling and greeting a client. "}
@@ -995,7 +995,7 @@ className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a cjkauba c5rq1pv`} />
 className={`w-element c139pwc6 c1s8xuvy cjnxd6d`}>
 <Image
 loading={"eager"}
-src={"/uploads/team_mitch_customer_1b_wmkyf_Wqk_Z21gfvl_Eah_ad19692fac.webp"}
+src={"https://v2.improveitmd.com/uploads/team_mitch_customer_1b_wmkyf_Wqk_Z21gfvl_Eah_ad19692fac.webp"}
 width={832}
 height={736}
 alt={"Capitol Improvements team member taking a photo together with a happy client "}
@@ -1005,7 +1005,7 @@ className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a cjkauba c5rq1pv`} />
 className={`w-element c139pwc6 c1s8xuvy`}>
 <Image
 loading={"eager"}
-src={"/uploads/crew_flat_roof_cr_M_Xn_HGZM_8j_FDO_2b_Fw_IG_eeef60e88b.webp"}
+src={"https://v2.improveitmd.com/uploads/crew_flat_roof_cr_M_Xn_HGZM_8j_FDO_2b_Fw_IG_eeef60e88b.webp"}
 width={832}
 height={736}
 alt={"Capitol Improvements employee working on a TPO flat roof in Washington, DC."}
@@ -1060,7 +1060,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element c139pwc6 c1bkmg5n ck4d7c0 c13g3obg csgzb5o`}>
 <Image
-src={"/uploads/team_headshot_pat_Xg_Zeej_CO_6i_W_Fu_J_Li_Mdni_S_a2cac524df.webp"}
+src={"https://v2.improveitmd.com/uploads/team_headshot_pat_Xg_Zeej_CO_6i_W_Fu_J_Li_Mdni_S_a2cac524df.webp"}
 width={900}
 height={800}
 alt={"Team headshot of Owner Pat Jewell"}
@@ -1092,7 +1092,7 @@ className={`w-element c1numhkq c1a06u5s c15kiuw7 ct0qrmw c6srffs cri0kse c8gfjzb
 <div
 className={`w-element c1numhkq c1a06u5s c15kiuw7 ct0qrmw c1gshjov cd38l1u c1gq5osj cufdnsv`}>
 <Image
-src={"/uploads/apartment_therapy_logo_e2_A_De_D6_P66_HE_04_RX_3_OG_4_K_c8638efd8d.svg"}
+src={"https://v2.improveitmd.com/uploads/apartment_therapy_logo_e2_A_De_D6_P66_HE_04_RX_3_OG_4_K_c8638efd8d.svg"}
 width={230}
 height={31}
 alt={"apartment therapy logo"}
@@ -1124,7 +1124,7 @@ className={`w-element c1numhkq c1a06u5s c15kiuw7 ct0qrmw c6srffs cri0kse c8gfjzb
 <div
 className={`w-element c1numhkq c1a06u5s c15kiuw7 ct0qrmw c1gshjov cd38l1u c1gq5osj cufdnsv`}>
 <Image
-src={"/uploads/Homelight_logo_0sl8_Jnh_Te_Do_A1_Xx_Th_Qw_Vy_c72fe6069f.svg"}
+src={"https://v2.improveitmd.com/uploads/Homelight_logo_0sl8_Jnh_Te_Do_A1_Xx_Th_Qw_Vy_c72fe6069f.svg"}
 width={150}
 height={30}
 alt={"HomeLight logo"}
@@ -1156,7 +1156,7 @@ className={`w-element c1numhkq c1a06u5s c15kiuw7 ct0qrmw c6srffs cri0kse c8gfjzb
 <div
 className={`w-element c1numhkq c1a06u5s c15kiuw7 ct0qrmw c1gshjov cd38l1u c1gq5osj cufdnsv`}>
 <Image
-src={"/uploads/Porch_logo_k_Qe_Q_Odhla_HJ_CT_JN_Mvvr_9e845eb07e.svg"}
+src={"https://v2.improveitmd.com/uploads/Porch_logo_k_Qe_Q_Odhla_HJ_CT_JN_Mvvr_9e845eb07e.svg"}
 width={95}
 height={25}
 alt={"Porch logo"}
@@ -1187,7 +1187,7 @@ className={`w-box c1numhkq c1a06u5s c15kiuw7 ct0qrmw c6srffs cri0kse c8gfjzb c82
 <div
 className={`w-element c1numhkq c1a06u5s c15kiuw7 ct0qrmw c1gshjov cd38l1u c139pwc6 c1gq5osj cufdnsv`}>
 <Image
-src={"/uploads/This_Old_House_logo_Escka_Pit7w81m_TX_6_Ty_Hpe_7574eb51f4.svg"}
+src={"https://v2.improveitmd.com/uploads/This_Old_House_logo_Escka_Pit7w81m_TX_6_Ty_Hpe_7574eb51f4.svg"}
 width={138}
 height={30}
 alt={"ThisOldHouse logo"}
@@ -1294,7 +1294,7 @@ className={`w-element cmsm1bz c17rwy3n c1603wqb c1omlw60 c53aqfr c1klx7ez cg8hn1
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c10lolld c1irdqs7 c876kpt c15sicby c1mndhrk c2j7e41 c1hmvws c1cf96bh c14t23m0 c9cac79 c100pd8v cd2qqyb cq9r5tw c8iul0y cybbdyg cljixpu cu8qcns c4fmmfv`}>
 <Image
-src={"/uploads/hammer_icon_Qe5fs_L_Vi_ZJKU_Ec_Q9y_Ty_C_e8a4aebe38.svg"}
+src={"https://v2.improveitmd.com/uploads/hammer_icon_Qe5fs_L_Vi_ZJKU_Ec_Q9y_Ty_C_e8a4aebe38.svg"}
 width={48}
 height={48}
 alt={"hammer icon"}
@@ -1321,7 +1321,7 @@ className={`w-element c82qwqc c1uaxhv2 cacmu18 c1g3mhtg c309ipl ckecbya cahz6x0 
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c10lolld c1irdqs7 c876kpt c15sicby c1mndhrk c2j7e41 c1hmvws c1cf96bh c14t23m0 c9cac79 c100pd8v cd2qqyb cq9r5tw c8iul0y cybbdyg cljixpu cu8qcns c4fmmfv`}>
 <Image
-src={"/uploads/badge_icon_TW_5j8_S_Yw_W_5_CM_Pq_Oq_Nty_A_79de0c77d1.svg"}
+src={"https://v2.improveitmd.com/uploads/badge_icon_TW_5j8_S_Yw_W_5_CM_Pq_Oq_Nty_A_79de0c77d1.svg"}
 width={33}
 height={42}
 alt={"certified badge icon"}
@@ -1348,7 +1348,7 @@ className={`w-element c82qwqc c1uaxhv2 cacmu18 c1g3mhtg c309ipl ckecbya cahz6x0 
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c10lolld c1irdqs7 c876kpt c15sicby c1mndhrk c2j7e41 c1hmvws c1cf96bh c14t23m0 c9cac79 c100pd8v cd2qqyb cq9r5tw c8iul0y cybbdyg cljixpu cu8qcns c4fmmfv`}>
 <Image
-src={"/uploads/holding_house_icon_Bpd_Wko_E_Zz_G_Boh0d_D3_H_8b_afcd53221a.svg"}
+src={"https://v2.improveitmd.com/uploads/holding_house_icon_Bpd_Wko_E_Zz_G_Boh0d_D3_H_8b_afcd53221a.svg"}
 width={43}
 height={42}
 alt={"holding house icon"}

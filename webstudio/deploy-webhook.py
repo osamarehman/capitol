@@ -32,7 +32,7 @@ deploy_state = {
 STEP_PATTERNS = [
     ("Installing webstudio CLI", "install_cli"),
     ("Syncing project data", "sync"),
-    ("Building project with assets", "build_assets"),
+    ("Building project", "build_assets"),
     ("Optimizing assets", "optimize"),
     ("Building Docker image", "docker_build"),
     ("Deploying container", "deploy"),
