@@ -1,8 +1,6 @@
 services:
   webstudio-prod:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: webstudio-prod:latest
     container_name: webstudio-prod
     restart: unless-stopped
     ports:
