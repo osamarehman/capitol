@@ -49,7 +49,7 @@
             "addressLocality": "Bowie", "addressRegion": "MD", "postalCode": "20720"
           },
           "telephone": "301.769.6909",
-          "sameAs": ["https://maps.google.com/?cid=16068834676004648914"],
+          "sameAs": ["https://maps.google.com/?cid=10267616784249800100"],
           "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "221" }
         },
         {
@@ -69,7 +69,7 @@
             "addressLocality": "Gaithersburg", "addressRegion": "MD", "postalCode": "20879"
           },
           "telephone": "301.769.6991",
-          "sameAs": ["https://maps.google.com/?cid=15586620389309298581"],
+          "sameAs": ["https://maps.google.com/?cid=324232438797579827"],
           "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "157" }
         },
         {
@@ -89,7 +89,7 @@
             "addressLocality": "Washington", "addressRegion": "DC", "postalCode": "20005"
           },
           "telephone": "410.587.0128",
-          "sameAs": ["https://maps.google.com/?cid=2475724944710896218"],
+          "sameAs": ["https://maps.google.com/?cid=10343029476848561348"],
           "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "67" }
         }
       ]
