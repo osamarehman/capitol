@@ -7,6 +7,9 @@
       "name": "Capitol Improvements - Roofing Company & Siding Contractor",
       "url": "https://www.improveitmd.com/locations/bowie",
       "telephone": "301.769.6909",
+      "email": "support@improveitmd.com",
+      "image": "https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg",
+      "description": "Capitol Improvements Bowie headquarters — GAF Master Elite certified roofing and James Hardie preferred siding contractor serving Prince George's County and surrounding areas since 2010.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "12606 Hillmeade Station Dr.",
@@ -15,16 +18,62 @@
         "postalCode": "20720",
         "addressCountry": "US"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "38.9428",
+        "longitude": "-76.7308"
+      },
+      "hasMap": "https://www.google.com/maps/place/Capitol+Improvements/@38.9428,-76.7308",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "14:00"
+        }
+      ],
       "employee": {
         "@type": "Person",
+        "@id": "https://www.improveitmd.com/#patjewell",
         "name": "Pat Jewell",
         "jobTitle": "Owner & Founder"
       },
+      "areaServed": [
+        { "@type": "City", "name": "Bowie" },
+        { "@type": "City", "name": "Upper Marlboro" },
+        { "@type": "City", "name": "Crofton" },
+        { "@type": "City", "name": "Annapolis" },
+        { "@type": "State", "name": "Maryland" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Exterior Remodeling Services",
+        "itemListElement": [
+          { "@type": "Service", "name": "Roofing" },
+          { "@type": "Service", "name": "Siding" },
+          { "@type": "Service", "name": "Windows" },
+          { "@type": "Service", "name": "Doors" },
+          { "@type": "Service", "name": "Gutters" },
+          { "@type": "Service", "name": "Decks & Patios" }
+        ]
+      },
       "parentOrganization": { "@id": "https://www.improveitmd.com/#corporation" },
+      "sameAs": [
+        "https://www.facebook.com/CapitolImprovements",
+        "https://www.instagram.com/capitolimprovements"
+      ],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "221"
+        "reviewCount": "221",
+        "bestRating": "5",
+        "worstRating": "1"
       }
     }
   ]

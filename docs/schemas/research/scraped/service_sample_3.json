@@ -1,0 +1,47 @@
+{
+  "url": "https://www.improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you",
+  "title": "\ud83c\udf41 \u26c8\ufe0f BEST Seamless Gutters & Gutter Guards Company Near You in Annapolis MD with ASAP Installation | Gutters & Gutter Guards Annapolis MD",
+  "description": "Need reliable gutter replacement, repair, and guard installation in Annapolis MD? Call our licensed professionals for seamless gutter solutions.",
+  "markdown": "\ud83c\udf41 \u26c8\ufe0f BEST Seamless Gutters & Gutter Guards Company Near You in Annapolis MD with ASAP Installation \\| Gutters & Gutter Guards Annapolis MDGutter Installers Annapolis Maryland - Capitol Improvements - Windows & Doors \\| Roofing \\| Siding - YouTube",
+  "raw_html_snippet": [
+    {
+      "_raw": "{\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"Service\",\n     \n      \"name\": \"Gutters - Annapolis - MD\",\n      \"description\": \"Need reliable gutter replacement, repair, and guard installation in Annapolis MD? Call our licensed professionals for seamless gutter solutions.\",\n      \"url\": \"https://www.improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you\",\n      \"image\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://cdn.prod.website-files.com/64d655ee9531"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Capitol Improvements - Roofing and Siding Contractor",
+      "image": "https://assets-global.website-files.com/64bd6cb099271195afd55550/64bec17f217d236d7db6309a_ci%20logo.svg",
+      "description": "Best Roofing and Siding Company Near Me Serving Maryland, Washington DC, and Virginia.",
+      "brand": "Capitol Improvements",
+      "offers": {
+        "@type": "AggregateOffer",
+        "url": "https://www.improveitmd.com/",
+        "priceCurrency": "USD",
+        "offerCount": "1"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "ratingCount": "387",
+        "reviewCount": "387"
+      },
+      "review": {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Emily R."
+        },
+        "reviewBody": "We had nothing but a positive experience working with Pat and his team at Capitol Improvements to get a new roof. They were open and transparent about the process and cost. They were always available to answer questions and provide updates about the installation timeline. We highly recommend you give them a call.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Google"
+        }
+      }
+    }
+  ]
+}

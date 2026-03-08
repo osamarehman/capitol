@@ -52,12 +52,13 @@
           "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "221" }
         },
         {
-          "@type": "SidingContractor",
+          "@type": "RoofingContractor",
           "name": "Capitol Improvements - Gaithersburg Roofing Company & Siding Contractors",
           "@id": "https://www.improveitmd.com/#gaithersburg-branch",
           "description": "Gaithersburg branch managed by Lance Jewell.",
           "employee": {
             "@type": "Person",
+            "@id": "https://www.improveitmd.com/#lancejewell",
             "name": "Lance Jewell",
             "jobTitle": "Branch Manager & Project Consultant"
           },
@@ -76,6 +77,7 @@
           "description": "DC and Northern Virginia branch managed by Austin Jewell.",
           "employee": {
             "@type": "Person",
+            "@id": "https://www.improveitmd.com/#austinjewell",
             "name": "Austin Jewell",
             "jobTitle": "Branch Manager & Project Consultant"
           },

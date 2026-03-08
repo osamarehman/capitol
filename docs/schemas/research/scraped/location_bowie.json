@@ -1,0 +1,157 @@
+{
+  "url": "https://www.improveitmd.com/locations/bowie",
+  "title": "\ud83c\uddfa\ud83c\uddf8 BEST Roofing and Siding Company Near You in Bowie MD - ASAP Service, Affordable Financing, Lifetime Warranty",
+  "description": "Our team of roofers and siding experts near you in Bowie, MD will provide you with best-in-class roofing and siding installation services. Capable, Experienced, and Fair To You.",
+  "markdown": "\ud83c\uddfa\ud83c\uddf8 BEST Roofing and Siding Company Near You in Bowie MD - ASAP Service, Affordable Financing, Lifetime WarrantySiding Contractors Bowie MD - Capitol Improvements - Windows & Doors \\| Roofing \\| Siding - YouTubeSiding Contractors Bowie MD - Capitol Improvements - Windows & Doors \\| Roofing \\| Siding - YouTube",
+  "raw_html_snippet": [
+    {
+      "@context": "https://schema.org",
+      "@type": "RoofingContractor",
+      "name": "Capitol Improvements - Roofing & Siding Contractors",
+      "image": "https://assets-global.website-files.com/64bd6cb099271195afd55550/64bec17f217d236d7db6309a_ci%20logo.svg",
+      "og:image": "https://cdn.prod.website-files.com/64bd6cb099271195afd55550/65ab0293c5f316d06187c500_ci-lp-roofing-3.jpeg",
+      "@id": "https://www.improveitmd.com",
+      "url": "https://www.improveitmd.com",
+      "hasMap": "https://www.google.com/maps/place/Capitol+Improvements+-+Roofing+Company+%26+Siding+Contractor/@38.9838754,-76.7856098,15z/data=!4m6!3m5!1s0x89b7e986ccef8cc1:0x8e7de710ab0c45a4!8m2!3d38.9838754!4d-76.7856098!16s%2Fg%2F11bx8sr_4h?hl=en&entry=ttu",
+      "telephone": "301.769.6909",
+      "priceRange": "Free Consultation",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12606 Hillmeade Station",
+        "addressLocality": "Dr. Bowie, MD",
+        "addressRegion": "MD",
+        "postalCode": "20720",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.9838754,
+        "longitude": -76.7856098
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "07:00"
+      },
+      "sameAs": [
+        "https://www.improveitmd.com",
+        "https://www.alignable.com/glenn-dale-md/capitol-improvements-roofing-siding-contractors-2",
+        "https://nextdoor.com/pages/capitol-improvements/",
+        "https://www.bbb.org/us/md/bowie/profile/roofing-contractors/capitol-improvements-llc-0241-235990374",
+        "https://www.bing.com/maps?osid=659262ff-e4e4-4a86-ae64-0879973cc08f&cp=38.983865~-76.790936&lvl=16&pi=0&imgid=ce00ff60-7985-4d14-9f66-239a01c95140&v=2&sV=2&form=S00027",
+        "https://www.brownbook.net/business/52338276/capitol-improvements-roofing-company-siding-contractor/",
+        "https://www.chamberofcommerce.com/business-directory/maryland/bowie/roofing-contractor/2007682009-capitol-improvements-roofing-siding-contractors",
+        "https://www.cylex.us.com/company/capitol-improvements---roofing---siding-contractors-25366076.html",
+        "https://www.facebook.com/improveitmd/",
+        "https://foursquare.com/v/capitol-improvements/568b24bd498eab1327899a26",
+        "https://www.fyple.com/company/capitol-improvements-r0rgo0o/",
+        "https://www.google.com/maps?cid=10267616784249800100",
+        "https://www.hotfrog.com/company/ffd9e9842c394ccefbdf17d210502eb7/capitol-improvements-roofing-company-siding-contractor/bowie/contractor-equipment-services",
+        "https://www.manta.com/c/mb0lglb/capitol-improvements-roofing-siding-contractors",
+        "https://www.mapquest.com/us/maryland/capitol-improvements-286130310",
+        "https://maps.apple.com/?address=12606%20Hillmeade%20Station%20Dr,%20Bowie,%20MD%20%2020720,%20United%20States&auid=11577079686896447551&ll=38.983870,-76.785585&lsp=9902&q=Capitol%20Improvements&t=h",
+        "https://www.n49.com/biz/1721279/capitol-improvements-md-bowie-12606-hillmeade-station-dr/",
+        "https://www.showmelocal.com/profile.aspx?bid=22579563",
+        "https://local.yahoo.com/info-196194488-capitol-improvements-bowie;_ylt=AwrFCAJWAfpl9HwSChnumYlQ;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZANXVERBSVYyVEVTVDRfMQRzZWMDc2M-",
+        "https://www.yellowpages.com/bowie-md/mip/capitol-improvements-551317741",
+        "https://www.yelp.com/biz/capitol-improvements-bowie-2",
+        "https://www.linkedin.com/company/improveitmd",
+        "https://nextdoor.com/pages/capitol-improvements/"
+      ],
+      "department": {
+        "@type": "RoofingContractor",
+        "name": "Capitol Improvements - Roofing & Siding Contractors",
+        "image": "https://assets-global.website-files.com/64bd6cb099271195afd55550/64bec17f217d236d7db6309a_ci%20logo.svg",
+        "telephone": "3017696909",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12606 Hillmeade Station",
+          "addressLocality": "Dr. Bowie, MD",
+          "addressRegion": "MD",
+          "postalCode": "20720",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 38.9838754,
+          "longitude": -76.7856098
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "07:00"
+        },
+        "foundingDate": "2012",
+        "disambiguatingDescription": "Bowie, Maryland Roofing Company and Siding Contractors",
+        "mainEntityOfPage": "https://www.improveitmd.com",
+        "areaServed": [
+          "Bowie",
+          "Maryland",
+          "Washington DC",
+          "Howard County",
+          "Calvert County",
+          "Carroll County",
+          "Frederick County",
+          "Montgomery County",
+          "Anne Arundel County",
+          "Prince George's County"
+        ],
+        "currenciesAccepted": "USD",
+        "paymentAccepted": "Cash, Credit Card, Check",
+        "makesOffer": "Maryland Roofing Company and Siding Contractor"
+      }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Capitol Improvements - Roofing and Siding Contractor",
+      "image": "https://assets-global.website-files.com/64bd6cb099271195afd55550/64bec17f217d236d7db6309a_ci%20logo.svg",
+      "description": "Best Roofing and Siding Company Near Me Serving Maryland, Washington DC, and Virginia.",
+      "brand": "Capitol Improvements",
+      "offers": {
+        "@type": "AggregateOffer",
+        "url": "https://www.improveitmd.com/",
+        "priceCurrency": "USD",
+        "offerCount": "1"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "ratingCount": "387",
+        "reviewCount": "387"
+      },
+      "review": {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Emily R."
+        },
+        "reviewBody": "We had nothing but a positive experience working with Pat and his team at Capitol Improvements to get a new roof. They were open and transparent about the process and cost. They were always available to answer questions and provide updates about the installation timeline. We highly recommend you give them a call.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Google"
+        }
+      }
+    }
+  ]
+}

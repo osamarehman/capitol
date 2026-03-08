@@ -1,0 +1,55 @@
+{
+  "url": "https://www.improveitmd.com/roofing/asphalt-roofing",
+  "title": "Maryland, Washington DC, and Virginia Asphalt Shingle Roofing Contractor Near You (Free Estimates) - Capitol Improvements",
+  "description": "Asphalt shingles provide long-lasting value. With a variety of styles and colors, we\u2019re able to refresh your existing style with high quality materials and lifetime warranties.",
+  "markdown": "Maryland, Washington DC, and Virginia Asphalt Shingle Roofing Contractor Near You (Free Estimates) - Capitol Improvements",
+  "raw_html_snippet": [
+    {
+      "@context": "http://schema.org",
+      "@type": "VideoObject",
+      "name": "Capitol Improvements - How we serve you",
+      "description": "Capitol Improvements - Melinda explaining how we serve you.",
+      "thumbnailUrl": "https://res.cloudinary.com/dzpsjw2sr/video/upload/v1704354067/cap-720.jpg",
+      "uploadDate": "2024-02-15T08:00:00+08:00",
+      "duration": "PT15S",
+      "contentUrl": "https://res.cloudinary.com/dzpsjw2sr/video/upload/v1704354067/cap-720.mp4",
+      "embedUrl": "https://www.improveitmd.com/roofing/asphalt-roofing#player"
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Capitol Improvements - Roofing and Siding Contractor",
+      "image": "https://assets-global.website-files.com/64bd6cb099271195afd55550/64bec17f217d236d7db6309a_ci%20logo.svg",
+      "description": "Best Roofing and Siding Company Near Me Serving Maryland, Washington DC, and Virginia.",
+      "brand": "Capitol Improvements",
+      "offers": {
+        "@type": "AggregateOffer",
+        "url": "https://www.improveitmd.com/",
+        "priceCurrency": "USD",
+        "offerCount": "1"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "ratingCount": "387",
+        "reviewCount": "387"
+      },
+      "review": {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Emily R."
+        },
+        "reviewBody": "We had nothing but a positive experience working with Pat and his team at Capitol Improvements to get a new roof. They were open and transparent about the process and cost. They were always available to answer questions and provide updates about the installation timeline. We highly recommend you give them a call.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Google"
+        }
+      }
+    }
+  ]
+}

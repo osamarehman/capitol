@@ -1,0 +1,47 @@
+{
+  "url": "https://www.improveitmd.com/services/annapolis-maryland-roofing-company-near-you",
+  "title": "\u26f5\ufe0f BEST Roofing Company Near You in Annapolis MD with Free Estimates & ASAP Roof Installation | Roof Repair Annapolis MD",
+  "description": "The BEST Local Roofers in Annapolis MD that offers affordable roof financing from $99/mo and free roof estimates for roof repair and new roof replacements. Quality products, professional installation, and a lifetime warranty. All for a fair price.",
+  "markdown": "\u26f5\ufe0f BEST Roofing Company Near You in Annapolis MD with Free Estimates & ASAP Roof Installation \\| Roof Repair Annapolis MDRoofing Annapolis Maryland - Capitol Improvements - Windows & Doors \\| Roofing \\| Siding - YouTube",
+  "raw_html_snippet": [
+    {
+      "_raw": "{\n      \"@context\": \"https://schema.org\",\n      \"@type\": \"Service\",\n     \n      \"name\": \"Roofing - Annapolis - MD\",\n      \"description\": \"The BEST Local Roofers in Annapolis MD that offers affordable roof financing from $99/mo and free roof estimates for roof repair and new roof replacements. We are capable of servicing asphalt shingles, metal roofing, flat roofing, and even historic roofs. Quality products, professional installation, and a lifetime warranty. All for a fair price. \",\n      \"url\""
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Capitol Improvements - Roofing and Siding Contractor",
+      "image": "https://assets-global.website-files.com/64bd6cb099271195afd55550/64bec17f217d236d7db6309a_ci%20logo.svg",
+      "description": "Best Roofing and Siding Company Near Me Serving Maryland, Washington DC, and Virginia.",
+      "brand": "Capitol Improvements",
+      "offers": {
+        "@type": "AggregateOffer",
+        "url": "https://www.improveitmd.com/",
+        "priceCurrency": "USD",
+        "offerCount": "1"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "ratingCount": "387",
+        "reviewCount": "387"
+      },
+      "review": {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Emily R."
+        },
+        "reviewBody": "We had nothing but a positive experience working with Pat and his team at Capitol Improvements to get a new roof. They were open and transparent about the process and cost. They were always available to answer questions and provide updates about the installation timeline. We highly recommend you give them a call.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Google"
+        }
+      }
+    }
+  ]
+}

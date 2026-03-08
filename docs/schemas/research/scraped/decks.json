@@ -1,0 +1,44 @@
+{
+  "url": "https://www.improveitmd.com/decks-and-patios",
+  "title": "Deck & Patio Builders Near You in Maryland & Washington, DC | Capitol Improvements",
+  "description": "Quality deck and patio installer near Bowie, Gaithersburg, and Washington, DC. We build custom decks, patios and enclosures. Pavers, stamped concrete, stone, wood, and more. Free estimates.",
+  "markdown": "Deck & Patio Builders Near You in Maryland & Washington, DC \\| Capitol Improvements",
+  "raw_html_snippet": [
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Capitol Improvements - Roofing and Siding Contractor",
+      "image": "https://assets-global.website-files.com/64bd6cb099271195afd55550/64bec17f217d236d7db6309a_ci%20logo.svg",
+      "description": "Best Roofing and Siding Company Near Me Serving Maryland, Washington DC, and Virginia.",
+      "brand": "Capitol Improvements",
+      "offers": {
+        "@type": "AggregateOffer",
+        "url": "https://www.improveitmd.com/",
+        "priceCurrency": "USD",
+        "offerCount": "1"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "ratingCount": "387",
+        "reviewCount": "387"
+      },
+      "review": {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Emily R."
+        },
+        "reviewBody": "We had nothing but a positive experience working with Pat and his team at Capitol Improvements to get a new roof. They were open and transparent about the process and cost. They were always available to answer questions and provide updates about the installation timeline. We highly recommend you give them a call.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Google"
+        }
+      }
+    }
+  ]
+}
