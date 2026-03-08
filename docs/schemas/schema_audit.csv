@@ -1,0 +1,36 @@
+Page Title,Page URL,Product Schema,RoofingContractor Schema,Service Schema,VideoObject Schema,Business Schema (New),FAQ Schema,Notes
+"Capitol Improvements | MD, Washington DC, and Virginia",https://www.improveitmd.com/,Yes,Yes,No,No,No,No,Old Product + RoofingContractor from global embed. New HomeAndConstructionBusiness NOT deployed.
+"About Us | Capitol Improvements",https://www.improveitmd.com/about,Yes,No,No,No,No,No,Old Product only. New AboutPage NOT deployed.
+"Team – Exterior Home Remodelers | Capitol Improvements",https://www.improveitmd.com/team,Yes,No,No,No,No,No,Old Product only. New AboutPage NOT deployed.
+"390+ 5-Star Reviews – Capitol Improvements",https://www.improveitmd.com/testimonials,Yes,No,No,No,No,No,Old Product only. New AggregateRating NOT deployed.
+"Gallery – Exterior Home Remodeling | Capitol Improvements",https://www.improveitmd.com/gallery,Yes,No,No,No,No,No,Old Product only. New ImageGallery NOT deployed.
+"Contact Us – Capitol Improvements",https://www.improveitmd.com/contact,Yes,No,No,No,No,No,Old Product only. New ContactPage NOT deployed.
+"Get a Free Quote – Capitol Improvements",https://www.improveitmd.com/quote,Yes,No,No,No,No,No,Old Product only. New WebPage NOT deployed.
+"Roof Financing From $99/mo",https://www.improveitmd.com/financing,Yes,No,No,No,No,No,Old Product only. New WebPage NOT deployed.
+"Warranty – Exterior Home Remodeling | Capitol Improvements",https://www.improveitmd.com/warranty,Yes,No,No,No,No,No,Old Product only. New WebPage NOT deployed.
+"Blog – Capitol Improvements",https://www.improveitmd.com/blog,Yes,No,No,No,No,No,Old Product only. New Blog NOT deployed.
+"Video Gallery",https://www.improveitmd.com/video-gallery,Yes,No,No,No,No,No,Old Product only. New CollectionPage NOT deployed.
+"Roofing Company Maryland",https://www.improveitmd.com/roofing,Yes,No,No,No,No,No,Old Product only. New Service NOT deployed.
+"Asphalt Shingle Roofing Contractor",https://www.improveitmd.com/roofing/asphalt-roofing,Yes,No,No,Yes,No,No,Old Product + VideoObject. New Service NOT deployed.
+"Metal Roofing Near You",https://www.improveitmd.com/roofing/metal-roofing,Yes,No,No,No,No,No,Old Product only. New Service NOT deployed.
+"Flat Roofing Near You in Washington DC",https://www.improveitmd.com/roofing/flat-roofing,Yes,No,No,No,No,No,Old Product only. New Service NOT deployed.
+"Commercial Roofing Near You",https://www.improveitmd.com/roofing/commercial-roofing,Yes,No,No,No,No,No,Old Product only. New Service NOT deployed.
+"James Hardie and Vinyl Siding Maryland Contractor",https://www.improveitmd.com/siding,Yes,No,No,No,No,No,Old Product only. New Service NOT deployed.
+"James Hardie Siding Installers Near You",https://www.improveitmd.com/siding/james-hardie,Yes,No,No,No,No,No,Old Product only. New Service NOT deployed.
+"Maryland Premium Vinyl Siding Contractors",https://www.improveitmd.com/siding/vinyl,Yes,No,No,No,No,No,Old Product only. New Service NOT deployed.
+"BEST Window Replacement Service Near You",https://www.improveitmd.com/windows,Yes,No,No,No,No,No,Old Product only. New Service NOT deployed.
+"Custom Door Installer Near You",https://www.improveitmd.com/doors,Yes,No,No,No,No,No,Old Product only. New Service NOT deployed.
+"Seamless Gutter Contractors Near You",https://www.improveitmd.com/gutters,Yes,No,No,No,No,No,Old Product only. New Service NOT deployed.
+"Exterior Trim Repair Near You",https://www.improveitmd.com/exterior-trim,Yes,No,No,No,No,No,Old Product only. New Service NOT deployed.
+"Deck & Patio Builders Near You",https://www.improveitmd.com/decks-and-patios,Yes,No,No,No,No,No,Old Product only. New Service NOT deployed.
+"Rooftop Deck",https://www.improveitmd.com/deck-and-patios/rooftop-deck,N/A,N/A,N/A,N/A,N/A,N/A,404 - Page Not Found
+"IPE Deck Builder",https://www.improveitmd.com/deck-and-patios/ipe-deck-builder,Yes,No,No,No,No,No,Old Product only. New Service NOT deployed.
+"Flagstone Patios & Hardscaping",https://www.improveitmd.com/deck-and-patios/flagstone-patios,Yes,No,No,No,No,No,Old Product only. New Service NOT deployed.
+"Roof Cost Calculator",https://www.improveitmd.com/roofing-cost-calculator,Yes,No,No,No,No,No,Old Product only. New WebApplication NOT deployed.
+"Commercial Roof Cost Calculator",https://www.improveitmd.com/commercial-roof-cost-calculator,No,No,No,No,No,No,No schemas at all.
+"Capitol Improvements - Service Area",https://www.improveitmd.com/service-areas,Yes,No,No,No,No,No,Old Product only. New WebPage NOT deployed.
+"Roofing and Siding Company Near You in Bowie MD",https://www.improveitmd.com/locations/bowie,Yes,Yes,No,No,No,No,Old Product + RoofingContractor. New core schema NOT deployed.
+"Roofing and Siding Company Near You in Gaithersburg MD",https://www.improveitmd.com/locations/gaithersburg,Yes,Yes,No,No,No,No,Old Product + RoofingContractor. New core schema NOT deployed.
+"Flat Roofing and Roofing Company Near You in Washington DC",https://www.improveitmd.com/locations/washington-dc,Yes,Yes,No,No,No,No,Old Product + RoofingContractor. New core schema NOT deployed.
+"BEST Roofing Company in Annapolis MD",https://www.improveitmd.com/services/annapolis-maryland-roofing-company-near-you,Yes,No,Yes,Yes,No,No,Has Service schema from Strapi + Product + VideoObject. Local page schema working.
+"BEST Siding Contractors in Annapolis MD",https://www.improveitmd.com/services/annapolis-maryland-siding-contractors-near-you,Yes,No,Yes,Yes,No,No,Has Service schema from Strapi + Product + VideoObject. Local page schema working.
