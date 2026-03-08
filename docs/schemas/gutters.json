@@ -1,0 +1,1660 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "GeneralContractor",
+        "HomeAndConstructionBusiness"
+      ],
+      "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business",
+      "additionalType": "https://www.wikidata.org/wiki/Q207043",
+      "name": "Capitol Improvements",
+      "alternateName": [
+        "Capitol Improvements LLC",
+        "Capitol Family Exteriors",
+        "Capitol Improvements - Roofing & Siding Contractors"
+      ],
+      "description": "Family owned and family operated seamless gutter and gutter guard contractor serving Annapolis, MD and Anne Arundel County. Specializing in 6-inch seamless aluminum gutters sized for Chesapeake Bay rainfall, copper gutters, half-round, K-style, Leaf Relief gutter guards, and Historic District compliant gutter colors. ASAP installation, free estimates, and financing from $99/month.",
+      "url": "https://improveitmd.com",
+      "logo": "https://improveitmd.com/cgi/image/capitol_improvements_logo_main_NdETmJnbuUjH_Kf4-92i4.svg",
+      "image": [
+        "REPLACE_WITH_GUTTER_PAGE_OG_IMAGE_URL"
+      ],
+      "telephone": "+1-301-769-6909",
+      "email": "support@improveitmd.com",
+      "priceRange": "$$",
+      "paymentAccepted": "Cash, Check, Credit Card, Financing",
+      "currenciesAccepted": "USD",
+      "license": "MHIC 130628",
+      "foundingDate": "2010",
+      "slogan": "Capable. Experienced. Fair to you.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12606 Hillmeade Station Dr",
+        "addressLocality": "Bowie",
+        "addressRegion": "MD",
+        "postalCode": "20720",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.9784,
+        "longitude": -76.4922
+      },
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 38.9784,
+          "longitude": -76.4922
+        },
+        "geoRadius": 50000
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Annapolis",
+          "sameAs": "https://www.wikidata.org/wiki/Q131360"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Anne Arundel County",
+          "sameAs": "https://www.wikidata.org/wiki/Q488398"
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Historic District",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Murray Hill",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Eastport",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "West Annapolis",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Admiral Heights",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Homewood",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Annapolis Neck",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Bay Ridge",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Hillsmere Shores",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Edgewood",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Cape St. Claire",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Germantown",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Heritage Harbour",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Kingsport",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+1-301-769-6909",
+          "email": "support@improveitmd.com",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en"
+          ]
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5.0,
+        "reviewCount": 422,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "url": "https://maps.app.goo.gl/1V8v97hcVYFfrdZb8",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5,
+            "bestRating": 5
+          },
+          "author": {
+            "@type": "Person",
+            "name": "REPLACE_WITH_GUTTER_REVIEWER_NAME"
+          },
+          "reviewBody": "I used Capitol Improvements for gutter replacement. Pat, the owner came to do my assessment and to give me an estimate. He was very fair, personable, and provided a great deal of information. I ultimately decided to go with this company and I'm glad that I did. The work was very quick, taking only two hours to complete and Pat's team was flexible in scheduling my install date. I definitely recommend if you need your gutters replaced!",
+          "itemReviewed": {
+            "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+          }
+        }
+      ],
+      "knowsAbout": [
+        "Seamless Gutter Installation",
+        "6-Inch Seamless Aluminum Gutters",
+        "Copper Gutter Installation",
+        "Half-Round Gutter Installation",
+        "K-Style Rain Gutter Installation",
+        "Gutter Guard Installation",
+        "Leaf Relief Gutter Guards",
+        "Splash Guard Installation",
+        "Gutter Repair and Replacement",
+        "Chesapeake Bay Rainfall Gutter Sizing",
+        "Salt Air Resistant Gutters",
+        "Historic District Gutter Color Compliance",
+        "Royal Brown Gutters Annapolis Historic District",
+        "Colonial White Gutters Annapolis Historic District",
+        "HOA Gutter Approval Annapolis",
+        "Steep Pitch Gutter Installation",
+        "Oversized Gutter Installation",
+        "Eastport Annapolis Gutter Installation",
+        "Hillsmere Shores Gutter Replacement",
+        "Bay Ridge Annapolis Gutters"
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Annapolis Homeowners Served",
+          "value": "109+",
+          "description": "Number of Annapolis homeowners who have trusted Capitol Improvements for gutter installation, repair, and guidance."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Annapolis Linear Feet of Gutters Serviced",
+          "value": "4,647",
+          "description": "Total linear feet of gutters inspected and installed across Annapolis MD neighborhoods, with roof pitch data recorded for every property."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Recommended Gutter Size",
+          "value": "6-inch seamless aluminum",
+          "description": "Capitol Improvements recommends 6-inch seamless aluminum gutters for most Annapolis homes to handle the heavy rainfall common in the Chesapeake Bay region more effectively than standard 5-inch systems."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Wet Season Duration",
+          "value": "3.9 months average annual wet season in Annapolis MD",
+          "description": "The wet season in Annapolis, Maryland lasts an average of 3.9 months per year, making properly sized seamless gutters essential for protecting homes from water intrusion."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Historic District Color Options",
+          "value": "Royal Brown, Colonial White",
+          "description": "Capitol Improvements offers Historic District approved gutter colors including Royal Brown and Colonial White to complement period architecture while maintaining full compliance."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ownership Type",
+          "value": "Family Owned and Family Operated"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Years of Experience",
+          "value": "30+"
+        }
+      ],
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "minValue": 10,
+        "maxValue": 49
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Pat Jewell",
+        "jobTitle": "Owner & Founder",
+        "description": "Exterior remodeling professional with 30+ years of experience. Personally conducts gutter assessments and estimates for Annapolis homeowners. Founded Capitol Improvements as a family-owned alternative to large corporate contractors.",
+        "worksFor": {
+          "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Gutter Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Seamless Gutter Installation",
+            "url": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Seamless Gutter Installation",
+              "description": "6-inch seamless aluminum gutter installation for Annapolis MD homes, sized for Chesapeake Bay heavy rainfall. Fewer joints means fewer leaks, less sagging, and better resistance to salt air corrosion and freeze-thaw cycles. ASAP installation scheduling available.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Copper Gutter Installation",
+            "url": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Copper Gutter Installation",
+              "description": "Copper gutter installation for historic and high-end Annapolis MD homes. Naturally resistant to corrosion and ideal for Historic District compliance where period-appropriate materials are required.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Half-Round Gutter Installation",
+            "url": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Half-Round Gutter Installation",
+              "description": "Half-round gutter installation for colonial, Federal, and historic-style homes throughout Annapolis MD. Period-appropriate profile that complements traditional Annapolis architecture.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "K-Style Rain Gutter Installation",
+            "url": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "K-Style Rain Gutter Installation",
+              "description": "K-style rain gutter installation for Annapolis MD homes. High-capacity profile handles heavy rainfall volumes common in the Chesapeake Bay region.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Gutter Guard Installation",
+            "url": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gutter Guard Installation",
+              "description": "Leaf Relief and compatible gutter guard installation for Annapolis MD homes surrounded by oak, maple, and pine canopies. Prevents clogs and reduces cleaning frequency while allowing water to flow freely.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Splash Guard Installation",
+            "url": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Splash Guard Installation",
+              "description": "Splash guard installation at gutter valleys and high-velocity runoff points on Annapolis MD homes, preventing water overflow and protecting foundations.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+              }
+            }
+          }
+        ]
+      },
+      "subjectOf": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#gutter-projects"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#webpage",
+      "url": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you",
+      "name": "Best Seamless Gutters & Gutter Guards Company Near You in Annapolis MD \u2013 ASAP Installation",
+      "description": "Capitol Improvements installs seamless gutters, copper gutters, gutter guards, and splash guards in Annapolis, MD. 6-inch gutters sized for Chesapeake Bay rainfall, Historic District compliant colors, free estimates, and financing from $99/month.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://improveitmd.com",
+        "name": "Capitol Improvements"
+      },
+      "about": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "REPLACE_WITH_GUTTER_PAGE_OG_IMAGE_URL",
+        "name": "Seamless Gutters and Gutter Guards Near You in Annapolis Maryland",
+        "description": "Capitol Improvements seamless gutter installation in Annapolis MD \u2014 serving Annapolis and Anne Arundel County."
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://improveitmd.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://improveitmd.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Gutters & Gutter Guards in Annapolis MD",
+            "item": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you"
+          }
+        ]
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          "h2",
+          ".faq-section"
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#faq",
+      "isPartOf": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#webpage"
+      },
+      "about": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What size gutters are best for homes in Annapolis, MD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most Annapolis homes perform best with 6-inch seamless aluminum gutters, which handle the heavy rainfall common in the Chesapeake Bay region more effectively than standard 5-inch systems. Capitol Improvements assesses your roofline and recommends the ideal gutter size during a free on-site evaluation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a permit for gutter installation in Annapolis, MD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most residential gutter installations in Annapolis do not require a building permit. Capitol Improvements always verifies local requirements on your behalf to ensure your gutter project is fully compliant before work begins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are seamless gutters worth it compared to sectional gutters in Annapolis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Seamless gutters have far fewer joints than sectional systems, which significantly reduces the risk of leaks, sagging, and debris buildup. For Annapolis homeowners, this also means better resistance to corrosion caused by salt air and freeze-thaw cycles common near the Chesapeake Bay."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need gutter guards if I have a lot of trees around my Annapolis home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gutter guards are highly recommended for Annapolis properties surrounded by oak, maple, and pine canopies, as they prevent clogs and reduce the frequency of cleanings. Capitol Improvements installs Leaf Relief and similar guard systems that keep debris out while allowing water to flow freely through your gutters."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does gutter installation cost in Annapolis, MD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gutter installation costs in Annapolis vary based on your home's size, roofline complexity, and the materials you choose. Contact Capitol Improvements for a free estimate tailored to your specific Annapolis property."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do gutter installations in the Annapolis Historic District need to meet specific design guidelines?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes \u2014 homes within the Annapolis Historic District are subject to local preservation guidelines that govern exterior modifications including gutter color and style. Capitol Improvements offers approved color options including Royal Brown and Colonial White that complement period architecture while keeping your Annapolis property fully compliant with district requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What neighborhoods in Annapolis does Capitol Improvements serve for gutter installation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Capitol Improvements installs gutters throughout Annapolis including the Historic District, Murray Hill, Eastport, West Annapolis, Admiral Heights, Homewood, Annapolis Neck, Bay Ridge, Hillsmere Shores, Edgewood, Cape St. Claire, Germantown, Heritage Harbour, and Kingsport."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#gutter-projects",
+      "name": "Recent Seamless Gutter Installations in Annapolis MD",
+      "description": "Gutter installation and inspection projects completed by Capitol Improvements across Annapolis MD, with roof pitch and linear footage recorded for every property.",
+      "numberOfItems": 36,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "88 linear ft, 6/12 pitch, 2 valleys in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "88 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "6/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "140 linear ft, 4/12 pitch, no valleys in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "140 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "4/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "567 linear ft, 8/12 pitch, 15 valleys in Annapolis, MD. Major concentration risk, multiple downspouts required.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "567 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "8/12 (High)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "50 linear ft, 5/12 pitch, no valleys in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "50 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "5/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "85 linear ft, 9/12 steep pitch in Annapolis, MD. Oversized gutters required.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "85 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "9/12 (High)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "79 linear ft, 4/12 pitch, 2 valleys in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "79 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "4/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "81 linear ft, 8/12 pitch, 2 valleys in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "81 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "8/12 (High)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "149 linear ft, 8/12 pitch, 4 valleys in Annapolis, MD 21403. High velocity with concentration points.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "149 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "8/12 (High)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "81 linear ft, 6/12 pitch, no valleys in Annapolis, MD.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "81 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "6/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "118 linear ft, 7/12 pitch, no valleys in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "118 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "7/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "104 linear ft, 7/12 pitch, no valleys in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "104 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "7/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "174 linear ft, 6/12 pitch, no valleys in Annapolis, MD 21401. Long span, may need mid-run outlet.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "174 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "6/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "76 linear ft, 5/12 pitch, no valleys in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "76 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "5/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "189 linear ft, 4/12 pitch, no valleys in Annapolis, MD 21401. Long span, low pitch, pooling check required.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "189 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "4/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "276 linear ft, 12/12 steep pitch in Annapolis, MD 21401. Multiple downspouts required for high velocity.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "276 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "12/12 (High)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "104 linear ft, 5/12 pitch, no valleys in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "104 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "5/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "107 linear ft, 7/12 pitch, no valleys in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "107 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "7/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "84 linear ft, 4/12 pitch, no valleys in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "84 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "4/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "208 linear ft, 5/12 pitch, no valleys in Annapolis, MD 21401. Long with low pitch, pooling risk check.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "208 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "5/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "144 linear ft, 10/12 steep pitch in Annapolis, MD 21403. Oversized gutters required.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "144 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "10/12 (High)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "72 linear ft, 8/12 steep pitch in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "72 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "8/12 (High)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "61 linear ft, 5/12 pitch, no valleys in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "61 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "5/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "66 linear ft, 5/12 pitch, no valleys in Annapolis, MD 21409.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "66 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "5/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21409"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "43 linear ft, 6/12 pitch, no valleys in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "43 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "6/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "299 linear ft, 5/12 pitch, no valleys in Annapolis, MD 21401. Oversized gutters required for long span.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "299 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "5/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "144 linear ft, 6/12 pitch, no valleys in Annapolis, MD 21409.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "144 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "6/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21409"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "82 linear ft, 4/12 pitch, no valleys in Annapolis, MD 21409. Low pitch, debris watch.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "82 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "4/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21409"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "159 linear ft, 2/12 very low pitch in Annapolis, MD 21403. Heavy debris risk, frequent cleaning needed.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "159 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "2/12 (Low)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "113 linear ft, 6/12 pitch, no valleys in Annapolis, MD 21409.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "113 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "6/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21409"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "80 linear ft, 5/12 pitch, no valleys in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "80 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "5/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "118 linear ft, 8/12 steep pitch in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "118 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "8/12 (High)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "43 linear ft, 5/12 pitch, no valleys in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "43 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "5/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "96 linear ft, 4/12 pitch, no valleys in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "96 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "4/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "105 linear ft, 12/12 steep pitch in Annapolis, MD 21403. Oversized gutters required.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "105 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "12/12 (High)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "55 linear ft, 6/12 pitch, no valleys in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "55 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "6/12 (Moderate)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "item": {
+            "@type": "Service",
+            "name": "Seamless Gutter Installation",
+            "description": "208 linear ft, extreme pitch in Annapolis, MD 21409. High velocity risk.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-gutter-guards-gutters-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Gutter Length",
+                "value": "208 linear ft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Roof Pitch",
+                "value": "High"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21409"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

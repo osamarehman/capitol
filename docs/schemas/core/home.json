@@ -1,0 +1,93 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "https://www.improveitmd.com/#corporation",
+      "name": "Capitol Improvements",
+      "url": "https://www.improveitmd.com",
+      "logo": "https://improveitmd.com/cgi/image/capitol_improvements_logo_main_NdETmJnbuUjH_Kf4-92i4.svg",
+      "image": "https://improveitmd.com/cgi/image/capitol_improvements_logo_main_NdETmJnbuUjH_Kf4-92i4.svg",
+      "telephone": "+1-301-769-6909",
+      "email": "support@improveitmd.com",
+      "priceRange": "$$",
+      "slogan": "Capable. Experienced. Fair to you.",
+      "description": "Local family-owned and operated exterior remodeling business since 2010. GAF Master Elite, James Hardie Preferred, and TimberTech Platinum certified contractors serving Maryland, DC, and Virginia.",
+      "foundingDate": "2010",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://www.improveitmd.com/#patjewell",
+        "name": "Pat Jewell",
+        "jobTitle": "Owner & Founder"
+      },
+      "award": [
+        "GAF Master Elite Certified Contractor",
+        "FORTIFIED Roofing Certified Contractor",
+        "James Hardie Preferred Partner",
+        "TimberTech Platinum Certified Contractor"
+      ],
+      "areaServed": [
+        { "@type": "State", "name": "Maryland" },
+        { "@type": "State", "name": "Virginia" },
+        { "@type": "State", "name": "District of Columbia" }
+      ],
+      "knowsAbout": [
+        "Residential Roofing", "Commercial Flat Roofing", "Siding Installation", 
+        "James Hardie Fiber Cement", "Vinyl Siding", "Window Replacement", 
+        "Seamless Gutters", "Gutter Guards", "Exterior Trim", "Deck Building"
+      ],
+      "subOrganization": [
+        {
+          "@type": "RoofingContractor",
+          "name": "Capitol Improvements - Roofing Company & Siding Contractor",
+          "@id": "https://www.improveitmd.com/#bowie-hq",
+          "description": "Bowie Headquarters lead by founder Pat Jewell.",
+          "employee": { "@id": "https://www.improveitmd.com/#patjewell" },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12606 Hillmeade Station Dr.",
+            "addressLocality": "Bowie", "addressRegion": "MD", "postalCode": "20720"
+          },
+          "telephone": "301.769.6909",
+          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "221" }
+        },
+        {
+          "@type": "SidingContractor",
+          "name": "Capitol Improvements - Gaithersburg Roofing Company & Siding Contractors",
+          "@id": "https://www.improveitmd.com/#gaithersburg-branch",
+          "description": "Gaithersburg branch managed by Lance Jewell.",
+          "employee": {
+            "@type": "Person",
+            "name": "Lance Jewell",
+            "jobTitle": "Branch Manager & Project Consultant"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "7916 Plum Creek Dr.",
+            "addressLocality": "Gaithersburg", "addressRegion": "MD", "postalCode": "20879"
+          },
+          "telephone": "301.769.6991",
+          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "157" }
+        },
+        {
+          "@type": "RoofingContractor",
+          "name": "Capitol Improvements Washington DC - Roofing | Siding | Doors",
+          "@id": "https://www.improveitmd.com/#dc-branch",
+          "description": "DC and Northern Virginia branch managed by Austin Jewell.",
+          "employee": {
+            "@type": "Person",
+            "name": "Austin Jewell",
+            "jobTitle": "Branch Manager & Project Consultant"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1015 15th St NW #635",
+            "addressLocality": "Washington", "addressRegion": "DC", "postalCode": "20005"
+          },
+          "telephone": "410.587.0128",
+          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "67" }
+        }
+      ]
+    }
+  ]
+}

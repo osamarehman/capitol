@@ -1,0 +1,1007 @@
+
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "GeneralContractor",
+        "HomeAndConstructionBusiness"
+      ],
+      "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business",
+      "additionalType": "https://www.wikidata.org/wiki/Q36794",
+      "name": "Capitol Improvements",
+      "alternateName": [
+        "Capitol Improvements LLC",
+        "Capitol Family Exteriors",
+        "Capitol Improvements - Roofing & Siding Contractors"
+      ],
+      "description": "Family owned and family operated ProVia Certified Installer specializing in front door replacement, storm doors, French doors, sliding glass doors, and custom exterior doors in Annapolis, MD and Anne Arundel County. Expert in waterfront home door installations, Historic District compliant door styles, and on-site custom trim milling to match original colonial and craftsman moldings. Lifetime manufacturer warranties and financing from $99/month.",
+      "url": "https://improveitmd.com",
+      "logo": "https://improveitmd.com/cgi/image/capitol_improvements_logo_main_NdETmJnbuUjH_Kf4-92i4.svg",
+      "image": [
+        "REPLACE_WITH_DOOR_PAGE_OG_IMAGE_URL"
+      ],
+      "telephone": "+1-301-769-6909",
+      "email": "support@improveitmd.com",
+      "priceRange": "$$",
+      "paymentAccepted": "Cash, Check, Credit Card, Financing",
+      "currenciesAccepted": "USD",
+      "license": "MHIC 130628",
+      "foundingDate": "2010",
+      "slogan": "Capable. Experienced. Fair to you.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12606 Hillmeade Station Dr",
+        "addressLocality": "Bowie",
+        "addressRegion": "MD",
+        "postalCode": "20720",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.9784,
+        "longitude": -76.4922
+      },
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 38.9784,
+          "longitude": -76.4922
+        },
+        "geoRadius": 50000
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Annapolis",
+          "sameAs": "https://www.wikidata.org/wiki/Q131360"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Anne Arundel County",
+          "sameAs": "https://www.wikidata.org/wiki/Q488398"
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Murray Hill",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Eastport",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Admiral Heights",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Homewood",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Wardour",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "West Annapolis",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Annapolis Roads",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Hillsmere Shores",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Arundel on the Bay",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Bay Ridge",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Heritage Harbour",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Downtown Annapolis",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Annapolis Neck",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Forest Villa",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Maryland Avenue",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+1-301-769-6909",
+          "email": "support@improveitmd.com",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en"
+          ]
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5.0,
+        "reviewCount": 422,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "url": "https://maps.app.goo.gl/1V8v97hcVYFfrdZb8",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5,
+            "bestRating": 5
+          },
+          "author": {
+            "@type": "Person",
+            "name": "REPLACE_WITH_DOOR_REVIEWER_NAME"
+          },
+          "reviewBody": "When I needed a new front door replacement and storm door installed Capitol Improvements was very highly recommended. After the initial quote from the company they were very open to any questions at any time and were always happy to keep me updated on the progress of the project. They were professional and personable during the entire project. It was installed in one day and the team cleaned everything up and did an amazing job. Overall I felt the company was amazing and the doors are exactly as I wanted. When I have another project to do they will be the company I call.",
+          "itemReviewed": {
+            "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+          }
+        }
+      ],
+      "award": [
+        "ProVia Certified Installer"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "ProVia Certified Installer",
+          "description": "Certified to install ProVia doors and windows to manufacturer standards. Certification valid through August 2029.",
+          "validUntil": "2029-08-31"
+        }
+      ],
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "name": "ProVia Certified Installer Network"
+        }
+      ],
+      "knowsAbout": [
+        "Front Door Replacement",
+        "Storm Door Installation",
+        "French Door Installation",
+        "Sliding Glass Door Replacement",
+        "Bi-Fold Door Installation",
+        "Custom Exterior Doors",
+        "Fiberglass Door Installation",
+        "Marine-Grade Wood Doors",
+        "Coastal Door Replacement",
+        "Salt Air Resistant Exterior Doors",
+        "Waterfront Home Door Installation",
+        "Elevated Home Door Replacement",
+        "Outswing Door Configuration",
+        "Bulkhead Access Door Installation",
+        "Georgian Entry Door Replacement",
+        "Annapolis Historic District Door Compliance",
+        "Colonial Trim Matching for Doors",
+        "Craftsman Door Installation",
+        "HOA Door Approval Annapolis",
+        "Eastport Annapolis Door Replacement",
+        "Murray Hill Annapolis Door Replacement",
+        "Wardour Annapolis Door Replacement"
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Annapolis Homeowners Served",
+          "value": "109+",
+          "description": "Number of Annapolis homeowners who have trusted Capitol Improvements for door replacement, installation, and guidance."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Annapolis Doors Serviced",
+          "value": "44",
+          "description": "Total front, rear, and sliding glass doors inspected and replaced across Annapolis MD neighborhoods."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Custom Trim Capability",
+          "value": "On-site custom knife profiles and casing milling",
+          "description": "Carpenters carry custom knife profiles and can mill new casings on-site to match original colonial, craftsman, or mid-century moldings throughout Annapolis neighborhoods."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Waterfront Installation Expertise",
+          "value": "Waterfront and elevated home door specialist",
+          "description": "Experienced with door replacements on waterfront properties including elevated deck entries, bulkhead access points, and outswing configurations required by local Annapolis building codes."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ownership Type",
+          "value": "Family Owned and Family Operated"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Years of Experience",
+          "value": "30+"
+        }
+      ],
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "minValue": 10,
+        "maxValue": 49
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Pat Jewell",
+        "jobTitle": "Owner & Founder",
+        "description": "Exterior remodeling professional with 30+ years of experience. Founded Capitol Improvements as a family-owned alternative to large corporate contractors.",
+        "worksFor": {
+          "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Door Replacement Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Front Entry Door Replacement",
+            "url": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Front Entry Door Replacement",
+              "description": "Front entry door replacement for Annapolis MD homes including fiberglass, steel, and marine-grade wood options. Completed in a single day with lifetime manufacturer warranty.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Storm Door Installation",
+            "url": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Storm Door Installation",
+              "description": "Storm door installation for Annapolis MD homes to improve energy efficiency, protect entry doors from coastal weather, and add a second layer of security.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "French Door Installation",
+            "url": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "French Door Installation",
+              "description": "French door installation for interior and exterior openings in Annapolis MD homes. Ideal for patio and garden access with views of the Chesapeake Bay.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Sliding Glass Door Replacement",
+            "url": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sliding Glass Door Replacement",
+              "description": "Sliding glass door replacement for Annapolis MD homes. Energy-efficient options with low-E coastal glass and stainless steel hardware rated for salt air exposure.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Bi-Fold Door Installation",
+            "url": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Bi-Fold Door Installation",
+              "description": "Bi-fold door installation for closets, laundry rooms, and pass-through openings in Annapolis MD homes.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Custom Exterior Doors",
+            "url": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom Exterior Doors",
+              "description": "Custom exterior door fabrication and installation for Annapolis MD homes, including period-appropriate Georgian entry doors and Historic District compliant styles. On-site custom trim milling to match original colonial and craftsman moldings.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Waterfront Home Door Replacement",
+            "url": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Waterfront Home Door Replacement",
+              "description": "Specialized door replacement for waterfront and elevated Annapolis MD properties. Includes elevated deck entries, bulkhead access points, and outswing configurations required by local building codes. Storm-rated and watertight installations built for coastal performance.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+              }
+            }
+          }
+        ]
+      },
+      "subjectOf": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#door-projects"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#webpage",
+      "url": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you",
+      "name": "Best Front Door Replacement Company in Annapolis MD \u2013 Entry, Storm, French & Sliding Glass Doors",
+      "description": "Capitol Improvements is a ProVia Certified Installer specializing in front door replacement, storm doors, French doors, and sliding glass doors in Annapolis, MD. Free estimates, lifetime warranties, single-day installation, and financing from $99/month.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://improveitmd.com",
+        "name": "Capitol Improvements"
+      },
+      "about": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "REPLACE_WITH_DOOR_PAGE_OG_IMAGE_URL",
+        "name": "Front Door Replacement Near You in Annapolis Maryland",
+        "description": "Capitol Improvements door replacement in Annapolis MD \u2014 ProVia Certified Installer serving Annapolis and Anne Arundel County."
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://improveitmd.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://improveitmd.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Front Door Replacement in Annapolis MD",
+            "item": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you"
+          }
+        ]
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          "h2",
+          ".faq-section"
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#faq",
+      "isPartOf": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#webpage"
+      },
+      "about": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does it take to get a new door installed in Annapolis, MD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most door replacements in Annapolis are completed in a single day. Capitol Improvements handles all measurements and fabrication in advance so installation day goes smoothly with minimal disruption to your household."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a permit to replace a door in Annapolis, MD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most residential door replacement projects in Annapolis do not require a building permit. However, homes within the Annapolis Historic District may be subject to additional local review requirements. Capitol Improvements always checks local requirements on your behalf to ensure your door project is fully compliant."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What type of door material is best for homes near the Chesapeake Bay in Annapolis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fiberglass and marine-grade wood doors are the top choices for Annapolis homes because they resist salt air corrosion, high humidity, and seasonal temperature swings far better than standard steel. Our team helps you choose the right material based on your home's exposure and style preferences."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a new door be matched to existing colonial or craftsman trim in Annapolis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Capitol Improvements carpenters carry custom knife profiles and can mill new casings on-site so your replacement door blends seamlessly with original colonial, craftsman, or mid-century moldings found throughout Annapolis neighborhoods. This ensures a finished look that respects your home's architectural character."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does door replacement cost in Annapolis, MD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The cost of door replacement in Annapolis varies based on door size, material, glass inserts, and hardware selections. Contact Capitol Improvements for a free estimate tailored to your specific project and Annapolis home."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you replace doors on waterfront and elevated homes in Annapolis, MD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Capitol Improvements routinely handles door replacements on waterfront properties in Annapolis, including elevated deck entries, bulkhead access points, and outswing configurations required by local building codes. Every installation is designed to be watertight and storm-rated for lasting coastal performance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What neighborhoods in Annapolis does Capitol Improvements serve for door replacement?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Capitol Improvements serves all Annapolis neighborhoods for door replacement including Murray Hill, Eastport, Admiral Heights, Homewood, Wardour, West Annapolis, Annapolis Roads, Hillsmere Shores, Arundel on the Bay, Bay Ridge, Heritage Harbour, Downtown Annapolis, Annapolis Neck, Forest Villa, and Maryland Avenue."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#door-projects",
+      "name": "Recent Door Replacement Projects in Annapolis MD",
+      "description": "Front, rear, and sliding glass door replacement projects completed by Capitol Improvements across Annapolis MD neighborhoods.",
+      "numberOfItems": 11,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Service",
+            "name": "Door Replacement",
+            "description": "3 doors (1 front, 1 rear, 1 sliding glass) in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Front Doors",
+                "value": "1"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Rear Doors",
+                "value": "1"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Sliding Glass Doors",
+                "value": "1"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Service",
+            "name": "Door Replacement",
+            "description": "3 doors (1 oversized 96-inch front, 2 rear) in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Front Doors",
+                "value": "1"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Rear Doors",
+                "value": "2"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Special Notes",
+                "value": "Oversized 96-inch front entry"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Service",
+            "name": "Door Replacement",
+            "description": "3 doors (1 oversized 96-inch front, 2 rear) in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Front Doors",
+                "value": "1"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Rear Doors",
+                "value": "2"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Special Notes",
+                "value": "Oversized 96-inch front entry"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Service",
+            "name": "Door Replacement",
+            "description": "10 doors (1 front, 9 rear including 144-inch oversized rear) in Annapolis, MD. Waterfront property with major air infiltration risk.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Front Doors",
+                "value": "1"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Rear Doors",
+                "value": "9"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Special Notes",
+                "value": "144-inch oversized rear entry, multiple weather seals"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Service",
+            "name": "Door Replacement",
+            "description": "3 doors (1 front, 1 rear, 1 sliding glass) in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Front Doors",
+                "value": "1"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Rear Doors",
+                "value": "1"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Sliding Glass Doors",
+                "value": "1"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Service",
+            "name": "Door Replacement",
+            "description": "3 doors (1 front, 2 rear) in Annapolis, MD.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Front Doors",
+                "value": "1"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Rear Doors",
+                "value": "2"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Service",
+            "name": "Door Replacement",
+            "description": "3 doors (1 front, 2 rear including oversized 96-inch rear) in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Front Doors",
+                "value": "1"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Rear Doors",
+                "value": "2"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Special Notes",
+                "value": "Oversized 96-inch rear entry"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "Service",
+            "name": "Door Replacement",
+            "description": "4 doors (1 front, 3 rear with mixed sizes) in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Front Doors",
+                "value": "1"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Rear Doors",
+                "value": "3"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "Service",
+            "name": "Door Replacement",
+            "description": "4 doors (1 oversized 96-inch front, 2 rear, 1 sliding glass) in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Front Doors",
+                "value": "1"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Rear Doors",
+                "value": "2"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Sliding Glass Doors",
+                "value": "1"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Special Notes",
+                "value": "Oversized 96-inch front entry"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "item": {
+            "@type": "Service",
+            "name": "Door Replacement",
+            "description": "4 doors (1 front, 1 rear, 2 sliding glass) in Annapolis, MD. Significant glass exposure requiring heat loss prevention.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Front Doors",
+                "value": "1"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Rear Doors",
+                "value": "1"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Sliding Glass Doors",
+                "value": "2"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "item": {
+            "@type": "Service",
+            "name": "Door Replacement",
+            "description": "4 doors (1 front, 1 oversized 192-inch rear, 2 sliding glass) in Annapolis, MD 21401. Extreme heat loss risk requiring comprehensive weather sealing.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-front-door-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Front Doors",
+                "value": "1"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Rear Doors",
+                "value": "1"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Sliding Glass Doors",
+                "value": "2"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Special Notes",
+                "value": "Oversized 192-inch rear entry, full weather seal required"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

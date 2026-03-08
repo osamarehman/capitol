@@ -1,0 +1,603 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "GeneralContractor",
+        "HomeAndConstructionBusiness"
+      ],
+      "@id": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you#business",
+      "additionalType": "https://www.wikidata.org/wiki/Q1349900",
+      "name": "Capitol Improvements",
+      "alternateName": [
+        "Capitol Improvements LLC",
+        "Capitol Family Exteriors",
+        "Capitol Improvements - Roofing & Siding Contractors"
+      ],
+      "description": "Family owned and family operated TimberTech Platinum Certified deck builder serving Annapolis, MD and Anne Arundel County. One of only a few 5-star rated TimberTech contractors nationally. Specializing in composite, PVC, and wood decks, screen porches, and waterfront deck construction with 0% financing up to 18 months, a 5-year labor warranty, and manufacturer warranties up to lifetime on composite and PVC materials.",
+      "url": "https://improveitmd.com",
+      "logo": "https://improveitmd.com/cgi/image/capitol_improvements_logo_main_NdETmJnbuUjH_Kf4-92i4.svg",
+      "image": [
+        "REPLACE_WITH_DECK_PAGE_OG_IMAGE_URL"
+      ],
+      "telephone": "+1-301-769-6909",
+      "email": "support@improveitmd.com",
+      "priceRange": "$$",
+      "paymentAccepted": "Cash, Check, Credit Card, Financing",
+      "currenciesAccepted": "USD",
+      "license": "MHIC 130628",
+      "foundingDate": "2010",
+      "slogan": "Capable. Experienced. Fair to you.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12606 Hillmeade Station Dr",
+        "addressLocality": "Bowie",
+        "addressRegion": "MD",
+        "postalCode": "20720",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.9784,
+        "longitude": -76.4922
+      },
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 38.9784,
+          "longitude": -76.4922
+        },
+        "geoRadius": 50000
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Annapolis",
+          "sameAs": "https://www.wikidata.org/wiki/Q131360"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Anne Arundel County",
+          "sameAs": "https://www.wikidata.org/wiki/Q488398"
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Murray Hill",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Eastport",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Admiral Heights",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Homewood",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "West Annapolis",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Bay Ridge",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Hillsmere Shores",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Cape St. Claire",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Annapolis Roads",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Highland Beach",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Germantown-Homewood",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Kingsport",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Hunt Meadow",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+1-301-769-6909",
+          "email": "support@improveitmd.com",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en"
+          ]
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5.0,
+        "reviewCount": 422,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "url": "https://maps.app.goo.gl/1V8v97hcVYFfrdZb8",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5,
+            "bestRating": 5
+          },
+          "author": {
+            "@type": "Person",
+            "name": "REPLACE_WITH_DECK_REVIEWER_NAME"
+          },
+          "reviewBody": "Absolutely fantastic contractor. New deck and screen porch turned out better than we could have hoped. I would recommend them to anyone.",
+          "itemReviewed": {
+            "@id": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you#business"
+          }
+        }
+      ],
+      "award": [
+        "TimberTech Platinum Certified Contractor",
+        "BBB Accredited Business",
+        "5-Star Rated TimberTech Deck Installer"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "TimberTech Platinum Certified Contractor",
+          "description": "TimberTech Platinum status is the highest recognition level offered to TimberTech contractors. Capitol Improvements is one of only a few 5-star rated TimberTech contractors nationally."
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "BBB Accredited Business",
+          "description": "Better Business Bureau accredited contractor serving Annapolis MD and Anne Arundel County."
+        }
+      ],
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "name": "TimberTech Contractor Network"
+        },
+        {
+          "@type": "Organization",
+          "name": "Better Business Bureau",
+          "url": "https://www.bbb.org"
+        }
+      ],
+      "knowsAbout": [
+        "Composite Deck Building",
+        "PVC Deck Installation",
+        "Pressure Treated Wood Decking",
+        "TimberTech Deck Installation",
+        "Screen Porch Construction",
+        "Waterfront Deck Building",
+        "Deck Repair and Replacement",
+        "Deck Refinishing",
+        "Salt Air Resistant Composite Decking",
+        "Chesapeake Bay Waterfront Deck Construction",
+        "Annapolis Historic District Deck Compliance",
+        "HOA Deck Approval Annapolis",
+        "Eastport Annapolis Deck Builder",
+        "Annapolis Roads Waterfront Deck",
+        "Highland Beach Deck Construction",
+        "Bay Ridge Annapolis Deck Builder",
+        "Hillsmere Shores Deck Installation"
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Annapolis Homeowners Served",
+          "value": "109+",
+          "description": "Number of Annapolis homeowners who have trusted Capitol Improvements for deck building, repair, and guidance."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Labor Warranty",
+          "value": "5-Year Labor Warranty",
+          "description": "Every deck built by Capitol Improvements in Annapolis includes a 5-year labor warranty on workmanship."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Manufacturer Warranty",
+          "value": "25 years to lifetime on composite and PVC decking",
+          "description": "Manufacturer warranties on TimberTech composite and PVC decking materials range from 25 years to lifetime coverage."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Financing Available",
+          "value": "0% interest for up to 18 months",
+          "description": "No-interest financing plans up to 18 months for qualified Annapolis homeowners on deck installation projects."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "TimberTech Status",
+          "value": "Platinum Certified \u2014 Highest Tier",
+          "description": "TimberTech Platinum is the highest recognition level offered to TimberTech contractors. One of only a few 5-star rated TimberTech installers nationally."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ownership Type",
+          "value": "Family Owned and Family Operated"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Years of Experience",
+          "value": "30+"
+        }
+      ],
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "minValue": 10,
+        "maxValue": 49
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Pat Jewell",
+        "jobTitle": "Owner & Founder",
+        "description": "Exterior remodeling professional with 30+ years of experience. Founded Capitol Improvements as a family-owned alternative to large corporate contractors.",
+        "worksFor": {
+          "@id": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you#business"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Deck Building Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Composite Deck Installation",
+            "url": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Composite Deck Installation",
+              "description": "TimberTech composite deck installation for Annapolis MD homes. Ideal for Chesapeake Bay properties \u2014 resists salt air, humidity, and freeze-thaw cycles. Manufacturer warranty up to lifetime. Installed by a TimberTech Platinum Certified contractor.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "PVC Deck Installation",
+            "url": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "PVC Deck Installation",
+              "description": "100% PVC deck installation for Annapolis MD waterfront and coastal homes. Maximum moisture and salt air resistance with lifetime manufacturer warranty on qualifying TimberTech PVC products.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Pressure Treated Wood Deck",
+            "url": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pressure Treated Wood Deck",
+              "description": "Pressure-treated wood deck construction for Annapolis MD homeowners seeking a budget-friendly option. Ideal for neighborhoods farther from the waterfront.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Screen Porch Construction",
+            "url": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Screen Porch Construction",
+              "description": "Screen porch design and construction for Annapolis MD homes. Extends outdoor living season while protecting against Chesapeake Bay insects and coastal weather.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Waterfront Deck Construction",
+            "url": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Waterfront Deck Construction",
+              "description": "Specialized deck construction for waterfront and Bay-front properties in Annapolis MD. Engineered for salt air, high humidity, and coastal wind exposure using composite or PVC materials rated for marine environments.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Historic District Deck Installation",
+            "url": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Historic District Deck Installation",
+              "description": "Deck design and installation for homes in the Annapolis Historic District and Eastport, compliant with Historic Preservation Commission guidelines and HOA requirements.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Deck Repair and Replacement",
+            "url": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Deck Repair and Replacement",
+              "description": "Deck repair, board replacement, and full deck replacement for aging or storm-damaged decks in Annapolis MD. Free inspection and estimates.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you#business"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you#webpage",
+      "url": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you",
+      "name": "Best Deck Building Company Near You in Annapolis MD \u2013 Composite, PVC & Wood Decks",
+      "description": "Capitol Improvements is a TimberTech Platinum Certified deck builder serving Annapolis, MD. Free estimates, 0% financing for 18 months, 5-year labor warranty, and manufacturer warranties up to lifetime on composite and PVC decking.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://improveitmd.com",
+        "name": "Capitol Improvements"
+      },
+      "about": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you#business"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "REPLACE_WITH_DECK_PAGE_OG_IMAGE_URL",
+        "name": "Deck Builders Near You in Annapolis Maryland",
+        "description": "Capitol Improvements deck construction in Annapolis MD \u2014 TimberTech Platinum Certified contractor serving Annapolis and Anne Arundel County."
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://improveitmd.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://improveitmd.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Deck Builders in Annapolis MD",
+            "item": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you"
+          }
+        ]
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          "h2",
+          ".faq-section"
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you#faq",
+      "isPartOf": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you#webpage"
+      },
+      "about": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-deck-builders-near-you#business"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need a building permit to construct a deck in Annapolis, MD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most residential deck projects in Annapolis do not require a building permit. However, since some municipalities may have their own requirements, Capitol Improvements always checks local regulations for your Annapolis deck project to ensure everything is in order before work begins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to build a new deck in Annapolis, MD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most deck projects in Annapolis are completed within 2 to 4 weeks after permits are approved, depending on weather conditions and material availability. Capitol Improvements provides a detailed project timeline before any work begins so you know exactly what to expect."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best decking material for homes near the Chesapeake Bay in Annapolis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Composite and PVC decking materials are ideal for Annapolis homes because they resist salt air corrosion, high humidity, and freeze-thaw cycles common along the Chesapeake Bay. Pressure-treated lumber is also available as a budget-friendly option for homeowners in neighborhoods farther from the waterfront."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a deck be built on a home in the Annapolis Historic District or Eastport?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Capitol Improvements has experience working within Annapolis Historic Preservation Commission guidelines, including projects in Eastport and the downtown historic district. We adapt deck designs, materials, and finishes to meet local preservation requirements while delivering a functional outdoor living space."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Capitol Improvements offer financing for deck installation in Annapolis, MD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Capitol Improvements offers 0% interest financing plans up to 18 months for qualified Annapolis homeowners, so you can move forward with your new deck project without delay."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What warranty comes with a new deck from Capitol Improvements in Annapolis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every deck built in Annapolis by Capitol Improvements includes a 5-year labor warranty on workmanship. Manufacturer warranties on TimberTech composite and PVC decking materials range from 25 years to lifetime coverage, giving Annapolis homeowners long-term peace of mind."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What neighborhoods in Annapolis does Capitol Improvements serve for deck building?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Capitol Improvements builds decks throughout Annapolis including Murray Hill, Eastport, Admiral Heights, Homewood, West Annapolis, Bay Ridge, Hillsmere Shores, Cape St. Claire, Annapolis Roads, Highland Beach, Germantown-Homewood, Kingsport, and Hunt Meadow."
+          }
+        }
+      ]
+    }
+  ]
+}

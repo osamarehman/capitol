@@ -1,0 +1,28 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://www.improveitmd.com/roofing/asphalt-roofing#service",
+      "name": "Asphalt Shingle Roofing - Capitol Improvements",
+      "url": "https://www.improveitmd.com/roofing/asphalt-roofing",
+      "serviceType": "Asphalt Shingle Roofing",
+      "description": "Expert asphalt shingle roof installation featuring GAF Timberline HDZ shingles. GAF Master Elite certified contractor with Golden Pledge warranty coverage in Maryland, Virginia, and DC.",
+      "provider": { "@id": "https://www.improveitmd.com/#corporation" },
+      "areaServed": [
+        { "@type": "State", "name": "Maryland" },
+        { "@type": "State", "name": "Virginia" },
+        { "@type": "State", "name": "District of Columbia" }
+      ],
+      "brand": {
+        "@type": "Brand",
+        "name": "GAF",
+        "description": "GAF Timberline HDZ architectural shingles"
+      },
+      "offers": {
+        "@type": "Offer",
+        "priceRange": "$$"
+      }
+    }
+  ]
+}

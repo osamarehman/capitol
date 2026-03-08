@@ -1,0 +1,964 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "GeneralContractor",
+        "HomeAndConstructionBusiness"
+      ],
+      "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business",
+      "additionalType": "https://www.wikidata.org/wiki/Q1298225",
+      "name": "Capitol Improvements",
+      "alternateName": [
+        "Capitol Improvements LLC",
+        "Capitol Family Exteriors",
+        "Capitol Improvements - Roofing & Siding Contractors"
+      ],
+      "description": "Family owned and family operated ProVia Certified Installer and Andersen-authorized window replacement contractor serving Annapolis, MD and Anne Arundel County. Specializing in vinyl, wood, composite, and historic window replacement with ENERGY STAR Most Efficient rated products, transferable lifetime manufacturer warranties, a 10-year labor guarantee, and financing from $99/month.",
+      "url": "https://improveitmd.com",
+      "logo": "https://improveitmd.com/cgi/image/capitol_improvements_logo_main_NdETmJnbuUjH_Kf4-92i4.svg",
+      "image": [
+        "REPLACE_WITH_WINDOW_PAGE_OG_IMAGE_URL"
+      ],
+      "telephone": "+1-301-769-6909",
+      "email": "support@improveitmd.com",
+      "priceRange": "$$",
+      "paymentAccepted": "Cash, Check, Credit Card, Financing",
+      "currenciesAccepted": "USD",
+      "license": "MHIC 130628",
+      "foundingDate": "2010",
+      "slogan": "Capable. Experienced. Fair to you.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12606 Hillmeade Station Dr",
+        "addressLocality": "Bowie",
+        "addressRegion": "MD",
+        "postalCode": "20720",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.9784,
+        "longitude": -76.4922
+      },
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 38.9784,
+          "longitude": -76.4922
+        },
+        "geoRadius": 50000
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Annapolis",
+          "sameAs": "https://www.wikidata.org/wiki/Q131360"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Anne Arundel County",
+          "sameAs": "https://www.wikidata.org/wiki/Q488398"
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Murray Hill",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Eastport",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "West Annapolis",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Admiral Heights",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Hillsmere Shores",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Heritage Harbour",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Bay Ridge",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Cape St. Claire",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Annapolis Roads",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Homewood",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Germantown-Homewood",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Parole",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Epping Forest",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Hunt Meadow",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Downtown Annapolis",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+1-301-769-6909",
+          "email": "support@improveitmd.com",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en"
+          ]
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5.0,
+        "reviewCount": 422,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "url": "https://maps.app.goo.gl/1V8v97hcVYFfrdZb8",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5,
+            "bestRating": 5
+          },
+          "author": {
+            "@type": "Person",
+            "name": "John T"
+          },
+          "reviewBody": "The service we received from the initial meeting with Mitch, Seth and Pat was amazing! We were informed of every bit of information throughout the entire process. The installation was also professional, on time and swift.",
+          "itemReviewed": {
+            "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+          }
+        }
+      ],
+      "award": [
+        "ProVia Certified Installer",
+        "Andersen Authorized Dealer",
+        "ENERGY STAR Most Efficient Rated Windows"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "ProVia Certified Installer",
+          "description": "Certified to install ProVia windows and doors to manufacturer standards. Certification valid through August 2029.",
+          "validUntil": "2029-08-31"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Andersen Authorized Dealer",
+          "description": "Authorized dealer and installer of Andersen window products for Annapolis MD and Anne Arundel County."
+        }
+      ],
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "name": "ProVia Certified Installer Network"
+        },
+        {
+          "@type": "Organization",
+          "name": "Andersen Authorized Dealer Program"
+        }
+      ],
+      "knowsAbout": [
+        "Vinyl Window Replacement",
+        "Wood Window Installation",
+        "Composite Window Replacement",
+        "Historic Window Replacement",
+        "ProVia Window Installation",
+        "Andersen Window Installation",
+        "ENERGY STAR Most Efficient Windows",
+        "Low-E Coastal Glass",
+        "Salt Air Resistant Windows",
+        "Chesapeake Bay Waterfront Window Replacement",
+        "Annapolis Historic District Window Compliance",
+        "HOA Window Approval",
+        "Energy Efficient Window Replacement",
+        "Maryland Home Performance Rebates",
+        "Eastport Annapolis Window Replacement",
+        "Murray Hill Annapolis Window Replacement",
+        "West Annapolis Window Replacement",
+        "Heritage Harbour Window Replacement"
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Annapolis Homeowners Served",
+          "value": "109+",
+          "description": "Number of Annapolis homeowners who have trusted Capitol Improvements for window replacement, installation, and guidance."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Annapolis Windows Serviced",
+          "value": "274+",
+          "description": "Total windows inspected, measured, and replaced across Annapolis MD neighborhoods."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Labor Guarantee",
+          "value": "10-Year Labor Guarantee",
+          "description": "Every window installation in Annapolis is backed by a 10-year labor guarantee in addition to the transferable lifetime manufacturer warranty."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Manufacturer Warranty",
+          "value": "Transferable Lifetime Warranty",
+          "description": "Every window installed by Capitol Improvements includes a transferable lifetime manufacturer warranty covering frames, glass, and hardware."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Financing Available",
+          "value": "0% interest for up to 18 months",
+          "description": "Zero-interest financing for up to 18 months on window replacement projects in Annapolis MD."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ownership Type",
+          "value": "Family Owned and Family Operated"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Years of Experience",
+          "value": "30+"
+        }
+      ],
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "minValue": 10,
+        "maxValue": 49
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Pat Jewell",
+        "jobTitle": "Owner & Founder",
+        "description": "Exterior remodeling professional with 30+ years of experience. Founded Capitol Improvements as a family-owned alternative to large corporate contractors.",
+        "worksFor": {
+          "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Window Replacement Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Window Replacement",
+            "url": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Window Replacement",
+              "description": "Full window replacement for single-family homes and townhouses in Annapolis MD. Includes transferable lifetime manufacturer warranty and 10-year labor guarantee.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Vinyl Replacement Windows",
+            "url": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Vinyl Replacement Windows",
+              "description": "ENERGY STAR Most Efficient rated vinyl replacement windows for Annapolis MD homes. Low-maintenance, high-performance option with strong thermal performance for Mid-Atlantic weather.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Wood Window Installation",
+            "url": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wood Window Installation",
+              "description": "Wood and wood-composite window installation for Annapolis MD homes, including period-appropriate styles for the Historic District.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Historic Window Replacement",
+            "url": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Historic Window Replacement",
+              "description": "Specialized window replacement for homes in the Annapolis Historic District, compliant with Historic Preservation Commission guidelines and HOA requirements.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "ProVia Window Installation",
+            "url": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "ProVia Window Installation",
+              "description": "Factory-certified ProVia window installation in Annapolis MD by a certified installer in good standing through August 2029.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Andersen Window Installation",
+            "url": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Andersen Window Installation",
+              "description": "Authorized Andersen window installation for Annapolis MD homeowners. Vinyl, wood, and composite options available.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Coastal Window Replacement",
+            "url": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Coastal Window Replacement",
+              "description": "Reinforced vinyl and composite windows with stainless steel hardware and low-E coastal glass for Bay-front and Severn River properties in Annapolis MD. Engineered to resist salt air corrosion and high winds.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+              }
+            }
+          }
+        ]
+      },
+      "subjectOf": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#window-projects"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#webpage",
+      "url": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you",
+      "name": "Best Window Replacement Company Near You in Annapolis MD \u2013 Free Estimates & Energy Efficient Windows",
+      "description": "Capitol Improvements is a ProVia Certified Installer and Andersen authorized window replacement contractor serving Annapolis, MD. Get free estimates, 0% financing for 18 months, ENERGY STAR rated windows, and a 10-year labor guarantee.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://improveitmd.com",
+        "name": "Capitol Improvements"
+      },
+      "about": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "REPLACE_WITH_WINDOW_PAGE_OG_IMAGE_URL",
+        "name": "Window Replacement Near You in Annapolis Maryland",
+        "description": "Capitol Improvements window replacement in Annapolis MD \u2014 ProVia Certified Installer and Andersen authorized dealer serving Annapolis and Anne Arundel County."
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://improveitmd.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://improveitmd.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Window Replacement in Annapolis MD",
+            "item": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you"
+          }
+        ]
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          "h2",
+          ".faq-section"
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#faq",
+      "isPartOf": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#webpage"
+      },
+      "about": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does window installation take in Annapolis, MD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most window installation projects in Annapolis take just one to two days for an average-sized home. Our crews work efficiently to ensure every window is properly insulated and sealed for Mid-Atlantic weather conditions, minimizing disruption to your household."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a permit to replace windows in Annapolis, MD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most residential window replacement projects in Annapolis do not require a building permit. However, homes in the Annapolis Historic District may be subject to additional local review. Capitol Improvements verifies local permit requirements for your specific Annapolis property before any work begins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What type of replacement windows are best for waterfront homes near the Chesapeake Bay in Annapolis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For Bay-front and Severn River properties in Annapolis, we recommend reinforced vinyl or composite-frame windows with stainless steel hardware and low-E coastal glass to resist salt air corrosion and high winds. These options deliver long-term durability without sacrificing energy efficiency or aesthetics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much can new energy-efficient windows save on utility bills in Annapolis, MD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ENERGY STAR Most Efficient rated windows can reduce seasonal heating and cooling costs by up to 30%. Many Annapolis window replacement customers report noticeably lower BGE bills within the first year of installation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Capitol Improvements offer financing for window replacement in Annapolis, MD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Capitol Improvements offers zero-interest financing for up to 18 months on window replacement projects in Annapolis. We also help homeowners navigate Maryland Home Performance rebates, which can provide additional savings on qualifying energy-efficient windows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What warranty comes with new windows installed by Capitol Improvements in Annapolis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every window installed in Annapolis includes a transferable lifetime manufacturer warranty covering frames, glass, and hardware. We also back our work with a 10-year labor guarantee, giving Annapolis homeowners full confidence in both the product and the installation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What neighborhoods in Annapolis does Capitol Improvements serve for window replacement?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Capitol Improvements serves all Annapolis neighborhoods for window replacement including Murray Hill, Eastport, West Annapolis, Admiral Heights, Hillsmere Shores, Heritage Harbour, Bay Ridge, Cape St. Claire, Annapolis Roads, Homewood, Germantown-Homewood, Parole, Epping Forest, Hunt Meadow, and Downtown Annapolis."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#window-projects",
+      "name": "Recent Window Replacement Projects in Annapolis MD",
+      "description": "Window replacement and inspection projects completed by Capitol Improvements across Annapolis MD neighborhoods.",
+      "numberOfItems": 11,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Service",
+            "name": "Window Replacement",
+            "description": "14 windows, 132 sqft total window area in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Windows",
+                "value": "14"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Total Window Area",
+                "value": "132 sqft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Service",
+            "name": "Window Replacement",
+            "description": "38 windows, 407 sqft total window area in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Windows",
+                "value": "38"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Total Window Area",
+                "value": "407 sqft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Service",
+            "name": "Window Replacement",
+            "description": "78 windows, 859 sqft total window area in Annapolis, MD.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Windows",
+                "value": "78"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Total Window Area",
+                "value": "859 sqft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Service",
+            "name": "Window Replacement",
+            "description": "8 windows, 98 sqft total window area in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Windows",
+                "value": "8"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Total Window Area",
+                "value": "98 sqft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Service",
+            "name": "Window Replacement",
+            "description": "19 windows, 262 sqft total window area in Annapolis, MD.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Windows",
+                "value": "19"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Total Window Area",
+                "value": "262 sqft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Service",
+            "name": "Window Replacement",
+            "description": "15 windows, 130 sqft total window area in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Windows",
+                "value": "15"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Total Window Area",
+                "value": "130 sqft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Service",
+            "name": "Window Replacement",
+            "description": "12 windows, 138 sqft total window area in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Windows",
+                "value": "12"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Total Window Area",
+                "value": "138 sqft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "Service",
+            "name": "Window Replacement",
+            "description": "19 windows, 245 sqft total window area in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Windows",
+                "value": "19"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Total Window Area",
+                "value": "245 sqft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "Service",
+            "name": "Window Replacement",
+            "description": "9 windows, 138 sqft total window area in Annapolis, MD.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Windows",
+                "value": "9"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Total Window Area",
+                "value": "138 sqft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "item": {
+            "@type": "Service",
+            "name": "Window Replacement",
+            "description": "24 windows, 271 sqft total window area in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Windows",
+                "value": "24"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Total Window Area",
+                "value": "271 sqft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "item": {
+            "@type": "Service",
+            "name": "Window Replacement",
+            "description": "38 windows, 407 sqft total window area in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-window-replacement-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Windows",
+                "value": "38"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Total Window Area",
+                "value": "407 sqft"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

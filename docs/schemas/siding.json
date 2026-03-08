@@ -1,0 +1,1123 @@
+
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "GeneralContractor",
+        "HomeAndConstructionBusiness"
+      ],
+      "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business",
+      "name": "Capitol Improvements",
+      "alternateName": [
+        "Capitol Improvements LLC",
+        "Capitol Family Exteriors",
+        "Capitol Improvements - Roofing & Siding Contractors"
+      ],
+      "description": "Family owned and family operated James Hardie Preferred Partner and certified siding contractor serving Annapolis, MD and Anne Arundel County. Specializing in vinyl siding, James Hardie fiber cement, aluminum, clapboard, and cedar siding installation and replacement with free estimates, lifetime manufacturer warranties, and financing from $99/month.",
+      "url": "https://improveitmd.com",
+      "logo": "https://improveitmd.com/cgi/image/capitol_improvements_logo_main_NdETmJnbuUjH_Kf4-92i4.svg",
+      "image": [
+        "REPLACE_WITH_SIDING_PAGE_OG_IMAGE_URL"
+      ],
+      "telephone": "+1-301-769-6909",
+      "email": "support@improveitmd.com",
+      "priceRange": "$$",
+      "paymentAccepted": "Cash, Check, Credit Card, Financing",
+      "currenciesAccepted": "USD",
+      "license": "MHIC 130628",
+      "foundingDate": "2010",
+      "slogan": "Capable. Experienced. Fair to you.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12606 Hillmeade Station Dr",
+        "addressLocality": "Bowie",
+        "addressRegion": "MD",
+        "postalCode": "20720",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.9784,
+        "longitude": -76.4922
+      },
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 38.9784,
+          "longitude": -76.4922
+        },
+        "geoRadius": 50000
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Annapolis",
+          "sameAs": "https://www.wikidata.org/wiki/Q131360"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Anne Arundel County",
+          "sameAs": "https://www.wikidata.org/wiki/Q488398"
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Eastport",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Murray Hill",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "West Annapolis",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Admiral Heights",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Homewood",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Truxton Heights",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Hunt Meadow",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Wardour",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Annapolis Roads",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Hillsmere Shores",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Bay Ridge",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Arundel on the Bay",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "Cape St. Claire",
+          "containedInPlace": {
+            "@type": "City",
+            "name": "Annapolis",
+            "addressRegion": "MD"
+          }
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+1-301-769-6909",
+          "email": "support@improveitmd.com",
+          "areaServed": "US",
+          "availableLanguage": [
+            "en"
+          ]
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5.0,
+        "reviewCount": 422,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": 5,
+            "bestRating": 5
+          },
+          "author": {
+            "@type": "Person",
+            "name": "REPLACE_WITH_REVIEWER_NAME"
+          },
+          "reviewBody": "Overall a great experience! This company is very responsive and Seth did a great job of communicating my project status and getting me on the schedule earlier than planned. The work done to my house was quality too! I would hire them again!",
+          "itemReviewed": {
+            "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+          }
+        }
+      ],
+      "award": [
+        "James Hardie Preferred Partner",
+        "5-Star Rated James Hardie Contractor"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "James Hardie Preferred Partner",
+          "description": "Authorized installer of James Hardie fiber cement siding. One of only a few local contractors with Preferred Partner status and a perfect 5-star rating in the James Hardie Contractor Alliance Program.",
+          "url": "https://www.jameshardie.com/find-a-contractor/results/capitol-improvements-certified-installer-bowie/"
+        }
+      ],
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "name": "James Hardie Contractor Alliance Program",
+          "url": "https://www.jameshardie.com/find-a-contractor/results/capitol-improvements-certified-installer-bowie/"
+        }
+      ],
+      "sameAs": [
+        "https://www.jameshardie.com/find-a-contractor/results/capitol-improvements-certified-installer-bowie/"
+      ],
+      "knowsAbout": [
+        "Vinyl Siding Installation",
+        "James Hardie Fiber Cement Siding",
+        "Aluminum Siding Replacement",
+        "Clapboard Siding Replacement",
+        "Cedar Siding Replacement",
+        "Siding Repair",
+        "Siding Replacement",
+        "Insulated Vinyl Siding",
+        "Coastal Siding for Chesapeake Bay Homes",
+        "Salt Air Resistant Siding",
+        "Historic District Siding Compliance",
+        "HOA Siding Approval",
+        "Energy Efficient Siding",
+        "Annapolis Historic District Siding Guidelines",
+        "Eastport Annapolis Siding",
+        "Hillsmere Shores Siding",
+        "West Annapolis Siding",
+        "Bay Ridge Annapolis Siding"
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Annapolis Homeowners Served",
+          "value": "109+",
+          "description": "Number of Annapolis homeowners who have trusted Capitol Improvements for siding installation, replacement, and guidance."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Siding Square Feet Inspected in Annapolis MD",
+          "value": "335 squares",
+          "description": "Total siding square footage inspected, repaired, and replaced across Annapolis MD neighborhoods."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "James Hardie Rating",
+          "value": "5-Star Preferred Partner",
+          "description": "One of only a few local contractors with Preferred Partner status and a perfect 5-star rating in the James Hardie Contractor Alliance Program."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ownership Type",
+          "value": "Family Owned and Family Operated"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Years of Experience",
+          "value": "30+"
+        }
+      ],
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "minValue": 10,
+        "maxValue": 49
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Pat Jewell",
+        "jobTitle": "Owner & Founder",
+        "description": "Exterior remodeling professional with 30+ years of experience. Founded Capitol Improvements as a family-owned alternative to large corporate contractors.",
+        "worksFor": {
+          "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+        }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Siding Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Siding Replacement",
+            "url": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Siding Replacement",
+              "description": "Full siding replacement for single-family homes and townhouses in Annapolis MD. Free estimates with lifetime manufacturer warranty options.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Siding Repair",
+            "url": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Siding Repair",
+              "description": "Professional siding repair for warping, cracking, moisture damage, and storm damage in Annapolis MD. Free inspection and estimates.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "James Hardie Siding Installation",
+            "url": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "James Hardie Siding Installation",
+              "description": "Authorized James Hardie fiber cement siding installation by a Preferred Partner contractor in Annapolis MD. Engineered to resist salt air, moisture, and humidity along the Chesapeake Bay.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Vinyl Siding Installation",
+            "url": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Vinyl Siding Installation",
+              "description": "Insulated and standard vinyl siding installation for Annapolis MD homes. Cost-effective, low-maintenance option with strong performance in coastal conditions.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Aluminum Siding Replacement",
+            "url": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Aluminum Siding Replacement",
+              "description": "Aluminum siding replacement and upgrade for Annapolis MD homes, including older homes originally clad in aluminum.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Clapboard Siding Replacement",
+            "url": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Clapboard Siding Replacement",
+              "description": "Clapboard siding replacement for traditional and historic Annapolis homes, including Historic District compliant materials and styles.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+              }
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Cedar Siding Replacement",
+            "url": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you",
+            "availability": "https://schema.org/InStock",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cedar Siding Replacement",
+              "description": "Cedar siding replacement and installation for Annapolis MD homes seeking natural wood aesthetics with proper coastal weather protection.",
+              "areaServed": {
+                "@type": "City",
+                "name": "Annapolis",
+                "addressRegion": "MD"
+              },
+              "provider": {
+                "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+              }
+            }
+          }
+        ]
+      },
+      "subjectOf": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#siding-projects"
+      },
+      "additionalType": "https://www.wikidata.org/wiki/Q1137388"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#webpage",
+      "url": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you",
+      "name": "Best Siding Contractors Near You in Annapolis MD \u2013 Free Estimates & Siding Replacement",
+      "description": "Capitol Improvements is a James Hardie Preferred Partner and certified siding contractor serving Annapolis, MD. Get free siding estimates, financing from $99/mo, and lifetime warranty coverage for siding replacement and repair.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@type": "WebSite",
+        "url": "https://improveitmd.com",
+        "name": "Capitol Improvements"
+      },
+      "about": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "REPLACE_WITH_SIDING_PAGE_OG_IMAGE_URL",
+        "name": "Siding Contractors Near You in Annapolis MD",
+        "description": "Capitol Improvements siding installation in Annapolis MD \u2014 James Hardie Preferred Partner serving Annapolis and Anne Arundel County."
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://improveitmd.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://improveitmd.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Siding Contractors in Annapolis MD",
+            "item": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you"
+          }
+        ]
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "h1",
+          "h2",
+          ".faq-section"
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#faq",
+      "isPartOf": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#webpage"
+      },
+      "about": {
+        "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the best siding material for homes near the Chesapeake Bay in Annapolis, MD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fiber cement and insulated vinyl siding are the top choices for Annapolis homes because they resist salt air corrosion, high humidity, and moisture exposure common along the Chesapeake Bay. Capitol Improvements helps homeowners choose the right siding material based on their home's proximity to the water and local Historic District requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does siding installation take in Annapolis, MD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most siding replacement projects on single-family homes in Annapolis take between 5 and 7 working days, including tear-off of the old siding and full cleanup. Larger homes or projects requiring Historic Preservation Commission coordination may take slightly longer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a permit to replace siding in Annapolis, MD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most residential siding replacement projects in Annapolis do not require a building permit. However, homes in the Annapolis Historic District may be subject to additional local review. Capitol Improvements always checks the specific requirements for your property before beginning work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can new siding improve energy efficiency in my Annapolis home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes \u2014 upgrading to insulated vinyl or fiber cement siding with rigid foam backing significantly reduces drafts and can lower heating and cooling costs year-round. This is especially beneficial for older Annapolis homes that lack modern insulation behind their exterior walls."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know when it's time to replace my home's siding in Annapolis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Warning signs include warping, cracking, bubbling, persistent mold growth, or noticeably higher energy bills. If your Annapolis home's siding is more than 20 years old or shows moisture damage, scheduling a free inspection with Capitol Improvements is the best next step."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Capitol Improvements offer financing for siding projects in Annapolis, MD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Capitol Improvements offers zero-down, low-interest financing plans through trusted credit partners, allowing Annapolis homeowners to spread siding project payments over 12 to 120 months. Contact us for a free estimate and to explore which financing option fits your budget."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What neighborhoods in Annapolis does Capitol Improvements serve for siding?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Capitol Improvements serves all Annapolis neighborhoods for siding installation and replacement including Eastport, Murray Hill, West Annapolis, Admiral Heights, Homewood, Truxton Heights, Hunt Meadow, Wardour, Annapolis Roads, Hillsmere Shores, Bay Ridge, Arundel on the Bay, and Cape St. Claire."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#siding-projects",
+      "name": "Recent Siding Installations and Inspections in Annapolis MD",
+      "description": "Siding projects completed by Capitol Improvements across Annapolis MD neighborhoods, including vinyl, fiber cement, and mixed-material installations.",
+      "numberOfItems": 19,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "1,158 sqft siding installation in Annapolis, MD 21401. Mixed brick and siding exterior.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "1,158"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Materials",
+                "value": "Brick and Siding"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "1,576 sqft siding installation in Annapolis, MD 21403. Mixed brick and siding exterior.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "1,576"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Materials",
+                "value": "Brick and Siding"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "2,200 sqft siding installation in Annapolis, MD. Siding-dominant mixed material exterior with 1,368 sqft soffit.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "2,200"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Materials",
+                "value": "Siding and Brick"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "1,720 sqft single-material siding installation in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "1,720"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Materials",
+                "value": "Siding"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "1,006 sqft siding installation in Annapolis, MD. Mixed siding and brick exterior.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "1,006"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Materials",
+                "value": "Siding and Brick"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "1,119 sqft siding installation in Annapolis, MD 21401. Balanced brick-siding combination.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "1,119"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Materials",
+                "value": "Brick and Siding"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "1,419 sqft single-material siding installation in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "1,419"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Materials",
+                "value": "Siding"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "2,037 sqft siding installation in Annapolis, MD 21403. Mixed siding and brick with extensive trim.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "2,037"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Materials",
+                "value": "Siding and Brick"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "2,270 sqft single-material siding installation in Annapolis, MD.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "2,270"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Materials",
+                "value": "Siding"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "2,207 sqft mixed brick and siding installation in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "2,207"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Materials",
+                "value": "Brick and Siding"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "1,468 sqft siding installation in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "1,468"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "1,389 sqft siding installation in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "1,389"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "2,057 sqft siding installation in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "2,057"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "1,926 sqft siding installation in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "1,926"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "2,427 sqft siding installation in Annapolis, MD 21409.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "2,427"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21409"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "862 sqft siding installation in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "862"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "2,752 sqft siding installation in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "2,752"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "1,382 sqft siding installation in Annapolis, MD 21403.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "1,382"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21403"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "item": {
+            "@type": "Service",
+            "name": "Siding Installation",
+            "description": "2,501 sqft siding installation in Annapolis, MD 21401.",
+            "areaServed": "Annapolis, MD",
+            "provider": {
+              "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Siding SqFt",
+                "value": "2,501"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Location",
+                "value": "Annapolis, MD 21401"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
