@@ -116,14 +116,13 @@ if [ -f "$MAPPINGS_FILE" ]; then
   if [ "$MAPPING_COUNT" -gt 0 ]; then
     # Generate sed commands from mappings
     python3 -c "
-import json, re
-mappings = json.load(open('$MAPPINGS_FILE'))
+import json, sys
+mappings = json.load(open(sys.argv[1]))
 for old_url, new_url in mappings.items():
-    # Escape for sed
-    old_esc = old_url.replace('/', '\\/').replace('&', '\\&').replace('.', '\\.')
-    new_esc = new_url.replace('/', '\\/').replace('&', '\\&')
+    old_esc = old_url.replace('&', r'\&').replace('.', r'\.')
+    new_esc = new_url.replace('&', r'\&')
     print(f's|{old_esc}|{new_esc}|g')
-" > /tmp/asset-sed-commands.txt
+" "$MAPPINGS_FILE" > /tmp/asset-sed-commands.txt
 
     REPLACED=0
     for f in "$GEN_DIR"/*.tsx "$GEN_DIR"/*.ts "$GEN_DIR"/*.css "$PROJECT_DIR/.webstudio/data.json"; do
