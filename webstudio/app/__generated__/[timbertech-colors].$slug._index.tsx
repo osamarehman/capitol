@@ -1,0 +1,1888 @@
+/* eslint-disable */
+      /* This is a auto generated file for building the project */ 
+
+
+      import { Fragment, useState } from "react";
+      import { useResource, useVariableState } from "@webstudio-is/react-sdk/runtime";
+      import { Fragment as Fragment_1, Box as Box, Slot as Slot, HtmlEmbed as HtmlEmbed, Image as Image, Button as Button, Text as Text } from "@webstudio-is/sdk-components-react";
+import { Link as Link, Link as Link_1, Body as Body } from "@webstudio-is/sdk-components-react-router";
+import { NavigationMenu as NavigationMenu, NavigationMenuList as NavigationMenuList, NavigationMenuItem as NavigationMenuItem, NavigationMenuTrigger as NavigationMenuTrigger, NavigationMenuContent as NavigationMenuContent, NavigationMenuViewport as NavigationMenuViewport, Accordion as Accordion, AccordionItem as AccordionItem, AccordionHeader as AccordionHeader, AccordionTrigger as AccordionTrigger, AccordionContent as AccordionContent } from "@webstudio-is/sdk-components-react-radix";
+
+
+      export const projectId = "5b897bfc-8b80-4b2a-bfed-79ac7ec37365";
+
+      export const lastPublished = "2026-03-07T22:43:38.864Z";
+
+      export const siteName = "Capitol Improvements";
+
+      export const breakpoints = [{"id":"cAXOgWVeuCB3jDJaSpTIC"},{"id":"ENSxxr83hFXkB2uOvItht","maxWidth":991},{"id":"jRbIM0w-_5xst6S9c2XLZ","maxWidth":767},{"id":"86r6F2Lba-5RnsxO3lS8a","maxWidth":479}];
+
+      export const favIconAsset: string | undefined =
+        "64c9668b95320504f7298d3a_logo-fav_K_8rs1tKqjZ0oNR3Mm-J8.png";
+
+      // Font assets on current page (can be preloaded)
+      export const pageFontAssets: string[] =
+        []
+
+      export const pageBackgroundImageAssets: string[] =
+        []
+
+      
+
+      const Page = (_props: { system: any; }) => {
+let TimbertechColorData = useResource("TimbertechColorData_1")
+let TimbertechColorCollection = useResource("TimbertechColorCollection_1")
+return <Body
+className={`w-element`}>
+<Box
+className={`w-box cnregu4 c3a6wb5`}>
+<HtmlEmbed
+code={"<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css\">\n<script src=\"https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js\"></script>\n\n<style>\n.swiper-container { width: 100%; height: 100%; }\n.swiper-slide { width: 100% !important; }\n.swiper-pagination { bottom: 0rem !important; }\n.swiper-pagination-bullet {\n  width: 10px;\n  height: 10px;\n  border-radius: 100vw;\n  border: 2px solid white;\n  background-color: transparent;\n  margin: 0rem !important;\n}\n.swiper-pagination-bullet.swiper-pagination-bullet-active { background-color: white; }\n.swiper-button-next, .swiper-button-prev { color: white; }\n</style>"}
+clientOnly={true}
+className={`w-html-embed`} />
+<Slot>
+<Fragment_1>
+<HtmlEmbed
+code={"<style>  \n/* RESET */\n* {\n  margin: 0;\n  scroll-behavior: smooth;\n}\n\n/* Prevent events on closed sheet */\n.viewport-container {\n  pointer-events: none !important;\n}\n.viewport-container .menu-viewport[data-state=\"open\"] {\n  pointer-events: auto !important;\n}\nbody.menu-open {\n  overflow: hidden;\n}\n  \n/* ACCORDION ANIMATION  */\n.AccordionContent {\n  overflow: hidden;\n}\n.AccordionContent[data-state=\"open\"] {\n  animation: accordionSlideDown 300ms ease-out;\n}\n.AccordionContent[data-state=\"closed\"] {\n  animation: accordionSlideUp 300ms ease-out;\n}\n\n@keyframes accordionSlideDown {\n  from { height: 0; }\n  to { height: var(--radix-accordion-content-height); }\n}\n\n@keyframes accordionSlideUp {\n  from { height: var(--radix-accordion-content-height); }\n  to { height: 0; }\n}\n\n/* Accordion Header active state color change */\n.AccordionTrigger {\n  transition: color 250ms ease; /* optional smooth fade */\n}\n\n.AccordionTrigger.Firebrick[data-state=\"open\"] {\n  color: var(--firebrick);\n}\n\n/* Accordion Cross Icon rotate  */\n.CrossIconLine {\n  transform-origin: center;\n  transform: rotate(0deg);\n  transition: transform 250ms ease;\n}\n\n.AccordionCross[data-state=\"open\"] .CrossIconLine {\n  transform: rotate(90deg);\n}\n  \n/* READ MORE TRANSITION   */\n.read-more-content {\n  opacity: 0;\n  max-height: 0;\n  overflow: hidden;\n  transition: opacity 0.3s ease, max-height 0.3s ease;\n}\n\n.read-more-content.is-visible {\n  opacity: 1;\n  max-height: 500px;\n}\n\n  /* Responsive Map CSS  */\n.responsive-map {\n  position: relative;\n  width: 100%;\n  height: 0;\n  padding-bottom: 75%; /* 4:3 aspect ratio (480/640 = 0.75) */\n  overflow: hidden;\n}\n\n.responsive-map iframe {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100% !important;\n  height: 100% !important;\n  border: 0;\n}\n/* For mobile portrait (smaller screens) */\n@media screen and (max-width: 768px) {\n  .responsive-map {\n    padding-bottom: 100%; /* Make it more square on mobile */\n    margin: 10px 0; /* Add some vertical spacing */\n  }\n}\n\n/* For very small screens */\n@media screen and (max-width: 480px) {\n  .responsive-map {\n    padding-bottom: 120%; /* Taller aspect ratio for very small screens */\n  }\n}\n  \n/* Asphalt Roofing product top row padding removal  */\n@media only screen and (max-width: 1279px) {\n\t.product-top-row {\n\t\tpadding-right: 0rem;\n\t}\n}\n\n  /* Commercial Roofing Paragraph & Grid reveal  */\n.commercial-grid {\n  display: none;\n}\n  \n.commercial-paragraph {\n  display: none;\n}\n\n.commercial-wrapper.is-expanded .commercial-paragraph {\n  display: block;\n}\n  \n.commercial-wrapper.is-expanded .commercial-grid {\n  display: grid;\n} \n  \n.commercial-wrapper.is-expanded .commercial-read-more {\n  display: none;\n}\n  \n@media (max-width: 479px) {\n  .commercial-grid {\n    display: none !important;\n  }\n}\n\n/* class for display:none  */\n.is--hidden {\n  display: none;\n}\n.is--visible {\n  display: block;\n}\n\na {\n  color: var(--foreground-secondary);\n  text-decoration: none;\n}\n\n.dropdown-list.is-2,\n.dropdown-list.is-3 {\n  height: 0;\n  overflow: hidden;\n  transition: height 0.3s ease;\n}\n\n.nav {\n  contain: layout style;\n  will-change: transform;\n  backface-visibility: hidden;\n}\n  \n/* Menu open state */\nbody.is-nav-open {\n  overflow: hidden;\n}\n\nbody.is-nav-open .nav-menu {\n  display: block !important;\n}\n\nbody.is-nav-open .hamburger-line {\n  display: none !important;\n}\n\nbody.is-nav-open .nav-icon {\n  display: block !important;\n}\n\n</style>\n\n"}
+clientOnly={true}
+className={`w-html-embed`} />
+<nav
+className={`w-element cuiybni c1epvuph c6hmdm4 cvfl1ur c1qdl0j2 c1di8kq6 c1t1bnxa cu6iurp`}>
+<div
+className={`w-element cs0io4s`}>
+<div
+className={`w-element c4vc9qx c9tjkc5 c7iyr7r cmpwmbp`}>
+<div
+className={`w-element c139pwc6 caeuris c5ftqtp c1ux94pn c7htweh c15lzzou`}>
+<div
+className={`w-element c1numhkq c3auquk`}>
+<div
+className={`w-element c1numhkq c1diokdk ct0qrmw cbwtdxr c2vb7ji`}>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M13.1168 8.4999V8.5499H13.1668H15.6668H15.7168V8.4999V7.4999V7.4499H15.6668H13.1668H13.1168V7.4999V8.4999ZM13.9703 13.3734L14.0103 13.4031L14.0402 13.3632L14.6402 12.5632L14.6703 12.5231L14.63 12.4931L12.6133 10.9931L12.5734 10.9634L12.5435 11.0032L11.9435 11.8032L11.9134 11.8434L11.9537 11.8734L13.9703 13.3734ZM12.5935 4.9799L12.6236 5.02001L12.6636 4.98982L14.6303 3.50648L14.6701 3.47646L14.6402 3.43656L14.0402 2.63656L14.0101 2.59646L13.9701 2.62665L12.0034 4.10998L11.9636 4.14001L11.9935 4.1799L12.5935 4.9799ZM4.45016 12.6666V12.7166H4.50016H5.50016H5.55016V12.6666V10.0499H6.31965L9.6411 12.0428L9.71683 12.0882V11.9999V3.9999V3.91159L9.6411 3.95702L6.31965 5.9499H3.3335C3.04261 5.9499 2.79374 6.05228 2.58981 6.25621C2.38588 6.46014 2.2835 6.70901 2.2835 6.9999V8.9999C2.2835 9.29079 2.38588 9.53966 2.58981 9.74359C2.79374 9.94751 3.04261 10.0499 3.3335 10.0499H4.45016V12.6666ZM10.2835 10.2332V10.3446L10.3667 10.2706C10.672 9.99926 10.9176 9.66879 11.1036 9.2798C11.2904 8.88926 11.3835 8.46237 11.3835 7.9999C11.3835 7.53743 11.2904 7.11054 11.1036 6.71999C10.9176 6.33101 10.672 6.00054 10.3667 5.72919L10.2835 5.65522V5.76656V10.2332ZM6.62579 8.95696L6.61395 8.9499H6.60016H3.3835V7.0499H6.60016H6.61395L6.62579 7.04283L8.61683 5.85463V10.1452L6.62579 8.95696Z\" fill=\"#00203B\" stroke=\"#575D62\" stroke-width=\"0.1\"/>\n</svg>"}
+className={`w-html-embed c18bj3o3 c1lq6pq8 ce6x08i c1numhkq c1diokdk ch3nxmx c1eflpw1 c1utj868 c1atvmzl`} />
+<Link
+href={"/financing"}
+target={"_self"}
+className={`w-element c1gbsy9l c1jqias8 c1g3mhtg c82qwqc`}>
+{"Offering financing as low as $99/mo"}
+</Link>
+</div>
+<div
+className={`w-element c1numhkq c1diokdk ct0qrmw cstbpo8 cei1sgf`}>
+<Link_1
+href={"/about"}
+target={"_self"}
+className={`w-link c82qwqc c1uaxhv2 cacmu18 c1g3mhtg c1ayp6pz c23qcws cahz6x0 cmchden`}>
+{"About"}
+</Link_1>
+<Link_1
+href={"/testimonials"}
+target={"_self"}
+className={`w-link c82qwqc c1uaxhv2 cacmu18 c1g3mhtg c1ayp6pz c23qcws cahz6x0 cmchden`}>
+{"Testimonials"}
+</Link_1>
+<Link_1
+href={"/gallery"}
+target={"_self"}
+className={`w-link c82qwqc c1uaxhv2 cacmu18 c1g3mhtg c1ayp6pz c23qcws cahz6x0 cmchden`}>
+{"Gallery"}
+</Link_1>
+<Link_1
+href={"tel:3017696909"}
+className={`w-link c82qwqc c1uaxhv2 cacmu18 c1g3mhtg c1ayp6pz c23qcws cahz6x0 cmchden`}>
+{"301.769.6909"}
+</Link_1>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div
+className={`w-element c9te4zd c1k5oipc c147jfvk c1udh8tp c1k3tb45 ${"banner"}`}>
+<div
+className={`w-element c4vc9qx c9tjkc5 c7iyr7r cmpwmbp`}>
+<div
+className={`w-element c139pwc6 caeuris c5ftqtp c1ux94pn c5zgd1 c11b3qd4`}>
+<Link
+href={"/"}
+target={"_self"}
+className={`w-element c1k5oipc`}>
+<div
+className={`w-element c1osufuw c3sv84c c84c42r`}>
+<Image
+alt={"Logo Icon"}
+src={"/assets/capitol_improvements_logo_mui4YFXSPvMEj33G1EyWT.svg"}
+width={18}
+height={12}
+loading={"eager"}
+className={`w-image cqsaj3r c11y8oun ctpsi40 c12l5srj`} />
+<Image
+src={"/assets/capitol_improvements_logo_text_IlLfLABIT-imV1nR5DxY3.svg"}
+width={161}
+height={8}
+alt={"Logo Text"}
+loading={"eager"}
+className={`w-image cqsaj3r cc27qdi c1kebnjt`} />
+</div>
+</Link>
+</div>
+</div>
+</div>
+</nav>
+<article
+className={`w-element cuiybni c1epvuph cmhuipo c4ily4v c1r07he0 c189czh1 cl3mvj8 cvfl1ur caeqjir ${"nav is--standard"}`}>
+<div
+className={`w-element c4vc9qx c9tjkc5 c7iyr7r cmpwmbp`}>
+<div
+className={`w-element c139pwc6 caeuris c5ftqtp c1ux94pn c5zgd1 c11b3qd4`}>
+<div
+className={`w-element c1numhkq cqilze0 c1diokdk c3auquk c1r7jime c1hx6vht cfefbyo c1on9zr7 c2bn8b2`}>
+<div
+className={`w-element c1b5nqsw c1r4uzyb c1osufuw c4ph8p6 c84c42r c1k3tb45 c147jfvk c1s9relc c9te4zd ${"hamburger"}`}>
+<div
+className={`w-element cyovuht c1tyoc0q c1udh8tp cc6fx65 c1xkesxn covxtq8 c1k5oipc cosr4dw cyii4eg ${"hamburger-line"}`} />
+<div
+className={`w-element cyovuht c1tyoc0q c1udh8tp cc6fx65 c1xkesxn covxtq8 c1k5oipc cosr4dw cyii4eg ${"hamburger-line"}`} />
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 37 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M16.8029 3.26783L7.33589 12.7142L6.69403 13.3546H7.60076H36.125V16.6454H7.60076H6.693L7.3361 17.286L16.8035 26.7176L14.5325 28.971L0.530912 15L14.5333 1.02828L16.8029 3.26783Z\" fill=\"#00192E\" stroke=\"white\" stroke-width=\"0.75\"/>\n</svg>"}
+className={`w-html-embed c1yi6im1 c1iqs9pl c1ja9yy8 cyl62nc c1ofjp3d c1gx6enw c1pmzlxn cs0io4s coxe3ep ${"nav-icon"}`} />
+</div>
+<div
+className={`w-element c1yi6im1 c1iqs9pl c1ja9yy8 cyl62nc c1ofjp3d c1rexjbp c1kqjux0 cnods77 c1yt6hv7 cyovuht c1f2mehc cytrokv chsa5yh c7ubuhh c1qoad8z cs0io4s c140z207 c9te4zd ${"nav-menu"}`}>
+<div
+className={`w-element cyovuht cyshh4y cytrokv chsa5yh`}>
+<Accordion
+collapsible={true}
+className={`w-accordion c1osufuw c4ph8p6 c14e2i27 cyzinkh c1pzwqin co5hy9p cyovuht cyshh4y`}>
+<AccordionItem
+data-ws-index="0"
+className={`w-item c1unpg90 c1osufuw c4ph8p6 c14e2i27 cyzinkh c274fa8 crkv0em ci6bnwb cpij2xb`}>
+<AccordionHeader
+className={`w-item-header c1numhkq`}>
+<AccordionTrigger
+className={`w-item-trigger c1numhkq cnwi6s4 cxte6uv c1owwlzw c1diokdk c1imn7p5 c5zgd1 cf7c7lc c11b3qd4 c1pdjbsv c1g3mhtg clmr8fm c1domi2n c1tn4ulv cvvsggu c11rljqw c5d3i40 c1s19qlc cs196t2 cj1pg9y c1n958ae c1m75s0d c1s9relc cbjs37b`}>
+<Text
+className={`w-text`}>
+{"Roofing"}
+</Text>
+<Box
+className={`w-box cx79vvm c1utj868 c1eflpw1 c1lq6pq8 c60ws42 c1x35ah3 c1fof65s c1kl0qlc c3su6au c1osufuw c3sv84c c1y3ergk`}>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 10 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M1 3.5L5 7.5L9 3.5\" stroke=\"black\" stroke-width=\"2\"/>\n</svg>"}
+className={`w-html-embed`} />
+</Box>
+</AccordionTrigger>
+</AccordionHeader>
+<AccordionContent
+className={`w-item-content cn87dm8 c1uhhf7h c1gbsy9l c1plv0j c60ws42 c1wwn73i c1fof65s c1kl0qlc c3su6au c11b3qd4 cyovuht c1784h8b c1s19qlc ${"AccordionContent"}`}>
+<div
+className={`w-element cmsm1bz cx1xwkj c17jsdkn cyitx8x c1txodcv curgy1m c1hw8x15 c1teo9b4 ct5s339 c1qlkes2 c10kmxzf c1t7cp38 cqybwgu`}>
+<Link
+href={"/roofing/asphalt-roofing"}
+target={"_self"}
+className={`w-element c1hwvjgs ckzre88 cj1pg9y cf93ewp c1m75s0d cvp5m4g`}>
+{"Asphalt Shingles"}
+</Link>
+<Link
+href={"/roofing/metal-roofing"}
+target={"_self"}
+className={`w-element c1hwvjgs ckzre88 cj1pg9y cf93ewp c1m75s0d cvp5m4g`}>
+{"Metal"}
+</Link>
+<Link
+href={"/roofing/flat-roofing"}
+target={"_self"}
+className={`w-element c1hwvjgs ckzre88 cj1pg9y cf93ewp c1m75s0d cvp5m4g`}>
+{"Flat"}
+</Link>
+<Link
+href={"/roofing/commercial-roofing"}
+target={"_self"}
+className={`w-element c1hwvjgs ckzre88 cj1pg9y cf93ewp c1m75s0d cvp5m4g`}>
+{"Commercial"}
+</Link>
+<Link
+href={"/roofing"}
+target={"_self"}
+className={`w-element c1hwvjgs ckzre88 cj1pg9y cf93ewp c1m75s0d cvp5m4g`}>
+{"Roofing Overview"}
+</Link>
+</div>
+</AccordionContent>
+</AccordionItem>
+<AccordionItem
+data-ws-index="1"
+className={`w-item c1unpg90 c1osufuw c4ph8p6 c14e2i27 cyzinkh c274fa8 crkv0em ci6bnwb cpij2xb`}>
+<AccordionHeader
+className={`w-item-header c1numhkq`}>
+<AccordionTrigger
+className={`w-item-trigger c1numhkq cnwi6s4 cxte6uv c1owwlzw c1diokdk c1imn7p5 c5zgd1 cf7c7lc c11b3qd4 c1pdjbsv c1g3mhtg clmr8fm c1domi2n c1tn4ulv cvvsggu c11rljqw c5d3i40 c1s19qlc cs196t2 cj1pg9y c1n958ae c1m75s0d c1s9relc cbjs37b`}>
+<Text
+className={`w-text`}>
+{"Siding"}
+</Text>
+<Box
+className={`w-box cx79vvm c1utj868 c1eflpw1 c1lq6pq8 c60ws42 c1x35ah3 c1fof65s c1kl0qlc c3su6au c1osufuw c3sv84c c1y3ergk`}>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 10 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M1 3.5L5 7.5L9 3.5\" stroke=\"black\" stroke-width=\"2\"/>\n</svg>"}
+className={`w-html-embed`} />
+</Box>
+</AccordionTrigger>
+</AccordionHeader>
+<AccordionContent
+className={`w-item-content cn87dm8 c1uhhf7h c1gbsy9l c1plv0j c60ws42 c1wwn73i c1fof65s c1kl0qlc c3su6au c11b3qd4 cyovuht c1784h8b c1s19qlc ${"AccordionContent"}`}>
+<div
+className={`w-element cmsm1bz cx1xwkj c17jsdkn cyitx8x c1txodcv curgy1m c1hw8x15 c1teo9b4 ct5s339 c1qlkes2 c10kmxzf c1t7cp38 cqybwgu`}>
+<Link
+href={"/siding/james-hardie"}
+target={"_self"}
+className={`w-element c1hwvjgs ckzre88 cj1pg9y cf93ewp c1m75s0d cvp5m4g`}>
+{"James Hardie"}
+</Link>
+<Link
+href={"/siding/vinyl"}
+target={"_self"}
+className={`w-element c1hwvjgs ckzre88 cj1pg9y cf93ewp c1m75s0d cvp5m4g`}>
+{"Vinyl"}
+</Link>
+<Link
+href={"/siding"}
+target={"_self"}
+className={`w-element c1hwvjgs ckzre88 cj1pg9y cf93ewp c1m75s0d cvp5m4g`}>
+{"Siding Overview"}
+</Link>
+</div>
+</AccordionContent>
+</AccordionItem>
+<Link
+href={"/gutters"}
+target={"_self"}
+className={`w-element c1hwvjgs cs196t2 cj1pg9y c1n958ae c1m75s0d cvp5m4g`}>
+{"Gutters"}
+</Link>
+<Link
+href={"/exterior-trim"}
+target={"_self"}
+className={`w-element c1hwvjgs cs196t2 cj1pg9y c1n958ae c1m75s0d cvp5m4g`}>
+{"Trim"}
+</Link>
+<Link
+href={"/decks-and-patios"}
+target={"_self"}
+className={`w-element c1hwvjgs cs196t2 cj1pg9y c1n958ae c1m75s0d cvp5m4g`}>
+{"Deck & Patios"}
+</Link>
+<Link
+href={"/doors"}
+target={"_self"}
+className={`w-element c1hwvjgs cs196t2 cj1pg9y c1n958ae c1m75s0d cvp5m4g`}>
+{"Doors"}
+</Link>
+<div
+className={`w-element c1osufuw c4ph8p6 c14e2i27 cyzinkh ctakxvy cyovuht c1pzwqin co5hy9p c17bzoun c1uw2td2 cafm2i1 c19mbpcb c1tdossk`}>
+<AccordionItem
+data-ws-index="2"
+className={`w-item c1unpg90 c1osufuw c4ph8p6 c14e2i27 cyzinkh c274fa8 crkv0em ci6bnwb cpij2xb`}>
+<AccordionHeader
+className={`w-item-header c1numhkq`}>
+<AccordionTrigger
+className={`w-item-trigger c1numhkq cnwi6s4 cxte6uv c1owwlzw c1diokdk c1imn7p5 c5zgd1 cf7c7lc c11b3qd4 c1pdjbsv c1g3mhtg clmr8fm c1domi2n c1tn4ulv cvvsggu c11rljqw c5d3i40 c1s19qlc cd6l4a6 cj1pg9y c1n958ae cmadmrr c1s9relc cbjs37b`}>
+<Text
+className={`w-text`}>
+{"Gallery & Resources"}
+</Text>
+<Box
+className={`w-box cx79vvm c1utj868 c1eflpw1 c1lq6pq8 c60ws42 c1x35ah3 c1fof65s c1kl0qlc c3su6au c1osufuw c3sv84c c1y3ergk c9yxi90 clvvacb`}>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 10 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M1 3.5L5 7.5L9 3.5\" stroke=\"black\" stroke-width=\"2\"/>\n</svg>"}
+className={`w-html-embed`} />
+</Box>
+</AccordionTrigger>
+</AccordionHeader>
+<AccordionContent
+className={`w-item-content cn87dm8 c1uhhf7h c1gbsy9l c1plv0j c60ws42 c1wwn73i c1fof65s c1kl0qlc c3su6au c11b3qd4 cyovuht c1784h8b c1s19qlc ${"AccordionContent"}`}>
+<div
+className={`w-element cmsm1bz cx1xwkj c17jsdkn cyitx8x c1txodcv curgy1m c1hw8x15 cqfdoz0 c1porcss c1qlkes2 c10kmxzf c1t7cp38 cqybwgu`}>
+<Link
+href={"/gallery"}
+target={"_self"}
+className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
+{"Gallery"}
+</Link>
+<Link
+href={"/financing"}
+target={"_self"}
+className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
+{"Financing"}
+</Link>
+<Link
+href={"/warranty"}
+target={"_self"}
+className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
+{"Warranty"}
+</Link>
+<Link
+href={"/blog"}
+target={"_self"}
+className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
+{"Blog"}
+</Link>
+</div>
+</AccordionContent>
+</AccordionItem>
+<AccordionItem
+data-ws-index="3"
+className={`w-item c1unpg90 c1osufuw c4ph8p6 c14e2i27 cyzinkh c274fa8 crkv0em ci6bnwb cpij2xb`}>
+<AccordionHeader
+className={`w-item-header c1numhkq`}>
+<AccordionTrigger
+className={`w-item-trigger c1numhkq cnwi6s4 cxte6uv c1owwlzw c1diokdk c1imn7p5 c5zgd1 cf7c7lc c11b3qd4 c1pdjbsv c1g3mhtg clmr8fm c1domi2n c1tn4ulv cvvsggu c11rljqw c5d3i40 c1s19qlc cd6l4a6 cj1pg9y c1n958ae cmadmrr c1s9relc cbjs37b`}>
+<Text
+className={`w-text`}>
+{"About Us"}
+</Text>
+<Box
+className={`w-box cx79vvm c1utj868 c1eflpw1 c1lq6pq8 c60ws42 c1x35ah3 c1fof65s c1kl0qlc c3su6au c1osufuw c3sv84c c1y3ergk c9yxi90 clvvacb`}>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 10 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M1 3.5L5 7.5L9 3.5\" stroke=\"black\" stroke-width=\"2\"/>\n</svg>"}
+className={`w-html-embed`} />
+</Box>
+</AccordionTrigger>
+</AccordionHeader>
+<AccordionContent
+className={`w-item-content cn87dm8 c1uhhf7h c1gbsy9l c1plv0j c60ws42 c1wwn73i c1fof65s c1kl0qlc c3su6au c11b3qd4 cyovuht c1784h8b c1s19qlc ${"AccordionContent"}`}>
+<div
+className={`w-element cmsm1bz cx1xwkj c17jsdkn cyitx8x c1txodcv curgy1m c1hw8x15 cqfdoz0 c1porcss c1qlkes2 c10kmxzf c1t7cp38 cqybwgu`}>
+<Link
+href={"/about"}
+target={"_self"}
+className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
+{"About"}
+</Link>
+<Link
+href={"/team"}
+target={"_self"}
+className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
+{"Team"}
+</Link>
+<Link
+href={"/testimonials"}
+target={"_self"}
+className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
+{"Testimonials"}
+</Link>
+<Link
+href={"/contact"}
+target={"_self"}
+className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
+{"Contact"}
+</Link>
+</div>
+</AccordionContent>
+</AccordionItem>
+<Link
+href={"/"}
+target={"_self"}
+className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
+{"Home"}
+</Link>
+</div>
+</Accordion>
+</div>
+</div>
+<Link
+href={"/"}
+className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
+<Image
+src={"https://cms.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+width={151}
+height={30}
+alt={""}
+loading={"eager"}
+fetchPriority={"high"}
+className={`w-image cxf38v0 crv3s27 c1mcsn9a czbu68a cs6j6mk`} />
+</Link>
+<NavigationMenu
+className={`w-navigation-menu c1diokdk ct0qrmw c10lolld c1irdqs7 c1ux94pn cs0io4s`}>
+<NavigationMenuList
+className={`w-menu-list c1numhkq cnwi6s4 cxte6uv c1owwlzw c1tib7p7 c53aqfr ct0qrmw c10lolld c1irdqs7 c1emsk8a cycldzd`}>
+<NavigationMenuItem
+data-ws-index="0"
+className={`w-menu-item`}>
+<NavigationMenuTrigger>
+<Button
+className={`w-button c82qwqc c1numhkq cacmu18 c1g3mhtg c1diokdk ct0qrmw ciffqr1 csd3qkx c1ehmfnq cwr9gsc c15ai560 c1ch8bq c1epvuph cl3mvj8 c1s8fcmc c52c9e5 c1hano35 c1z0avtf c1dih41b c1rgg99s cgtmmxo c1cukx3 c1r2737e c3su6au c1d7h9xn c13qspjq c1cqma02 c1jvw4nv c1yhof13 cv0jqge cq3iv3s cja6q2j czdv9km c1ryk5rj cjkauba cahz6x0 cmchden cxzxhbd cwwh2w3 cs196t2 cj1pg9y c1m75s0d c1g6i14v`}>
+<Text
+className={`w-text c1hwvjgs`}>
+{"Roofing"}
+</Text>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 10 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M1 3.5L5 7.5L9 3.5\" stroke=\"black\" stroke-width=\"2\"/>\n</svg>"}
+className={`w-html-embed c1o5abpq ckmtqrf c1vyxdsx cwhac3e ce2idg c1rpiv5h c1ynqduu`} />
+</Button>
+</NavigationMenuTrigger>
+<NavigationMenuContent
+className={`w-menu-content`}>
+<div
+className={`w-element cvfl1ur`}>
+<div
+className={`w-element c139pwc6 caeuris c5ftqtp c1ux94pn`}>
+<div
+className={`w-element cmsm1bz cstbpo8 cei1sgf c1i6fwir c1aj2slg cn87dm8 c1uhhf7h c1nige7o c1txodcv c1t86vhp`}>
+<Link
+href={"/roofing/asphalt-roofing"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Asphalt Shingles"}
+</Link>
+<Link
+href={"/roofing/metal-roofing"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Metal"}
+</Link>
+<Link
+href={"/roofing/flat-roofing"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Flat"}
+</Link>
+<Link
+href={"/roofing/commercial-roofing"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Commercial"}
+</Link>
+<Link
+href={"/roofing"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au c4p5z3a ci76nr6 cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+<span
+className={`w-element`}>
+{"Roofing Overview"}
+</span>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 28 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M21.295 12L20.0015 10.8553L24.493 6.83601H0V5.16399H24.493L20.0015 1.15113L21.295 0L28 6L21.295 12Z\" fill=\"black\"/>\n</svg>"}
+className={`w-html-embed c1numhkq c1diokdk ch3nxmx ckgpx2x c1bm6nma`} />
+</Link>
+</div>
+</div>
+</div>
+<div
+className={`w-element cwpwdsd c1dk4ika c1epvuph coqffc6 cyuxmdg cauq8n4 ${"bg-overlay"}`} />
+</NavigationMenuContent>
+</NavigationMenuItem>
+<NavigationMenuItem
+data-ws-index="1"
+className={`w-menu-item`}>
+<NavigationMenuTrigger>
+<Button
+className={`w-button c82qwqc c1numhkq cacmu18 c1g3mhtg c1diokdk ct0qrmw ciffqr1 csd3qkx c1ehmfnq cwr9gsc c15ai560 c1ch8bq c1epvuph cl3mvj8 c1s8fcmc c52c9e5 c1hano35 c1z0avtf c1dih41b c1rgg99s cgtmmxo c1cukx3 c1r2737e c3su6au c1d7h9xn c1ryk5rj c13qspjq c1cqma02 c1jvw4nv c1yhof13 cv0jqge cq3iv3s cja6q2j czdv9km cjkauba cahz6x0 cmchden cxzxhbd cwwh2w3 cs196t2 cj1pg9y c1m75s0d c1g6i14v`}>
+<Text
+className={`w-text`}>
+{"Siding"}
+</Text>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 10 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M1 3.5L5 7.5L9 3.5\" stroke=\"black\" stroke-width=\"2\"/>\n</svg>"}
+className={`w-html-embed c1o5abpq ckmtqrf c1vyxdsx cwhac3e ce2idg c1rpiv5h c1ynqduu`} />
+</Button>
+</NavigationMenuTrigger>
+<NavigationMenuContent
+className={`w-menu-content`}>
+<div
+className={`w-element cvfl1ur`}>
+<div
+className={`w-element c139pwc6 caeuris c5ftqtp c1ux94pn`}>
+<div
+className={`w-element cmsm1bz cstbpo8 cei1sgf c1i6fwir c1aj2slg cn87dm8 c1uhhf7h c1nige7o c1txodcv c1t86vhp`}>
+<Link
+href={"/siding/james-hardie"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cowdr5m c1so0jtm cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"James Hardie"}
+</Link>
+<Link
+href={"/siding/vinyl"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cowdr5m c1so0jtm cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Vinyl"}
+</Link>
+<Link
+href={"/siding"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au c4p5z3a ci76nr6 cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+<span
+className={`w-element`}>
+{"Siding Overview"}
+</span>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 28 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M21.295 12L20.0015 10.8553L24.493 6.83601H0V5.16399H24.493L20.0015 1.15113L21.295 0L28 6L21.295 12Z\" fill=\"black\"/>\n</svg>"}
+className={`w-html-embed c1numhkq c1diokdk ch3nxmx ckgpx2x c1bm6nma`} />
+</Link>
+</div>
+</div>
+</div>
+<div
+className={`w-element cwpwdsd c1dk4ika c1epvuph coqffc6 cyuxmdg cauq8n4 ${"bg-overlay"}`} />
+</NavigationMenuContent>
+</NavigationMenuItem>
+<NavigationMenuItem
+data-ws-index="2"
+className={`w-menu-item`}>
+<Link_1
+href={"/windows"}
+target={"_self"}
+className={`w-link c82qwqc c1numhkq cacmu18 c1g3mhtg c1diokdk ct0qrmw ciffqr1 csd3qkx c1ehmfnq cwr9gsc c15ai560 c1ch8bq c1epvuph cl3mvj8 c1s8fcmc c52c9e5 c1hano35 c1z0avtf c1dih41b c1rgg99s cgtmmxo c1cukx3 c1r2737e c3su6au c1d7h9xn cahz6x0 cmchden cxzxhbd cwwh2w3 cs196t2 cj1pg9y c1m75s0d c1g6i14v`}>
+{"Windows"}
+</Link_1>
+</NavigationMenuItem>
+<NavigationMenuItem
+data-ws-index="3"
+className={`w-menu-item`}>
+<Link_1
+href={"/gutters"}
+target={"_self"}
+className={`w-link c82qwqc c1numhkq cacmu18 c1g3mhtg c1diokdk ct0qrmw ciffqr1 csd3qkx c1ehmfnq cwr9gsc c15ai560 c1ch8bq c1epvuph cl3mvj8 c1s8fcmc c52c9e5 c1hano35 c1z0avtf c1dih41b c1rgg99s cgtmmxo c1cukx3 c1r2737e c3su6au c1d7h9xn cahz6x0 cmchden cxzxhbd cwwh2w3 cs196t2 cj1pg9y c1m75s0d c1g6i14v`}>
+{"Gutters"}
+</Link_1>
+</NavigationMenuItem>
+<NavigationMenuItem
+data-ws-index="4"
+className={`w-menu-item`}>
+<Link_1
+href={"/exterior-trim"}
+target={"_self"}
+className={`w-link c82qwqc c1numhkq cacmu18 c1g3mhtg c1diokdk ct0qrmw ciffqr1 csd3qkx c1ehmfnq cwr9gsc c15ai560 c1ch8bq c1epvuph cl3mvj8 c1s8fcmc c52c9e5 c1hano35 c1z0avtf c1dih41b c1rgg99s cgtmmxo c1cukx3 c1r2737e c3su6au c1d7h9xn cahz6x0 cmchden cxzxhbd cwwh2w3 cs196t2 cj1pg9y c1m75s0d c1g6i14v`}>
+{"Trim"}
+</Link_1>
+</NavigationMenuItem>
+<NavigationMenuItem
+data-ws-index="5"
+className={`w-menu-item`}>
+<Link_1
+href={"/decks-and-patios"}
+target={"_self"}
+className={`w-link c82qwqc c1numhkq cacmu18 c1g3mhtg c1diokdk ct0qrmw ciffqr1 csd3qkx c1ehmfnq cwr9gsc c15ai560 c1ch8bq c1epvuph cl3mvj8 c1s8fcmc c52c9e5 c1hano35 c1z0avtf c1dih41b c1rgg99s cgtmmxo c1cukx3 c1r2737e c3su6au c1d7h9xn cahz6x0 cmchden cxzxhbd cwwh2w3 cs196t2 cj1pg9y c1m75s0d c1g6i14v`}>
+{"Deck & Patios"}
+</Link_1>
+</NavigationMenuItem>
+<NavigationMenuItem
+data-ws-index="6"
+className={`w-menu-item`}>
+<Link_1
+href={"/doors"}
+target={"_self"}
+className={`w-link c82qwqc c1numhkq cacmu18 c1g3mhtg c1diokdk ct0qrmw ciffqr1 csd3qkx c1ehmfnq cwr9gsc c15ai560 c1ch8bq c1epvuph cl3mvj8 c1s8fcmc c52c9e5 c1hano35 c1z0avtf c1dih41b c1rgg99s cgtmmxo c1cukx3 c1r2737e c3su6au c1d7h9xn cahz6x0 cmchden cxzxhbd cwwh2w3 cs196t2 cj1pg9y c1m75s0d c1g6i14v`}>
+{"Doors"}
+</Link_1>
+</NavigationMenuItem>
+</NavigationMenuList>
+<Box
+className={`w-box cnbug7k cp1dmkc c137qtrl c1numhkq ch3nxmx cwpwdsd c1n7qu2 c15yzrzw cn87dm8 c1uhhf7h ${"viewport-container"}`}>
+<NavigationMenuViewport
+className={`w-menu-viewport c1epvuph c1n7qu2 cwpwdsd c15yzrzw ${"menu-viewport"}`} />
+</Box>
+</NavigationMenu>
+<div
+className={`w-element c1numhkq c53aqfr ct0qrmw cfcahn6 c1hx6vht c1epvuph c6hmdm4 c1jn3g1o crrgqm2 c1k3tb45 c147jfvk`}>
+<Link_1
+href={"tel:3017696909"}
+className={`w-link c1lvj0n c19ftcvs c1vqewwo cacmu18 c9te4zd c1u81kxm c1v2l8nt c53aqfr ct0qrmw c1lzjd2w cn7k83s c1d8rs8t cwr9gsc c1ehmfnq c1owcyig c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da cv3rgxc cahz6x0 cmchden c1amh7xl cimel00 c1b6be7c c1842oze c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 ckkl2uw cchbu1a c1lgs1h6 c1osufuw`}>
+<Image
+src={"https://cms.improveitmd.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
+width={16}
+height={16}
+alt={"Phone icon"}
+loading={"eager"}
+className={`w-image c1rpiv5h c1ynqduu`} />
+</Link_1>
+<Link_1
+href={"/quote"}
+target={"_self"}
+className={`w-link cekr8vl cyzpk7y cm1pdbc cacmu18 crv3s27 c1u81kxm c1v2l8nt c1diokdk ch3nxmx c1lzjd2w c1g3mhtg c1ayp6pz c1ojdguz cy8kgz2 c1owcyig c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da c1s8fcmc c1p4xat6 c7mkn1n cahz6x0 cmchden cxelgob cimel00 c805dql cdubd0c c5wc26g c4egqsl c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 c14u3pz9 c1kw2xmj c15i5s1m c18iqfv2`}>
+{"Get Free Quote"}
+</Link_1>
+</div>
+<div
+className={`w-element c139pwc6 cw6436c cnbug7k c1vue08o c4ily4v c19wpft8 c189czh1 cl3mvj8 cq7peu4`} />
+</div>
+</div>
+</div>
+</article>
+<nav
+className={`w-element c1g1r0no cvfl1ur c139pwc6 c1jjyqa4 cvvhtep c8fjv4x c116lgfv cp2pdtk c1vse6xq c1cukx3 c3su6au c10ukf2h c1lenlhl c1rp6s1w csvveix cjvrt4 caeqjir cs0io4s ${"nav is--sticky"}`}>
+<div
+className={`w-element c4vc9qx c9tjkc5 c7iyr7r cmpwmbp`}>
+<div
+className={`w-element c139pwc6 caeuris c5ftqtp c1ux94pn c5zgd1 c11b3qd4`}>
+<div
+className={`w-element c1numhkq cqilze0 c1diokdk c3auquk c1r7jime c1hx6vht cfefbyo c1on9zr7 c2bn8b2`}>
+<Link
+href={"/"}
+className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
+<Image
+src={"https://cms.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_55ce0081f9.svg"}
+width={151}
+height={30}
+alt={"Logo"}
+loading={"eager"}
+className={`w-image cxf38v0 crv3s27 c1mcsn9a czbu68a cs6j6mk`} />
+</Link>
+<NavigationMenu
+className={`w-navigation-menu c1diokdk ct0qrmw c10lolld c1irdqs7 c1ux94pn cs0io4s`}>
+<NavigationMenuList
+className={`w-menu-list c1numhkq cnwi6s4 cxte6uv c1owwlzw c1tib7p7 c53aqfr ct0qrmw c10lolld c1irdqs7 c1emsk8a cycldzd`}>
+<NavigationMenuItem
+data-ws-index="0"
+className={`w-menu-item`}>
+<NavigationMenuTrigger>
+<Button
+className={`w-button c82qwqc c1numhkq cacmu18 c1g3mhtg c1diokdk ct0qrmw ciffqr1 csd3qkx c1ehmfnq cwr9gsc c15ai560 c1ch8bq c1epvuph cl3mvj8 c1s8fcmc c52c9e5 c1hano35 c1z0avtf c1dih41b c1rgg99s cgtmmxo c1cukx3 c1r2737e c3su6au c1d7h9xn c13qspjq c1cqma02 c1jvw4nv c1yhof13 cv0jqge cq3iv3s cja6q2j czdv9km c1ryk5rj cjkauba cahz6x0 cmchden cxzxhbd cwwh2w3 cs196t2 cj1pg9y c1m75s0d c1g6i14v`}>
+<Text
+className={`w-text c1hwvjgs`}>
+{"Services"}
+</Text>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 10 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M1 3.5L5 7.5L9 3.5\" stroke=\"black\" stroke-width=\"2\"/>\n</svg>"}
+className={`w-html-embed c1o5abpq ckmtqrf c1vyxdsx cwhac3e ce2idg c1rpiv5h c1ynqduu`} />
+</Button>
+</NavigationMenuTrigger>
+<NavigationMenuContent
+className={`w-menu-content`}>
+<div
+className={`w-element cvfl1ur cn87dm8 c1uhhf7h`}>
+<div
+className={`w-element c139pwc6 caeuris c5ftqtp c1ux94pn`}>
+<div
+className={`w-element cvfl1ur c1nige7o`}>
+<div
+className={`w-element`}>
+<div
+className={`w-element cmsm1bz cstbpo8 cei1sgf c1i6fwir c1aj2slg cn87dm8 c1uhhf7h c60ws42 c1r2737e cgtmmxo c1cukx3 c3su6au c1txodcv c1t86vhp ${"dropdown-list is-1"}`}>
+<div
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au c1d7h9xn cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2 ${"plus-link is-2"}`}>
+<span
+className={`w-element cauq8n4`}>
+{"Roofing"}
+</span>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 14 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M7 3.82481e-08L7 14\" stroke=\"black\" stroke-width=\"2\"/>\n<line x1=\"14\" y1=\"7.125\" x2=\"-7.64949e-08\" y2=\"7.125\" stroke=\"black\" stroke-width=\"2\"/>\n</svg>"}
+className={`w-html-embed c1numhkq c1nu7j0d c1bm6nma c1diokdk ch3nxmx`} />
+</div>
+<div
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au c1d7h9xn cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2 ${"plus-link is-3"}`}>
+<span
+className={`w-element cauq8n4`}>
+{"Siding"}
+</span>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 14 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M7 3.82481e-08L7 14\" stroke=\"black\" stroke-width=\"2\"/>\n<line x1=\"14\" y1=\"7.125\" x2=\"-7.64949e-08\" y2=\"7.125\" stroke=\"black\" stroke-width=\"2\"/>\n</svg>"}
+className={`w-html-embed c1numhkq c1nu7j0d c1bm6nma c1diokdk ch3nxmx`} />
+</div>
+<Link
+href={"/windows"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Windows"}
+</Link>
+<Link
+href={"/gutters"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Gutters"}
+</Link>
+<Link
+href={"/exterior-trim"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Trim"}
+</Link>
+<Link
+href={"/decks-and-patios"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Decks & Patios"}
+</Link>
+<Link
+href={"/doors"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Doors"}
+</Link>
+</div>
+<div
+className={`w-element cmsm1bz cstbpo8 cei1sgf c1i6fwir c1aj2slg cn87dm8 c1uhhf7h c60ws42 c1r2737e cgtmmxo c1cukx3 c3su6au c1txodcv c1t86vhp ${"dropdown-list is-2"}`}>
+<div
+className={`w-element c11b3qd4 c1numhkq c1diokdk ct0qrmw c1g3mhtg c1d8rs8t chxc8gf cspait9 c4p5z3a ci76nr6 coq26t5 c2rpov5 chpt3u ca3fvi7`}>
+<div
+className={`w-element c1numhkq c1diokdk ct0qrmw c17rwy3n c1603wqb chxc8gf c1d7h9xn ${"back-link is-1"}`}>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 28 13\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M6.70496 0.500002L7.99852 1.6447L3.50699 5.66399L28 5.66399L28 7.33601L3.50699 7.33601L7.99852 11.3489L6.70496 12.5L1.38281e-06 6.5L6.70496 0.500002Z\" fill=\"black\"/>\n</svg>"}
+className={`w-html-embed c1numhkq c1diokdk ch3nxmx c1nu7j0d c1bm6nma cauq8n4`} />
+<p
+className={`w-element cauq8n4`}>
+{"All services"}
+</p>
+</div>
+</div>
+<Link
+href={"/roofing/asphalt-roofing"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Asphalt Roofing"}
+</Link>
+<Link
+href={"/roofing/metal-roofing"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Metal Roofing"}
+</Link>
+<Link
+href={"/roofing/flat-roofing"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Flat Roofing"}
+</Link>
+<Link
+href={"/roofing/commercial-roofing"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Commercial Roofing"}
+</Link>
+<Link
+href={"/roofing"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au c4p5z3a ci76nr6 cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+<span
+className={`w-element`}>
+{"Roofing Overview"}
+</span>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 28 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M21.295 12L20.0015 10.8553L24.493 6.83601H0V5.16399H24.493L20.0015 1.15113L21.295 0L28 6L21.295 12Z\" fill=\"black\"/>\n</svg>"}
+className={`w-html-embed c1numhkq c1nu7j0d c1bm6nma c1diokdk ch3nxmx`} />
+</Link>
+</div>
+<div
+className={`w-element cmsm1bz cstbpo8 cei1sgf c1i6fwir c1aj2slg cn87dm8 c1uhhf7h c60ws42 c1r2737e cgtmmxo c1cukx3 c3su6au c1txodcv c1t86vhp ${"dropdown-list is-3"}`}>
+<div
+className={`w-element c11b3qd4 c1numhkq c1diokdk ct0qrmw c1g3mhtg c1d8rs8t chxc8gf cspait9 c4p5z3a ci76nr6 coq26t5 c2rpov5 chpt3u ca3fvi7`}>
+<div
+className={`w-element c1numhkq c1diokdk ct0qrmw c17rwy3n c1603wqb chxc8gf c1d7h9xn ${"back-link is-2"}`}>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 28 13\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M6.70496 0.500002L7.99852 1.6447L3.50699 5.66399L28 5.66399L28 7.33601L3.50699 7.33601L7.99852 11.3489L6.70496 12.5L1.38281e-06 6.5L6.70496 0.500002Z\" fill=\"black\"/>\n</svg>"}
+className={`w-html-embed c1numhkq c1diokdk ch3nxmx c1nu7j0d c1bm6nma cauq8n4`} />
+<p
+className={`w-element cauq8n4`}>
+{"All services"}
+</p>
+</div>
+</div>
+<Link
+href={"/siding/james-hardie"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cowdr5m c1so0jtm cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"James Hardie Siding"}
+</Link>
+<Link
+href={"/siding/vinyl"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cowdr5m c1so0jtm cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Vinyl Siding"}
+</Link>
+<Link
+href={"/siding"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au c4p5z3a ci76nr6 cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+<span
+className={`w-element`}>
+{"Siding Overview"}
+</span>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 28 12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M21.295 12L20.0015 10.8553L24.493 6.83601H0V5.16399H24.493L20.0015 1.15113L21.295 0L28 6L21.295 12Z\" fill=\"black\"/>\n</svg>"}
+className={`w-html-embed c1numhkq c1nu7j0d c1bm6nma c1diokdk ch3nxmx`} />
+</Link>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div
+className={`w-element cwpwdsd c1dk4ika c1epvuph coqffc6 cyuxmdg cauq8n4`} />
+</NavigationMenuContent>
+</NavigationMenuItem>
+<NavigationMenuItem
+data-ws-index="1"
+className={`w-menu-item`}>
+<NavigationMenuTrigger>
+<Button
+className={`w-button c82qwqc c1numhkq cacmu18 c1g3mhtg c1diokdk ct0qrmw ciffqr1 csd3qkx c1ehmfnq cwr9gsc c15ai560 c1ch8bq c1epvuph cl3mvj8 c1s8fcmc c52c9e5 c1hano35 c1z0avtf c1dih41b c1rgg99s cgtmmxo c1cukx3 c1r2737e c3su6au c1d7h9xn c1ryk5rj c13qspjq c1cqma02 c1jvw4nv c1yhof13 cv0jqge cq3iv3s cja6q2j czdv9km cjkauba cahz6x0 cmchden cxzxhbd cwwh2w3 cs196t2 cj1pg9y c1m75s0d c1g6i14v`}>
+<Text
+className={`w-text`}>
+{"About"}
+</Text>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 10 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M1 3.5L5 7.5L9 3.5\" stroke=\"black\" stroke-width=\"2\"/>\n</svg>"}
+className={`w-html-embed c1o5abpq ckmtqrf c1vyxdsx cwhac3e ce2idg c1rpiv5h c1ynqduu`} />
+</Button>
+</NavigationMenuTrigger>
+<NavigationMenuContent
+className={`w-menu-content`}>
+<div
+className={`w-element cvfl1ur`}>
+<div
+className={`w-element c139pwc6 caeuris c5ftqtp c1ux94pn`}>
+<div
+className={`w-element cvfl1ur c1nige7o`}>
+<div
+className={`w-element cmsm1bz cstbpo8 cei1sgf c13gen24 cn87dm8 c1uhhf7h c1txodcv c1t86vhp`}>
+<Link
+href={"/about"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"About"}
+</Link>
+<Link
+href={"/team"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Team"}
+</Link>
+<Link
+href={"/testimonials"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Testimonials"}
+</Link>
+</div>
+</div>
+</div>
+</div>
+<div
+className={`w-element cwpwdsd c1dk4ika c1epvuph coqffc6 cyuxmdg cauq8n4`} />
+</NavigationMenuContent>
+</NavigationMenuItem>
+<NavigationMenuItem
+data-ws-index="2"
+className={`w-menu-item`}>
+<NavigationMenuTrigger>
+<Button
+className={`w-button c82qwqc c1numhkq cacmu18 c1g3mhtg c1diokdk ct0qrmw ciffqr1 csd3qkx c1ehmfnq cwr9gsc c15ai560 c1ch8bq c1epvuph cl3mvj8 c1s8fcmc c52c9e5 c1hano35 c1z0avtf c1dih41b c1rgg99s cgtmmxo c1cukx3 c1r2737e c3su6au c1d7h9xn c1ryk5rj c13qspjq c1cqma02 c1jvw4nv c1yhof13 cv0jqge cq3iv3s cja6q2j czdv9km cjkauba cahz6x0 cmchden cxzxhbd cwwh2w3 cs196t2 cj1pg9y c1m75s0d c1g6i14v`}>
+<Text
+className={`w-text`}>
+{"Gallery & Resources"}
+</Text>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 10 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M1 3.5L5 7.5L9 3.5\" stroke=\"black\" stroke-width=\"2\"/>\n</svg>"}
+className={`w-html-embed c1o5abpq ckmtqrf c1vyxdsx cwhac3e ce2idg c1rpiv5h c1ynqduu`} />
+</Button>
+</NavigationMenuTrigger>
+<NavigationMenuContent
+className={`w-menu-content`}>
+<div
+className={`w-element cvfl1ur`}>
+<div
+className={`w-element c139pwc6 caeuris c5ftqtp c1ux94pn`}>
+<div
+className={`w-element cvfl1ur c1nige7o`}>
+<div
+className={`w-element cmsm1bz cstbpo8 cei1sgf c13gen24 cn87dm8 c1uhhf7h c1txodcv c1t86vhp`}>
+<Link
+href={"/gallery"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Gallery"}
+</Link>
+<Link
+href={"/financing"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Financing"}
+</Link>
+<Link
+href={"/warranty"}
+target={"_self"}
+className={`w-element chxc8gf c1numhkq cacmu18 c1g3mhtg c1diokdk c3auquk cfcahn6 c1hx6vht c139pwc6 c1d8rs8t c1b2b7rn cspait9 c52c9e5 c1hano35 c1z0avtf c1dih41b c1h94pli c1r2737e cgtmmxo c1cukx3 c3su6au cgrnuxo cepejyx cahz6x0 cmchden c17g1svm cv0jsgj c23isvc c95n8c2`}>
+{"Warranty"}
+</Link>
+</div>
+</div>
+</div>
+</div>
+<div
+className={`w-element cwpwdsd c1dk4ika c1epvuph coqffc6 cyuxmdg cauq8n4`} />
+</NavigationMenuContent>
+</NavigationMenuItem>
+</NavigationMenuList>
+<Box
+className={`w-box cnbug7k cp1dmkc c137qtrl c1numhkq ch3nxmx cwpwdsd c1n7qu2 c15yzrzw cn87dm8 c1uhhf7h ${"viewport-container"}`}>
+<NavigationMenuViewport
+className={`w-menu-viewport c1epvuph c1n7qu2 cwpwdsd c15yzrzw c1vw8sg2 c1rp6s1w c1j9ucwl cjvrt4 ${"menu-viewport"}`} />
+</Box>
+</NavigationMenu>
+<div
+className={`w-element c1numhkq c1diokdk ct0qrmw c1j3nit7 c1s88tz3 c1epvuph c6hmdm4 c1jn3g1o crrgqm2 c1k3tb45 c147jfvk`}>
+<Link_1
+href={"tel:3017696909"}
+target={"_blank"}
+className={`w-link crv3s27 c82qwqc ch7xx7z cacmu18 c1jhz2vv`}>
+{"301.769.6909"}
+</Link_1>
+<Link_1
+href={"/quote"}
+target={"_self"}
+className={`w-link cekr8vl cyzpk7y cm1pdbc cacmu18 crv3s27 c1u81kxm c1v2l8nt c1diokdk ch3nxmx c1lzjd2w c1g3mhtg c1ayp6pz c1ojdguz cy8kgz2 c1owcyig c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da c1s8fcmc c1p4xat6 c7mkn1n cahz6x0 cmchden cxelgob cimel00 c805dql cdubd0c c5wc26g c4egqsl c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 c14u3pz9 c1kw2xmj c15i5s1m c18iqfv2`}>
+{"Get Free Quote"}
+</Link_1>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<HtmlEmbed
+code={"<!-- 1. Menu viewport observer -->\n<script type=\"module\">\nconst observer = new MutationObserver(() => {\n  const isMenuOpen = !!document.querySelector('.menu-viewport');\n  document.body.classList.toggle('menu-open', isMenuOpen);\n});\n\nobserver.observe(document.body, {\n  childList: true,\n  subtree: true\n});\n</script>\n\n<!-- 2. Sticky nav -->\n<script type=\"module\">\ntry {\n  if (window.innerWidth >= 991) {\n    const standardNav = document.querySelector(\".nav.is--standard\");\n    const stickyNav = document.querySelector(\".nav.is--sticky\");\n\n    if (!standardNav || !stickyNav) throw new Error(\"Standard or Sticky navigation elements not found.\");\n\n    stickyNav.style.position = 'fixed';\n    stickyNav.style.top = '0';\n    stickyNav.style.left = '0';\n    stickyNav.style.right = '0';\n    stickyNav.style.willChange = 'transform';\n    stickyNav.style.transition = 'transform 0.3s ease-out';\n    stickyNav.style.transform = 'translateY(-101%)';\n    stickyNav.style.WebkitTransform = 'translateY(-101%)';\n\n    const switchPoint = 150;\n    let lastScrollPosition = window.scrollY;\n    let ticking = false;\n\n    function applyNavState() {\n      const currentScrollPosition = window.scrollY;\n\n      if (Math.abs(currentScrollPosition - lastScrollPosition) > 5 || currentScrollPosition === 0) {\n        if (currentScrollPosition > switchPoint) {\n          standardNav.style.visibility = 'hidden';\n          stickyNav.style.pointerEvents = 'auto';\n          requestAnimationFrame(() => {\n            stickyNav.style.transform = 'translateY(0%)';\n            stickyNav.style.WebkitTransform = 'translateY(0%)';\n          });\n        } else {\n          standardNav.style.visibility = 'visible';\n          stickyNav.style.pointerEvents = 'none';\n          requestAnimationFrame(() => {\n            stickyNav.style.transform = 'translateY(-101%)';\n            stickyNav.style.WebkitTransform = 'translateY(-101%)';\n          });\n        }\n        lastScrollPosition = currentScrollPosition;\n      }\n      ticking = false;\n    }\n\n    function setNavState() {\n      applyNavState();\n    }\n\n    window.addEventListener(\"scroll\", () => {\n      if (!ticking) {\n        requestAnimationFrame(applyNavState);\n        ticking = true;\n      }\n    }, { passive: true });\n\n    document.body.addEventListener(\"click\", () => {\n      requestAnimationFrame(setNavState);\n    });\n\n    let resizeTimeout;\n    window.addEventListener('resize', () => {\n      clearTimeout(resizeTimeout);\n      resizeTimeout = setTimeout(() => {\n        if (window.innerWidth < 991) {\n          standardNav.style.visibility = 'visible';\n          stickyNav.style.transform = 'translateY(-101%)';\n          stickyNav.style.WebkitTransform = 'translateY(-101%)';\n        }\n      }, 250);\n    }, { passive: true });\n  }\n} catch (error) {\n  console.error(error.message);\n}\n</script>\n\n<!-- 3. Dropdown/submenu -->\n<script type=\"module\">\ndocument.body.addEventListener('click', (e) => {\n  if (e.target.matches('.plus-link.is-2')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList2 = document.querySelector('.dropdown-list.is-2');\n    if (!mainList || !subList2) return;\n    mainList.style.height = '0';\n    mainList.style.overflow = 'hidden';\n    subList2.style.height = subList2.scrollHeight + 'px';\n    subList2.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.plus-link.is-3')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList3 = document.querySelector('.dropdown-list.is-3');\n    if (!mainList || !subList3) return;\n    mainList.style.height = '0';\n    mainList.style.overflow = 'hidden';\n    subList3.style.height = subList3.scrollHeight + 'px';\n    subList3.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.back-link.is-1')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList2 = document.querySelector('.dropdown-list.is-2');\n    if (!mainList || !subList2) return;\n    subList2.style.height = '0';\n    subList2.style.overflow = 'hidden';\n    mainList.style.height = mainList.scrollHeight + 'px';\n    mainList.style.overflow = 'visible';\n  }\n\n  if (e.target.matches('.back-link.is-2')) {\n    const mainList = document.querySelector('.dropdown-list.is-1');\n    const subList3 = document.querySelector('.dropdown-list.is-3');\n    if (!mainList || !subList3) return;\n    subList3.style.height = '0';\n    subList3.style.overflow = 'hidden';\n    mainList.style.height = mainList.scrollHeight + 'px';\n    mainList.style.overflow = 'visible';\n  }\n});\n</script>\n\n<!-- 4. Hamburger + custom menu -->\n<script type=\"module\">\ndocument.addEventListener('click', (e) => {\n  const backIcon = e.target.closest('.nav-icon');\n  const hamburger = e.target.closest('.hamburger');\n\n  if (backIcon && document.body.classList.contains('is-nav-open')) {\n    document.body.classList.remove('is-nav-open');\n    return;\n  }\n\n  if (hamburger && !document.body.classList.contains('is-nav-open')) {\n    document.body.classList.add('is-nav-open');\n    return;\n  }\n});\n  document.addEventListener('mouseover', (e) => {\n  if (e.target.closest('.bg-overlay')) {\n    document.body.classList.remove('is-nav-open');\n  }\n});\n</script>"}
+clientOnly={true}
+className={`w-html-embed`} />
+</Fragment_1>
+</Slot>
+<Box
+tag={"main"}
+className={`w-box c1cgr5pa`}>
+<section
+className={`w-element`}>
+<div
+className={`w-element c4vc9qx c9tjkc5 cuuqpxp c94gu0k c7iyr7r cmpwmbp cwq5w9j c19p1lxn c1e31mqg c17bzoun`}>
+<div
+className={`w-element c139pwc6 caeuris c5ftqtp c1ux94pn`}>
+<div
+className={`w-element c1numhkq c15kiuw7 c3auquk c1isf9uf cijiccc c4ph8p6 cvrapzf c119v29c c13d76g4`}>
+<div
+className={`w-element c1423fjr cyovuht`}>
+<div
+className={`w-element c1numhkq c16ylqcw cndxds`}>
+<Link
+href={"/siding/james-hardie"}
+target={"_self"}
+className={`w-element c1numhkq c1diokdk ct0qrmw c1e3sjlf c16xjt02 c1g3mhtg chxc8gf c16mxt5b cacmu18`}>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 28 13\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M6.70496 0.499998L7.99852 1.64469L3.50699 5.66399L28 5.66399L28 7.33601L3.50699 7.33601L7.99852 11.3489L6.70496 12.5L5.24537e-07 6.5L6.70496 0.499998Z\" fill=\"black\"/>\n</svg>"}
+className={`w-html-embed c1numhkq c1nu7j0d c1bm6nma`} />
+<p
+className={`w-element`}>
+{"View James Hardie Siding"}
+</p>
+</Link>
+</div>
+<div
+className={`w-element chradd5 c139pwc6`}>
+<div
+className={`w-element c1numhkq c139pwc6 c1txodcv`}>
+<div
+data-color-switch={TimbertechColorData?.data?.data?.timbertech?.[0]?.colorBackground}
+className={`w-element c1numhkq c1a06u5s c1kssyyd c3nuxyf cxlc9gr c15sicby c2ewhm1 c6fi43o c139pwc6 cp9nrgo c1epvuph c1lvj0n c160frmp c1gq5osj cufdnsv c19xkq3v c1t8xhs1 cuwoxsi c1t4xpm1 culorum`}>
+<HtmlEmbed
+code={"<!--<svg width=\"32\" height=\"31\" viewBox=\"0 0 32 31\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16 0C7.22415 0 0 6.85496 0 15.4237C0 23.9924 7.22415 30.8473 16 30.8473C24.7759 30.8473 32 23.8834 32 15.4237C32 6.96392 24.7656 0 16 0ZM14.6949 28.1033L17.1818 20.9017H20.0283L17.6545 27.9845C17.0584 28.1033 16.5857 28.1033 16 28.1033H14.6949ZM21.6827 26.8453L26.8927 11.5405H23.3372L21.3231 17.2563H18.4766L20.3777 11.5405H16.8221L11.3757 27.301C6.40206 25.4684 2.8465 20.7927 2.8465 15.4237C2.8465 8.9055 7.82017 3.53645 14.4586 2.74396L11.1394 12.115H11.0161C10.307 14.1755 9.94734 15.3147 9.00193 15.1958C8.16956 14.968 8.29287 14.3934 8.52922 13.8288C8.76558 13.2542 9.23828 11.5405 9.23828 11.5405H5.68272C5.68272 11.5405 4.97367 13.1354 4.73732 14.2845C4.50096 15.4237 4.73732 17.7119 7.69685 18.3955C10.7797 19.3068 12.5575 17.4841 13.5029 15.1958C13.8626 14.3934 16.9351 5.94361 18.0039 2.86284C24.2826 3.77419 29.1432 9.03428 29.1432 15.4336C29.1432 20.4559 26.0604 24.8046 21.6827 26.8552V26.8453Z\" fill=\"white\"/>\n</svg>\n<image width=\"32\" height=\"31\"  src='https://cdn.prod.website-files.com/64bd6cb099271195afd55550/677c070469d339cf57f2880e_Timbertech.svg'> </image>\n-->\n<!--?xml version=\"1.0\" encoding=\"UTF-8\"?-->\n<!-- Generated by Pixelmator Pro 3.6.14 -->\n<svg width=\"auto\" height=\"31\" viewBox=\"0 0 1024 297\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n    <image id=\"Image-Layer\" x=\"0\" y=\"0\" width=\"1024\" height=\"297\" xlink:href=\"data:image/png;base64, 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\"></image>\n</svg>"}
+className={`w-html-embed c1numhkq c1diokdk ch3nxmx cnbug7k cdof9f0 c1n0ty85 c1r07he0 c4wcauq c1dufz1a c1tj1u8y`} />
+<div
+className={`w-element cgspg4o`}>
+<h1
+className={`w-element ch6a81d c1rfqsq6 c1vgwqmx c1g3mhtg c1lvj0n c1ve0prg`}>
+{TimbertechColorData?.data?.data?.timbertech?.[0]?.colorName}
+</h1>
+</div>
+<p
+className={`w-element c1g3mhtg`}>
+{TimbertechColorData?.data?.data?.timbertech?.[0]?.sliderText}
+</p>
+</div>
+<div
+className={`w-element c139pwc6 cn87dm8 c1uhhf7h ${"swiper"}`}>
+<div
+className={`w-element c1numhkq c139pwc6 ${"swiper-wrapper"}`}>
+{(TimbertechColorData?.data?.data?.timbertech?.[0]?.sliderImage1?.url ? true : false) &&
+<div
+className={`w-element c139pwc6 c18bj3o3 c1lq6pq8 c1epvuph ${"swiper-slide"}`}>
+<Image
+loading={"eager"}
+src={"https://cms.improveitmd.com" + TimbertechColorData?.data?.data?.timbertech?.[0]?.sliderImage1?.url}
+alt={TimbertechColorData?.data?.data?.timbertech?.[0]?.altTextSliderImage1}
+className={`w-image c139pwc6 c1numhkq c1mcsn9a czbu68a cuxa4wk c15vs04h c1gaefz7 cknnq3k`} />
+</div>
+}
+{(TimbertechColorData?.data?.data?.timbertech?.[0]?.sliderImage2?.url ? true : false) &&
+<div
+className={`w-element c139pwc6 c18bj3o3 c1lq6pq8 c1epvuph ${"swiper-slide"}`}>
+<Image
+loading={"eager"}
+src={"https://cms.improveitmd.com" + TimbertechColorData?.data?.data?.timbertech?.[0]?.sliderImage2?.url}
+alt={TimbertechColorData?.data?.data?.timbertech?.[0]?.altTextSliderImage2}
+className={`w-image c139pwc6 c1numhkq c1mcsn9a czbu68a cuxa4wk c15vs04h c1gaefz7 cknnq3k`} />
+</div>
+}
+{(TimbertechColorData?.data?.data?.timbertech?.[0]?.sliderImage3?.url ? true : false) &&
+<div
+className={`w-element c139pwc6 c18bj3o3 c1lq6pq8 c1epvuph ${"swiper-slide"}`}>
+<Image
+loading={"eager"}
+src={"https://cms.improveitmd.com" + TimbertechColorData?.data?.data?.timbertech?.[0]?.sliderImage3?.url}
+alt={TimbertechColorData?.data?.data?.timbertech?.[0]?.altTextSliderImage3}
+className={`w-image c139pwc6 c1numhkq c1mcsn9a czbu68a cuxa4wk c15vs04h c1gaefz7 cknnq3k`} />
+</div>
+}
+{(TimbertechColorData?.data?.data?.timbertech?.[0]?.sliderImage4?.url ? true : false) &&
+<div
+className={`w-element c139pwc6 c18bj3o3 c1lq6pq8 c1epvuph ${"swiper-slide"}`}>
+<Image
+loading={"eager"}
+src={"https://cms.improveitmd.com" + TimbertechColorData?.data?.data?.timbertech?.[0]?.sliderImage4?.url}
+className={`w-image c139pwc6 c1numhkq c1mcsn9a czbu68a cuxa4wk c15vs04h c1gaefz7 cknnq3k`} />
+</div>
+}
+{(TimbertechColorData?.data?.data?.timbertech?.[0]?.sliderImage5?.url ? true : false) &&
+<div
+className={`w-element c139pwc6 c18bj3o3 c1lq6pq8 c1epvuph ${"swiper-slide"}`}>
+<Image
+loading={"eager"}
+src={"https://cms.improveitmd.com" + TimbertechColorData?.data?.data?.timbertech?.[0]?.sliderImage5?.url}
+className={`w-image c139pwc6 c1numhkq c1mcsn9a czbu68a cuxa4wk c15vs04h c1gaefz7 cknnq3k`} />
+</div>
+}
+{(TimbertechColorData?.data?.data?.timbertech?.[0]?.sliderImage6?.url ? true : false) &&
+<div
+className={`w-element c139pwc6 c18bj3o3 c1lq6pq8 c1epvuph ${"swiper-slide"}`}>
+<Image
+loading={"eager"}
+src={"https://cms.improveitmd.com" + TimbertechColorData?.data?.data?.timbertech?.[0]?.sliderImage6?.url}
+className={`w-image c139pwc6 c1numhkq c1mcsn9a czbu68a cuxa4wk c15vs04h c1gaefz7 cknnq3k`} />
+</div>
+}
+</div>
+<div
+className={`w-element ${"swiper-button-prev"}`} />
+<div
+className={`w-element ${"swiper-button-next"}`} />
+<div
+className={`w-element c1numhkq c1diokdk ct0qrmw c1e3sjlf c16xjt02 c2j7e41 c17hzluz cnbug7k c1vue08o c4ily4v c19wpft8 c189czh1 c1edz3f7 ${"swiper-pagination"}`} />
+</div>
+</div>
+<div
+className={`w-element c1numhkq c3auquk cqilze0 c1pit5s0 c3qgmhh c6fi43o c11q9q0a c1lbbsf4 c1uct8s0 chgh83 c13zf6d8 c1emolb3 c15oxch4 c1grkorx cyfjsva c15q1q25 c19xkq3v c1t8xhs1 cuwoxsi c1t4xpm1`}>
+<div
+className={`w-element c1numhkq c1a06u5s c1603wqb c1rh6bbe c17rwy3n c13g3obg`}>
+<p
+className={`w-element c309ipl cn7k83s`}>
+{TimbertechColorData?.data?.data?.timbertech?.[0]?.sliderHeading}
+</p>
+<p
+className={`w-element c1g3mhtg`}>
+{TimbertechColorData?.data?.data?.timbertech?.[0]?.subHeading}
+</p>
+</div>
+<HtmlEmbed
+code={TimbertechColorData?.data?.data?.timbertech?.[0]?.sliderDetail}
+className={`w-html-embed c132nttf c1p3vy0t c56odag c1hqutl1 cjx1ika c1xpbze2 clu1n36 c1stgdk8 c8qrtxl c1sl5awa cbddvez cp277i2 cgqh2e c1tb6avz cnwe5rt`}>
+</HtmlEmbed>
+</div>
+</div>
+<div
+className={`w-element chradd5 ckjlu1b cqbpg9k c1fmrwe0 c2ewhm1 c1numhkq c1diokdk c3auquk cqilze0 co72if5 c1sq4bmy c1rhtxq1 c2yws97 c1qporyx c1n5kit4 cb5io3 c4ph8p6 c14e2i27 c84c42r cuwoxsi c1t4xpm1 c19xkq3v c1t8xhs1 ciylvte cn3kss`}>
+<div
+className={`w-element c1numhkq c1diokdk ct0qrmw cj1o4tp c1q4fbwg c1350r63 ci18zyn`}>
+<div
+className={`w-element c1numhkq`}>
+<Image
+alt={""}
+loading={"lazy"}
+src={"https://cms.improveitmd.com" + TimbertechColorData?.data?.data?.timbertech?.[0]?.ctaImage1?.url}
+className={`w-image ce8qyo9 c1hwvjgs cdmu5h7 czbu68a cm2j0bx cw0d079 c1mpqvj6 c18kyhsr c81ebuq c1uxzb4l`} />
+<Image
+alt={""}
+src={"https://cms.improveitmd.com" + TimbertechColorData?.data?.data?.timbertech?.[0]?.ctaImage2?.url}
+className={`w-image ce8qyo9 c1hwvjgs cdmu5h7 czbu68a cm2j0bx cizkilu cw0d079 c1mpqvj6 c18kyhsr c81ebuq c1uxzb4l`} />
+</div>
+<div
+className={`w-element chxc8gf c116chg4 c1v90cn6 c1exxhe2`}>
+<p
+className={`w-element c309ipl cn7k83s`}>
+{TimbertechColorData?.data?.data?.timbertech?.[0]?.ctaName}
+</p>
+<p
+className={`w-element c309ipl`}>
+{TimbertechColorData?.data?.data?.timbertech?.[0]?.ctaText}
+</p>
+</div>
+</div>
+<Link_1
+href={"/quote"}
+target={"_self"}
+className={`w-link c1lvj0n c1t6vvls cpxswal cacmu18 c1numhkq c1u81kxm c1v2l8nt c1diokdk ch3nxmx cxw1g6g cn7k83s c1d8rs8t c5mb4u7 cx6mbsi cialqto c1vzqn6x csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c13qspjq c1cqma02 c1jvw4nv c1yhof13 c8d36da c10lg9mv cahz6x0 cmchden c1ou92f6 c10iz0pl c5g53jj cba5e3y c11tmsyr celyf79 ce7eq67 ctsgeyf c1plys2`}>
+{"Get free siding quote"}
+</Link_1>
+</div>
+<div
+className={`w-element c9te4zd c1k5oipc c1rw16yv`}>
+<div
+className={`w-element c1numhkq c1pit5s0 c3qgmhh c5zgd1 c11b3qd4 c15ai560 c1ch8bq c1jyyt23 c1nnsgto c13zf6d8 c1emolb3 cmcyiss c1350r63`}>
+<div
+className={`w-element c1numhkq c1a06u5s c17rwy3n c1603wqb c139pwc6 chxc8gf c13x9huo`}>
+<p
+className={`w-element c1s18yzb c18mkjfw c1w9fs99 chxc8gf c61em0b`}>
+{"Classic collection"}
+</p>
+<div
+className={`w-element`}>
+<div
+className={`w-element c1numhkq c1a06u5s`}>
+{Object.entries(
+  // @ts-ignore
+  TimbertechColorCollection?.data?.data?.timbertech ?? {}
+).map(([_key, TimbertechCollectionItem]: any) => {
+  const index = Array.isArray(TimbertechColorCollection?.data?.data?.timbertech) ? Number(_key) : _key;
+  return (
+<Fragment key={index}>
+<div
+data-load={""}
+className={`w-element`}>
+<Link
+href={TimbertechCollectionItem?.slug}
+className={`w-element c139pwc6 cjkauba c1s18yzb c18mkjfw chxc8gf c1g3mhtg cacmu18 c1w9fs99 c1hwvjgs co5u01l c10sfw4k cizmntn`}>
+<div
+className={`w-element c1numhkq c1diokdk ct0qrmw cx65f0m ccycp51`}>
+<Image
+loading={"eager"}
+src={"https://cms.improveitmd.com" + TimbertechCollectionItem?.mainImage?.url}
+className={`w-image c7m60u8 c1hwvjgs cdmu5h7 czbu68a`} />
+<p
+className={`w-element`}>
+{TimbertechCollectionItem?.colorName}
+</p>
+</div>
+</Link>
+</div>
+</Fragment>
+)
+})
+}
+</div>
+</div>
+<div
+id={"show-more-btn"}
+className={`w-element c1osufuw c3sv84c c84c42r c692af8 cyovuht c18nth9q c1yxpnyl cdf5b6t c191rxgo cvp5m4g c2ivjhq c1s9relc cw9icsd cg4adzd`}>
+<p
+className={`w-element`}>
+{"SEE MORE COLORS"}
+</p>
+<HtmlEmbed
+code={"<svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M7 0V14\" stroke=\"black\"/>\n<path d=\"M0 7L14 7\" stroke=\"black\"/>\n</svg>"}
+className={`w-html-embed c1osufuw`} />
+</div>
+</div>
+</div>
+</div>
+<div
+className={`w-element c1numhkq c1a06u5s co72if5 c1sq4bmy chradd5`}>
+<div
+className={`w-element c1numhkq c1diokdk c3auquk co72if5 c1sq4bmy cxlc9gr c4vc9qx c15sicby cwudqht c1jyyt23 c1nnsgto c13zf6d8 c1emolb3 c1pmjcwn c4ph8p6 cvrapzf c1yt6hv7 cuwoxsi c1t4xpm1 c19xkq3v c1t8xhs1`}>
+<div
+className={`w-element c6majsq c13g3obg`}>
+<HtmlEmbed
+code={TimbertechColorData?.data?.data?.timbertech?.[0]?.featureHeadingText1}
+className={`w-html-embed c1pgvi0o c1dk6ilb c1g0pfrk c1eqn05n cjgoiwu cmgvp6y c1hqutl1 c1w7sn6e c15wbc3l cpt7she c19pydqo cojmhy2`}>
+</HtmlEmbed>
+</div>
+<div
+className={`w-element c1epvuph`}>
+<Image
+loading={"lazy"}
+src={"https://cms.improveitmd.com" + TimbertechColorData?.data?.data?.timbertech?.[0]?.featureImage1?.url}
+className={`w-image c17sa3vv c1hwvjgs c1mcsn9a czbu68a c11ubq38 c1epvuph cgwe1hs cyovuht c14qslfi`} />
+</div>
+</div>
+<div
+className={`w-element c1numhkq c1diokdk c3auquk co72if5 c1sq4bmy cxlc9gr c4vc9qx c15sicby cwudqht c1jyyt23 c1nnsgto c13zf6d8 c1emolb3 c1pmjcwn c4ph8p6 cvrapzf c1yt6hv7 cuwoxsi c1t4xpm1 c19xkq3v c1t8xhs1`}>
+<div
+className={`w-element c6majsq c13g3obg`}>
+<HtmlEmbed
+code={TimbertechColorData?.data?.data?.timbertech?.[0]?.featureHeadingText2}
+className={`w-html-embed c1pgvi0o c1dk6ilb c1g0pfrk c1eqn05n cjgoiwu cmgvp6y c1hqutl1 c1w7sn6e c15wbc3l cpt7she c19pydqo cojmhy2`}>
+</HtmlEmbed>
+</div>
+<div
+className={`w-element c1epvuph`}>
+<Image
+loading={"lazy"}
+src={"https://cms.improveitmd.com" + TimbertechColorData?.data?.data?.timbertech?.[0]?.featureImage2?.url}
+className={`w-image c17sa3vv c1hwvjgs cdmu5h7 czbu68a c11ubq38 c1epvuph cgwe1hs cyovuht c14qslfi`} />
+</div>
+</div>
+<div
+className={`w-element c1numhkq c1diokdk c3auquk co72if5 c1sq4bmy cxlc9gr c4vc9qx c15sicby cwudqht c1jyyt23 c1nnsgto c13zf6d8 c1emolb3 c1pmjcwn c4ph8p6 cvrapzf c1yt6hv7 cuwoxsi c1t4xpm1 c19xkq3v c1t8xhs1`}>
+<div
+className={`w-element c6majsq c13g3obg`}>
+<HtmlEmbed
+code={TimbertechColorData?.data?.data?.timbertech?.[0]?.featureHeadingText3}
+className={`w-html-embed c1pgvi0o c1dk6ilb c1g0pfrk c1eqn05n cjgoiwu cmgvp6y c1hqutl1 c1w7sn6e c15wbc3l cpt7she c19pydqo cojmhy2`}>
+</HtmlEmbed>
+</div>
+<div
+className={`w-element c1epvuph`}>
+<Image
+loading={"lazy"}
+src={"https://cms.improveitmd.com" + TimbertechColorData?.data?.data?.timbertech?.[0]?.featureImage3?.url}
+className={`w-image c17sa3vv c1hwvjgs cdmu5h7 czbu68a c11ubq38 c1epvuph cgwe1hs cyovuht c14qslfi`} />
+</div>
+</div>
+</div>
+<div
+className={`w-element chradd5`}>
+<Image
+loading={"lazy"}
+src={"https://cms.improveitmd.com" + TimbertechColorData?.data?.data?.timbertech?.[0]?.opengraphImage?.url}
+className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a cwwwhhw c16mwsho c1gaefz7 cvwiaeb`} />
+</div>
+<div
+className={`w-element c1numhkq c1a06u5s c15kiuw7 ct0qrmw co72if5 c1sq4bmy cxlc9gr c15sicby c11q9q0a cddo8ff c1jyyt23 c1nnsgto c13zf6d8 c1emolb3 c1pmjcwn cuwoxsi c1t4xpm1 cybbdyg cljixpu`}>
+<div
+className={`w-element c1numhkq c1a06u5s c10lolld c1irdqs7 c139pwc6 c2wykxe chxc8gf`}>
+<p
+className={`w-element c1d8rs8t c1b2b7rn c1g3mhtg`}>
+{"\"Capitol Improvements did a wonderful job on our new deck! They demolished our old one and built this one in less than a week. They were very detail-oriented and made sure that every step of the process was done well. We will definitely use them again for future projects!\""}
+</p>
+<div
+className={`w-element c1numhkq c1diokdk ct0qrmw c17rwy3n c1603wqb cj9he9d c1otj3om c1nj7z75`}>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 91 18\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M7.34786 1.48663C7.4319 1.1987 7.83978 1.1987 7.92382 1.48663L9.28716 6.15741C9.32452 6.28538 9.44183 6.37336 9.57515 6.37336L14.05 6.37336C14.3327 6.37336 14.4585 6.72879 14.2386 6.90662L10.565 9.87769C10.471 9.95377 10.4318 10.0789 10.4657 10.195L11.8555 14.9567C11.9379 15.2388 11.6074 15.4588 11.3789 15.274L7.82449 12.3993C7.71447 12.3103 7.55722 12.3103 7.44719 12.3993L3.89277 15.274C3.66423 15.4588 3.33378 15.2388 3.41614 14.9567L4.806 10.195C4.83989 10.0789 4.80073 9.95377 4.70667 9.87769L1.03307 6.90662C0.813201 6.72879 0.938942 6.37336 1.22173 6.37336L5.69653 6.37336C5.82984 6.37336 5.94716 6.28538 5.98452 6.15741L7.34786 1.48663Z\" fill=\"#FBBC04\"/>\n<path d=\"M24.2741 1.48663C24.3581 1.1987 24.766 1.1987 24.85 1.48663L26.2134 6.15741C26.2507 6.28538 26.368 6.37336 26.5014 6.37336L30.9762 6.37336C31.2589 6.37336 31.3847 6.72879 31.1648 6.90662L27.4912 9.87769C27.3972 9.95377 27.358 10.0789 27.3919 10.195L28.7818 14.9567C28.8641 15.2388 28.5337 15.4588 28.3051 15.274L24.7507 12.3993C24.6407 12.3103 24.4834 12.3103 24.3734 12.3993L20.819 15.274C20.5904 15.4588 20.26 15.2388 20.3423 14.9567L21.7322 10.195C21.7661 10.0789 21.7269 9.95377 21.6329 9.87769L17.9593 6.90662C17.7394 6.72879 17.8652 6.37336 18.1479 6.37336L22.6227 6.37336C22.7561 6.37336 22.8734 6.28538 22.9107 6.15741L24.2741 1.48663Z\" fill=\"#FBBC04\"/>\n<path d=\"M41.2003 1.48663C41.2843 1.1987 41.6922 1.1987 41.7762 1.48663L43.1396 6.15741C43.1769 6.28538 43.2943 6.37336 43.4276 6.37336L47.9024 6.37336C48.1852 6.37336 48.3109 6.72879 48.091 6.90662L44.4174 9.87769C44.3234 9.95377 44.2842 10.0789 44.3181 10.195L45.708 14.9567C45.7903 15.2388 45.4599 15.4588 45.2313 15.274L41.6769 12.3993C41.5669 12.3103 41.4096 12.3103 41.2996 12.3993L37.7452 15.274C37.5167 15.4588 37.1862 15.2388 37.2686 14.9567L38.6584 10.195C38.6923 10.0789 38.6531 9.95377 38.5591 9.87769L34.8855 6.90662C34.6656 6.72879 34.7914 6.37336 35.0741 6.37336L39.549 6.37336C39.6823 6.37336 39.7996 6.28538 39.8369 6.15741L41.2003 1.48663Z\" fill=\"#FBBC04\"/>\n<path d=\"M58.1265 1.48663C58.2106 1.1987 58.6185 1.1987 58.7025 1.48663L60.0658 6.15741C60.1032 6.28538 60.2205 6.37336 60.3538 6.37336L64.8286 6.37336C65.1114 6.37336 65.2372 6.72879 65.0173 6.90662L61.3437 9.87769C61.2496 9.95377 61.2105 10.0789 61.2444 10.195L62.6342 14.9567C62.7166 15.2388 62.3861 15.4588 62.1576 15.274L58.6032 12.3993C58.4932 12.3103 58.3359 12.3103 58.2259 12.3993L54.6715 15.274C54.4429 15.4588 54.1125 15.2388 54.1948 14.9567L55.5847 10.195C55.6186 10.0789 55.5794 9.95377 55.4854 9.87769L51.8118 6.90662C51.5919 6.72879 51.7176 6.37336 52.0004 6.37336L56.4752 6.37336C56.6085 6.37336 56.7259 6.28538 56.7632 6.15741L58.1265 1.48663Z\" fill=\"#FBBC04\"/>\n<path d=\"M75.0528 1.48663C75.1368 1.1987 75.5447 1.1987 75.6287 1.48663L76.9921 6.15741C77.0294 6.28538 77.1467 6.37336 77.28 6.37336L81.7548 6.37336C82.0376 6.37336 82.1634 6.72879 81.9435 6.90662L78.2699 9.87769C78.1758 9.95377 78.1367 10.0789 78.1706 10.195L79.5604 14.9567C79.6428 15.2388 79.3123 15.4588 79.0838 15.274L75.5294 12.3993C75.4194 12.3103 75.2621 12.3103 75.1521 12.3993L71.5977 15.274C71.3691 15.4588 71.0387 15.2388 71.121 14.9567L72.5109 10.195C72.5448 10.0789 72.5056 9.95377 72.4116 9.87769L68.738 6.90662C68.5181 6.72879 68.6438 6.37336 68.9266 6.37336L73.4014 6.37336C73.5347 6.37336 73.6521 6.28538 73.6894 6.15741L75.0528 1.48663Z\" fill=\"#FBBC04\"/>\n</svg>"}
+className={`w-html-embed c1numhkq c1diokdk ch3nxmx ctittuf c1ovmx1o`} />
+<p
+className={`w-element`}>
+{"Ashley K., "}
+<Link
+href={"https://g.co/kgs/7Ud1itB"}
+target={"_blank"}
+className={`w-element`}>
+{"Google Review"}
+</Link>
+</p>
+</div>
+</div>
+<Link_1
+href={"/testimonials"}
+target={"_self"}
+className={`w-link c1mcq22u crv3s27 cacmu18 cn7k83s cyc4l41 c1d7h9xn c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au c18mkjfw cahz6x0 cmchden cdvg2t`}>
+{"READ MORE REVIEWS >"}
+</Link_1>
+</div>
+</div>
+<div
+className={`w-element cqy4usc ccc4ni4 c1numhkq c1a06u5s c1pit5s0 c3qgmhh c5d3i40 cyovuht`}>
+<div
+className={`w-element c1numhkq c1pit5s0 c3qgmhh c5zgd1 c11b3qd4 c15ai560 c1ch8bq c1jyyt23 c1nnsgto c13zf6d8 c1emolb3 cmcyiss c1350r63 cs0io4s`}>
+<div
+className={`w-element c1numhkq c1a06u5s c17rwy3n c1603wqb c139pwc6 chxc8gf c13x9huo`}>
+<p
+className={`w-element c1s18yzb c18mkjfw c1w9fs99 chxc8gf c61em0b`}>
+{"Classic collection"}
+</p>
+<div
+className={`w-element`}>
+<div
+className={`w-element c1numhkq c1a06u5s`}>
+{Object.entries(
+  // @ts-ignore
+  TimbertechColorCollection?.data?.data?.timbertech ?? {}
+).map(([_key, TimbertechCollectionItem_1]: any) => {
+  const index_1 = Array.isArray(TimbertechColorCollection?.data?.data?.timbertech) ? Number(_key) : _key;
+  return (
+<Fragment key={index_1}>
+<div
+className={`w-element`}>
+<Link
+href={TimbertechCollectionItem_1?.slug}
+className={`w-element c139pwc6 cjkauba c1s18yzb c18mkjfw chxc8gf c1g3mhtg cacmu18 c1w9fs99 c1hwvjgs co5u01l c10sfw4k cizmntn`}>
+<div
+className={`w-element c1numhkq c1diokdk ct0qrmw cx65f0m ccycp51`}>
+<Image
+loading={"eager"}
+src={"https://cms.improveitmd.com" + TimbertechCollectionItem_1?.mainImage?.url}
+className={`w-image c7m60u8 c1hwvjgs cdmu5h7 czbu68a`} />
+<p
+className={`w-element`}>
+{TimbertechCollectionItem_1?.colorName}
+</p>
+</div>
+</Link>
+</div>
+</Fragment>
+)
+})
+}
+</div>
+</div>
+</div>
+</div>
+<div
+className={`w-element c1numhkq c1a06u5s cmss651 c1m1tkhz cjxj442 cemw4au c12fmqv1 cgur7bc chxc8gf ctyajst c1ab5oob cnikeys c10k3jam cn0qaoo cmcyiss c1hce33d c1oxe5xw c19xkq3v c1t8xhs1 cuwoxsi c1t4xpm1`}>
+<div
+className={`w-element c1numhkq c1a06u5s c1g6iued c7r3o1f cgsbbz0 cq9r5tw`}>
+<p
+className={`w-element c92kv7i c18mkjfw c1g3mhtg cr9y1tm cl197ma`}>
+{"Financing"}
+{""}
+<br />
+{""}
+{"Made Easy."}
+</p>
+<p
+className={`w-element c1g3mhtg c309ipl c18mkjfw c116chg4`}>
+{"As low as $99/month"}
+</p>
+</div>
+<Link
+href={"/financing"}
+target={"_self"}
+className={`w-element c1hwvjgs c1d8rs8t c18mkjfw chxc8gf cspait9 c1jqias8 c1g3mhtg`}>
+{"Learn about our financing"}
+</Link>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section
+className={`w-element c1f8uhde`}>
+<div
+className={`w-element c4vc9qx c9tjkc5 c7nm2dn cgtc7t0 c7iyr7r cmpwmbp cmy3513 cio262d c1gsohh9 c1kqjux0`}>
+<div
+className={`w-element c139pwc6 caeuris c5ftqtp c1ux94pn`}>
+<div
+className={`w-element c1numhkq c1diokdk c3auquk co72if5 c1sq4bmy c4ph8p6 c14e2i27 c84c42r ccsg5nn c1bckwxy`}>
+<div
+className={`w-element c1numhkq c1a06u5s c1j3nit7 c1s88tz3 c1lvj0n c15d24ru cgsbbz0 cq9r5tw`}>
+<h2
+className={`w-element c1q4209f ca98neh cnvsn5k c1lwn44j c1fjww6l c1rjplas cl197ma c1nxn35q`}>
+{"Discover what’s possible."}
+</h2>
+<p
+className={`w-element c309ipl`}>
+{"We're ready to help you build your dream home."}
+</p>
+</div>
+<Link
+href={"/quote"}
+target={"_self"}
+className={`w-element c1numhkq c1diokdk ch3nxmx ciot89f c20rkyc c19ca44z c18qvqba cgspg4o casp2qg ckrq2bq cxzv1vz c1d8rs8t c1b2b7rn c1lvj0n cacmu18 c1p4xat6 c1wzdku c2yws97 c1qporyx c1n5kit4 cb5io3 c61em0b cu6bx9n c10iz0pl c5g53jj cj9n9pi c1g13r1q cuwoxsi c1t4xpm1`}>
+{"Get free decking quote"}
+</Link>
+</div>
+</div>
+</div>
+</section>
+</Box>
+<Slot>
+<Fragment_1>
+<Box
+tag={"footer"}
+id={"contact"}
+className={`w-box cvfl1ur cwpgog4 c9u7chh cud6z1z clrop1m`}>
+<div
+className={`w-element c4vc9qx c9tjkc5 c185jzsb c19wzbh8 c7iyr7r cmpwmbp c5v4dmg`}>
+<div
+className={`w-element c139pwc6 caeuris c5ftqtp c1ux94pn`}>
+<div
+className={`w-element c1numhkq c1a06u5s`}>
+<div
+className={`w-element c1numhkq c3auquk c15kiuw7 c17crvds c1cgy1k1 chradd5 ciqrl3a cyyof5h c1t9puix c19koxyq`}>
+<div
+className={`w-element c1numhkq c1a06u5s c17crvds c1czy0yv cyovuht`}>
+<div
+className={`w-element c1numhkq c1a06u5s c15kiuw7 ct0qrmw c3qgmhh c9nda8s c1oxtvvd c84c42r cwxdxon cyovuht c1atvmzl c1350r63 c62ogy3`}>
+<p
+className={`w-element c1gbsy9l c19fqb9a c82qwqc c181l3p8`}>
+{"© 2024 Capitol Improvements."}
+</p>
+<p
+className={`w-element c1gbsy9l c19fqb9a c82qwqc cia3a62`}>
+{"MHIC 130628 | DC 410519000037 | VA 2705191231 "}
+</p>
+<div
+className={`w-element c1numhkq c15kiuw7 ct0qrmw c1pit5s0 c1ojdguz cw8j8n1 cjnxd6d`}>
+<Link
+href={"https://www.facebook.com/improveitmd"}
+target={"_blank"}
+className={`w-element c156ohex crv3s27 c138ghqs c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au c1gmaf10`}>
+<HtmlEmbed
+code={"<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_9_165)\">\n<path d=\"M16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 11.993 2.92547 15.3027 6.75 15.9028V10.3125H4.71875V8H6.75V6.2375C6.75 4.2325 7.94438 3.125 9.77172 3.125C10.6467 3.125 11.5625 3.28125 11.5625 3.28125V5.25H10.5538C9.56 5.25 9.25 5.86672 9.25 6.5V8H11.4688L11.1141 10.3125H9.25V15.9028C13.0745 15.3027 16 11.993 16 8Z\" fill=\"currentColor\"/>\n</g>\n<defs>\n<clipPath id=\"clip0_9_165\">\n<rect width=\"16\" height=\"16\" fill=\"white\"/>\n</clipPath>\n</defs>\n</svg>"}
+className={`w-html-embed c1numhkq c1diokdk ch3nxmx c1eflpw1 c1utj868 c1xsy0xh`} />
+</Link>
+<Link
+href={"https://www.youtube.com/@capitolimprovements"}
+target={"_blank"}
+className={`w-element c156ohex crv3s27 c138ghqs c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au c1gmaf10`}>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_9_167)\">\n<path d=\"M19.8008 9.03516C19.8008 9.03516 19.6055 7.65625 19.0039 7.05078C18.2422 6.25391 17.3906 6.25 17 6.20312C14.2031 6 10.0039 6 10.0039 6H9.99609C9.99609 6 5.79688 6 3 6.20312C2.60938 6.25 1.75781 6.25391 0.996094 7.05078C0.394531 7.65625 0.203125 9.03516 0.203125 9.03516C0.203125 9.03516 0 10.6563 0 12.2734V13.7891C0 15.4062 0.199219 17.0273 0.199219 17.0273C0.199219 17.0273 0.394531 18.4063 0.992187 19.0117C1.75391 19.8086 2.75391 19.7813 3.19922 19.8672C4.80078 20.0195 10 20.0664 10 20.0664C10 20.0664 14.2031 20.0586 17 19.8594C17.3906 19.8125 18.2422 19.8086 19.0039 19.0117C19.6055 18.4063 19.8008 17.0273 19.8008 17.0273C19.8008 17.0273 20 15.4102 20 13.7891V12.2734C20 10.6563 19.8008 9.03516 19.8008 9.03516ZM7.93359 15.6289V10.0078L13.3359 12.8281L7.93359 15.6289Z\" fill=\"currentColor\"/>\n</g>\n<defs>\n<clipPath id=\"clip0_9_167\">\n<rect width=\"100%\" height=\"100%\" fill=\"white\"/>\n</clipPath>\n</defs>\n</svg>"}
+className={`w-html-embed c1numhkq c1diokdk ch3nxmx cwfh8jw c8mcv34 c1xsy0xh`} />
+</Link>
+</div>
+</div>
+<div
+className={`w-element c1numhkq c1a06u5s c139pwc6 cjkauba c184q1bs c13g3obg`}>
+<div
+className={`w-element c1numhkq c1a06u5s c16xjt02 c1e3sjlf`}>
+<p
+className={`w-element c1gbsy9l c82qwqc`}>
+{"“The service we received from the initial meeting with Mitch, Seth and Pat was amazing! We were informed of every bit of information throughout the entire process. The installation was also professional, on time and swift.”"}
+</p>
+<div
+className={`w-element c1numhkq c1diokdk ct0qrmw c17rwy3n c1603wqb`}>
+<HtmlEmbed
+code={"<svg width=\"100%\" height=\"100%\" viewBox=\"0 0 91 18\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M7.34786 1.48663C7.4319 1.1987 7.83978 1.1987 7.92382 1.48663L9.28716 6.15741C9.32452 6.28538 9.44183 6.37336 9.57515 6.37336L14.05 6.37336C14.3327 6.37336 14.4585 6.72879 14.2386 6.90662L10.565 9.87769C10.471 9.95377 10.4318 10.0789 10.4657 10.195L11.8555 14.9567C11.9379 15.2388 11.6074 15.4588 11.3789 15.274L7.82449 12.3993C7.71447 12.3103 7.55722 12.3103 7.44719 12.3993L3.89277 15.274C3.66423 15.4588 3.33378 15.2388 3.41614 14.9567L4.806 10.195C4.83989 10.0789 4.80073 9.95377 4.70667 9.87769L1.03307 6.90662C0.813201 6.72879 0.938942 6.37336 1.22173 6.37336L5.69653 6.37336C5.82984 6.37336 5.94716 6.28538 5.98452 6.15741L7.34786 1.48663Z\" fill=\"#FBBC04\"/>\n<path d=\"M24.2741 1.48663C24.3581 1.1987 24.766 1.1987 24.85 1.48663L26.2134 6.15741C26.2507 6.28538 26.368 6.37336 26.5014 6.37336L30.9762 6.37336C31.2589 6.37336 31.3847 6.72879 31.1648 6.90662L27.4912 9.87769C27.3972 9.95377 27.358 10.0789 27.3919 10.195L28.7818 14.9567C28.8641 15.2388 28.5337 15.4588 28.3051 15.274L24.7507 12.3993C24.6407 12.3103 24.4834 12.3103 24.3734 12.3993L20.819 15.274C20.5904 15.4588 20.26 15.2388 20.3423 14.9567L21.7322 10.195C21.7661 10.0789 21.7269 9.95377 21.6329 9.87769L17.9593 6.90662C17.7394 6.72879 17.8652 6.37336 18.1479 6.37336L22.6227 6.37336C22.7561 6.37336 22.8734 6.28538 22.9107 6.15741L24.2741 1.48663Z\" fill=\"#FBBC04\"/>\n<path d=\"M41.2003 1.48663C41.2843 1.1987 41.6922 1.1987 41.7762 1.48663L43.1396 6.15741C43.1769 6.28538 43.2943 6.37336 43.4276 6.37336L47.9024 6.37336C48.1852 6.37336 48.3109 6.72879 48.091 6.90662L44.4174 9.87769C44.3234 9.95377 44.2842 10.0789 44.3181 10.195L45.708 14.9567C45.7903 15.2388 45.4599 15.4588 45.2313 15.274L41.6769 12.3993C41.5669 12.3103 41.4096 12.3103 41.2996 12.3993L37.7452 15.274C37.5167 15.4588 37.1862 15.2388 37.2686 14.9567L38.6584 10.195C38.6923 10.0789 38.6531 9.95377 38.5591 9.87769L34.8855 6.90662C34.6656 6.72879 34.7914 6.37336 35.0741 6.37336L39.549 6.37336C39.6823 6.37336 39.7996 6.28538 39.8369 6.15741L41.2003 1.48663Z\" fill=\"#FBBC04\"/>\n<path d=\"M58.1265 1.48663C58.2106 1.1987 58.6185 1.1987 58.7025 1.48663L60.0658 6.15741C60.1032 6.28538 60.2205 6.37336 60.3538 6.37336L64.8286 6.37336C65.1114 6.37336 65.2372 6.72879 65.0173 6.90662L61.3437 9.87769C61.2496 9.95377 61.2105 10.0789 61.2444 10.195L62.6342 14.9567C62.7166 15.2388 62.3861 15.4588 62.1576 15.274L58.6032 12.3993C58.4932 12.3103 58.3359 12.3103 58.2259 12.3993L54.6715 15.274C54.4429 15.4588 54.1125 15.2388 54.1948 14.9567L55.5847 10.195C55.6186 10.0789 55.5794 9.95377 55.4854 9.87769L51.8118 6.90662C51.5919 6.72879 51.7176 6.37336 52.0004 6.37336L56.4752 6.37336C56.6085 6.37336 56.7259 6.28538 56.7632 6.15741L58.1265 1.48663Z\" fill=\"#FBBC04\"/>\n<path d=\"M75.0528 1.48663C75.1368 1.1987 75.5447 1.1987 75.6287 1.48663L76.9921 6.15741C77.0294 6.28538 77.1467 6.37336 77.28 6.37336L81.7548 6.37336C82.0376 6.37336 82.1634 6.72879 81.9435 6.90662L78.2699 9.87769C78.1758 9.95377 78.1367 10.0789 78.1706 10.195L79.5604 14.9567C79.6428 15.2388 79.3123 15.4588 79.0838 15.274L75.5294 12.3993C75.4194 12.3103 75.2621 12.3103 75.1521 12.3993L71.5977 15.274C71.3691 15.4588 71.0387 15.2388 71.121 14.9567L72.5109 10.195C72.5448 10.0789 72.5056 9.95377 72.4116 9.87769L68.738 6.90662C68.5181 6.72879 68.6438 6.37336 68.9266 6.37336L73.4014 6.37336C73.5347 6.37336 73.6521 6.28538 73.6894 6.15741L75.0528 1.48663Z\" fill=\"#FBBC04\"/>\n</svg>"}
+clientOnly={true}
+className={`w-html-embed c1numhkq c1diokdk ch3nxmx ctittuf c1ovmx1o`} />
+<p
+className={`w-element c1gbsy9l c1g3mhtg c12n66pl`}>
+{"John T, "}
+<Link
+target={"_blank"}
+href={"https://maps.app.goo.gl/1V8v97hcVYFfrdZb8?g_st=ic"}
+className={`w-element cprvrz2 c1uaxhv2 cacmu18 c1ezjj73 cahz6x0 cmchden`}>
+{"Google Review"}
+</Link>
+</p>
+</div>
+</div>
+<div
+className={`w-element caqpu94 cfpk3a8 c139pwc6 cw6436c ccgjom2`} />
+<div
+className={`w-element c1numhkq c1diokdk ct0qrmw cj1o4tp c1q4fbwg c1lg7bh9 c1kioei4`}>
+<p
+className={`w-element ch7xx7z c82qwqc`}>
+{"5.0 Rating"}
+</p>
+<p
+className={`w-element ch7xx7z c82qwqc`}>
+{"445 Reviews"}
+</p>
+<Link
+href={"/testimonials"}
+target={"_self"}
+className={`w-element cprvrz2 c1hwvjgs cacmu18 c1ezjj73 cahz6x0 cmchden`}>
+<p
+className={`w-element ch7xx7z c82qwqc`}>
+{"See more testimonials"}
+</p>
+</Link>
+</div>
+</div>
+</div>
+<div
+className={`w-element c1numhkq c15kiuw7 ct0qrmw c9b0cnn cqsaj3r c1lg7bh9 cles91e cm1f838 cw8j8n1`}>
+<div
+className={`w-element c1numhkq c1a06u5s c38sprm cktayxe ckm36hk`}>
+<p
+className={`w-element c14s91he c18mkjfw c82qwqc cn7k83s`}>
+{"Services"}
+</p>
+<Link
+href={"/roofing"}
+target={"_self"}
+className={`w-element c82qwqc c1hwvjgs cacmu18 c1ezjj73 c1pbbqh7 cswno9y c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au cahz6x0 cmchden c1xsy0xh`}>
+{"Roofing"}
+</Link>
+<Link
+href={"/siding"}
+target={"_self"}
+className={`w-element c82qwqc c1hwvjgs cacmu18 c1ezjj73 c1pbbqh7 cswno9y c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au cahz6x0 cmchden c1xsy0xh`}>
+{"Siding"}
+</Link>
+<Link
+href={"/windows"}
+target={"_self"}
+className={`w-element c82qwqc c1hwvjgs cacmu18 c1ezjj73 c1pbbqh7 cswno9y c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au cahz6x0 cmchden c1xsy0xh`}>
+{"Windows"}
+</Link>
+<Link
+href={"/gutters"}
+target={"_self"}
+className={`w-element c82qwqc c1hwvjgs cacmu18 c1ezjj73 c1pbbqh7 cswno9y c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au cahz6x0 cmchden c1xsy0xh`}>
+{"Gutters"}
+</Link>
+<Link
+href={"/exterior-trim"}
+target={"_self"}
+className={`w-element c82qwqc c1hwvjgs cacmu18 c1ezjj73 c1pbbqh7 cswno9y c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au cahz6x0 cmchden c1xsy0xh`}>
+{"Trim"}
+</Link>
+<Link
+href={"/decks-and-patios"}
+target={"_self"}
+className={`w-element c82qwqc c1hwvjgs cacmu18 c1ezjj73 c1pbbqh7 cswno9y c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au cahz6x0 cmchden c1xsy0xh`}>
+{"Decks & Patios"}
+</Link>
+<Link
+href={"/doors"}
+target={"_self"}
+className={`w-element c82qwqc c1hwvjgs cacmu18 c1ezjj73 c1pbbqh7 cswno9y c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au cahz6x0 cmchden c1xsy0xh`}>
+{"Doors"}
+</Link>
+</div>
+<div
+className={`w-element c1numhkq c1a06u5s c38sprm cktayxe ckm36hk`}>
+<p
+className={`w-element c14s91he c18mkjfw c82qwqc cn7k83s`}>
+{"Company"}
+</p>
+<Link
+href={"/about"}
+target={"_self"}
+className={`w-element c82qwqc c1hwvjgs cacmu18 c1ezjj73 c1pbbqh7 cswno9y c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au cahz6x0 cmchden c1xsy0xh`}>
+{"About Us"}
+</Link>
+<Link
+href={"/team"}
+target={"_self"}
+className={`w-element c82qwqc c1hwvjgs cacmu18 c1ezjj73 c1pbbqh7 cswno9y c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au cahz6x0 cmchden c1xsy0xh`}>
+{"Our Team"}
+</Link>
+<Link
+href={"/service-areas"}
+target={"_self"}
+className={`w-element c82qwqc c1hwvjgs cacmu18 c1ezjj73 c1pbbqh7 cswno9y c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au cahz6x0 cmchden c1xsy0xh`}>
+{"Service Area"}
+</Link>
+<Link
+href={"/locations"}
+target={"_self"}
+className={`w-element c82qwqc c1hwvjgs cacmu18 c1ezjj73 c1pbbqh7 cswno9y c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au cahz6x0 cmchden c1xsy0xh`}>
+{"Locations"}
+</Link>
+<Link
+href={"/testimonials"}
+target={"_self"}
+className={`w-element c82qwqc c1hwvjgs cacmu18 c1ezjj73 c1pbbqh7 cswno9y c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au cahz6x0 cmchden c1xsy0xh`}>
+{"Testimonials"}
+</Link>
+</div>
+<div
+className={`w-element c1numhkq c1a06u5s c38sprm cktayxe ckm36hk`}>
+<p
+className={`w-element c14s91he c18mkjfw c82qwqc cn7k83s`}>
+{"Resources"}
+</p>
+<Link
+href={"/gallery"}
+target={"_self"}
+className={`w-element c82qwqc c1hwvjgs cacmu18 c1ezjj73 c1pbbqh7 cswno9y c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au cahz6x0 cmchden c1xsy0xh`}>
+{"Gallery"}
+</Link>
+<Link
+href={"/financing"}
+target={"_self"}
+className={`w-element c82qwqc c1hwvjgs cacmu18 c1ezjj73 c1pbbqh7 cswno9y c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au cahz6x0 cmchden c1xsy0xh`}>
+{"Financing"}
+</Link>
+<Link
+href={"/warranty"}
+target={"_self"}
+className={`w-element c82qwqc c1hwvjgs cacmu18 c1ezjj73 c1pbbqh7 cswno9y c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au cahz6x0 cmchden c1xsy0xh`}>
+{"Warranty"}
+</Link>
+<Link
+href={"/blog"}
+target={"_self"}
+className={`w-element c82qwqc c1hwvjgs cacmu18 c1ezjj73 c1pbbqh7 cswno9y c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au cahz6x0 cmchden c1xsy0xh`}>
+{"Blog"}
+</Link>
+<Link
+href={"/contact"}
+target={"_self"}
+className={`w-element c82qwqc c1hwvjgs cacmu18 c1ezjj73 c1pbbqh7 cswno9y c8a9tkm c1r2737e cgtmmxo c1cukx3 c3su6au cahz6x0 cmchden c1xsy0xh`}>
+{"Contact"}
+</Link>
+</div>
+</div>
+<div
+className={`w-element c1numhkq c1a06u5s cucbkc3 c82qwqc ciqrl3a c14e2i27 c1y3ergk ct6ryly c6p48t0 cw8j8n1`}>
+<div
+className={`w-element c1numhkq c1a06u5s c1irdqs7 cf8e5pr`}>
+<p
+className={`w-element c14s91he c18mkjfw c82qwqc cn7k83s`}>
+{"Bowie Headquarters"}
+</p>
+<p
+className={`w-element ch7xx7z`}>
+{"12606 Hillmeade Station Dr."}
+{""}
+<br />
+{""}
+{"Bowie, MD 20720"}
+{""}
+<br />
+{""}
+<Link
+href={"tel:3017696909"}
+className={`w-element c82qwqc c1uaxhv2 cacmu18 c1ezjj73 cahz6x0 cmchden`}>
+{"301.769.6909"}
+</Link>
+</p>
+<Link
+href={"https://share.google/1sIvDWDALSZTorUNn"}
+target={"_blank"}
+className={`w-element c1numhkq c1diokdk ct0qrmw cj1o4tp c1q4fbwg cqilze0 c1lg7bh9 c1kioei4`}>
+<div
+href={"https://share.google/1sIvDWDALSZTorUNn"}
+className={`w-element c1numhkq c1eflpw1 cqq3lvy c1diokdk ch3nxmx`}>
+<svg
+viewBox={"-3 0 262 262"}
+xmlns={"http://www.w3.org/2000/svg"}
+preserveAspectRatio={"xMidYMid"}
+fill={"#000000"}
+className={`w-element`}>
+<g
+id={"SVGRepo_bgCarrier"}
+strokeWidth={"0"}
+className={`w-element`} />
+<g
+id={"SVGRepo_tracerCarrier"}
+strokeLinecap={"round"}
+strokeLinejoin={"round"}
+className={`w-element`} />
+<g
+id={"SVGRepo_iconCarrier"}
+className={`w-element`}>
+<path
+d={"M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"}
+fill={"#4285F4"}
+className={`w-element`} />
+<path
+d={"M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"}
+fill={"#34A853"}
+className={`w-element`} />
+<path
+d={"M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"}
+fill={"#FBBC05"}
+className={`w-element`} />
+<path
+d={"M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"}
+fill={"#EB4335"}
+className={`w-element`} />
+</g>
+</svg>
+</div>
+<p
+className={`w-element ch7xx7z c82qwqc`}>
+{"5.0 Rating"}
+</p>
+<p
+className={`w-element ch7xx7z c82qwqc`}>
+{"221 Reviews"}
+</p>
+</Link>
+</div>
+<div
+className={`w-element c1numhkq c1a06u5s c1irdqs7 cf8e5pr`}>
+<p
+className={`w-element c14s91he c18mkjfw c82qwqc cn7k83s`}>
+{"Gaithersburg Branch"}
+</p>
+<p
+className={`w-element ch7xx7z`}>
+{"7916 Plum Creek Dr."}
+{""}
+<br />
+{""}
+{"Gaithersburg, MD 20879"}
+{""}
+<br />
+{""}
+<Link
+href={"tel:3017696991"}
+className={`w-element c82qwqc c1uaxhv2 cacmu18 c1ezjj73 cahz6x0 cmchden`}>
+{"301.769.6991"}
+</Link>
+</p>
+<Link
+href={"https://share.google/Vffum73yhooXPXPvw"}
+target={"_blank"}
+className={`w-element c1numhkq c1diokdk ct0qrmw cj1o4tp c1q4fbwg cqilze0 c1lg7bh9 c1kioei4`}>
+<div
+href={"https://share.google/Vffum73yhooXPXPvw"}
+className={`w-element c1numhkq c1eflpw1 cqq3lvy c1diokdk ch3nxmx`}>
+<svg
+viewBox={"-3 0 262 262"}
+xmlns={"http://www.w3.org/2000/svg"}
+preserveAspectRatio={"xMidYMid"}
+fill={"#000000"}
+className={`w-element`}>
+<g
+id={"SVGRepo_bgCarrier"}
+strokeWidth={"0"}
+className={`w-element`} />
+<g
+id={"SVGRepo_tracerCarrier"}
+strokeLinecap={"round"}
+strokeLinejoin={"round"}
+className={`w-element`} />
+<g
+id={"SVGRepo_iconCarrier"}
+className={`w-element`}>
+<path
+d={"M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"}
+fill={"#4285F4"}
+className={`w-element`} />
+<path
+d={"M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"}
+fill={"#34A853"}
+className={`w-element`} />
+<path
+d={"M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"}
+fill={"#FBBC05"}
+className={`w-element`} />
+<path
+d={"M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"}
+fill={"#EB4335"}
+className={`w-element`} />
+</g>
+</svg>
+</div>
+<p
+className={`w-element ch7xx7z c82qwqc`}>
+{"5.0 Rating"}
+</p>
+<p
+className={`w-element ch7xx7z c82qwqc`}>
+{"157 Reviews"}
+</p>
+</Link>
+</div>
+<div
+className={`w-element c1numhkq c1a06u5s c1irdqs7 cf8e5pr`}>
+<p
+className={`w-element c14s91he c18mkjfw c82qwqc cn7k83s`}>
+{"Washington DC Branch"}
+</p>
+<p
+className={`w-element ch7xx7z`}>
+{"1015 15th St NW #635,"}
+{""}
+<br />
+{""}
+{"Washington, DC 20005"}
+{""}
+<br />
+{""}
+<Link
+href={"tel:4105870128"}
+className={`w-element c82qwqc c1uaxhv2 cacmu18 c1ezjj73 cahz6x0 cmchden`}>
+{"410.587.0128"}
+</Link>
+</p>
+<Link
+href={"https://share.google/qihLqbCG1CYdOwtzJ"}
+target={"_blank"}
+className={`w-element c1numhkq c1diokdk ct0qrmw cj1o4tp c1q4fbwg cqilze0 c1lg7bh9 c1kioei4`}>
+<div
+href={"https://share.google/qihLqbCG1CYdOwtzJ"}
+className={`w-element c1numhkq c1eflpw1 cqq3lvy c1diokdk ch3nxmx`}>
+<svg
+viewBox={"-3 0 262 262"}
+xmlns={"http://www.w3.org/2000/svg"}
+preserveAspectRatio={"xMidYMid"}
+fill={"#000000"}
+className={`w-element`}>
+<g
+id={"SVGRepo_bgCarrier"}
+strokeWidth={"0"}
+className={`w-element`} />
+<g
+id={"SVGRepo_tracerCarrier"}
+strokeLinecap={"round"}
+strokeLinejoin={"round"}
+className={`w-element`} />
+<g
+id={"SVGRepo_iconCarrier"}
+className={`w-element`}>
+<path
+d={"M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"}
+fill={"#4285F4"}
+className={`w-element`} />
+<path
+d={"M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"}
+fill={"#34A853"}
+className={`w-element`} />
+<path
+d={"M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"}
+fill={"#FBBC05"}
+className={`w-element`} />
+<path
+d={"M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"}
+fill={"#EB4335"}
+className={`w-element`} />
+</g>
+</svg>
+</div>
+<p
+className={`w-element ch7xx7z c82qwqc`}>
+{"5.0 Rating"}
+</p>
+<p
+className={`w-element ch7xx7z c82qwqc`}>
+{"67 Reviews"}
+</p>
+</Link>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</Box>
+<Slot>
+<Fragment_1>
+<HtmlEmbed
+code={"<script>(function(factory){if(typeof define===\"function\"&&define.amd){define(factory)}else if(typeof module!==\"undefined\"&&module.exports){module.exports=factory()}else{window.enterView=factory.call(this)}})((()=>{const lib=({selector:selector,enter:enter=(()=>{}),exit:exit=(()=>{}),progress:progress=(()=>{}),offset:offset=0,once:once=false})=>{let raf=null;let ticking=false;let elements=[];let height=0;function setupRaf(){raf=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.msRequestAnimationFrame||function(callback){return setTimeout(callback,1e3/60)}}function getOffsetHeight(){if(offset&&typeof offset===\"number\"){const fraction=Math.min(Math.max(0,offset),1);return height-fraction*height}return height}function updateHeight(){const cH=document.documentElement.clientHeight;const wH=window.innerHeight||0;height=Math.max(cH,wH)}function updateScroll(){ticking=false;const targetFromTop=getOffsetHeight();elements=elements.filter((el=>{const{top:top,bottom:bottom,height:height}=el.getBoundingClientRect();const entered=top<targetFromTop;const exited=bottom<targetFromTop;if(entered&&!el.__ev_entered){enter(el);el.__ev_progress=0;progress(el,el.__ev_progress);if(once)return false}else if(!entered&&el.__ev_entered){el.__ev_progress=0;progress(el,el.__ev_progress);exit(el)}if(entered&&!exited){const delta=(targetFromTop-top)/height;el.__ev_progress=Math.min(1,Math.max(0,delta));progress(el,el.__ev_progress)}if(entered&&exited&&el.__ev_progress!==1){el.__ev_progress=1;progress(el,el.__ev_progress)}el.__ev_entered=entered;return true}));if(!elements.length){window.removeEventListener(\"scroll\",onScroll,true);window.removeEventListener(\"resize\",onResize,true);window.removeEventListener(\"load\",onLoad,true)}}function onScroll(){if(!ticking){ticking=true;raf(updateScroll)}}function onResize(){updateHeight();updateScroll()}function onLoad(){updateHeight();updateScroll()}function selectionToArray(selection){const len=selection.length;const result=[];for(let i=0;i<len;i+=1){result.push(selection[i])}return result}function selectAll(selector,parent=document){if(typeof selector===\"string\"){return selectionToArray(parent.querySelectorAll(selector))}else if(selector instanceof NodeList){return selectionToArray(selector)}else if(selector instanceof Array){return selector}}function setupElements(){elements=selectAll(selector)}function setupEvents(){window.addEventListener(\"resize\",onResize,true);window.addEventListener(\"scroll\",onScroll,true);window.addEventListener(\"load\",onLoad,true);onResize()}function init(){if(!selector){console.error(\"must pass selector\");return false}setupElements();if(!elements||!elements.length){console.error(\"no els found\");return false}setupRaf();setupEvents();updateScroll()}init()};return lib}));</script>"}
+executeScriptOnCanvas={true}
+clientOnly={true}
+className={`w-html-embed`} />
+<HtmlEmbed
+code={"<style>\n:root {\n  --ani-duration: var(--duration-default, .2s);\n  --ani-delay: 0s;\n  --ani-slide-offset: 20%;\n  --ani-zoom-in-scale: 1;\n  --ani-zoom-out-scale: .85;\n  --ani-flip-rotate: 30deg;\n  --ani-easing: var(--easing-default, ease);\n  --ani-fill-mode: forwards;\n}\n[data-ani]:not([data-ani-children]),[data-ani-children]:not([data-ani-progress])>*{animation-duration:var(--ani-duration);animation-delay:var(--ani-delay);animation-timing-function:var(--ani-easing);animation-fill-mode:var(--ani-fill-mode);opacity:0}[data-ani-progress]:not([data-ani-children]),[data-ani-children]:not([data-ani])>*{transition-property:opacity,transform;transition-duration:var(--ani-duration);transition-timing-function:var(--ani-easing);opacity:0}\n@keyframes fadeIn{from{opacity:0}\nto{opacity:1}}\n@keyframes fadeOut{from{opacity:1}\nto{opacity:0}}[data-ani-children][data-ani='fade']>.in,[data-ani='fade']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:fadeIn}[data-ani-children][data-ani='fade']>.out,[data-ani='fade']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:fadeOut}\n@keyframes slideIn{from{opacity:0;translate:var(--ani-slide-transform)}\nto{opacity:1;translate:none}}\n@keyframes slideOut{from{opacity:1;translate:none}\nto{opacity:0;translate:var(--ani-slide-transform)}}[data-ani-children][data-ani|='slide']>.in,[data-ani|='slide']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:slideIn}[data-ani-children][data-ani|='slide']>.out,[data-ani|='slide']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:slideOut}[data-ani='slide-up']{--ani-slide-transform:0 var(--ani-slide-offset)}[data-ani='slide-down']{--ani-slide-transform:0 calc(-1*var(--ani-slide-offset))}[data-ani='slide-left']{--ani-slide-transform:var(--ani-slide-offset)}[data-ani='slide-right']{--ani-slide-transform:calc(-1*var(--ani-slide-offset))}\n@keyframes zoomIn{from{opacity:0;scale:var(--ani-zoom-out-scale)}\nto{opacity:1;scale:1}}\n@keyframes zoomOut{from{opacity:1;scale:1}\nto{opacity:0;scale:var(--ani-zoom-in-scale)}}[data-ani-children][data-ani='zoom']>.in,[data-ani|='zoom']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:zoomIn}[data-ani-children][data-ani='zoom']>.out,[data-ani|='zoom']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:zoomOut}[data-ani-children][data-ani-progress='zoom']>*,[data-ani-progress='zoom']:not([data-ani-children]){transform:scale(var(--ani-zoom-out-scale))}\n@keyframes flipInY{from{rotate:y var(--ani-flip-rotate);perspective:2000px;opacity:0}\nto{rotate:y 0;opacity:1}}\n@keyframes flipOutY{from{rotate:y 0;opacity:1}\nto{perspective:2000px;rotate:y var(--ani-flip-rotate);opacity:0}}\n@keyframes flipInX{from{perspective:2000px;rotate:x var(--ani-flip-rotate);opacity:0}\nto{rotate:x 0;opacity:1}}\n@keyframes flipOutX{from{rotate:x 0;opacity:1}\nto{perspective:2000px;rotate:x var(--ani-flip-rotate);opacity:0}}[data-ani-children][data-ani='flip-y']>.in,[data-ani='flip-y']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:flipInY}[data-ani-children][data-ani='flip-x']>.in,[data-ani='flip-x']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation-name:flipInX}[data-ani-children][data-ani='flip-y']>.out,[data-ani='flip-y']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:flipOutY}[data-ani-children][data-ani='flip-x']>.out,[data-ani='flip-x']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation-name:flipOutX}\n@keyframes expandDown{from{height:0}\nto{height:var(--newHeight)}}\n@keyframes expandUp{from{height:var(--newHeight)}\nto{height:0}}[data-ani='expand'],[data-ani='expand'][data-state='open'],[data-ani='expand'].in{--newHeight:var(--custom-height,var(--radix-accordion-content-height,var(--radix-collapsible-content-height,100%)));overflow:hidden;opacity:1}[data-ani-children][data-ani='expand']>.in,[data-ani='expand']:where(.in:not([data-state]),[data-state$='open'],[data-state='active']){animation:expandDown var(--ani-duration)var(--ani-easing)}[data-ani-children][data-ani='expand']>.out,[data-ani='expand']:where(.out:not([data-state]),[data-state='closed'],[data-state='inactive']){animation:expandUp var(--ani-duration)var(--ani-easing)}\n@media(prefers-reduced-motion:reduce){[data-ani]:not([data-ani-children]),[data-ani-progress]:not([data-ani-children]),[data-ani-children]>*{opacity:1;transform:none;animation:none;rotate:none;scale:none;translate:none}}\n</style>"}
+className={`w-html-embed`} />
+<HtmlEmbed
+code={"<script type=\"module\">\nconst config = {\n\tintersectionOffset: 0.2,\n\tintersectionOnce: true,\n\tprogressOffset: 0,\n\tprogressOnce: false,\n};\nfunction e({trigger:e,selector:r,offset:n,once:s}){const a=\"progress\"===e;return enterView({selector:r,enter:e=>!a&&t(e,\"in\",\"out\"),exit:e=>!a&&t(e,\"out\",\"in\"),progress:(e,t)=>a&&function(e,t){e.style.opacity=t,e.style.transform=function(e,t){const r=e.parentElement,n=r&&r.hasAttribute(\"data-ani-progress\")?r.getAttribute(\"data-ani-progress\"):e.getAttribute(\"data-ani-progress\"),s=parseFloat(getComputedStyle(e).getPropertyValue(\"--ani-slide-offset\"))||0,a=parseFloat(getComputedStyle(e).getPropertyValue(\"--ani-flip-rotate\"))||0,o=1-(1-t)*(1-parseFloat(getComputedStyle(e).getPropertyValue(\"--ani-zoom-out-scale\"))||1);switch(n){case\"slide-up\":return`translateY(${(1-t)*s}px)`;case\"slide-down\":return`translateY(-${(1-t)*s}px)`;case\"slide-left\":return`translateX(${(1-t)*s}px)`;case\"slide-right\":return`translateX(-${(1-t)*s}px)`;case\"flip-x\":return`rotateX(${(1-t)*a}deg)`;case\"flip-y\":return`rotateY(${(1-t)*a}deg)`;case\"zoom\":return`scale(${o})`;default:return\"none\"}}(e,t)}(e,t),offset:n,once:s})}function t(e,t,r){e.classList.add(t),e.classList.remove(r)}function r(e,t){const r=`[${e}]${t?'[data-ani-children=\"true\"] > *':':not([data-ani-children=\"true\"])'}`;return Array.from(document.querySelectorAll(r))}const n=[...r(\"data-ani\"),...r(\"data-ani\",!0)],s=[...r(\"data-ani-progress\"),...r(\"data-ani-progress\",!0)];n.length&&e({trigger:\"intersection\",selector:n,offset:config.intersectionOffset,once:config.intersectionOnce}),s.length&&e({trigger:\"progress\",selector:s,offset:config.progressOffset,once:config.progressOnce});\n</script>"}
+executeScriptOnCanvas={true}
+clientOnly={true}
+className={`w-html-embed`} />
+</Fragment_1>
+</Slot>
+</Fragment_1>
+</Slot>
+<article
+className={`w-element cvfl1ur`}>
+<div
+className={`w-element c4vc9qx c9tjkc5 c185jzsb c19wzbh8 c7iyr7r cmpwmbp cr582fw c5v4dmg c5d3i40 c8o5928`}>
+<div
+className={`w-element c139pwc6 caeuris c5ftqtp c1ux94pn`}>
+<div
+className={`w-element c5zgd1 cwpgog4 c9u7chh cud6z1z clrop1m`}>
+<p
+className={`w-element c1s18yzb`}>
+{"1. Credit and loans provided by EnerBank USA, Member FDIC, (1245 Brickyard Rd., Suite 600, Salt Lake City, UT 84106) on approved credit, for a limited time. 8.99% to 14.99% fixed APR, subject to change. Minimum loan amounts apply. Interest starts accruing when funds are disbursed. Repayment terms vary from 12 to 144 months. Actual loan term may be shorter if less than the full approved amount of credit is used. First monthly loan payment due 30 days after funds are disbursed."}
+</p>
+</div>
+</div>
+</div>
+</article>
+<HtmlEmbed
+code={"<script type=\"module\">\ndocument.querySelectorAll('[data-color-switch]').forEach(element => {\n  const color = element.dataset.colorSwitch;\n  if (color) element.style.setProperty('--timbertech-color-switch', color);\n});\n\nconst allItems = document.querySelectorAll('[data-load]');\nconst showMoreBtn = document.querySelector('#show-more-btn');\n\nallItems.forEach((item, index) => {\n  if (index >= 4) item.style.display = 'none';\n});\n\nif (showMoreBtn && allItems.length > 4) {\n  showMoreBtn.addEventListener('click', function() {\n    allItems.forEach(item => { item.style.display = 'flex'; });\n    showMoreBtn.style.display = 'none';\n  });\n}\n</script>"}
+clientOnly={true}
+className={`w-html-embed`} />
+<HtmlEmbed
+code={"<script type=\"module\">\ndocument.querySelectorAll('.swiper').forEach(element => {\n  element.querySelectorAll('.swiper-slide').forEach(slide => {\n    const img = slide.querySelector('img');\n    if (!img) { slide.remove(); return; }\n    const src = img.getAttribute('src');\n    if (!src || src.trim() === '' || src.startsWith('data:image/svg+xml')) slide.remove();\n  });\n\n  const slidesLeft = element.querySelectorAll('.swiper-slide').length;\n  if (slidesLeft === 0) return;\n\n  new Swiper(element, {\n    loop: slidesLeft > 1,\n    slidesPerView: 1,\n    speed: 500,\n    navigation: { nextEl: \".swiper-button-next\", prevEl: \".swiper-button-prev\" },\n    pagination: { el: \".swiper-pagination\", type: \"bullets\", clickable: true },\n  });\n});\n</script>"}
+clientOnly={true}
+className={`w-html-embed`} />
+</Box>
+</Body>
+}
+
+
+      export { Page }
+    
