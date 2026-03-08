@@ -65,6 +65,7 @@
       },
       "parentOrganization": { "@id": "https://www.improveitmd.com/#corporation" },
       "sameAs": [
+        "https://maps.google.com/?cid=2475724944710896218",
         "https://www.facebook.com/CapitolImprovements",
         "https://www.instagram.com/capitolimprovements"
       ],
