@@ -28,3 +28,16 @@ AI Agent Integration,Integrate web chat and sales follow-up automation,ImproveIt
 Carolina Doors Pricing Guide,Build pricing guide with pictures for Geo pages,ImproveItCarolina,Simple checklist with integration needed,Pending,improveitcarolina.com,0
 Blur House Automation,Code automation for house screenshot pulling,Blur House Project,One page website with payments and DocuSign,Pending,,0
 MLS Scraping AI Tool,Tool to find off-market real estate deals,Personal Project,Future project when time allows,Pending,,0
+Strapi GraphQL Fix,Fix singular vs plural collection name in Strapi 5 GraphQL query,ImproveItMD,Gallery query was using wrong collection name,Done,cms.improveitmd.com/graphql,0.5
+Git Repo Sync,Check and sync local git repo with remote + resolve conflicts,ImproveItMD,Pulled latest and resolved merge conflicts,Done,github.com/osamarehman/capitol,0.5
+CORS Fix for Forms,Fix CORS errors on forms.improveitmd.com from v2.improveitmd.com,ImproveItMD,Cloudflare stripping headers; added Caddy CORS preflight + fixed duplicate header,Done,forms.improveitmd.com,1.5
+n8n Connection Fix,Fix n8n lost connection to server issue,ImproveItMD,Added N8N_PROXY_HOPS=2 + Caddy SSE flush_interval + disabled Cloudflare Worker,Done,n8n.improveitmd.com,2
+Webstudio Deploy Webhook,Build complete deploy workflow with webhook trigger and HTML UI,ImproveItMD,Python webhook server + deploy.sh + deploy-trigger.html with real-time logs,Done,v2.improveitmd.com/deploy,4
+Webstudio Project Linking,Fix deploy pipeline - link webstudio CLI to project + fix sync/build,ImproveItMD,Ran webstudio link with share URL and auth token,Done,v2.improveitmd.com,1
+Docker Image Fix,Fix changes not propagating - docker-compose was rebuilding wrong image,ImproveItMD,Changed from build: directive to image: webstudio-prod:latest,Done,v2.improveitmd.com,1
+Asset Optimization Script,Create script to upload external assets to Strapi and replace URLs,ImproveItMD,382 assets uploaded; mappings-based replacement on every deploy,Done,v2.improveitmd.com,3
+Hydration Error Fixes,Fix React hydration errors from whitespace text nodes in generated files,ImproveItMD,Added sed cleanup for whitespace nodes + empty URL resources,Done,v2.improveitmd.com,1
+CMS to Local Asset Migration,Replace cms.improveitmd.com with local Strapi proxy via Caddy /uploads,ImproveItMD,Added Caddy /uploads proxy route + updated all mappings to v2.improveitmd.com,Done,v2.improveitmd.com,2
+Webstudio Assets to Strapi,Upload 348 local webstudio assets to Strapi + remove --assets from build,ImproveItMD,One-time upload script; deploys no longer download assets from webstudio CDN,Done,v2.improveitmd.com,1.5
+IPX Image Proxy Fix,Fix broken images - IPX needed full HTTP URLs not relative /uploads paths,ImproveItMD,Changed to https://v2.improveitmd.com/uploads/ for IPX domain whitelisting,Done,v2.improveitmd.com,1
+Code Review and Cleanup,Simplify review - fix sed warnings + step pattern mismatch + code quality,ImproveItMD,Fixed Python escape warnings and deploy-webhook step detection,Done,v2.improveitmd.com,0.5
