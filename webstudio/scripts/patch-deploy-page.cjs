@@ -70,8 +70,52 @@ const DEPLOY_PASSWORD = process.env.DEPLOY_PAGE_PASSWORD || process.env.DEPLOY_S
       deploySecret: isAuthenticated ? (process.env.DEPLOY_SECRET || "") : "",`
   );
 
-  // Add action handler for login form (before export const loader)
-  const actionBlock = `
+  // Replace the existing Webstudio action with our auth-aware version
+  // The original action handles form submissions; we wrap it to also handle login
+  const hasExistingAction = content.includes('export const action');
+
+  if (hasExistingAction) {
+    // Rename existing action to _originalAction
+    content = content.replace(
+      /export const action = async \(\{/,
+      'const _originalAction = async ({\n  // @ts-ignore - original Webstudio action\n'
+    );
+
+    // Insert our wrapper action that checks for login first, then delegates
+    const wrapperAction = `
+export const action = async (args: ActionFunctionArgs) => {
+  const formData = await args.request.clone().formData();
+  const password = formData.get("password");
+  const hasPasswordField = formData.has("password");
+
+  // Handle deploy auth login
+  if (hasPasswordField && password) {
+    if (password === DEPLOY_PASSWORD) {
+      return data(
+        { success: true },
+        {
+          headers: {
+            "Set-Cookie": await deployAuthCookie.serialize("valid"),
+          },
+        }
+      );
+    }
+    return data({ success: false, error: "Invalid password" }, { status: 401 });
+  }
+
+  // Delegate to original Webstudio action for form submissions
+  return _originalAction(args);
+};
+
+`;
+
+    content = content.replace(
+      'export const loader',
+      wrapperAction + 'export const loader'
+    );
+  } else {
+    // No existing action - add our standalone auth action
+    const actionBlock = `
 export const action = async ({ request }: ActionFunctionArgs) => {
   const formData = await request.formData();
   const password = formData.get("password");
@@ -92,10 +136,11 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 
 `;
 
-  content = content.replace(
-    'export const loader',
-    actionBlock + 'export const loader'
-  );
+    content = content.replace(
+      'export const loader',
+      actionBlock + 'export const loader'
+    );
+  }
 
   fs.writeFileSync(ROUTE_FILE, content, 'utf8');
   console.log('  OK: patched route with auth');
