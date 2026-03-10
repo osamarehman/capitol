@@ -160,10 +160,15 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
         {
           "@type": "Service",
           "@id": "https://www.improveitmd.com/siding#service",
-          "name": "Siding Services - Capitol Improvements",
+          "name": "Siding Installation & Replacement - Capitol Improvements",
           "url": "https://www.improveitmd.com/siding",
           "serviceType": "Siding Installation",
-          "description": "Professional siding installation and replacement. James Hardie Preferred Partner and certified vinyl siding contractor serving Maryland, Virginia, and DC.",
+          "description": "James Hardie Preferred Partner installing fiber cement, vinyl, and engineered wood siding in Maryland, DC, and Virginia. Durable, low-maintenance siding with manufacturer-backed warranties.",
+          "brand": {
+            "@type": "Brand",
+            "name": "James Hardie",
+            "url": "https://www.jameshardie.com"
+          },
           "provider": {
             "@id": "https://www.improveitmd.com/#corporation"
           },
@@ -189,14 +194,48 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "James Hardie Fiber Cement Siding"
+                  "name": "James Hardie HardiePlank Lap Siding",
+                  "description": "The most popular fiber cement siding — durable, fire resistant, and ColorPlus pre-painted finish available."
                 }
               },
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Vinyl Siding"
+                  "name": "James Hardie Shingle Siding",
+                  "description": "Fiber cement shingle-style siding for a cedar shake look without the maintenance."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "James Hardie Panel Siding (HardiePanel)",
+                  "description": "Vertical panel fiber cement siding for modern or board-and-batten aesthetics."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Vinyl Siding Installation",
+                  "description": "Insulated and standard vinyl siding — low maintenance and available in a wide range of colors and profiles."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "LP SmartSide Engineered Wood Siding",
+                  "description": "Engineered wood siding that looks like natural wood with improved durability and moisture resistance."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Cedar Shake & Shingle Siding",
+                  "description": "Natural and synthetic cedar shake siding installation for a classic New England aesthetic."
                 }
               }
             ]
@@ -205,6 +244,36 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             "@type": "Offer",
             "priceRange": "$"
           }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.improveitmd.com/siding#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is James Hardie fiber cement siding?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "James Hardie HardiePlank is a fiber cement siding made from cement, sand, and cellulose fiber. It resists fire, rot, insects, and moisture. As a James Hardie Preferred Partner, we can offer the full manufacturer warranty."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does siding installation take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A typical whole-home siding replacement takes 3–7 days depending on house size, existing material removal, and complexity."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you match my existing siding?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "In many cases yes, particularly with vinyl siding. For fiber cement, we can often match profile and paint color."
+              }
+            }
+          ]
         }
       ]
     }

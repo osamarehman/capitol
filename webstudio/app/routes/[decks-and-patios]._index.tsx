@@ -163,7 +163,12 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
           "name": "Decks & Patios - Capitol Improvements",
           "url": "https://www.improveitmd.com/decks-and-patios",
           "serviceType": "Deck & Patio Construction",
-          "description": "Custom deck and patio construction including composite, Ipe hardwood, rooftop decks, and flagstone patios. TimberTech Platinum certified contractor in Maryland, Virginia, and DC.",
+          "description": "TimberTech Platinum certified contractor building composite, Ipe hardwood, pressure-treated, and rooftop decks in Maryland, DC, and Virginia. Flagstone patios, cable railing, and custom outdoor living spaces.",
+          "brand": {
+            "@type": "Brand",
+            "name": "TimberTech",
+            "url": "https://www.timbertech.com"
+          },
           "provider": {
             "@id": "https://www.improveitmd.com/#corporation"
           },
@@ -189,21 +194,48 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Rooftop Decks"
+                  "name": "Composite Deck Building",
+                  "description": "TimberTech composite decking — low maintenance, fade resistant, dozens of colors and profiles."
                 }
               },
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Ipe Deck Building"
+                  "name": "Ipe Hardwood Deck Building",
+                  "description": "Premium Brazilian Ipe hardwood decking — one of the hardest and most durable deck materials available."
                 }
               },
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Flagstone Patios"
+                  "name": "Pressure-Treated Wood Deck Building",
+                  "description": "Traditional pressure-treated pine decking — the most affordable option."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Rooftop Deck Construction",
+                  "description": "Rooftop deck systems over flat roofs in urban and rowhouse settings, with integrated waterproofing."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Flagstone Patio Installation",
+                  "description": "Natural flagstone patio installation with dry-laid or mortar-set techniques."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Cable Railing Installation",
+                  "description": "Stainless steel cable railing systems for modern aesthetics and unobstructed views."
                 }
               }
             ]

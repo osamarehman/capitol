@@ -163,7 +163,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
           "name": "Seamless Gutters & Gutter Guards - Capitol Improvements",
           "url": "https://www.improveitmd.com/gutters",
           "serviceType": "Gutter Installation",
-          "description": "Seamless gutter installation and gutter guard systems to protect your home from water damage. Professional gutter services in Maryland, Virginia, and DC.",
+          "description": "Seamless aluminum gutter installation and gutter guard systems in Maryland, DC, and Virginia. 5-inch and 6-inch gutters, fascia board replacement, and professional gutter repair.",
           "provider": {
             "@id": "https://www.improveitmd.com/#corporation"
           },
@@ -189,14 +189,40 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Seamless Gutter Installation"
+                  "name": "Seamless Aluminum Gutter Installation",
+                  "description": "Custom-fabricated seamless gutters in 5-inch and 6-inch K-style profiles."
                 }
               },
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Gutter Guard Installation"
+                  "name": "Gutter Guard Installation",
+                  "description": "Micro-mesh and reverse-curve gutter guard systems to keep leaves and debris out."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Gutter Repair",
+                  "description": "Leak repair, re-pitching, downspout repair, and end-cap replacement."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Fascia Board Replacement",
+                  "description": "Rotted or damaged fascia board replacement — often needed before new gutter installation."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Copper Gutter Installation",
+                  "description": "Premium copper gutters for historic homes and high-end architectural applications."
                 }
               }
             ]
@@ -205,6 +231,36 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             "@type": "Offer",
             "priceRange": "$"
           }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.improveitmd.com/gutters#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the difference between 5-inch and 6-inch gutters?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "6-inch gutters hold significantly more water and are better suited for larger roofs or heavy rainfall areas."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do gutter guards really work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Quality micro-mesh gutter guards significantly reduce debris buildup. They substantially reduce cleaning frequency."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are seamless gutters?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Seamless gutters are fabricated on-site from a continuous roll of aluminum. No seams means fewer potential leak points."
+              }
+            }
+          ]
         }
       ]
     }

@@ -386,7 +386,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
               "employee": {
                 "@type": "Person",
                 "name": "Lance Jewell",
-                "jobTitle": "Branch Manager & Project Consultant"
+                "jobTitle": "Branch Manager"
               },
               "address": {
                 "@type": "PostalAddress",
@@ -417,7 +417,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
               "employee": {
                 "@type": "Person",
                 "name": "Austin Jewell",
-                "jobTitle": "Branch Manager & Project Consultant"
+                "jobTitle": "Branch Manager"
               },
               "address": {
                 "@type": "PostalAddress",

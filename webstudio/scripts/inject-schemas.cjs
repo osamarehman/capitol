@@ -53,7 +53,16 @@ const MAPPINGS = [
   { schema: 'location_dc.json', route: '[locations].[washington-dc]._index.tsx' },
 ];
 
+const FORCE = process.argv.includes('--force');
+if (FORCE) console.log('  --force: will re-inject all schemas\n');
+
 let success = 0, skipped = 0, errors = 0;
+
+// Pattern for the default WebSite block (first injection)
+const websiteBlockPattern = /  if \(siteName\) \{\n    metas\.push\(\{\n      "script:ld\+json": \{\n        "@context": "https:\/\/schema\.org",\n        "@type": "WebSite",\n        name: siteName,\n        url: origin,\n      \},\n    \}\);\n  \}/;
+
+// Pattern for a previously injected schema block (re-injection)
+const injectedBlockPattern = /  \/\/ \[inject-schemas\] JSON-LD structured data\n  metas\.push\(\{\n    "script:ld\+json": \{[\s\S]*?\n  \}\);/;
 
 for (const { schema, route } of MAPPINGS) {
   const schemaPath = path.join(SCHEMAS_DIR, schema);
@@ -68,27 +77,6 @@ for (const { schema, route } of MAPPINGS) {
 
   let routeContent = fs.readFileSync(routePath, 'utf8');
 
-  if (routeContent.includes('// [inject-schemas]')) {
-    console.log(`  SKIP (exists): ${route}`);
-    skipped++;
-    continue;
-  }
-
-  // Replace the default WebSite-only schema block with our page-specific schema.
-  // The default block looks like:
-  //   if (siteName) {
-  //     metas.push({
-  //       "script:ld+json": { "@context": "https://schema.org", "@type": "WebSite", ... },
-  //     });
-  //   }
-  const websiteBlockPattern = /  if \(siteName\) \{\n    metas\.push\(\{\n      "script:ld\+json": \{\n        "@context": "https:\/\/schema\.org",\n        "@type": "WebSite",\n        name: siteName,\n        url: origin,\n      \},\n    \}\);\n  \}/;
-
-  if (!websiteBlockPattern.test(routeContent)) {
-    console.error(`  NO WebSite BLOCK: ${route}`);
-    errors++;
-    continue;
-  }
-
   // Format the schema object with 2-space indent, then indent each line by 4 spaces
   const jsonStr = JSON.stringify(schemaObj, null, 2)
     .split('\n')
@@ -96,6 +84,32 @@ for (const { schema, route } of MAPPINGS) {
     .join('\n');
 
   const replacement = `  // [inject-schemas] JSON-LD structured data\n  metas.push({\n    "script:ld+json": ${jsonStr}\n  });`;
+
+  if (routeContent.includes('// [inject-schemas]')) {
+    if (FORCE) {
+      // Re-inject: replace existing injected block with updated schema
+      if (injectedBlockPattern.test(routeContent)) {
+        routeContent = routeContent.replace(injectedBlockPattern, replacement);
+        fs.writeFileSync(routePath, routeContent, 'utf8');
+        console.log(`  UPDATED: ${schema} -> ${route}`);
+        success++;
+      } else {
+        console.error(`  CANNOT RE-INJECT: ${route}`);
+        errors++;
+      }
+    } else {
+      console.log(`  SKIP (exists): ${route}`);
+      skipped++;
+    }
+    continue;
+  }
+
+  // First injection: replace the default WebSite block
+  if (!websiteBlockPattern.test(routeContent)) {
+    console.error(`  NO WebSite BLOCK: ${route}`);
+    errors++;
+    continue;
+  }
 
   routeContent = routeContent.replace(websiteBlockPattern, replacement);
   fs.writeFileSync(routePath, routeContent, 'utf8');

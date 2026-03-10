@@ -160,10 +160,15 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
         {
           "@type": "Service",
           "@id": "https://www.improveitmd.com/doors#service",
-          "name": "Door Replacement - Capitol Improvements",
+          "name": "Door Installation & Replacement - Capitol Improvements",
           "url": "https://www.improveitmd.com/doors",
-          "serviceType": "Door Replacement",
-          "description": "Professional door replacement including entry doors and sliding glass doors. Enhance your home's security, energy efficiency, and curb appeal in Maryland, Virginia, and DC.",
+          "serviceType": "Door Installation",
+          "description": "Provia Door & Window Certified contractor installing fiberglass, steel, and custom entry doors in Maryland, DC, and Virginia. Storm doors, patio doors, and French doors available.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Provia",
+            "url": "https://www.provia.com"
+          },
           "provider": {
             "@id": "https://www.improveitmd.com/#corporation"
           },
@@ -183,20 +188,54 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
           ],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "Door Services",
+            "name": "Door Installation Services",
             "itemListElement": [
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Entry Door Replacement"
+                  "name": "Fiberglass Entry Door Replacement",
+                  "description": "Provia fiberglass doors — durable, low-maintenance, available in wood-grain finishes. Polyurethane foam core."
                 }
               },
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Sliding Glass Door Replacement"
+                  "name": "Steel Entry Door Replacement",
+                  "description": "Heavy-gauge steel entry doors for maximum security. Provia Signet and Heritage lines with multi-point locking."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Storm Door Installation",
+                  "description": "Full-view and self-storing storm doors that protect your entry door and add insulation."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Sliding Patio Door Replacement",
+                  "description": "Sliding glass patio doors with multi-point locking and Low-E glass for energy efficiency."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "French Door Installation",
+                  "description": "Double French door systems for patios and rear entries. Available in fiberglass and steel."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Custom Milled Door Installation",
+                  "description": "Custom wood and specialty doors for historic homes and unique openings."
                 }
               }
             ]
@@ -205,6 +244,44 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             "@type": "Offer",
             "priceRange": "$"
           }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.improveitmd.com/doors#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What types of doors do you install?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We install fiberglass entry doors, steel entry doors, storm doors, sliding patio doors, French doors, and custom milled wood doors. We primarily work with Provia."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between fiberglass and steel entry doors?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Steel doors offer superior security and are typically less expensive. Fiberglass doors resist denting, don’t rust, and can mimic real wood grain. Both have energy-efficient foam cores."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are your doors energy efficient?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Provia doors feature polyurethane foam cores, compression weatherstripping, and Low-E glass options. Many meet or exceed ENERGY STAR requirements."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does door installation take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A single entry door replacement typically takes 2–4 hours. Full systems with sidelites or transoms may take a full day."
+              }
+            }
+          ]
         }
       ]
     }

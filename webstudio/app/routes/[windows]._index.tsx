@@ -163,7 +163,12 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
           "name": "Window Replacement - Capitol Improvements",
           "url": "https://www.improveitmd.com/windows",
           "serviceType": "Window Replacement",
-          "description": "Professional window replacement and installation services. Energy-efficient windows to improve comfort and curb appeal for homes in Maryland, Virginia, and DC.",
+          "description": "Provia Door & Window Certified contractor replacing windows in Maryland, DC, and Virginia. ENERGY STAR certified, Low-E glass, argon gas filled windows including double-hung, casement, bay, bow, and slider styles.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Provia",
+            "url": "https://www.provia.com"
+          },
           "provider": {
             "@id": "https://www.improveitmd.com/#corporation"
           },
@@ -181,10 +186,110 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
               "name": "District of Columbia"
             }
           ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Window Replacement Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Double-Hung Window Replacement",
+                  "description": "Both sashes tilt in for easy cleaning. Most popular window style. Available with Low-E glass and argon gas fill."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Casement Window Replacement",
+                  "description": "Crank-operated windows that open outward for maximum ventilation and an excellent air-tight seal when closed."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Bay & Bow Window Installation",
+                  "description": "Projecting multi-panel windows that add interior space and create a focal point."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Slider Window Replacement",
+                  "description": "Horizontal sliding windows ideal for wide, low openings. Low-maintenance with Low-E glass options."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Picture Window Replacement",
+                  "description": "Fixed-pane windows for maximum light and unobstructed views. Available with triple-pane glass."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Awning Window Replacement",
+                  "description": "Top-hinged windows that open outward — ideal for ventilation even during rain."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Energy-Efficient Window Replacement",
+                  "description": "ENERGY STAR certified Provia windows with Low-E coatings, argon gas fill, and warm-edge spacer technology."
+                }
+              }
+            ]
+          },
           "offers": {
             "@type": "Offer",
             "priceRange": "$"
           }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.improveitmd.com/windows#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What makes a window energy efficient?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Energy-efficient windows combine Low-E glass coatings, argon or krypton gas between panes, warm-edge spacer systems, and insulated frames. We install Provia windows that meet or exceed ENERGY STAR requirements for the Mid-Atlantic climate zone."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What window brands do you install?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We are a Provia Door & Window Certified contractor. Provia windows are built in the USA and known for quality vinyl construction, ENERGY STAR performance, and excellent warranties."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How many windows can you replace in a day?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our crews typically replace 8–15 windows per day. A full-home window replacement is usually completed in 1–2 days."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is Low-E glass?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Low-E glass has a microscopically thin metallic coating that reflects infrared energy. It keeps heat inside during winter and reflects solar heat outside during summer, significantly reducing energy bills."
+              }
+            }
+          ]
         }
       ]
     }
