@@ -4,16 +4,81 @@
     {
       "@type": "Service",
       "@id": "https://www.improveitmd.com/exterior-trim#service",
-      "name": "Exterior Trim - Capitol Improvements",
+      "name": "Exterior Trim Installation - Capitol Improvements",
       "url": "https://www.improveitmd.com/exterior-trim",
       "serviceType": "Exterior Trim Installation",
-      "description": "Professional exterior trim installation and replacement. Enhance your home's appearance with quality trim work in Maryland, Virginia, and DC.",
-      "provider": { "@id": "https://www.improveitmd.com/#corporation" },
+      "description": "Professional exterior trim installation and replacement in Maryland, DC, and Virginia. Fascia boards, soffit, rake boards, corner boards, window trim, and frieze boards in wood, PVC, and composite.",
+      "provider": {
+        "@id": "https://www.improveitmd.com/#corporation"
+      },
       "areaServed": [
-        { "@type": "State", "name": "Maryland" },
-        { "@type": "State", "name": "Virginia" },
-        { "@type": "State", "name": "District of Columbia" }
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "District of Columbia"
+        }
       ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Exterior Trim Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fascia Board Replacement",
+              "description": "Rotted or damaged fascia board replacement in wood, PVC, or composite."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Soffit Installation & Replacement",
+              "description": "Vented and non-vented soffit panels to protect the underside of your roof overhang."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Rake Board Replacement",
+              "description": "Sloped trim boards along gable ends."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Corner Board Installation",
+              "description": "Vertical corner boards in PVC or wood to frame corners and protect siding edges."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Window & Door Trim",
+              "description": "Exterior casing, brickmold, and surround trim around windows and doors."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Frieze Board Installation",
+              "description": "Horizontal trim board between siding and soffit."
+            }
+          }
+        ]
+      },
       "offers": {
         "@type": "Offer",
         "priceRange": "$$"

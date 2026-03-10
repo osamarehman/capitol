@@ -2,14 +2,17 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "RoofingContractor",
+      "@type": [
+        "HomeAndConstructionBusiness",
+        "RoofingContractor"
+      ],
       "@id": "https://www.improveitmd.com/locations/bowie#local-office",
       "name": "Capitol Improvements - Roofing Company & Siding Contractor",
       "url": "https://www.improveitmd.com/locations/bowie",
-      "telephone": "301.769.6909",
+      "telephone": "+1-301-769-6909",
       "email": "support@improveitmd.com",
       "image": "https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg",
-      "description": "Capitol Improvements Bowie headquarters — GAF Master Elite certified roofing and James Hardie preferred siding contractor serving Prince George's County and surrounding areas since 2010.",
+      "description": "Capitol Improvements Bowie headquarters — GAF Master Elite, Atlas Pro Plus, and Provia Door & Window certified exterior remodeling contractor serving Prince George's County since 2010.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "12606 Hillmeade Station Dr.",
@@ -23,59 +26,100 @@
         "latitude": "38.9428",
         "longitude": "-76.7308"
       },
-      "hasMap": "https://www.google.com/maps/place/Capitol+Improvements/@38.9428,-76.7308",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
           "opens": "08:00",
-          "closes": "17:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "09:00",
-          "closes": "14:00"
+          "closes": "18:00"
         }
       ],
-      "employee": {
-        "@type": "Person",
-        "@id": "https://www.improveitmd.com/#patjewell",
-        "name": "Pat Jewell",
-        "jobTitle": "Owner & Founder"
-      },
-      "areaServed": [
-        { "@type": "City", "name": "Bowie" },
-        { "@type": "City", "name": "Upper Marlboro" },
-        { "@type": "City", "name": "Crofton" },
-        { "@type": "City", "name": "Annapolis" },
-        { "@type": "State", "name": "Maryland" }
+      "knowsAbout": [
+        "Roofing",
+        "Siding",
+        "Windows",
+        "Doors",
+        "Gutters",
+        "Exterior Trim",
+        "Decks",
+        "Flat Roofing"
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Exterior Remodeling Services",
         "itemListElement": [
-          { "@type": "Service", "name": "Roofing" },
-          { "@type": "Service", "name": "Siding" },
-          { "@type": "Service", "name": "Windows" },
-          { "@type": "Service", "name": "Doors" },
-          { "@type": "Service", "name": "Gutters" },
-          { "@type": "Service", "name": "Decks & Patios" }
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Roofing",
+              "url": "https://www.improveitmd.com/roofing"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Siding",
+              "url": "https://www.improveitmd.com/siding"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Windows",
+              "url": "https://www.improveitmd.com/windows"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Doors",
+              "url": "https://www.improveitmd.com/doors"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gutters",
+              "url": "https://www.improveitmd.com/gutters"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Exterior Trim",
+              "url": "https://www.improveitmd.com/exterior-trim"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Decks & Patios",
+              "url": "https://www.improveitmd.com/decks-and-patios"
+            }
+          }
         ]
       },
-      "parentOrganization": { "@id": "https://www.improveitmd.com/#corporation" },
-      "sameAs": [
-        "https://maps.google.com/?cid=10267616784249800100",
-        "https://www.facebook.com/CapitolImprovements",
-        "https://www.instagram.com/capitolimprovements"
-      ],
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "221",
-        "bestRating": "5",
-        "worstRating": "1"
-      }
+        "reviewCount": "221"
+      },
+      "sameAs": [
+        "https://maps.google.com/?cid=16068834676004648914"
+      ]
     }
   ]
 }

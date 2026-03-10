@@ -7,12 +7,35 @@
       "name": "Roofing Services - Capitol Improvements",
       "url": "https://www.improveitmd.com/roofing",
       "serviceType": "Roofing",
-      "description": "Professional residential and commercial roofing services from a GAF Master Elite and FORTIFIED certified contractor. Asphalt shingles, metal roofing, and TPO flat roofing in Maryland, Virginia, and DC.",
-      "provider": { "@id": "https://www.improveitmd.com/#corporation" },
+      "description": "GAF Master Elite and Atlas Pro Plus certified roofing contractor replacing and repairing roofs in Maryland, DC, and Virginia. GAF Timberline and Atlas Scotchgard Protector shingles, metal roofing, and TPO flat roofing with lifetime warranty options.",
+      "brand": [
+        {
+          "@type": "Brand",
+          "name": "GAF",
+          "url": "https://www.gaf.com"
+        },
+        {
+          "@type": "Brand",
+          "name": "Atlas Roofing",
+          "url": "https://www.atlasroofing.com"
+        }
+      ],
+      "provider": {
+        "@id": "https://www.improveitmd.com/#corporation"
+      },
       "areaServed": [
-        { "@type": "State", "name": "Maryland" },
-        { "@type": "State", "name": "Virginia" },
-        { "@type": "State", "name": "District of Columbia" }
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "District of Columbia"
+        }
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -20,23 +43,59 @@
         "itemListElement": [
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Residential Roofing" }
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Asphalt Shingle Roof Replacement",
+              "description": "GAF Timberline HDZ and Atlas Scotchgard Protector shingles with lifetime limited warranties. Available in 50+ colors."
+            }
           },
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Commercial Roofing" }
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Atlas Scotchgard Protector Shingle Roof",
+              "description": "Atlas shingles with 3M Scotchgard Protector — resists black streaks caused by algae for a cleaner-looking roof over time."
+            }
           },
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Asphalt Shingle Roofing" }
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Metal Roofing Installation",
+              "description": "Standing seam and metal shingle roofing for superior longevity and energy efficiency."
+            }
           },
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "Metal Roofing" }
+            "itemOffered": {
+              "@type": "Service",
+              "name": "TPO Flat Roof Installation",
+              "description": "MuleHide Certified TPO single-ply membrane flat roofing for commercial and residential low-slope roofs."
+            }
           },
           {
             "@type": "Offer",
-            "itemOffered": { "@type": "Service", "name": "TPO Flat Roofing" }
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Roof Repair",
+              "description": "Emergency and non-emergency roof repairs including leak detection, shingle replacement, and flashing repair."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Storm Damage Roof Replacement",
+              "description": "Insurance-assisted roof replacement following storm, hail, or wind damage."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "FORTIFIED Roof Certification",
+              "description": "IBHS FORTIFIED Home designation for enhanced storm resistance and potential insurance discounts."
+            }
           }
         ]
       },
@@ -44,6 +103,52 @@
         "@type": "Offer",
         "priceRange": "$$"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.improveitmd.com/roofing#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does a roof replacement take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most residential roof replacements take 1–2 days depending on roof size, pitch, and complexity. We typically complete jobs in a single day for standard homes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What roofing brands do you use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are both a GAF Master Elite and Atlas Pro Plus certified contractor. We primarily install GAF Timberline HDZ shingles and Atlas Scotchgard Protector shingles, both offering lifetime limited warranties and algae resistance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer financing for roof replacements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We offer financing starting from $99/month. We can discuss financing options during your free estimate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a FORTIFIED roof?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FORTIFIED is a designation from the Insurance Institute for Business & Home Safety (IBHS) that certifies your roof meets enhanced construction standards for storm resistance. It can qualify homeowners for insurance discounts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you serve Maryland, DC, and Virginia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We have three branch offices covering all of Maryland, Washington DC, and Northern Virginia. See our service areas page for specific cities."
+          }
+        }
+      ]
     }
   ]
 }

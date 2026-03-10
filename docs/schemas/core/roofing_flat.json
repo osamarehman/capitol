@@ -2,18 +2,103 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.improveitmd.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Roofing",
+          "item": "https://www.improveitmd.com/roofing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Flat Roofing",
+          "item": "https://www.improveitmd.com/roofing/flat-roofing"
+        }
+      ]
+    },
+    {
       "@type": "Service",
       "@id": "https://www.improveitmd.com/roofing/flat-roofing#service",
       "name": "TPO Flat Roofing - Capitol Improvements",
       "url": "https://www.improveitmd.com/roofing/flat-roofing",
-      "serviceType": "TPO Flat Roofing",
-      "description": "Commercial and residential TPO flat roof installation, repair, and replacement. Energy-efficient single-ply membrane roofing systems in Maryland, Virginia, and DC.",
-      "provider": { "@id": "https://www.improveitmd.com/#corporation" },
+      "serviceType": "Flat Roofing",
+      "description": "MuleHide Certified TPO contractor and FORTIFIED certified. Commercial and residential flat roof installation, repair, and replacement. Energy-efficient single-ply membrane systems in Maryland, Virginia, and DC.",
+      "brand": {
+        "@type": "Brand",
+        "name": "MuleHide",
+        "url": "https://www.mulehide.com"
+      },
+      "provider": {
+        "@id": "https://www.improveitmd.com/#corporation"
+      },
       "areaServed": [
-        { "@type": "State", "name": "Maryland" },
-        { "@type": "State", "name": "Virginia" },
-        { "@type": "State", "name": "District of Columbia" }
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "District of Columbia"
+        }
       ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Flat Roofing Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "TPO Flat Roof Installation",
+              "description": "Thermoplastic polyolefin single-ply membrane roofing — energy reflective and durable."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "EPDM Flat Roof Installation",
+              "description": "Ethylene propylene diene monomer rubber roofing for long-lasting flat roof performance."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Flat Roof Repair",
+              "description": "Leak detection, membrane patching, and seam repair for existing flat roof systems."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Flat Roof Drain Installation",
+              "description": "Interior and edge drain systems to prevent pooling water on flat and low-slope roofs."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Rooftop Deck over Flat Roof",
+              "description": "Integrated rooftop deck and waterproofing systems for urban homes and rowhouses."
+            }
+          }
+        ]
+      },
       "offers": {
         "@type": "Offer",
         "priceRange": "$$"

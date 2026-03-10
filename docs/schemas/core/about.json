@@ -6,7 +6,7 @@
       "@id": "https://www.improveitmd.com/about#aboutpage",
       "name": "About Capitol Improvements",
       "url": "https://www.improveitmd.com/about",
-      "description": "Learn about Capitol Improvements, a family-owned exterior remodeling company founded in 2010 by Pat Jewell. Licensed (MHIC 130628), GAF Master Elite certified, serving Maryland, Virginia, and DC.",
+      "description": "Capitol Improvements — family-owned exterior remodeling company founded in 2010 by Pat Jewell. GAF Master Elite, Atlas Pro Plus, FORTIFIED, MuleHide TPO, James Hardie Preferred, TimberTech Platinum, and Provia Door & Window certified. MHIC 130628.",
       "mainEntity": {
         "@id": "https://www.improveitmd.com/#corporation"
       },
@@ -19,29 +19,76 @@
           "@type": "Person",
           "@id": "https://www.improveitmd.com/#patjewell",
           "name": "Pat Jewell",
-          "jobTitle": "Owner & Founder"
+          "jobTitle": "Owner & Founder",
+          "description": "Pat Jewell has 30+ years of experience in the exterior remodeling industry. He founded Capitol Improvements in 2010, leveraging his deep industry knowledge and relationships to assemble the best remodeling team in the Maryland, DC, and Virginia area."
         },
+        "employee": [
+          {
+            "@type": "Person",
+            "name": "Lance Jewell",
+            "jobTitle": "Branch Manager",
+            "description": "Lance Jewell manages the Gaithersburg branch, overseeing roofing, siding, window, door, and gutter projects across Montgomery County and surrounding Maryland communities."
+          },
+          {
+            "@type": "Person",
+            "name": "Austin Jewell",
+            "jobTitle": "Branch Manager",
+            "description": "Austin Jewell manages the DC & Northern Virginia branch, overseeing roofing, siding, window, door, and gutter projects across Washington DC, Arlington, Alexandria, Fairfax, and surrounding Virginia communities."
+          }
+        ],
         "slogan": "Capable. Experienced. Fair to you.",
         "hasCredential": [
           {
             "@type": "EducationalOccupationalCredential",
             "credentialCategory": "license",
             "name": "MHIC 130628"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "GAF Master Elite Certified Contractor"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "Atlas Pro Plus Certified Contractor"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "FORTIFIED Roofing Certified Contractor"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "MuleHide Certified TPO Roofing Contractor"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "James Hardie Preferred Partner"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "TimberTech Platinum Certified Contractor"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "Provia Door & Window Certified Contractor"
           }
         ],
         "award": [
           "GAF Master Elite Certified Contractor",
+          "Atlas Pro Plus Certified Contractor",
           "FORTIFIED Roofing Certified Contractor",
+          "MuleHide Certified TPO Roofing Contractor",
           "James Hardie Preferred Partner",
-          "TimberTech Platinum Certified Contractor"
-        ],
-        "areaServed": [
-          { "@type": "State", "name": "Maryland" },
-          { "@type": "State", "name": "Virginia" },
-          { "@type": "State", "name": "District of Columbia" }
+          "TimberTech Platinum Certified Contractor",
+          "Provia Door & Window Certified Contractor"
         ]
-      },
-      "provider": { "@id": "https://www.improveitmd.com/#corporation" }
+      }
     }
   ]
 }
