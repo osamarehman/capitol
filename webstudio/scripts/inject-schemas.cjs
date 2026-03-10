@@ -3,8 +3,9 @@
  * Injects JSON-LD structured data schema markup into Webstudio route files.
  * Run after `webstudio build` and before Docker build.
  *
- * Adds schema as additional "script:ld+json" entries in the meta() function
- * of each route file, so schemas render server-side in <head> for SEO.
+ * Replaces the default WebSite-only schema in each route's meta() function
+ * with the page-specific schema from docs/schemas/core/. Schemas render
+ * server-side in <head> for SEO crawlers.
  *
  * Idempotent: skips routes that already have the schema injected.
  */
@@ -73,23 +74,30 @@ for (const { schema, route } of MAPPINGS) {
     continue;
   }
 
-  // Inject before `return metas;` inside the meta() function
-  const target = '  return metas;\n};';
-  if (!routeContent.includes(target)) {
-    console.error(`  NO meta() PATTERN: ${route}`);
+  // Replace the default WebSite-only schema block with our page-specific schema.
+  // The default block looks like:
+  //   if (siteName) {
+  //     metas.push({
+  //       "script:ld+json": { "@context": "https://schema.org", "@type": "WebSite", ... },
+  //     });
+  //   }
+  const websiteBlockPattern = /  if \(siteName\) \{\n    metas\.push\(\{\n      "script:ld\+json": \{\n        "@context": "https:\/\/schema\.org",\n        "@type": "WebSite",\n        name: siteName,\n        url: origin,\n      \},\n    \}\);\n  \}/;
+
+  if (!websiteBlockPattern.test(routeContent)) {
+    console.error(`  NO WebSite BLOCK: ${route}`);
     errors++;
     continue;
   }
 
-  // Format the schema object with 2-space indent, then indent each line by 4 spaces for nesting
+  // Format the schema object with 2-space indent, then indent each line by 4 spaces
   const jsonStr = JSON.stringify(schemaObj, null, 2)
     .split('\n')
     .map((line, i) => i === 0 ? line : '    ' + line)
     .join('\n');
 
-  const injection = `  // [inject-schemas] JSON-LD structured data\n  metas.push({\n    "script:ld+json": ${jsonStr}\n  });\n\n`;
+  const replacement = `  // [inject-schemas] JSON-LD structured data\n  metas.push({\n    "script:ld+json": ${jsonStr}\n  });`;
 
-  routeContent = routeContent.replace(target, injection + target);
+  routeContent = routeContent.replace(websiteBlockPattern, replacement);
   fs.writeFileSync(routePath, routeContent, 'utf8');
   console.log(`  OK: ${schema} -> ${route}`);
   success++;
