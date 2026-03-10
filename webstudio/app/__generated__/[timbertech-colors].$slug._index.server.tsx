@@ -67,7 +67,7 @@ export const getResources = (_props: { system: System }) => {
     excludePageFromSearch: false,
     language: "",
     socialImageAssetName: undefined,
-    socialImageUrl: "https://cms.improveitmd.com" + TimbertechColorData?.data?.data?.timbertech?.[0]?.opengraphImage?.url,
+    socialImageUrl: "https://cms.improveitmd.com" + (TimbertechColorData?.data?.data?.timbertech?.[0]?.opengraphImage?.url || ""),
     status: TimbertechColorData?.data?.data?.timbertech?.[0]?.title ? 200 : 404,
     redirect: "",
     custom: [

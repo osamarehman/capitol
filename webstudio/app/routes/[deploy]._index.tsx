@@ -95,22 +95,28 @@ const customFetch: typeof fetch = (input, init) => {
 };
 
 
-export const action = async ({ request }: ActionFunctionArgs) => {
-  const formData = await request.formData();
+export const action = async (args: ActionFunctionArgs) => {
+  const formData = await args.request.clone().formData();
   const password = formData.get("password");
+  const hasPasswordField = formData.has("password");
 
-  if (password === DEPLOY_PASSWORD) {
-    return data(
-      { success: true },
-      {
-        headers: {
-          "Set-Cookie": await deployAuthCookie.serialize("valid"),
-        },
-      }
-    );
+  // Handle deploy auth login
+  if (hasPasswordField && password) {
+    if (password === DEPLOY_PASSWORD) {
+      return data(
+        { success: true },
+        {
+          headers: {
+            "Set-Cookie": await deployAuthCookie.serialize("valid"),
+          },
+        }
+      );
+    }
+    return data({ success: false, error: "Invalid password" }, { status: 401 });
   }
 
-  return data({ success: false, error: "Invalid password" }, { status: 401 });
+  // Delegate to original Webstudio action for form submissions
+  return _originalAction(args);
 };
 
 export const loader = async (arg: LoaderFunctionArgs) => {
@@ -252,7 +258,9 @@ export const links: LinksFunction = () => {
 const getRequestHost = (request: Request): string =>
   request.headers.get("x-forwarded-host") || request.headers.get("host") || "";
 
-export const action = async ({
+const _originalAction = async ({
+  // @ts-ignore - original Webstudio action
+
   request,
   context,
 }: ActionFunctionArgs): Promise<

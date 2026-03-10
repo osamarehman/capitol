@@ -11,7 +11,7 @@ import { NavigationMenu as NavigationMenu, NavigationMenuList as NavigationMenuL
 
       export const projectId = "5b897bfc-8b80-4b2a-bfed-79ac7ec37365";
 
-      export const lastPublished = "2026-03-10T14:19:13.937Z";
+      export const lastPublished = "2026-03-10T15:02:01.614Z";
 
       export const siteName = "Capitol Improvements";
 
@@ -42,7 +42,6 @@ className={`w-html-embed c1numhkq cnbug7k cmhuipo c4ily4v c19wpft8 c189czh1 c18h
 <Fragment_1>
 <HtmlEmbed
 code={"<style>  \n/* RESET */\n* {\n  margin: 0;\n  scroll-behavior: smooth;\n}\n\n/* Prevent events on closed sheet */\n.viewport-container {\n  pointer-events: none !important;\n}\n.viewport-container .menu-viewport[data-state=\"open\"] {\n  pointer-events: auto !important;\n}\nbody.menu-open {\n  overflow: hidden;\n}\n  \n/* ACCORDION ANIMATION  */\n.AccordionContent {\n  overflow: hidden;\n}\n.AccordionContent[data-state=\"open\"] {\n  animation: accordionSlideDown 300ms ease-out;\n}\n.AccordionContent[data-state=\"closed\"] {\n  animation: accordionSlideUp 300ms ease-out;\n}\n\n@keyframes accordionSlideDown {\n  from { height: 0; }\n  to { height: var(--radix-accordion-content-height); }\n}\n\n@keyframes accordionSlideUp {\n  from { height: var(--radix-accordion-content-height); }\n  to { height: 0; }\n}\n\n/* Accordion Header active state color change */\n.AccordionTrigger {\n  transition: color 250ms ease; /* optional smooth fade */\n}\n\n.AccordionTrigger.Firebrick[data-state=\"open\"] {\n  color: var(--firebrick);\n}\n\n/* Accordion Cross Icon rotate  */\n.CrossIconLine {\n  transform-origin: center;\n  transform: rotate(0deg);\n  transition: transform 250ms ease;\n}\n\n.AccordionCross[data-state=\"open\"] .CrossIconLine {\n  transform: rotate(90deg);\n}\n\n  /* Responsive Map CSS  */\n.responsive-map {\n  position: relative;\n  width: 100%;\n  height: 0;\n  padding-bottom: 75%; /* 4:3 aspect ratio (480/640 = 0.75) */\n  overflow: hidden;\n}\n\n.responsive-map iframe {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100% !important;\n  height: 100% !important;\n  border: 0;\n}\n/* For mobile portrait (smaller screens) */\n@media screen and (max-width: 768px) {\n  .responsive-map {\n    padding-bottom: 100%; /* Make it more square on mobile */\n    margin: 10px 0; /* Add some vertical spacing */\n  }\n}\n\n/* For very small screens */\n@media screen and (max-width: 480px) {\n  .responsive-map {\n    padding-bottom: 120%; /* Taller aspect ratio for very small screens */\n  }\n}\n  \n/* Asphalt Roofing product top row padding removal  */\n@media only screen and (max-width: 1279px) {\n\t.product-top-row {\n\t\tpadding-right: 0rem;\n\t}\n}\n  \n@media (max-width: 479px) {\n  .commercial-grid {\n    display: none !important;\n  }\n}\n\n/* class for display:none  */\n.is--hidden {\n  display: none;\n}\n.is--visible {\n  display: block;\n}\n\na {\n  color: var(--foreground-secondary);\n  text-decoration: none;\n}\n\n.dropdown-list.is-2,\n.dropdown-list.is-3 {\n  height: 0;\n  overflow: hidden;\n  transition: height 0.3s ease;\n}\n\n.nav {\n  contain: layout style;\n  will-change: transform;\n  backface-visibility: hidden;\n}\n  \n/* Menu open state */\nbody.is-nav-open {\n  overflow: hidden;\n}\n\nbody.is-nav-open .nav-menu {\n  display: block;\n}\n\nbody.is-nav-open .hamburger-line {\n  display: none;\n}\n\nbody.is-nav-open .nav-icon {\n  display: block;\n}\n</style>"}
-clientOnly={true}
 className={`w-html-embed`} />
 <nav
 className={`w-element cuiybni c1epvuph c6hmdm4 cvfl1ur c1qdl0j2 c1di8kq6 c1t1bnxa cu6iurp`}>
@@ -950,7 +949,7 @@ id={"lp-hero"}
 className={`w-element c1pnp6sy c1epvuph c1rgmp2 cqrpm5z`}>
 {(LandingPagesData?.data?.data?.lp?.[0]?.heroBackgroundImage?.url ? true : false) &&
 <div
-data-bg-image={"https://cms.improveitmd.com" + LandingPagesData?.data?.data?.lp?.[0]?.heroBackgroundImage?.url}
+data-bg-image={"https://cms.improveitmd.com" + (LandingPagesData?.data?.data?.lp?.[0]?.heroBackgroundImage?.url || "")}
 className={`w-element c139pwc6 cjkauba cnbug7k c8fjv4x cmnqq0u c11xvf6k cvvhtep cgwe1hs c1b36atd c153uy15 caf5igs clf6gxr cfl3b43 c1dxs9tj`} />
 }
 {(LandingPagesData?.data?.data?.lp?.[0]?.displayRoofingHeroBackgroundVideo) &&
@@ -1123,7 +1122,7 @@ className={`w-element cmsm1bz c1pit5s0 c3qgmhh c1omlw60 c1txodcv curgy1m cuftutf
   return (
 <Fragment key={index}>
 <Image
-src={"https://cms.improveitmd.com" + collectionItem?.url}
+src={"https://cms.improveitmd.com" + (collectionItem?.url || "")}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a cjkauba`} />
 </Fragment>
 )

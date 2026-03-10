@@ -64,7 +64,7 @@ export const getResources = (_props: { system: System }) => {
     excludePageFromSearch: false,
     language: "",
     socialImageAssetName: undefined,
-    socialImageUrl: "https://cms.improveitmd.com" + LocalPagesData?.data?.data?.services?.[0]?.openGraphImageUrl?.url,
+    socialImageUrl: "https://cms.improveitmd.com" + (LocalPagesData?.data?.data?.services?.[0]?.openGraphImageUrl?.url || ""),
     status: LocalPagesData?.data?.data?.services?.[0]?.title ? 200 : 404,
     redirect: "",
     custom: [
