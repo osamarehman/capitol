@@ -163,13 +163,70 @@ done
 log "=== Step 3: Fixing hydration issues ==="
 
 for f in "$GEN_DIR"/*.tsx; do
-  # Remove whitespace text nodes between head elements (cause hydration errors)
+  # Remove whitespace text nodes between elements (cause hydration errors)
   sed -i 's|{"\\n\\n\\n"}||g; s|{"\\n\\n"}||g; s|{"\\n"}||g' "$f"
   sed -i 's|>{" "}<|><|g' "$f"
   sed -i 's|{"\n\n\n"}||g; s|{"\n\n"}||g; s|{"\n"}||g' "$f"
+  # Remove standalone {" "} lines (multiline whitespace nodes missed by single-line sed)
+  sed -i '/^{" "}$/d' "$f"
 done
 
 log "  Cleaned whitespace text nodes from $(ls "$GEN_DIR"/*.tsx | wc -l) files"
+
+# Fix undefined concatenation in dynamic pages (e.g. services slug)
+# When LocalPagesData fields are null, "string" + undefined = "stringundefined"
+log "  Fixing undefined concatenation in dynamic pages..."
+CONCAT_FIXES=0
+for f in "$GEN_DIR"/*.tsx; do
+  before=$(md5sum "$f" | cut -d' ' -f1)
+
+  # Fix URL concatenation: src={"https://..." + data?.field?.url}
+  # Add || "" fallback so null fields produce empty string instead of "undefined"
+  sed -i -E 's|src=\{"(https?://[^"]+)" \+ ([^}]+)\}|src={"\1" + (\2 \|\| "")}|g' "$f"
+
+  # Fix non-src URL concatenation (e.g. socialImageUrl, href): "https://..." + data?.chain,
+  perl -i -pe 's/"(https?:\/\/[^"]+)" \+ ([A-Za-z][\w?.\[\]]*),/"$1" + ($2 || ""),/g' "$f"
+
+  # Fix text concatenation: {"text " + data?.field + " more text"}
+  # Pattern: "literal" + expression + "literal" or "literal" + expression (end)
+  # Use perl for more complex replacements
+  perl -i -pe '
+    # Fix: {"text" + data?.chain + "text"} -> {"text" + (data?.chain || "") + "text"}
+    s/\{"([^"]*)" \+ ((?:(?!\|\|)[^+}])+?) \+ "([^"]*)"\}/{"$1" + ($2 || "") + "$3"}/g;
+    # Fix: {"text" + data?.chain} -> {"text" + (data?.chain || "")}
+    s/\{"([^"]*)" \+ ((?:(?!\|\||\+ ")[^}])+?)\}/{"$1" + ($2 || "")}/g;
+  ' "$f"
+
+  after=$(md5sum "$f" | cut -d' ' -f1)
+  if [ "$before" != "$after" ]; then
+    CONCAT_FIXES=$((CONCAT_FIXES + 1))
+  fi
+done
+log "  Fixed undefined concatenation in $CONCAT_FIXES files"
+
+# Remove clientOnly from style-only HtmlEmbeds (CSS is safe to SSR, reduces hydration mismatches)
+# The code prop is a single-line string with \n escapes, e.g. code={"<style>\n..."}\nclientOnly={true}
+# Only remove clientOnly when code starts with <style> and has no <script> tags
+log "  Removing clientOnly from style-only HtmlEmbeds..."
+STYLE_FIXES=0
+for f in "$GEN_DIR"/*.tsx; do
+  before=$(md5sum "$f" | cut -d' ' -f1)
+  perl -i -pe '
+    if (/^code=\{"<style>/ && !/<script/ && /"\}\s*$/) {
+      $style_line = 1;
+    } elsif ($style_line && /^clientOnly=\{true\}/) {
+      $_ = "";  # Remove the clientOnly line
+      $style_line = 0;
+    } else {
+      $style_line = 0;
+    }
+  ' "$f"
+  after=$(md5sum "$f" | cut -d' ' -f1)
+  if [ "$before" != "$after" ]; then
+    STYLE_FIXES=$((STYLE_FIXES + 1))
+  fi
+done
+log "  Removed clientOnly from style-only embeds in $STYLE_FIXES files"
 
 # ============================================================
 # STEP 4: Remove resources with empty URLs
