@@ -152,16 +152,43 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
   const origin = `https://${data.host}`;
 
-  if (siteName) {
-    metas.push({
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: siteName,
-        url: origin,
-      },
-    });
-  }
+  // [inject-schemas] JSON-LD structured data
+  metas.push({
+    "script:ld+json": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://www.improveitmd.com/roofing/flat-roofing#service",
+          "name": "TPO Flat Roofing - Capitol Improvements",
+          "url": "https://www.improveitmd.com/roofing/flat-roofing",
+          "serviceType": "TPO Flat Roofing",
+          "description": "Commercial and residential TPO flat roof installation, repair, and replacement. Energy-efficient single-ply membrane roofing systems in Maryland, Virginia, and DC.",
+          "provider": {
+            "@id": "https://www.improveitmd.com/#corporation"
+          },
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "Maryland"
+            },
+            {
+              "@type": "State",
+              "name": "Virginia"
+            },
+            {
+              "@type": "State",
+              "name": "District of Columbia"
+            }
+          ],
+          "offers": {
+            "@type": "Offer",
+            "priceRange": "$"
+          }
+        }
+      ]
+    }
+  });
 
   return metas;
 };

@@ -9,7 +9,7 @@
 
       export const projectId = "5b897bfc-8b80-4b2a-bfed-79ac7ec37365";
 
-      export const lastPublished = "2026-03-08T02:54:27.839Z";
+      export const lastPublished = "2026-03-10T14:19:13.937Z";
 
       export const siteName = "Capitol Improvements";
 

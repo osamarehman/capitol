@@ -152,16 +152,43 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
   const origin = `https://${data.host}`;
 
-  if (siteName) {
-    metas.push({
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: siteName,
-        url: origin,
-      },
-    });
-  }
+  // [inject-schemas] JSON-LD structured data
+  metas.push({
+    "script:ld+json": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://www.improveitmd.com/siding/vinyl#service",
+          "name": "Vinyl Siding - Capitol Improvements",
+          "url": "https://www.improveitmd.com/siding/vinyl",
+          "serviceType": "Vinyl Siding Installation",
+          "description": "Professional vinyl siding installation and replacement. Affordable, durable siding options for homes in Maryland, Virginia, and DC.",
+          "provider": {
+            "@id": "https://www.improveitmd.com/#corporation"
+          },
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "Maryland"
+            },
+            {
+              "@type": "State",
+              "name": "Virginia"
+            },
+            {
+              "@type": "State",
+              "name": "District of Columbia"
+            }
+          ],
+          "offers": {
+            "@type": "Offer",
+            "priceRange": "$"
+          }
+        }
+      ]
+    }
+  });
 
   return metas;
 };

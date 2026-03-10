@@ -152,16 +152,57 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
   const origin = `https://${data.host}`;
 
-  if (siteName) {
-    metas.push({
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: siteName,
-        url: origin,
-      },
-    });
-  }
+  // [inject-schemas] JSON-LD structured data
+  metas.push({
+    "script:ld+json": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://www.improveitmd.com/warranty#webpage",
+          "name": "Warranty Information - Capitol Improvements",
+          "url": "https://www.improveitmd.com/warranty",
+          "description": "Capitol Improvements offers industry-leading warranties including GAF Golden Pledge, manufacturer warranties from James Hardie, TimberTech, and more. Protecting your investment in Maryland, Virginia, and DC.",
+          "mainEntity": {
+            "@type": "ItemList",
+            "name": "Warranty Programs",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "WarrantyPromise",
+                  "name": "GAF Golden Pledge Warranty",
+                  "description": "Premium lifetime roofing warranty available exclusively through GAF Master Elite contractors. Covers materials and workmanship."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "WarrantyPromise",
+                  "name": "Manufacturer Warranties",
+                  "description": "Product warranties from trusted manufacturers including James Hardie, TimberTech, and other premium brands."
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "WarrantyPromise",
+                  "name": "Workmanship Warranty",
+                  "description": "Capitol Improvements workmanship warranty backed by our commitment to quality installation."
+                }
+              }
+            ]
+          },
+          "provider": {
+            "@id": "https://www.improveitmd.com/#corporation"
+          }
+        }
+      ]
+    }
+  });
 
   return metas;
 };

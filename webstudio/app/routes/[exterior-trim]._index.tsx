@@ -152,16 +152,43 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
   const origin = `https://${data.host}`;
 
-  if (siteName) {
-    metas.push({
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: siteName,
-        url: origin,
-      },
-    });
-  }
+  // [inject-schemas] JSON-LD structured data
+  metas.push({
+    "script:ld+json": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://www.improveitmd.com/exterior-trim#service",
+          "name": "Exterior Trim - Capitol Improvements",
+          "url": "https://www.improveitmd.com/exterior-trim",
+          "serviceType": "Exterior Trim Installation",
+          "description": "Professional exterior trim installation and replacement. Enhance your home's appearance with quality trim work in Maryland, Virginia, and DC.",
+          "provider": {
+            "@id": "https://www.improveitmd.com/#corporation"
+          },
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "Maryland"
+            },
+            {
+              "@type": "State",
+              "name": "Virginia"
+            },
+            {
+              "@type": "State",
+              "name": "District of Columbia"
+            }
+          ],
+          "offers": {
+            "@type": "Offer",
+            "priceRange": "$"
+          }
+        }
+      ]
+    }
+  });
 
   return metas;
 };

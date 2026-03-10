@@ -152,16 +152,43 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
   const origin = `https://${data.host}`;
 
-  if (siteName) {
-    metas.push({
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: siteName,
-        url: origin,
-      },
-    });
-  }
+  // [inject-schemas] JSON-LD structured data
+  metas.push({
+    "script:ld+json": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://www.improveitmd.com/roofing/commercial-roofing#service",
+          "name": "Commercial Roofing - Capitol Improvements",
+          "url": "https://www.improveitmd.com/roofing/commercial-roofing",
+          "serviceType": "Commercial Roofing",
+          "description": "Full-service commercial roofing contractor specializing in TPO, flat roofs, and low-slope systems. Licensed (MHIC 130628) and insured for commercial projects in Maryland, Virginia, and DC.",
+          "provider": {
+            "@id": "https://www.improveitmd.com/#corporation"
+          },
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "Maryland"
+            },
+            {
+              "@type": "State",
+              "name": "Virginia"
+            },
+            {
+              "@type": "State",
+              "name": "District of Columbia"
+            }
+          ],
+          "offers": {
+            "@type": "Offer",
+            "priceRange": "$"
+          }
+        }
+      ]
+    }
+  });
 
   return metas;
 };

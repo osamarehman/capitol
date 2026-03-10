@@ -9,6 +9,8 @@ services:
       - PORT=3000
       - NODE_ENV=production
       - DOMAINS=cms.improveitmd.com,v2.improveitmd.com
+      - DEPLOY_SECRET=${DEPLOY_SECRET:-}
+      - DEPLOY_PAGE_PASSWORD=${DEPLOY_PAGE_PASSWORD:-}
     healthcheck:
       test: ["CMD-SHELL", "wget -qO- http://localhost:3000/ || exit 1"]
       interval: 30s

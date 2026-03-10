@@ -152,16 +152,296 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
   const origin = `https://${data.host}`;
 
-  if (siteName) {
-    metas.push({
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: siteName,
-        url: origin,
-      },
-    });
-  }
+  // [inject-schemas] JSON-LD structured data
+  metas.push({
+    "script:ld+json": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "Capitol Improvements",
+          "url": "https://www.improveitmd.com"
+        },
+        {
+          "@type": [
+            "HomeAndConstructionBusiness",
+            "RoofingContractor",
+            "GeneralContractor"
+          ],
+          "@id": "https://www.improveitmd.com/#corporation",
+          "name": "Capitol Improvements",
+          "url": "https://www.improveitmd.com",
+          "logo": "https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg",
+          "image": "https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg",
+          "telephone": "+1-301-769-6909",
+          "email": "support@improveitmd.com",
+          "priceRange": "$",
+          "slogan": "Capable. Experienced. Fair to you.",
+          "description": "Capitol Improvements is a family-owned exterior remodeling company serving Maryland, DC, and Virginia since 2010. What sets us apart: we run dedicated specialist crews for each trade — expert roofers, expert siding installers, expert window and door installers, expert deck builders, and expert gutter crews — all under one roof. Founded by Pat Jewell, whose 30+ years of industry experience and connections built the best team in the region. GAF Master Elite, Atlas Pro Plus, FORTIFIED, MuleHide TPO Certified, James Hardie Preferred, TimberTech Platinum, and Provia Door & Window certified.",
+          "foundingDate": "2010",
+          "founder": {
+            "@type": "Person",
+            "@id": "https://www.improveitmd.com/#patjewell",
+            "name": "Pat Jewell",
+            "jobTitle": "Owner & Founder",
+            "description": "Pat Jewell has 30+ years of experience in the exterior remodeling industry. He founded Capitol Improvements in 2010, leveraging his deep industry knowledge and relationships to assemble the best remodeling team in the Maryland, DC, and Virginia area."
+          },
+          "award": [
+            "GAF Master Elite Certified Contractor",
+            "Atlas Pro Plus Certified Contractor",
+            "FORTIFIED Roofing Certified Contractor",
+            "MuleHide Certified TPO Roofing Contractor",
+            "James Hardie Preferred Partner",
+            "TimberTech Platinum Certified Contractor",
+            "Provia Door & Window Certified Contractor"
+          ],
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "license",
+              "name": "MHIC 130628"
+            }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Exterior Remodeling Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Residential Roofing",
+                  "description": "Dedicated roofing crew — GAF Master Elite, Atlas Pro Plus, and FORTIFIED certified. GAF Timberline and Atlas Scotchgard Protector shingles, metal roofing, storm damage replacement.",
+                  "url": "https://www.improveitmd.com/roofing"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "TPO Flat Roofing",
+                  "description": "Dedicated flat roofing crew — MuleHide Certified TPO contractor. TPO and EPDM single-ply membrane systems for commercial and residential low-slope roofs.",
+                  "url": "https://www.improveitmd.com/roofing/flat-roofing"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Siding Installation",
+                  "description": "Dedicated siding crew — James Hardie Preferred Partner. Fiber cement, vinyl, and engineered wood siding.",
+                  "url": "https://www.improveitmd.com/siding"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Window Replacement",
+                  "description": "Dedicated window and door crew — Provia Certified. ENERGY STAR windows in double-hung, casement, bay, bow, slider, and picture styles.",
+                  "url": "https://www.improveitmd.com/windows"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Entry Door Installation",
+                  "description": "Dedicated window and door crew — Provia Certified. Fiberglass, steel, storm doors, patio doors, and French doors.",
+                  "url": "https://www.improveitmd.com/doors"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Seamless Gutter Installation",
+                  "description": "Dedicated gutter crew — seamless aluminum gutters, gutter guards, and fascia board replacement.",
+                  "url": "https://www.improveitmd.com/gutters"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Exterior Trim",
+                  "description": "Fascia, soffit, rake boards, corner boards, and window trim in wood, PVC, and composite.",
+                  "url": "https://www.improveitmd.com/exterior-trim"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Deck & Patio Construction",
+                  "description": "Dedicated deck crew — TimberTech Platinum certified. Composite, Ipe hardwood, rooftop decks, and flagstone patios.",
+                  "url": "https://www.improveitmd.com/decks-and-patios"
+                }
+              }
+            ]
+          },
+          "knowsAbout": [
+            "Residential Roofing",
+            "Roof Replacement",
+            "Roof Repair",
+            "Metal Roofing",
+            "Asphalt Shingles",
+            "GAF Timberline",
+            "Atlas Roofing",
+            "Atlas StormMaster Shingles",
+            "Scotchgard Protector Shingles",
+            "FORTIFIED Roof",
+            "Commercial Flat Roofing",
+            "TPO Roofing",
+            "EPDM Roofing",
+            "MuleHide TPO Roofing",
+            "Flat Roof Installation",
+            "Flat Roof Repair",
+            "Low-Slope Roofing",
+            "Single-Ply Membrane Roofing",
+            "Siding Installation",
+            "James Hardie Fiber Cement",
+            "HardiePlank",
+            "Vinyl Siding",
+            "Window Replacement",
+            "Provia Windows",
+            "Energy Efficient Windows",
+            "ENERGY STAR Windows",
+            "Double-Hung Windows",
+            "Casement Windows",
+            "Bay Windows",
+            "Door Installation",
+            "Entry Door Replacement",
+            "Fiberglass Doors",
+            "Steel Doors",
+            "Provia Doors",
+            "Storm Door Installation",
+            "Patio Door Replacement",
+            "Seamless Gutters",
+            "Gutter Guard Installation",
+            "LeafFilter",
+            "Exterior Trim",
+            "Fascia",
+            "Soffit",
+            "Rake Board",
+            "Deck Building",
+            "Composite Decking",
+            "TimberTech",
+            "Ipe Hardwood Decks",
+            "Flagstone Patios"
+          ],
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "Maryland"
+            },
+            {
+              "@type": "State",
+              "name": "Virginia"
+            },
+            {
+              "@type": "State",
+              "name": "District of Columbia"
+            }
+          ],
+          "subOrganization": [
+            {
+              "@type": [
+                "HomeAndConstructionBusiness",
+                "RoofingContractor"
+              ],
+              "name": "Capitol Improvements - Roofing Company & Siding Contractor",
+              "@id": "https://www.improveitmd.com/#bowie-hq",
+              "description": "Bowie Headquarters led by founder Pat Jewell.",
+              "employee": {
+                "@id": "https://www.improveitmd.com/#patjewell"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "12606 Hillmeade Station Dr.",
+                "addressLocality": "Bowie",
+                "addressRegion": "MD",
+                "postalCode": "20720",
+                "addressCountry": "US"
+              },
+              "telephone": "+1-301-769-6909",
+              "sameAs": [
+                "https://maps.google.com/?cid=16068834676004648914"
+              ],
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "221"
+              }
+            },
+            {
+              "@type": [
+                "HomeAndConstructionBusiness",
+                "GeneralContractor",
+                "RoofingContractor"
+              ],
+              "name": "Capitol Improvements - Gaithersburg Roofing Company & Siding Contractors",
+              "@id": "https://www.improveitmd.com/#gaithersburg-branch",
+              "description": "Gaithersburg branch managed by Lance Jewell.",
+              "employee": {
+                "@type": "Person",
+                "name": "Lance Jewell",
+                "jobTitle": "Branch Manager & Project Consultant"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "7916 Plum Creek Dr.",
+                "addressLocality": "Gaithersburg",
+                "addressRegion": "MD",
+                "postalCode": "20879",
+                "addressCountry": "US"
+              },
+              "telephone": "+1-301-769-6991",
+              "sameAs": [
+                "https://maps.google.com/?cid=15586620389309298581"
+              ],
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "157"
+              }
+            },
+            {
+              "@type": [
+                "HomeAndConstructionBusiness",
+                "RoofingContractor"
+              ],
+              "name": "Capitol Improvements Washington DC - Roofing | Siding | Doors",
+              "@id": "https://www.improveitmd.com/#dc-branch",
+              "description": "DC and Northern Virginia branch managed by Austin Jewell.",
+              "employee": {
+                "@type": "Person",
+                "name": "Austin Jewell",
+                "jobTitle": "Branch Manager & Project Consultant"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1015 15th St NW #635",
+                "addressLocality": "Washington",
+                "addressRegion": "DC",
+                "postalCode": "20005",
+                "addressCountry": "US"
+              },
+              "telephone": "+1-410-587-0128",
+              "sameAs": [
+                "https://maps.google.com/?cid=2475724944710896218"
+              ],
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "67"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  });
 
   return metas;
 };

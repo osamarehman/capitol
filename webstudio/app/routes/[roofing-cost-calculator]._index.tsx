@@ -152,16 +152,32 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
   const origin = `https://${data.host}`;
 
-  if (siteName) {
-    metas.push({
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: siteName,
-        url: origin,
-      },
-    });
-  }
+  // [inject-schemas] JSON-LD structured data
+  metas.push({
+    "script:ld+json": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://www.improveitmd.com/roofing-cost-calculator#webapp",
+          "name": "Roofing Cost Calculator - Capitol Improvements",
+          "url": "https://www.improveitmd.com/roofing-cost-calculator",
+          "applicationCategory": "UtilitiesApplication",
+          "description": "Free roofing cost calculator tool. Get an instant estimate for your residential roof replacement project in Maryland, Virginia, and DC.",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires a modern web browser",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "provider": {
+            "@id": "https://www.improveitmd.com/#corporation"
+          }
+        }
+      ]
+    }
+  });
 
   return metas;
 };

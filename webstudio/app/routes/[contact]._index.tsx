@@ -152,16 +152,51 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
   const origin = `https://${data.host}`;
 
-  if (siteName) {
-    metas.push({
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: siteName,
-        url: origin,
-      },
-    });
-  }
+  // [inject-schemas] JSON-LD structured data
+  metas.push({
+    "script:ld+json": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ContactPage",
+          "@id": "https://www.improveitmd.com/contact#contactpage",
+          "name": "Contact Capitol Improvements",
+          "url": "https://www.improveitmd.com/contact",
+          "description": "Contact Capitol Improvements for roofing, siding, windows, doors, gutters, and deck services in Maryland, Virginia, and DC. Call 301.769.6909 or email support@improveitmd.com.",
+          "mainEntity": {
+            "@type": "HomeAndConstructionBusiness",
+            "@id": "https://www.improveitmd.com/#corporation",
+            "name": "Capitol Improvements",
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+1-301-769-6909",
+                "email": "support@improveitmd.com",
+                "contactType": "customer service",
+                "areaServed": [
+                  "Maryland",
+                  "Virginia",
+                  "District of Columbia"
+                ],
+                "availableLanguage": "English"
+              }
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "12606 Hillmeade Station Dr.",
+              "addressLocality": "Bowie",
+              "addressRegion": "MD",
+              "postalCode": "20720",
+              "addressCountry": "US"
+            }
+          },
+          "provider": {
+            "@id": "https://www.improveitmd.com/#corporation"
+          }
+        }
+      ]
+    }
+  });
 
   return metas;
 };

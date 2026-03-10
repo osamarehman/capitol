@@ -152,16 +152,63 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
   const origin = `https://${data.host}`;
 
-  if (siteName) {
-    metas.push({
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: siteName,
-        url: origin,
-      },
-    });
-  }
+  // [inject-schemas] JSON-LD structured data
+  metas.push({
+    "script:ld+json": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://www.improveitmd.com/gutters#service",
+          "name": "Seamless Gutters & Gutter Guards - Capitol Improvements",
+          "url": "https://www.improveitmd.com/gutters",
+          "serviceType": "Gutter Installation",
+          "description": "Seamless gutter installation and gutter guard systems to protect your home from water damage. Professional gutter services in Maryland, Virginia, and DC.",
+          "provider": {
+            "@id": "https://www.improveitmd.com/#corporation"
+          },
+          "areaServed": [
+            {
+              "@type": "State",
+              "name": "Maryland"
+            },
+            {
+              "@type": "State",
+              "name": "Virginia"
+            },
+            {
+              "@type": "State",
+              "name": "District of Columbia"
+            }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Gutter Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Seamless Gutter Installation"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Gutter Guard Installation"
+                }
+              }
+            ]
+          },
+          "offers": {
+            "@type": "Offer",
+            "priceRange": "$"
+          }
+        }
+      ]
+    }
+  });
 
   return metas;
 };

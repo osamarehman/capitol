@@ -1887,9 +1887,6 @@
   .cwpwdsd {
     width: 100vw
   }
-  .c1n7qu2 {
-    height: 100vh
-  }
   .c15yzrzw {
     z-index: 99
   }
@@ -1898,6 +1895,9 @@
   }
   .c1uhhf7h {
     overflow-y: hidden
+  }
+  .c1n7qu2 {
+    height: 100vh
   }
   .c19ftcvs {
     padding-left: var(--size-4)
@@ -1962,6 +1962,12 @@
   .c1bm6nma {
     height: 0.75rem
   }
+  .cowdr5m {
+    grid-column-start: span 2
+  }
+  .c1so0jtm {
+    grid-column-end: span 2
+  }
   .c1dk4ika {
     min-height: 105vh
   }
@@ -1973,12 +1979,6 @@
   }
   .cauq8n4 {
     pointer-events: none
-  }
-  .cowdr5m {
-    grid-column-start: span 2
-  }
-  .c1so0jtm {
-    grid-column-end: span 2
   }
   .c10jazik {
     padding-top: 4rem

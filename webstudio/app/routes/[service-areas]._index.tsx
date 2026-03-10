@@ -152,16 +152,104 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
   const origin = `https://${data.host}`;
 
-  if (siteName) {
-    metas.push({
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: siteName,
-        url: origin,
-      },
-    });
-  }
+  // [inject-schemas] JSON-LD structured data
+  metas.push({
+    "script:ld+json": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://www.improveitmd.com/service-areas#webpage",
+          "name": "Service Areas - Capitol Improvements",
+          "url": "https://www.improveitmd.com/service-areas",
+          "description": "Capitol Improvements serves Maryland, Virginia, and Washington DC with roofing, siding, windows, doors, gutters, and deck services from three office locations.",
+          "mainEntity": {
+            "@type": "ItemList",
+            "name": "Capitol Improvements Service Coverage",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "State",
+                  "name": "Maryland",
+                  "containedInPlace": {
+                    "@type": "Country",
+                    "name": "United States"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "State",
+                  "name": "Virginia",
+                  "containedInPlace": {
+                    "@type": "Country",
+                    "name": "United States"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "AdministrativeArea",
+                  "name": "District of Columbia",
+                  "containedInPlace": {
+                    "@type": "Country",
+                    "name": "United States"
+                  }
+                }
+              }
+            ]
+          },
+          "about": [
+            {
+              "@type": "LocalBusiness",
+              "@id": "https://www.improveitmd.com/#bowie-hq",
+              "name": "Capitol Improvements - Bowie HQ",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "12606 Hillmeade Station Dr.",
+                "addressLocality": "Bowie",
+                "addressRegion": "MD",
+                "postalCode": "20720"
+              }
+            },
+            {
+              "@type": "LocalBusiness",
+              "@id": "https://www.improveitmd.com/#gaithersburg-branch",
+              "name": "Capitol Improvements - Gaithersburg",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "7916 Plum Creek Dr.",
+                "addressLocality": "Gaithersburg",
+                "addressRegion": "MD",
+                "postalCode": "20879"
+              }
+            },
+            {
+              "@type": "LocalBusiness",
+              "@id": "https://www.improveitmd.com/#dc-branch",
+              "name": "Capitol Improvements - Washington DC",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1015 15th St NW #635",
+                "addressLocality": "Washington",
+                "addressRegion": "DC",
+                "postalCode": "20005"
+              }
+            }
+          ],
+          "provider": {
+            "@id": "https://www.improveitmd.com/#corporation"
+          }
+        }
+      ]
+    }
+  });
 
   return metas;
 };

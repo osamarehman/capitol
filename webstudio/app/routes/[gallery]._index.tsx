@@ -152,16 +152,31 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
   const origin = `https://${data.host}`;
 
-  if (siteName) {
-    metas.push({
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: siteName,
-        url: origin,
-      },
-    });
-  }
+  // [inject-schemas] JSON-LD structured data
+  metas.push({
+    "script:ld+json": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ImageGallery",
+          "@id": "https://www.improveitmd.com/gallery#imagegallery",
+          "name": "Project Gallery - Capitol Improvements",
+          "url": "https://www.improveitmd.com/gallery",
+          "description": "Browse completed roofing, siding, deck, window, and door projects by Capitol Improvements across Maryland, Virginia, and DC.",
+          "about": [
+            "Roofing Projects",
+            "Siding Projects",
+            "Deck & Patio Projects",
+            "Window & Door Projects",
+            "Gutter Projects"
+          ],
+          "provider": {
+            "@id": "https://www.improveitmd.com/#corporation"
+          }
+        }
+      ]
+    }
+  });
 
   return metas;
 };

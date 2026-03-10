@@ -152,16 +152,31 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
   const origin = `https://${data.host}`;
 
-  if (siteName) {
-    metas.push({
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: siteName,
-        url: origin,
-      },
-    });
-  }
+  // [inject-schemas] JSON-LD structured data
+  metas.push({
+    "script:ld+json": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://www.improveitmd.com/video-gallery#collectionpage",
+          "name": "Video Gallery - Capitol Improvements",
+          "url": "https://www.improveitmd.com/video-gallery",
+          "description": "Watch project videos, customer testimonials, and educational content from Capitol Improvements. See our roofing, siding, deck, and exterior remodeling work in action.",
+          "about": [
+            "Project Walkthroughs",
+            "Customer Testimonials",
+            "Roofing Installations",
+            "Siding Transformations",
+            "Deck Builds"
+          ],
+          "provider": {
+            "@id": "https://www.improveitmd.com/#corporation"
+          }
+        }
+      ]
+    }
+  });
 
   return metas;
 };

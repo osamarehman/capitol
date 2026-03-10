@@ -9,6 +9,7 @@ import {
   redirect,
   useLoaderData,
 } from "react-router";
+import { createCookie } from "react-router"; // [patch-deploy-auth]
 import {
   isLocalResource,
   loadResource,
@@ -41,6 +42,18 @@ import * as constants from "../constants.mjs";
 import css from "../__generated__/index.css?url";
 import { sitemap } from "../__generated__/$resources.sitemap.xml";
 import { assets } from "../__generated__/$resources.assets";
+
+
+// Deploy page auth cookie (httpOnly, 24h expiry)
+const deployAuthCookie = createCookie("deploy_auth", {
+  httpOnly: true,
+  secure: true,
+  sameSite: "strict",
+  maxAge: 86400,
+  path: "/deploy",
+});
+
+const DEPLOY_PASSWORD = process.env.DEPLOY_PAGE_PASSWORD || process.env.DEPLOY_SECRET || "changeme";
 
 const customFetch: typeof fetch = (input, init) => {
   if (typeof input !== "string") {
@@ -81,6 +94,25 @@ const customFetch: typeof fetch = (input, init) => {
   return cachedFetch(projectId, input, init);
 };
 
+
+export const action = async ({ request }: ActionFunctionArgs) => {
+  const formData = await request.formData();
+  const password = formData.get("password");
+
+  if (password === DEPLOY_PASSWORD) {
+    return data(
+      { success: true },
+      {
+        headers: {
+          "Set-Cookie": await deployAuthCookie.serialize("valid"),
+        },
+      }
+    );
+  }
+
+  return data({ success: false, error: "Invalid password" }, { status: 401 });
+};
+
 export const loader = async (arg: LoaderFunctionArgs) => {
   const url = new URL(arg.request.url);
   const host =
@@ -119,8 +151,15 @@ export const loader = async (arg: LoaderFunctionArgs) => {
     pageMeta.excludePageFromSearch = arg.context.EXCLUDE_FROM_SEARCH;
   }
 
+  // Check deploy auth
+  const cookieHeader = arg.request.headers.get("Cookie");
+  const authValue = await deployAuthCookie.parse(cookieHeader);
+  const isAuthenticated = authValue === "valid";
+
   return data(
     {
+      isAuthenticated,
+      deploySecret: isAuthenticated ? (process.env.DEPLOY_SECRET || "") : "",
       host,
       url: url.href,
       system,

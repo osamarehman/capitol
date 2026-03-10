@@ -58,6 +58,10 @@ bash scripts/optimize-assets.sh 2>&1 | tee -a "$LOG_FILE"
 log "Injecting schema markup..."
 node scripts/inject-schemas.cjs 2>&1 | tee -a "$LOG_FILE"
 
+# Step 4c: Patch deploy page with password protection
+log "Patching deploy page auth..."
+node scripts/patch-deploy-page.cjs 2>&1 | tee -a "$LOG_FILE"
+
 # Step 5: Build Docker image (no cache to pick up all changes)
 log "Building Docker image..."
 docker build --no-cache -t webstudio-prod:latest . 2>&1 | tee -a "$LOG_FILE"

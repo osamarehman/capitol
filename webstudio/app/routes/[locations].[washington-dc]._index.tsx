@@ -152,16 +152,131 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
   const origin = `https://${data.host}`;
 
-  if (siteName) {
-    metas.push({
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: siteName,
-        url: origin,
-      },
-    });
-  }
+  // [inject-schemas] JSON-LD structured data
+  metas.push({
+    "script:ld+json": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "RoofingContractor",
+          "@id": "https://www.improveitmd.com/locations/washington-dc#local-office",
+          "name": "Capitol Improvements Washington DC - Roofing | Siding | Doors",
+          "url": "https://www.improveitmd.com/locations/washington-dc",
+          "telephone": "410.587.0128",
+          "email": "support@improveitmd.com",
+          "image": "https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg",
+          "description": "Capitol Improvements DC branch — GAF Master Elite certified roofing and siding contractor serving Washington DC, Northern Virginia, and surrounding areas.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1015 15th St NW #635",
+            "addressLocality": "Washington",
+            "addressRegion": "DC",
+            "postalCode": "20005",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "38.9029",
+            "longitude": "-77.0345"
+          },
+          "hasMap": "https://www.google.com/maps/place/Capitol+Improvements/@38.9029,-77.0345",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:00",
+              "closes": "17:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "09:00",
+              "closes": "14:00"
+            }
+          ],
+          "employee": {
+            "@type": "Person",
+            "@id": "https://www.improveitmd.com/#austinjewell",
+            "name": "Austin Jewell",
+            "jobTitle": "Branch Manager & Project Consultant"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Washington DC"
+            },
+            {
+              "@type": "State",
+              "name": "Virginia"
+            },
+            {
+              "@type": "City",
+              "name": "Arlington"
+            },
+            {
+              "@type": "City",
+              "name": "Alexandria"
+            },
+            {
+              "@type": "City",
+              "name": "Falls Church"
+            }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Exterior Remodeling Services",
+            "itemListElement": [
+              {
+                "@type": "Service",
+                "name": "Roofing"
+              },
+              {
+                "@type": "Service",
+                "name": "Siding"
+              },
+              {
+                "@type": "Service",
+                "name": "Windows"
+              },
+              {
+                "@type": "Service",
+                "name": "Doors"
+              },
+              {
+                "@type": "Service",
+                "name": "Gutters"
+              },
+              {
+                "@type": "Service",
+                "name": "Decks & Patios"
+              }
+            ]
+          },
+          "parentOrganization": {
+            "@id": "https://www.improveitmd.com/#corporation"
+          },
+          "sameAs": [
+            "https://maps.google.com/?cid=10343029476848561348",
+            "https://www.facebook.com/CapitolImprovements",
+            "https://www.instagram.com/capitolimprovements"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "67",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        }
+      ]
+    }
+  });
 
   return metas;
 };

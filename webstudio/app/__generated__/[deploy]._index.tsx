@@ -3,6 +3,7 @@
 
 
       import { Fragment, useState } from "react";
+import { useLoaderData, useActionData, Form } from "react-router"; // [patch-deploy-auth]
       import { useResource, useVariableState } from "@webstudio-is/react-sdk/runtime";
       import { Body as Body } from "@webstudio-is/sdk-components-react-router";
 import { HtmlEmbed as HtmlEmbed } from "@webstudio-is/sdk-components-react";
@@ -10,7 +11,7 @@ import { HtmlEmbed as HtmlEmbed } from "@webstudio-is/sdk-components-react";
 
       export const projectId = "5b897bfc-8b80-4b2a-bfed-79ac7ec37365";
 
-      export const lastPublished = "2026-03-08T02:54:27.839Z";
+      export const lastPublished = "2026-03-10T14:19:13.937Z";
 
       export const siteName = "Capitol Improvements";
 
@@ -28,7 +29,58 @@ import { HtmlEmbed as HtmlEmbed } from "@webstudio-is/sdk-components-react";
 
       
 
-      const Page = (_props: { system: any; }) => {
+      const LoginForm = () => {
+  const actionData = useActionData<{ success?: boolean; error?: string }>();
+  return (
+    <div style={{
+      minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center",
+      background: "#0f172a", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+    }}>
+      <div style={{
+        background: "#1e293b", border: "1px solid #334155", borderRadius: "12px",
+        padding: "40px", maxWidth: "400px", width: "100%", textAlign: "center"
+      }}>
+        <h1 style={{ color: "#f8fafc", fontSize: "1.5rem", marginBottom: "8px" }}>Deploy Access</h1>
+        <p style={{ color: "#94a3b8", fontSize: "0.875rem", marginBottom: "24px" }}>Enter password to continue</p>
+        {actionData?.error && (
+          <p style={{ color: "#f87171", fontSize: "0.875rem", marginBottom: "16px" }}>{actionData.error}</p>
+        )}
+        <Form method="post">
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            autoFocus
+            style={{
+              width: "100%", padding: "12px 16px", fontSize: "1rem", background: "#0f172a",
+              border: "1px solid #334155", borderRadius: "8px", color: "#e2e8f0",
+              marginBottom: "16px", outline: "none"
+            }}
+          />
+          <button type="submit" style={{
+            width: "100%", padding: "14px 28px", fontSize: "1rem", fontWeight: 600,
+            color: "#fff", background: "#2563eb", border: "none", borderRadius: "8px", cursor: "pointer"
+          }}>
+            Sign In
+          </button>
+        </Form>
+      </div>
+    </div>
+  );
+};
+
+const DeployPage = (_props: { system: any; }) => {
+  const loaderData = useLoaderData<{ isAuthenticated: boolean; deploySecret: string }>();
+
+  if (!loaderData?.isAuthenticated) {
+    return <LoginForm />;
+  }
+
+  // Inject the deploy secret from server into the page
+  if (typeof window !== "undefined" && loaderData.deploySecret) {
+    (window as any).__DEPLOY_SECRET__ = loaderData.deploySecret;
+  }
+
 return <Body
 className={`w-element`}>
 <HtmlEmbed
@@ -36,12 +88,13 @@ code={" <style>\n    * { margin: 0; padding: 0; box-sizing: border-box; }\n\n   
 clientOnly={true}
 className={`w-html-embed`} />
 <HtmlEmbed
-code={"  <div class=\"deploy-card\">\n    <h1>Webstudio Deploy</h1>\n    <p class=\"subtitle\">v2.improveitmd.com</p>\n\n    <div id=\"status\" class=\"status-badge status-idle\">\n      <span class=\"dot\"></span>\n      <span id=\"status-text\">Idle</span>\n    </div>\n\n    <div id=\"steps\" class=\"step-indicator\" style=\"display:none;\">\n      <span class=\"step-pip\" data-step=\"sync\">Sync</span>\n      <span class=\"step-pip\" data-step=\"build_assets\">Assets</span>\n      <span class=\"step-pip\" data-step=\"post_sync\">Patch</span>\n      <span class=\"step-pip\" data-step=\"docker_build\">Build</span>\n      <span class=\"step-pip\" data-step=\"deploy\">Deploy</span>\n      <span class=\"step-pip\" data-step=\"health_check\">Health</span>\n    </div>\n\n    <button id=\"deploy-btn\" class=\"deploy-btn\" onclick=\"triggerDeploy()\">\n      Deploy Now\n    </button>\n\n    <div id=\"log\" class=\"log-area\"></div>\n\n    <div class=\"info\" id=\"info\"></div>\n  </div>\n\n  <script>\n    // ---- CONFIGURATION ----\n    const DEPLOY_URL = 'https://v2.improveitmd.com';\n    const DEPLOY_SECRET = '1LkupLK0_fBszdMKkCOQKAEmQ5L0H46L7j6PbJzzMhM';\n    // -----------------------\n\n    const btn = document.getElementById('deploy-btn');\n    const statusEl = document.getElementById('status');\n    const statusText = document.getElementById('status-text');\n    const logArea = document.getElementById('log');\n    const info = document.getElementById('info');\n    const stepsEl = document.getElementById('steps');\n\n    let pollInterval = null;\n    let logOffset = 0;\n\n    const STEP_ORDER = ['sync', 'build_assets', 'post_sync', 'docker_build', 'deploy', 'health_check', 'done'];\n\n    function setStatus(state, text) {\n      statusEl.className = 'status-badge status-' + state;\n      statusText.textContent = text;\n    }\n\n    function updateSteps(currentStep) {\n      if (!currentStep || currentStep === 'starting') return;\n      stepsEl.style.display = 'flex';\n      const currentIdx = STEP_ORDER.indexOf(currentStep);\n      stepsEl.querySelectorAll('.step-pip').forEach(pip => {\n        const stepIdx = STEP_ORDER.indexOf(pip.dataset.step);\n        pip.classList.remove('active', 'done');\n        if (stepIdx < currentIdx || currentStep === 'done') {\n          pip.classList.add('done');\n        } else if (stepIdx === currentIdx) {\n          pip.classList.add('active');\n        }\n      });\n    }\n\n    function appendLogs(lines) {\n      if (!lines.length) return;\n      logArea.classList.add('visible');\n      lines.forEach(line => {\n        const span = document.createElement('div');\n        if (line.includes('===') || line.includes('Starting') || line.includes('Syncing') ||\n            line.includes('Building') || line.includes('Running') || line.includes('Deploying') ||\n            line.includes('Waiting')) {\n          span.className = 'log-step';\n        } else if (line.includes('ERROR') || line.includes('failed') || line.includes('WARN')) {\n          span.className = 'log-error';\n        } else if (line.includes('successful') || line.includes('complete') || line.includes('Live')) {\n          span.className = 'log-success';\n        }\n        span.textContent = line;\n        logArea.appendChild(span);\n      });\n      logArea.scrollTop = logArea.scrollHeight;\n    }\n\n    async function triggerDeploy() {\n      btn.disabled = true;\n      btn.textContent = 'Deploying...';\n      logArea.innerHTML = '';\n      logOffset = 0;\n      setStatus('running', 'Triggering...');\n      stepsEl.style.display = 'none';\n      stepsEl.querySelectorAll('.step-pip').forEach(p => p.classList.remove('active', 'done'));\n\n      try {\n        const res = await fetch(DEPLOY_URL + '/deploy/trigger', {\n          method: 'POST',\n          headers: {\n            'Content-Type': 'application/json',\n            'Authorization': 'Bearer ' + DEPLOY_SECRET,\n          },\n          body: JSON.stringify({ trigger: 'manual', timestamp: new Date().toISOString() }),\n        });\n\n        const data = await res.json();\n\n        if (res.status === 202 || res.status === 409) {\n          setStatus('running', 'Running');\n          startPolling();\n        } else {\n          appendLogs(['Error: ' + (data.error || res.statusText)]);\n          setStatus('failed', 'Trigger Failed');\n          btn.disabled = false;\n          btn.textContent = 'Retry Deploy';\n        }\n      } catch (err) {\n        appendLogs(['Network error: ' + err.message]);\n        setStatus('failed', 'Connection Error');\n        btn.disabled = false;\n        btn.textContent = 'Retry Deploy';\n      }\n    }\n\n    function startPolling() {\n      if (pollInterval) clearInterval(pollInterval);\n      pollInterval = setInterval(checkStatus, 2000);\n    }\n\n    async function checkStatus() {\n      try {\n        const res = await fetch(DEPLOY_URL + '/deploy/status?since=' + logOffset);\n        const data = await res.json();\n\n        // Append new log lines\n        if (data.logs && data.logs.length > 0) {\n          appendLogs(data.logs);\n          logOffset = data.log_offset;\n        }\n\n        // Update step indicators\n        if (data.step) updateSteps(data.step);\n\n        if (data.status === 'running') {\n          setStatus('running', data.step ? data.step.replace('_', ' ') : 'Deploying');\n        } else if (data.status === 'success') {\n          setStatus('success', 'Live');\n          updateSteps('done');\n          info.innerHTML = 'Last deploy: <span class=\"time\">' + data.finished_at + '</span>';\n          btn.disabled = false;\n          btn.textContent = 'Deploy Again';\n          clearInterval(pollInterval);\n        } else if (data.status === 'failed') {\n          setStatus('failed', 'Failed');\n          info.innerHTML = 'Failed at: <span class=\"time\">' + data.finished_at + '</span>';\n          btn.disabled = false;\n          btn.textContent = 'Retry Deploy';\n          clearInterval(pollInterval);\n        }\n      } catch (err) {\n        // Silently retry on poll errors\n      }\n    }\n\n    // Check initial status on load\n    checkStatus();\n  </script>"}
+code={"  <div class=\"deploy-card\">\n    <h1>Webstudio Deploy</h1>\n    <p class=\"subtitle\">v2.improveitmd.com</p>\n\n    <div id=\"status\" class=\"status-badge status-idle\">\n      <span class=\"dot\"></span>\n      <span id=\"status-text\">Idle</span>\n    </div>\n\n    <div id=\"steps\" class=\"step-indicator\" style=\"display:none;\">\n      <span class=\"step-pip\" data-step=\"sync\">Sync</span>\n      <span class=\"step-pip\" data-step=\"build_assets\">Assets</span>\n      <span class=\"step-pip\" data-step=\"post_sync\">Patch</span>\n      <span class=\"step-pip\" data-step=\"docker_build\">Build</span>\n      <span class=\"step-pip\" data-step=\"deploy\">Deploy</span>\n      <span class=\"step-pip\" data-step=\"health_check\">Health</span>\n    </div>\n\n    <button id=\"deploy-btn\" class=\"deploy-btn\" onclick=\"triggerDeploy()\">\n      Deploy Now\n    </button>\n\n    <div id=\"log\" class=\"log-area\"></div>\n\n    <div class=\"info\" id=\"info\"></div>\n  </div>\n\n  <script>\n    // ---- CONFIGURATION ----\n    const DEPLOY_URL = 'https://v2.improveitmd.com';\n    const DEPLOY_SECRET = window.__DEPLOY_SECRET__ || '';\n    // -----------------------\n\n    const btn = document.getElementById('deploy-btn');\n    const statusEl = document.getElementById('status');\n    const statusText = document.getElementById('status-text');\n    const logArea = document.getElementById('log');\n    const info = document.getElementById('info');\n    const stepsEl = document.getElementById('steps');\n\n    let pollInterval = null;\n    let logOffset = 0;\n\n    const STEP_ORDER = ['sync', 'build_assets', 'post_sync', 'docker_build', 'deploy', 'health_check', 'done'];\n\n    function setStatus(state, text) {\n      statusEl.className = 'status-badge status-' + state;\n      statusText.textContent = text;\n    }\n\n    function updateSteps(currentStep) {\n      if (!currentStep || currentStep === 'starting') return;\n      stepsEl.style.display = 'flex';\n      const currentIdx = STEP_ORDER.indexOf(currentStep);\n      stepsEl.querySelectorAll('.step-pip').forEach(pip => {\n        const stepIdx = STEP_ORDER.indexOf(pip.dataset.step);\n        pip.classList.remove('active', 'done');\n        if (stepIdx < currentIdx || currentStep === 'done') {\n          pip.classList.add('done');\n        } else if (stepIdx === currentIdx) {\n          pip.classList.add('active');\n        }\n      });\n    }\n\n    function appendLogs(lines) {\n      if (!lines.length) return;\n      logArea.classList.add('visible');\n      lines.forEach(line => {\n        const span = document.createElement('div');\n        if (line.includes('===') || line.includes('Starting') || line.includes('Syncing') ||\n            line.includes('Building') || line.includes('Running') || line.includes('Deploying') ||\n            line.includes('Waiting')) {\n          span.className = 'log-step';\n        } else if (line.includes('ERROR') || line.includes('failed') || line.includes('WARN')) {\n          span.className = 'log-error';\n        } else if (line.includes('successful') || line.includes('complete') || line.includes('Live')) {\n          span.className = 'log-success';\n        }\n        span.textContent = line;\n        logArea.appendChild(span);\n      });\n      logArea.scrollTop = logArea.scrollHeight;\n    }\n\n    async function triggerDeploy() {\n      btn.disabled = true;\n      btn.textContent = 'Deploying...';\n      logArea.innerHTML = '';\n      logOffset = 0;\n      setStatus('running', 'Triggering...');\n      stepsEl.style.display = 'none';\n      stepsEl.querySelectorAll('.step-pip').forEach(p => p.classList.remove('active', 'done'));\n\n      try {\n        const res = await fetch(DEPLOY_URL + '/deploy/trigger', {\n          method: 'POST',\n          headers: {\n            'Content-Type': 'application/json',\n            'Authorization': 'Bearer ' + DEPLOY_SECRET,\n          },\n          body: JSON.stringify({ trigger: 'manual', timestamp: new Date().toISOString() }),\n        });\n\n        const data = await res.json();\n\n        if (res.status === 202 || res.status === 409) {\n          setStatus('running', 'Running');\n          startPolling();\n        } else {\n          appendLogs(['Error: ' + (data.error || res.statusText)]);\n          setStatus('failed', 'Trigger Failed');\n          btn.disabled = false;\n          btn.textContent = 'Retry Deploy';\n        }\n      } catch (err) {\n        appendLogs(['Network error: ' + err.message]);\n        setStatus('failed', 'Connection Error');\n        btn.disabled = false;\n        btn.textContent = 'Retry Deploy';\n      }\n    }\n\n    function startPolling() {\n      if (pollInterval) clearInterval(pollInterval);\n      pollInterval = setInterval(checkStatus, 2000);\n    }\n\n    async function checkStatus() {\n      try {\n        const res = await fetch(DEPLOY_URL + '/deploy/status?since=' + logOffset);\n        const data = await res.json();\n\n        // Append new log lines\n        if (data.logs && data.logs.length > 0) {\n          appendLogs(data.logs);\n          logOffset = data.log_offset;\n        }\n\n        // Update step indicators\n        if (data.step) updateSteps(data.step);\n\n        if (data.status === 'running') {\n          setStatus('running', data.step ? data.step.replace('_', ' ') : 'Deploying');\n        } else if (data.status === 'success') {\n          setStatus('success', 'Live');\n          updateSteps('done');\n          info.innerHTML = 'Last deploy: <span class=\"time\">' + data.finished_at + '</span>';\n          btn.disabled = false;\n          btn.textContent = 'Deploy Again';\n          clearInterval(pollInterval);\n        } else if (data.status === 'failed') {\n          setStatus('failed', 'Failed');\n          info.innerHTML = 'Failed at: <span class=\"time\">' + data.finished_at + '</span>';\n          btn.disabled = false;\n          btn.textContent = 'Retry Deploy';\n          clearInterval(pollInterval);\n        }\n      } catch (err) {\n        // Silently retry on poll errors\n      }\n    }\n\n    // Check initial status on load\n    checkStatus();\n  </script>"}
 clientOnly={true}
 className={`w-html-embed`} />
 </Body>
 }
 
 
-      export { Page }
+      const Page = DeployPage;
+export { Page }
     

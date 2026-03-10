@@ -10,7 +10,7 @@ import { Box as Box, Image as Image, HtmlEmbed as HtmlEmbed, Input as Input, Tex
 
       export const projectId = "5b897bfc-8b80-4b2a-bfed-79ac7ec37365";
 
-      export const lastPublished = "2026-03-08T02:54:27.839Z";
+      export const lastPublished = "2026-03-10T14:19:13.937Z";
 
       export const siteName = "Capitol Improvements";
 
@@ -32,34 +32,6 @@ import { Box as Box, Image as Image, HtmlEmbed as HtmlEmbed, Input as Input, Tex
 let [formState, set$formState] = useVariableState<any>("initial")
 return <Body
 className={`w-element cn87dm8 c1uhhf7h`}>
-<HtmlEmbed
-code={`<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "@id": "https://www.improveitmd.com/quote#webpage",
-      "name": "Request a Free Quote - Capitol Improvements",
-      "url": "https://www.improveitmd.com/quote",
-      "description": "Request a free, no-obligation quote for roofing, siding, windows, doors, gutters, or deck services from Capitol Improvements.",
-      "potentialAction": {
-        "@type": "CommunicateAction",
-        "name": "Request a Free Quote",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://www.improveitmd.com/quote",
-          "actionPlatform": "https://schema.org/DesktopWebPlatform"
-        },
-        "description": "Submit a request for a free estimate on exterior remodeling services."
-      },
-      "provider": { "@id": "https://www.improveitmd.com/#corporation" }
-    }
-  ]
-}
-</script>`}
-clientOnly={true}
-className={`w-html-embed`} />
 <Box
 className={`w-box cnregu4 c3a6wb5 c14dzf92`}>
 <HtmlEmbed

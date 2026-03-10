@@ -152,16 +152,36 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
   const origin = `https://${data.host}`;
 
-  if (siteName) {
-    metas.push({
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: siteName,
-        url: origin,
-      },
-    });
-  }
+  // [inject-schemas] JSON-LD structured data
+  metas.push({
+    "script:ld+json": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Blog",
+          "@id": "https://www.improveitmd.com/blog#blog",
+          "name": "Capitol Improvements Blog",
+          "url": "https://www.improveitmd.com/blog",
+          "description": "Expert tips, guides, and news about roofing, siding, windows, doors, gutters, and decks from Capitol Improvements. Serving Maryland, Virginia, and DC.",
+          "publisher": {
+            "@id": "https://www.improveitmd.com/#corporation"
+          },
+          "about": [
+            "Roofing",
+            "Siding",
+            "Windows",
+            "Doors",
+            "Gutters",
+            "Decks",
+            "Home Improvement"
+          ],
+          "provider": {
+            "@id": "https://www.improveitmd.com/#corporation"
+          }
+        }
+      ]
+    }
+  });
 
   return metas;
 };

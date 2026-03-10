@@ -152,16 +152,34 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
   const origin = `https://${data.host}`;
 
-  if (siteName) {
-    metas.push({
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: siteName,
-        url: origin,
-      },
-    });
-  }
+  // [inject-schemas] JSON-LD structured data
+  metas.push({
+    "script:ld+json": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://www.improveitmd.com/quote#webpage",
+          "name": "Request a Free Quote - Capitol Improvements",
+          "url": "https://www.improveitmd.com/quote",
+          "description": "Request a free, no-obligation quote for roofing, siding, windows, doors, gutters, or deck services from Capitol Improvements.",
+          "potentialAction": {
+            "@type": "CommunicateAction",
+            "name": "Request a Free Quote",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://www.improveitmd.com/quote",
+              "actionPlatform": "https://schema.org/DesktopWebPlatform"
+            },
+            "description": "Submit a request for a free estimate on exterior remodeling services."
+          },
+          "provider": {
+            "@id": "https://www.improveitmd.com/#corporation"
+          }
+        }
+      ]
+    }
+  });
 
   return metas;
 };
