@@ -73,3 +73,26 @@ n8n/data/
 /service-area-widget
 commercial_calc.html
 generate_gemini_token.py
+
+# Webstudio — generated/synced files (rebuilt by webstudio sync + build)
+webstudio/.webstudio/data.json
+webstudio/app/__generated__/
+webstudio/.react-router/
+webstudio/public/assets/
+
+# Webstudio — build outputs
+webstudio/build/
+webstudio/dist/
+webstudio/.vite/
+
+# Spreadsheets (reference only, not source)
+*.xlsx
+
+# Extracted/generated scripts data
+scripts/extracted-scripts.json
+
+# Strapi public scripts (served via Strapi, not git)
+strapi/public/scripts/
+
+# Misc local files
+bugs.logs
