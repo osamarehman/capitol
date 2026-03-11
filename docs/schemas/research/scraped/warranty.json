@@ -1,5 +1,5 @@
 {
-  "url": "https://www.improveitmd.com/warranty",
+  "url": "https://improveitmd.com/warranty",
   "title": "Warranty \u2013 Exterior Home Remodeling | Capitol Improvements",
   "description": "We meet the highest standard in continual training to offer manufacturer backed warranties. All our home replacement services include the best warranty.",
   "markdown": "Warranty \u2013 Exterior Home Remodeling \\| Capitol Improvements",
@@ -13,7 +13,7 @@
       "brand": "Capitol Improvements",
       "offers": {
         "@type": "AggregateOffer",
-        "url": "https://www.improveitmd.com/",
+        "url": "https://improveitmd.com/",
         "priceCurrency": "USD",
         "offerCount": "1"
       },

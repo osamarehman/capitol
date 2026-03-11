@@ -159,16 +159,16 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "WebPage",
-          "@id": "https://www.improveitmd.com/financing#webpage",
+          "@id": "https://improveitmd.com/financing#webpage",
           "name": "Financing Options - Capitol Improvements",
-          "url": "https://www.improveitmd.com/financing",
+          "url": "https://improveitmd.com/financing",
           "description": "Flexible financing options for roofing, siding, windows, and more. Payments starting at $99/month. Capitol Improvements makes exterior remodeling affordable for Maryland, Virginia, and DC homeowners.",
           "mainEntity": {
             "@type": "FinancialProduct",
             "name": "Home Improvement Financing",
             "description": "Flexible financing for exterior remodeling projects with payments starting at $99/month.",
             "provider": {
-              "@id": "https://www.improveitmd.com/#corporation"
+              "@id": "https://improveitmd.com/#corporation"
             },
             "offers": {
               "@type": "Offer",
@@ -177,7 +177,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             }
           },
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           }
         }
       ]

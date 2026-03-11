@@ -20,7 +20,6 @@ export default ({ env }) => ({
       allowedOrigins: [
         env('FRONTEND_URL', 'https://embed.improveitmd.com'),
         'https://embed.improveitmd.com',
-        'https://v2.improveitmd.com',
         'https://improveitmd.com',
         'https://www.improveitmd.com',
         'http://localhost:3000',

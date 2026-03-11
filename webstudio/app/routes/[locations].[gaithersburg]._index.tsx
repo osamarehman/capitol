@@ -159,12 +159,12 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "RoofingContractor",
-          "@id": "https://www.improveitmd.com/locations/gaithersburg#local-office",
+          "@id": "https://improveitmd.com/locations/gaithersburg#local-office",
           "name": "Capitol Improvements - Gaithersburg Roofing Company & Siding Contractors",
-          "url": "https://www.improveitmd.com/locations/gaithersburg",
+          "url": "https://improveitmd.com/locations/gaithersburg",
           "telephone": "301.769.6991",
           "email": "support@improveitmd.com",
-          "image": "https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg",
+          "image": "https://improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg",
           "description": "Capitol Improvements Gaithersburg branch — GAF Master Elite certified roofing and James Hardie preferred siding contractor serving Montgomery County and surrounding areas.",
           "address": {
             "@type": "PostalAddress",
@@ -202,7 +202,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
           ],
           "employee": {
             "@type": "Person",
-            "@id": "https://www.improveitmd.com/#lancejewell",
+            "@id": "https://improveitmd.com/#lancejewell",
             "name": "Lance Jewell",
             "jobTitle": "Branch Manager & Project Consultant"
           },
@@ -259,7 +259,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             ]
           },
           "parentOrganization": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "sameAs": [
             "https://maps.google.com/?cid=324232438797579827",

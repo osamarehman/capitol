@@ -91,14 +91,11 @@ export const action = async (args: ActionFunctionArgs) => {
   // Handle deploy auth login
   if (hasPasswordField && password) {
     if (password === DEPLOY_PASSWORD) {
-      return data(
-        { success: true },
-        {
-          headers: {
-            "Set-Cookie": await deployAuthCookie.serialize("valid"),
-          },
-        }
-      );
+      return redirect("/deploy", {
+        headers: {
+          "Set-Cookie": await deployAuthCookie.serialize("valid"),
+        },
+      });
     }
     return data({ success: false, error: "Invalid password" }, { status: 401 });
   }
@@ -121,14 +118,11 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   const password = formData.get("password");
 
   if (password === DEPLOY_PASSWORD) {
-    return data(
-      { success: true },
-      {
-        headers: {
-          "Set-Cookie": await deployAuthCookie.serialize("valid"),
-        },
-      }
-    );
+    return redirect("/deploy", {
+      headers: {
+        "Set-Cookie": await deployAuthCookie.serialize("valid"),
+      },
+    });
   }
 
   return data({ success: false, error: "Invalid password" }, { status: 401 });

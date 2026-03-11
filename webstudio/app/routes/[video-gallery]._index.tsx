@@ -159,9 +159,9 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "CollectionPage",
-          "@id": "https://www.improveitmd.com/video-gallery#collectionpage",
+          "@id": "https://improveitmd.com/video-gallery#collectionpage",
           "name": "Video Gallery - Capitol Improvements",
-          "url": "https://www.improveitmd.com/video-gallery",
+          "url": "https://improveitmd.com/video-gallery",
           "description": "Watch project videos, customer testimonials, and educational content from Capitol Improvements. See our roofing, siding, deck, and exterior remodeling work in action.",
           "about": [
             "Project Walkthroughs",
@@ -171,7 +171,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             "Deck Builds"
           ],
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           }
         }
       ]

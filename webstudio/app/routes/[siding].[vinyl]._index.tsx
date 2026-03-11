@@ -159,13 +159,13 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "Service",
-          "@id": "https://www.improveitmd.com/siding/vinyl#service",
+          "@id": "https://improveitmd.com/siding/vinyl#service",
           "name": "Vinyl Siding - Capitol Improvements",
-          "url": "https://www.improveitmd.com/siding/vinyl",
+          "url": "https://improveitmd.com/siding/vinyl",
           "serviceType": "Vinyl Siding Installation",
           "description": "Professional vinyl siding installation and replacement. Affordable, durable siding options for homes in Maryland, Virginia, and DC.",
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "areaServed": [
             {

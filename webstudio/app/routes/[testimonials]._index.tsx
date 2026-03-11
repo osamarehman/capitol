@@ -159,13 +159,13 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "WebPage",
-          "@id": "https://www.improveitmd.com/testimonials#webpage",
+          "@id": "https://improveitmd.com/testimonials#webpage",
           "name": "Customer Testimonials - Capitol Improvements",
-          "url": "https://www.improveitmd.com/testimonials",
+          "url": "https://improveitmd.com/testimonials",
           "description": "Read verified customer reviews for Capitol Improvements. 445 five-star reviews across our Bowie, Gaithersburg, and Washington DC locations.",
           "mainEntity": {
             "@type": "HomeAndConstructionBusiness",
-            "@id": "https://www.improveitmd.com/#corporation",
+            "@id": "https://improveitmd.com/#corporation",
             "name": "Capitol Improvements",
             "aggregateRating": {
               "@type": "AggregateRating",
@@ -176,7 +176,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             }
           },
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           }
         }
       ]

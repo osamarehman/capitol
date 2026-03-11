@@ -86,7 +86,7 @@ if [ "$UPLOAD_MODE" = true ]; then
       python3 -c "import sys,json; d=json.load(sys.stdin); print(d[0]['url'] if d else '')" 2>/dev/null || echo "")
 
     if [ -n "$strapi_path" ]; then
-      new_url="https://v2.improveitmd.com${strapi_path}"
+      new_url="https://improveitmd.com${strapi_path}"
       log "  Mapped: $clean_url -> $new_url"
 
       # Add to mappings
@@ -145,10 +145,10 @@ fi
 
 # Replace cms.improveitmd.com URLs with v2 domain (proxied to local Strapi via Caddy)
 # Must use full URL so IPX image proxy can fetch via HTTP (relative paths only check local files)
-log "  Replacing cms.improveitmd.com URLs with v2.improveitmd.com/uploads/ paths..."
+log "  Replacing cms.improveitmd.com URLs with improveitmd.com/uploads/ paths..."
 for f in "$GEN_DIR"/*.tsx "$GEN_DIR"/*.ts "$GEN_DIR"/*.css "$PROJECT_DIR/.webstudio/data.json"; do
   [ -f "$f" ] || continue
-  sed -i 's|https://cms\.improveitmd\.com/uploads/|https://v2.improveitmd.com/uploads/|g' "$f"
+  sed -i 's|https://cms\.improveitmd\.com/uploads/|https://improveitmd.com/uploads/|g' "$f"
 done
 
 # Also replace wstd.io URLs with local /assets/ paths
@@ -247,9 +247,21 @@ done
 log "=== Step 5: Fixing font URLs ==="
 
 for f in "$GEN_DIR"/*.tsx; do
-  sed -i "s|https://v2\.improveitmd\.com/cgi/asset/|/fonts/|g" "$f"
+  sed -i "s|https://improveitmd\.com/cgi/asset/|/fonts/|g" "$f"
 done
 
 log "  Font URLs patched"
+
+# ============================================================
+# STEP 6: Replace any remaining v2.improveitmd.com references
+# ============================================================
+log "=== Step 6: Replacing v2.improveitmd.com with improveitmd.com ==="
+
+for f in "$GEN_DIR"/*.tsx "$GEN_DIR"/*.ts "$GEN_DIR"/*.css; do
+  [ -f "$f" ] || continue
+  sed -i 's|v2\.improveitmd\.com|improveitmd.com|g' "$f"
+done
+
+log "  v2 domain refs patched"
 
 log "=== Optimization complete ==="

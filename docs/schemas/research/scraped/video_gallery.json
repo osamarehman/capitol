@@ -1,5 +1,5 @@
 {
-  "url": "https://www.improveitmd.com/video-gallery",
+  "url": "https://improveitmd.com/video-gallery",
   "title": "Video Gallery",
   "description": "See our local project gallery in Maryland and DC. Capitol Improvements offers Roofs, Siding, Gutters, Windows, Trim, Decks, Patios, and Doors.",
   "markdown": "Video Gallery",
@@ -13,7 +13,7 @@
       "brand": "Capitol Improvements",
       "offers": {
         "@type": "AggregateOffer",
-        "url": "https://www.improveitmd.com/",
+        "url": "https://improveitmd.com/",
         "priceCurrency": "USD",
         "offerCount": "1"
       },

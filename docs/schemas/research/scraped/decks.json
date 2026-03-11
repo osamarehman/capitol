@@ -1,5 +1,5 @@
 {
-  "url": "https://www.improveitmd.com/decks-and-patios",
+  "url": "https://improveitmd.com/decks-and-patios",
   "title": "Deck & Patio Builders Near You in Maryland & Washington, DC | Capitol Improvements",
   "description": "Quality deck and patio installer near Bowie, Gaithersburg, and Washington, DC. We build custom decks, patios and enclosures. Pavers, stamped concrete, stone, wood, and more. Free estimates.",
   "markdown": "Deck & Patio Builders Near You in Maryland & Washington, DC \\| Capitol Improvements",
@@ -13,7 +13,7 @@
       "brand": "Capitol Improvements",
       "offers": {
         "@type": "AggregateOffer",
-        "url": "https://www.improveitmd.com/",
+        "url": "https://improveitmd.com/",
         "priceCurrency": "USD",
         "offerCount": "1"
       },

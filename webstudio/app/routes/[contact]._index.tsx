@@ -159,13 +159,13 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "ContactPage",
-          "@id": "https://www.improveitmd.com/contact#contactpage",
+          "@id": "https://improveitmd.com/contact#contactpage",
           "name": "Contact Capitol Improvements",
-          "url": "https://www.improveitmd.com/contact",
+          "url": "https://improveitmd.com/contact",
           "description": "Contact Capitol Improvements for roofing, siding, windows, doors, gutters, and deck services in Maryland, Virginia, and DC. Call 301.769.6909 or email support@improveitmd.com.",
           "mainEntity": {
             "@type": "HomeAndConstructionBusiness",
-            "@id": "https://www.improveitmd.com/#corporation",
+            "@id": "https://improveitmd.com/#corporation",
             "name": "Capitol Improvements",
             "contactPoint": [
               {
@@ -191,7 +191,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             }
           },
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           }
         }
       ]

@@ -159,9 +159,9 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "Service",
-          "@id": "https://www.improveitmd.com/decks-and-patios#service",
+          "@id": "https://improveitmd.com/decks-and-patios#service",
           "name": "Decks & Patios - Capitol Improvements",
-          "url": "https://www.improveitmd.com/decks-and-patios",
+          "url": "https://improveitmd.com/decks-and-patios",
           "serviceType": "Deck & Patio Construction",
           "description": "TimberTech Platinum certified contractor building composite, Ipe hardwood, pressure-treated, and rooftop decks in Maryland, DC, and Virginia. Flagstone patios, cable railing, and custom outdoor living spaces.",
           "brand": {
@@ -170,7 +170,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             "url": "https://www.timbertech.com"
           },
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "areaServed": [
             {

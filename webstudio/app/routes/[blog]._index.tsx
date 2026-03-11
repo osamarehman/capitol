@@ -159,12 +159,12 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "Blog",
-          "@id": "https://www.improveitmd.com/blog#blog",
+          "@id": "https://improveitmd.com/blog#blog",
           "name": "Capitol Improvements Blog",
-          "url": "https://www.improveitmd.com/blog",
+          "url": "https://improveitmd.com/blog",
           "description": "Expert tips, guides, and news about roofing, siding, windows, doors, gutters, and decks from Capitol Improvements. Serving Maryland, Virginia, and DC.",
           "publisher": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "about": [
             "Roofing",
@@ -176,7 +176,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             "Home Improvement"
           ],
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           }
         }
       ]

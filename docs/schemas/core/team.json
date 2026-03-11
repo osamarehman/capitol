@@ -3,37 +3,37 @@
   "@graph": [
     {
       "@type": "AboutPage",
-      "@id": "https://www.improveitmd.com/team#aboutpage",
+      "@id": "https://improveitmd.com/team#aboutpage",
       "name": "Meet Our Team - Capitol Improvements",
-      "url": "https://www.improveitmd.com/team",
+      "url": "https://improveitmd.com/team",
       "description": "Meet the Capitol Improvements leadership team. Family-owned and operated exterior remodeling company serving Maryland, Virginia, and DC since 2010.",
       "mainEntity": {
-        "@id": "https://www.improveitmd.com/#corporation"
+        "@id": "https://improveitmd.com/#corporation"
       },
       "about": [
         {
           "@type": "Person",
-          "@id": "https://www.improveitmd.com/#patjewell",
+          "@id": "https://improveitmd.com/#patjewell",
           "name": "Pat Jewell",
           "jobTitle": "Owner & Founder",
-          "worksFor": { "@id": "https://www.improveitmd.com/#corporation" }
+          "worksFor": { "@id": "https://improveitmd.com/#corporation" }
         },
         {
           "@type": "Person",
-          "@id": "https://www.improveitmd.com/#lancejewell",
+          "@id": "https://improveitmd.com/#lancejewell",
           "name": "Lance Jewell",
           "jobTitle": "Branch Manager - Gaithersburg",
-          "worksFor": { "@id": "https://www.improveitmd.com/#corporation" }
+          "worksFor": { "@id": "https://improveitmd.com/#corporation" }
         },
         {
           "@type": "Person",
-          "@id": "https://www.improveitmd.com/#austinjewell",
+          "@id": "https://improveitmd.com/#austinjewell",
           "name": "Austin Jewell",
           "jobTitle": "Branch Manager - Washington DC",
-          "worksFor": { "@id": "https://www.improveitmd.com/#corporation" }
+          "worksFor": { "@id": "https://improveitmd.com/#corporation" }
         }
       ],
-      "provider": { "@id": "https://www.improveitmd.com/#corporation" }
+      "provider": { "@id": "https://improveitmd.com/#corporation" }
     }
   ]
 }

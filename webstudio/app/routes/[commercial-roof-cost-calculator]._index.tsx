@@ -159,9 +159,9 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "WebApplication",
-          "@id": "https://www.improveitmd.com/commercial-roof-cost-calculator#webapp",
+          "@id": "https://improveitmd.com/commercial-roof-cost-calculator#webapp",
           "name": "Commercial Roof Cost Calculator - Capitol Improvements",
-          "url": "https://www.improveitmd.com/commercial-roof-cost-calculator",
+          "url": "https://improveitmd.com/commercial-roof-cost-calculator",
           "applicationCategory": "UtilitiesApplication",
           "description": "Free commercial roof cost calculator. Get an instant estimate for TPO, flat roof, and commercial roofing projects in Maryland, Virginia, and DC.",
           "operatingSystem": "Any",
@@ -172,7 +172,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             "priceCurrency": "USD"
           },
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           }
         }
       ]

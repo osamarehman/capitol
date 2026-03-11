@@ -159,13 +159,13 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "Service",
-          "@id": "https://www.improveitmd.com/deck-and-patios/rooftop-deck#service",
+          "@id": "https://improveitmd.com/deck-and-patios/rooftop-deck#service",
           "name": "Rooftop Decks - Capitol Improvements",
-          "url": "https://www.improveitmd.com/deck-and-patios/rooftop-deck",
+          "url": "https://improveitmd.com/deck-and-patios/rooftop-deck",
           "serviceType": "Rooftop Deck Construction",
           "description": "Custom rooftop deck design and construction. Transform your flat roof into usable outdoor living space. Serving Maryland, Virginia, and DC.",
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "areaServed": [
             {

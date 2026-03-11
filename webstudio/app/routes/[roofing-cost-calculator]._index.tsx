@@ -159,9 +159,9 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "WebApplication",
-          "@id": "https://www.improveitmd.com/roofing-cost-calculator#webapp",
+          "@id": "https://improveitmd.com/roofing-cost-calculator#webapp",
           "name": "Roofing Cost Calculator - Capitol Improvements",
-          "url": "https://www.improveitmd.com/roofing-cost-calculator",
+          "url": "https://improveitmd.com/roofing-cost-calculator",
           "applicationCategory": "UtilitiesApplication",
           "description": "Free roofing cost calculator tool. Get an instant estimate for your residential roof replacement project in Maryland, Virginia, and DC.",
           "operatingSystem": "Any",
@@ -172,7 +172,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             "priceCurrency": "USD"
           },
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           }
         }
       ]

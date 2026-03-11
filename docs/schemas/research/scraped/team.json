@@ -1,5 +1,5 @@
 {
-  "url": "https://www.improveitmd.com/team",
+  "url": "https://improveitmd.com/team",
   "title": "Team \u2013 Exterior Home Remodelers| Capitol Improvements",
   "description": "Meet our skilled team at Capitol Improvements. Family-owned, with a commitment to quality and customer satisfaction. Serving homeowners in Maryland DC and Virginia for 30+ years.",
   "markdown": "Team \u2013 Exterior Home Remodelers\\| Capitol Improvements",
@@ -13,7 +13,7 @@
       "brand": "Capitol Improvements",
       "offers": {
         "@type": "AggregateOffer",
-        "url": "https://www.improveitmd.com/",
+        "url": "https://improveitmd.com/",
         "priceCurrency": "USD",
         "offerCount": "1"
       },

@@ -1,5 +1,5 @@
 {
-  "url": "https://www.improveitmd.com/service-areas",
+  "url": "https://improveitmd.com/service-areas",
   "title": "Capitol Improvements - Service Area - Maryland, Washington, DC and Northern Virginia",
   "description": "As one of Maryland, Washington, DC and Virginia's best roofing, siding, gutter, window, deck builders, and door contractors chances are we have a job in your neighborhood.",
   "markdown": "Capitol Improvements - Service Area - Maryland, Washington, DC and Northern Virginia",
@@ -13,7 +13,7 @@
       "brand": "Capitol Improvements",
       "offers": {
         "@type": "AggregateOffer",
-        "url": "https://www.improveitmd.com/",
+        "url": "https://improveitmd.com/",
         "priceCurrency": "USD",
         "offerCount": "1"
       },

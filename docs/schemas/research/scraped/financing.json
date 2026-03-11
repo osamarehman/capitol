@@ -1,5 +1,5 @@
 {
-  "url": "https://www.improveitmd.com/financing",
+  "url": "https://improveitmd.com/financing",
   "title": "Roof Financing From $99/mo or 0% for 18 Months | Deck Builders With 0% Interest Financing | Siding Financing From $99/mo or 0% Interest for 18 Months | Replacement Window Financing From $99/mo or 0% for 18 Months",
   "description": "We are a roofing company, a deck builder, a siding contractor, a window replacement contractor that offers financing for our projects. We are a full service exterior remodeling company offering financing from only $99/mo or 0% APR for 18 months.",
   "markdown": "Roof Financing From $99/mo or 0% for 18 Months \\| Deck Builders With 0% Interest Financing \\| Siding Financing From $99/mo or 0% Interest for 18 Months \\| Replacement Window Financing From $99/mo or 0% for 18 Months",
@@ -13,7 +13,7 @@
       "brand": "Capitol Improvements",
       "offers": {
         "@type": "AggregateOffer",
-        "url": "https://www.improveitmd.com/",
+        "url": "https://improveitmd.com/",
         "priceCurrency": "USD",
         "offerCount": "1"
       },

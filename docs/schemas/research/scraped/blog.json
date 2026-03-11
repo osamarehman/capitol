@@ -1,5 +1,5 @@
 {
-  "url": "https://www.improveitmd.com/blog",
+  "url": "https://improveitmd.com/blog",
   "title": "Blog \u2013 Capitol Improvments | Home Remodeling",
   "description": "Capitol Improvements offers free estimates for Roofs, Siding, Gutters, Windows, Trim, Decks, Patios, and Doors. Serving Maryland & DC.",
   "markdown": "Blog \u2013 Capitol Improvments \\| Home Remodeling",
@@ -13,7 +13,7 @@
       "brand": "Capitol Improvements",
       "offers": {
         "@type": "AggregateOffer",
-        "url": "https://www.improveitmd.com/",
+        "url": "https://improveitmd.com/",
         "priceCurrency": "USD",
         "offerCount": "1"
       },

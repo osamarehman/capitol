@@ -159,21 +159,21 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "AboutPage",
-          "@id": "https://www.improveitmd.com/about#aboutpage",
+          "@id": "https://improveitmd.com/about#aboutpage",
           "name": "About Capitol Improvements",
-          "url": "https://www.improveitmd.com/about",
+          "url": "https://improveitmd.com/about",
           "description": "Capitol Improvements — family-owned exterior remodeling company founded in 2010 by Pat Jewell. GAF Master Elite, Atlas Pro Plus, FORTIFIED, MuleHide TPO, James Hardie Preferred, TimberTech Platinum, and Provia Door & Window certified. MHIC 130628.",
           "mainEntity": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "about": {
             "@type": "Organization",
-            "@id": "https://www.improveitmd.com/#corporation",
+            "@id": "https://improveitmd.com/#corporation",
             "name": "Capitol Improvements",
             "foundingDate": "2010",
             "founder": {
               "@type": "Person",
-              "@id": "https://www.improveitmd.com/#patjewell",
+              "@id": "https://improveitmd.com/#patjewell",
               "name": "Pat Jewell",
               "jobTitle": "Owner & Founder",
               "description": "Pat Jewell has 30+ years of experience in the exterior remodeling industry. He founded Capitol Improvements in 2010, leveraging his deep industry knowledge and relationships to assemble the best remodeling team in the Maryland, DC, and Virginia area."

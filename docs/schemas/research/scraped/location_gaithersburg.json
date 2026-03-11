@@ -1,5 +1,5 @@
 {
-  "url": "https://www.improveitmd.com/locations/gaithersburg",
+  "url": "https://improveitmd.com/locations/gaithersburg",
   "title": "\ud83c\uddfa\ud83c\uddf8 BEST Roofing and Siding Company Near You in Gaithersburg MD - ASAP Service, Affordable Financing, Lifetime Warranty",
   "description": "Our team of roofers and siding experts near you in Gaithersburg, MD will provide you with best-in-class roof installation and siding installation services. Capable, Experienced, and Fair To You.",
   "markdown": "\ud83c\uddfa\ud83c\uddf8 BEST Roofing and Siding Company Near You in Gaithersburg MD - ASAP Service, Affordable Financing, Lifetime WarrantySiding Gaithersburg Maryland - Capitol Improvements - Windows & Doors \\| Roofing \\| Siding - YouTubeSiding Gaithersburg Maryland - Capitol Improvements - Windows & Doors \\| Roofing \\| Siding - YouTube",
@@ -10,8 +10,8 @@
       "name": "Capitol Improvements - Gaithersburg Roofing Company & Siding Contractors",
       "image": "https://assets-global.website-files.com/64bd6cb099271195afd55550/64bec17f217d236d7db6309a_ci%20logo.svg",
       "og:image": "https://cdn.prod.website-files.com/64bd6cb099271195afd55550/650a85c076491d315448dd23_image_roof-replacement-gaithersburg-2.webp",
-      "@id": "https://www.improveitmd.com",
-      "url": "https://www.improveitmd.com",
+      "@id": "https://improveitmd.com",
+      "url": "https://improveitmd.com",
       "hasMap": "https://www.google.com/maps/place/Capitol+Improvements+-+Gaithersburg+Roofing+Company+%26+Siding+Contractors/@39.1905019,-77.1653947,17z/data=!3m1!4b1!4m6!3m5!1s0x89b7d565ce980233:0x47fe7af6b303633!8m2!3d39.1905019!4d-77.1653947!16s%2Fg%2F11hffqsmnh?entry=ttu",
       "telephone": "301.769.6991",
       "priceRange": "Free Consultation",
@@ -42,7 +42,7 @@
         "closes": "07:00"
       },
       "sameAs": [
-        "https://www.improveitmd.com",
+        "https://improveitmd.com",
         "https://www.hotfrog.com/company/eec3d590905e3ef5dca46920f453d2f0",
         "https://www.bbb.org/us/md/bowie/profile/roofing-contractors/capitol-improvements-llc-0241-235990374",
         "https://www.bing.com/maps?osid=717e6a36-a15c-43e6-9afc-720ccf54aa26&cp=39.190223~-77.17078&lvl=16&pi=0&imgid=48d3c730-909a-4914-8604-c482f9e98f8c&v=2&sV=2&form=S00027",
@@ -98,7 +98,7 @@
         },
         "foundingDate": "2012",
         "disambiguatingDescription": "Gaithersburg, Maryland Roofing & Siding Contractors",
-        "mainEntityOfPage": "https://www.improveitmd.com",
+        "mainEntityOfPage": "https://improveitmd.com",
         "areaServed": [
           "Gaithersburg",
           "Howard County",
@@ -125,7 +125,7 @@
       "brand": "Capitol Improvements",
       "offers": {
         "@type": "AggregateOffer",
-        "url": "https://www.improveitmd.com/",
+        "url": "https://improveitmd.com/",
         "priceCurrency": "USD",
         "offerCount": "1"
       },

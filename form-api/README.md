@@ -15,7 +15,7 @@ A Python Flask application that handles form submissions from improveitmd.com do
 ## Architecture
 
 ```
-Internet (improveitmd.com, v2.improveitmd.com)
+Internet (improveitmd.com)
     ↓
 forms.improveitmd.com (HTTPS via Caddy)
     ↓
@@ -114,16 +114,13 @@ View all submissions in a beautiful web interface.
 
 The API only accepts form submissions from:
 - `improveitmd.com`
-- `v2.improveitmd.com`
 - `www.improveitmd.com`
-- `www.v2.improveitmd.com`
 
 To add more domains, edit `app.py` and update the `ALLOWED_DOMAINS` list:
 
 ```python
 ALLOWED_DOMAINS = [
     'improveitmd.com',
-    'v2.improveitmd.com',
     'your-new-domain.com',  # Add here
 ]
 ```
@@ -355,7 +352,7 @@ Currently all configuration is in `app.py`. For production, consider:
 ```bash
 # Create .env file
 DATABASE=/var/lib/form-api/submissions.db
-ALLOWED_DOMAINS=improveitmd.com,v2.improveitmd.com
+ALLOWED_DOMAINS=improveitmd.com
 ```
 
 ### Production Considerations

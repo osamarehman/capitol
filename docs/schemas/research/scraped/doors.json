@@ -1,5 +1,5 @@
 {
-  "url": "https://www.improveitmd.com/doors",
+  "url": "https://improveitmd.com/doors",
   "title": "\ud83d\udeaa Custom Door Installer Near You in Maryland & Washington DC | Entry Door Installation",
   "description": "An entry door is an investment in the safety, comfort, and enjoyment of those inside your home. Provia door installer. Increase curb appeal. Free estimates.",
   "markdown": "\ud83d\udeaa Custom Door Installer Near You in Maryland & Washington DC \\| Entry Door Installation",
@@ -13,7 +13,7 @@
       "brand": "Capitol Improvements",
       "offers": {
         "@type": "AggregateOffer",
-        "url": "https://www.improveitmd.com/",
+        "url": "https://improveitmd.com/",
         "priceCurrency": "USD",
         "offerCount": "1"
       },

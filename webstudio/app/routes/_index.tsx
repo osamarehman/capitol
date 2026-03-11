@@ -160,7 +160,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
         {
           "@type": "WebSite",
           "name": "Capitol Improvements",
-          "url": "https://www.improveitmd.com"
+          "url": "https://improveitmd.com"
         },
         {
           "@type": [
@@ -168,11 +168,11 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             "RoofingContractor",
             "GeneralContractor"
           ],
-          "@id": "https://www.improveitmd.com/#corporation",
+          "@id": "https://improveitmd.com/#corporation",
           "name": "Capitol Improvements",
-          "url": "https://www.improveitmd.com",
-          "logo": "https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg",
-          "image": "https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg",
+          "url": "https://improveitmd.com",
+          "logo": "https://improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg",
+          "image": "https://improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg",
           "telephone": "+1-301-769-6909",
           "email": "support@improveitmd.com",
           "priceRange": "$",
@@ -181,7 +181,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
           "foundingDate": "2010",
           "founder": {
             "@type": "Person",
-            "@id": "https://www.improveitmd.com/#patjewell",
+            "@id": "https://improveitmd.com/#patjewell",
             "name": "Pat Jewell",
             "jobTitle": "Owner & Founder",
             "description": "Pat Jewell has 30+ years of experience in the exterior remodeling industry. He founded Capitol Improvements in 2010, leveraging his deep industry knowledge and relationships to assemble the best remodeling team in the Maryland, DC, and Virginia area."
@@ -212,7 +212,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
                   "@type": "Service",
                   "name": "Residential Roofing",
                   "description": "Dedicated roofing crew — GAF Master Elite, Atlas Pro Plus, and FORTIFIED certified. GAF Timberline and Atlas Scotchgard Protector shingles, metal roofing, storm damage replacement.",
-                  "url": "https://www.improveitmd.com/roofing"
+                  "url": "https://improveitmd.com/roofing"
                 }
               },
               {
@@ -221,7 +221,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
                   "@type": "Service",
                   "name": "TPO Flat Roofing",
                   "description": "Dedicated flat roofing crew — MuleHide Certified TPO contractor. TPO and EPDM single-ply membrane systems for commercial and residential low-slope roofs.",
-                  "url": "https://www.improveitmd.com/roofing/flat-roofing"
+                  "url": "https://improveitmd.com/roofing/flat-roofing"
                 }
               },
               {
@@ -230,7 +230,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
                   "@type": "Service",
                   "name": "Siding Installation",
                   "description": "Dedicated siding crew — James Hardie Preferred Partner. Fiber cement, vinyl, and engineered wood siding.",
-                  "url": "https://www.improveitmd.com/siding"
+                  "url": "https://improveitmd.com/siding"
                 }
               },
               {
@@ -239,7 +239,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
                   "@type": "Service",
                   "name": "Window Replacement",
                   "description": "Dedicated window and door crew — Provia Certified. ENERGY STAR windows in double-hung, casement, bay, bow, slider, and picture styles.",
-                  "url": "https://www.improveitmd.com/windows"
+                  "url": "https://improveitmd.com/windows"
                 }
               },
               {
@@ -248,7 +248,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
                   "@type": "Service",
                   "name": "Entry Door Installation",
                   "description": "Dedicated window and door crew — Provia Certified. Fiberglass, steel, storm doors, patio doors, and French doors.",
-                  "url": "https://www.improveitmd.com/doors"
+                  "url": "https://improveitmd.com/doors"
                 }
               },
               {
@@ -257,7 +257,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
                   "@type": "Service",
                   "name": "Seamless Gutter Installation",
                   "description": "Dedicated gutter crew — seamless aluminum gutters, gutter guards, and fascia board replacement.",
-                  "url": "https://www.improveitmd.com/gutters"
+                  "url": "https://improveitmd.com/gutters"
                 }
               },
               {
@@ -266,7 +266,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
                   "@type": "Service",
                   "name": "Exterior Trim",
                   "description": "Fascia, soffit, rake boards, corner boards, and window trim in wood, PVC, and composite.",
-                  "url": "https://www.improveitmd.com/exterior-trim"
+                  "url": "https://improveitmd.com/exterior-trim"
                 }
               },
               {
@@ -275,7 +275,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
                   "@type": "Service",
                   "name": "Deck & Patio Construction",
                   "description": "Dedicated deck crew — TimberTech Platinum certified. Composite, Ipe hardwood, rooftop decks, and flagstone patios.",
-                  "url": "https://www.improveitmd.com/decks-and-patios"
+                  "url": "https://improveitmd.com/decks-and-patios"
                 }
               }
             ]
@@ -351,10 +351,10 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
                 "RoofingContractor"
               ],
               "name": "Capitol Improvements - Roofing Company & Siding Contractor",
-              "@id": "https://www.improveitmd.com/#bowie-hq",
+              "@id": "https://improveitmd.com/#bowie-hq",
               "description": "Bowie Headquarters led by founder Pat Jewell.",
               "employee": {
-                "@id": "https://www.improveitmd.com/#patjewell"
+                "@id": "https://improveitmd.com/#patjewell"
               },
               "address": {
                 "@type": "PostalAddress",
@@ -381,7 +381,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
                 "RoofingContractor"
               ],
               "name": "Capitol Improvements - Gaithersburg Roofing Company & Siding Contractors",
-              "@id": "https://www.improveitmd.com/#gaithersburg-branch",
+              "@id": "https://improveitmd.com/#gaithersburg-branch",
               "description": "Gaithersburg branch managed by Lance Jewell.",
               "employee": {
                 "@type": "Person",
@@ -412,7 +412,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
                 "RoofingContractor"
               ],
               "name": "Capitol Improvements Washington DC - Roofing | Siding | Doors",
-              "@id": "https://www.improveitmd.com/#dc-branch",
+              "@id": "https://improveitmd.com/#dc-branch",
               "description": "DC and Northern Virginia branch managed by Austin Jewell.",
               "employee": {
                 "@type": "Person",

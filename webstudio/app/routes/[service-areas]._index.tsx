@@ -159,9 +159,9 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "WebPage",
-          "@id": "https://www.improveitmd.com/service-areas#webpage",
+          "@id": "https://improveitmd.com/service-areas#webpage",
           "name": "Service Areas - Capitol Improvements",
-          "url": "https://www.improveitmd.com/service-areas",
+          "url": "https://improveitmd.com/service-areas",
           "description": "Capitol Improvements serves Maryland, Virginia, and Washington DC with roofing, siding, windows, doors, gutters, and deck services from three office locations.",
           "mainEntity": {
             "@type": "ItemList",
@@ -208,7 +208,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
           "about": [
             {
               "@type": "LocalBusiness",
-              "@id": "https://www.improveitmd.com/#bowie-hq",
+              "@id": "https://improveitmd.com/#bowie-hq",
               "name": "Capitol Improvements - Bowie HQ",
               "address": {
                 "@type": "PostalAddress",
@@ -220,7 +220,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             },
             {
               "@type": "LocalBusiness",
-              "@id": "https://www.improveitmd.com/#gaithersburg-branch",
+              "@id": "https://improveitmd.com/#gaithersburg-branch",
               "name": "Capitol Improvements - Gaithersburg",
               "address": {
                 "@type": "PostalAddress",
@@ -232,7 +232,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             },
             {
               "@type": "LocalBusiness",
-              "@id": "https://www.improveitmd.com/#dc-branch",
+              "@id": "https://improveitmd.com/#dc-branch",
               "name": "Capitol Improvements - Washington DC",
               "address": {
                 "@type": "PostalAddress",
@@ -244,7 +244,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             }
           ],
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           }
         }
       ]

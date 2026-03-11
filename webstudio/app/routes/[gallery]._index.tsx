@@ -159,9 +159,9 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "ImageGallery",
-          "@id": "https://www.improveitmd.com/gallery#imagegallery",
+          "@id": "https://improveitmd.com/gallery#imagegallery",
           "name": "Project Gallery - Capitol Improvements",
-          "url": "https://www.improveitmd.com/gallery",
+          "url": "https://improveitmd.com/gallery",
           "description": "Browse completed roofing, siding, deck, window, and door projects by Capitol Improvements across Maryland, Virginia, and DC.",
           "about": [
             "Roofing Projects",
@@ -171,7 +171,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             "Gutter Projects"
           ],
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           }
         }
       ]

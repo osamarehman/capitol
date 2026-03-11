@@ -3,8 +3,8 @@
 DIR="$(cd "$(dirname "$0")/../app/__generated__" && pwd)"
 
 for f in "$DIR"/*.tsx; do
-  # Replace v2.improveitmd.com font URLs with local /fonts/ paths
-  sed -i "s|https://v2\.improveitmd\.com/cgi/asset/|/fonts/|g" "$f"
+  # Replace improveitmd.com font URLs with local /fonts/ paths
+  sed -i "s|https://improveitmd\.com/cgi/asset/|/fonts/|g" "$f"
 
   # Remove whitespace text nodes between head elements (cause hydration errors)
   sed -i 's|{"\\n\\n\\n"}||g; s|{"\\n\\n"}||g; s|{"\\n"}||g' "$f"

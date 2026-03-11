@@ -159,13 +159,13 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "Service",
-          "@id": "https://www.improveitmd.com/deck-and-patios/flagstone-patios#service",
+          "@id": "https://improveitmd.com/deck-and-patios/flagstone-patios#service",
           "name": "Flagstone Patios - Capitol Improvements",
-          "url": "https://www.improveitmd.com/deck-and-patios/flagstone-patios",
+          "url": "https://improveitmd.com/deck-and-patios/flagstone-patios",
           "serviceType": "Flagstone Patio Construction",
           "description": "Custom flagstone patio design and installation. Natural stone patios that add timeless beauty to your outdoor living space in Maryland, Virginia, and DC.",
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "areaServed": [
             {

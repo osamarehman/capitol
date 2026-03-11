@@ -159,12 +159,12 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "RoofingContractor",
-          "@id": "https://www.improveitmd.com/locations/washington-dc#local-office",
+          "@id": "https://improveitmd.com/locations/washington-dc#local-office",
           "name": "Capitol Improvements Washington DC - Roofing | Siding | Doors",
-          "url": "https://www.improveitmd.com/locations/washington-dc",
+          "url": "https://improveitmd.com/locations/washington-dc",
           "telephone": "410.587.0128",
           "email": "support@improveitmd.com",
-          "image": "https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg",
+          "image": "https://improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg",
           "description": "Capitol Improvements DC branch — GAF Master Elite certified roofing and siding contractor serving Washington DC, Northern Virginia, and surrounding areas.",
           "address": {
             "@type": "PostalAddress",
@@ -202,7 +202,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
           ],
           "employee": {
             "@type": "Person",
-            "@id": "https://www.improveitmd.com/#austinjewell",
+            "@id": "https://improveitmd.com/#austinjewell",
             "name": "Austin Jewell",
             "jobTitle": "Branch Manager & Project Consultant"
           },
@@ -259,7 +259,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             ]
           },
           "parentOrganization": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "sameAs": [
             "https://maps.google.com/?cid=10343029476848561348",

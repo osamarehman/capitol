@@ -159,13 +159,13 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "Service",
-          "@id": "https://www.improveitmd.com/roofing/asphalt-roofing#service",
+          "@id": "https://improveitmd.com/roofing/asphalt-roofing#service",
           "name": "Asphalt Shingle Roofing - Capitol Improvements",
-          "url": "https://www.improveitmd.com/roofing/asphalt-roofing",
+          "url": "https://improveitmd.com/roofing/asphalt-roofing",
           "serviceType": "Asphalt Shingle Roofing",
           "description": "Expert asphalt shingle roof installation featuring GAF Timberline HDZ shingles. GAF Master Elite certified contractor with Golden Pledge warranty coverage in Maryland, Virginia, and DC.",
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "areaServed": [
             {

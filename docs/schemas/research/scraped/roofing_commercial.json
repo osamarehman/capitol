@@ -1,5 +1,5 @@
 {
-  "url": "https://www.improveitmd.com/roofing/commercial-roofing",
+  "url": "https://improveitmd.com/roofing/commercial-roofing",
   "title": "Commercial Roofing Near You in Washington DC | Commercial Roofing Near You | Capitol Improvements",
   "description": "Commercial roofing company in Washington DC. Licensed and insured commercial roofing company offering asphalt shingles, flat roofing, metal roofing, and specialty roofing.",
   "markdown": "Commercial Roofing Near You in Washington DC \\| Commercial Roofing Near You \\| Capitol Improvements",
@@ -13,7 +13,7 @@
       "brand": "Capitol Improvements",
       "offers": {
         "@type": "AggregateOffer",
-        "url": "https://www.improveitmd.com/",
+        "url": "https://improveitmd.com/",
         "priceCurrency": "USD",
         "offerCount": "1"
       },

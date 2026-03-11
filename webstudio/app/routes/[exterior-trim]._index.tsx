@@ -159,13 +159,13 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "Service",
-          "@id": "https://www.improveitmd.com/exterior-trim#service",
+          "@id": "https://improveitmd.com/exterior-trim#service",
           "name": "Exterior Trim Installation - Capitol Improvements",
-          "url": "https://www.improveitmd.com/exterior-trim",
+          "url": "https://improveitmd.com/exterior-trim",
           "serviceType": "Exterior Trim Installation",
           "description": "Professional exterior trim installation and replacement in Maryland, DC, and Virginia. Fascia boards, soffit, rake boards, corner boards, window trim, and frieze boards in wood, PVC, and composite.",
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "areaServed": [
             {

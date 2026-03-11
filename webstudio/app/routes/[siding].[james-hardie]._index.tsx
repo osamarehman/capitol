@@ -159,13 +159,13 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "Service",
-          "@id": "https://www.improveitmd.com/siding/james-hardie#service",
+          "@id": "https://improveitmd.com/siding/james-hardie#service",
           "name": "James Hardie Fiber Cement Siding - Capitol Improvements",
-          "url": "https://www.improveitmd.com/siding/james-hardie",
+          "url": "https://improveitmd.com/siding/james-hardie",
           "serviceType": "James Hardie Fiber Cement Siding",
           "description": "James Hardie Preferred Partner installer for fiber cement siding. Durable, low-maintenance HardiePlank and HardiePanel siding installation in Maryland, Virginia, and DC.",
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "areaServed": [
             {

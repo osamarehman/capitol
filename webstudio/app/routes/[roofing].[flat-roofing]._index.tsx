@@ -164,27 +164,27 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://www.improveitmd.com"
+              "item": "https://improveitmd.com"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Roofing",
-              "item": "https://www.improveitmd.com/roofing"
+              "item": "https://improveitmd.com/roofing"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Flat Roofing",
-              "item": "https://www.improveitmd.com/roofing/flat-roofing"
+              "item": "https://improveitmd.com/roofing/flat-roofing"
             }
           ]
         },
         {
           "@type": "Service",
-          "@id": "https://www.improveitmd.com/roofing/flat-roofing#service",
+          "@id": "https://improveitmd.com/roofing/flat-roofing#service",
           "name": "TPO Flat Roofing - Capitol Improvements",
-          "url": "https://www.improveitmd.com/roofing/flat-roofing",
+          "url": "https://improveitmd.com/roofing/flat-roofing",
           "serviceType": "Flat Roofing",
           "description": "MuleHide Certified TPO contractor and FORTIFIED certified. Commercial and residential flat roof installation, repair, and replacement. Energy-efficient single-ply membrane systems in Maryland, Virginia, and DC.",
           "brand": {
@@ -193,7 +193,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             "url": "https://www.mulehide.com"
           },
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "areaServed": [
             {

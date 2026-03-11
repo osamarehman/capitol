@@ -1,5 +1,5 @@
 {
-  "url": "https://www.improveitmd.com/quote",
+  "url": "https://improveitmd.com/quote",
   "title": "Get a Free Quote \u2013 Capitol Improvements",
   "description": "Free quotes in Maryland and DC. Capitol Improvements offers free estimates for Roofs, Siding, Gutters, Windows, Trim, Decks, Patios, and Doors.",
   "markdown": "Get a Free Quote \u2013 Capitol Improvements",
@@ -13,7 +13,7 @@
       "brand": "Capitol Improvements",
       "offers": {
         "@type": "AggregateOffer",
-        "url": "https://www.improveitmd.com/",
+        "url": "https://improveitmd.com/",
         "priceCurrency": "USD",
         "offerCount": "1"
       },

@@ -1,5 +1,5 @@
 {
-  "url": "https://www.improveitmd.com/locations/washington-dc",
+  "url": "https://improveitmd.com/locations/washington-dc",
   "title": "\ud83c\uddfa\ud83c\uddf8 BEST Flat Roofing and Roofing Company Near You in Washington DC - ASAP Service, Affordable Financing, Lifetime Warranty",
   "description": "Our team of roofers and siding installation company near you in Washington, DC will provide you with best-in-class roofing, flat roofing, and siding installation services. Capable, Experienced, and Fair To You.",
   "markdown": "\ud83c\uddfa\ud83c\uddf8 BEST Flat Roofing and Roofing Company Near You in Washington DC - ASAP Service, Affordable Financing, Lifetime WarrantyWindows Washington DC - CAPITOL - Windows & Doors \\| Roofing \\| Siding - YouTubeWindows Washington DC - CAPITOL - Windows & Doors \\| Roofing \\| Siding - YouTube",
@@ -10,8 +10,8 @@
       "name": "Capitol Improvements - Washington DC Flat Roofing | Roofing | Siding | Doors",
       "image": "https://assets-global.website-files.com/64bd6cb099271195afd55550/64bec17f217d236d7db6309a_ci%20logo.svg",
       "og:image": "https://cdn.prod.website-files.com/64bd6cb099271195afd55550/650b20f6b65e743e291ff4fa_image_tpo-flat-roof_legion-4.webp",
-      "@id": "https://www.improveitmd.com",
-      "url": "https://www.improveitmd.com",
+      "@id": "https://improveitmd.com",
+      "url": "https://improveitmd.com",
       "hasMap": "https://www.google.com/maps/place/Capitol+Improvements+DC/@38.9011728,-77.0352683,15.54z/data=!4m6!3m5!1s0x89b7fb093fa9700f:0x8f89d2826cf3ecc4!8m2!3d38.9031065!4d-77.0342275!16s%2Fg%2F11t7y08pj4?entry=ttu",
       "telephone": "410.587.0128",
       "priceRange": "Free Consultation",
@@ -91,7 +91,7 @@
         },
         "foundingDate": "2012",
         "disambiguatingDescription": "Washington, DC Flat Roofing and Roofing Company",
-        "mainEntityOfPage": "https://www.improveitmd.com",
+        "mainEntityOfPage": "https://improveitmd.com",
         "areaServed": [
           "Washington DC",
           "DC",
@@ -119,7 +119,7 @@
       "brand": "Capitol Improvements",
       "offers": {
         "@type": "AggregateOffer",
-        "url": "https://www.improveitmd.com/",
+        "url": "https://improveitmd.com/",
         "priceCurrency": "USD",
         "offerCount": "1"
       },

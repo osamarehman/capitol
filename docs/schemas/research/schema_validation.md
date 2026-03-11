@@ -53,7 +53,7 @@ Generated: 2026-03-08 21:54
 // In Gaithersburg branch, update employee reference:
 "employee": {
   "@type": "Person",
-  "@id": "https://www.improveitmd.com/#lancejewell", // Add @id for consistency
+  "@id": "https://improveitmd.com/#lancejewell", // Add @id for consistency
   "name": "Lance Jewell",
   "jobTitle": "Branch Manager & Project Consultant"
 }
@@ -61,7 +61,7 @@ Generated: 2026-03-08 21:54
 // In DC branch, update employee reference:
 "employee": {
   "@type": "Person",
-  "@id": "https://www.improveitmd.com/#austinjewell", // Add @id for consistency
+  "@id": "https://improveitmd.com/#austinjewell", // Add @id for consistency
   "name": "Austin Jewell",
   "jobTitle": "Branch Manager & Project Consultant"
 }

@@ -43,24 +43,24 @@ def test_authorized_submission():
     assert response.status_code == 201, "Should accept authorized domain"
     print("✓ Authorized domain correctly accepted")
 
-def test_v2_subdomain():
-    """Test that v2 subdomain is accepted"""
-    print("\n=== Testing v2 Subdomain ===")
+def test_www_subdomain():
+    """Test that www subdomain is accepted"""
+    print("\n=== Testing www Subdomain ===")
     response = requests.post(
         f"{API_URL}/api/submit",
         json={
             "name": "Jane Smith",
             "email": "jane@example.com",
             "phone": "+0987654321",
-            "message": "Hello from v2.improveitmd.com!",
+            "message": "Hello from improveitmd.com!",
             "custom_field": "This is additional data"
         },
-        headers={"Origin": "https://v2.improveitmd.com"}
+        headers={"Origin": "https://www.improveitmd.com"}
     )
     print(f"Status Code: {response.status_code}")
     print(f"Response: {response.json()}")
-    assert response.status_code == 201, "Should accept v2 subdomain"
-    print("✓ v2 subdomain correctly accepted")
+    assert response.status_code == 201, "Should accept www subdomain"
+    print("✓ www subdomain correctly accepted")
 
 def test_get_submissions():
     """Test retrieving all submissions"""

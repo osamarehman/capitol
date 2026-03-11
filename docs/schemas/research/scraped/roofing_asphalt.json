@@ -1,5 +1,5 @@
 {
-  "url": "https://www.improveitmd.com/roofing/asphalt-roofing",
+  "url": "https://improveitmd.com/roofing/asphalt-roofing",
   "title": "Maryland, Washington DC, and Virginia Asphalt Shingle Roofing Contractor Near You (Free Estimates) - Capitol Improvements",
   "description": "Asphalt shingles provide long-lasting value. With a variety of styles and colors, we\u2019re able to refresh your existing style with high quality materials and lifetime warranties.",
   "markdown": "Maryland, Washington DC, and Virginia Asphalt Shingle Roofing Contractor Near You (Free Estimates) - Capitol Improvements",
@@ -13,7 +13,7 @@
       "uploadDate": "2024-02-15T08:00:00+08:00",
       "duration": "PT15S",
       "contentUrl": "https://res.cloudinary.com/dzpsjw2sr/video/upload/v1704354067/cap-720.mp4",
-      "embedUrl": "https://www.improveitmd.com/roofing/asphalt-roofing#player"
+      "embedUrl": "https://improveitmd.com/roofing/asphalt-roofing#player"
     },
     {
       "@context": "https://schema.org/",
@@ -24,7 +24,7 @@
       "brand": "Capitol Improvements",
       "offers": {
         "@type": "AggregateOffer",
-        "url": "https://www.improveitmd.com/",
+        "url": "https://improveitmd.com/",
         "priceCurrency": "USD",
         "offerCount": "1"
       },

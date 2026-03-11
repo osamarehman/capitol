@@ -159,13 +159,13 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "Service",
-          "@id": "https://www.improveitmd.com/deck-and-patios/ipe-deck-builder#service",
+          "@id": "https://improveitmd.com/deck-and-patios/ipe-deck-builder#service",
           "name": "Ipe Deck Building - Capitol Improvements",
-          "url": "https://www.improveitmd.com/deck-and-patios/ipe-deck-builder",
+          "url": "https://improveitmd.com/deck-and-patios/ipe-deck-builder",
           "serviceType": "Ipe Hardwood Deck Construction",
           "description": "Premium Ipe hardwood deck building. Extremely durable Brazilian hardwood decking with natural beauty and 25+ year lifespan. Serving Maryland, Virginia, and DC.",
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "areaServed": [
             {

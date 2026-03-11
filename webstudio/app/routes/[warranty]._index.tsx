@@ -159,9 +159,9 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "WebPage",
-          "@id": "https://www.improveitmd.com/warranty#webpage",
+          "@id": "https://improveitmd.com/warranty#webpage",
           "name": "Warranty Information - Capitol Improvements",
-          "url": "https://www.improveitmd.com/warranty",
+          "url": "https://improveitmd.com/warranty",
           "description": "Capitol Improvements offers industry-leading warranties including GAF Golden Pledge, manufacturer warranties from James Hardie, TimberTech, and more. Protecting your investment in Maryland, Virginia, and DC.",
           "mainEntity": {
             "@type": "ItemList",
@@ -197,7 +197,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             ]
           },
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           }
         }
       ]

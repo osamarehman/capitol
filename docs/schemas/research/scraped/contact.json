@@ -1,5 +1,5 @@
 {
-  "url": "https://www.improveitmd.com/contact",
+  "url": "https://improveitmd.com/contact",
   "title": "Contact Us \u2013 Capitol Improvements",
   "description": "Explore Capitol Improvements' legacy: Over 30 years of family-run excellence in serving Maryland, Washington DC, and Virginia. Expertise and fairness in every project. Free estimates available.",
   "markdown": "Contact Us \u2013 Capitol Improvements",
@@ -13,7 +13,7 @@
       "brand": "Capitol Improvements",
       "offers": {
         "@type": "AggregateOffer",
-        "url": "https://www.improveitmd.com/",
+        "url": "https://improveitmd.com/",
         "priceCurrency": "USD",
         "offerCount": "1"
       },

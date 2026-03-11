@@ -159,13 +159,13 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "Service",
-          "@id": "https://www.improveitmd.com/roofing/metal-roofing#service",
+          "@id": "https://improveitmd.com/roofing/metal-roofing#service",
           "name": "Metal Roofing - Capitol Improvements",
-          "url": "https://www.improveitmd.com/roofing/metal-roofing",
+          "url": "https://improveitmd.com/roofing/metal-roofing",
           "serviceType": "Metal Roofing",
           "description": "Professional metal roof installation for residential and commercial properties. Durable, energy-efficient metal roofing solutions in Maryland, Virginia, and DC.",
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "areaServed": [
             {

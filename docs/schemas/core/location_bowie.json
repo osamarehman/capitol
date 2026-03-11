@@ -6,12 +6,12 @@
         "HomeAndConstructionBusiness",
         "RoofingContractor"
       ],
-      "@id": "https://www.improveitmd.com/locations/bowie#local-office",
+      "@id": "https://improveitmd.com/locations/bowie#local-office",
       "name": "Capitol Improvements - Roofing Company & Siding Contractor",
-      "url": "https://www.improveitmd.com/locations/bowie",
+      "url": "https://improveitmd.com/locations/bowie",
       "telephone": "+1-301-769-6909",
       "email": "support@improveitmd.com",
-      "image": "https://v2.improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg",
+      "image": "https://improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg",
       "description": "Capitol Improvements Bowie headquarters — GAF Master Elite, Atlas Pro Plus, and Provia Door & Window certified exterior remodeling contractor serving Prince George's County since 2010.",
       "address": {
         "@type": "PostalAddress",
@@ -59,7 +59,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Roofing",
-              "url": "https://www.improveitmd.com/roofing"
+              "url": "https://improveitmd.com/roofing"
             }
           },
           {
@@ -67,7 +67,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Siding",
-              "url": "https://www.improveitmd.com/siding"
+              "url": "https://improveitmd.com/siding"
             }
           },
           {
@@ -75,7 +75,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Windows",
-              "url": "https://www.improveitmd.com/windows"
+              "url": "https://improveitmd.com/windows"
             }
           },
           {
@@ -83,7 +83,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Doors",
-              "url": "https://www.improveitmd.com/doors"
+              "url": "https://improveitmd.com/doors"
             }
           },
           {
@@ -91,7 +91,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Gutters",
-              "url": "https://www.improveitmd.com/gutters"
+              "url": "https://improveitmd.com/gutters"
             }
           },
           {
@@ -99,7 +99,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Exterior Trim",
-              "url": "https://www.improveitmd.com/exterior-trim"
+              "url": "https://improveitmd.com/exterior-trim"
             }
           },
           {
@@ -107,7 +107,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Decks & Patios",
-              "url": "https://www.improveitmd.com/decks-and-patios"
+              "url": "https://improveitmd.com/decks-and-patios"
             }
           }
         ]

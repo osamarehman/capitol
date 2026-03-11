@@ -11,7 +11,7 @@
  *   - Add BreadcrumbList to @graph (if missing)
  *   - Add additionalProperty for neighborhoods (if missing)
  *   - Fix duplicate WebSite schema (keep only 1)
- *   - Fix v2.improveitmd.com → www.improveitmd.com in WebSite url
+ *   - Fix improveitmd.com → www.improveitmd.com in WebSite url
  *
  * Additional fixes for ROOFING geo pages:
  *   - Add Atlas Pro Plus + MuleHide certs to award, hasCredential, memberOf
@@ -276,20 +276,20 @@ function patchSchema(
     }
   }
 
-  // 2. Fix v2.improveitmd.com → www.improveitmd.com in WebSite url
+  // 2. Fix improveitmd.com → www.improveitmd.com in WebSite url
   for (const block of blocks) {
     const b = block.json;
     if (!b) continue;
 
-    if (b['@type'] === 'WebSite' && b.url?.includes('v2.improveitmd.com')) {
-      b.url = b.url.replace('v2.improveitmd.com', 'www.improveitmd.com');
+    if (b['@type'] === 'WebSite' && b.url?.includes('improveitmd.com')) {
+      b.url = b.url.replace('improveitmd.com', 'www.improveitmd.com');
       changes.push('Fixed WebSite url: v2 → www');
     }
 
     if (b['@graph']) {
       for (const g of b['@graph']) {
-        if (g['@type'] === 'WebSite' && g.url?.includes('v2.improveitmd.com')) {
-          g.url = g.url.replace('v2.improveitmd.com', 'www.improveitmd.com');
+        if (g['@type'] === 'WebSite' && g.url?.includes('improveitmd.com')) {
+          g.url = g.url.replace('improveitmd.com', 'www.improveitmd.com');
           changes.push('Fixed WebSite url in @graph: v2 → www');
         }
       }

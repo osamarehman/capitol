@@ -159,9 +159,9 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "Service",
-          "@id": "https://www.improveitmd.com/siding#service",
+          "@id": "https://improveitmd.com/siding#service",
           "name": "Siding Installation & Replacement - Capitol Improvements",
-          "url": "https://www.improveitmd.com/siding",
+          "url": "https://improveitmd.com/siding",
           "serviceType": "Siding Installation",
           "description": "James Hardie Preferred Partner installing fiber cement, vinyl, and engineered wood siding in Maryland, DC, and Virginia. Durable, low-maintenance siding with manufacturer-backed warranties.",
           "brand": {
@@ -170,7 +170,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             "url": "https://www.jameshardie.com"
           },
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "areaServed": [
             {
@@ -247,7 +247,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
         },
         {
           "@type": "FAQPage",
-          "@id": "https://www.improveitmd.com/siding#faq",
+          "@id": "https://improveitmd.com/siding#faq",
           "mainEntity": [
             {
               "@type": "Question",

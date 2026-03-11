@@ -159,9 +159,9 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "Service",
-          "@id": "https://www.improveitmd.com/roofing#service",
+          "@id": "https://improveitmd.com/roofing#service",
           "name": "Roofing Services - Capitol Improvements",
-          "url": "https://www.improveitmd.com/roofing",
+          "url": "https://improveitmd.com/roofing",
           "serviceType": "Roofing",
           "description": "GAF Master Elite and Atlas Pro Plus certified roofing contractor replacing and repairing roofs in Maryland, DC, and Virginia. GAF Timberline and Atlas Scotchgard Protector shingles, metal roofing, and TPO flat roofing with lifetime warranty options.",
           "brand": [
@@ -177,7 +177,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             }
           ],
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "areaServed": [
             {
@@ -262,7 +262,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
         },
         {
           "@type": "FAQPage",
-          "@id": "https://www.improveitmd.com/roofing#faq",
+          "@id": "https://improveitmd.com/roofing#faq",
           "mainEntity": [
             {
               "@type": "Question",

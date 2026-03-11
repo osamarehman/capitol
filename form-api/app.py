@@ -43,9 +43,7 @@ def verify_auth_token(token):
 # Allowed domains for form submissions
 ALLOWED_DOMAINS = [
     'improveitmd.com',
-    'v2.improveitmd.com',
     'www.improveitmd.com',
-    'www.v2.improveitmd.com'
 ]
 
 # Configure CORS - TEMPORARILY allowing all origins for debugging

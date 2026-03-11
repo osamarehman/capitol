@@ -159,9 +159,9 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "Service",
-          "@id": "https://www.improveitmd.com/windows#service",
+          "@id": "https://improveitmd.com/windows#service",
           "name": "Window Replacement - Capitol Improvements",
-          "url": "https://www.improveitmd.com/windows",
+          "url": "https://improveitmd.com/windows",
           "serviceType": "Window Replacement",
           "description": "Provia Door & Window Certified contractor replacing windows in Maryland, DC, and Virginia. ENERGY STAR certified, Low-E glass, argon gas filled windows including double-hung, casement, bay, bow, and slider styles.",
           "brand": {
@@ -170,7 +170,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             "url": "https://www.provia.com"
           },
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "areaServed": [
             {
@@ -255,7 +255,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
         },
         {
           "@type": "FAQPage",
-          "@id": "https://www.improveitmd.com/windows#faq",
+          "@id": "https://improveitmd.com/windows#faq",
           "mainEntity": [
             {
               "@type": "Question",

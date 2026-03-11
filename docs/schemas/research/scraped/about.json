@@ -1,5 +1,5 @@
 {
-  "url": "https://www.improveitmd.com/about",
+  "url": "https://improveitmd.com/about",
   "title": "About Us | Capitol Improvements Roofing & Siding in MD, Washington DC and Virginia",
   "description": "Capitol Improvements is family owned and operated, serving homeowners 30+ years. We provide roofing, flat roofing, siding, windows, gutters, decks & patios, and entry doors to homeowners in Maryland, Washington DC, and Virginia.",
   "markdown": "About Us \\| Capitol Improvements Roofing & Siding in MD, Washington DC and Virginia",
@@ -13,7 +13,7 @@
       "brand": "Capitol Improvements",
       "offers": {
         "@type": "AggregateOffer",
-        "url": "https://www.improveitmd.com/",
+        "url": "https://improveitmd.com/",
         "priceCurrency": "USD",
         "offerCount": "1"
       },

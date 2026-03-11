@@ -1,5 +1,5 @@
 {
-  "url": "https://www.improveitmd.com/",
+  "url": "https://improveitmd.com/",
   "title": "Capitol Improvements | MD, Washington DC, and Virginia | Roofing, Flat Roofing, Siding, Windows, Gutters, Exterior Trim, Decks, Doors",
   "description": "Capitol Improvements is Maryland, Washington DC, and Virginia's family owned and family run exterior remodeling company. A roofing company, flat roofer, siding contractor, replacement window contractor, gutter installer, exterior trim contractor, deck builder, and entry door replacement company., Capitol Improvements - Clients",
   "markdown": "Capitol Improvements \\| MD, Washington DC, and Virginia \\| Roofing, Flat Roofing, Siding, Windows, Gutters, Exterior Trim, Decks, DoorsCapitol Improvements - Clients - Google My Maps",
@@ -13,7 +13,7 @@
       "brand": "Capitol Improvements",
       "offers": {
         "@type": "AggregateOffer",
-        "url": "https://www.improveitmd.com/",
+        "url": "https://improveitmd.com/",
         "priceCurrency": "USD",
         "offerCount": "1"
       },
@@ -46,7 +46,7 @@
       "name": "capitol improvements",
       "image": "https://assets-global.website-files.com/64bd6cb099271195afd55550/64bec17f217d236d7db6309a_ci%20logo.svg",
       "@id": "https://www.linkedin.com/company/improveitmd",
-      "url": "https://www.improveitmd.com",
+      "url": "https://improveitmd.com",
       "telephone": "301.769.6909",
       "address": {
         "@type": "PostalAddress",
@@ -74,7 +74,7 @@
         "opens": "09:00",
         "closes": "07:00"
       },
-      "sameAs": "https://www.improveitmd.com0",
+      "sameAs": "https://improveitmd.com0",
       "department": {
         "@type": "RoofingContractor",
         "name": "Capitol Improvements",

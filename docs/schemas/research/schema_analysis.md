@@ -15,7 +15,7 @@ Generated: 2026-03-08 21:50
 
 ## Page-by-Page Analysis
 
-### 1. HOME (https://www.improveitmd.com/)
+### 1. HOME (https://improveitmd.com/)
 **Priority: HIGH**
 
 **Should Have:**
@@ -45,14 +45,14 @@ Generated: 2026-03-08 21:50
 - `BreadcrumbList` for navigation
 - Remove irrelevant `Product` schemas
 
-### 2. ABOUT (https://www.improveitmd.com/about)
+### 2. ABOUT (https://improveitmd.com/about)
 **Priority: LOW**
 
 **Should Have:** `AboutPage`, `BreadcrumbList`
 **Prepared Schema:** ✅ `AboutPage` is appropriate
 **Issues:** Remove global `Product` schema
 
-### 3. TESTIMONIALS (https://www.improveitmd.com/testimonials)
+### 3. TESTIMONIALS (https://improveitmd.com/testimonials)
 **Priority: MEDIUM**
 
 **Should Have:**
@@ -71,7 +71,7 @@ Generated: 2026-03-08 21:50
 }
 ```
 
-### 4. CONTACT (https://www.improveitmd.com/contact)
+### 4. CONTACT (https://improveitmd.com/contact)
 **Priority: HIGH**
 
 **Should Have:**
@@ -82,7 +82,7 @@ Generated: 2026-03-08 21:50
 **Prepared Schema:** ✅ `ContactPage` correct
 **Missing:** Individual location schemas with full contact details
 
-### 5. ROOFING (https://www.improveitmd.com/roofing)
+### 5. ROOFING (https://improveitmd.com/roofing)
 **Priority: HIGH**
 
 **Should Have:** `Service` (primary), `BreadcrumbList`, `FAQPage`

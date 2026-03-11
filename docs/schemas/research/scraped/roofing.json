@@ -1,5 +1,5 @@
 {
-  "url": "https://www.improveitmd.com/roofing",
+  "url": "https://improveitmd.com/roofing",
   "title": "Roofing Company Maryland, Washington DC, and Virginia | Roofing Replacement Near Me | Roofer Maryland",
   "description": "Maryland, Washington, DC, and Virginia's roofing company offering all types of roofing including asphalt shingles, metal roofing, flat roofing in DC, and commercial roofing near you. | Capitol Improvements",
   "markdown": "Roofing Company Maryland, Washington DC, and Virginia \\| Roofing Replacement Near Me \\| Roofer Maryland",
@@ -13,7 +13,7 @@
       "brand": "Capitol Improvements",
       "offers": {
         "@type": "AggregateOffer",
-        "url": "https://www.improveitmd.com/",
+        "url": "https://improveitmd.com/",
         "priceCurrency": "USD",
         "offerCount": "1"
       },

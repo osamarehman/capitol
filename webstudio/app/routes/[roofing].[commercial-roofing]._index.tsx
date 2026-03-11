@@ -159,13 +159,13 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "Service",
-          "@id": "https://www.improveitmd.com/roofing/commercial-roofing#service",
+          "@id": "https://improveitmd.com/roofing/commercial-roofing#service",
           "name": "Commercial Roofing - Capitol Improvements",
-          "url": "https://www.improveitmd.com/roofing/commercial-roofing",
+          "url": "https://improveitmd.com/roofing/commercial-roofing",
           "serviceType": "Commercial Roofing",
           "description": "Full-service commercial roofing contractor specializing in TPO, flat roofs, and low-slope systems. Licensed (MHIC 130628) and insured for commercial projects in Maryland, Virginia, and DC.",
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "areaServed": [
             {

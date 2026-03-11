@@ -159,13 +159,13 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "Service",
-          "@id": "https://www.improveitmd.com/gutters#service",
+          "@id": "https://improveitmd.com/gutters#service",
           "name": "Seamless Gutters & Gutter Guards - Capitol Improvements",
-          "url": "https://www.improveitmd.com/gutters",
+          "url": "https://improveitmd.com/gutters",
           "serviceType": "Gutter Installation",
           "description": "Seamless aluminum gutter installation and gutter guard systems in Maryland, DC, and Virginia. 5-inch and 6-inch gutters, fascia board replacement, and professional gutter repair.",
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "areaServed": [
             {
@@ -234,7 +234,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
         },
         {
           "@type": "FAQPage",
-          "@id": "https://www.improveitmd.com/gutters#faq",
+          "@id": "https://improveitmd.com/gutters#faq",
           "mainEntity": [
             {
               "@type": "Question",

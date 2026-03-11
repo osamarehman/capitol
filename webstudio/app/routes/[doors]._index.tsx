@@ -159,9 +159,9 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@graph": [
         {
           "@type": "Service",
-          "@id": "https://www.improveitmd.com/doors#service",
+          "@id": "https://improveitmd.com/doors#service",
           "name": "Door Installation & Replacement - Capitol Improvements",
-          "url": "https://www.improveitmd.com/doors",
+          "url": "https://improveitmd.com/doors",
           "serviceType": "Door Installation",
           "description": "Provia Door & Window Certified contractor installing fiberglass, steel, and custom entry doors in Maryland, DC, and Virginia. Storm doors, patio doors, and French doors available.",
           "brand": {
@@ -170,7 +170,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
             "url": "https://www.provia.com"
           },
           "provider": {
-            "@id": "https://www.improveitmd.com/#corporation"
+            "@id": "https://improveitmd.com/#corporation"
           },
           "areaServed": [
             {
@@ -247,7 +247,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
         },
         {
           "@type": "FAQPage",
-          "@id": "https://www.improveitmd.com/doors#faq",
+          "@id": "https://improveitmd.com/doors#faq",
           "mainEntity": [
             {
               "@type": "Question",

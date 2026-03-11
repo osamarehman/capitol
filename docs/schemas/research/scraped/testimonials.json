@@ -1,5 +1,5 @@
 {
-  "url": "https://www.improveitmd.com/testimonials",
+  "url": "https://improveitmd.com/testimonials",
   "title": "390+ 5-Star Reviews \u2013 Capitol Improvements",
   "description": "Read roofing reviews from clients who have worked with us on their roofing and siding projects. 350+ reviews. Read about our award winning service and trade accreditations.",
   "markdown": "390+ 5-Star Reviews \u2013 Capitol Improvements",
@@ -8,7 +8,7 @@
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "390+ 5-Star Reviews \u2013 Capitol Improvements",
-      "url": "https://www.improveitmd.com/testimonials",
+      "url": "https://improveitmd.com/testimonials",
       "brand": {
         "@type": "Brand",
         "name": "390+ 5-Star Reviews \u2013 Capitol Improvements"
@@ -49,7 +49,7 @@
       "brand": "Capitol Improvements",
       "offers": {
         "@type": "AggregateOffer",
-        "url": "https://www.improveitmd.com/",
+        "url": "https://improveitmd.com/",
         "priceCurrency": "USD",
         "offerCount": "1"
       },
