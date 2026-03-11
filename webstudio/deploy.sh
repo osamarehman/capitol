@@ -50,6 +50,10 @@ npx webstudio sync 2>&1 | tee -a "$LOG_FILE"
 log "Building project..."
 npx webstudio build --template docker 2>&1 | tee -a "$LOG_FILE"
 
+# Step 3b: Restore global.js (webstudio build regenerates public/)
+log "Restoring global.js..."
+cp scripts/global.js public/global.js 2>&1 | tee -a "$LOG_FILE"
+
 # Step 4: Optimize assets (download externals, upload to Strapi, fix hydration)
 log "Optimizing assets and fixing hydration..."
 bash scripts/optimize-assets.sh 2>&1 | tee -a "$LOG_FILE"
