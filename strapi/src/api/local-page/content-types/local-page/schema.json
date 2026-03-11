@@ -225,8 +225,10 @@
         "Bowie",
         "Pasadena",
         "Gaithersburg",
-        "Crownsville"
-      ]
+        "Crownsville",
+        "DC"
+      ],
+      "searchable": false
     },
     "serviceType": {
       "type": "enumeration",
