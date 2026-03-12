@@ -39,8 +39,30 @@ function getPageConfig() {
 }
 
 // ===========================================================================
-// 1. VIDEO LCP PRELOADER
+// 1. VIDEO LCP PRELOADER + SAFARI SOURCE-TYPE FIX
 // ===========================================================================
+
+// Safari rejects <source type="video/webm"> — if the actual file extension
+// is .mp4 (or the URL contains .mp4) but the type says webm, fix it at
+// runtime so Safari can play the video.  Also handles the reverse case.
+(function fixVideoSourceTypes() {
+  const typeByExt = { '.mp4': 'video/mp4', '.webm': 'video/webm', '.mov': 'video/mp4', '.ogg': 'video/ogg' };
+  document.querySelectorAll('video source').forEach((source) => {
+    const src = (source.getAttribute('src') || '').split('?')[0].toLowerCase();
+    const declared = (source.getAttribute('type') || '').toLowerCase();
+    if (!src || !declared) return;
+    for (const [ext, mime] of Object.entries(typeByExt)) {
+      if (src.includes(ext) && declared !== mime) {
+        source.setAttribute('type', mime);
+        // Force the parent video to re-evaluate sources
+        const video = source.closest('video');
+        if (video) video.load();
+        break;
+      }
+    }
+  });
+})();
+
 function initVideoPreloader() {
   const video = document.querySelector('video[data-lcp-video]');
   if (!video) return null;
