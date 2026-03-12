@@ -344,6 +344,43 @@ function MakeStore(underlying, prefix) {
 }
 
 const DataStore = MakeStore(window.localStorage, '__capitol_session');
+const UtmStore = MakeStore(window.sessionStorage, '__capitol_utm');
+
+// --- UTM / Lead-source tracking ---
+const SOURCE_MAP = {
+  google_lsa: 'Google Local Service Ads',
+  gmb: 'Google My Business',
+  yelp: 'Yelp',
+  nextdoor: 'Nextdoor',
+  bbb: 'BBB',
+  gaf: 'GAF',
+  timbertech: 'Timbertech',
+  website: 'Website',
+};
+const UTM_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+
+function captureUtmParams() {
+  const params = new URLSearchParams(window.location.search);
+  const hasUtm = UTM_PARAMS.some((p) => params.has(p));
+  if (!hasUtm) return;
+  // New ad click → overwrite all stored UTM values
+  UTM_PARAMS.forEach((p) => {
+    const val = params.get(p);
+    if (val) UtmStore.set(p, val);
+    else UtmStore.del(p);
+  });
+}
+
+function getUtmData() {
+  const utm_source = UtmStore.get('utm_source') || '';
+  const utm_medium = UtmStore.get('utm_medium') || '';
+  const utm_campaign = UtmStore.get('utm_campaign') || '';
+  const utm_content = UtmStore.get('utm_content') || '';
+  const utm_term = UtmStore.get('utm_term') || '';
+  const lead_source = SOURCE_MAP[utm_source] || 'Website';
+  const lead_medium = utm_medium || 'form';
+  return { lead_source, lead_medium, utm_source, utm_medium, utm_campaign, utm_content, utm_term };
+}
 
 // --- Script loader ---
 function loadScript(src, callback, errorCallback) {
@@ -829,6 +866,8 @@ function initFormHandlers() {
         roof_damaged: damageValue,
         area: DataStore.get('area_cal'),
         id: uniqueId,
+        ...getUtmData(),
+        lead_channel_detail: 'roofing_calculator',
       };
 
       const secondFormId = document.querySelector('#second-form-id');
@@ -877,6 +916,8 @@ function initFormHandlers() {
             event_type: 'formSubmit',
             page_url: window.location.href,
             form_name: formData.form_name,
+            ...getUtmData(),
+            lead_channel_detail: 'calculator_followup',
           }),
         });
       } catch (err) {
@@ -1840,6 +1881,8 @@ class CommercialFlowManager {
 
     fields.total_area_ft = commercialUtils.formatNumber(totalAreaFt);
     fields.total_area_mt = totalAreaMt.toFixed(1);
+    Object.assign(fields, getUtmData());
+    fields.lead_channel_detail = 'commercial_calculator';
 
     // Send as JSON to API
     try {
@@ -3180,7 +3223,9 @@ const FORM_SELECTOR = 'form[data-api-endpoint]';
 
 function initGenericFormHandler() {
   // Inject or update hidden page_url field in ALL forms on the page
+  // Also set any existing page_referrer inputs to current URL
   function injectPageUrlFields() {
+    const currentUrl = window.location.href;
     document.querySelectorAll('form').forEach((form) => {
       let hidden = form.querySelector('input[name="page_url"]');
       if (!hidden) {
@@ -3189,7 +3234,11 @@ function initGenericFormHandler() {
         hidden.name = 'page_url';
         form.appendChild(hidden);
       }
-      hidden.value = window.location.href;
+      hidden.value = currentUrl;
+
+      // Update Webstudio page_referrer fields to current page URL
+      const referrerField = form.querySelector('input[name="page_referrer"]');
+      if (referrerField) referrerField.value = currentUrl;
     });
   }
   injectPageUrlFields();
@@ -3232,6 +3281,14 @@ function initGenericFormHandler() {
     formData.page_url = window.location.href;
     formData.current_page = document.title;
     formData.page_referrer = document.referrer;
+    const utmData = getUtmData();
+    // data-lead-source on form element is highest-priority override
+    formData.lead_source = form.dataset.leadSource || utmData.lead_source;
+    formData.lead_medium = utmData.lead_medium;
+    formData.lead_channel_detail = form.dataset.channelDetail || form.dataset.formName || '';
+    formData.utm_source = utmData.utm_source;
+    formData.utm_medium = utmData.utm_medium;
+    formData.utm_campaign = utmData.utm_campaign;
     if (form.dataset.formName) formData.form_name = form.dataset.formName;
 
     // Phone validation (if a field named "phone" exists)
@@ -3369,6 +3426,7 @@ function observeRouteChanges() {
 
 // ---- Bootstrap ----
 async function bootstrap() {
+  captureUtmParams();
   initGenericFormHandler(); // persistent — survives re-init to protect in-flight submissions
   await initPage();
   observeRouteChanges();
