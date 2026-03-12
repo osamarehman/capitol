@@ -17,7 +17,11 @@
             "telephone": "+1-301-769-6909",
             "email": "support@improveitmd.com",
             "contactType": "customer service",
-            "areaServed": ["Maryland", "Virginia", "District of Columbia"],
+            "areaServed": [
+              "Maryland",
+              "Virginia",
+              "District of Columbia"
+            ],
             "availableLanguage": "English"
           }
         ],
@@ -30,7 +34,16 @@
           "addressCountry": "US"
         }
       },
-      "provider": { "@id": "https://improveitmd.com/#corporation" }
+      "provider": {
+        "@id": "https://improveitmd.com/#corporation"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "reviewCount": 445,
+        "bestRating": 5,
+        "worstRating": 1
+      }
     }
   ]
 }

@@ -46,4 +46,6 @@
 45,Deploy Page Auth Fix,"Fixed deploy page login redirect loop: changed action from returning data() to redirect() after successful password validation so loader re-runs with new cookie. Updated both route file and patch-deploy-page.cjs script for future deploys.",Done,3/11/2026,0.5
 ,,,,,
 46,UTM Lead Source Tracking,"Frontend UTM capture (UtmStore/sessionStorage, SOURCE_MAP with 8 sources, captureUtmParams/getUtmData) replacing hardcoded lead_source in all 4 form handlers. Backend resolve_lead_source with URL fallback extraction, _SOURCE_MAP mirror, _FIELD_MAP expansion for lead fields. Ready-to-send HTML email in webhook payload (email_subject + email_html with color-coded source badges, contact info, attribution table). Ghost submission filter (skip n8n for no-contact submissions). Consolidated to single n8n webhook.",Done,3/12/2026,3
-,,TOTAL,,,85.5
+47,Safari Hero Video Fix,"Runtime fixVideoSourceTypes() in global.js: detects source type/extension mismatch (e.g. type=video/webm on .mp4 file) and corrects it so Safari can play. Also handles .mov and .ogg. Runs at script load before other init.",Done,3/12/2026,0.5
+48,AggregateRating Schema — All Pages,"Added aggregateRating (5.0/445 reviews) to 28 core page schemas that were missing it. Updated 385 Strapi geo page schemas from reviewCount 422→445 via API patch. 3 location pages keep location-specific counts (Bowie:221, DC:67, Gaithersburg:157). Re-injected all 33 core page routes via inject-schemas.cjs --force. Full rebuild and deploy.",Done,3/12/2026,2
+,,TOTAL,,,88

@@ -245,6 +245,13 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
           ],
           "provider": {
             "@id": "https://improveitmd.com/#corporation"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 5,
+            "reviewCount": 445,
+            "bestRating": 5,
+            "worstRating": 1
           }
         }
       ]

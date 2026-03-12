@@ -8,15 +8,33 @@
       "url": "https://improveitmd.com/deck-and-patios/flagstone-patios",
       "serviceType": "Flagstone Patio Construction",
       "description": "Custom flagstone patio design and installation. Natural stone patios that add timeless beauty to your outdoor living space in Maryland, Virginia, and DC.",
-      "provider": { "@id": "https://improveitmd.com/#corporation" },
+      "provider": {
+        "@id": "https://improveitmd.com/#corporation"
+      },
       "areaServed": [
-        { "@type": "State", "name": "Maryland" },
-        { "@type": "State", "name": "Virginia" },
-        { "@type": "State", "name": "District of Columbia" }
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "District of Columbia"
+        }
       ],
       "offers": {
         "@type": "Offer",
         "priceRange": "$$"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "reviewCount": 445,
+        "bestRating": 5,
+        "worstRating": 1
       }
     }
   ]

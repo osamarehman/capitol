@@ -269,7 +269,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5.0",
-            "reviewCount": "67",
+            "reviewCount": 67,
             "bestRating": "5",
             "worstRating": "1"
           }

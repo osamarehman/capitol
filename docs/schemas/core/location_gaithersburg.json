@@ -27,7 +27,13 @@
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
           "opens": "08:00",
           "closes": "17:00"
         },
@@ -45,25 +51,60 @@
         "jobTitle": "Branch Manager & Project Consultant"
       },
       "areaServed": [
-        { "@type": "City", "name": "Gaithersburg" },
-        { "@type": "City", "name": "Rockville" },
-        { "@type": "City", "name": "Germantown" },
-        { "@type": "City", "name": "Silver Spring" },
-        { "@type": "State", "name": "Maryland" }
+        {
+          "@type": "City",
+          "name": "Gaithersburg"
+        },
+        {
+          "@type": "City",
+          "name": "Rockville"
+        },
+        {
+          "@type": "City",
+          "name": "Germantown"
+        },
+        {
+          "@type": "City",
+          "name": "Silver Spring"
+        },
+        {
+          "@type": "State",
+          "name": "Maryland"
+        }
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Exterior Remodeling Services",
         "itemListElement": [
-          { "@type": "Service", "name": "Roofing" },
-          { "@type": "Service", "name": "Siding" },
-          { "@type": "Service", "name": "Windows" },
-          { "@type": "Service", "name": "Doors" },
-          { "@type": "Service", "name": "Gutters" },
-          { "@type": "Service", "name": "Decks & Patios" }
+          {
+            "@type": "Service",
+            "name": "Roofing"
+          },
+          {
+            "@type": "Service",
+            "name": "Siding"
+          },
+          {
+            "@type": "Service",
+            "name": "Windows"
+          },
+          {
+            "@type": "Service",
+            "name": "Doors"
+          },
+          {
+            "@type": "Service",
+            "name": "Gutters"
+          },
+          {
+            "@type": "Service",
+            "name": "Decks & Patios"
+          }
         ]
       },
-      "parentOrganization": { "@id": "https://improveitmd.com/#corporation" },
+      "parentOrganization": {
+        "@id": "https://improveitmd.com/#corporation"
+      },
       "sameAs": [
         "https://maps.google.com/?cid=324232438797579827",
         "https://www.facebook.com/CapitolImprovements",
@@ -72,7 +113,7 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
-        "reviewCount": "157",
+        "reviewCount": 157,
         "bestRating": "5",
         "worstRating": "1"
       }

@@ -8,15 +8,33 @@
       "url": "https://improveitmd.com/roofing/commercial-roofing",
       "serviceType": "Commercial Roofing",
       "description": "Full-service commercial roofing contractor specializing in TPO, flat roofs, and low-slope systems. Licensed (MHIC 130628) and insured for commercial projects in Maryland, Virginia, and DC.",
-      "provider": { "@id": "https://improveitmd.com/#corporation" },
+      "provider": {
+        "@id": "https://improveitmd.com/#corporation"
+      },
       "areaServed": [
-        { "@type": "State", "name": "Maryland" },
-        { "@type": "State", "name": "Virginia" },
-        { "@type": "State", "name": "District of Columbia" }
+        {
+          "@type": "State",
+          "name": "Maryland"
+        },
+        {
+          "@type": "State",
+          "name": "Virginia"
+        },
+        {
+          "@type": "State",
+          "name": "District of Columbia"
+        }
       ],
       "offers": {
         "@type": "Offer",
         "priceRange": "$$"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "reviewCount": 445,
+        "bestRating": 5,
+        "worstRating": 1
       }
     }
   ]

@@ -19,7 +19,16 @@
           "reviewCount": "445"
         }
       },
-      "provider": { "@id": "https://improveitmd.com/#corporation" }
+      "provider": {
+        "@id": "https://improveitmd.com/#corporation"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "reviewCount": 445,
+        "bestRating": 5,
+        "worstRating": 1
+      }
     }
   ]
 }

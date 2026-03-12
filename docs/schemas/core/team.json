@@ -16,24 +16,39 @@
           "@id": "https://improveitmd.com/#patjewell",
           "name": "Pat Jewell",
           "jobTitle": "Owner & Founder",
-          "worksFor": { "@id": "https://improveitmd.com/#corporation" }
+          "worksFor": {
+            "@id": "https://improveitmd.com/#corporation"
+          }
         },
         {
           "@type": "Person",
           "@id": "https://improveitmd.com/#lancejewell",
           "name": "Lance Jewell",
           "jobTitle": "Branch Manager - Gaithersburg",
-          "worksFor": { "@id": "https://improveitmd.com/#corporation" }
+          "worksFor": {
+            "@id": "https://improveitmd.com/#corporation"
+          }
         },
         {
           "@type": "Person",
           "@id": "https://improveitmd.com/#austinjewell",
           "name": "Austin Jewell",
           "jobTitle": "Branch Manager - Washington DC",
-          "worksFor": { "@id": "https://improveitmd.com/#corporation" }
+          "worksFor": {
+            "@id": "https://improveitmd.com/#corporation"
+          }
         }
       ],
-      "provider": { "@id": "https://improveitmd.com/#corporation" }
+      "provider": {
+        "@id": "https://improveitmd.com/#corporation"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "reviewCount": 445,
+        "bestRating": 5,
+        "worstRating": 1
+      }
     }
   ]
 }

@@ -7,7 +7,9 @@
       "name": "Capitol Improvements Blog",
       "url": "https://improveitmd.com/blog",
       "description": "Expert tips, guides, and news about roofing, siding, windows, doors, gutters, and decks from Capitol Improvements. Serving Maryland, Virginia, and DC.",
-      "publisher": { "@id": "https://improveitmd.com/#corporation" },
+      "publisher": {
+        "@id": "https://improveitmd.com/#corporation"
+      },
       "about": [
         "Roofing",
         "Siding",
@@ -17,7 +19,16 @@
         "Decks",
         "Home Improvement"
       ],
-      "provider": { "@id": "https://improveitmd.com/#corporation" }
+      "provider": {
+        "@id": "https://improveitmd.com/#corporation"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "reviewCount": 445,
+        "bestRating": 5,
+        "worstRating": 1
+      }
     }
   ]
 }

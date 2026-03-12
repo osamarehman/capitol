@@ -17,7 +17,16 @@
         },
         "description": "Submit a request for a free estimate on exterior remodeling services."
       },
-      "provider": { "@id": "https://improveitmd.com/#corporation" }
+      "provider": {
+        "@id": "https://improveitmd.com/#corporation"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "reviewCount": 445,
+        "bestRating": 5,
+        "worstRating": 1
+      }
     }
   ]
 }

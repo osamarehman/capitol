@@ -437,7 +437,14 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
                 "reviewCount": "67"
               }
             }
-          ]
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": 5,
+            "reviewCount": 445,
+            "bestRating": 5,
+            "worstRating": 1
+          }
         }
       ]
     }

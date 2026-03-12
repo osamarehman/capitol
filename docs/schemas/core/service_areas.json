@@ -17,7 +17,10 @@
             "item": {
               "@type": "State",
               "name": "Maryland",
-              "containedInPlace": { "@type": "Country", "name": "United States" }
+              "containedInPlace": {
+                "@type": "Country",
+                "name": "United States"
+              }
             }
           },
           {
@@ -26,7 +29,10 @@
             "item": {
               "@type": "State",
               "name": "Virginia",
-              "containedInPlace": { "@type": "Country", "name": "United States" }
+              "containedInPlace": {
+                "@type": "Country",
+                "name": "United States"
+              }
             }
           },
           {
@@ -35,7 +41,10 @@
             "item": {
               "@type": "AdministrativeArea",
               "name": "District of Columbia",
-              "containedInPlace": { "@type": "Country", "name": "United States" }
+              "containedInPlace": {
+                "@type": "Country",
+                "name": "United States"
+              }
             }
           }
         ]
@@ -78,7 +87,16 @@
           }
         }
       ],
-      "provider": { "@id": "https://improveitmd.com/#corporation" }
+      "provider": {
+        "@id": "https://improveitmd.com/#corporation"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "reviewCount": 445,
+        "bestRating": 5,
+        "worstRating": 1
+      }
     }
   ]
 }

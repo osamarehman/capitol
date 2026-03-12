@@ -271,7 +271,9 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5.0",
-            "reviewCount": "221"
+            "reviewCount": 221,
+            "bestRating": 5,
+            "worstRating": 1
           },
           "sameAs": [
             "https://maps.google.com/?cid=16068834676004648914"
