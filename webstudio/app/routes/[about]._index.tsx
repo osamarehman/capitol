@@ -245,13 +245,6 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
               "TimberTech Platinum Certified Contractor",
               "Provia Door & Window Certified Contractor"
             ]
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": 5,
-            "reviewCount": 445,
-            "bestRating": 5,
-            "worstRating": 1
           }
         }
       ]

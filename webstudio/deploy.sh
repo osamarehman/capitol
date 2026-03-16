@@ -60,7 +60,7 @@ bash scripts/optimize-assets.sh 2>&1 | tee -a "$LOG_FILE"
 
 # Step 4b: Inject JSON-LD schema markup into generated pages
 log "Injecting schema markup..."
-node scripts/inject-schemas.cjs 2>&1 | tee -a "$LOG_FILE"
+node scripts/inject-schemas.cjs --force 2>&1 | tee -a "$LOG_FILE"
 
 # Step 4c: Patch deploy page with password protection
 log "Patching deploy page auth..."
