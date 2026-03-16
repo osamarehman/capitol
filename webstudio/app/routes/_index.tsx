@@ -164,11 +164,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
           "url": "https://improveitmd.com"
         },
         {
-          "@type": [
-            "HomeAndConstructionBusiness",
-            "RoofingContractor",
-            "GeneralContractor"
-          ],
+          "@type": "HomeAndConstructionBusiness",
           "@id": "https://improveitmd.com/#corporation",
           "name": "Capitol Improvements",
           "url": "https://improveitmd.com",

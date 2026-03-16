@@ -159,10 +159,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": [
-            "HomeAndConstructionBusiness",
-            "RoofingContractor"
-          ],
+          "@type": "HomeAndConstructionBusiness",
           "@id": "https://improveitmd.com/locations/bowie#local-office",
           "name": "Capitol Improvements - Roofing Company & Siding Contractor",
           "url": "https://improveitmd.com/locations/bowie",
