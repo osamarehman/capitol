@@ -228,10 +228,7 @@
             "@type": "Person",
             "name": "REPLACE_WITH_REVIEWER_NAME"
           },
-          "reviewBody": "Overall a great experience! This company is very responsive and Seth did a great job of communicating my project status and getting me on the schedule earlier than planned. The work done to my house was quality too! I would hire them again!",
-          "itemReviewed": {
-            "@id": "https://improveitmd.com/services/annapolis-maryland-siding-contractors-near-you#business"
-          }
+          "reviewBody": "Overall a great experience! This company is very responsive and Seth did a great job of communicating my project status and getting me on the schedule earlier than planned. The work done to my house was quality too! I would hire them again!"
         }
       ],
       "award": [
