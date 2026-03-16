@@ -21,6 +21,7 @@ import {
   ReactSdkContext,
   PageSettingsMeta,
   PageSettingsTitle,
+  PageSettingsCanonicalLink,
 } from "@webstudio-is/react-sdk/runtime";
 import {
   projectId,
@@ -343,6 +344,8 @@ const Outlet = () => {
         assetBaseUrl={constants.assetBaseUrl}
       />
       <PageSettingsTitle>{pageMeta.title}</PageSettingsTitle>
+      // [inject-canonical] canonical URL (always non-www https)
+      <PageSettingsCanonicalLink href={`https://improveitmd.com${new URL(url).pathname}`} />
     </ReactSdkContext.Provider>
   );
 };

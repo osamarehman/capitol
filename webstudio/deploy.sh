@@ -66,6 +66,15 @@ node scripts/inject-schemas.cjs 2>&1 | tee -a "$LOG_FILE"
 log "Patching deploy page auth..."
 node scripts/patch-deploy-page.cjs 2>&1 | tee -a "$LOG_FILE"
 
+# Step 4d: Inject canonical tags into all routes
+log "Injecting canonical tags..."
+node scripts/inject-canonical.cjs 2>&1 | tee -a "$LOG_FILE"
+
+# Step 4e: Inject gallery slider component
+log "Injecting gallery slider..."
+cp scripts/gallery-slider.js public/gallery-slider.js 2>/dev/null || true
+node scripts/inject-gallery-slider.cjs 2>&1 | tee -a "$LOG_FILE"
+
 # Step 5: Build Docker image (no cache to pick up all changes)
 log "Building Docker image..."
 docker build --no-cache -t webstudio-prod:latest . 2>&1 | tee -a "$LOG_FILE"

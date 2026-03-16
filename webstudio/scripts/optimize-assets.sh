@@ -264,4 +264,24 @@ done
 
 log "  v2 domain refs patched"
 
+# ============================================================
+# STEP 7: Replace www.improveitmd.com with improveitmd.com
+# ============================================================
+log "=== Step 7: Replacing www.improveitmd.com with improveitmd.com ==="
+
+WWW_FIXES=0
+for f in "$GEN_DIR"/*.tsx "$GEN_DIR"/*.ts "$GEN_DIR"/*.css "$PROJECT_DIR/.webstudio/data.json"; do
+  [ -f "$f" ] || continue
+  before=$(md5sum "$f" | cut -d' ' -f1)
+  sed -i 's|https://www\.improveitmd\.com|https://improveitmd.com|g' "$f"
+  sed -i 's|http://www\.improveitmd\.com|https://improveitmd.com|g' "$f"
+  sed -i 's|www\.improveitmd\.com|improveitmd.com|g' "$f"
+  after=$(md5sum "$f" | cut -d' ' -f1)
+  if [ "$before" != "$after" ]; then
+    WWW_FIXES=$((WWW_FIXES + 1))
+  fi
+done
+
+log "  Replaced www refs in $WWW_FIXES files"
+
 log "=== Optimization complete ==="
