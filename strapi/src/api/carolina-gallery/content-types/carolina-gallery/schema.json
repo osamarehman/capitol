@@ -1,0 +1,111 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carolina_gallerys",
+  "info": {
+    "singularName": "carolina-gallery",
+    "pluralName": "carolina-galleries",
+    "displayName": "Carolina Gallery",
+    "description": "Gallery items for Capitol Improvements Carolinas"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "main": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "image1": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "image2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "image3": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "image4": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "image5": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "image6": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "image7": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "altMain": {
+      "type": "string"
+    },
+    "altImg1": {
+      "type": "string"
+    },
+    "altImg2": {
+      "type": "string"
+    },
+    "altImg3": {
+      "type": "string"
+    },
+    "altImg4": {
+      "type": "string"
+    },
+    "altImg5": {
+      "type": "string"
+    },
+    "altImg6": {
+      "type": "string"
+    },
+    "altImg7": {
+      "type": "string"
+    }
+  }
+}
