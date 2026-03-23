@@ -26,7 +26,7 @@
       "type": "text",
       "required": false
     },
-    "customHtml": {
+    "customVideoLink": {
       "type": "text",
       "required": false
     },
