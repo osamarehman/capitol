@@ -81,5 +81,5 @@ export const getRemixParams = ({ ...params }: Params): Params => {
 }
 
 
-      export const contactEmail = "info@improveitmd.com";
+      export const contactEmail = "support@improveitcarolina.com";
     

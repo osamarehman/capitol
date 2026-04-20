@@ -83,7 +83,7 @@ const NEW_HERO_SCRIPT = [
   '  wrapper.style.opacity = "0";',
   '  wrapper.style.transition = "opacity 0.6s ease-in-out";',
   '',
-  '  var MIN_DELAY = 3500; // Show image for at least 3.5 seconds',
+  '  var MIN_DELAY = 4000; // Show image for at least 4 seconds',
   '  var startTime = Date.now();',
   '  var videoReady = false;',
   '  var timerDone = false;',

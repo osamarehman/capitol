@@ -256,4 +256,21 @@ for f in "$GEN_DIR"/*.tsx; do
 done
 log "  Fixed Rocket Loader conflicts in $RL_FIXES files"
 
+# ============================================================
+# STEP 8: Fix contact email (Carolina uses its own email, not MD's)
+# ============================================================
+log "=== Step 8: Fixing contact email ==="
+
+EMAIL_FIXES=0
+for f in "$GEN_DIR"/*.server.tsx; do
+  [ -f "$f" ] || continue
+  before=$(md5sum "$f" | cut -d' ' -f1)
+  sed -i 's|info@improveitmd\.com|support@improveitcarolina.com|g' "$f"
+  after=$(md5sum "$f" | cut -d' ' -f1)
+  if [ "$before" != "$after" ]; then
+    EMAIL_FIXES=$((EMAIL_FIXES + 1))
+  fi
+done
+log "  Fixed contact email in $EMAIL_FIXES files"
+
 log "=== Optimization complete ==="

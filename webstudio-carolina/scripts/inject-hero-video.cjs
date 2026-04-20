@@ -64,7 +64,7 @@ const NEW_HERO_SCRIPT = [
   '  wrapper.style.opacity = "0";',
   '  wrapper.style.transition = "opacity 0.6s ease-in-out";',
   '',
-  '  var MIN_DELAY = 3500;',
+  '  var MIN_DELAY = 4000;',
   '  var startTime = Date.now();',
   '  var videoReady = false;',
   '  var timerDone = false;',
