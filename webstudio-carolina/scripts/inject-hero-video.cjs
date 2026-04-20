@@ -1,11 +1,14 @@
 /**
- * inject-hero-video.cjs (Carolina)
+ * inject-hero-video.cjs
  *
- * Image-first loading with delayed video swap on the homepage hero:
+ * Post-build script that modifies ALL pages with a hero video section to
+ * implement image-first loading with delayed video swap:
  *   1. Image loads immediately (eager, high priority)
  *   2. Video preloads in background (NOT autoPlay)
- *   3. After 3-4 seconds AND video is ready, video fades in and plays
+ *   3. After 4 seconds AND video is ready, video fades in and plays
  *   4. When video ends, fades back to image
+ *
+ * Scans all app/__generated__/*.tsx files for hero-video-wrapper elements.
  */
 
 const fs = require("fs");
@@ -13,7 +16,6 @@ const path = require("path");
 
 const MARKER = "// [inject-hero-video]";
 const GEN_DIR = path.join(__dirname, "..", "app", "__generated__");
-const INDEX_FILE = path.join(GEN_DIR, "_index.tsx");
 
 const FORCE = process.argv.includes("--force");
 
@@ -21,38 +23,6 @@ function log(msg) {
   console.log(`[hero-video] ${msg}`);
 }
 
-if (!fs.existsSync(INDEX_FILE)) {
-  log("WARN: _index.tsx not found, skipping");
-  process.exit(0);
-}
-
-let code = fs.readFileSync(INDEX_FILE, "utf8");
-
-if (code.includes(MARKER) && !FORCE) {
-  log("Already injected, skipping (use --force to re-inject)");
-  process.exit(0);
-}
-
-if (FORCE && code.includes(MARKER)) {
-  code = code.replace(new RegExp(MARKER.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), '');
-}
-
-let changes = 0;
-
-// Patch 1: Remove autoPlay from hero video
-if (code.includes('autoPlay={true}')) {
-  const wrapperIdx = code.indexOf('"hero-video-wrapper"');
-  if (wrapperIdx !== -1) {
-    const autoPlayIdx = code.indexOf('autoPlay={true}', wrapperIdx);
-    if (autoPlayIdx !== -1 && autoPlayIdx - wrapperIdx < 200) {
-      code = code.substring(0, autoPlayIdx) + 'autoPlay={false}' + code.substring(autoPlayIdx + 'autoPlay={true}'.length);
-      changes++;
-      log("Removed autoPlay from hero video");
-    }
-  }
-}
-
-// Patch 2: Replace the existing video-ended script
 const NEW_HERO_SCRIPT = [
   '<script type="module">',
   MARKER,
@@ -61,10 +31,11 @@ const NEW_HERO_SCRIPT = [
   '  var video = wrapper ? wrapper.querySelector(".hero-video") : null;',
   '  if (!wrapper || !video) return;',
   '',
+  '  // Initially hide video wrapper so image shows first',
   '  wrapper.style.opacity = "0";',
   '  wrapper.style.transition = "opacity 0.6s ease-in-out";',
   '',
-  '  var MIN_DELAY = 4000;',
+  '  var MIN_DELAY = 4000; // Show image for at least 4 seconds',
   '  var startTime = Date.now();',
   '  var videoReady = false;',
   '  var timerDone = false;',
@@ -75,16 +46,19 @@ const NEW_HERO_SCRIPT = [
   '    video.play().catch(function(){});',
   '  }',
   '',
+  '  // Wait for video to buffer enough to play',
   '  video.addEventListener("canplay", function onCanPlay() {',
   '    video.removeEventListener("canplay", onCanPlay);',
   '    videoReady = true;',
   '    tryPlay();',
   '  });',
   '',
+  '  // If video is already buffered (cached)',
   '  if (video.readyState >= 3) {',
   '    videoReady = true;',
   '  }',
   '',
+  '  // Minimum image display timer',
   '  var elapsed = Date.now() - startTime;',
   '  var remaining = Math.max(0, MIN_DELAY - elapsed);',
   '  setTimeout(function() {',
@@ -92,6 +66,7 @@ const NEW_HERO_SCRIPT = [
   '    tryPlay();',
   '  }, remaining);',
   '',
+  '  // When video ends, fade back to image',
   '  video.addEventListener("ended", function() {',
   '    wrapper.style.opacity = "0";',
   '  });',
@@ -101,29 +76,71 @@ const NEW_HERO_SCRIPT = [
 
 const jsxScript = `code={"${NEW_HERO_SCRIPT.replace(/"/g, '\\"')}"}`;
 
-const lines = code.split('\n');
-let scriptLineIdx = -1;
+// ─── Main: scan all generated .tsx files ─────────────────────────────────────
 
-for (let i = 0; i < lines.length; i++) {
-  const line = lines[i];
-  if (line.includes('code={"') && line.includes('hero-video-wrapper') && line.includes('ended')) {
-    scriptLineIdx = i;
-    break;
+if (!fs.existsSync(GEN_DIR)) {
+  log("WARN: __generated__ directory not found, skipping");
+  process.exit(0);
+}
+
+const files = fs.readdirSync(GEN_DIR).filter(f => f.endsWith('.tsx') && !f.endsWith('.server.tsx'));
+let totalPatched = 0;
+
+for (const file of files) {
+  const filePath = path.join(GEN_DIR, file);
+  let code = fs.readFileSync(filePath, "utf8");
+
+  // Skip files without hero video
+  if (!code.includes('"hero-video-wrapper"')) continue;
+
+  // Skip if already injected (unless --force)
+  if (code.includes(MARKER) && !FORCE) {
+    log(`  SKIP ${file} (already injected)`);
+    continue;
+  }
+
+  // Remove old marker if re-injecting
+  if (FORCE && code.includes(MARKER)) {
+    code = code.replace(new RegExp(MARKER.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), '');
+  }
+
+  let changes = 0;
+
+  // Patch 1: Remove autoPlay={true} from the hero video element
+  if (code.includes('autoPlay={true}')) {
+    const wrapperIdx = code.indexOf('"hero-video-wrapper"');
+    if (wrapperIdx !== -1) {
+      const autoPlayIdx = code.indexOf('autoPlay={true}', wrapperIdx);
+      if (autoPlayIdx !== -1 && autoPlayIdx - wrapperIdx < 200) {
+        code = code.substring(0, autoPlayIdx) + 'autoPlay={false}' + code.substring(autoPlayIdx + 'autoPlay={true}'.length);
+        changes++;
+      }
+    }
+  }
+
+  // Patch 2: Replace the existing video-ended script with our swap logic
+  const lines = code.split('\n');
+  let scriptLineIdx = -1;
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    if (line.includes('code={"') && line.includes('hero-video-wrapper') && line.includes('ended')) {
+      scriptLineIdx = i;
+      break;
+    }
+  }
+
+  if (scriptLineIdx !== -1) {
+    lines[scriptLineIdx] = jsxScript;
+    code = lines.join('\n');
+    changes++;
+  }
+
+  if (changes > 0) {
+    fs.writeFileSync(filePath, code);
+    log(`  OK ${file} (${changes} patches)`);
+    totalPatched++;
   }
 }
 
-if (scriptLineIdx !== -1) {
-  lines[scriptLineIdx] = jsxScript;
-  code = lines.join('\n');
-  changes++;
-  log("Replaced hero video script with image-first swap logic");
-} else {
-  log("WARN: Could not find existing hero-video script line to replace");
-}
-
-if (changes > 0) {
-  fs.writeFileSync(INDEX_FILE, code);
-  log(`Done: ${changes} patches applied to _index.tsx`);
-} else {
-  log("No changes needed");
-}
+log(`Done: ${totalPatched} files patched`);
