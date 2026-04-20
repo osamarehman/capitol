@@ -216,7 +216,7 @@ done
 log "=== Step 5: Fixing font URLs ==="
 
 for f in "$GEN_DIR"/*.tsx; do
-  sed -i "s|https://improveitmd\.com/cgi/asset/|/fonts/|g" "$f"
+  sed -i "s|https://${SITE_DOMAIN}/cgi/asset/|/fonts/|g" "$f"
 done
 
 log "  Font URLs patched"
@@ -230,9 +230,9 @@ WWW_FIXES=0
 for f in "$GEN_DIR"/*.tsx "$GEN_DIR"/*.ts "$GEN_DIR"/*.css "$PROJECT_DIR/.webstudio/data.json"; do
   [ -f "$f" ] || continue
   before=$(md5sum "$f" | cut -d' ' -f1)
-  sed -i 's|https://www\.improveitmd\.com|https://improveitmd.com|g' "$f"
-  sed -i 's|http://www\.improveitmd\.com|https://improveitmd.com|g' "$f"
-  sed -i 's|www\.improveitmd\.com|improveitmd.com|g' "$f"
+  sed -i "s|https://www\.${SITE_DOMAIN}|https://${SITE_DOMAIN}|g" "$f"
+  sed -i "s|http://www\.${SITE_DOMAIN}|https://${SITE_DOMAIN}|g" "$f"
+  sed -i "s|www\.${SITE_DOMAIN}|${SITE_DOMAIN}|g" "$f"
   after=$(md5sum "$f" | cut -d' ' -f1)
   if [ "$before" != "$after" ]; then
     WWW_FIXES=$((WWW_FIXES + 1))
@@ -248,7 +248,7 @@ log "=== Step 7: Fixing Cloudflare Rocket Loader conflicts ==="
 RL_FIXES=0
 for f in "$GEN_DIR"/*.tsx; do
   before=$(md5sum "$f" | cut -d' ' -f1)
-  sed -i 's|<Script type={"module"} src={"https://improveitmd.com/global.js"}|<Script data-cfasync={"false"} type={"module"} src={"https://improveitmd.com/global.js"}|g' "$f"
+  sed -i "s|<Script type={\"module\"} src={\"https://${SITE_DOMAIN}/global.js\"}|<Script data-cfasync={\"false\"} type={\"module\"} src={\"https://${SITE_DOMAIN}/global.js\"}|g" "$f"
   after=$(md5sum "$f" | cut -d' ' -f1)
   if [ "$before" != "$after" ]; then
     RL_FIXES=$((RL_FIXES + 1))

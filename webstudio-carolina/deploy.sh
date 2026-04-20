@@ -75,6 +75,10 @@ node scripts/inject-canonical.cjs 2>&1 | tee -a "$LOG_FILE"
 log "Patching GA4 tracking (dedup page_view + add generate_lead)..."
 node scripts/inject-tracking-fix.cjs 2>&1 | tee -a "$LOG_FILE"
 
+# Step 4d3: Hero video/image swap - image first, then video, then back to image
+log "Patching hero video/image swap..."
+node scripts/inject-hero-video.cjs --force 2>&1 | tee -a "$LOG_FILE"
+
 # Step 5: Build Docker image (no cache to pick up all changes)
 log "Building Docker image..."
 docker build --no-cache -t webstudio-carolina:latest . 2>&1 | tee -a "$LOG_FILE"
