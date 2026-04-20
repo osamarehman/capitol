@@ -1,0 +1,15 @@
+# Asset optimization cache (downloaded externals)
+.asset-cache/
+
+# Node
+node_modules/
+
+# Secrets
+.env
+
+# Build output
+build/
+.react-router/
+
+# Large data file (synced from cloud)
+.webstudio/data.json
