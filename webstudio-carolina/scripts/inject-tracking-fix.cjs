@@ -157,9 +157,9 @@ if (fs.existsSync(indexPath)) {
 // --- Add data-cfasync to GA4 scripts ---
 if (fs.existsSync(dataJsonPath)) {
   let raw = fs.readFileSync(dataJsonPath, 'utf8');
-  const gaTagNoCfasync = '<script src="https://www.googletagmanager.com/gtag/js?id=G-EVSBMR91V3">';
+  const gaTagNoCfasync = '<script src="https://www.googletagmanager.com/gtag/js?id=G-839XJ1CRJZ">';
   if (raw.includes(gaTagNoCfasync)) {
-    raw = raw.replace(gaTagNoCfasync, '<script data-cfasync="false" src="https://www.googletagmanager.com/gtag/js?id=G-EVSBMR91V3">');
+    raw = raw.replace(gaTagNoCfasync, '<script data-cfasync="false" src="https://www.googletagmanager.com/gtag/js?id=G-839XJ1CRJZ">');
     raw = raw.replace('</script> \\n<script>\\n  window.dataLayer', '</script> \\n<script data-cfasync="false">\\n  window.dataLayer');
     fs.writeFileSync(dataJsonPath, raw);
     console.log('  \u2713 data.json: added data-cfasync to GA4 scripts');
@@ -169,11 +169,11 @@ if (fs.existsSync(dataJsonPath)) {
 
 if (fs.existsSync(indexPath)) {
   let content = fs.readFileSync(indexPath, 'utf8');
-  if (content.includes('src={"https://www.googletagmanager.com/gtag/js?id=G-EVSBMR91V3"}') &&
-      !content.includes('data-cfasync={"false"} src={"https://www.googletagmanager.com/gtag/js?id=G-EVSBMR91V3"}')) {
+  if (content.includes('src={"https://www.googletagmanager.com/gtag/js?id=G-839XJ1CRJZ"}') &&
+      !content.includes('data-cfasync={"false"} src={"https://www.googletagmanager.com/gtag/js?id=G-839XJ1CRJZ"}')) {
     content = content.replace(
-      '<Script src={"https://www.googletagmanager.com/gtag/js?id=G-EVSBMR91V3"}></Script><Script>{"\\n  window.dataLayer',
-      '<Script data-cfasync={"false"} src={"https://www.googletagmanager.com/gtag/js?id=G-EVSBMR91V3"}></Script><Script data-cfasync={"false"}>{"\\n  window.dataLayer'
+      '<Script src={"https://www.googletagmanager.com/gtag/js?id=G-839XJ1CRJZ"}></Script><Script>{"\\n  window.dataLayer',
+      '<Script data-cfasync={"false"} src={"https://www.googletagmanager.com/gtag/js?id=G-839XJ1CRJZ"}></Script><Script data-cfasync={"false"}>{"\\n  window.dataLayer'
     );
     fs.writeFileSync(indexPath, content);
     console.log('  \u2713 _index.tsx: added data-cfasync to GA4 scripts');

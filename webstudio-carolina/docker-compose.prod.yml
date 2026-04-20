@@ -8,6 +8,7 @@ services:
     environment:
       - PORT=3000
       - NODE_ENV=production
+      - DOMAINS=improveitcarolina.com,improveitmd.com
       - DEPLOY_SECRET=${DEPLOY_SECRET:-}
       - DEPLOY_PAGE_PASSWORD=${DEPLOY_PAGE_PASSWORD:-}
     healthcheck:

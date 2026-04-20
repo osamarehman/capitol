@@ -273,4 +273,41 @@ for f in "$GEN_DIR"/*.server.tsx; do
 done
 log "  Fixed contact email in $EMAIL_FIXES files"
 
+# ============================================================
+# STEP 9: Fix Google site verification tag (Carolina-specific)
+# ============================================================
+log "=== Step 9: Replacing Google site verification tag ==="
+
+GSV_FIXES=0
+for f in "$GEN_DIR"/*.tsx; do
+  [ -f "$f" ] || continue
+  before=$(md5sum "$f" | cut -d' ' -f1)
+  sed -i 's|ci94s2JMjxodrBBcRJQvPTnAp81MSY_4BAZuVHTaeKk|Sp03xOXurOHle-gpEkYKi4OjyFMymN8llYLXt9OGDLg|g' "$f"
+  after=$(md5sum "$f" | cut -d' ' -f1)
+  if [ "$before" != "$after" ]; then
+    GSV_FIXES=$((GSV_FIXES + 1))
+  fi
+done
+log "  Replaced Google site verification in $GSV_FIXES files"
+
+# ============================================================
+# STEP 10: Replace ALL GA4 properties with Carolina-specific ID (G-839XJ1CRJZ)
+# ============================================================
+log "=== Step 10: Replacing GA4 property IDs ==="
+
+GA4_FIXES=0
+for f in "$GEN_DIR"/*.tsx "$PROJECT_DIR/.webstudio/data.json"; do
+  [ -f "$f" ] || continue
+  before=$(md5sum "$f" | cut -d' ' -f1)
+  # Replace MD GA4 with Carolina GA4
+  sed -i 's|G-EVSBMR91V3|G-839XJ1CRJZ|g' "$f"
+  # Also catch any remaining old MD property
+  sed -i 's|G-NRVKK7VK0R|G-839XJ1CRJZ|g' "$f"
+  after=$(md5sum "$f" | cut -d' ' -f1)
+  if [ "$before" != "$after" ]; then
+    GA4_FIXES=$((GA4_FIXES + 1))
+  fi
+done
+log "  Replaced GA4 property IDs in $GA4_FIXES files"
+
 log "=== Optimization complete ==="
