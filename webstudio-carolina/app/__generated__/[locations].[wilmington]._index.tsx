@@ -977,15 +977,15 @@ autoPlay={true}
 muted={true}
 playsInline={true}
 preload={"auto"}
-poster={"https://improveitmd.com/uploads/662f3b433b72d65bdb7e82a5_65ca32dc202550e25648683a_Capitol_Improvements_Roofing_and_Siding_Contractors_poster_00001_iosgam_94e2ceb1dc.webp"}
+poster={"https://improveitmd.com/uploads/poster_01_start_6150850079.jpg"}
 data-lcp-video={""}
 className={`w-element c139pwc6 cjkauba cdmu5h7 ${"hero-video"}`}>
 <source
-src={"https://improveitmd.com/uploads/Webflow_Capitol_Improvements_36944c2fc2.webm"}
+src={"https://improveitmd.com/uploads/Webflow_Capitol_Improvements_36944c2fc2_trimmed2_4df3b2dd00.webm"}
 type={"video/webm"}
 className={`w-element`} />
 <source
-src={"https://ik.imagekit.io/einkpz9gr/65ca32dc202550e25648683a_Capitol%20Improvements%20-%20Roofing%20and%20Siding%20Contractors.mp4"}
+src={"https://improveitmd.com/uploads/Webflow_Capitol_Improvements_36944c2fc2_trimmed2_4df3b2dd00.webm"}
 type={"video/mp4"}
 className={`w-element`} />
 </video>

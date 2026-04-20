@@ -310,4 +310,30 @@ for f in "$GEN_DIR"/*.tsx "$PROJECT_DIR/.webstudio/data.json"; do
 done
 log "  Replaced GA4 property IDs in $GA4_FIXES files"
 
+# ============================================================
+# STEP 11: Replace hero video with trimmed version (same as MD)
+# ============================================================
+log "=== Step 11: Replacing hero video with trimmed version ==="
+
+VIDEO_FIXES=0
+TRIMMED_WEBM="https://improveitmd.com/uploads/Webflow_Capitol_Improvements_36944c2fc2_trimmed2_4df3b2dd00.webm"
+TRIMMED_POSTER="https://improveitmd.com/uploads/poster_01_start_6150850079.jpg"
+
+for f in "$GEN_DIR"/*.tsx; do
+  [ -f "$f" ] || continue
+  before=$(md5sum "$f" | cut -d' ' -f1)
+  # Replace untrimmed webm with trimmed version
+  sed -i "s|https://improveitmd\.com/uploads/Webflow_Capitol_Improvements_36944c2fc2\.webm|${TRIMMED_WEBM}|g" "$f"
+  sed -i "s|https://cms\.improveitmd\.com/uploads/Webflow_Capitol_Improvements_36944c2fc2\.webm|${TRIMMED_WEBM}|g" "$f"
+  # Replace old ImageKit mp4 fallback with trimmed webm
+  sed -i "s|https://ik\.imagekit\.io/einkpz9gr/65ca32dc202550e25648683a_Capitol%20Improvements%20-%20Roofing%20and%20Siding%20Contractors\.mp4|${TRIMMED_WEBM}|g" "$f"
+  # Replace old poster with MD poster
+  sed -i "s|https://improveitmd\.com/uploads/662f3b433b72d65bdb7e82a5_65ca32dc202550e25648683a_Capitol_Improvements_Roofing_and_Siding_Contractors_poster_00001_iosgam_94e2ceb1dc\.webp|${TRIMMED_POSTER}|g" "$f"
+  after=$(md5sum "$f" | cut -d' ' -f1)
+  if [ "$before" != "$after" ]; then
+    VIDEO_FIXES=$((VIDEO_FIXES + 1))
+  fi
+done
+log "  Replaced hero video URLs in $VIDEO_FIXES files"
+
 log "=== Optimization complete ==="
