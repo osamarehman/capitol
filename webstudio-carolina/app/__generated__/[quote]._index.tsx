@@ -50,7 +50,7 @@ target={"_self"}
 className={`w-element`}>
 <Image
 loading={"eager"}
-src={"https://improveitmd.com/uploads/LOGO_CAPITOL_859ae801da.png"}
+src={"https://improveitcarolina.com/uploads/LOGO_CAPITOL_859ae801da.png"}
 width={151}
 height={30}
 alt={""}
@@ -60,7 +60,7 @@ className={`w-image ceghofj c1hwvjgs cdmu5h7 c9slfh6 c1owcyig cnbug7k c1sz7ez0 c
 className={`w-element cfvvllw cjkauba c1epvuph cmhuipo c1sz7ez0 c19wpft8 c189czh1 c5ozyfh cqsaj3r`}>
 <Image
 loading={"eager"}
-src={"https://improveitmd.com/uploads/capitol_improvements_crew_quote_1_G91_YMAG_Cf_Ll_MKH_8_HOX_3_6ab72cf935.webp"}
+src={"https://improveitcarolina.com/uploads/capitol_improvements_crew_quote_1_G91_YMAG_Cf_Ll_MKH_8_HOX_3_6ab72cf935.webp"}
 width={896}
 height={1400}
 alt={""}

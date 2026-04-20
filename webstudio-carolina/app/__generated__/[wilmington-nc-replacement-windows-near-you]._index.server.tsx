@@ -26,7 +26,7 @@ export const getResources = (_props: { system: System }) => {
     excludePageFromSearch: false,
     language: "",
     socialImageAssetName: undefined,
-    socialImageUrl: "https://improveitmd.com/uploads/Replacement_Windows_Near_You_in_Wilmington_NC_42c3fef2d0.webp",
+    socialImageUrl: "https://improveitcarolina.com/uploads/Replacement_Windows_Near_You_in_Wilmington_NC_42c3fef2d0.webp",
     status: undefined,
     redirect: "",
     custom: [

@@ -34,7 +34,7 @@ const DEFAULT_SCHEMA = {
       "@id": `${SITE_ORIGIN}/#corporation`,
       "name": "Capitol Family Exteriors",
       "url": SITE_ORIGIN,
-      "logo": "https://improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg",
+      "logo": "https://improveitcarolina.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg",
       "email": "support@improveitcarolina.com",
       "priceRange": "$",
       "description": "Capitol Family Exteriors provides expert roofing, siding, windows, doors, gutters, and deck services in the Wilmington, NC area and surrounding communities.",

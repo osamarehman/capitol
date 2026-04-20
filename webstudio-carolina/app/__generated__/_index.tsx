@@ -46,7 +46,7 @@ import { NavigationMenu as NavigationMenu, NavigationMenuList as NavigationMenuL
             
 
             export const CustomCode = () => {
-              return (<><Script data-cfasync={"false"} type={"module"} src={"https://improveitmd.com/global.js"}></Script><Style>{"                                                         */\n  @font-face {                                                                                                                                                \n    font-family: 'Futura PT';\n    src: url('https://improveitmd.com/uploads/futura_pt_normal_yr_E6_Ur_Dv_A_Qq_J7_Ggcj9_DGQ_cf34f5fbcd.woff2') format('woff2');\n    font-weight: 400;\n    font-style: normal;\n    font-display: swap;\n  }\n\n  /* Futura PT - Medium (500) */\n  @font-face {\n    font-family: 'Futura PT';\n    src: url('https://improveitmd.com/uploads/futura_pt_medium_Pa_Kwd1_Jw6v_S2_Bx_Azjqox_K_fcf8a48728.woff2') format('woff2');\n    font-weight: 500;\n    font-style: normal;\n    font-display: swap;\n  }\n\n  /* Futura PT - Semi Bold (600) */\n  @font-face {\n    font-family: 'Futura PT';\n    src: url('https://improveitmd.com/uploads/futura_pt_semibold_s_Jb_O_Xx_P1ilt_SW_8_Hf_B_Wec_B_5cb306e458.woff2') format('woff2');\n    font-weight: 600;\n    font-style: normal;\n    font-display: swap;\n  }\n\n  /* Futura PT - Bold (700) */\n  @font-face {\n    font-family: 'Futura PT';\n    src: url('https://improveitmd.com/uploads/futura_pt_bold_sz_K1d_A_Wi_D1_GTLS_0_RA_Zpe_R_3fafd5ec7b.woff2') format('woff2');\n    font-weight: 700;\n    font-style: normal;\n    font-display: swap;\n  }\n\n  html {\n    scroll-behavior: smooth;\n  }\n\n  body,\n  h1, h2, h3, h4, h5, h6,\n  p,\n  ul, ol,\n  figure,\n  blockquote {\n    margin: 0;\n  }\n  "}</Style><meta name={"google-site-verification"} content={"Sp03xOXurOHle-gpEkYKi4OjyFMymN8llYLXt9OGDLg"}></meta><Script data-cfasync={"false"} src={"https://www.googletagmanager.com/gtag/js?id=G-839XJ1CRJZ"}></Script><Script data-cfasync={"false"}>{"\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-839XJ1CRJZ');\n"}</Script>{" \n"}<Script>{"\n!function(f,b,e,v,n,t,s)\n{if(f.fbq)return;n=f.fbq=function(){n.callMethod?\nn.callMethod.apply(n,arguments):n.queue.push(arguments)};\nif(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\nn.queue=[];t=b.createElement(e);t.async=!0;\nt.src=v;s=b.getElementsByTagName(e)[0];\ns.parentNode.insertBefore(t,s)}(window, document,'script',\n'https://connect.facebook.net/en_US/fbevents.js');\nfbq('init', '24499599766321833');\n//fbq('track', 'PageView');\n"}</Script><noscript><img height={"1"} width={"1"} style={{"display":"none"}} src={"https://www.facebook.com/tr?id=24499599766321833&ev=PageView&noscript=1"}></img></noscript><Script>{"\n// ========= DUAL TRACKING SCRIPT (Facebook Pixel + GA4) =========\n// Place this on ALL pages of your website\n\n// ========= HELPERS =========\n\nfunction safeAddClickEvent(selector, handler) {\n  const els = document.querySelectorAll(selector);\n  if (!els || !els.length) return;\n  \n  els.forEach(function (el) {\n    el.addEventListener('click', function (e) {\n      handler(e, el);\n    });\n  });\n}\n\nfunction checkAndMarkFacebookUser() {\n  const urlParams = new URLSearchParams(window.location.search);\n  const hasFbclid = urlParams.has('fbclid');\n  \n  // If fbclid is present, mark this user as from Facebook\n  if (hasFbclid) {\n    sessionStorage.setItem('fromFacebookAd', 'true');\n    sessionStorage.setItem('fbAdTimestamp', Date.now());\n  }\n  \n  // Return whether this is a Facebook user\n  return sessionStorage.getItem('fromFacebookAd') === 'true';\n}\n\n// ========= INITIALIZE =========\n\nconst isFromFacebook = checkAndMarkFacebookUser();\n\n// ========= PAGE VIEW EVENTS =========\n\nif (isFromFacebook) {\n  // Facebook ad traffic\n  fbq('track', 'ViewContent');\n  console.log('✓ FB: ViewContent fired');\n  \n  // GA4 for Facebook traffic\n  gtag('event', 'view_content', {\n    traffic_source: 'facebook_ad',\n    content_type: 'page'\n  });\n  console.log('✓ GA4: view_content fired (Facebook traffic)');\n} else {\n  // Normal traffic\n  fbq('track', 'PageView');\n  console.log('✓ FB: PageView fired');\n  \n  // GA4 for normal traffic (page_view is automatic, but we can add custom parameters)\n  gtag('event', 'page_view', {\n    traffic_source: 'organic'\n  });\n  console.log('✓ GA4: page_view fired (Normal traffic)');\n}\n\n// ========= CONTACT EVENTS (ALL USERS) =========\n\n// Phone/Call button clicks\nsafeAddClickEvent('a[href^=\"tel:\"]', function (e, el) {\n  const phoneNumber = el.getAttribute('href').replace('tel:', '');\n  \n  // Facebook\n  fbq('track', 'Contact', {\n    contact_channel: 'phone'\n  });\n  console.log('✓ FB: Contact fired (phone)');\n  \n  // GA4\n  gtag('event', 'contact', {\n    method: 'phone',\n    phone_number: phoneNumber\n  });\n  console.log('✓ GA4: contact fired (phone)');\n});\n\n// Email button clicks\nsafeAddClickEvent('a[href^=\"mailto:\"]', function (e, el) {\n  const email = el.getAttribute('href').replace('mailto:', '');\n  \n  // Facebook\n  fbq('track', 'Contact', {\n    contact_channel: 'email'\n  });\n  console.log('✓ FB: Contact fired (email)');\n  \n  // GA4\n  gtag('event', 'contact', {\n    method: 'email',\n    email_address: email\n  });\n  console.log('✓ GA4: contact fired (email)');\n});\n\n// SMS button clicks\nsafeAddClickEvent('a[href^=\"sms:\"]', function (e, el) {\n  const smsNumber = el.getAttribute('href').replace('sms:', '');\n  \n  // Facebook\n  fbq('track', 'Contact', {\n    contact_channel: 'sms'\n  });\n  console.log('✓ FB: Contact fired (sms)');\n  \n  // GA4\n  gtag('event', 'contact', {\n    method: 'sms',\n    phone_number: smsNumber\n  });\n  console.log('✓ GA4: contact fired (sms)');\n});\n\n// Chatbot (keeping for future use - currently inactive)\n/*\nconst CHATBOT_BUTTON_SELECTOR = '.js-chatbot-button';\nsafeAddClickEvent(CHATBOT_BUTTON_SELECTOR, function () {\n  // Facebook\n  fbq('track', 'Contact', {\n    contact_channel: 'chatbot'\n  });\n  console.log('✓ FB: Contact fired (chatbot)');\n  \n  // GA4\n  gtag('event', 'contact', {\n    method: 'chatbot'\n  });\n  console.log('✓ GA4: contact fired (chatbot)');\n});\n*/\n\n// ========= BUTTON CLICK EVENT (ALL USERS) =========\n\n// Regular button clicks (not links, not submit buttons)\nsafeAddClickEvent('button:not([type=\"submit\"]), .w-button:not([type=\"submit\"])', function (e, el) {\n  // Exclude if it's inside a form (handled by form submit)\n  if (el.closest('form')) return;\n  \n  const buttonText = el.textContent.trim() || el.value || 'Unknown';\n  \n  // Facebook\n  fbq('trackCustom', 'ButtonClick', {\n    button_text: buttonText\n  });\n  console.log('✓ FB: ButtonClick fired (' + buttonText + ')');\n  \n  // GA4\n  gtag('event', 'button_click', {\n    button_text: buttonText,\n    button_location: window.location.pathname\n  });\n  console.log('✓ GA4: button_click fired (' + buttonText + ')');\n});\n\n// ========= LEAD EVENT - STORE FOR THANK YOU PAGE =========\n\n(function () {\n  const forms = document.querySelectorAll('form');\n  if (!forms || !forms.length) return;\n  \n  forms.forEach(function(form) {\n    form.addEventListener('submit', function (e) {\n      const formName = form.getAttribute('name') || \n                       form.getAttribute('id') || \n                       form.getAttribute('data-name') || \n                       'Unknown Form';\n      \n      // Store lead data in sessionStorage\n      sessionStorage.setItem('leadSubmitted', 'true');\n      sessionStorage.setItem('leadFormName', formName);\n      sessionStorage.setItem('leadTimestamp', Date.now());\n      sessionStorage.setItem('leadSourcePage', window.location.pathname);\n      \n      console.log('✓ Lead data stored in sessionStorage');\n      \n      // Let the form submit naturally (no preventDefault needed)\n    });\n  });\n})();\n\n// ========= BROWSING EVENT (FB USERS ONLY) =========\n\n// Track internal link clicks for Facebook users\nif (isFromFacebook) {\n  safeAddClickEvent('a[href^=\"/\"], a[href^=\"' + window.location.origin + '\"]', function (e, el) {\n    const href = el.getAttribute('href');\n    \n    // Exclude anchors, tel, mailto, sms links\n    if (!href || \n        href.startsWith('/#') || \n        href.startsWith('#') ||\n        href.startsWith('tel:') || \n        href.startsWith('mailto:') || \n        href.startsWith('sms:')) {\n      return;\n    }\n    \n    // Facebook\n    fbq('trackCustom', 'Browsing', {\n      destination_url: href\n    });\n    console.log('✓ FB: Browsing fired (clicked to: ' + href + ')');\n    \n    // GA4\n    gtag('event', 'internal_link_click', {\n      link_url: href,\n      link_domain: window.location.hostname,\n      traffic_source: 'facebook_ad'\n    });\n    console.log('✓ GA4: internal_link_click fired (clicked to: ' + href + ')');\n  });\n}\n\n"}</Script></>);
+              return (<><Script data-cfasync={"false"} type={"module"} src={"/global.js"}></Script><Style>{"                                                         */\n  @font-face {                                                                                                                                                \n    font-family: 'Futura PT';\n    src: url('https://improveitcarolina.com/uploads/futura_pt_normal_yr_E6_Ur_Dv_A_Qq_J7_Ggcj9_DGQ_cf34f5fbcd.woff2') format('woff2');\n    font-weight: 400;\n    font-style: normal;\n    font-display: swap;\n  }\n\n  /* Futura PT - Medium (500) */\n  @font-face {\n    font-family: 'Futura PT';\n    src: url('https://improveitcarolina.com/uploads/futura_pt_medium_Pa_Kwd1_Jw6v_S2_Bx_Azjqox_K_fcf8a48728.woff2') format('woff2');\n    font-weight: 500;\n    font-style: normal;\n    font-display: swap;\n  }\n\n  /* Futura PT - Semi Bold (600) */\n  @font-face {\n    font-family: 'Futura PT';\n    src: url('https://improveitcarolina.com/uploads/futura_pt_semibold_s_Jb_O_Xx_P1ilt_SW_8_Hf_B_Wec_B_5cb306e458.woff2') format('woff2');\n    font-weight: 600;\n    font-style: normal;\n    font-display: swap;\n  }\n\n  /* Futura PT - Bold (700) */\n  @font-face {\n    font-family: 'Futura PT';\n    src: url('https://improveitcarolina.com/uploads/futura_pt_bold_sz_K1d_A_Wi_D1_GTLS_0_RA_Zpe_R_3fafd5ec7b.woff2') format('woff2');\n    font-weight: 700;\n    font-style: normal;\n    font-display: swap;\n  }\n\n  html {\n    scroll-behavior: smooth;\n  }\n\n  body,\n  h1, h2, h3, h4, h5, h6,\n  p,\n  ul, ol,\n  figure,\n  blockquote {\n    margin: 0;\n  }\n  "}</Style><meta name={"google-site-verification"} content={"Sp03xOXurOHle-gpEkYKi4OjyFMymN8llYLXt9OGDLg"}></meta><Script data-cfasync={"false"} src={"https://www.googletagmanager.com/gtag/js?id=G-839XJ1CRJZ"}></Script><Script data-cfasync={"false"}>{"\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-839XJ1CRJZ');\n"}</Script>{" \n"}<Script>{"\n!function(f,b,e,v,n,t,s)\n{if(f.fbq)return;n=f.fbq=function(){n.callMethod?\nn.callMethod.apply(n,arguments):n.queue.push(arguments)};\nif(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\nn.queue=[];t=b.createElement(e);t.async=!0;\nt.src=v;s=b.getElementsByTagName(e)[0];\ns.parentNode.insertBefore(t,s)}(window, document,'script',\n'https://connect.facebook.net/en_US/fbevents.js');\nfbq('init', '24499599766321833');\n//fbq('track', 'PageView');\n"}</Script><noscript><img height={"1"} width={"1"} style={{"display":"none"}} src={"https://www.facebook.com/tr?id=24499599766321833&ev=PageView&noscript=1"}></img></noscript><Script>{"\n// ========= DUAL TRACKING SCRIPT (Facebook Pixel + GA4) =========\n// Place this on ALL pages of your website\n\n// ========= HELPERS =========\n\nfunction safeAddClickEvent(selector, handler) {\n  const els = document.querySelectorAll(selector);\n  if (!els || !els.length) return;\n  \n  els.forEach(function (el) {\n    el.addEventListener('click', function (e) {\n      handler(e, el);\n    });\n  });\n}\n\nfunction checkAndMarkFacebookUser() {\n  const urlParams = new URLSearchParams(window.location.search);\n  const hasFbclid = urlParams.has('fbclid');\n  \n  // If fbclid is present, mark this user as from Facebook\n  if (hasFbclid) {\n    sessionStorage.setItem('fromFacebookAd', 'true');\n    sessionStorage.setItem('fbAdTimestamp', Date.now());\n  }\n  \n  // Return whether this is a Facebook user\n  return sessionStorage.getItem('fromFacebookAd') === 'true';\n}\n\n// ========= INITIALIZE =========\n\nconst isFromFacebook = checkAndMarkFacebookUser();\n\n// ========= PAGE VIEW EVENTS =========\n\nif (isFromFacebook) {\n  // Facebook ad traffic\n  fbq('track', 'ViewContent');\n  console.log('✓ FB: ViewContent fired');\n  \n  // GA4 for Facebook traffic\n  gtag('event', 'view_content', {\n    traffic_source: 'facebook_ad',\n    content_type: 'page'\n  });\n  console.log('✓ GA4: view_content fired (Facebook traffic)');\n} else {\n  // Normal traffic\n  fbq('track', 'PageView');\n  console.log('✓ FB: PageView fired');\n  \n  // GA4 for normal traffic (page_view is automatic, but we can add custom parameters)\n  gtag('event', 'page_view', {\n    traffic_source: 'organic'\n  });\n  console.log('✓ GA4: page_view fired (Normal traffic)');\n}\n\n// ========= CONTACT EVENTS (ALL USERS) =========\n\n// Phone/Call button clicks\nsafeAddClickEvent('a[href^=\"tel:\"]', function (e, el) {\n  const phoneNumber = el.getAttribute('href').replace('tel:', '');\n  \n  // Facebook\n  fbq('track', 'Contact', {\n    contact_channel: 'phone'\n  });\n  console.log('✓ FB: Contact fired (phone)');\n  \n  // GA4\n  gtag('event', 'contact', {\n    method: 'phone',\n    phone_number: phoneNumber\n  });\n  console.log('✓ GA4: contact fired (phone)');\n});\n\n// Email button clicks\nsafeAddClickEvent('a[href^=\"mailto:\"]', function (e, el) {\n  const email = el.getAttribute('href').replace('mailto:', '');\n  \n  // Facebook\n  fbq('track', 'Contact', {\n    contact_channel: 'email'\n  });\n  console.log('✓ FB: Contact fired (email)');\n  \n  // GA4\n  gtag('event', 'contact', {\n    method: 'email',\n    email_address: email\n  });\n  console.log('✓ GA4: contact fired (email)');\n});\n\n// SMS button clicks\nsafeAddClickEvent('a[href^=\"sms:\"]', function (e, el) {\n  const smsNumber = el.getAttribute('href').replace('sms:', '');\n  \n  // Facebook\n  fbq('track', 'Contact', {\n    contact_channel: 'sms'\n  });\n  console.log('✓ FB: Contact fired (sms)');\n  \n  // GA4\n  gtag('event', 'contact', {\n    method: 'sms',\n    phone_number: smsNumber\n  });\n  console.log('✓ GA4: contact fired (sms)');\n});\n\n// Chatbot (keeping for future use - currently inactive)\n/*\nconst CHATBOT_BUTTON_SELECTOR = '.js-chatbot-button';\nsafeAddClickEvent(CHATBOT_BUTTON_SELECTOR, function () {\n  // Facebook\n  fbq('track', 'Contact', {\n    contact_channel: 'chatbot'\n  });\n  console.log('✓ FB: Contact fired (chatbot)');\n  \n  // GA4\n  gtag('event', 'contact', {\n    method: 'chatbot'\n  });\n  console.log('✓ GA4: contact fired (chatbot)');\n});\n*/\n\n// ========= BUTTON CLICK EVENT (ALL USERS) =========\n\n// Regular button clicks (not links, not submit buttons)\nsafeAddClickEvent('button:not([type=\"submit\"]), .w-button:not([type=\"submit\"])', function (e, el) {\n  // Exclude if it's inside a form (handled by form submit)\n  if (el.closest('form')) return;\n  \n  const buttonText = el.textContent.trim() || el.value || 'Unknown';\n  \n  // Facebook\n  fbq('trackCustom', 'ButtonClick', {\n    button_text: buttonText\n  });\n  console.log('✓ FB: ButtonClick fired (' + buttonText + ')');\n  \n  // GA4\n  gtag('event', 'button_click', {\n    button_text: buttonText,\n    button_location: window.location.pathname\n  });\n  console.log('✓ GA4: button_click fired (' + buttonText + ')');\n});\n\n// ========= LEAD EVENT - STORE FOR THANK YOU PAGE =========\n\n(function () {\n  const forms = document.querySelectorAll('form');\n  if (!forms || !forms.length) return;\n  \n  forms.forEach(function(form) {\n    form.addEventListener('submit', function (e) {\n      const formName = form.getAttribute('name') || \n                       form.getAttribute('id') || \n                       form.getAttribute('data-name') || \n                       'Unknown Form';\n      \n      // Store lead data in sessionStorage\n      sessionStorage.setItem('leadSubmitted', 'true');\n      sessionStorage.setItem('leadFormName', formName);\n      sessionStorage.setItem('leadTimestamp', Date.now());\n      sessionStorage.setItem('leadSourcePage', window.location.pathname);\n      \n      console.log('✓ Lead data stored in sessionStorage');\n      \n      // Let the form submit naturally (no preventDefault needed)\n    });\n  });\n})();\n\n// ========= BROWSING EVENT (FB USERS ONLY) =========\n\n// Track internal link clicks for Facebook users\nif (isFromFacebook) {\n  safeAddClickEvent('a[href^=\"/\"], a[href^=\"' + window.location.origin + '\"]', function (e, el) {\n    const href = el.getAttribute('href');\n    \n    // Exclude anchors, tel, mailto, sms links\n    if (!href || \n        href.startsWith('/#') || \n        href.startsWith('#') ||\n        href.startsWith('tel:') || \n        href.startsWith('mailto:') || \n        href.startsWith('sms:')) {\n      return;\n    }\n    \n    // Facebook\n    fbq('trackCustom', 'Browsing', {\n      destination_url: href\n    });\n    console.log('✓ FB: Browsing fired (clicked to: ' + href + ')');\n    \n    // GA4\n    gtag('event', 'internal_link_click', {\n      link_url: href,\n      link_domain: window.location.hostname,\n      traffic_source: 'facebook_ad'\n    });\n    console.log('✓ GA4: internal_link_click fired (clicked to: ' + href + ')');\n  });\n}\n\n"}</Script></>);
             }
           
 
@@ -399,7 +399,7 @@ className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"https://improveitmd.com/uploads/LOGO_CAPITOL_859ae801da.png"}
+src={"https://improveitcarolina.com/uploads/LOGO_CAPITOL_859ae801da.png"}
 width={151}
 height={30}
 alt={"Logo"}
@@ -563,7 +563,7 @@ className={`w-element c1numhkq c53aqfr ct0qrmw cfcahn6 c1hx6vht c1epvuph c6hmdm4
 href={"tel:3017696909"}
 className={`w-link c1lvj0n c19ftcvs c1vqewwo cacmu18 c9te4zd c1u81kxm c1v2l8nt c53aqfr ct0qrmw c1lzjd2w cn7k83s c1d8rs8t cwr9gsc c1ehmfnq c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da c1rayu5r c1owcyig cv3rgxc cahz6x0 cmchden c1amh7xl cimel00 c1b6be7c c1842oze c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 ckkl2uw cchbu1a c1lgs1h6 c1osufuw c8u2mtt`}>
 <Image
-src={"https://improveitmd.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
+src={"https://improveitcarolina.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
 width={16}
 height={16}
 alt={"Phone icon"}
@@ -597,7 +597,7 @@ className={`w-element c1numhkq cqilze0 c1diokdk c3auquk c1r7jime c1hx6vht cfefby
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"https://improveitmd.com/uploads/LOGO_CAPITOL_859ae801da.png"}
+src={"https://improveitcarolina.com/uploads/LOGO_CAPITOL_859ae801da.png"}
 width={151}
 height={30}
 alt={"Logo"}
@@ -944,15 +944,15 @@ autoPlay={false}
 muted={true}
 playsInline={true}
 preload={"auto"}
-poster={"https://improveitmd.com/uploads/poster_01_start_6150850079.jpg"}
+poster={"https://improveitcarolina.com/uploads/poster_01_start_6150850079.jpg"}
 data-lcp-video={""}
 className={`w-element c139pwc6 cjkauba cdmu5h7 ${"hero-video"}`}>
 <source
-src={"https://improveitmd.com/uploads/Webflow_Capitol_Improvements_36944c2fc2_trimmed2_4df3b2dd00.webm"}
+src={"https://improveitcarolina.com/uploads/Webflow_Capitol_Improvements_36944c2fc2_trimmed2_4df3b2dd00.webm"}
 type={"video/webm"}
 className={`w-element`} />
 <source
-src={"https://improveitmd.com/uploads/Webflow_Capitol_Improvements_36944c2fc2_trimmed2_4df3b2dd00.webm"}
+src={"https://improveitcarolina.com/uploads/Webflow_Capitol_Improvements_36944c2fc2_trimmed2_4df3b2dd00.webm"}
 type={"video/mp4"}
 className={`w-element`} />
 </video>
@@ -1003,7 +1003,7 @@ href={"https://www.gaf.com/en-us/roofing-contractors/residential/usa/md/bowie/ca
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"https://improveitmd.com/uploads/gaf_logo_We_ITC_5p_Ape2_Cx61bwo3_OP_136c40af79.svg"}
+src={"https://improveitcarolina.com/uploads/gaf_logo_We_ITC_5p_Ape2_Cx61bwo3_OP_136c40af79.svg"}
 width={128}
 height={128}
 alt={""}
@@ -1015,7 +1015,7 @@ href={"https://www.atlasroofing.com/find-a-contractor"}
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"https://improveitmd.com/uploads/atlas_pro_logo_q_Voe_O_Fympg2_By5s8t30_w_4c8e4d7224.svg"}
+src={"https://improveitcarolina.com/uploads/atlas_pro_logo_q_Voe_O_Fympg2_By5s8t30_w_4c8e4d7224.svg"}
 width={122}
 height={124}
 alt={""}
@@ -1027,7 +1027,7 @@ href={"https://www.plygem.com/how-to-buy/"}
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"https://improveitmd.com/uploads/plygem_logo_Qb_U2kz_Gy_Nyh5_D_Fh_F_Uq_Q_Lg_5b26e77fa1.svg"}
+src={"https://improveitcarolina.com/uploads/plygem_logo_Qb_U2kz_Gy_Nyh5_D_Fh_F_Uq_Q_Lg_5b26e77fa1.svg"}
 width={145}
 height={124}
 alt={""}
@@ -1039,7 +1039,7 @@ href={"https://www.mulehide.com/en-us/"}
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"https://improveitmd.com/uploads/mule_hide_logo_DW_Oj97_Vdm9n_ZDJ_Upk_Gy_D8_a5cfdda907.svg"}
+src={"https://improveitcarolina.com/uploads/mule_hide_logo_DW_Oj97_Vdm9n_ZDJ_Upk_Gy_D8_a5cfdda907.svg"}
 width={121}
 height={118}
 alt={""}
@@ -1051,7 +1051,7 @@ href={"https://www.jameshardie.com/find-a-contractor/results/capitol-improvement
 target={"_blank"}
 className={`w-element c1hwvjgs`}>
 <Image
-src={"https://improveitmd.com/uploads/james_hardie_logo_C1_LC_6obnlrm346_Vy_U2_Gyg_7d5d8dec1d.svg"}
+src={"https://improveitcarolina.com/uploads/james_hardie_logo_C1_LC_6obnlrm346_Vy_U2_Gyg_7d5d8dec1d.svg"}
 width={110}
 height={122}
 alt={""}
@@ -1359,7 +1359,7 @@ className={`w-link cvljm31 crv3s27 cacmu18 cn7k83s cyc4l41 c1d7h9xn c8a9tkm c1r2
 <div
 className={`w-element c139pwc6 cjhysm8 c13g3obg`}>
 <Image
-src={"https://improveitmd.com/uploads/warranty_section_img_Gw_Ij3_EN_Icdl_O_Noso_Iv_S5g_d91b99e2b9.webp"}
+src={"https://improveitcarolina.com/uploads/warranty_section_img_Gw_Ij3_EN_Icdl_O_Noso_Iv_S5g_d91b99e2b9.webp"}
 width={960}
 height={1034}
 alt={""}
@@ -1383,7 +1383,7 @@ className={`w-element c1numhkq c3auquk co72if5 c1u2ofx5 cvfl1ur c1jyyt23 c1nnsgt
 <div
 className={`w-element c1numhkq c1a06u5s c15kiuw7 ch3nxmx c1s88tz3 c15lzzou c139pwc6 c1sstzge c13g3obg c1m1w9fz c1sy7qlo c1s19qlc crfoyae cuwoxsi c4fmmfv c147y3ls`}>
 <Image
-src={"https://improveitmd.com/uploads/logo_enerbank_KYZ_9_Wocf_Ri88302llq_G7_Q_c02a952618.svg"}
+src={"https://improveitcarolina.com/uploads/logo_enerbank_KYZ_9_Wocf_Ri88302llq_G7_Q_c02a952618.svg"}
 width={713}
 height={111}
 alt={""}
@@ -1411,7 +1411,7 @@ className={`w-link cvljm31 crv3s27 cacmu18 cn7k83s cyc4l41 c1d7h9xn c8a9tkm c1r2
 <div
 className={`w-element c139pwc6 cjhysm8 cjkauba c13g3obg`}>
 <Image
-src={"https://improveitmd.com/uploads/video_thumbnail_img_jica_ILCYK_2_M1f_BB_2_Cw_Kg9_7b3e36d901.webp"}
+src={"https://improveitcarolina.com/uploads/video_thumbnail_img_jica_ILCYK_2_M1f_BB_2_Cw_Kg9_7b3e36d901.webp"}
 width={960}
 height={1034}
 alt={""}
@@ -1789,7 +1789,7 @@ className={`w-element c1numhkq cjgpxnj c1sq4bmy c139pwc6 c4ph8p6 c1t9puix czr9sb
 <div
 className={`w-element c18bj3o3 cxte6uv cyqqrx6 c16lpxcx cs0io4s cyovuht c12qh1s1`}>
 <Image
-src={"https://improveitmd.com/uploads/home_reviews_section_img_MZ_8_H2_Bc6yj_Fnyhr96_Mf_GR_36fa2eab93.webp"}
+src={"https://improveitcarolina.com/uploads/home_reviews_section_img_MZ_8_H2_Bc6yj_Fnyhr96_Mf_GR_36fa2eab93.webp"}
 width={960}
 height={1490}
 alt={""}
@@ -1890,7 +1890,7 @@ className={`w-element cmsm1bz cvp609z c15p7bp0 c169xs8a c1txodcv curgy1m cyovuht
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c1irdqs7 c1p4xat6`}>
 <Image
-src={"https://improveitmd.com/uploads/google_logo_tc_TKP_H_Wr_Qxpx4_J_Bktjz_M_5da7981fc6.svg"}
+src={"https://improveitcarolina.com/uploads/google_logo_tc_TKP_H_Wr_Qxpx4_J_Bktjz_M_5da7981fc6.svg"}
 width={54}
 height={54}
 alt={""}
@@ -1899,7 +1899,7 @@ className={`w-image c139pwc6 c1hwvjgs c9mjk8q c8vzzbi ca9fo5a`} />
 <div
 className={`w-element c1numhkq c1a06u5s c1603wqb`}>
 <Image
-src={"https://improveitmd.com/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_5837d92061.svg"}
+src={"https://improveitcarolina.com/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_5837d92061.svg"}
 width={128}
 height={23}
 alt={""}
@@ -1916,7 +1916,7 @@ className={`w-element c1hwvjgs cacmu18 c12n66pl`}>
 <div
 className={`w-element c1numhkq c1a06u5s c1diokdk ct0qrmw c1irdqs7 c1p4xat6`}>
 <Image
-src={"https://improveitmd.com/uploads/bbb_logo_AZ_Wq_VTT_1q_PEO_1p_L97jl_Nq_7de97e0636.svg"}
+src={"https://improveitcarolina.com/uploads/bbb_logo_AZ_Wq_VTT_1q_PEO_1p_L97jl_Nq_7de97e0636.svg"}
 width={62}
 height={62}
 alt={""}
@@ -1925,7 +1925,7 @@ className={`w-image c139pwc6 c1hwvjgs c9mjk8q cuyjpqi c5qn6ig`} />
 <div
 className={`w-element c1numhkq c1a06u5s c1603wqb`}>
 <Image
-src={"https://improveitmd.com/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_5837d92061.svg"}
+src={"https://improveitcarolina.com/uploads/rating_stars_blue_u_Jg9_G4_Hmj_U_Bq_M_Px_A_Lq_X_Qs_5837d92061.svg"}
 width={128}
 height={23}
 alt={""}
@@ -2262,7 +2262,7 @@ className={`w-element c1numhkq c1diokdk ct0qrmw cj1o4tp c1q4fbwg cqilze0 c1lg7bh
 href={"https://share.google/1sIvDWDALSZTorUNn"}
 className={`w-element c1numhkq cwfh8jw cqq3lvy c1diokdk ch3nxmx`}>
 <Image
-src={"https://improveitmd.com/uploads/google_icon_655b581254.svg"}
+src={"https://improveitcarolina.com/uploads/google_icon_655b581254.svg"}
 className={`w-image`} />
 </div>
 <p

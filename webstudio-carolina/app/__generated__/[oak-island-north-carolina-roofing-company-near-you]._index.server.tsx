@@ -26,7 +26,7 @@ export const getResources = (_props: { system: System }) => {
     excludePageFromSearch: false,
     language: "",
     socialImageAssetName: undefined,
-    socialImageUrl: "https://improveitmd.com/uploads/Roofing_Company_Near_Me_in_Oak_Island_North_Carolina_2_719014504f.webp",
+    socialImageUrl: "https://improveitcarolina.com/uploads/Roofing_Company_Near_Me_in_Oak_Island_North_Carolina_2_719014504f.webp",
     status: undefined,
     redirect: "",
     custom: [

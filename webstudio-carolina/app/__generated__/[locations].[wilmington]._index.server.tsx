@@ -48,7 +48,7 @@ export const getResources = (_props: { system: System }) => {
     excludePageFromSearch: false,
     language: "",
     socialImageAssetName: undefined,
-    socialImageUrl: "https://improveitmd.com/uploads/ci_lp_roofing_3_lo_Wq8_G0r_G5g_RK_Xy_BZLS_6_O_341f6e5ce3.jpeg",
+    socialImageUrl: "https://improveitcarolina.com/uploads/ci_lp_roofing_3_lo_Wq8_G0r_G5g_RK_Xy_BZLS_6_O_341f6e5ce3.jpeg",
     status: undefined,
     redirect: "",
     custom: [

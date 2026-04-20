@@ -415,7 +415,7 @@ className={`w-element c1hwvjgs cd6l4a6 cj1pg9y cf93ewp cmadmrr cvp5m4g`}>
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"https://improveitmd.com/uploads/LOGO_CAPITOL_859ae801da.png"}
+src={"https://improveitcarolina.com/uploads/LOGO_CAPITOL_859ae801da.png"}
 width={151}
 height={30}
 alt={"Logo"}
@@ -579,7 +579,7 @@ className={`w-element c1numhkq c53aqfr ct0qrmw cfcahn6 c1hx6vht c1epvuph c6hmdm4
 href={"tel:3017696909"}
 className={`w-link c1lvj0n c19ftcvs c1vqewwo cacmu18 c9te4zd c1u81kxm c1v2l8nt c53aqfr ct0qrmw c1lzjd2w cn7k83s c1d8rs8t cwr9gsc c1ehmfnq c1ryk5rj csubbc2 ccmxen3 c1obobqc c1wygun7 c1rgg99s c1r2737e cgtmmxo c1cukx3 c3su6au c8d36da c1rayu5r c1owcyig cv3rgxc cahz6x0 cmchden c1amh7xl cimel00 c1b6be7c c1842oze c12uktu2 c15gxmz4 c1up450v c1ka8hwj c1plys2 ckkl2uw cchbu1a c1lgs1h6 c1osufuw c8u2mtt`}>
 <Image
-src={"https://improveitmd.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
+src={"https://improveitcarolina.com/uploads/phone_Nyqk_H_Sgvv_W_Cea_Yy_ZS_Zru_3ebca2ee02.svg"}
 width={16}
 height={16}
 alt={"Phone icon"}
@@ -613,7 +613,7 @@ className={`w-element c1numhkq cqilze0 c1diokdk c3auquk c1r7jime c1hx6vht cfefby
 href={"/"}
 className={`w-element c1hwvjgs c18bj3o3 c1lq6pq8 c1owcyig cxf38v0 c1epvuph cl3mvj8 cs0io4s`}>
 <Image
-src={"https://improveitmd.com/uploads/LOGO_CAPITOL_859ae801da.png"}
+src={"https://improveitcarolina.com/uploads/LOGO_CAPITOL_859ae801da.png"}
 width={151}
 height={30}
 alt={"Logo"}
@@ -974,7 +974,7 @@ alt={"YouTube video preview image"}
 sizes={"100vw"}
 optimize={true}
 loading={"eager"}
-src={"https://improveitmd.com/uploads/Capitol_Improvements_Finished_Photos_exzt5u_90611f8ed2.webp"}
+src={"https://improveitcarolina.com/uploads/Capitol_Improvements_Finished_Photos_exzt5u_90611f8ed2.webp"}
 fetchPriority={"high"}
 className={`w-preview-image cnbug7k cdmu5h7 cfrqxly c139pwc6 cjkauba csabcfw c1w2t8ro c1gjvd20 c1w2te30`} />
 <VimeoSpinner
@@ -2086,7 +2086,7 @@ className={`w-element c1numhkq c1a06u5s c1sq4bmy c1diokdk ct0qrmw`}>
 <div
 className={`w-element c1numhkq`}>
 <Image
-src={"https://improveitmd.com/uploads/Capitol_Improvements_Finished_Photos_cropped_nhgndu_784c811e7d.webp"}
+src={"https://improveitcarolina.com/uploads/Capitol_Improvements_Finished_Photos_cropped_nhgndu_784c811e7d.webp"}
 loading={"lazy"}
 alt={"family photo"}
 className={`w-image c139pwc6 c1hwvjgs c9mjk8q czbu68a csabcfw c1w2t8ro c1w2te30 c1gjvd20`} />
@@ -2115,7 +2115,7 @@ target={"_blank"}
 className={`w-element`}>
 <Image
 loading={"lazy"}
-src={"https://improveitmd.com/uploads/Gaf_Master_Elite_kvteks_b9dc66ccb9.webp"}
+src={"https://improveitcarolina.com/uploads/Gaf_Master_Elite_kvteks_b9dc66ccb9.webp"}
 className={`w-image ${"features-icon"}`} />
 </Link>
 <div
@@ -2142,7 +2142,7 @@ target={"_blank"}
 className={`w-element`}>
 <Image
 loading={"lazy"}
-src={"https://improveitmd.com/uploads/James_Hardie_Preferred_rarr7e_14beaacd36.webp"}
+src={"https://improveitcarolina.com/uploads/James_Hardie_Preferred_rarr7e_14beaacd36.webp"}
 className={`w-image ${"features-icon"}`} />
 </Link>
 <div
@@ -2163,7 +2163,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 className={`w-element ${"features-item"}`}>
 <Image
 loading={"lazy"}
-src={"https://improveitmd.com/uploads/Board_Pro_Platnium_ebzeqm_5420537416.png"}
+src={"https://improveitcarolina.com/uploads/Board_Pro_Platnium_ebzeqm_5420537416.png"}
 className={`w-image ${"features-icon"}`} />
 <div
 className={`w-element ${"item-text-wrapper"}`}>
@@ -2183,7 +2183,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 className={`w-element ${"features-item"}`}>
 <Image
 loading={"lazy"}
-src={"https://improveitmd.com/uploads/Pro_Via_b4qh0r_b2df4e557b.webp"}
+src={"https://improveitcarolina.com/uploads/Pro_Via_b4qh0r_b2df4e557b.webp"}
 className={`w-image ${"features-icon"}`} />
 <div
 className={`w-element ${"item-text-wrapper"}`}>
@@ -2202,7 +2202,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://improveitmd.com/uploads/FORTIFIED_logo_program_01_1024x485_uehkpv_306668b9e6.png"}
+src={"https://improveitcarolina.com/uploads/FORTIFIED_logo_program_01_1024x485_uehkpv_306668b9e6.png"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2222,7 +2222,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://improveitmd.com/uploads/five_star_rating_icon_1_plpmjl_5296dfc541.svg"}
+src={"https://improveitcarolina.com/uploads/five_star_rating_icon_1_plpmjl_5296dfc541.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2242,7 +2242,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://improveitmd.com/uploads/five_star_rating_icon_1_plpmjl_5296dfc541.svg"}
+src={"https://improveitcarolina.com/uploads/five_star_rating_icon_1_plpmjl_5296dfc541.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2262,7 +2262,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://improveitmd.com/uploads/five_star_rating_icon_1_plpmjl_5296dfc541.svg"}
+src={"https://improveitcarolina.com/uploads/five_star_rating_icon_1_plpmjl_5296dfc541.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2282,7 +2282,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://improveitmd.com/uploads/hammer_icon_haniri_bdc66cb771.svg"}
+src={"https://improveitcarolina.com/uploads/hammer_icon_haniri_bdc66cb771.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2322,7 +2322,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://improveitmd.com/uploads/hammer_icon_haniri_bdc66cb771.svg"}
+src={"https://improveitcarolina.com/uploads/hammer_icon_haniri_bdc66cb771.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2342,7 +2342,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://improveitmd.com/uploads/hammer_icon_haniri_bdc66cb771.svg"}
+src={"https://improveitcarolina.com/uploads/hammer_icon_haniri_bdc66cb771.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2362,7 +2362,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://improveitmd.com/uploads/badge_icon_hljgdo_10525f9c42.svg"}
+src={"https://improveitcarolina.com/uploads/badge_icon_hljgdo_10525f9c42.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2402,7 +2402,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://improveitmd.com/uploads/badge_icon_hljgdo_10525f9c42.svg"}
+src={"https://improveitcarolina.com/uploads/badge_icon_hljgdo_10525f9c42.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2422,7 +2422,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://improveitmd.com/uploads/badge_icon_hljgdo_10525f9c42.svg"}
+src={"https://improveitcarolina.com/uploads/badge_icon_hljgdo_10525f9c42.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2442,7 +2442,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://improveitmd.com/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
+src={"https://improveitcarolina.com/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2523,7 +2523,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://improveitmd.com/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
+src={"https://improveitcarolina.com/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2543,7 +2543,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://improveitmd.com/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
+src={"https://improveitcarolina.com/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2563,7 +2563,7 @@ className={`w-element c309ipl c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element ${"features-item"}`}>
 <Image
-src={"https://improveitmd.com/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
+src={"https://improveitcarolina.com/uploads/holding_house_icon_lxtzdg_9806500b66.svg"}
 loading={"lazy"}
 className={`w-image ${"features-icon"}`} />
 <div
@@ -2606,7 +2606,7 @@ className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <div
 className={`w-element cht8odh c139pwc6 cn87dm8 c1uhhf7h c1numhkq c1diokdk ch3nxmx`}>
 <Image
-src={"https://improveitmd.com/uploads/straightened_image_f6d9787376.jpeg"}
+src={"https://improveitcarolina.com/uploads/straightened_image_f6d9787376.jpeg"}
 loading={"lazy"}
 alt={"2026 BBB Certificate of Commendation for Capitol Improvements"}
 className={`w-image c18hkk31 c1hwvjgs c9mjk8q czbu68a cjkauba c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p`} />
@@ -2620,7 +2620,7 @@ className={`w-element cn5qs21 c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <Image
-src={"https://improveitmd.com/uploads/Whats_App_Image_2026_02_05_at_10_34_06_AM_aay5kl_ac71577c9f.jpg"}
+src={"https://improveitcarolina.com/uploads/Whats_App_Image_2026_02_05_at_10_34_06_AM_aay5kl_ac71577c9f.jpg"}
 loading={"lazy"}
 alt={"Screenshot showing Capitol Improvmeents is one of the only 5-star James Hardie partner in the contractor alliance program."}
 className={`w-image c139pwc6 c1hwvjgs c9mjk8q czbu68a c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p ${"certification-image"}`} />
@@ -2634,7 +2634,7 @@ className={`w-element cn5qs21 c1v90cn6 c115nxwc c1lwn44j c1fjww6l`}>
 <div
 className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <Image
-src={"https://improveitmd.com/uploads/Whats_App_Image_2026_02_05_at_10_34_02_AM_cropped_dp8tdb_addb4c692e.jpg"}
+src={"https://improveitcarolina.com/uploads/Whats_App_Image_2026_02_05_at_10_34_02_AM_cropped_dp8tdb_addb4c692e.jpg"}
 loading={"lazy"}
 alt={"5 stars rated for TimberTech deck installations and service"}
 className={`w-image c139pwc6 c1hwvjgs c9mjk8q czbu68a c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p ${"certification-image"}`} />
@@ -2650,7 +2650,7 @@ className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <div
 className={`w-element cht8odh c139pwc6 cn87dm8 c1uhhf7h c1numhkq c1diokdk ch3nxmx`}>
 <Image
-src={"https://improveitmd.com/uploads/Pro_Via_Certificate_Fitted_Crop_yosl1x_605ebb4d17.jpg"}
+src={"https://improveitcarolina.com/uploads/Pro_Via_Certificate_Fitted_Crop_yosl1x_605ebb4d17.jpg"}
 loading={"lazy"}
 alt={"Image of our Provia Window Certification good until August 2029"}
 className={`w-image c18hkk31 c1hwvjgs c9mjk8q czbu68a cjkauba c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p`} />
@@ -2667,7 +2667,7 @@ className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <div
 className={`w-element cht8odh c139pwc6 cn87dm8 c1uhhf7h c1numhkq c1diokdk ch3nxmx`}>
 <Image
-src={"https://improveitmd.com/uploads/Fortified_Certificate_g11ept_e6f662f857.jpg"}
+src={"https://improveitcarolina.com/uploads/Fortified_Certificate_g11ept_e6f662f857.jpg"}
 loading={"lazy"}
 alt={"2026 Fortified Roofing Certification for Capitol Improvements"}
 className={`w-image c18hkk31 c1hwvjgs c9mjk8q czbu68a cjkauba c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p`} />
@@ -2684,7 +2684,7 @@ className={`w-element c1p4xat6 ${"features_image-block"}`}>
 <div
 className={`w-element cht8odh c139pwc6 cn87dm8 c1uhhf7h c1numhkq c1diokdk ch3nxmx`}>
 <Image
-src={"https://improveitmd.com/uploads/Pro_Via_Certificate_2_fitted_crop_mr5dfd_b46623ab5f.jpg"}
+src={"https://improveitcarolina.com/uploads/Pro_Via_Certificate_2_fitted_crop_mr5dfd_b46623ab5f.jpg"}
 loading={"lazy"}
 alt={"Image of our Provia Window Certification good until August 2029"}
 className={`w-image c18hkk31 c1hwvjgs c9mjk8q czbu68a cjkauba c1i2t266 c1w4abcz cj1xwpe cpdrg3g c1qimg6p`} />
@@ -3847,7 +3847,7 @@ className={`w-element c1numhkq c3auquk co72if5 c1u2ofx5 cvfl1ur c1jyyt23 c1nnsgt
 <div
 className={`w-element c1numhkq c1a06u5s c15kiuw7 ch3nxmx c1s88tz3 c15lzzou c139pwc6 c1sstzge c13g3obg c1m1w9fz c1sy7qlo c1s19qlc crfoyae cuwoxsi c4fmmfv c147y3ls`}>
 <Image
-src={"https://improveitmd.com/uploads/logo_enerbank_KYZ_9_Wocf_Ri88302llq_G7_Q_c02a952618.svg"}
+src={"https://improveitcarolina.com/uploads/logo_enerbank_KYZ_9_Wocf_Ri88302llq_G7_Q_c02a952618.svg"}
 width={713}
 height={111}
 alt={""}
@@ -3875,7 +3875,7 @@ className={`w-link cvljm31 crv3s27 cacmu18 cn7k83s cyc4l41 c1d7h9xn c8a9tkm c1r2
 <div
 className={`w-element c139pwc6 cjhysm8 cjkauba c13g3obg`}>
 <Image
-src={"https://improveitmd.com/uploads/video_thumbnail_img_jica_ILCYK_2_M1f_BB_2_Cw_Kg9_7b3e36d901.webp"}
+src={"https://improveitcarolina.com/uploads/video_thumbnail_img_jica_ILCYK_2_M1f_BB_2_Cw_Kg9_7b3e36d901.webp"}
 width={960}
 height={1034}
 alt={""}
@@ -5122,7 +5122,7 @@ className={`w-element c1jjyqa4 c8fjv4x cmnqq0u c11xvf6k cvvhtep c139pwc6 cvfl1ur
 <div
 className={`w-element cnbug7k c1p7o4bx c1azofqw c120nl7e cd04v2w c1numhkq c1diokdk ch3nxmx cn87dm8 c1uhhf7h c82qwqc c1d7h9xn co8rh0r c1c6zaej cmbwngm c1nw4yri cnberr9 ${"close-btn"}`}>
 <Image
-src={"https://improveitmd.com/uploads/close_x_578f3ebeac.svg"}
+src={"https://improveitcarolina.com/uploads/close_x_578f3ebeac.svg"}
 loading={"lazy"}
 className={`w-image`} />
 </div>
@@ -5466,7 +5466,7 @@ className={`w-element c1numhkq c1diokdk ct0qrmw cj1o4tp c1q4fbwg cqilze0 c1lg7bh
 href={"https://share.google/1sIvDWDALSZTorUNn"}
 className={`w-element c1numhkq cwfh8jw cqq3lvy c1diokdk ch3nxmx`}>
 <Image
-src={"https://improveitmd.com/uploads/google_icon_655b581254.svg"}
+src={"https://improveitcarolina.com/uploads/google_icon_655b581254.svg"}
 className={`w-image`} />
 </div>
 <p

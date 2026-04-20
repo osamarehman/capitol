@@ -26,7 +26,7 @@ export const getResources = (_props: { system: System }) => {
     excludePageFromSearch: false,
     language: "",
     socialImageAssetName: undefined,
-    socialImageUrl: "https://improveitmd.com/uploads/686e914ec6e3188ad9e53d9d_Front_Door_Replacement_Near_You_in_Wilmington_North_Carolina_2_e9c85924f4.webp",
+    socialImageUrl: "https://improveitcarolina.com/uploads/686e914ec6e3188ad9e53d9d_Front_Door_Replacement_Near_You_in_Wilmington_North_Carolina_2_e9c85924f4.webp",
     status: undefined,
     redirect: "",
     custom: [

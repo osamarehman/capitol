@@ -16,7 +16,7 @@ STRAPI_TOKEN="${STRAPI_TOKEN:-}"
 
 # Carolina uses the shared Strapi CMS at improveitmd.com
 # When Carolina gets its own domain, update SITE_DOMAIN
-SITE_DOMAIN="${SITE_DOMAIN:-improveitmd.com}"
+SITE_DOMAIN="${SITE_DOMAIN:-improveitcarolina.com}"
 
 UPLOAD_MODE=false
 if [[ "${1:-}" == "--upload" ]]; then
@@ -139,6 +139,10 @@ log "  Replacing cms.improveitmd.com URLs with ${SITE_DOMAIN}/uploads/ paths..."
 for f in "$GEN_DIR"/*.tsx "$GEN_DIR"/*.ts "$GEN_DIR"/*.css "$PROJECT_DIR/.webstudio/data.json"; do
   [ -f "$f" ] || continue
   sed -i "s|https://cms\.improveitmd\.com/uploads/|https://${SITE_DOMAIN}/uploads/|g" "$f"
+  # Also replace non-cms improveitmd.com/uploads/ (fonts, video, poster loaded directly)
+  sed -i "s|https://improveitmd\.com/uploads/|https://${SITE_DOMAIN}/uploads/|g" "$f"
+  # Replace global.js with local path (served from public/)
+  sed -i "s|https://improveitmd\.com/global\.js|/global.js|g" "$f"
 done
 
 # ============================================================
