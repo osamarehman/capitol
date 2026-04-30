@@ -913,7 +913,7 @@ href={system?.origin + system?.pathname + "/" + blogsItem?.slug}
 className={`w-element c139pwc6 c14fbbpg cn87dm8 c1uhhf7h c1numhkq c2u0ihi c1l8l2nl`}>
 <Image
 loading={"eager"}
-src={"https://cms.improveitmd.com" + (blogsItem?.blogImage?.url || "")}
+src={"https://improveitcarolina.com" + (blogsItem?.blogImage?.url || "")}
 alt={blogsItem?.blogImageAltTag}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a cjkauba`} />
 </Link>

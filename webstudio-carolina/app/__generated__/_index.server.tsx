@@ -7,7 +7,7 @@
 export const getResources = (_props: { system: System }) => {
   const action: ResourceRequest = {
     name: "action",
-    url: "https://forms.improveitmd.com/api/submit",
+    url: "/forms/api/submit",
     searchParams: [
     ],
     method: "post",
@@ -17,7 +17,7 @@ export const getResources = (_props: { system: System }) => {
   }
   const ServiceRecords_1: ResourceRequest = {
     name: "ServiceRecords",
-    url: "https://cms.improveitmd.com/api/service-areas",
+    url: "/api/service-areas",
     searchParams: [
       { name: "pagination[pageSize]", value: "1000" },
       { name: "publicationState", value: "live" },

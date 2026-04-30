@@ -890,7 +890,7 @@ id={"lp-hero"}
 className={`w-element c1pnp6sy c1epvuph c1rgmp2 cqrpm5z`}>
 {(LandingPagesData?.data?.data?.carolinaLp?.[0]?.heroBackgroundImage ? true : false) &&
 <div
-data-bg-image={"https://cms.improveitmd.com" + (LandingPagesData?.data?.data?.carolinaLp?.[0]?.heroBackgroundImage?.url || "")}
+data-bg-image={"https://improveitcarolina.com" + (LandingPagesData?.data?.data?.carolinaLp?.[0]?.heroBackgroundImage?.url || "")}
 className={`w-element c139pwc6 cjkauba cnbug7k c8fjv4x cmnqq0u c11xvf6k cvvhtep cgwe1hs c1b36atd c153uy15 caf5igs clf6gxr cfl3b43 c1dxs9tj`} />
 }
 {(LandingPagesData?.data?.data?.carolinaLp?.[0]?.customHtml ? true : false) &&
@@ -930,7 +930,7 @@ className={`w-element cn5qs21 c1b2b7rn c1lvj0n c1g3mhtg c13bl3hn`}>
 {LandingPagesData?.data?.data?.carolinaLp?.[0]?.featureText}
 </p>
 <RemixForm
-data-api-endpoint={"https://forms.improveitmd.com/api/submit"}
+data-api-endpoint={"/forms/api/submit"}
 action={"javascript:void(0)"}
 className={`w-element`}>
 <div
@@ -1058,7 +1058,7 @@ className={`w-element cmsm1bz c1pit5s0 c3qgmhh c1omlw60 c1txodcv curgy1m cuftutf
   return (
 <Fragment key={index}>
 <Image
-src={"https://cms.improveitmd.com" + (collectionItem?.url || "")}
+src={"https://improveitcarolina.com" + (collectionItem?.url || "")}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a cjkauba`} />
 </Fragment>
 )

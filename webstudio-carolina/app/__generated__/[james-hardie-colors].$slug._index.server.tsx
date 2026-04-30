@@ -9,7 +9,7 @@ export const getResources = (_props: { system: System }) => {
   const system = _props.system
   const JamesHardieColorData_1: ResourceRequest = {
     name: "James Hardie Color Data",
-    url: "https://cms.improveitmd.com/graphql",
+    url: "/graphql",
     searchParams: [
     ],
     method: "post",
@@ -30,7 +30,7 @@ export const getResources = (_props: { system: System }) => {
   }
   const JamesHardieCollectionData_1: ResourceRequest = {
     name: "James Hardie Collection Data",
-    url: "https://cms.improveitmd.com/graphql",
+    url: "/graphql",
     searchParams: [
     ],
     method: "post",
@@ -71,7 +71,7 @@ export const getResources = (_props: { system: System }) => {
     excludePageFromSearch: false,
     language: "",
     socialImageAssetName: undefined,
-    socialImageUrl: "https://cms.improveitmd.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.opengraphImage?.url || ""),
+    socialImageUrl: "https://improveitcarolina.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.opengraphImage?.url || ""),
     status: JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.colorName ? 200 : 404,
     redirect: "",
     custom: [

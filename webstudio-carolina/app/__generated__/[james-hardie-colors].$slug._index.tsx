@@ -947,7 +947,7 @@ className={`w-element c1numhkq c139pwc6 ${"swiper-wrapper"}`}>
 className={`w-element c139pwc6 c18bj3o3 c1lq6pq8 c1epvuph ${"swiper-slide"}`}>
 <Image
 loading={"eager"}
-src={"https://cms.improveitmd.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.sliderImage1?.url || "")}
+src={"https://improveitcarolina.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.sliderImage1?.url || "")}
 alt={JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.altTextSliderImage1}
 className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a cuxa4wk c15vs04h c1gaefz7 cknnq3k`} />
 </div>
@@ -957,7 +957,7 @@ className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a cuxa4wk c15vs04h c1gaefz7 
 className={`w-element c139pwc6 c18bj3o3 c1lq6pq8 c1epvuph ${"swiper-slide"}`}>
 <Image
 loading={"eager"}
-src={"https://cms.improveitmd.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.sliderImage2?.url || "")}
+src={"https://improveitcarolina.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.sliderImage2?.url || "")}
 alt={JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.altTextSliderImage2}
 className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a cuxa4wk c15vs04h c1gaefz7 cknnq3k`} />
 </div>
@@ -967,7 +967,7 @@ className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a cuxa4wk c15vs04h c1gaefz7 
 className={`w-element c139pwc6 c18bj3o3 c1lq6pq8 c1epvuph ${"swiper-slide"}`}>
 <Image
 loading={"eager"}
-src={"https://cms.improveitmd.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.sliderImage3?.url || "")}
+src={"https://improveitcarolina.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.sliderImage3?.url || "")}
 alt={JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.altTextSliderImage3}
 className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a cuxa4wk c15vs04h c1gaefz7 cknnq3k`} />
 </div>
@@ -977,7 +977,7 @@ className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a cuxa4wk c15vs04h c1gaefz7 
 className={`w-element c139pwc6 c18bj3o3 c1lq6pq8 c1epvuph ${"swiper-slide"}`}>
 <Image
 loading={"eager"}
-src={"https://cms.improveitmd.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.sliderImage4?.url || "")}
+src={"https://improveitcarolina.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.sliderImage4?.url || "")}
 className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a cuxa4wk c15vs04h c1gaefz7 cknnq3k`} />
 </div>
 }
@@ -986,7 +986,7 @@ className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a cuxa4wk c15vs04h c1gaefz7 
 className={`w-element c139pwc6 c18bj3o3 c1lq6pq8 c1epvuph ${"swiper-slide"}`}>
 <Image
 loading={"eager"}
-src={"https://cms.improveitmd.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.sliderImage5?.url || "")}
+src={"https://improveitcarolina.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.sliderImage5?.url || "")}
 className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a cuxa4wk c15vs04h c1gaefz7 cknnq3k`} />
 </div>
 }
@@ -995,7 +995,7 @@ className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a cuxa4wk c15vs04h c1gaefz7 
 className={`w-element c139pwc6 c18bj3o3 c1lq6pq8 c1epvuph ${"swiper-slide"}`}>
 <Image
 loading={"eager"}
-src={"https://cms.improveitmd.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.sliderImage6?.url || "")}
+src={"https://improveitcarolina.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.sliderImage6?.url || "")}
 className={`w-image c139pwc6 c1numhkq cdmu5h7 czbu68a cuxa4wk c15vs04h c1gaefz7 cknnq3k`} />
 </div>
 }
@@ -1038,10 +1038,10 @@ className={`w-element c1numhkq c1diokdk ct0qrmw cj1o4tp c1q4fbwg c1350r63 ci18zy
 className={`w-element c1numhkq`}>
 <Image
 loading={"lazy"}
-src={"https://cms.improveitmd.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.ctaImage1?.url || "")}
+src={"https://improveitcarolina.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.ctaImage1?.url || "")}
 className={`w-image ce8qyo9 c1hwvjgs cdmu5h7 czbu68a cm2j0bx cw0d079 c1mpqvj6 c18kyhsr c81ebuq c1uxzb4l`} />
 <Image
-src={"https://cms.improveitmd.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.ctaImage2?.url || "")}
+src={"https://improveitcarolina.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.ctaImage2?.url || "")}
 width={200}
 height={200}
 alt={""}
@@ -1136,7 +1136,7 @@ className={`w-html-embed c1pgvi0o c1dk6ilb c1g0pfrk c1eqn05n cx7wnbu cjgoiwu cmg
 className={`w-element c1epvuph c1numhkq`}>
 <Image
 loading={"lazy"}
-src={"https://cms.improveitmd.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.featureImage1?.url || "")}
+src={"https://improveitcarolina.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.featureImage1?.url || "")}
 className={`w-image c17sa3vv c1hwvjgs cdmu5h7 czbu68a c11ubq38 c1epvuph cgwe1hs cyovuht c14qslfi`} />
 </div>
 </div>
@@ -1154,7 +1154,7 @@ className={`w-element c1epvuph c1numhkq`}>
 <Image
 loading={"lazy"}
 alt={""}
-src={"https://cms.improveitmd.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.featureImage2?.url || "")}
+src={"https://improveitcarolina.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.featureImage2?.url || "")}
 className={`w-image c17sa3vv c1hwvjgs cdmu5h7 czbu68a c11ubq38 c1epvuph cgwe1hs cyovuht c14qslfi`} />
 </div>
 </div>
@@ -1172,7 +1172,7 @@ className={`w-element c1epvuph c1numhkq`}>
 <Image
 loading={"lazy"}
 alt={""}
-src={"https://cms.improveitmd.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.featureImage3?.url || "")}
+src={"https://improveitcarolina.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.featureImage3?.url || "")}
 className={`w-image c17sa3vv c1hwvjgs cdmu5h7 czbu68a c11ubq38 c1epvuph cgwe1hs cyovuht c14qslfi`} />
 </div>
 </div>
@@ -1181,7 +1181,7 @@ className={`w-image c17sa3vv c1hwvjgs cdmu5h7 czbu68a c11ubq38 c1epvuph cgwe1hs 
 className={`w-element chradd5`}>
 <Image
 loading={"lazy"}
-src={"https://cms.improveitmd.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.opengraphImage?.url || "")}
+src={"https://improveitcarolina.com" + (JamesHardieColorData?.data?.data?.jamesHardie?.[0]?.opengraphImage?.url || "")}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a cwwwhhw c16mwsho c1gaefz7 cvwiaeb`} />
 </div>
 <div

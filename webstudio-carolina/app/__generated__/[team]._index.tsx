@@ -911,7 +911,7 @@ className={`w-element c1numhkq c1a06u5s c17rwy3n c1603wqb c1cczgcx c1kyon4n c1bf
 className={`w-element c139pwc6 c1numhkq`}>
 <Image
 loading={"eager"}
-src={"https://cms.improveitmd.com" + (collectionItem?.thumbnail?.url || "")}
+src={"https://improveitcarolina.com" + (collectionItem?.thumbnail?.url || "")}
 width={900}
 height={800}
 alt={""}

@@ -8,7 +8,7 @@ export const getResources = (_props: { system: System }) => {
   let AuthorizationKey = "bearer 2f79fba05c22dd06392d641ad9b8dd4feaf5333ac3f42d7b827386176ef0ed9b8c2a40237ab51c91013633e852bc037bfa95a69381dbb50437789bd1147ae920618951af63b747e4dca84f14d968ec051ffeff267ab7177533d9d301398938524013240f4bd4f71f4c4078a3c544ab10dd0ece8503e5fa6c36bcd4be5de0963a"
   const BlogsCollectionData_1: ResourceRequest = {
     name: "Blogs Collection Data",
-    url: "https://cms.improveitmd.com/graphql",
+    url: "/graphql",
     searchParams: [
     ],
     method: "post",

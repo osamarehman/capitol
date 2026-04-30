@@ -17,7 +17,7 @@ export const getResources = (_props: { system: System }) => {
   }
   const BlogSitemapData_1: ResourceRequest = {
     name: "Blog Sitemap Data",
-    url: "https://cms.improveitmd.com/graphql",
+    url: "/graphql",
     searchParams: [
     ],
     method: "post",
@@ -36,7 +36,7 @@ export const getResources = (_props: { system: System }) => {
   }
   const LandingPagesSitemapData_1: ResourceRequest = {
     name: "Landing Pages Sitemap Data",
-    url: "https://cms.improveitmd.com/graphql",
+    url: "/graphql",
     searchParams: [
     ],
     method: "post",
@@ -55,7 +55,7 @@ export const getResources = (_props: { system: System }) => {
   }
   const LocalPagesSitemapData_1: ResourceRequest = {
     name: "Local Pages Sitemap Data",
-    url: "https://cms.improveitmd.com/graphql",
+    url: "/graphql",
     searchParams: [
     ],
     method: "post",
@@ -74,7 +74,7 @@ export const getResources = (_props: { system: System }) => {
   }
   const VideosSitemapData_1: ResourceRequest = {
     name: "Videos Sitemap Data",
-    url: "https://cms.improveitmd.com/graphql",
+    url: "/graphql",
     searchParams: [
     ],
     method: "post",
@@ -93,7 +93,7 @@ export const getResources = (_props: { system: System }) => {
   }
   const JHColorsSitemapData_1: ResourceRequest = {
     name: "JH Colors Sitemap Data",
-    url: "https://cms.improveitmd.com/graphql",
+    url: "/graphql",
     searchParams: [
     ],
     method: "post",
@@ -112,7 +112,7 @@ export const getResources = (_props: { system: System }) => {
   }
   const TimbertechColorsSitemapData_1: ResourceRequest = {
     name: "Timbertech Colors Sitemap Data",
-    url: "https://cms.improveitmd.com/graphql",
+    url: "/graphql",
     searchParams: [
     ],
     method: "post",

@@ -7,7 +7,7 @@
 export const getResources = (_props: { system: System }) => {
   const action: ResourceRequest = {
     name: "action",
-    url: "https://forms.improveitmd.com/api/submit",
+    url: "/forms/api/submit",
     searchParams: [
     ],
     method: "post",

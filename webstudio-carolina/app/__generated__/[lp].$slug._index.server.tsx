@@ -9,7 +9,7 @@ export const getResources = (_props: { system: System }) => {
   const system = _props.system
   const LandingPagesData_1: ResourceRequest = {
     name: "Landing Pages Data",
-    url: "https://cms.improveitmd.com/graphql",
+    url: "/graphql",
     searchParams: [
     ],
     method: "post",
@@ -30,7 +30,7 @@ export const getResources = (_props: { system: System }) => {
   }
   const action: ResourceRequest = {
     name: "action",
-    url: "https://forms.improveitmd.com/api/submit",
+    url: "/forms/api/submit",
     searchParams: [
     ],
     method: "post",

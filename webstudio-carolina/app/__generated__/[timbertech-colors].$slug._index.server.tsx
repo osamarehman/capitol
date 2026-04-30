@@ -9,7 +9,7 @@ export const getResources = (_props: { system: System }) => {
   const system = _props.system
   const TimbertechColorData_1: ResourceRequest = {
     name: "Timbertech Color Data",
-    url: "https://cms.improveitmd.com/graphql",
+    url: "/graphql",
     searchParams: [
     ],
     method: "post",
@@ -30,7 +30,7 @@ export const getResources = (_props: { system: System }) => {
   }
   const TimbertechColorCollection_1: ResourceRequest = {
     name: "Timbertech Color Collection",
-    url: "https://cms.improveitmd.com/graphql",
+    url: "/graphql",
     searchParams: [
     ],
     method: "post",
@@ -67,7 +67,7 @@ export const getResources = (_props: { system: System }) => {
     excludePageFromSearch: false,
     language: "",
     socialImageAssetName: undefined,
-    socialImageUrl: "https://cms.improveitmd.com" + (TimbertechColorData?.data?.data?.timbertech?.[0]?.opengraphImage?.url || ""),
+    socialImageUrl: "https://improveitcarolina.com" + (TimbertechColorData?.data?.data?.timbertech?.[0]?.opengraphImage?.url || ""),
     status: TimbertechColorData?.data?.data?.timbertech?.[0]?.title ? 200 : 404,
     redirect: "",
     custom: [

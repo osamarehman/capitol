@@ -930,7 +930,7 @@ className={`w-element c82qwqc`}>
 className={`w-element cmi1mlx c1uclgp3 cnregu4 c3a6wb5 c1numhkq cyovuht c1l8l2nl`}>
 <Image
 loading={"eager"}
-src={"https://cms.improveitmd.com" + (VideosItem?.videoThumbnail?.url || "")}
+src={"https://improveitcarolina.com" + (VideosItem?.videoThumbnail?.url || "")}
 alt={VideosItem?.videoThumbnail?.alternativeText}
 className={`w-image c139pwc6 c1hwvjgs cdmu5h7 czbu68a cjkauba`} />
 </div>

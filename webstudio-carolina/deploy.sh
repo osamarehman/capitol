@@ -67,6 +67,10 @@ node scripts/inject-schemas.cjs --force 2>&1 | tee -a "$LOG_FILE"
 log "Patching deploy page auth..."
 node scripts/patch-deploy-page.cjs 2>&1 | tee -a "$LOG_FILE"
 
+# Step 4c2: Rewrite hardcoded v2.improveitmd.com deploy URLs to relative same-origin
+log "Rewriting deploy page URLs to relative paths..."
+node scripts/inject-deploy-urls.cjs 2>&1 | tee -a "$LOG_FILE"
+
 # Step 4d: Inject canonical tags into all routes
 log "Injecting canonical tags..."
 node scripts/inject-canonical.cjs 2>&1 | tee -a "$LOG_FILE"
@@ -75,9 +79,25 @@ node scripts/inject-canonical.cjs 2>&1 | tee -a "$LOG_FILE"
 log "Patching GA4 tracking (dedup page_view + add generate_lead)..."
 node scripts/inject-tracking-fix.cjs 2>&1 | tee -a "$LOG_FILE"
 
+# Step 4d2b: Disable tracking on /deploy admin page
+log "Disabling tracking on /deploy page..."
+node scripts/inject-deploy-no-tracking.cjs 2>&1 | tee -a "$LOG_FILE"
+
+# Step 4d2c: Strip all improveitmd.com references — proxy through Carolina
+log "Stripping improveitmd.com references..."
+node scripts/strip-improveitmd-refs.cjs 2>&1 | tee -a "$LOG_FILE"
+
 # Step 4d3: Hero video/image swap - image first, then video, then back to image
 log "Patching hero video/image swap..."
 node scripts/inject-hero-video.cjs --force 2>&1 | tee -a "$LOG_FILE"
+
+# Step 4d4: Google Sheets webhook for form submissions
+if [ -n "${GOOGLE_SHEETS_WEBHOOK:-}" ]; then
+  log "Injecting Google Sheets form webhook..."
+  GOOGLE_SHEETS_WEBHOOK="$GOOGLE_SHEETS_WEBHOOK" node scripts/inject-sheets-webhook.cjs 2>&1 | tee -a "$LOG_FILE"
+else
+  log "GOOGLE_SHEETS_WEBHOOK not set, skipping sheets integration"
+fi
 
 # Step 5: Build Docker image (no cache to pick up all changes)
 log "Building Docker image..."

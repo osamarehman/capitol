@@ -9,7 +9,7 @@ export const getResources = (_props: { system: System }) => {
   const system = _props.system
   const VideosData_1: ResourceRequest = {
     name: "Videos Data",
-    url: "https://cms.improveitmd.com/graphql",
+    url: "/graphql",
     searchParams: [
     ],
     method: "post",
@@ -51,7 +51,7 @@ export const getResources = (_props: { system: System }) => {
     excludePageFromSearch: false,
     language: "",
     socialImageAssetName: undefined,
-    socialImageUrl: "https://cms.improveitmd.com" + (VideosData?.data?.data?.videos?.[0]?.videoThumbnail?.url || ""),
+    socialImageUrl: "https://improveitcarolina.com" + (VideosData?.data?.data?.videos?.[0]?.videoThumbnail?.url || ""),
     status: VideosData?.data?.data?.videos?.[0]?.title ? 200 : 404,
     redirect: "",
     custom: [

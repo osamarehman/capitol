@@ -946,7 +946,7 @@ className={`w-element c82qwqc c1uaxhv2 cacmu18 c1ezjj73 cahz6x0 cmchden`}>
 <br />
 {""}
 <Link
-href={"mailto:support@improveitmd.com"}
+href={"mailto:support@improveitcarolina.com"}
 className={`w-element c82qwqc c1uaxhv2 cacmu18 c1ezjj73 cahz6x0 cmchden`}>
 {"support@improveitcarolina.com"}
 </Link>

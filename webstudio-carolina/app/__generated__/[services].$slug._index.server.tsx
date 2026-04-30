@@ -9,7 +9,7 @@ export const getResources = (_props: { system: System }) => {
   const system = _props.system
   const LocalPagesData_1: ResourceRequest = {
     name: "Local Pages Data",
-    url: "https://cms.improveitmd.com/graphql",
+    url: "/graphql",
     searchParams: [
     ],
     method: "post",
@@ -30,7 +30,7 @@ export const getResources = (_props: { system: System }) => {
   }
   const action: ResourceRequest = {
     name: "action",
-    url: "https://app.improveitmd.com/forms/api/submit",
+    url: "/forms/api/submit",
     searchParams: [
     ],
     method: "post",
@@ -64,7 +64,7 @@ export const getResources = (_props: { system: System }) => {
     excludePageFromSearch: false,
     language: "",
     socialImageAssetName: undefined,
-    socialImageUrl: "https://cms.improveitmd.com" + (LocalPagesData?.data?.data?.services?.[0]?.openGraphImageUrl?.url || ""),
+    socialImageUrl: "https://improveitcarolina.com" + (LocalPagesData?.data?.data?.services?.[0]?.openGraphImageUrl?.url || ""),
     status: LocalPagesData?.data?.data?.services?.[0]?.title ? 200 : 404,
     redirect: "",
     custom: [

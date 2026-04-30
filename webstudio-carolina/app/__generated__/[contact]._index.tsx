@@ -969,7 +969,7 @@ className={`w-element c82qwqc`}>
 <br />
 {""}
 <Link
-href={"mailto:support@improveitmd.com"}
+href={"mailto:support@improveitcarolina.com"}
 className={`w-element c82qwqc`}>
 {"support@improveitcarolina.com"}
 </Link>

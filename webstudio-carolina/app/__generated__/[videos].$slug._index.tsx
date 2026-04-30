@@ -899,7 +899,7 @@ alt={VideosData?.data?.data?.videos?.[0]?.videoThumbnail?.alternativeText}
 sizes={"100vw"}
 optimize={true}
 loading={"eager"}
-src={"https://cms.improveitmd.com" + (VideosData?.data?.data?.videos?.[0]?.videoThumbnail?.url || "")}
+src={"https://improveitcarolina.com" + (VideosData?.data?.data?.videos?.[0]?.videoThumbnail?.url || "")}
 className={`w-preview-image cnbug7k cdmu5h7 cfrqxly c139pwc6 cjkauba`} />
 <VimeoSpinner
 className={`w-spinner cnbug7k ccgl4y2 cag2zqh c16efw4k c10vpd2y cz1gmor c6yclp8`}>
