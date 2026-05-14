@@ -269,10 +269,15 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
           ],
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "5.0",
+            "ratingValue": 5,
             "reviewCount": 157,
-            "bestRating": "5",
-            "worstRating": "1"
+            "bestRating": 5,
+            "worstRating": 1,
+            "itemReviewed": {
+              "@type": "RoofingContractor",
+              "@id": "https://improveitmd.com/locations/gaithersburg#local-office",
+              "name": "Capitol Improvements - Gaithersburg Roofing Company & Siding Contractors"
+            }
           }
         }
       ]
@@ -436,7 +441,7 @@ const Outlet = () => {
         assetBaseUrl={constants.assetBaseUrl}
       />
       <PageSettingsTitle>{pageMeta.title}</PageSettingsTitle>
-      // [inject-canonical] canonical URL (always non-www https)
+      {/* // [inject-canonical] canonical URL (always non-www https) */}
       <PageSettingsCanonicalLink href={`https://improveitmd.com${new URL(url).pathname}`} />
     </ReactSdkContext.Provider>
   );

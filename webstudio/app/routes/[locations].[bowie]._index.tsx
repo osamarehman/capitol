@@ -268,10 +268,15 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
           },
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "5.0",
+            "ratingValue": 5,
             "reviewCount": 221,
             "bestRating": 5,
-            "worstRating": 1
+            "worstRating": 1,
+            "itemReviewed": {
+              "@type": "HomeAndConstructionBusiness",
+              "@id": "https://improveitmd.com/locations/bowie#local-office",
+              "name": "Capitol Improvements - Roofing Company & Siding Contractor"
+            }
           },
           "sameAs": [
             "https://maps.google.com/?cid=16068834676004648914"
@@ -438,7 +443,7 @@ const Outlet = () => {
         assetBaseUrl={constants.assetBaseUrl}
       />
       <PageSettingsTitle>{pageMeta.title}</PageSettingsTitle>
-      // [inject-canonical] canonical URL (always non-www https)
+      {/* // [inject-canonical] canonical URL (always non-www https) */}
       <PageSettingsCanonicalLink href={`https://improveitmd.com${new URL(url).pathname}`} />
     </ReactSdkContext.Provider>
   );

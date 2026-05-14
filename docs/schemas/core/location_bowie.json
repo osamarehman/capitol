@@ -9,7 +9,7 @@
       "telephone": "+1-301-769-6909",
       "email": "support@improveitmd.com",
       "image": "https://improveitmd.com/uploads/capitol_improvements_logo_main_Nd_E_Tm_Jnbu_Uj_H_Kf4_92i4_893ebd2848.svg",
-      "description": "Capitol Improvements Bowie headquarters — GAF Master Elite, Atlas Pro Plus, and Provia Door & Window certified exterior remodeling contractor serving Prince George's County since 2010.",
+      "description": "Capitol Improvements Bowie headquarters \u2014 GAF Master Elite, Atlas Pro Plus, and Provia Door & Window certified exterior remodeling contractor serving Prince George's County since 2010.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "12606 Hillmeade Station Dr.",
@@ -111,10 +111,15 @@
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "5.0",
+        "ratingValue": 5.0,
         "reviewCount": 221,
         "bestRating": 5,
-        "worstRating": 1
+        "worstRating": 1,
+        "itemReviewed": {
+          "@type": "HomeAndConstructionBusiness",
+          "@id": "https://improveitmd.com/locations/bowie#local-office",
+          "name": "Capitol Improvements - Roofing Company & Siding Contractor"
+        }
       },
       "sameAs": [
         "https://maps.google.com/?cid=16068834676004648914"
