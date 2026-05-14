@@ -75,6 +75,18 @@ node scripts/inject-canonical.cjs 2>&1 | tee -a "$LOG_FILE"
 log "Patching GA4 tracking (dedup page_view + add generate_lead)..."
 node scripts/inject-tracking-fix.cjs 2>&1 | tee -a "$LOG_FILE"
 
+# Step 4d2b: Inject Google Tag Manager into CustomCode (skips /deploy at runtime)
+log "Injecting GTM..."
+node scripts/inject-gtm.cjs 2>&1 | tee -a "$LOG_FILE"
+
+# Step 4d2c: Move CallRail out of CustomCode (loaded post-hydration via global.js)
+log "Deferring CallRail..."
+node scripts/inject-callrail-defer.cjs 2>&1 | tee -a "$LOG_FILE"
+
+# Step 4d2d: Move Elfsight platform.js out of HtmlEmbed (also loaded post-hydration)
+log "Deferring Elfsight..."
+node scripts/inject-elfsight-defer.cjs 2>&1 | tee -a "$LOG_FILE"
+
 # Step 4d3: Hero video/image swap - image first, then video, then back to image
 log "Patching hero video/image swap..."
 node scripts/inject-hero-video.cjs --force 2>&1 | tee -a "$LOG_FILE"

@@ -27,6 +27,59 @@
  */
 
 // ===========================================================================
+// 0. DEFERRED THIRD-PARTY SCRIPTS (CallRail + Elfsight)
+// ===========================================================================
+// Both CallRail's swap.js (rewrites every <a href="tel:..."> at load time)
+// and Elfsight's platform.js (injects widget DOM into `.elfsight-app-*`
+// containers) mutate the page before React Router hydration completes —
+// racing with hydration produces #418 (text mismatch) → #423 (full root
+// re-render) → frozen tab. Their inline <script> tags were stripped from
+// the Webstudio output by scripts/inject-callrail-defer.cjs and
+// scripts/inject-elfsight-defer.cjs; we load both here, after window
+// 'load' (after hydration completes), so the mutations land on an
+// already-hydrated React tree.
+function loadDeferredScript(src, markerAttr, extraAttrs) {
+  if (document.querySelector('script[' + markerAttr + ']')) return;
+  var s = document.createElement('script');
+  s.src = src;
+  s.async = true;
+  s.setAttribute(markerAttr, 'true');
+  if (extraAttrs) {
+    for (var k in extraAttrs) s.setAttribute(k, extraAttrs[k]);
+  }
+  document.head.appendChild(s);
+}
+
+function deferThirdPartyScripts() {
+  // CallRail swap.js rewrites every <a href="tel:..."> at load time, which
+  // races with React Router hydration → #418 → #423 → frozen tab. Load it
+  // after hydration via the global.js IIFE entry point.
+  loadDeferredScript(
+    'https://cdn.callrail.com/companies/525296352/400499118ad609fc155c/12/swap.js',
+    'data-callrail-deferred'
+  );
+  // Elfsight platform.js scans for `.elfsight-app-*` containers and
+  // injects widget DOM into them. Its `defer` attribute only waits for
+  // HTML parse, not React hydration, so it also races with hydration on
+  // pages that use the widget (currently `/lp/$slug` and `/testimonials`).
+  loadDeferredScript(
+    'https://static.elfsight.com/platform/platform.js',
+    'data-elfsight-deferred',
+    { 'data-use-service-core': '' }
+  );
+}
+
+if (document.readyState === 'complete') {
+  setTimeout(deferThirdPartyScripts, 0);
+} else {
+  window.addEventListener(
+    'load',
+    function () { setTimeout(deferThirdPartyScripts, 0); },
+    { once: true }
+  );
+}
+
+// ===========================================================================
 // CONFIG READER
 // ===========================================================================
 function getPageConfig() {
@@ -3226,6 +3279,19 @@ function initFaqAccordion() {
   document.addEventListener('click', onClick);
   return () => document.removeEventListener('click', onClick);
 }
+
+// ===========================================================================
+// 12b. FORM-SUBMIT CONVERSION TRACKING — DISABLED
+// ===========================================================================
+// The per-page inline Webstudio HTML Embed on every LP-style form already
+// fires GA4 / FB Pixel / dataLayer events on a successful submission, so
+// firing them again from a global fetch interceptor produces duplicate
+// `generate_lead` events in GA4 and duplicate `Lead` events in Pixel.
+//
+// The hook is intentionally left disabled here. If a future form is added
+// that posts to /forms/api/submit WITHOUT an inline tracking embed (e.g.
+// a form that runs through the generic handler below), re-enable by
+// restoring the previous body — see git history of this file.
 
 // ===========================================================================
 // 13. GENERIC FORM SUBMISSION HANDLER
