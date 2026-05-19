@@ -17,6 +17,13 @@ const path = require('path');
 
 const GTM_ID = 'GTM-N5QXSSGM';
 
+// Idempotency is detected by the actual loader URL, NOT the bare GTM_ID.
+// Other CustomCode (e.g. the DUAL TRACKING dataLayer-bridge comment) may
+// mention the container ID in plain text; guarding on GTM_ID would then
+// false-positive and silently skip injecting the real container loader.
+// GA4's gtag uses `/gtag/js?id=`, so this substring is unique to GTM.
+const GTM_LOADER_SIG = 'googletagmanager.com/gtm.js?id=';
+
 const dataJsonPath = path.join(__dirname, '..', '.webstudio', 'data.json');
 const indexPath = path.join(__dirname, '..', 'app', '__generated__', '_index.tsx');
 
@@ -37,7 +44,7 @@ let patched = 0;
 if (fs.existsSync(dataJsonPath)) {
   const data = JSON.parse(fs.readFileSync(dataJsonPath, 'utf8'));
   const before = data?.build?.pages?.meta?.code || '';
-  if (!before.includes(GTM_ID)) {
+  if (!before.includes(GTM_LOADER_SIG)) {
     // Prepend so GTM loads as early as possible in <head>.
     data.build.pages.meta.code = GTM_SNIPPET_HTML + before;
     fs.writeFileSync(dataJsonPath, JSON.stringify(data, null, 2));
@@ -68,7 +75,7 @@ const GTM_TSX_SNIPPET =
 
 if (fs.existsSync(indexPath)) {
   let content = fs.readFileSync(indexPath, 'utf8');
-  if (!content.includes(GTM_ID)) {
+  if (!content.includes(GTM_LOADER_SIG)) {
     // Inject right after the `return (<>` of CustomCode so the script is the
     // first child of the fragment, ensuring GTM initializes as early as the
     // other head-level scripts.

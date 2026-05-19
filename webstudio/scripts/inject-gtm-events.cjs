@@ -54,7 +54,7 @@ const dataJsonPath = path.join(__dirname, '..', '.webstudio', 'data.json');
 const generatedDir = path.join(__dirname, '..', 'app', '__generated__');
 const indexPath = path.join(generatedDir, '_index.tsx');
 
-const V5_MARKER = 'DUAL TRACKING SCRIPT v5';
+const V6_MARKER = 'DUAL TRACKING SCRIPT v6';
 
 // ---------------------------------------------------------------------------
 // 1. The canonical v5 global tracking script (raw JS, no <script> wrapper).
@@ -63,7 +63,7 @@ const V5_MARKER = 'DUAL TRACKING SCRIPT v5';
 // lead handler. Changed: cta_lead -> generate_lead.
 // ---------------------------------------------------------------------------
 const NEW_JS = `
-// ========= DUAL TRACKING SCRIPT v5 (Facebook Pixel + GA4 + GTM dataLayer) =========
+// ========= DUAL TRACKING SCRIPT v6 (Facebook Pixel + GA4 + GTM dataLayer) =========
 // Place this on ALL pages of your website
 
 // ========= HELPERS =========
@@ -93,7 +93,10 @@ function checkAndMarkFacebookUser() {
 
 // ========= GTM dataLayer BRIDGE =========
 // Mirror every custom event into the GTM dataLayer so the GTM container
-// (GTM-N5QXSSGM) can fire tags via "Custom Event" triggers. gtag() pushes
+// can fire tags via "Custom Event" triggers. (Do NOT write the literal
+// container ID here — inject-gtm.cjs runs after this and would treat a
+// plain-text mention as "already injected" and skip the real loader.)
+// gtag() pushes
 // an arguments object to the same array; GTM only reads {event:...} objects
 // so the two coexist without conflict.
 window.dataLayer = window.dataLayer || [];
@@ -358,12 +361,12 @@ let patched = 0;
 if (fs.existsSync(dataJsonPath)) {
   const data = JSON.parse(fs.readFileSync(dataJsonPath, 'utf8'));
   const before = data?.build?.pages?.meta?.code || '';
-  if (before.includes(V5_MARKER)) {
-    console.log('  · data.json: DUAL TRACKING already v5, skipping');
+  if (before.includes(V6_MARKER)) {
+    console.log('  · data.json: DUAL TRACKING already v6, skipping');
   } else if (HTML_RE.test(before)) {
     data.build.pages.meta.code = before.replace(HTML_RE, NEW_HTML);
     fs.writeFileSync(dataJsonPath, JSON.stringify(data, null, 2));
-    console.log('  ✓ data.json: DUAL TRACKING script upgraded to v5');
+    console.log('  ✓ data.json: DUAL TRACKING script upgraded to v6');
     patched++;
   } else {
     console.log('  ✗ data.json: DUAL TRACKING script not found — output shape changed?');
@@ -373,11 +376,11 @@ if (fs.existsSync(dataJsonPath)) {
 // _index.tsx (escaped TSX string)
 if (fs.existsSync(indexPath)) {
   const content = fs.readFileSync(indexPath, 'utf8');
-  if (content.includes(V5_MARKER)) {
-    console.log('  · _index.tsx: DUAL TRACKING already v5, skipping');
+  if (content.includes(V6_MARKER)) {
+    console.log('  · _index.tsx: DUAL TRACKING already v6, skipping');
   } else if (TSX_RE.test(content)) {
     fs.writeFileSync(indexPath, content.replace(TSX_RE, NEW_TSX));
-    console.log('  ✓ _index.tsx: DUAL TRACKING script upgraded to v5');
+    console.log('  ✓ _index.tsx: DUAL TRACKING script upgraded to v6');
     patched++;
   } else {
     console.log('  ✗ _index.tsx: DUAL TRACKING <Script> not found — output shape changed?');
@@ -407,4 +410,4 @@ for (const name of fs.readdirSync(generatedDir)) {
   applyLpFixes(name, path.join(generatedDir, name));
 }
 
-console.log(`\nGTM events inject (v5): ${patched} change(s) applied`);
+console.log(`\nGTM events inject (v6): ${patched} change(s) applied`);
