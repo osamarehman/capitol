@@ -75,6 +75,10 @@ node scripts/inject-canonical.cjs 2>&1 | tee -a "$LOG_FILE"
 log "Patching GA4 tracking (dedup page_view + add generate_lead)..."
 node scripts/inject-tracking-fix.cjs 2>&1 | tee -a "$LOG_FILE"
 
+# Step 4d2a: Fix dead lead handler + mirror all custom events into GTM dataLayer
+log "Upgrading tracking to v4 (cta_lead, drop contact, GTM dataLayer bridge)..."
+node scripts/inject-gtm-events.cjs 2>&1 | tee -a "$LOG_FILE"
+
 # Step 4d2b: Inject Google Tag Manager into CustomCode (skips /deploy at runtime)
 log "Injecting GTM..."
 node scripts/inject-gtm.cjs 2>&1 | tee -a "$LOG_FILE"
