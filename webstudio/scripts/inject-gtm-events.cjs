@@ -1,71 +1,69 @@
 #!/usr/bin/env node
 /**
- * Post-sync patch: rewrite the DUAL TRACKING <script> to v4.
+ * Post-sync patch: unify ALL form-submission tracking to a single
+ * `generate_lead` event (DUAL TRACKING script -> v5) and clean up the
+ * page-specific LP tracking so /quote, the CTA/footer form and /lp/*
+ * forms all emit exactly one GA4 + one GTM dataLayer + one FB event.
  *
  * Persistence: wired into deploy.sh (Step 4d2a). Every deploy runs
  * `webstudio sync`, which overwrites .webstudio/data.json and the
- * generated _index.tsx from the Webstudio cloud (reverting to the
- * pristine authored CustomCode); this script then re-applies v4 on top,
- * so the changes survive every sync/deploy.
+ * generated *.tsx from the Webstudio cloud (reverting to the pristine
+ * authored CustomCode); this script then re-applies v5 on top, so the
+ * changes survive every sync/deploy.
  *
- * What v4 does vs. the synced Webstudio CustomCode:
+ * Three independent, idempotent transforms:
  *
- *   1. LEAD TRACKING WAS DEAD. The old block did:
- *          const forms = document.querySelectorAll('form');
- *          if (!forms.length) return;            // <-- always bailed
- *      That IIFE runs inline in <head>, ~91 KB before any <form> exists in
- *      the DOM, so the snapshot was empty and no submit listener ever
- *      attached. The Webstudio webhook form also never navigates to
- *      /quote-requested (it shows an inline data-state="success"), so the
- *      thank-you-page conversion block never reached either. Net result:
- *      the lead event never fired for any CTA / footer form.
+ *   1. GLOBAL DUAL TRACKING SCRIPT -> v5 (shared CustomCode, every page).
+ *      - Dead lead handler fixed (delegation + per-form MutationObserver
+ *        on data-state="success"; the old querySelectorAll('form')
+ *        snapshot ran in <head> before any form existed and never
+ *        attached).
+ *      - Lead event is `generate_lead` (GA4 + GTM dataLayer). FB stays
+ *        fbq('track','Lead').
+ *      - Contact events removed (CallRail owns phone-call tracking).
+ *      - GTM dataLayer bridge: generate_lead, button_click,
+ *        internal_link_click pushed as {event:...}.
+ *      Covers the CTA/footer form and the /quote page form (these submit
+ *      via Webstudio's React Router fetcher -> data-state="success").
  *
- *      v4 replaces it with document-level event delegation + a per-form
- *      MutationObserver on data-state, so the lead fires on CONFIRMED
- *      success, on every page, including forms rendered after hydration
- *      and across client-side navigation. The legacy sessionStorage +
- *      /quote-requested path is kept as a fallback for any redirecting form.
+ *   2. LP SUBMISSION ENGINE event rename. The /lp/$slug page has an
+ *      HtmlEmbed that intercepts [data-api-endpoint] submits,
+ *      preventDefault()s Webstudio's fetcher and POSTs to a custom API
+ *      (so data-state="success" is never set and the global handler
+ *      can't fire there). It already pushes a `generate_lead` dataLayer
+ *      event; we only rename its GA4 `google_ads_lead` -> `generate_lead`
+ *      so the GA4 event name matches everywhere (the Google Ads
+ *      conversion is repointed to the generate_lead dataLayer event in
+ *      the GTM container). Submission logic is left untouched.
  *
- *   2. LEAD EVENT RENAMED to `cta_lead` (GA4 + GTM dataLayer). FB stays
- *      `fbq('track','Lead')` (a Facebook standard event).
+ *   3. REDUNDANT `generate_cta_lead` EMBED neutralized. A pure-tracking
+ *      HtmlEmbed (gtag('event','generate_cta_lead') + fbq Lead on submit)
+ *      is duplicated across several pages; it double-fires the lead under
+ *      a different name. Its inline <script> body is replaced with an
+ *      inert comment (the HtmlEmbed element is kept so the SSR/CSR React
+ *      trees stay identical).
  *
- *   3. CONTACT EVENTS REMOVED. CallRail owns phone-call tracking and the
- *      manual tel:/mailto:/sms: handlers double-counted. The entire
- *      CONTACT EVENTS section (incl. the phone `google_ads_call` Google
- *      Ads conversion) is dropped.
- *
- *   4. GTM dataLayer BRIDGE. The remaining custom events (cta_lead,
- *      button_click, internal_link_click) are pushed to window.dataLayer
- *      as { event: '<name>', ... } so the GTM container (GTM-N5QXSSGM)
- *      can fire tags via Custom Event triggers — alongside the existing
- *      direct gtag()/fbq() calls. gtag() pushes an arguments object to
- *      the same array; GTM only reads {event:...} objects, so they coexist.
- *
- * Idempotent: guarded by the "DUAL TRACKING SCRIPT v4" marker. The match
- * regex anchors on the generic "// ========= DUAL TRACKING SCRIPT" header
- * so it cleanly replaces an earlier v1/v3 block too.
- *
- * Patches:
- *   - .webstudio/data.json            (CustomCode source of truth, raw HTML)
- *   - app/__generated__/_index.tsx    (built output, escaped TSX string)
+ * Patches `.webstudio/data.json` (raw, already-escaped — identical
+ * encoding to the TSX string literals) and every `app/__generated__/*.tsx`.
  */
 
 const fs = require('fs');
 const path = require('path');
 
 const dataJsonPath = path.join(__dirname, '..', '.webstudio', 'data.json');
-const indexPath = path.join(__dirname, '..', 'app', '__generated__', '_index.tsx');
+const generatedDir = path.join(__dirname, '..', 'app', '__generated__');
+const indexPath = path.join(generatedDir, '_index.tsx');
 
-const V4_MARKER = 'DUAL TRACKING SCRIPT v4';
+const V5_MARKER = 'DUAL TRACKING SCRIPT v5';
 
 // ---------------------------------------------------------------------------
-// The canonical v4 tracking script (raw JS, no <script> wrapper).
-// Behaviour preserved: Facebook-user detection, GA4 page_view dedup (config
-// auto-fires it), FB ViewContent/PageView, button_click, FB-only browsing.
-// Changed: lead event -> cta_lead; all contact events removed; wsDL() bridge.
+// 1. The canonical v5 global tracking script (raw JS, no <script> wrapper).
+// Behaviour preserved from v4: FB-user detection, GA4 page_view dedup, FB
+// ViewContent/PageView, button_click, FB-only browsing, fixed delegated
+// lead handler. Changed: cta_lead -> generate_lead.
 // ---------------------------------------------------------------------------
 const NEW_JS = `
-// ========= DUAL TRACKING SCRIPT v4 (Facebook Pixel + GA4 + GTM dataLayer) =========
+// ========= DUAL TRACKING SCRIPT v5 (Facebook Pixel + GA4 + GTM dataLayer) =========
 // Place this on ALL pages of your website
 
 // ========= HELPERS =========
@@ -143,7 +141,7 @@ if (isFromFacebook) {
 
   var trafficSource = isFromFacebook ? 'facebook_ad' : 'organic';
 
-  gtag('event', 'cta_lead', {
+  gtag('event', 'generate_lead', {
     form_name: formName,
     source_page: sourcePage,
     traffic_source: trafficSource
@@ -152,16 +150,16 @@ if (isFromFacebook) {
     content_name: formName,
     content_category: 'quote_request'
   });
-  wsDL('cta_lead', {
+  wsDL('generate_lead', {
     form_name: formName,
     source_page: sourcePage,
     traffic_source: trafficSource
   });
-  console.log('✓ GA4: cta_lead fired (form: ' + formName + ', source: ' + sourcePage + ')');
+  console.log('✓ GA4: generate_lead fired (form: ' + formName + ', source: ' + sourcePage + ')');
 })();
 
 // ========= CONTACT EVENTS =========
-// Intentionally removed in v4 — CallRail owns phone-call tracking
+// Intentionally removed in v4+ — CallRail owns phone-call tracking
 // (and feeds Google Ads), so the manual tel:/mailto:/sms: handlers and
 // the phone google_ads_call event were double-counting.
 
@@ -199,6 +197,9 @@ safeAddClickEvent('button:not([type="submit"]), .w-button:not([type="submit"])',
 // and never attached. Delegation + a per-form MutationObserver on
 // data-state makes the lead fire on CONFIRMED success, on every page,
 // including forms rendered after hydration / client-side navigation.
+// (LP /lp/* forms submit via a custom [data-api-endpoint] handler that
+// preventDefaults Webstudio's fetcher, so data-state never flips there —
+// those fire generate_lead from their own success path instead.)
 
 function wsLeadName(form) {
   return form.getAttribute('name') ||
@@ -223,7 +224,7 @@ function wsFireLead(form) {
   sessionStorage.removeItem('leadTimestamp');
   sessionStorage.removeItem('leadSourcePage');
 
-  gtag('event', 'cta_lead', {
+  gtag('event', 'generate_lead', {
     form_name: formName,
     source_page: sourcePage,
     traffic_source: trafficSource
@@ -232,12 +233,12 @@ function wsFireLead(form) {
     content_name: formName,
     content_category: 'quote_request'
   });
-  wsDL('cta_lead', {
+  wsDL('generate_lead', {
     form_name: formName,
     source_page: sourcePage,
     traffic_source: trafficSource
   });
-  console.log('✓ Lead fired (cta_lead, form: ' + formName + ', source: ' + sourcePage + ')');
+  console.log('✓ Lead fired (generate_lead, form: ' + formName + ', source: ' + sourcePage + ')');
 }
 
 document.addEventListener('submit', function (e) {
@@ -314,7 +315,7 @@ const toTsxString = (s) =>
   s.replace(/\\/g, '\\\\').replace(/\n/g, '\\n').replace(/"/g, '\\"');
 
 // Match the whole DUAL TRACKING inline script regardless of which prior
-// patches transformed its interior (v1/v3/v4). Anchored on the header
+// patch transformed its interior (v1/v4/v5). Anchored on the header
 // marker and the script's own closer; the body never contains a nested
 // </script> or "}.
 const HTML_RE =
@@ -325,36 +326,85 @@ const TSX_RE =
 const NEW_HTML = `<script data-cfasync="false">${NEW_JS}</script>`;
 const NEW_TSX = `<Script data-cfasync={"false"}>{"${toTsxString(NEW_JS)}"}</Script>`;
 
+// --- transform 2: LP submission engine GA4 event rename ---
+// `google_ads_lead` only appears in the LP [data-api-endpoint] handler
+// (gtag event name + its console.log). Bare-token replace is safe and
+// byte-identical in data.json and the TSX (no quotes/newlines in token).
+const renameGoogleAdsLead = (s) =>
+  s.includes('google_ads_lead') ? s.split('google_ads_lead').join('generate_lead') : null;
+
+// --- transform 3: neutralize the redundant generate_cta_lead embed ---
+// Pure-tracking HtmlEmbed: <script> ... gtag('event','generate_cta_lead')
+// ... fbq Lead ... </script>. The body has no '<' until </script>, and
+// generate_cta_lead is unique to this embed, so this can't span into
+// another script. Replacement carries no generate_cta_lead, so re-runs
+// are no-ops (idempotent). Safe in both JSON-string and TSX-string
+// contexts (no ", \\, or newline introduced).
+// Guard on the unique token (not a stateful /g regex .test()); the
+// replacement must NOT contain `generate_cta_lead` or re-runs would
+// re-match it (breaking idempotency).
+const CTA_LEAD_REPLACEMENT =
+  '<script>/* removed redundant duplicate lead embed; unified to a single generate_lead event */</script>';
+const neutralizeCtaLead = (s) =>
+  s.includes('generate_cta_lead')
+    ? s.replace(/<script>[^<]*?generate_cta_lead[^<]*?<\/script>/g, CTA_LEAD_REPLACEMENT)
+    : null;
+
 let patched = 0;
 
-// --- data.json (raw HTML inside JSON string) ---
+// === 1. Global DUAL TRACKING script -> v5 ===
+
+// data.json (raw HTML inside JSON string)
 if (fs.existsSync(dataJsonPath)) {
   const data = JSON.parse(fs.readFileSync(dataJsonPath, 'utf8'));
   const before = data?.build?.pages?.meta?.code || '';
-  if (before.includes(V4_MARKER)) {
-    console.log('  · data.json: already v4, skipping');
+  if (before.includes(V5_MARKER)) {
+    console.log('  · data.json: DUAL TRACKING already v5, skipping');
   } else if (HTML_RE.test(before)) {
     data.build.pages.meta.code = before.replace(HTML_RE, NEW_HTML);
     fs.writeFileSync(dataJsonPath, JSON.stringify(data, null, 2));
-    console.log('  ✓ data.json: DUAL TRACKING script upgraded to v4');
+    console.log('  ✓ data.json: DUAL TRACKING script upgraded to v5');
     patched++;
   } else {
     console.log('  ✗ data.json: DUAL TRACKING script not found — output shape changed?');
   }
 }
 
-// --- _index.tsx (escaped TSX string) ---
+// _index.tsx (escaped TSX string)
 if (fs.existsSync(indexPath)) {
   const content = fs.readFileSync(indexPath, 'utf8');
-  if (content.includes(V4_MARKER)) {
-    console.log('  · _index.tsx: already v4, skipping');
+  if (content.includes(V5_MARKER)) {
+    console.log('  · _index.tsx: DUAL TRACKING already v5, skipping');
   } else if (TSX_RE.test(content)) {
     fs.writeFileSync(indexPath, content.replace(TSX_RE, NEW_TSX));
-    console.log('  ✓ _index.tsx: DUAL TRACKING script upgraded to v4');
+    console.log('  ✓ _index.tsx: DUAL TRACKING script upgraded to v5');
     patched++;
   } else {
     console.log('  ✗ _index.tsx: DUAL TRACKING <Script> not found — output shape changed?');
   }
 }
 
-console.log(`\nGTM events inject: ${patched} change(s) applied`);
+// === 2 + 3. LP rename + redundant-embed neutralization ===
+// Applied to data.json (raw bytes) and every generated *.tsx.
+
+const applyLpFixes = (label, filePath, readWhole) => {
+  if (!fs.existsSync(filePath)) return;
+  let content = fs.readFileSync(filePath, 'utf8');
+  let changed = false;
+
+  const a = renameGoogleAdsLead(content);
+  if (a !== null) { content = a; changed = true; console.log(`  ✓ ${label}: google_ads_lead → generate_lead`); }
+
+  const b = neutralizeCtaLead(content);
+  if (b !== null) { content = b; changed = true; console.log(`  ✓ ${label}: neutralized redundant generate_cta_lead embed`); }
+
+  if (changed) { fs.writeFileSync(filePath, content); patched++; }
+};
+
+applyLpFixes('data.json', dataJsonPath);
+for (const name of fs.readdirSync(generatedDir)) {
+  if (!name.endsWith('.tsx')) continue;
+  applyLpFixes(name, path.join(generatedDir, name));
+}
+
+console.log(`\nGTM events inject (v5): ${patched} change(s) applied`);
