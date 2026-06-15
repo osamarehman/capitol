@@ -50,10 +50,37 @@ npx webstudio sync 2>&1 | tee -a "$LOG_FILE"
 log "Building project..."
 npx webstudio build --template docker 2>&1 | tee -a "$LOG_FILE"
 
-# Step 3b: Restore global.js and favicon (webstudio build regenerates public/)
-log "Restoring global.js and favicon..."
-cp scripts/global.js public/global.js 2>&1 | tee -a "$LOG_FILE"
+# Step 3b: Restore global.js (minified) and favicon (webstudio build regenerates public/)
+log "Restoring global.js (minified) and favicon..."
+if [ -x node_modules/.bin/esbuild ]; then
+  node_modules/.bin/esbuild scripts/global.js --minify --target=es2020 --outfile=public/global.js 2>&1 | tee -a "$LOG_FILE"
+else
+  log "  esbuild not found — copying global.js unminified"
+  cp scripts/global.js public/global.js 2>&1 | tee -a "$LOG_FILE"
+fi
 cp scripts/favicon.ico public/favicon.ico 2>&1 | tee -a "$LOG_FILE"
+
+# Step 3c: Fix <html lang=""> (webstudio template ships language="" -> empty lang,
+# which makes mobile browsers auto-translate the page and break React hydration).
+# Runs post-build because `webstudio build` can overwrite app/root.tsx from template.
+log "Fixing <html lang> fallback..."
+node scripts/inject-html-lang.cjs 2>&1 | tee -a "$LOG_FILE"
+
+# Step 3d: Fix SVG-icon hydration crash on /services/[slug] etc. Webstudio puts some
+# SVGRepo icon <style> tags in an <HtmlEmbed> INSIDE <svg><g>; the SDK wraps embed
+# content in a <div>, and <div> is invalid inside <svg> -> hydration mismatch
+# (#418 -> #423 full re-render = freeze/"crash"). Convert those to native <style>.
+log "Fixing SVG-icon <style> embeds (hydration)..."
+node scripts/inject-svg-style-embed.cjs 2>&1 | tee -a "$LOG_FILE"
+
+# Step 3e: Fix blog date hydration crash. The Webstudio <Time> SDK formats the
+# display date in the RUNTIME's local timezone; blog dates are stored as midnight
+# UTC, so the server (UTC) renders one calendar day while a US-Eastern visitor's
+# browser renders the previous day -> text mismatch (#425) -> #418 -> #423 full
+# re-render ("crash"). Never reproduced headless because headless runs in UTC.
+# Adds suppressHydrationWarning so React keeps the server's (correct) date.
+log "Fixing blog <Time> date hydration (timezone)..."
+node scripts/inject-blog-time-hydration.cjs 2>&1 | tee -a "$LOG_FILE"
 
 # Step 4: Optimize assets (download externals, upload to Strapi, fix hydration)
 log "Optimizing assets and fixing hydration..."
@@ -91,9 +118,29 @@ node scripts/inject-callrail-defer.cjs 2>&1 | tee -a "$LOG_FILE"
 log "Deferring Elfsight..."
 node scripts/inject-elfsight-defer.cjs 2>&1 | tee -a "$LOG_FILE"
 
+# Step 4d2e: Defer Facebook Pixel fbevents.js out of the critical path
+log "Deferring Facebook Pixel..."
+node scripts/inject-fb-pixel-defer.cjs 2>&1 | tee -a "$LOG_FILE"
+
+# Step 4d2f: Preload above-the-fold font weights (normal + bold)
+log "Preloading fonts..."
+node scripts/inject-font-preload.cjs 2>&1 | tee -a "$LOG_FILE"
+
 # Step 4d3: Hero video/image swap - image first, then video, then back to image
 log "Patching hero video/image swap..."
 node scripts/inject-hero-video.cjs --force 2>&1 | tee -a "$LOG_FILE"
+
+# Step 4d3a: Lazy-load the Google My Maps iframe (defers ~560ms off initial load)
+log "Lazy-loading My Maps iframe..."
+node scripts/inject-lazy-mymap.cjs 2>&1 | tee -a "$LOG_FILE"
+
+# Step 4d3c: Repoint hero <source> to the re-encoded (smaller) webm
+log "Optimizing hero video reference..."
+node scripts/inject-video-optimize.cjs 2>&1 | tee -a "$LOG_FILE"
+
+# Step 4d3d: Clamp /_image quality to <=72 (Webstudio emits q_80)
+log "Clamping image quality to <=72..."
+node scripts/inject-image-quality-clamp.cjs 2>&1 | tee -a "$LOG_FILE"
 
 # Step 4e: Fetch gallery data from Strapi for build-time HTML injection
 log "Fetching gallery data from Strapi..."
@@ -112,6 +159,13 @@ if ! grep -q 'inject-gallery-slider' Dockerfile; then
 else
   log "  Dockerfile already has gallery slider injection"
 fi
+
+# Step 4g: Cache-bust global.js with a content-hash query string (?v=<hash>) on
+# every reference, so each deploy is a fresh Cloudflare cache key and no manual
+# "Purge Everything" is needed. MUST run after optimize-assets.sh (which adds
+# data-cfasync by matching the bare URL) and after the public/global.js minify.
+log "Versioning global.js references (cache-bust)..."
+node scripts/inject-global-version.cjs 2>&1 | tee -a "$LOG_FILE"
 
 # Step 5: Build Docker image (no cache to pick up all changes)
 log "Building Docker image..."
