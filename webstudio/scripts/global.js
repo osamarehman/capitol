@@ -27,6 +27,93 @@
  */
 
 // ===========================================================================
+// REAL-USER MONITORING (RUM) — capture freezes/long-tasks/errors from real devices
+// ===========================================================================
+// Lightweight, fire-and-forget. Sends a beacon when the main thread stalls (>3s),
+// a single long task exceeds 1s, or an uncaught error/rejection fires — so we can
+// see the "Page Unresponsive" freezes that only happen on real (low-end) phones.
+(function rumMonitor() {
+  try {
+    var ENDPOINT = 'https://forms.improveitmd.com/api/rum';
+    var sid = (Math.random().toString(36).slice(2) + Date.now().toString(36));
+    var sent = 0, MAX = 10;
+    var maxGap = 0, ltMax = 0, ltTotal = 0, ltCount = 0;
+    var errs = [];
+
+    function beacon(type, extra) {
+      if (sent >= MAX) return;
+      sent++;
+      var nav = navigator;
+      var conn = nav.connection || {};
+      var p = {
+        t: type, ts: Date.now(), sid: sid,
+        url: location.pathname + location.search,
+        ua: nav.userAgent,
+        dm: nav.deviceMemory || null,
+        hc: nav.hardwareConcurrency || null,
+        net: conn.effectiveType || null,
+        vw: window.innerWidth, vh: window.innerHeight,
+        // Diagnostics for hydration errors (#418/#425): an empty/foreign lang or a
+        // Google-Translate'd <html> (class "translated-ltr/rtl") rewrites text nodes
+        // and breaks hydration. Capture these so we can pinpoint the cause.
+        lang: (document.documentElement.getAttribute('lang') || ''),
+        navLang: nav.language || null,
+        htmlClass: (document.documentElement.className || '').slice(0, 60),
+        hidden: document.hidden,
+        maxGap: maxGap, ltMax: Math.round(ltMax), ltTotal: Math.round(ltTotal), ltCount: ltCount,
+        errs: errs.slice(-5)
+      };
+      if (extra) { for (var k in extra) p[k] = extra[k]; }
+      try { nav.sendBeacon(ENDPOINT, JSON.stringify(p)); } catch (e) {}
+    }
+
+    // Long tasks (buffered:true captures ones before this runs)
+    try {
+      new PerformanceObserver(function (list) {
+        var es = list.getEntries();
+        for (var i = 0; i < es.length; i++) {
+          var d = es[i].duration;
+          ltTotal += d; ltCount++;
+          if (d > ltMax) ltMax = d;
+          if (d > 1000) beacon('longtask', { dur: Math.round(d) });
+        }
+      }).observe({ type: 'longtask', buffered: true });
+    } catch (e) {}
+
+    // Freeze heartbeat: a gap >3s between 500ms ticks == main thread was blocked.
+    // Ignore elapsed time while the tab is hidden — backgrounded mobile tabs
+    // throttle/pause timers, which otherwise looks like a multi-second/minute
+    // "freeze" (false positives like gap=130000ms on a locked phone).
+    var last = performance.now();
+    document.addEventListener('visibilitychange', function () {
+      if (!document.hidden) last = performance.now();
+    });
+    setInterval(function () {
+      if (document.hidden) { last = performance.now(); return; }
+      var now = performance.now();
+      var gap = now - last; last = now;
+      if (gap > maxGap) maxGap = Math.round(gap);
+      if (gap > 3000) beacon('freeze', { gap: Math.round(gap) });
+    }, 500);
+
+    // Uncaught errors / rejections
+    window.addEventListener('error', function (e) {
+      errs.push(((e && e.message) || 'error') + ' @ ' + ((e && e.filename) || '') + ':' + ((e && e.lineno) || ''));
+      beacon('error', { msg: ((e && e.message) || '').slice(0, 200) });
+    });
+    window.addEventListener('unhandledrejection', function (e) {
+      var m = (e && e.reason && (e.reason.message || e.reason)) || 'rejection';
+      errs.push('REJ ' + String(m).slice(0, 150));
+    });
+
+    // Final summary when the tab is hidden/closed (catches abandoned frozen tabs)
+    addEventListener('pagehide', function () {
+      if (maxGap > 1500 || ltMax > 800 || errs.length) beacon('summary');
+    });
+  } catch (e) { /* monitoring must never break the page */ }
+})();
+
+// ===========================================================================
 // 0. DEFERRED THIRD-PARTY SCRIPTS (CallRail + Elfsight)
 // ===========================================================================
 // Both CallRail's swap.js (rewrites every <a href="tel:..."> at load time)
@@ -69,14 +156,26 @@ function deferThirdPartyScripts() {
   );
 }
 
+// Gate CallRail/Elfsight strictly until AFTER React hydration completes.
+// window 'load' is NOT enough: it only waits for resources, while hydration is
+// CPU-bound, so on slow phones hydration finishes AFTER 'load' and loading the
+// scripts here still lands mid-hydration. CallRail swap.js then rewrites the
+// <a href="tel:"> text nodes React owns -> #425 text mismatch -> #418 -> #423
+// full root re-render = frozen tab (proven on /services pages, e.g. the Crofton
+// siding page: 10x CPU throttle reproduced 10/10 with the old gate).
+// requestIdleCallback only fires once the main thread is idle, which is
+// necessarily after hydration's long task; the trailing setTimeout adds margin.
+// Verified: 10x throttle -> 0/20 crashes with this gate.
+function gateDeferredThirdParty() {
+  var ric = window.requestIdleCallback || function (cb) {
+    return setTimeout(function () { cb({ didTimeout: true }); }, 800);
+  };
+  ric(function () { setTimeout(deferThirdPartyScripts, 250); }, { timeout: 5000 });
+}
 if (document.readyState === 'complete') {
-  setTimeout(deferThirdPartyScripts, 0);
+  gateDeferredThirdParty();
 } else {
-  window.addEventListener(
-    'load',
-    function () { setTimeout(deferThirdPartyScripts, 0); },
-    { once: true }
-  );
+  window.addEventListener('load', gateDeferredThirdParty, { once: true });
 }
 
 // ===========================================================================
@@ -506,12 +605,20 @@ function extractAddressComponents(response) {
 // --- Geocoder ---
 const ALLOWED_STATES = ['Maryland', 'Washington', 'Virginia', 'North Carolina', 'South Carolina'];
 
-function initializeGeocoder() {
+function initializeGeocoder(attempt) {
+  attempt = attempt || 0;
   try {
     // Prevent duplicate geocoder inputs on SPA re-init
     const geocoderContainer = document.getElementById('geocoder');
     if (!geocoderContainer) return;
     if (geocoderContainer.querySelector('.mapboxgl-ctrl-geocoder')) return;
+
+    // Wait (bounded) for the Mapbox libs before constructing, so we never throw a
+    // ReferenceError and spin an unbounded 2s retry loop on the calculator pages.
+    if (typeof mapboxgl === 'undefined' || typeof MapboxGeocoder === 'undefined') {
+      if (attempt < 15) setTimeout(function () { initializeGeocoder(attempt + 1); }, 1000);
+      return;
+    }
 
     mapboxgl.accessToken = MAPBOX_TOKEN;
 
@@ -548,8 +655,8 @@ function initializeGeocoder() {
 
     document.querySelector('.mapboxgl-ctrl-geocoder--input').placeholder = 'Type your street address';
   } catch (error) {
-    console.error('Error initializing Mapbox:', error);
-    setTimeout(initializeGeocoder, 2000);
+    console.error('Error initializing Mapbox geocoder:', error);
+    if (attempt < 15) setTimeout(function () { initializeGeocoder(attempt + 1); }, 1500);
   }
 }
 
@@ -2539,6 +2646,19 @@ function loadScriptAsync(src) {
   });
 }
 
+// Resolves true once predicate() is truthy, or false after timeoutMs. Used to wait
+// for a global from a <script> that may have been deduped (resolved before execution).
+function waitForGlobals(predicate, timeoutMs) {
+  return new Promise((resolve) => {
+    if (predicate()) return resolve(true);
+    const start = Date.now();
+    const id = setInterval(() => {
+      if (predicate()) { clearInterval(id); resolve(true); }
+      else if (Date.now() - start > (timeoutMs || 3000)) { clearInterval(id); resolve(false); }
+    }, 50);
+  });
+}
+
 // ---------------------------------------------------------------------------
 // initBlogSidebar — GSAP-powered sidebar table of contents
 // ---------------------------------------------------------------------------
@@ -2569,6 +2689,20 @@ async function initBlogSidebar() {
       'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js'
     );
   }
+
+  // loadScriptAsync resolves immediately when a <script src> for these already
+  // exists (e.g. the blog page's CustomCode) even if it hasn't executed yet, so
+  // the globals can still be undefined here. Poll until they're actually ready,
+  // and skip the enhancement rather than throw if GSAP never shows up.
+  const gsapReady = await waitForGlobals(
+    function () {
+      return typeof gsap !== 'undefined' &&
+        typeof ScrollTrigger !== 'undefined' &&
+        typeof ScrollToPlugin !== 'undefined';
+    },
+    3000
+  );
+  if (!gsapReady) return null;
 
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -3452,6 +3586,9 @@ function initGenericFormHandler() {
 // ===========================================================================
 let activeCleanups = [];
 let isInitializing = false;
+// Path (pathname + search) of the route initPage() last ran for. Re-init only
+// happens when this actually changes — see observeRouteChanges().
+let lastInitPath = location.pathname + location.search;
 
 async function initPage() {
   teardownPage();
@@ -3500,16 +3637,41 @@ function teardownPage() {
 }
 
 function observeRouteChanges() {
-  const target = document.querySelector('main') || document.body;
   let debounceTimer = null;
 
-  const observer = new MutationObserver(() => {
-    if (isInitializing) return;
+  // Re-init ONLY when the URL path actually changes. This is the critical guard:
+  // pages with live widgets (e.g. the weather Swiper, which constantly mutates its
+  // own DOM) used to retrigger a full teardown/init on every DOM mutation, creating
+  // a ~6x/sec re-init feedback loop that froze heavier pages (/services/$slug).
+  const reinitIfRouteChanged = () => {
+    const current = location.pathname + location.search;
+    if (current === lastInitPath) return; // same route -> widget DOM churn is ignored
+    lastInitPath = current;
     clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(() => initPage(), 150);
-  });
+    debounceTimer = setTimeout(() => { if (!isInitializing) initPage(); }, 200);
+  };
 
-  observer.observe(target, { childList: true, subtree: true });
+  // React Router navigates via the History API; patch it so SPA route changes
+  // emit an event we can listen for (covers Link clicks and programmatic nav).
+  for (const method of ['pushState', 'replaceState']) {
+    const original = history[method];
+    if (typeof original === 'function' && !original.__wsPatched) {
+      const patched = function () {
+        const result = original.apply(this, arguments);
+        try { window.dispatchEvent(new Event('ws:locationchange')); } catch (_) {}
+        return result;
+      };
+      patched.__wsPatched = true;
+      history[method] = patched;
+    }
+  }
+  window.addEventListener('popstate', reinitIfRouteChanged);
+  window.addEventListener('ws:locationchange', reinitIfRouteChanged);
+
+  // Safety net for any navigation that doesn't go through the History API.
+  // Guarded by the same URL check, so it can never cause a re-init loop.
+  const target = document.querySelector('main') || document.body;
+  new MutationObserver(reinitIfRouteChanged).observe(target, { childList: true, subtree: true });
 }
 
 // ---- Bootstrap ----
