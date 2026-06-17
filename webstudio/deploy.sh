@@ -167,6 +167,14 @@ fi
 log "Versioning global.js references (cache-bust)..."
 node scripts/inject-global-version.cjs 2>&1 | tee -a "$LOG_FILE"
 
+# Step 4h: Inject custom Lovable landing pages (/community, /roofing/slate-roofing).
+# Runs LAST among the inject steps so the earlier canonical/schema/tracking
+# patches don't touch these self-contained routes (they ship their own canonical,
+# JSON-LD, and scoped CSS). Restores app/routes, app/landing, and public/landing
+# which `webstudio build` regenerates from scratch.
+log "Injecting custom landing pages..."
+node scripts/inject-landing-pages.cjs 2>&1 | tee -a "$LOG_FILE"
+
 # Step 5: Build Docker image (no cache to pick up all changes)
 log "Building Docker image..."
 docker build --no-cache -t webstudio-prod:latest . 2>&1 | tee -a "$LOG_FILE"

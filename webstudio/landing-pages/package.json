@@ -1,0 +1,12 @@
+{
+  "name": "landing-pages-tooling",
+  "private": true,
+  "description": "Authoring-time Tailwind compile tooling for the custom landing pages. Not part of the app build — see tailwind/build-css.sh.",
+  "scripts": {
+    "build:css": "bash tailwind/build-css.sh"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4",
+    "tailwindcss": "^4"
+  }
+}
