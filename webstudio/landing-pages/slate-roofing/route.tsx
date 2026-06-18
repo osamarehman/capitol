@@ -8,9 +8,9 @@
 // Improvements in SiteHeader/SiteFooter.
 import type { MetaFunction, LinksFunction } from "react-router";
 import { Scripts, ScrollRestoration } from "react-router";
-import { SiteHeader } from "../landing/slate/SiteHeader";
-import { SiteFooter } from "../landing/slate/SiteFooter";
 import css from "../landing/slate-roofing.css?url";
+import indexCss from "../__generated__/index.css?url";
+import { SiteHeader, SiteFooter } from "../landing/shared/SiteChrome";
 
 // Re-hosted assets (served from public/landing/slate/).
 const slateHero = "https://improveitmd.com/landing/slate/historic-dc-turret.jpg"; // og/twitter image (absolute)
@@ -67,6 +67,8 @@ export const meta: MetaFunction = () => [
 
 export const links: LinksFunction = () => [
   { rel: "canonical", href: "https://improveitmd.com/roofing/slate-roofing" },
+  // Site chrome (header/footer) is styled by the Webstudio stylesheet; load it first.
+  { rel: "stylesheet", href: indexCss },
   // Barlow powers the .font-display headings; scoped to this route only.
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
@@ -93,9 +95,7 @@ const steps: Array<[string, string]> = [
 
 function SlateRoofingPage() {
   return (
-    <div className="bg-muted">
-      <SiteHeader />
-
+    <main className="lp-content bg-muted">
       {/* HERO — editorial split with vertical photo */}
       <section className="border-b border-primary bg-muted px-6 pb-24 pt-12 lg:pb-32 lg:pt-20">
         <div className="mx-auto max-w-[1400px]">
@@ -324,11 +324,11 @@ function SlateRoofingPage() {
                 What matters
               </div>
               <div className="border-l border-primary-foreground/20 p-4 md:p-6">
-                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent">01 — Natural</div>
+                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-highlight">01 — Natural</div>
                 <div className="mt-1 font-display text-lg font-black uppercase tracking-tight md:text-xl">Quarried Slate</div>
               </div>
               <div className="border-l border-primary-foreground/20 p-4 md:p-6">
-                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent">02 — Synthetic</div>
+                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-highlight">02 — Synthetic</div>
                 <div className="mt-1 font-display text-lg font-black uppercase tracking-tight md:text-xl">Brava Composite</div>
               </div>
             </div>
@@ -381,14 +381,14 @@ function SlateRoofingPage() {
             <div className="lg:col-span-5">
               <h2 className="font-display text-4xl font-black uppercase leading-[0.95] tracking-tighter md:text-5xl lg:text-6xl">
                 Why homeowners <br />
-                <span className="text-accent">choose</span> slate.
+                <span className="text-highlight">choose</span> slate.
               </h2>
             </div>
             <div className="grid grid-cols-1 gap-px border border-primary-foreground/20 bg-primary-foreground/20 md:grid-cols-2 lg:col-span-7">
               {stats.map((s) => (
                 <div key={s.v} className="bg-primary p-10">
                   <div className="font-display text-5xl font-black">{s.k}</div>
-                  <div className="mb-3 mt-4 text-xs font-bold uppercase tracking-widest text-accent">
+                  <div className="mb-3 mt-4 text-xs font-bold uppercase tracking-widest text-highlight">
                     {s.v}
                   </div>
                   <p className="text-sm text-primary-foreground/60">{s.d}</p>
@@ -516,7 +516,7 @@ function SlateRoofingPage() {
                     loading="lazy"
                     className="h-full w-full object-cover"
                   />
-                  <div className="absolute right-3 top-3 border border-accent/70 bg-black/40 px-2 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.25em] text-accent backdrop-blur">
+                  <div className="absolute right-3 top-3 border border-highlight/70 bg-black/40 px-2 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.25em] text-highlight backdrop-blur">
                     Project File · Brava
                   </div>
                 </div>
@@ -672,16 +672,16 @@ function SlateRoofingPage() {
           </div>
         </div>
       </section>
-
-      <SiteFooter />
-    </div>
+    </main>
   );
 }
 
 export default function SlateRoofingRoute() {
   return (
-    <body>
+    <body className="w-body">
+      <SiteHeader />
       <SlateRoofingPage />
+      <SiteFooter />
       <ScrollRestoration />
       <Scripts />
     </body>

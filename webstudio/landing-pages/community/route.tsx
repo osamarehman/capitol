@@ -7,10 +7,15 @@
 //   - asset .asset.json imports -> local /landing/* URLs (re-hosted from public/)
 //   - renders its own <body> + <ScrollRestoration/> + <Scripts/> because the
 //     Webstudio root.tsx only renders <html><head/><Outlet/></html>.
+//   - header/footer are the REAL improveitmd.com site chrome (SiteHeader/SiteFooter
+//     from ../landing/shared/SiteChrome, auto-extracted from the generated site),
+//     styled by the Webstudio stylesheet (../__generated__/index.css).
 import type { MetaFunction, LinksFunction } from "react-router";
 import { Scripts, ScrollRestoration } from "react-router";
 import { Plus, ArrowRight, Users, Home, Star } from "lucide-react";
 import css from "../landing/community.css?url";
+import indexCss from "../__generated__/index.css?url";
+import { SiteHeader, SiteFooter } from "../landing/shared/SiteChrome";
 
 const arundelPhoto = { url: "/landing/community/arundel-wildcats.jpg" };
 const bowieVideo = { url: "/landing/community/bowie-bulldogs.mp4" };
@@ -59,11 +64,14 @@ export const meta: MetaFunction = () => [
 
 export const links: LinksFunction = () => [
   { rel: "canonical", href: "https://improveitmd.com/community" },
+  // Site chrome (header/footer) is styled by the Webstudio stylesheet; load it
+  // first, then the scoped Tailwind for the page body.
+  { rel: "stylesheet", href: indexCss },
   { rel: "stylesheet", href: css },
 ];
 
-const NAVY = "#012839";
-const RED = "#CC2121";
+const NAVY = "#00192E"; // --midnight-blue: the site primary accent
+const RED = "#D20000"; // --firebrick: used sparingly as a highlight
 const GRAY50 = "#f7f8f9";
 const GRAY100 = "#e8ebed";
 const GRAY600 = "#5b6770";
@@ -81,129 +89,6 @@ function Eyebrow({ children, tone = "red" }: { children: React.ReactNode; tone?:
   );
 }
 
-function SiteHeader() {
-  // Explicit hrefs: a couple of labels don't map cleanly to their real route
-  // slugs (Trim -> /exterior-trim, Deck & Patios -> /decks-and-patios).
-  const services = [
-    { label: "Roofing", href: "https://improveitmd.com/roofing" },
-    { label: "Siding", href: "https://improveitmd.com/siding" },
-    { label: "Windows", href: "https://improveitmd.com/windows" },
-    { label: "Gutters", href: "https://improveitmd.com/gutters" },
-    { label: "Trim", href: "https://improveitmd.com/exterior-trim" },
-    { label: "Deck & Patios", href: "https://improveitmd.com/decks-and-patios" },
-    { label: "Doors", href: "https://improveitmd.com/doors" },
-  ];
-  return (
-    <header className="sticky top-0 z-50">
-      {/* Utility bar */}
-      <div className="text-white text-[13px]" style={{ background: NAVY }}>
-        <div className="mx-auto flex max-w-[1240px] items-center justify-between px-6 py-2">
-          <span className="text-white/85">
-            Financing as low as <span className="font-semibold text-white">$99/mo</span> — ask about 0% APR options.
-          </span>
-          <nav className="hidden items-center gap-6 md:flex">
-            <a href="https://improveitmd.com/about" className="text-white/80 hover:text-white">About</a>
-            <a href="https://improveitmd.com/testimonials" className="text-white/80 hover:text-white">Testimonials</a>
-            <a href="https://improveitmd.com/gallery" className="text-white/80 hover:text-white">Gallery</a>
-            <a href="tel:3017696909" className="font-semibold text-white">301.769.6909</a>
-          </nav>
-        </div>
-      </div>
-
-      {/* Main header */}
-      <div className="bg-white border-b" style={{ borderColor: GRAY100 }}>
-        <div className="mx-auto flex max-w-[1240px] items-center justify-between gap-6 px-6 py-4">
-          <a href="https://improveitmd.com/" className="flex items-center gap-3 shrink-0">
-            <div
-              className="grid h-10 w-10 place-items-center rounded-sm font-black text-white text-lg"
-              style={{ background: NAVY }}
-              aria-hidden
-            >
-              C
-            </div>
-            <div className="leading-tight">
-              <div className="text-[11px] uppercase tracking-[0.18em]" style={{ color: GRAY600 }}>
-                Family Owned. Family Run.
-              </div>
-              <div className="text-[17px] font-black" style={{ color: NAVY }}>
-                Capitol Improvements
-              </div>
-            </div>
-          </a>
-          <nav className="hidden lg:flex items-center gap-6">
-            {services.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                className="text-[14px] font-semibold hover:opacity-70"
-                style={{ color: NAVY }}
-              >
-                {s.label}
-              </a>
-            ))}
-          </nav>
-          <a
-            href="https://improveitmd.com/quote"
-            className="inline-flex items-center rounded-sm border-2 px-5 py-2.5 text-[13px] font-bold uppercase tracking-wider transition-colors hover:text-white shrink-0"
-            style={{ borderColor: RED, color: RED }}
-            onMouseOver={(e) => (e.currentTarget.style.background = RED)}
-            onMouseOut={(e) => (e.currentTarget.style.background = "transparent")}
-          >
-            Get Free Quote
-          </a>
-        </div>
-      </div>
-    </header>
-  );
-}
-
-function SiteFooter() {
-  return (
-    <footer style={{ background: NAVY }} className="text-white">
-      <div className="mx-auto max-w-[1240px] px-6 py-16">
-        <div className="grid gap-12 md:grid-cols-4">
-          <div className="md:col-span-1">
-            <div className="text-2xl font-black">Capitol Improvements</div>
-            <p className="mt-3 text-sm text-white/70">Family Owned. Family Run. Serving MD, DC & Northern VA since the 1980s.</p>
-          </div>
-          <div>
-            <div className="text-[11px] uppercase tracking-[0.2em] text-white/50 mb-4">Services</div>
-            <ul className="space-y-2 text-sm">
-              <li><a href="https://improveitmd.com/roofing" className="text-white/85 hover:text-white">Roofing</a></li>
-              <li><a href="https://improveitmd.com/roofing/slate-roofing" className="text-white/85 hover:text-white">Slate Roofing</a></li>
-              <li><a href="https://improveitmd.com/siding" className="text-white/85 hover:text-white">Siding</a></li>
-              <li><a href="https://improveitmd.com/windows" className="text-white/85 hover:text-white">Windows</a></li>
-            </ul>
-          </div>
-          <div>
-            <div className="text-[11px] uppercase tracking-[0.2em] text-white/50 mb-4">Company</div>
-            <ul className="space-y-2 text-sm">
-              <li><a href="https://improveitmd.com/about" className="text-white/85 hover:text-white">About</a></li>
-              <li><a href="https://improveitmd.com/team" className="text-white/85 hover:text-white">Our Team</a></li>
-              <li><a href="https://improveitmd.com/financing" className="text-white/85 hover:text-white">Financing</a></li>
-              <li><a href="https://improveitmd.com/warranty" className="text-white/85 hover:text-white">Warranty</a></li>
-            </ul>
-          </div>
-          <div>
-            <div className="text-[11px] uppercase tracking-[0.2em] text-white/50 mb-4">Contact</div>
-            <a href="tel:3017696909" className="block text-xl font-bold">301.769.6909</a>
-            <a
-              href="https://improveitmd.com/quote"
-              className="mt-4 inline-flex items-center rounded-sm border-2 border-white px-4 py-2 text-[12px] font-bold uppercase tracking-wider hover:bg-white hover:text-[#012839]"
-            >
-              Get a Free Quote
-            </a>
-          </div>
-        </div>
-        <div className="mt-12 border-t border-white/10 pt-6 text-xs text-white/55 flex flex-col gap-2 md:flex-row md:justify-between">
-          <span>MHIC 130628 · DC 410519000037 · VA 2705191231</span>
-          <span>© 2026 Capitol Improvements LLC. All rights reserved.</span>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
 function LiveSchoolCard() {
   return (
     <article
@@ -212,7 +97,7 @@ function LiveSchoolCard() {
     >
       {/* Photo */}
       <div
-        className="relative aspect-[4/3] w-full overflow-hidden bg-[#012839]"
+        className="relative aspect-[4/3] w-full overflow-hidden bg-[#00192E]"
         title="capitol-family-exteriors-arundel-wildcats-sponsor-gambrills-md.jpg"
       >
         <img
@@ -264,7 +149,7 @@ function BowieSchoolCard() {
       className="overflow-hidden rounded-sm bg-white border flex flex-col"
       style={{ borderColor: GRAY100 }}
     >
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#012839]">
+      <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#00192E]">
         <video
           src={bowieVideo.url}
           autoPlay
@@ -365,160 +250,156 @@ function CommunityPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white" style={{ fontFamily, color: NAVY }}>
-      <SiteHeader />
+    <main className="lp-content min-h-screen bg-white" style={{ fontFamily, color: NAVY }}>
+      {/* HERO */}
+      <section className="relative overflow-hidden" style={{ background: NAVY }}>
+        <div className="absolute inset-0">
+          <img
+            src={teamPhoto.url}
+            alt="The Capitol Improvements family-owned team standing with company trucks at Bowie, MD headquarters"
+            className="h-full w-full object-cover"
+            loading="eager"
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: `linear-gradient(180deg, rgba(0,25,46,0.55) 0%, rgba(0,25,46,0.70) 55%, rgba(0,25,46,0.95) 100%)`,
+            }}
+          />
+        </div>
 
-      <main>
-        {/* HERO */}
-        <section className="relative overflow-hidden" style={{ background: NAVY }}>
-          <div className="absolute inset-0">
-            <img
-              src={teamPhoto.url}
-              alt="The Capitol Improvements family-owned team standing with company trucks at Bowie, MD headquarters"
-              className="h-full w-full object-cover"
-              loading="eager"
-            />
-            <div
-              className="absolute inset-0"
-              style={{
-                background: `linear-gradient(180deg, rgba(1,40,57,0.55) 0%, rgba(1,40,57,0.70) 55%, rgba(1,40,57,0.95) 100%)`,
-              }}
-            />
+        <div className="relative mx-auto max-w-[1240px] px-6 pt-28 pb-20 md:pt-40 md:pb-28">
+          <div className="max-w-3xl">
+            <span
+              className="inline-block rounded-full border px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em]"
+              style={{ borderColor: "#ffffff", color: "#ffffff" }}
+            >
+              Family Owned. Family Operated.
+            </span>
+            <h1 className="mt-8 font-black tracking-tight leading-[0.95] text-white text-[48px] sm:text-[68px] md:text-[88px] lg:text-[104px]">
+              The neighborhoods
+              <br />
+              that built us.
+            </h1>
+            <p className="mt-8 max-w-2xl text-[18px] leading-relaxed text-white/85">
+              For 30+ years, the Jewell family has answered the phones, climbed the
+              ladders, and lived in the same neighborhoods we serve. We're not private equity —
+              we're your neighbors. Reinvesting in the schools, teams, and community
+              organizations that built us is our commitment, not a marketing line.
+            </p>
           </div>
 
-          <div className="relative mx-auto max-w-[1240px] px-6 pt-28 pb-20 md:pt-40 md:pb-28">
-            <div className="max-w-3xl">
-              <span
-                className="inline-block rounded-full border px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em]"
-                style={{ borderColor: "#ffffff", color: "#ffffff" }}
-              >
-                Family Owned. Family Operated.
-              </span>
-              <h1 className="mt-8 font-black tracking-tight leading-[0.95] text-white text-[48px] sm:text-[68px] md:text-[88px] lg:text-[104px]">
-                The neighborhoods
-                <br />
-                that built us.
-              </h1>
-              <p className="mt-8 max-w-2xl text-[18px] leading-relaxed text-white/85">
-                For 30+ years, the Jewell family has answered the phones, climbed the
-                ladders, and lived in the same neighborhoods we serve. We're not private equity —
-                we're your neighbors. Reinvesting in the schools, teams, and community
-                organizations that built us is our commitment, not a marketing line.
-              </p>
-            </div>
-
-            <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl">
-              {stats.map((s) => (
-                <div key={s.label} className="border-l-2 pl-5" style={{ borderColor: RED }}>
-                  <div className="text-[44px] md:text-[56px] font-black leading-none text-white">
-                    {s.value}
-                  </div>
-                  <div className="mt-3 text-[11px] font-bold uppercase tracking-[0.2em] text-white/70">
-                    {s.label}
-                  </div>
+          <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl">
+            {stats.map((s) => (
+              <div key={s.label} className="border-l-2 pl-5" style={{ borderColor: RED }}>
+                <div className="text-[44px] md:text-[56px] font-black leading-none text-white">
+                  {s.value}
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* SCHOOLS GRID */}
-        <section className="px-6 py-24 md:py-32 bg-white">
-          <div className="mx-auto max-w-[1240px]">
-            <div className="max-w-3xl">
-              <Eyebrow>Our Community Commitment</Eyebrow>
-              <h2
-                className="mt-5 font-black tracking-tight leading-[1.02] text-[36px] md:text-[56px]"
-                style={{ color: NAVY }}
-              >
-                Reinvesting in the Community That Built Us.
-              </h2>
-              <p className="mt-6 text-[17px] leading-relaxed" style={{ color: GRAY600 }}>
-                For 30+ years we've been part of these neighborhoods — sponsoring schools, sporting
-                events, and local organizations across Maryland, DC, and Northern Virginia. We're
-                family owned, not private equity. Giving back isn't a marketing line for us; it's
-                the reason we're still here.
-              </p>
-            </div>
-
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <LiveSchoolCard />
-              <BowieSchoolCard />
-              <PlaceholderCard />
-              <PlaceholderCard />
-              <PlaceholderCard />
-              <PlaceholderCard />
-            </div>
-          </div>
-        </section>
-
-        {/* WHY WE GIVE BACK */}
-        <section className="px-6 py-24 md:py-32" style={{ background: NAVY }}>
-          <div className="mx-auto max-w-[1240px]">
-            <div className="max-w-3xl">
-              <Eyebrow tone="coral">Why We Sponsor</Eyebrow>
-              <h2 className="mt-5 font-black tracking-tight leading-[1.02] text-white text-[36px] md:text-[56px]">
-                Because These Neighborhoods Built Us.
-              </h2>
-              <p className="mt-6 text-[17px] leading-relaxed text-white/75">
-                Pat Jewell started this company in Bowie in the 1980s. Today his sons Austin and
-                Lance run it alongside him. We've never been a faceless chain — and we never will be.
-              </p>
-            </div>
-
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-              {whyCols.map((c) => (
-                <div key={c.title} className="rounded-sm bg-white/[0.04] border border-white/10 p-8">
-                  <div className="grid h-12 w-12 place-items-center rounded-full bg-white">
-                    {c.icon}
-                  </div>
-                  <h3 className="mt-6 text-[20px] font-black text-white">{c.title}</h3>
-                  <p className="mt-3 text-[15px] leading-relaxed text-white/75">{c.body}</p>
+                <div className="mt-3 text-[11px] font-bold uppercase tracking-[0.2em] text-white/70">
+                  {s.label}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA */}
-        <section className="px-6 py-24 md:py-32" style={{ background: GRAY50 }}>
-          <div className="mx-auto max-w-[820px] text-center">
-            <Eyebrow>Sponsor Inquiry</Eyebrow>
+      {/* SCHOOLS GRID */}
+      <section className="px-6 py-24 md:py-32 bg-white">
+        <div className="mx-auto max-w-[1240px]">
+          <div className="max-w-3xl">
+            <Eyebrow>Our Community Commitment</Eyebrow>
             <h2
-              className="mt-5 font-black tracking-tight leading-[1.02] text-[34px] md:text-[52px]"
+              className="mt-5 font-black tracking-tight leading-[1.02] text-[36px] md:text-[56px]"
               style={{ color: NAVY }}
             >
-              Want Capitol Improvements to Sponsor Your School?
+              Reinvesting in the Community That Built Us.
             </h2>
-            <p className="mx-auto mt-6 max-w-xl text-[17px] leading-relaxed" style={{ color: GRAY600 }}>
-              We support local high schools, youth sports leagues, and community organizations
-              throughout MD, DC, and Northern Virginia. Reach out and let's talk.
+            <p className="mt-6 text-[17px] leading-relaxed" style={{ color: GRAY600 }}>
+              For 30+ years we've been part of these neighborhoods — sponsoring schools, sporting
+              events, and local organizations across Maryland, DC, and Northern Virginia. We're
+              family owned, not private equity. Giving back isn't a marketing line for us; it's
+              the reason we're still here.
             </p>
-            <div className="mt-10 flex flex-col items-center gap-5">
-              <a
-                href="https://improveitmd.com/contact"
-                className="inline-flex items-center rounded-sm px-8 py-4 text-[14px] font-bold uppercase tracking-[0.15em] text-white transition-opacity hover:opacity-90"
-                style={{ background: NAVY }}
-              >
-                Contact Us About Sponsorship
-              </a>
-              <div className="text-[15px] font-bold" style={{ color: NAVY }}>
-                Or call <a href="tel:3017696909" className="underline-offset-4 hover:underline">301.769.6909</a>
+          </div>
+
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <LiveSchoolCard />
+            <BowieSchoolCard />
+            <PlaceholderCard />
+            <PlaceholderCard />
+            <PlaceholderCard />
+            <PlaceholderCard />
+          </div>
+        </div>
+      </section>
+
+      {/* WHY WE GIVE BACK */}
+      <section className="px-6 py-24 md:py-32" style={{ background: NAVY }}>
+        <div className="mx-auto max-w-[1240px]">
+          <div className="max-w-3xl">
+            <Eyebrow tone="coral">Why We Sponsor</Eyebrow>
+            <h2 className="mt-5 font-black tracking-tight leading-[1.02] text-white text-[36px] md:text-[56px]">
+              Because These Neighborhoods Built Us.
+            </h2>
+            <p className="mt-6 text-[17px] leading-relaxed text-white/75">
+              Pat Jewell started this company in Bowie in the 1980s. Today his sons Austin and
+              Lance run it alongside him. We've never been a faceless chain — and we never will be.
+            </p>
+          </div>
+
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {whyCols.map((c) => (
+              <div key={c.title} className="rounded-sm bg-white/[0.04] border border-white/10 p-8">
+                <div className="grid h-12 w-12 place-items-center rounded-full bg-white">
+                  {c.icon}
+                </div>
+                <h3 className="mt-6 text-[20px] font-black text-white">{c.title}</h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-white/75">{c.body}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="px-6 py-24 md:py-32" style={{ background: GRAY50 }}>
+        <div className="mx-auto max-w-[820px] text-center">
+          <Eyebrow>Sponsor Inquiry</Eyebrow>
+          <h2
+            className="mt-5 font-black tracking-tight leading-[1.02] text-[34px] md:text-[52px]"
+            style={{ color: NAVY }}
+          >
+            Want Capitol Improvements to Sponsor Your School?
+          </h2>
+          <p className="mx-auto mt-6 max-w-xl text-[17px] leading-relaxed" style={{ color: GRAY600 }}>
+            We support local high schools, youth sports leagues, and community organizations
+            throughout MD, DC, and Northern Virginia. Reach out and let's talk.
+          </p>
+          <div className="mt-10 flex flex-col items-center gap-5">
+            <a
+              href="https://improveitmd.com/contact"
+              className="inline-flex items-center rounded-sm px-8 py-4 text-[14px] font-bold uppercase tracking-[0.15em] text-white transition-opacity hover:opacity-90"
+              style={{ background: NAVY }}
+            >
+              Contact Us About Sponsorship
+            </a>
+            <div className="text-[15px] font-bold" style={{ color: NAVY }}>
+              Or call <a href="tel:3017696909" className="underline-offset-4 hover:underline">301.769.6909</a>
             </div>
           </div>
-        </section>
-      </main>
-
-      <SiteFooter />
-    </div>
+        </div>
+      </section>
+    </main>
   );
 }
 
 export default function CommunityRoute() {
   return (
-    <body>
+    <body className="w-body">
+      <SiteHeader />
       <CommunityPage />
+      <SiteFooter />
       <ScrollRestoration />
       <Scripts />
     </body>

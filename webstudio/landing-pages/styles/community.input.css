@@ -68,9 +68,9 @@
 :root {
   --radius: 0.5rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.18 0.05 255);
-  --brand-navy: oklch(0.18 0.05 255);
-  --brand-red: oklch(0.58 0.22 27);
+  --foreground: rgb(0 25 46);
+  --brand-navy: rgb(0 25 46);
+  --brand-red: rgb(210 0 0);
   --rule: oklch(0.92 0.005 255);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
@@ -148,4 +148,16 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+}
+
+/*
+ * Page-body wrapper reset. The Webstudio index.css (loaded for the site
+ * header/footer chrome) sets `:root { white-space: pre-wrap; font-family: Arial }`,
+ * which inherits into our Tailwind content. Neutralize it on the content subtree
+ * only (the chrome, a sibling, keeps the site defaults). Unlayered so it wins.
+ * Font is set inline on the <main> wrapper (Futura stack); only normalize here.
+ */
+.lp-content {
+  white-space: normal;
+  white-space-collapse: collapse;
 }

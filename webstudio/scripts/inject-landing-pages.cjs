@@ -12,10 +12,13 @@
  *   landing-pages/slate-roofing/route.tsx    -> app/routes/[roofing].[slate-roofing]._index.tsx
  *   landing-pages/styles/community.css       -> app/landing/community.css
  *   landing-pages/styles/slate-roofing.css   -> app/landing/slate-roofing.css
- *   landing-pages/slate-roofing/SiteHeader.tsx -> app/landing/slate/SiteHeader.tsx
- *   landing-pages/slate-roofing/SiteFooter.tsx -> app/landing/slate/SiteFooter.tsx
+ *   landing-pages/shared/SiteChrome.tsx      -> app/landing/shared/SiteChrome.tsx
  *   landing-pages/assets/community/*         -> public/landing/community/*
  *   landing-pages/assets/slate/*            -> public/landing/slate/*
+ *
+ * Both landing pages render the REAL site header/footer via SiteChrome.tsx,
+ * which scripts/extract-site-chrome.cjs re-extracts from the freshly-generated
+ * site (run first, below) so the chrome always matches the live nav/footer.
  *
  * Helper components + CSS go under app/landing/ (NOT app/routes/) so the
  * React Router flatRoutes() scanner doesn't turn them into routes.
@@ -26,6 +29,7 @@
  */
 const fs = require("fs");
 const path = require("path");
+const { execFileSync } = require("child_process");
 
 const ROOT = path.resolve(__dirname, "..");
 const SRC = path.join(ROOT, "landing-pages");
@@ -74,6 +78,14 @@ for (const css of ["community.css", "slate-roofing.css"]) {
 
 log("Injecting custom landing pages...");
 
+// 0. Re-extract the live site header/footer chrome from the freshly-generated
+//    site into landing-pages/shared/SiteChrome.tsx. Exits non-zero (failing the
+//    deploy) only if extraction fails AND there is no committed snapshot.
+log("Extracting live site chrome (header/footer)...");
+execFileSync("node", [path.join(__dirname, "extract-site-chrome.cjs")], {
+  stdio: "inherit",
+});
+
 // 1. Route modules
 copyFile(
   path.join(SRC, "community/route.tsx"),
@@ -93,13 +105,10 @@ copyFile(
   path.join(SRC, "styles/slate-roofing.css"),
   path.join(ROOT, "app/landing/slate-roofing.css")
 );
+// Shared real-site chrome (header + footer) used by BOTH landing pages.
 copyFile(
-  path.join(SRC, "slate-roofing/SiteHeader.tsx"),
-  path.join(ROOT, "app/landing/slate/SiteHeader.tsx")
-);
-copyFile(
-  path.join(SRC, "slate-roofing/SiteFooter.tsx"),
-  path.join(ROOT, "app/landing/slate/SiteFooter.tsx")
+  path.join(SRC, "shared/SiteChrome.tsx"),
+  path.join(ROOT, "app/landing/shared/SiteChrome.tsx")
 );
 
 // 3. Re-hosted assets -> public/landing/
