@@ -153,11 +153,10 @@ if (isFromFacebook) {
     content_name: formName,
     content_category: 'quote_request'
   });
-  wsDL('generate_lead', {
-    form_name: formName,
-    source_page: sourcePage,
-    traffic_source: trafficSource
-  });
+  // NOTE: no wsDL('generate_lead') here — gtag('event','generate_lead') above
+  // already pushes a {event:'generate_lead', eventModel:{…}} object that GTM's
+  // Custom Event trigger matches. A second flat wsDL push double-counted the
+  // conversion (GA4 + Google Ads). gtag is the single source for this event.
   console.log('✓ GA4: generate_lead fired (form: ' + formName + ', source: ' + sourcePage + ')');
 })();
 
@@ -236,11 +235,9 @@ function wsFireLead(form) {
     content_name: formName,
     content_category: 'quote_request'
   });
-  wsDL('generate_lead', {
-    form_name: formName,
-    source_page: sourcePage,
-    traffic_source: trafficSource
-  });
+  // NOTE: no wsDL('generate_lead') here — see the matching note in the
+  // /quote-requested fallback above. gtag('event','generate_lead') is the
+  // single dataLayer push for this event; the flat wsDL mirror double-counted.
   console.log('✓ Lead fired (generate_lead, form: ' + formName + ', source: ' + sourcePage + ')');
 }
 

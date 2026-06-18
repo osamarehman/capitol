@@ -136,6 +136,27 @@ for (const file of files) {
     changes++;
   }
 
+  // Patch 3: Route the hero poster through the image resizer (WebP + resize).
+  // Raw posters are large JPGs (~180 KiB); serving them as resized WebP via
+  // /_image cuts the LCP-blocking download to ~25 KiB. Idempotent: skips URLs
+  // that already point at /_image (so --force re-runs don't double-wrap).
+  code = code.replace(
+    /poster=\{"(https?:\/\/[^"]+?)\/uploads\/([^"]+?\.(?:jpe?g|png))"\}/gi,
+    (match, origin, file) => {
+      if (match.includes("/_image/")) return match;
+      changes++;
+      return `poster={"${origin}/_image/w_640,q_60,f_webp/${origin}/uploads/${file}"}`;
+    }
+  );
+
+  // Normalize quality on already-wrapped posters so a quality change still
+  // applies on re-runs (when the source is already a /_image poster).
+  const normalized = code.replace(/_image\/w_640,q_\d+,f_webp/g, "_image/w_640,q_60,f_webp");
+  if (normalized !== code) {
+    code = normalized;
+    changes++;
+  }
+
   if (changes > 0) {
     fs.writeFileSync(filePath, code);
     log(`  OK ${file} (${changes} patches)`);

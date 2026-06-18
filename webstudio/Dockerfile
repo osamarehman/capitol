@@ -8,6 +8,7 @@ COPY . /app/
 WORKDIR /app
 RUN npm install
 RUN npm run build
+RUN node scripts/inject-gallery-slider.cjs
 
 FROM node:22-alpine
 COPY .npmrc package.json /app/

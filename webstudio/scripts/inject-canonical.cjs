@@ -34,9 +34,20 @@ for (const file of routeFiles) {
   const filePath = path.join(ROUTES_DIR, file);
   let content = fs.readFileSync(filePath, 'utf8');
 
-  // Skip if already injected
+  // Skip if already injected — check both old (// comment) and new ({/* */}) formats
   if (content.includes(MARKER)) {
-    skipped++;
+    // Fix old JS-comment format to JSX-comment format if present
+    if (content.includes('// [inject-canonical]') && !content.includes('{/* // [inject-canonical]')) {
+      content = content.replace(
+        /\/\/ \[inject-canonical\] canonical URL \(always non-www https\)/g,
+        '{/* // [inject-canonical] canonical URL (always non-www https) */}'
+      );
+      fs.writeFileSync(filePath, content);
+      console.log(`  \u2713 ${file} (fixed comment format)`);
+      success++;
+    } else {
+      skipped++;
+    }
     continue;
   }
 
@@ -62,7 +73,7 @@ for (const file of routeFiles) {
 
     // Step 2: Add canonical link component after PageSettingsTitle in the Outlet JSX
     // Build canonical URL from the url loader data
-    const canonicalComponent = `${MARKER} canonical URL (always non-www https)
+    const canonicalComponent = `{/* ${MARKER} canonical URL (always non-www https) */}
       <PageSettingsCanonicalLink href={\`${CANONICAL_ORIGIN}\${new URL(url).pathname}\`} />`;
 
     content = content.replace(

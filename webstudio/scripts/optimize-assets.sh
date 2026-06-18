@@ -284,4 +284,18 @@ done
 
 log "  Replaced www refs in $WWW_FIXES files"
 
+log "=== Step 8: Fixing Cloudflare Rocket Loader conflicts ==="
+# Add data-cfasync="false" to global.js script tag so Rocket Loader doesn't
+# create a mismatched preload (module scripts use CORS, Rocket Loader doesn't)
+RL_FIXES=0
+for f in "$GEN_DIR"/*.tsx; do
+  before=$(md5sum "$f" | cut -d' ' -f1)
+  sed -i 's|<Script type={"module"} src={"https://improveitmd.com/global.js"}|<Script data-cfasync={"false"} type={"module"} src={"https://improveitmd.com/global.js"}|g' "$f"
+  after=$(md5sum "$f" | cut -d' ' -f1)
+  if [ "$before" != "$after" ]; then
+    RL_FIXES=$((RL_FIXES + 1))
+  fi
+done
+log "  Fixed Rocket Loader conflicts in $RL_FIXES files"
+
 log "=== Optimization complete ==="
