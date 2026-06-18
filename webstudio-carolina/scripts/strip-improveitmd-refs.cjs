@@ -37,10 +37,10 @@ const REPLACEMENTS = [
   ['https://forms.improveitmd.com/api/', '/forms/api/'],
   ['https://app.improveitmd.com/forms/api/', '/forms/api/'],
 
-  // Strapi CMS API — proxied through Carolina
+  // Strapi CMS API — proxied through Carolina (absolute URL needed for server-side fetch)
   ['https://cms.improveitmd.com/uploads/', 'https://improveitcarolina.com/uploads/'],
-  ['https://cms.improveitmd.com/api/', '/api/'],
-  ['https://cms.improveitmd.com/graphql', '/graphql'],
+  ['https://cms.improveitmd.com/api/', 'https://improveitcarolina.com/api/'],
+  ['https://cms.improveitmd.com/graphql', 'https://improveitcarolina.com/graphql'],
 
   // Bare cms.improveitmd.com used in dynamic URL concatenation:
   //   'https://cms.improveitmd.com' + item?.url

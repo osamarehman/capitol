@@ -75,21 +75,29 @@ node scripts/inject-deploy-urls.cjs 2>&1 | tee -a "$LOG_FILE"
 log "Injecting canonical tags..."
 node scripts/inject-canonical.cjs 2>&1 | tee -a "$LOG_FILE"
 
-# Step 4d2: Fix duplicate GA4 events in tracking script
-log "Patching GA4 tracking (dedup page_view + add generate_lead)..."
-node scripts/inject-tracking-fix.cjs 2>&1 | tee -a "$LOG_FILE"
-
-# Step 4d2b: Disable tracking on /deploy admin page
-log "Disabling tracking on /deploy page..."
-node scripts/inject-deploy-no-tracking.cjs 2>&1 | tee -a "$LOG_FILE"
+# Step 4d2: GTM-only tracking — install GTM-N5QXSSGM, remove GA4 + Facebook
+# Pixel, and emit a single generate_lead_ca dataLayer event on any form submit.
+# (Self-guards /deploy, so no separate disable-on-deploy step is needed.)
+log "Installing GTM + generate_lead_ca (removing GA4 + FB Pixel)..."
+node scripts/inject-gtm.cjs 2>&1 | tee -a "$LOG_FILE"
 
 # Step 4d2c: Strip all improveitmd.com references — proxy through Carolina
 log "Stripping improveitmd.com references..."
 node scripts/strip-improveitmd-refs.cjs 2>&1 | tee -a "$LOG_FILE"
 
+# Step 4d2d: Add GraphQL aliases (carolinaLp -> lp, etc.)
+# Webstudio data bindings expect lp/blog/etc. but Carolina Strapi exposes
+# carolinaLp/carolinaBlog/etc. — aliases keep the bindings working.
+log "Injecting GraphQL aliases..."
+node scripts/inject-graphql-aliases.cjs 2>&1 | tee -a "$LOG_FILE"
+
 # Step 4d3: Hero video/image swap - image first, then video, then back to image
 log "Patching hero video/image swap..."
 node scripts/inject-hero-video.cjs --force 2>&1 | tee -a "$LOG_FILE"
+
+# Step 4d3b: Preload above-the-fold font weights (normal + bold)
+log "Preloading fonts..."
+node scripts/inject-font-preload.cjs 2>&1 | tee -a "$LOG_FILE"
 
 # Step 4d4: Google Sheets webhook for form submissions
 if [ -n "${GOOGLE_SHEETS_WEBHOOK:-}" ]; then
