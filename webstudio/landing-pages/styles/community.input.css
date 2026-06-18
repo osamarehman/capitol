@@ -1,4 +1,16 @@
-@import "tailwindcss" source(none);
+/*
+ * Utilities are emitted UNLAYERED (not in @layer utilities) so they beat the
+ * site's unlayered resets that this page also loads via index.css + CustomCode:
+ * the chrome's `*{margin:0}` and CustomCode's `body,h1..h6,p,ul,ol{margin:0}`.
+ * Unlayered rules always win over @layer rules regardless of specificity, so
+ * layered utilities would otherwise lose `mx-auto`/`space-y`/`mt`/`mb` to those
+ * resets (containers stop centering, vertical gaps disappear). This mirrors how
+ * the site's own atomic classes survive the same resets (they're unlayered too).
+ */
+@layer theme, base, components;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" source(none);
 @source "../community/route.tsx";
 
 @custom-variant dark (&:is(.dark *));
