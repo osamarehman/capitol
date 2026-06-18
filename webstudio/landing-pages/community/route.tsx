@@ -172,7 +172,7 @@ function BowieSchoolCard() {
         </div>
         <p className="text-[15px] leading-relaxed" style={{ color: GRAY600 }}>
           Pat Jewell started roofing on these streets in the 1980s. Today Pat, Austin, and Lance
-          still answer the phones from our headquarters on Hillmeade Station Drive — right here in
+          still answer the phones from our headquarters on Hillmeade Station Drive - right here in
           Bowie. This isn't just another sponsorship. This is the school in our own neighborhood.
         </p>
 
@@ -180,7 +180,7 @@ function BowieSchoolCard() {
           {[
             { href: "https://improveitmd.com/services/bowie-maryland-roofing-company-near-you", text: "Bowie Roofing Company" },
             { href: "https://improveitmd.com/services/bowie-maryland-siding-contractors-near-you", text: "Bowie Siding Contractors" },
-            { href: "tel:3017696909", text: "Call the Home Team — 301.769.6909" },
+            { href: "tel:3017696909", text: "Call the Home Team - 301.769.6909" },
           ].map((l) => (
             <a
               key={l.href}
@@ -225,7 +225,7 @@ function CommunityPage() {
   const stats = [
     { value: "30+", label: "Years in the Community" },
     { value: "7,240+", label: "Homes Served" },
-    { value: "100%", label: "Family Owned — Never Private Equity" },
+    { value: "100%", label: "Family Owned - Never Private Equity" },
   ];
 
   const whyCols = [
@@ -283,7 +283,7 @@ function CommunityPage() {
             </h1>
             <p className="mt-8 max-w-2xl text-[18px] leading-relaxed text-white/85">
               For 30+ years, the Jewell family has answered the phones, climbed the
-              ladders, and lived in the same neighborhoods we serve. We're not private equity —
+              ladders, and lived in the same neighborhoods we serve. We're not private equity -
               we're your neighbors. Reinvesting in the schools, teams, and community
               organizations that built us is our commitment, not a marketing line.
             </p>
@@ -316,7 +316,7 @@ function CommunityPage() {
               Reinvesting in the Community That Built Us.
             </h2>
             <p className="mt-6 text-[17px] leading-relaxed" style={{ color: GRAY600 }}>
-              For 30+ years we've been part of these neighborhoods — sponsoring schools, sporting
+              For 30+ years we've been part of these neighborhoods - sponsoring schools, sporting
               events, and local organizations across Maryland, DC, and Northern Virginia. We're
               family owned, not private equity. Giving back isn't a marketing line for us; it's
               the reason we're still here.
@@ -344,7 +344,7 @@ function CommunityPage() {
             </h2>
             <p className="mt-6 text-[17px] leading-relaxed text-white/75">
               Pat Jewell started this company in Bowie in the 1980s. Today his sons Austin and
-              Lance run it alongside him. We've never been a faceless chain — and we never will be.
+              Lance run it alongside him. We've never been a faceless chain - and we never will be.
             </p>
           </div>
 

@@ -23,7 +23,7 @@ const spotlight = [
     tag: "Before",
     src: "/landing/slate/dc-scallop-before.jpg",
     title: "A century of weather",
-    body: "The original turret had lost its scalloped slate to decades of DC weather — the underlying coating was failing and the historic profile was gone.",
+    body: "The original turret had lost its scalloped slate to decades of DC weather - the underlying coating was failing and the historic profile was gone.",
   },
   {
     tag: "Color Match",
@@ -35,13 +35,13 @@ const spotlight = [
     tag: "Install",
     src: "/landing/slate/dc-scallop-install.jpg",
     title: "Hand-clipped, one at a time",
-    body: "Every single tile was hand-clipped on both corners to recreate the scalloped profile. There is no shortcut — it is the only way to do this correctly.",
+    body: "Every single tile was hand-clipped on both corners to recreate the scalloped profile. There is no shortcut - it is the only way to do this correctly.",
   },
   {
     tag: "After",
     src: "/landing/slate/dc-scallop-after.jpg",
     title: "Approved & permanent",
-    body: "Installed under DOB permit and approved by the DC Historic Preservation Society — a roof the neighborhood will see for the next hundred years.",
+    body: "Installed under DOB permit and approved by the DC Historic Preservation Society - a roof the neighborhood will see for the next hundred years.",
   },
 ];
 
@@ -89,21 +89,21 @@ const stats = [
 const steps: Array<[string, string]> = [
   ["In-home assessment", "We inspect framing, decking, ventilation, and historical detailing to confirm slate is the right call for your home."],
   ["Material selection", "Choose from natural quarried slate or premium synthetic. We bring samples to your kitchen table."],
-  ["Crew & schedule", "Our W-2 slate crew handles your project end to end — no day-labor subs ever."],
+  ["Crew & schedule", "Our W-2 slate crew handles your project end to end - no day-labor subs ever."],
   ["Lifetime backing", "Manufacturer-backed lifetime warranties plus our own workmanship guarantee."],
 ];
 
 function SlateRoofingPage() {
   return (
     <main className="lp-content bg-muted">
-      {/* HERO — editorial split with vertical photo */}
+      {/* HERO - editorial split with vertical photo */}
       <section className="border-b border-primary bg-muted px-6 pb-24 pt-12 lg:pb-32 lg:pt-20">
         <div className="mx-auto max-w-[1400px]">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-20">
-            {/* LEFT — typography */}
+            {/* LEFT - typography */}
             <div className="lg:col-span-7 lg:pt-12">
               <span className="mb-8 block text-xs font-bold uppercase tracking-[0.3em] text-accent">
-                Roofing — Slate Specialists
+                Roofing - Slate Specialists
               </span>
               <h1 className="mb-12 font-display text-6xl font-black uppercase leading-[0.8] tracking-tighter text-primary md:text-8xl lg:text-[110px]">
                 A roof for<br />
@@ -121,7 +121,7 @@ function SlateRoofingPage() {
                   The first step is deciding between{" "}
                   <strong className="text-primary">natural stone</strong> or{" "}
                   <strong className="text-primary">modern synthetic</strong>.
-                  We install both across MD, DC & VA — and we&rsquo;ll help you
+                  We install both across MD, DC & VA - and we&rsquo;ll help you
                   figure out which one belongs on your home.
                 </p>
                 <nav className="flex flex-wrap gap-x-8 gap-y-4">
@@ -141,13 +141,13 @@ function SlateRoofingPage() {
               </div>
             </div>
 
-            {/* RIGHT — 9:16 hero image */}
+            {/* RIGHT - 9:16 hero image */}
             <div className="relative lg:col-span-5">
               <div className="relative z-10">
                 <div className="aspect-[9/16] w-full overflow-hidden border border-primary shadow-2xl">
                   <img
                     src={heroVerticalUrl}
-                    alt="Historic slate turret roof on a Washington DC home — installed by Capitol Improvements"
+                    alt="Historic slate turret roof on a Washington DC home - installed by Capitol Improvements"
                     width={900}
                     height={1600}
                     className="h-full w-full object-cover"
@@ -165,7 +165,7 @@ function SlateRoofingPage() {
         </div>
       </section>
 
-      {/* SLATE 101 — two-card choice */}
+      {/* SLATE 101 - two-card choice */}
       <section className="border-b border-primary bg-background px-6 py-24 lg:py-32">
         <div className="mx-auto max-w-[1400px]">
           <div className="mb-16 grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
@@ -180,12 +180,12 @@ function SlateRoofingPage() {
             <p className="text-xl font-medium leading-relaxed text-primary/70">
               One is quarried from the earth. The other is engineered for
               performance. Both deliver the iconic look of the Capital&rsquo;s
-              finest homes — and we install both.
+              finest homes - and we install both.
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-px border border-primary/15 bg-primary/15 md:grid-cols-2">
-            {/* 01 — Natural */}
+            {/* 01 - Natural */}
             <div id="natural" className="group flex flex-col bg-background p-10 transition-colors hover:bg-muted lg:p-16">
               <div className="mb-8 flex aspect-square w-16 items-center justify-center bg-primary font-display text-2xl font-black text-primary-foreground">
                 01
@@ -226,7 +226,7 @@ function SlateRoofingPage() {
               </a>
             </div>
 
-            {/* 02 — Synthetic */}
+            {/* 02 - Synthetic */}
             <div id="synthetic" className="group flex flex-col bg-background p-10 transition-colors hover:bg-muted lg:p-16">
               <div className="mb-8 flex aspect-square w-16 items-center justify-center border-2 border-primary font-display text-2xl font-black text-primary">
                 02
@@ -237,13 +237,13 @@ function SlateRoofingPage() {
               <p className="mb-10 leading-relaxed text-primary/70">
                 Advanced polymers by Brava &amp; DaVinci. Molded from real
                 slate to mimic every cleft and grain, but lightweight enough
-                for any structure — usually with no framing upgrade.
+                for any structure - usually with no framing upgrade.
               </p>
               <div className="mb-12">
                 <div className="mb-6 aspect-video w-full overflow-hidden border border-primary/10">
                   <img
                     src={bravaGlamour}
-                    alt="Brava composite slate turret — DCHP-approved synthetic alternative"
+                    alt="Brava composite slate turret - DCHP-approved synthetic alternative"
                     width={400}
                     height={250}
                     loading="lazy"
@@ -258,7 +258,7 @@ function SlateRoofingPage() {
                     <span className="mr-4 h-3 w-3 flex-shrink-0 border border-primary/40 bg-muted" /> 50-year limited warranty
                   </li>
                   <li className="flex items-center text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-                    <span className="mr-4 h-3 w-3 flex-shrink-0 border border-primary/40 bg-muted" /> ~270 lbs/sq — no reinforcement
+                    <span className="mr-4 h-3 w-3 flex-shrink-0 border border-primary/40 bg-muted" /> ~270 lbs/sq - no reinforcement
                   </li>
                 </ul>
               </div>
@@ -285,7 +285,7 @@ function SlateRoofingPage() {
             </div>
             <p className="text-base leading-relaxed text-primary/70 lg:col-span-7 lg:text-lg">
               The honest answer: it depends on your house, your budget, and how
-              long you plan to stay. Here's the short version — and then the
+              long you plan to stay. Here's the short version - and then the
               details below.
             </p>
           </div>
@@ -311,7 +311,7 @@ function SlateRoofingPage() {
                 Go with Brava synthetic.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-primary/70">
-                30–50% less, no framing upgrade, 50-year warranty, indistinguishable from the street.
+                30-50% less, no framing upgrade, 50-year warranty, indistinguishable from the street.
               </p>
             </div>
           </div>
@@ -324,19 +324,19 @@ function SlateRoofingPage() {
                 What matters
               </div>
               <div className="border-l border-primary-foreground/20 p-4 md:p-6">
-                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-highlight">01 — Natural</div>
+                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-highlight">01 - Natural</div>
                 <div className="mt-1 font-display text-lg font-black uppercase tracking-tight md:text-xl">Quarried Slate</div>
               </div>
               <div className="border-l border-primary-foreground/20 p-4 md:p-6">
-                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-highlight">02 — Synthetic</div>
+                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-highlight">02 - Synthetic</div>
                 <div className="mt-1 font-display text-lg font-black uppercase tracking-tight md:text-xl">Brava Composite</div>
               </div>
             </div>
 
             {[
               { label: "Lifespan", a: "100+ years", b: "50-year warranty" },
-              { label: "Weight per square", a: "800 – 1,500 lbs", b: "~270 lbs" },
-              { label: "Installed cost", a: "$40k – $80k+", b: "30 – 50% less" },
+              { label: "Weight per square", a: "800 - 1,500 lbs", b: "~270 lbs" },
+              { label: "Installed cost", a: "$40k - $80k+", b: "30 - 50% less" },
               { label: "Framing reinforcement", a: "Often needed", b: "Almost never" },
               { label: "Fire & impact", a: "Class A · cracks on direct hits", b: "Class A · Class 4 impact" },
               { label: "Historic approval", a: "Always accepted", b: "Often approved, DCHP-friendly" },
@@ -411,7 +411,7 @@ function SlateRoofingPage() {
                 Measured.<br />Methodical.<br />Yours.
               </h2>
               <p className="mt-8 text-primary/70">
-                A slate roof is a generational investment. We treat it that way —
+                A slate roof is a generational investment. We treat it that way -
                 from the first walk-through to the day we hand you the warranty.
               </p>
             </div>
@@ -434,7 +434,7 @@ function SlateRoofingPage() {
         </div>
       </section>
 
-      {/* CUSTOMER SPOTLIGHT — DC scalloped slate */}
+      {/* CUSTOMER SPOTLIGHT - DC scalloped slate */}
       <section className="border-t border-primary bg-background px-6 py-24 lg:py-32">
         <div className="mx-auto max-w-[1400px]">
           <div className="grid grid-cols-1 items-end gap-10 border-b border-primary pb-12 lg:grid-cols-12">
@@ -456,7 +456,7 @@ function SlateRoofingPage() {
             profile on their turret restored. The only way to faithfully
             replicate the original look is to{" "}
             <strong className="text-primary">hand-clip every corner of every tile</strong>{" "}
-            before it goes on the roof — a tedious process that also required
+            before it goes on the roof - a tedious process that also required
             sign-off from <strong className="text-primary">DOB</strong> and the{" "}
             <strong className="text-primary">DC Historic Preservation Society</strong>.
           </p>
@@ -467,14 +467,14 @@ function SlateRoofingPage() {
                 <div className="relative aspect-[4/3] w-full overflow-hidden">
                   <img
                     src={step.src}
-                    alt={`${step.tag} — ${step.title} — scalloped slate turret restoration in Washington DC by Capitol Improvements`}
+                    alt={`${step.tag} - ${step.title} - scalloped slate turret restoration in Washington DC by Capitol Improvements`}
                     width={1200}
                     height={900}
                     loading="lazy"
                     className="h-full w-full object-cover"
                   />
                   <div className="absolute left-0 top-0 bg-primary px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest text-primary-foreground">
-                    {String(i + 1).padStart(2, "0")} — {step.tag}
+                    {String(i + 1).padStart(2, "0")} - {step.tag}
                   </div>
                 </div>
                 <div className="flex-1 p-8 lg:p-10">
@@ -500,17 +500,17 @@ function SlateRoofingPage() {
 
 
 
-      {/* FAQ — ALTERNATIVES TO SLATE */}
+      {/* FAQ - ALTERNATIVES TO SLATE */}
       <section id="faq" className="border-t border-primary bg-muted px-6 py-24 lg:py-32">
         <div className="mx-auto max-w-[1400px]">
-          {/* Brava glamour — field photo treatment */}
+          {/* Brava glamour - field photo treatment */}
           <div className="mb-20 grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-7">
               <figure className="-rotate-1 bg-[#f4f1ea] p-4 pb-14 shadow-2xl shadow-black/30 transition-transform hover:rotate-0">
                 <div className="relative aspect-[4/5] w-full overflow-hidden bg-black lg:aspect-[3/4]">
                   <img
                     src={bravaGlamour}
-                    alt="Brava composite slate turret roofs on a historic DC rowhouse — an approved synthetic alternative to natural slate"
+                    alt="Brava composite slate turret roofs on a historic DC rowhouse - an approved synthetic alternative to natural slate"
                     width={1200}
                     height={1500}
                     loading="lazy"
@@ -538,7 +538,7 @@ function SlateRoofingPage() {
                 An approved alternative to true slate.
               </h2>
               <p className="mt-8 text-lg leading-relaxed text-primary/80">
-                The turrets above are Brava composite — not quarried stone.
+                The turrets above are Brava composite - not quarried stone.
                 From the street, the chisel marks, color variation, and shadow
                 lines are indistinguishable from natural slate. Brava is
                 accepted by DC Historic Preservation on the right projects,
@@ -564,7 +564,7 @@ function SlateRoofingPage() {
                 Slate, plainly<br />explained.
               </h2>
               <p className="mt-8 max-w-sm text-base leading-relaxed text-primary/60">
-                The questions homeowners actually ask us — about natural slate, Brava, DaVinci, and everything in between.
+                The questions homeowners actually ask us - about natural slate, Brava, DaVinci, and everything in between.
               </p>
             </div>
             <div className="space-y-0 lg:col-span-8">
@@ -575,7 +575,7 @@ function SlateRoofingPage() {
                 },
                 {
                   q: "What is natural (quarried) slate?",
-                  a: "Natural slate is real stone — split by hand from quarries in Vermont, Pennsylvania, Virginia, and overseas. Each tile is unique in color and texture. Properly installed, a natural slate roof routinely lasts 100 years or more, which is why so many historic DC rowhouses still have their original roofs.",
+                  a: "Natural slate is real stone - split by hand from quarries in Vermont, Pennsylvania, Virginia, and overseas. Each tile is unique in color and texture. Properly installed, a natural slate roof routinely lasts 100 years or more, which is why so many historic DC rowhouses still have their original roofs.",
                 },
                 {
                   q: "What is Brava composite slate?",
@@ -587,11 +587,11 @@ function SlateRoofingPage() {
                 },
                 {
                   q: "How does Brava compare to real slate on lifespan?",
-                  a: "Natural slate can last 100+ years. Brava carries a 50-year limited manufacturer warranty, which is on par with most premium asphalt and metal roofs. For homeowners planning to stay 20–40 years, that difference is often academic.",
+                  a: "Natural slate can last 100+ years. Brava carries a 50-year limited manufacturer warranty, which is on par with most premium asphalt and metal roofs. For homeowners planning to stay 20-40 years, that difference is often academic.",
                 },
                 {
                   q: "Is synthetic slate really lighter than natural stone?",
-                  a: "Yes — dramatically. Natural slate weighs 800–1,500 lbs per square (a 10x10 ft area). Brava weighs about 270 lbs per square. That means most existing roof decks can handle synthetic slate without structural reinforcement, saving thousands in framing upgrades.",
+                  a: "Yes - dramatically. Natural slate weighs 800-1,500 lbs per square (a 10x10 ft area). Brava weighs about 270 lbs per square. That means most existing roof decks can handle synthetic slate without structural reinforcement, saving thousands in framing upgrades.",
                 },
                 {
                   q: "Will a Brava roof look fake from the street?",
@@ -599,19 +599,19 @@ function SlateRoofingPage() {
                 },
                 {
                   q: "Can I use synthetic slate in a historic district?",
-                  a: "Often yes. DC Historic Preservation Society and most MD/VA boards now accept Brava and DaVinci on the right projects — especially when the original profile is faithfully matched. We've handled the approval paperwork on dozens of historic homes and we manage that process for you as part of the project.",
+                  a: "Often yes. DC Historic Preservation Society and most MD/VA boards now accept Brava and DaVinci on the right projects - especially when the original profile is faithfully matched. We've handled the approval paperwork on dozens of historic homes and we manage that process for you as part of the project.",
                 },
                 {
                   q: "Is synthetic slate cheaper than natural slate?",
-                  a: "Yes, meaningfully. A full natural slate roof on a typical DC rowhouse runs $40,000–$80,000+ installed. The same profile in Brava composite typically lands 30–50% lower, mostly because of lighter weight (no framing upgrades), faster install, and no quarry sourcing.",
+                  a: "Yes, meaningfully. A full natural slate roof on a typical DC rowhouse runs $40,000-$80,000+ installed. The same profile in Brava composite typically lands 30-50% lower, mostly because of lighter weight (no framing upgrades), faster install, and no quarry sourcing.",
                 },
                 {
                   q: "Can you repair my existing natural slate roof instead of replacing it?",
-                  a: "Almost always. A well-built slate roof rarely needs full replacement — most issues are flashing, ridge, or individual tile failures. We stock matching tiles from the major historic quarries and can do targeted repairs that extend a slate roof another 20–50 years.",
+                  a: "Almost always. A well-built slate roof rarely needs full replacement - most issues are flashing, ridge, or individual tile failures. We stock matching tiles from the major historic quarries and can do targeted repairs that extend a slate roof another 20-50 years.",
                 },
                 {
                   q: "Do you install both natural and synthetic slate?",
-                  a: "Yes. We're certified installers for quarried slate, Brava, and DaVinci composite systems. We don't push one over the other — we assess your home's framing, your timeline, your budget, and your neighborhood's rules, then recommend the right material honestly.",
+                  a: "Yes. We're certified installers for quarried slate, Brava, and DaVinci composite systems. We don't push one over the other - we assess your home's framing, your timeline, your budget, and your neighborhood's rules, then recommend the right material honestly.",
                 },
               ].map((item, i) => (
                 <details
@@ -655,7 +655,7 @@ function SlateRoofingPage() {
               <p className="max-w-xl text-lg text-primary/70">
                 Every slate roof we install is backed by lifetime manufacturer
                 warranties and our own workmanship guarantee. Financing as low as
-                $99/month — no payments until the project is complete.
+                $99/month - no payments until the project is complete.
               </p>
             </div>
             <div className="flex flex-col items-start gap-6 lg:items-end">
