@@ -94,6 +94,10 @@ node scripts/inject-schemas.cjs --force 2>&1 | tee -a "$LOG_FILE"
 log "Patching deploy page auth..."
 node scripts/patch-deploy-page.cjs 2>&1 | tee -a "$LOG_FILE"
 
+# Step 4c2: Fix doubled-slug TOC/back-to-top anchors on /services/$slug pages
+log "Fixing service-page TOC anchor links..."
+node scripts/inject-fix-toc-links.cjs 2>&1 | tee -a "$LOG_FILE"
+
 # Step 4d: Inject canonical tags into all routes
 log "Injecting canonical tags..."
 node scripts/inject-canonical.cjs 2>&1 | tee -a "$LOG_FILE"
